@@ -6,6 +6,11 @@
     "standard": "10.0.2"
   },
   "scripts": {
+    "sh": "sh",
+    "bash": "bash",
+    "zsh": "zsh",
+    "command-prompt": "cmd",
+    "exec": "sh -c",
     "remake-package-json": "node sh/remake-package-json",
     "clean": "bash 'sh/clean.sh'",
     "fix": "bash 'sh/fix.sh'",
