@@ -1,0 +1,3 @@
+transform:
+  \.jsx$: babel-jest
+testRegex: (test|spec|check)\.jsx?$
