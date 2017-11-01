@@ -5,6 +5,9 @@
   "devDependencies": {
     "standard": "10.0.2"
   },
+  "engines": {
+    "node": ">= 9.0.0"
+  },
   "scripts": {
     "sh": "sh",
     "bash": "bash",
