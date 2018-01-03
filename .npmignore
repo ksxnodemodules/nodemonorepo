@@ -12,6 +12,7 @@ temp.*
 *.tern-project*
 *.editorconfig*
 *.eslintrc*
+jest.config*
 .git*
 /.travis.yml
 /appveyor.yml
