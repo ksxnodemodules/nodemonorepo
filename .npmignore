@@ -2,6 +2,7 @@
 *.log
 quick-test
 test
+/check
 tmp
 temp
 tmp.*
@@ -18,4 +19,5 @@ jest.config*
 /appveyor.yml
 /circle.yml
 /sh
+/coverage
 docs
