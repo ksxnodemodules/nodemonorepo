@@ -1,0 +1,32 @@
+
+language: node_js
+
+node_js:
+  - '6'
+
+cache:
+  directories:
+    - $HOME/.npm
+    - $HOME/.nvm
+    - $HOME/.node-gyp
+    - $HOME/.node_libraries
+    - $HOME/node_modules
+    - node_modules
+
+before_script:
+  - chmod -R +x sh
+
+before_deploy:
+  - source ./sh/deploy/before.sh
+
+deploy:
+  provider: releases
+  api_key: $GITHUB_RELEASE_OAUTH
+  skip_cleanup: true
+  file_glob: true
+  file: $(./sh/deploy/file.sh)
+  on:
+    tags: true
+
+after_deploy:
+  - source ./sh/deploy/after.sh
