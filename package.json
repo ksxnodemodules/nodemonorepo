@@ -3,7 +3,7 @@
   "main": "index.js",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "devDependencies": {
-    "jest": "^22.1.4",
+    "jest-cli": "^22.1.4",
     "js-yaml": "^3.10.0",
     "standard": "^10.0.3",
     "x-iterable": "^6.0.1"
