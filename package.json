@@ -3,7 +3,10 @@
   "main": "index.js",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "devDependencies": {
-    "standard": "^10.0.3"
+    "js-yaml": "^3.10.0",
+    "jest": "^22.0.4",
+    "standard": "^10.0.3",
+    "x-iterable": "^6.0.1"
   },
   "engines": {
     "node": ">= 8.9.0"
