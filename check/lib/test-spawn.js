@@ -11,7 +11,8 @@ function main ({
   const {
     [`JEST_${envMiddleName}_EXECUTABLE`]: executable = defaultExecutable,
     [`JEST_${envMiddleName}_ARGV`]: spawnArguments = '[]',
-    [`JEST_${envMiddleName}_SKIP`]: skipSpawnTesting = 'false'
+    [`JEST_${envMiddleName}_SKIP`]: skipSpawnTesting = 'false',
+    PATH = ''
   } = env
 
   const wdir = path.resolve(__dirname, '../..')
@@ -28,7 +29,20 @@ function main ({
       signal,
       error,
       status
-    } = spawnSync(executable, argv, {cwd: wdir, shell: true})
+    } = spawnSync(
+      executable,
+      argv,
+      {
+        cwd: wdir,
+        shell: true,
+        env: {
+          ...env,
+          PATH: PATH
+            .split(path.delimiter)
+            .concat(...module.paths.map(x => path.resolve(x, '.bin')))
+            .join(path.delimiter)
+        }
+      })
 
     if (stdout === null) console.warn('respose.stdout is null')
     if (stderr === null) console.warn('respose.stderr is null')
