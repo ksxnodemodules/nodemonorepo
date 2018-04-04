@@ -4,7 +4,9 @@
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "devDependencies": {
     "js-yaml": "^3.11.0",
-    "standard": "^11.0.0"
+    "standard": "^11.0.0",
+    "jest-cli": "^22.1.4",
+    "x-iterable": "^6.0.1"
   },
   "engines": {
     "node": ">= 8.9.0"
