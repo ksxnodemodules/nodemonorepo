@@ -1,0 +1,23 @@
+{
+  "version": "0.0.0",
+  "main": "index.js",
+  "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
+  "devDependencies": {
+    "standard": "^10.0.3"
+  },
+  "engines": {
+    "node": ">= 8.9.0"
+  },
+  "scripts": {
+    "sh": "sh",
+    "bash": "bash",
+    "zsh": "zsh",
+    "command-prompt": "cmd",
+    "exec": "bash -c",
+    "exec:win32": "cmd /c",
+    "remake-package-json": "node sh/remake-package-json",
+    "clean": "bash 'sh/clean.sh'",
+    "fix": "bash 'sh/fix.sh'",
+    "test": "bash 'sh/test.sh'"
+  }
+}
