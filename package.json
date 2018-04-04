@@ -1,6 +1,6 @@
 {
   "version": "0.0.0",
-  "main": "index.js",
+  "private": true,
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "devDependencies": {
     "standard": "^10.0.3"
