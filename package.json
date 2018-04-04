@@ -3,6 +3,7 @@
   "private": true,
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "devDependencies": {
+    "js-yaml": "^3.11.0",
     "standard": "^10.0.3"
   },
   "engines": {
