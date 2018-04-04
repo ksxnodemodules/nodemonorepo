@@ -21,3 +21,7 @@ jest.config*
 /sh
 /coverage
 docs
+yarn.lock
+package-lock.json
+shrinkwrap*
+renovate*
