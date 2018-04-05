@@ -3,10 +3,25 @@
   "private": true,
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "devDependencies": {
+    "jest-cli": "^22.1.4",
     "js-yaml": "^3.11.0",
     "standard": "^11.0.0",
-    "jest-cli": "^22.1.4",
-    "x-iterable": "^6.0.1"
+    "typescript": "^2.8.1",
+    "x-iterable": "^6.0.1",
+    "ts-jest": "^22.4.2",
+    "babel-jest": "^22.4.3",
+    "@types/jest": "^22.2.2",
+    "@types/js-yaml": "^3.11.1",
+    "@types/node": "^9.6.2"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "standard": {
+    "env": {
+      "jest": true,
+      "node": true
+    }
   },
   "engines": {
     "node": ">= 8.9.0"
@@ -21,6 +36,7 @@
     "remake-package-json": "node sh/remake-package-json",
     "clean": "bash 'sh/clean.sh'",
     "fix": "bash 'sh/fix.sh'",
-    "test": "bash 'sh/test.sh'"
+    "test": "bash 'sh/test.sh'",
+    "build": "bash 'sh/build.sh"
   }
 }

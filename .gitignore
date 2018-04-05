@@ -16,6 +16,11 @@ temp.*
 *.temp
 *.tern-project
 *.tern-project.json
+*.d.ts
+/packages/**/*.js
+/packages/**/*.map
+/lib/**/*.js
+/lib/**/*.map
 
 # Logs
 logs

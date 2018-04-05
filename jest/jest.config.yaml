@@ -1,1 +1,11 @@
-testRegex: (test|spec|check)\.jsx?$
+transform:
+  '\.jsx?$': 'babel-jest'
+  '\.tsx?$': 'ts-jest'
+testRegex: (test|spec|check)\.(jsx?|tsx?)$
+moduleFileExtensions:
+  - ts
+  - tsx
+  - js
+  - jsx
+  - json
+  - node

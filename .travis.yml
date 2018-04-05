@@ -1,3 +1,6 @@
+branches:
+  except:
+    - draft
 
 language: node_js
 
@@ -6,6 +9,7 @@ node_js:
   - 9
 
 cache:
+  yarn: true
   directories:
     - $HOME/.npm
     - $HOME/.nvm
@@ -16,3 +20,9 @@ cache:
 
 before_script:
   - chmod -R +x sh
+
+install:
+  - yarn
+
+script:
+  - yarn test
