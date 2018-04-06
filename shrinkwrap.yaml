@@ -8,6 +8,7 @@ devDependencies:
   babel-jest: 22.4.3
   glob: 7.1.2
   jest-cli: 22.4.3
+  jest-extended: 0.6.0
   js-yaml: 3.11.0
   standard: 11.0.1
   ts-jest: 22.4.2
@@ -2462,6 +2463,14 @@ packages:
     dev: true
     resolution:
       integrity: sha512-reZl8XF6t/lMEuPWwo9OLfttyC26A5AMgDyEQ6DBgZuyfyeNUzYT8BFo6uxCCP/Av/b7eb9fTi3sIHFPBzmlRA==
+  /jest-extended/0.6.0:
+    dependencies:
+      chalk: 2.3.2
+      expect: 22.4.3
+      jest-matcher-utils: 22.4.3
+    dev: true
+    resolution:
+      integrity: sha512-ZeY+/kSELTloZp0bGKJKCl8sR9Nit6AVdx8h3OC+1CSaG7hsKPKW755qPi5hsLL1uQwljrrVZBY5WkIjZN9spQ==
   /jest-get-type/22.4.3:
     dev: true
     resolution:
@@ -4687,6 +4696,7 @@ specifiers:
   extra-jest: ^0.0.0
   glob: ^7.1.2
   jest-cli: ^22.1.4
+  jest-extended: ^0.6.0
   js-yaml: ^3.11.0
   standard: ^11.0.0
   ts-jest: ^22.4.2

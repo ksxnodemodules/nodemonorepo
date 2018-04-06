@@ -1,3 +1,4 @@
+setupTestFrameworkScriptFile: jest-extended
 transform:
   '\.jsx?$': 'babel-jest'
   '\.tsx?$': 'ts-jest'
