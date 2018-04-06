@@ -6,7 +6,7 @@ const glob = require('glob')
 
 process.chdir(path.resolve(__dirname, '..'))
 console.info('Cleaning TypeScript build products...')
-const files = glob.sync('{packages,lib}/**/*.{js,d.ts,js.map}')
+const files = glob.sync('packages/**/*.{js,d.ts,js.map}')
 
 for (const x of files) {
   console.info('  --> Deleting', x)

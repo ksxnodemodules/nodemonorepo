@@ -19,8 +19,6 @@ temp.*
 *.d.ts
 /packages/**/*.js
 /packages/**/*.map
-/lib/**/*.js
-/lib/**/*.map
 
 # Logs
 logs
