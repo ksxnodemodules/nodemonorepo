@@ -3,7 +3,7 @@
   "private": true,
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "devDependencies": {
-    "jest-cli": "^22.1.4",
+    "jest": "^22.1.4",
     "jest-extended": "^0.6.0",
     "js-yaml": "^3.11.0",
     "standard": "^11.0.0",

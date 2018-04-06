@@ -7,7 +7,7 @@ devDependencies:
   '@types/node': 9.6.2
   babel-jest: 22.4.3
   glob: 7.1.2
-  jest-cli: 22.4.3
+  jest: 22.4.3
   jest-extended: 0.6.0
   js-yaml: 3.11.0
   standard: 11.0.1
@@ -2632,6 +2632,15 @@ packages:
     dev: true
     resolution:
       integrity: sha512-B1ucW4fI8qVAuZmicFxI1R3kr2fNeYJyvIQ1rKcuLYnenFV5K5aMbxFj6J0i00Ju83S8jP2d7Dz14+AvbIHRYQ==
+  /jest/22.4.3:
+    dependencies:
+      import-local: 1.0.0
+      jest-cli: 22.4.3
+    dev: true
+    engines:
+      node: '>= 6'
+    resolution:
+      integrity: sha512-FFCdU/pXOEASfHxFDOWUysI/+FFoqiXJADEIXgDKuZyqSmBD3tZ4BEGH7+M79v7czj7bbkhwtd2LaEDcJiM/GQ==
   /js-tokens/3.0.2:
     dev: true
     resolution:
@@ -4695,7 +4704,7 @@ specifiers:
   babel-jest: ^22.4.3
   extra-jest: ^0.0.0
   glob: ^7.1.2
-  jest-cli: ^22.1.4
+  jest: ^22.1.4
   jest-extended: ^0.6.0
   js-yaml: ^3.11.0
   standard: ^11.0.0
