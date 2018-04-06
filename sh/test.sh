@@ -7,7 +7,7 @@
   stcode=$?
 
   [[ $COVERALL != 'true' ]] || (
-    echo 'Reporting coverage info'
+    echo 'Reporting coverage info...'
     cat ./coverage/lcov.info | coveralls
   )
 
