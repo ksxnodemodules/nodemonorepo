@@ -1,5 +1,6 @@
 dependencies:
   extra-jest: 'link:packages/typescript/extra-jest'
+  preloaded-node: 'link:packages/javascript/preloaded-node'
 devDependencies:
   '@types/glob': 5.0.35
   '@types/jest': 22.2.2
@@ -4707,6 +4708,7 @@ specifiers:
   jest: ^22.1.4
   jest-extended: ^0.6.0
   js-yaml: ^3.11.0
+  preloaded-node: '*'
   standard: ^11.0.0
   ts-jest: ^22.4.2
   typescript: ^2.8.1

@@ -1,0 +1,13 @@
+{
+  "name": "preloaded-node",
+  "version": "0.0.0",
+  "private": true,
+  "bin": {
+    "preloaded-node": "bin.js"
+  },
+  "index": "index.js",
+  "dependencies": {
+    "ts-node": "^5.0.1",
+    "typescript": "^2.8.1"
+  }
+}

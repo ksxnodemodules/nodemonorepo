@@ -13,6 +13,7 @@
     "x-iterable": "^6.0.1",
     "glob": "^7.1.2",
     "extra-jest": "^0.0.0",
+    "preloaded-node": "*",
     "@types/jest": "^22.2.2",
     "@types/js-yaml": "^3.11.1",
     "@types/glob": "^5.0.35",
