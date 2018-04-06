@@ -10,8 +10,10 @@
     "x-iterable": "^6.0.1",
     "ts-jest": "^22.4.2",
     "babel-jest": "^22.4.3",
+    "glob": "^7.1.2",
     "@types/jest": "^22.2.2",
     "@types/js-yaml": "^3.11.1",
+    "@types/glob": "^5.0.35",
     "@types/node": "^9.6.2"
   },
   "workspaces": [
@@ -34,6 +36,7 @@
     "exec": "bash -c",
     "exec:win32": "cmd /c",
     "remake-package-json": "node sh/remake-package-json",
+    "clean-typescript-build": "node sh/clean-typescript-build",
     "clean": "bash 'sh/clean.sh'",
     "fix": "bash 'sh/fix.sh'",
     "test": "bash 'sh/test.sh'",

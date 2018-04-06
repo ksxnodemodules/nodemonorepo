@@ -24,3 +24,5 @@ cleandir () (
 )
 
 cleandir $(pwd)
+
+node 'sh/clean-typescript-build'

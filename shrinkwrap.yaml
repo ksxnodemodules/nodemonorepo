@@ -1,7 +1,10 @@
 devDependencies:
+  '@types/glob': 5.0.35
   '@types/jest': 22.2.2
   '@types/js-yaml': 3.11.1
   '@types/node': 9.6.2
+  babel-jest: 22.4.3
+  glob: 7.1.2
   jest-cli: 22.4.3
   js-yaml: 3.11.0
   standard: 11.0.1
@@ -23,6 +26,18 @@ packages:
     dev: true
     resolution:
       integrity: sha512-Il19yJvy7vMFm8AVAh6OZzaFoAd0hbkeMZiX3P5HGD+z7dyI7RzndHB0dg6Urh/VAFfHtpOIzDUSxmY6coyZWQ==
+  /@types/events/1.2.0:
+    dev: true
+    resolution:
+      integrity: sha512-KEIlhXnIutzKwRbQkGWb/I4HFqBuUykAdHgDED6xqwXJfONCjF5VoE0cXEiurh3XauygxzeDzgtXUqvLkxFzzA==
+  /@types/glob/5.0.35:
+    dependencies:
+      '@types/events': 1.2.0
+      '@types/minimatch': 3.0.3
+      '@types/node': 9.6.2
+    dev: true
+    resolution:
+      integrity: sha512-wc+VveszMLyMWFvXLkloixT4n0harUIVZjnpzztaZ0nKLuul7Z32iMt2fUFGAaZ4y1XWjFRMtCI5ewvyh4aIeg==
   /@types/jest/22.2.2:
     dev: true
     resolution:
@@ -31,6 +46,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-M5qhhfuTt4fwHGqqANNQilp3Htb5cHwBxlMHDUw/TYRVkEp3s3IIFSH3Fe9HIAeEtnO4p3SSowLmCVavdRYfpw==
+  /@types/minimatch/3.0.3:
+    dev: true
+    resolution:
+      integrity: sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
   /@types/node/9.6.2:
     dev: true
     resolution:
@@ -355,6 +374,15 @@ packages:
     dev: true
     resolution:
       integrity: sha1-NHHenK7DiOXIUOWX5Yom3fN2ArI=
+  /babel-jest/22.4.3:
+    dependencies:
+      babel-plugin-istanbul: 4.1.5
+      babel-preset-jest: 22.4.3
+    dev: true
+    peerDependencies:
+      babel-core: ^6.0.0 || ^7.0.0-0
+    resolution:
+      integrity: sha512-BgSjmtl3mW3i+VeVHEr9d2zFSAT66G++pJcHQiUjd00pkW+voYXFctIm/indcqOWWXw5a1nUpR1XWszD9fJ1qg==
   /babel-jest/22.4.3/babel-core@6.26.0:
     dependencies:
       babel-core: 6.26.0
@@ -4649,9 +4677,12 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 4
 shrinkwrapVersion: 3
 specifiers:
+  '@types/glob': ^5.0.35
   '@types/jest': ^22.2.2
   '@types/js-yaml': ^3.11.1
   '@types/node': ^9.6.2
+  babel-jest: ^22.4.3
+  glob: ^7.1.2
   jest-cli: ^22.1.4
   js-yaml: ^3.11.0
   standard: ^11.0.0
