@@ -1,5 +1,10 @@
 import * as snap from './snap'
 
+const refA = {}
+const refB = {refA}
+const refC = [refA, refB]
+const refs = {refA, refB, refC, a: refA, b: refB, c: refC}
+
 const unsafePattern = {
   primaries: {
     numbers: {
@@ -16,6 +21,7 @@ const unsafePattern = {
     }
   },
   references: {
+    refs,
     object: {
       abc: 123,
       def: 456
@@ -43,6 +49,7 @@ const safePattern = {
     }
   },
   references: {
+    refs,
     object: {
       abc: 123,
       def: 456
@@ -60,4 +67,16 @@ describe('snap.unsafe', () => {
 
 describe('snap.safe', () => {
   it('works', snap.safe(safePattern))
+})
+
+describe('snap.pureUnsafe', () => {
+  it('works', snap.pureUnsafe(unsafePattern))
+})
+
+describe('snap.pureSafe', () => {
+  it('works', snap.pureSafe(safePattern))
+})
+
+describe('snap.noRefs', () => {
+  it('works', snap.noRefs(unsafePattern))
 })

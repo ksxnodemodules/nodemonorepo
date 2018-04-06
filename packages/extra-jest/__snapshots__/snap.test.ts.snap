@@ -1,6 +1,49 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`snap.safe works 1`] = `
+exports[`snap.noRefs works 1`] = `
+"primaries:
+  numbers:
+    integer: 123
+    float: 45.6
+    infinity: .inf
+    zero: 0
+    nan: .nan
+  string: 'Hello, World!!'
+  nothingness:
+    'null': null
+    undefined: !<tag:yaml.org,2002:js/undefined> ''
+references:
+  refs:
+    refA: {}
+    refB:
+      refA: {}
+    refC:
+      - {}
+      - refA: {}
+    a: {}
+    b:
+      refA: {}
+    c:
+      - {}
+      - refA: {}
+  object:
+    abc: 123
+    def: 456
+  array:
+    - - a
+      - b
+      - c
+      - d
+      - e
+      - f
+    - - 123
+      - 456
+      - 789
+  function: !<tag:yaml.org,2002:js/function> '() => ''Hello, World!!'''
+"
+`;
+
+exports[`snap.pureSafe works 1`] = `
 "primaries:
   numbers:
     integer: 123
@@ -12,6 +55,16 @@ exports[`snap.safe works 1`] = `
   nothingness:
     'null': null
 references:
+  refs:
+    refA: &ref_0 {}
+    refB: &ref_1
+      refA: *ref_0
+    refC: &ref_2
+      - *ref_0
+      - *ref_1
+    a: *ref_0
+    b: *ref_1
+    c: *ref_2
   object:
     abc: 123
     def: 456
@@ -28,7 +81,7 @@ references:
 "
 `;
 
-exports[`snap.unsafe works 1`] = `
+exports[`snap.pureUnsafe works 1`] = `
 "primaries:
   numbers:
     integer: 123
@@ -41,6 +94,16 @@ exports[`snap.unsafe works 1`] = `
     'null': null
     undefined: !<tag:yaml.org,2002:js/undefined> ''
 references:
+  refs:
+    refA: &ref_0 {}
+    refB: &ref_1
+      refA: *ref_0
+    refC: &ref_2
+      - *ref_0
+      - *ref_1
+    a: *ref_0
+    b: *ref_1
+    c: *ref_2
   object:
     abc: 123
     def: 456
@@ -55,5 +118,83 @@ references:
       - 456
       - 789
   function: !<tag:yaml.org,2002:js/function> '() => ''Hello, World!!'''
+"
+`;
+
+exports[`snap.safe works 1`] = `
+"primaries:
+  nothingness:
+    'null': null
+  numbers:
+    float: 45.6
+    infinity: .inf
+    integer: 123
+    nan: .nan
+    zero: 0
+  string: 'Hello, World!!'
+references:
+  array:
+    - - a
+      - b
+      - c
+      - d
+      - e
+      - f
+    - - 123
+      - 456
+      - 789
+  object:
+    abc: 123
+    def: 456
+  refs:
+    a: &ref_0 {}
+    b: &ref_1
+      refA: *ref_0
+    c: &ref_2
+      - *ref_0
+      - *ref_1
+    refA: *ref_0
+    refB: *ref_1
+    refC: *ref_2
+"
+`;
+
+exports[`snap.unsafe works 1`] = `
+"primaries:
+  nothingness:
+    'null': null
+    undefined: !<tag:yaml.org,2002:js/undefined> ''
+  numbers:
+    float: 45.6
+    infinity: .inf
+    integer: 123
+    nan: .nan
+    zero: 0
+  string: 'Hello, World!!'
+references:
+  array:
+    - - a
+      - b
+      - c
+      - d
+      - e
+      - f
+    - - 123
+      - 456
+      - 789
+  function: !<tag:yaml.org,2002:js/function> '() => ''Hello, World!!'''
+  object:
+    abc: 123
+    def: 456
+  refs:
+    a: &ref_0 {}
+    b: &ref_1
+      refA: *ref_0
+    c: &ref_2
+      - *ref_0
+      - *ref_1
+    refA: *ref_0
+    refB: *ref_1
+    refC: *ref_2
 "
 `;
