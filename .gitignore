@@ -17,9 +17,9 @@ temp.*
 *.tern-project
 *.tern-project.json
 *.d.ts
-/packages/**/*.js
-/packages/**/*.map
-/packages/*/.npmignore
+/packages/typescript/**/*.js
+/packages/typescript/**/*.map
+/packages/*/*/.npmignore
 
 # Logs
 logs

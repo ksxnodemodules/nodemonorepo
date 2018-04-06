@@ -1,5 +1,5 @@
 dependencies:
-  extra-jest: 'link:packages/extra-jest'
+  extra-jest: 'link:packages/typescript/extra-jest'
 devDependencies:
   '@types/glob': 5.0.35
   '@types/jest': 22.2.2
