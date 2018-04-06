@@ -6,7 +6,7 @@
   jest --coverage $@
   stcode=$?
 
-  [[ $COVERALL != 'true' ]] || (
+  [[ $COVERALLS != 'true' ]] || (
     echo 'Reporting coverage info...'
     cat ./coverage/lcov.info | coveralls
   )
