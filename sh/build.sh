@@ -1,4 +1,4 @@
-node 'sh/clean-typescript-build'
+preloaded-node 'sh/clean-typescript-build'
 
 if [[ $SKIP_TYPESCRIPT_COMPILATION == 'true' ]]
   then
