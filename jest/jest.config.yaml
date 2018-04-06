@@ -9,3 +9,7 @@ moduleFileExtensions:
   - jsx
   - json
   - node
+coveragePathIgnorePatterns:
+  - /node_modules/
+  - <rootDir>/check/
+  - <rootDir>/test/
