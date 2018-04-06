@@ -7,6 +7,7 @@ devDependencies:
   '@types/js-yaml': 3.11.1
   '@types/node': 9.6.2
   babel-jest: 22.4.3
+  coveralls: 3.0.0
   glob: 7.1.2
   jest: 22.4.3
   jest-extended: 0.6.0
@@ -860,6 +861,18 @@ packages:
     dev: true
     resolution:
       integrity: sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
+  /coveralls/3.0.0:
+    dependencies:
+      js-yaml: 3.11.0
+      lcov-parse: 0.0.10
+      log-driver: 1.2.7
+      minimist: 1.2.0
+      request: 2.85.0
+    dev: true
+    engines:
+      node: '>=4.0.0'
+    resolution:
+      integrity: sha512-ZppXR9y5PraUOrf/DzHJY6gzNUhXYE3b9D43xEXs4QYZ7/Oe0Gy0CS+IPKWFfvQFXB3RG9QduaQUFehzSpGAFw==
   /cpx/1.5.0:
     dependencies:
       babel-runtime: 6.26.0
@@ -2795,6 +2808,10 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-MIrMr6C8SDo4Z7S28rlQYlHRuDU=
+  /lcov-parse/0.0.10:
+    dev: true
+    resolution:
+      integrity: sha1-GwuP+ayceIklBYK3C3ExXZ2m2aM=
   /left-pad/1.2.0:
     dev: true
     resolution:
@@ -2865,6 +2882,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-svL3uiZf1RwhH+cWrfZn3A4+U58wbP0tGVTLQPbjplZxZ8ROD9VLuNgsRniTlLe7OlSqR79RUehXgpBW/s0IQw==
+  /log-driver/1.2.7:
+    dev: true
+    engines:
+      node: '>=0.8.6'
+    resolution:
+      integrity: sha512-U7KCmLdqsGHBLeWqYlFA0V0Sl6P08EE1ZrmA9cxjUE0WVqT9qnyVDPz1kzpFEP0jdJuFnasWIfSd7fsaNXkpbg==
   /longest/1.0.1:
     dev: true
     engines:
@@ -4703,6 +4726,7 @@ specifiers:
   '@types/js-yaml': ^3.11.1
   '@types/node': ^9.6.2
   babel-jest: ^22.4.3
+  coveralls: ^3.0.0
   extra-jest: ^0.0.0
   glob: ^7.1.2
   jest: ^22.1.4
