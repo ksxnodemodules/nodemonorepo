@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+Object {
+  "default": Object {
+    "snap": Object {
+      "mkfn": [Function],
+      "safe": [Function],
+      "unsafe": [Function],
+    },
+  },
+  "snap": Object {
+    "mkfn": [Function],
+    "safe": [Function],
+    "unsafe": [Function],
+  },
+}
+`;

@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snap.safe works 1`] = `
+"primaries:
+  numbers:
+    integer: 123
+    float: 45.6
+    infinity: .inf
+    zero: 0
+    nan: .nan
+  string: 'Hello, World!!'
+  nothingness:
+    'null': null
+references:
+  object:
+    abc: 123
+    def: 456
+  array:
+    - - a
+      - b
+      - c
+      - d
+      - e
+      - f
+    - - 123
+      - 456
+      - 789
+"
+`;
+
+exports[`snap.unsafe works 1`] = `
+"primaries:
+  numbers:
+    integer: 123
+    float: 45.6
+    infinity: .inf
+    zero: 0
+    nan: .nan
+  string: 'Hello, World!!'
+  nothingness:
+    'null': null
+    undefined: !<tag:yaml.org,2002:js/undefined> ''
+references:
+  object:
+    abc: 123
+    def: 456
+  array:
+    - - a
+      - b
+      - c
+      - d
+      - e
+      - f
+    - - 123
+      - 456
+      - 789
+  function: !<tag:yaml.org,2002:js/function> '() => ''Hello, World!!'''
+"
+`;

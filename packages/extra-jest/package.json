@@ -1,0 +1,8 @@
+{
+  "name": "extra-jest",
+  "version": "0.0.0",
+  "main": "index.js",
+  "peerDependencies": {
+    "jest": "^22.4.3"
+  }
+}

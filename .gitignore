@@ -19,6 +19,7 @@ temp.*
 *.d.ts
 /packages/**/*.js
 /packages/**/*.map
+/packages/*/.npmignore
 
 # Logs
 logs
