@@ -2,17 +2,6 @@
 
 exports[`matches snapshot 1`] = `
 Object {
-  "default": Object {
-    "snap": Object {
-      "default": [Function],
-      "mkfn": [Function],
-      "noRefs": [Function],
-      "pureSafe": [Function],
-      "pureUnsafe": [Function],
-      "safe": [Function],
-      "unsafe": [Function],
-    },
-  },
   "snap": Object {
     "default": [Function],
     "mkfn": [Function],
