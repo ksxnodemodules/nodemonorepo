@@ -16,7 +16,7 @@ temp.*
 *.temp
 *.tern-project
 *.tern-project.json
-*.d.ts
+/packages/typescript/**/*.d.ts
 /packages/typescript/**/*.js
 /packages/typescript/**/*.map
 /packages/*/*/.npmignore
