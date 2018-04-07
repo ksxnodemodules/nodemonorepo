@@ -1,5 +1,4 @@
 dependencies:
-  extra-jest: 'link:../../typescript/extra-jest'
   ts-node: 5.0.1
   typescript: 2.8.1
 packages:

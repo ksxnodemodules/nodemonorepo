@@ -1104,7 +1104,7 @@ packages:
       integrity: sha1-D8c6ntXw1Tw4GTOYUj735UN3dQU=
   /encoding/0.1.12:
     dependencies:
-      iconv-lite: 0.4.19
+      iconv-lite: 0.4.21
     dev: true
     resolution:
       integrity: sha1-U4tm8+5izRq1HsMjgp0flIDHS+s=
@@ -1464,7 +1464,7 @@ packages:
   /external-editor/2.2.0:
     dependencies:
       chardet: 0.4.2
-      iconv-lite: 0.4.19
+      iconv-lite: 0.4.21
       tmp: 0.0.33
     dev: true
     engines:
@@ -1938,6 +1938,14 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-oTZqweIP51xaGPI4uPa56/Pri/480R+mo7SeU+YETByQNhDG55ycFyNLIgta9vXhILrxXDmF7ZGhqZIcuN0gJQ==
+  /iconv-lite/0.4.21:
+    dependencies:
+      safer-buffer: 2.1.0
+    dev: true
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha512-En5V9za5mBt2oUA03WGD3TwDv0MKAruqsuxstbMUZaj9W9k/m1CV/9py3l0L5kw9Bln8fdHQmzHSYtvpvTLpKw==
   /ignore/3.3.7:
     dev: true
     resolution:
@@ -3835,6 +3843,10 @@ packages:
     dev: true
     resolution:
       integrity: sha1-QKNmnzsHfR6UPURinhV91IAjvy4=
+  /safer-buffer/2.1.0:
+    dev: true
+    resolution:
+      integrity: sha512-HQhCIIl7TrF1aa7d352EXG+xumPERvoIWxOqq2CagDId0FVGtlG/fuQ7kZT+wZ7ytyGiP3pnYUVni5otBzOVmA==
   /sane/2.5.0:
     dependencies:
       anymatch: 2.0.0
