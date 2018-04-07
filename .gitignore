@@ -21,6 +21,7 @@ temp.*
 /packages/typescript/**/*.map
 /packages/typescript/tsconfig.json
 /packages/*/*/.npmignore
+!*.inrepo*
 
 # Logs
 logs
