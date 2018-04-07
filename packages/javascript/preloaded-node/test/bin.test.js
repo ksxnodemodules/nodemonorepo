@@ -15,7 +15,6 @@ const {
   'node',
   [runner, script],
   {
-    cwd: __dirname,
     encoding: 'utf8'
   }
 )
