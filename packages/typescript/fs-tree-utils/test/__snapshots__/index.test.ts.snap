@@ -1,0 +1,467 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`create function creates files/directories that yet to exist 1`] = `
+Object {
+  "flat": Object {
+    "tmp/create.0/topB/middleB/bottomB": "B.B.B",
+    "tmp/create.0/topB/middleC/bottomA": "B.C.A",
+    "tmp/create.0/topB/middleC/bottomB": "B.C.B",
+    "tmp/create.0/topC/middleA/bottomA": "C.A.A",
+    "tmp/create.0/topC/middleA/bottomB": "C.A.B",
+    "tmp/create.0/topC/middleB/bottomA": "C.B.A",
+    "tmp/create.0/topC/middleB/bottomB": "C.B.B",
+    "tmp/create.0/topC/middleC/bottomA": "C.C.A",
+    "tmp/create.0/topC/middleC/bottomB": "C.C.B",
+  },
+  "nested": Object {
+    "topA": Object {},
+    "topB": Object {
+      "middleA": Object {},
+      "middleB": Object {
+        "bottomA": Object {},
+        "bottomB": "B.B.B",
+      },
+      "middleC": Object {
+        "bottomA": "B.C.A",
+        "bottomB": "B.C.B",
+      },
+    },
+    "topC": Object {
+      "middleA": Object {
+        "bottomA": "C.A.A",
+        "bottomB": "C.A.B",
+      },
+      "middleB": Object {
+        "bottomA": "C.B.A",
+        "bottomB": "C.B.B",
+      },
+      "middleC": Object {
+        "bottomA": "C.C.A",
+        "bottomB": "C.C.B",
+      },
+    },
+  },
+}
+`;
+
+exports[`create function ignores already existed files/directories that is not mismatched 1`] = `
+Object {
+  "firstBorn": Object {
+    "flat": Object {
+      "tmp/create.1/bar": "bar",
+      "tmp/create.1/firstBornFiles/bar": "bar",
+      "tmp/create.1/firstBornFiles/foo": "foo",
+      "tmp/create.1/foo": "foo",
+    },
+    "nested": Object {
+      "bar": "bar",
+      "emptyBar": Object {},
+      "emptyFoo": Object {},
+      "firstBornFiles": Object {
+        "bar": "bar",
+        "foo": "foo",
+      },
+      "foo": "foo",
+    },
+  },
+  "secondBorn": Object {
+    "flat": Object {
+      "tmp/create.1/bar": "bar",
+      "tmp/create.1/firstBornFiles/bar": "bar",
+      "tmp/create.1/firstBornFiles/foo": "foo",
+      "tmp/create.1/foo": "foo",
+      "tmp/create.1/newFileA": "First New File",
+      "tmp/create.1/newFileB": "Second New File",
+      "tmp/create.1/newFileC": "Third New File",
+      "tmp/create.1/newTreeC/emptyFile/file": "",
+      "tmp/create.1/newTreeC/nonEmptyFile/file": "Not empty",
+    },
+    "nested": Object {
+      "bar": "bar",
+      "emptyBar": Object {},
+      "emptyFoo": Object {},
+      "firstBornFiles": Object {
+        "bar": "bar",
+        "foo": "foo",
+      },
+      "foo": "foo",
+      "newFileA": "First New File",
+      "newFileB": "Second New File",
+      "newFileC": "Third New File",
+      "newTreeA": Object {},
+      "newTreeB": Object {
+        "empty": Object {},
+      },
+      "newTreeC": Object {
+        "empty": Object {},
+        "emptyFile": Object {
+          "file": "",
+        },
+        "nonEmptyFile": Object {
+          "file": "Not empty",
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`create function throws error when encounter mismatched entities in which a folder is requested in place of a file 1`] = `[Error: EISDIR: illegal operation on a directory, open 'tmp/create.2.0/mismatched']`;
+
+exports[`traverse function does not dig names end with "B" 1`] = `
+Array [
+  Object {
+    "container": "tmp/traverse.0",
+    "item": "topA",
+    "level": 0,
+    "path": "tmp/traverse.0/topA",
+  },
+  Object {
+    "container": "tmp/traverse.0",
+    "item": "topB",
+    "level": 0,
+    "path": "tmp/traverse.0/topB",
+  },
+  Object {
+    "container": "tmp/traverse.0",
+    "item": "topC",
+    "level": 0,
+    "path": "tmp/traverse.0/topC",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC",
+    "item": "middleA",
+    "level": 1,
+    "path": "tmp/traverse.0/topC/middleA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC/middleA",
+    "item": "bottomA",
+    "level": 2,
+    "path": "tmp/traverse.0/topC/middleA/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC/middleA",
+    "item": "bottomB",
+    "level": 2,
+    "path": "tmp/traverse.0/topC/middleA/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC",
+    "item": "middleB",
+    "level": 1,
+    "path": "tmp/traverse.0/topC/middleB",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC",
+    "item": "middleC",
+    "level": 1,
+    "path": "tmp/traverse.0/topC/middleC",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC/middleC",
+    "item": "bottomA",
+    "level": 2,
+    "path": "tmp/traverse.0/topC/middleC/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC/middleC",
+    "item": "bottomB",
+    "level": 2,
+    "path": "tmp/traverse.0/topC/middleC/bottomB",
+  },
+]
+`;
+
+exports[`traverse function only dig names end with "B" 1`] = `
+Array [
+  Object {
+    "container": "tmp/traverse.0",
+    "item": "topA",
+    "level": 0,
+    "path": "tmp/traverse.0/topA",
+  },
+  Object {
+    "container": "tmp/traverse.0",
+    "item": "topB",
+    "level": 0,
+    "path": "tmp/traverse.0/topB",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB",
+    "item": "middleA",
+    "level": 1,
+    "path": "tmp/traverse.0/topB/middleA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB",
+    "item": "middleB",
+    "level": 1,
+    "path": "tmp/traverse.0/topB/middleB",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB/middleB",
+    "item": "bottomA",
+    "level": 2,
+    "path": "tmp/traverse.0/topB/middleB/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB/middleB",
+    "item": "bottomB",
+    "level": 2,
+    "path": "tmp/traverse.0/topB/middleB/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB",
+    "item": "middleC",
+    "level": 1,
+    "path": "tmp/traverse.0/topB/middleC",
+  },
+  Object {
+    "container": "tmp/traverse.0",
+    "item": "topC",
+    "level": 0,
+    "path": "tmp/traverse.0/topC",
+  },
+]
+`;
+
+exports[`traverse function works with default \`deep\` and \`level\` 1`] = `[Error: Entity tmp/create.2.1/mismatched exists but is not directory]`;
+
+exports[`traverse function works with default \`deep\` and \`level\` 2`] = `
+Array [
+  Object {
+    "container": "tmp/traverse.0",
+    "item": "topA",
+    "level": 0,
+    "path": "tmp/traverse.0/topA",
+  },
+  Object {
+    "container": "tmp/traverse.0",
+    "item": "topB",
+    "level": 0,
+    "path": "tmp/traverse.0/topB",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB",
+    "item": "middleA",
+    "level": 1,
+    "path": "tmp/traverse.0/topB/middleA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB",
+    "item": "middleB",
+    "level": 1,
+    "path": "tmp/traverse.0/topB/middleB",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB/middleB",
+    "item": "bottomA",
+    "level": 2,
+    "path": "tmp/traverse.0/topB/middleB/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB/middleB",
+    "item": "bottomB",
+    "level": 2,
+    "path": "tmp/traverse.0/topB/middleB/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB",
+    "item": "middleC",
+    "level": 1,
+    "path": "tmp/traverse.0/topB/middleC",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB/middleC",
+    "item": "bottomA",
+    "level": 2,
+    "path": "tmp/traverse.0/topB/middleC/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB/middleC",
+    "item": "bottomB",
+    "level": 2,
+    "path": "tmp/traverse.0/topB/middleC/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0",
+    "item": "topC",
+    "level": 0,
+    "path": "tmp/traverse.0/topC",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC",
+    "item": "middleA",
+    "level": 1,
+    "path": "tmp/traverse.0/topC/middleA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC/middleA",
+    "item": "bottomA",
+    "level": 2,
+    "path": "tmp/traverse.0/topC/middleA/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC/middleA",
+    "item": "bottomB",
+    "level": 2,
+    "path": "tmp/traverse.0/topC/middleA/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC",
+    "item": "middleB",
+    "level": 1,
+    "path": "tmp/traverse.0/topC/middleB",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC/middleB",
+    "item": "bottomA",
+    "level": 2,
+    "path": "tmp/traverse.0/topC/middleB/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC/middleB",
+    "item": "bottomB",
+    "level": 2,
+    "path": "tmp/traverse.0/topC/middleB/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC",
+    "item": "middleC",
+    "level": 1,
+    "path": "tmp/traverse.0/topC/middleC",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC/middleC",
+    "item": "bottomA",
+    "level": 2,
+    "path": "tmp/traverse.0/topC/middleC/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC/middleC",
+    "item": "bottomB",
+    "level": 2,
+    "path": "tmp/traverse.0/topC/middleC/bottomB",
+  },
+]
+`;
+
+exports[`traverse function works with provided \`deep\` and \`level\` 1`] = `
+Array [
+  Object {
+    "container": "tmp/traverse.0",
+    "item": "topA",
+    "level": 3,
+    "path": "tmp/traverse.0/topA",
+  },
+  Object {
+    "container": "tmp/traverse.0",
+    "item": "topB",
+    "level": 3,
+    "path": "tmp/traverse.0/topB",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB",
+    "item": "middleA",
+    "level": 4,
+    "path": "tmp/traverse.0/topB/middleA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB",
+    "item": "middleB",
+    "level": 4,
+    "path": "tmp/traverse.0/topB/middleB",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB/middleB",
+    "item": "bottomA",
+    "level": 5,
+    "path": "tmp/traverse.0/topB/middleB/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB/middleB",
+    "item": "bottomB",
+    "level": 5,
+    "path": "tmp/traverse.0/topB/middleB/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB",
+    "item": "middleC",
+    "level": 4,
+    "path": "tmp/traverse.0/topB/middleC",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB/middleC",
+    "item": "bottomA",
+    "level": 5,
+    "path": "tmp/traverse.0/topB/middleC/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB/middleC",
+    "item": "bottomB",
+    "level": 5,
+    "path": "tmp/traverse.0/topB/middleC/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0",
+    "item": "topC",
+    "level": 3,
+    "path": "tmp/traverse.0/topC",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC",
+    "item": "middleA",
+    "level": 4,
+    "path": "tmp/traverse.0/topC/middleA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC/middleA",
+    "item": "bottomA",
+    "level": 5,
+    "path": "tmp/traverse.0/topC/middleA/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC/middleA",
+    "item": "bottomB",
+    "level": 5,
+    "path": "tmp/traverse.0/topC/middleA/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC",
+    "item": "middleB",
+    "level": 4,
+    "path": "tmp/traverse.0/topC/middleB",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC/middleB",
+    "item": "bottomA",
+    "level": 5,
+    "path": "tmp/traverse.0/topC/middleB/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC/middleB",
+    "item": "bottomB",
+    "level": 5,
+    "path": "tmp/traverse.0/topC/middleB/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC",
+    "item": "middleC",
+    "level": 4,
+    "path": "tmp/traverse.0/topC/middleC",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC/middleC",
+    "item": "bottomA",
+    "level": 5,
+    "path": "tmp/traverse.0/topC/middleC/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC/middleC",
+    "item": "bottomB",
+    "level": 5,
+    "path": "tmp/traverse.0/topC/middleC/bottomB",
+  },
+]
+`;

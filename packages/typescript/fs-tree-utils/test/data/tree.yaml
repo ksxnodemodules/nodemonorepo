@@ -1,0 +1,19 @@
+topA: {}
+topB:
+  middleA: {}
+  middleB:
+    bottomA: {}
+    bottomB: 'B.B.B'
+  middleC:
+    bottomA: 'B.C.A'
+    bottomB: 'B.C.B'
+topC:
+  middleA:
+    bottomA: 'C.A.A'
+    bottomB: 'C.A.B'
+  middleB:
+    bottomA: 'C.B.A'
+    bottomB: 'C.B.B'
+  middleC:
+    bottomA: 'C.C.A'
+    bottomB: 'C.C.B'
