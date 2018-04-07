@@ -9,6 +9,7 @@ console.info('Cleaning TypeScript build products...')
 const files = glob.sync('packages/typescript/**/*.{js,d.ts,js.map}')
 
 for (const x of files) {
+  if (/node_modules/.test(x)) continue
   console.info('  --> Deleting', x)
   fs.unlink(x, error => error && console.error(`Failed to delete ${x}`, {error}))
 }
