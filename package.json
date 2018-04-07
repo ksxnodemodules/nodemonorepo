@@ -44,6 +44,6 @@
     "clean": "bash 'sh/clean.sh'",
     "fix": "bash 'sh/fix.sh'",
     "test": "bash 'sh/test.sh'",
-    "build": "bash 'sh/build.sh"
+    "build": "bash 'sh/build.sh'"
   }
 }
