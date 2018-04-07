@@ -19,6 +19,7 @@ temp.*
 /packages/typescript/**/*.d.ts
 /packages/typescript/**/*.js
 /packages/typescript/**/*.map
+/packages/typescript/tsconfig.json
 /packages/*/*/.npmignore
 
 # Logs
