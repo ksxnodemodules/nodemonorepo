@@ -2,6 +2,9 @@
 
 exports[`matches snapshot 1`] = `
 Object {
+  "promise": Object {
+    "snapRejected": [Function],
+  },
   "snap": Object {
     "default": [Function],
     "mkfn": [Function],

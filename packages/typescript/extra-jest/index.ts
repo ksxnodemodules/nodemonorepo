@@ -1,2 +1,3 @@
 import * as snap from './snap'
-export {snap}
+import * as promise from './promise'
+export {snap, promise}

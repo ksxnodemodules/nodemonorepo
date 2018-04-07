@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`promise.snapRejected fails on resolved promise 1`] = `[Error: Expecting promise to reject but it didn't]`;
+
+exports[`promise.snapRejected passes on reject promise 1`] = `"Rejected"`;
