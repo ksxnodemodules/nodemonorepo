@@ -2,6 +2,7 @@ setupTestFrameworkScriptFile: jest-extended
 transform:
   '\.jsx?$': 'babel-jest'
   '\.tsx?$': 'ts-jest'
+  '\.(yaml|yml)$': 'yaml-jest'
 testRegex: (test|spec|check)\.(jsx?|tsx?)$
 moduleFileExtensions:
   - ts
@@ -12,5 +13,5 @@ moduleFileExtensions:
   - node
 coveragePathIgnorePatterns:
   - /node_modules/
-  - <rootDir>/check/
-  - <rootDir>/test/
+  - \/check\/
+  - \/test\/

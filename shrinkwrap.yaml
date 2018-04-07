@@ -16,6 +16,7 @@ devDependencies:
   ts-jest: 22.4.2
   typescript: 2.8.1
   x-iterable: 6.0.1
+  yaml-jest: 1.0.5
 packages:
   /@babel/code-frame/7.0.0-beta.44:
     dependencies:
@@ -4673,6 +4674,12 @@ packages:
     dev: true
     resolution:
       integrity: sha1-HBH5IY8HYImkfdUS+TxmmaaoHVI=
+  /yaml-jest/1.0.5:
+    dependencies:
+      js-yaml: 3.11.0
+    dev: true
+    resolution:
+      integrity: sha1-KI5UG64bVR0RPUhk1suPMW4b0zE=
   /yargs-parser/8.1.0:
     dependencies:
       camelcase: 4.1.0
@@ -4749,3 +4756,4 @@ specifiers:
   ts-jest: ^22.4.2
   typescript: ^2.8.1
   x-iterable: ^6.0.1
+  yaml-jest: ^1.0.5
