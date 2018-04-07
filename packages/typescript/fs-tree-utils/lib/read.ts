@@ -1,10 +1,20 @@
 import * as path from 'path'
+import ramda from 'ramda'
 import * as fsx from 'fs-extra'
 import traverse, {DeepFunc} from './traverse'
 import {Tree, TreeObject, FileContent} from './types'
 
 export type NestedReadResult = Promise<Tree>
-export type FlatReadResultValue = {[filename: string]: FileContent}
+
+export type FlatReadResultFileContent = {[filename: string]: FileContent}
+
+export type FlatReadResultValue = {
+  fileContents: FlatReadResultFileContent,
+  directories: string[],
+  files: string[],
+  all: string[]
+}
+
 export type FlatReadResult = Promise<FlatReadResultValue>
 
 export async function readNested (name: string): NestedReadResult {
@@ -28,18 +38,32 @@ export async function readNested (name: string): NestedReadResult {
 
 export async function readFlat (name: string, deep?: DeepFunc): FlatReadResult {
   const array = await traverse(name, deep)
+  const [fileList, dirList] = ramda.partition(x => x.stats.isFile(), array)
 
   const map = await Promise.all(
-    array
-      .filter(x => x.stats.isFile())
-      .map((x): [string, Promise<string>] => [x.path, fsx.readFile(x.path, 'utf8')])
+    fileList.map(
+      (x): [string, Promise<string>] =>
+        [x.path, fsx.readFile(x.path, 'utf8')]
+    )
   )
 
-  let result: FlatReadResultValue = {}
+  let fileContents: FlatReadResultFileContent = {}
   for (const [name, promise] of map) {
-    result[name] = await promise
+    fileContents[name] = await promise
   }
-  return result
+
+  return (() => {
+    const directories = dirList.map(x => x.path)
+    const files = fileList.map(x => x.path)
+    const all = [...directories, ...files].sort((a, b) => a < b ? -1 : a < b ? 1 : 0)
+
+    return {
+      fileContents,
+      directories,
+      files,
+      all
+    }
+  })()
 }
 
 function addAsyncProperty<X> (x: X) {
