@@ -6,7 +6,7 @@ export type TestFunction<X> = (x: X, o?: DumpOptions) => () => void
 
 export function mkfn<X> (fn: DumpFunction<X>, options: DumpOptions = {}): TestFunction<X> {
   return (x: X, extraOptions: DumpOptions = {}) => () => {
-    expect(fn(x, {...options, ...extraOptions})).toMatchSnapshot()
+    expect('\n' + fn(x, {...options, ...extraOptions}) + '\n').toMatchSnapshot()
   }
 }
 

@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`snap.noRefs works 1`] = `
-"primaries:
+"
+primaries:
   numbers:
     integer: 123
     float: 45.6
@@ -40,11 +41,13 @@ references:
       - 456
       - 789
   function: !<tag:yaml.org,2002:js/function> '() => ''Hello, World!!'''
+
 "
 `;
 
 exports[`snap.pureSafe works 1`] = `
-"primaries:
+"
+primaries:
   numbers:
     integer: 123
     float: 45.6
@@ -78,11 +81,13 @@ references:
     - - 123
       - 456
       - 789
+
 "
 `;
 
 exports[`snap.pureUnsafe works 1`] = `
-"primaries:
+"
+primaries:
   numbers:
     integer: 123
     float: 45.6
@@ -118,11 +123,13 @@ references:
       - 456
       - 789
   function: !<tag:yaml.org,2002:js/function> '() => ''Hello, World!!'''
+
 "
 `;
 
 exports[`snap.safe works 1`] = `
-"primaries:
+"
+primaries:
   nothingness:
     'null': null
   numbers:
@@ -156,11 +163,13 @@ references:
     refA: *ref_0
     refB: *ref_1
     refC: *ref_2
+
 "
 `;
 
 exports[`snap.unsafe works 1`] = `
-"primaries:
+"
+primaries:
   nothingness:
     'null': null
     undefined: !<tag:yaml.org,2002:js/undefined> ''
@@ -196,5 +205,6 @@ references:
     refA: *ref_0
     refB: *ref_1
     refC: *ref_2
+
 "
 `;
