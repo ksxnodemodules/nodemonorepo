@@ -1,4 +1,15 @@
 root:
+  node_modules:
+    ignoreda: |
+      {
+        "name": "ignoreda",
+        "version": "2.2.2"
+      }
+    ignoredb: |
+      {
+        "name": "ignoredb",
+        "version": "3.3.3"
+      }
   package.json: |
     {
       "name": "root",
@@ -60,6 +71,12 @@ root:
     sub20:
       sub200:
         pkg2000:
+          node_modules:
+            ignored2000a: |
+              {
+                "name": "ignored2000a",
+                "version": "1.2.3"
+              }
           package.json: |
             {
               "name": "pkg2000",
