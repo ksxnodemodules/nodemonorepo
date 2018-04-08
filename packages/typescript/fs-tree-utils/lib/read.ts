@@ -55,7 +55,7 @@ export async function readFlat (name: string, deep?: DeepFunc): FlatReadResult {
   return (() => {
     const directories = dirList.map(x => x.path)
     const files = fileList.map(x => x.path)
-    const all = [...directories, ...files].sort((a, b) => a < b ? -1 : a < b ? 1 : 0)
+    const all = [...directories, ...files].sort((a, b) => a < b ? -1 : 1)
 
     return {
       fileContents,
