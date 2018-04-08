@@ -6,6 +6,7 @@ dependencies:
   fs-extra: 5.0.0
   fs-tree-utils: 'link:../fs-tree-utils'
   semver: 5.5.0
+  unique-temp-path: 'link:../unique-temp-path'
   yargs: 11.0.0
 packages:
   /@types/fs-extra/5.0.1:

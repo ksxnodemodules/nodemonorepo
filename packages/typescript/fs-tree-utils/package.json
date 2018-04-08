@@ -9,6 +9,7 @@
     "@types/ramda": "^0.25.21"
   },
   "devDependencies": {
+    "unique-temp-path": "^0.0.0",
     "extra-jest": "^0.0.0"
   }
 }

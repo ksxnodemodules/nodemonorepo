@@ -1,13 +1,13 @@
 import * as path from 'path'
-import * as os from 'os'
 import {cwd, chdir} from 'process'
 import * as fsx from 'fs-extra'
 import * as xjest from 'extra-jest'
+import tempPath from 'unique-temp-path'
 import * as subject from '../index'
 import {DeepFunc} from '../lib/traverse'
 const tree = require('./data/tree.yaml')
 const oldCwd = cwd()
-const tmpContainer = path.join(os.tmpdir(), 'fs-tree-utils.' + Math.random().toString(36).slice(2))
+const tmpContainer = tempPath('fs-tree-utils.')
 const tmp = 'tmp'
 
 const createTreeGetter = (container: string) => () => Promise.all([

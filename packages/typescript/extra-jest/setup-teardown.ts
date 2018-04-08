@@ -1,8 +1,8 @@
 import * as path from 'path'
-import * as os from 'os'
 import * as process from 'process'
 import * as fsx from 'fs-extra'
 import * as fsTreeUtils from 'fs-tree-utils'
+import tempPath from 'unique-temp-path'
 import {TreeObject} from 'fs-tree-utils'
 
 export type PromiseFunc<X, Y> = (x: X) => Promise<Y>
@@ -54,22 +54,13 @@ export namespace base {
 export const createFactory = base.createFactory
 
 export namespace virtualEnvironment {
-  const randomString = () =>
-    Math.random().toString(36).slice(2)
-
-  const encodedDate = () =>
-    Date.now().toString(36)
-
-  const getTmpName = () =>
-    path.join(os.tmpdir(), `tmp.${randomString()}.${encodedDate()}`)
-
   export type Info = {
     tree: TreeObject,
     container: string,
     previousWorkingDirectory: string
   }
 
-  export function createFactory (tree: TreeObject, container = getTmpName()) {
+  export function createFactory (tree: TreeObject, container = tempPath()) {
     const previousWorkingDirectory = process.cwd()
     const info: Info = {tree, container, previousWorkingDirectory}
 
