@@ -1,0 +1,17 @@
+{
+  "name": "nested-workspace-helper",
+  "version": "0.0.0",
+  "main": "index.js",
+  "bin": {
+    "nested-workspace-helper": "bin/nested-workspace-helper.js"
+  },
+  "dependencies": {
+    "semver": "^5.5.0",
+    "fs-extra": "^5.0.0",
+    "yargs": "^11.0.0",
+    "fs-tree-utils": "^0.0.0",
+    "@types/semver": "^5.5.0",
+    "@types/fs-extra": "^5.0.1",
+    "@types/yargs": "^11.0.0"
+  }
+}

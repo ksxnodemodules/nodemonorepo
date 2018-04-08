@@ -1,0 +1,71 @@
+root:
+  package.json: |
+    {
+      "name": "root",
+      "version": "0.0.0",
+      "private": true,
+      "workspaces": [
+        "wrkspc0dept/*",
+        "wrkspc1dept/*/*",
+        "wrkspc2dept/*/*/*"
+      ],
+      "devDependencies": {
+        "pkg00": "^0.1.0"
+      }
+    }
+  wrkspc0dept:
+    pkg00:
+      package.json: |
+        {
+          "name": "pkg00",
+          "version": "0.1.2"
+        }
+    pkg01:
+      package.json: |
+        {
+          "name": "pkg01",
+          "version": "1.2.3",
+          "private": false
+        }
+  wrkspc1dept:
+    sub10:
+      pkg100:
+        package.json: |
+          {
+            "name": "pkg100",
+            "version": "2.2.5"
+          }
+    sub11:
+      pkg110:
+        package.json: |
+          {
+            "name": "pkg110",
+            "version": "22.3.5",
+            "dependencies": {
+              "pkg01": "^1.0.0",
+              "pkg100": "~2.2.1"
+            }
+          }
+      pkg111prv:
+        package.json: |
+          {
+            "name": "pkg111prv",
+            "private": true,
+            "version": "33.22.11",
+            "dependencies": {
+              "pkg01": "*"
+            }
+          }
+  wrkspc2dept:
+    sub20:
+      sub200:
+        pkg2000:
+          package.json: |
+            {
+              "name": "pkg2000",
+              "version": "123.456.789",
+              "devDependencies": {
+                "pkg111prv": "33.22.11",
+                "foreign-foo": "^1.2.3"
+              }
+            }
