@@ -2,6 +2,7 @@ dependencies:
   '@types/fs-extra': 5.0.1
   '@types/semver': 5.5.0
   '@types/yargs': 11.0.0
+  extra-jest: 'link:../extra-jest'
   fs-extra: 5.0.0
   fs-tree-utils: 'link:../fs-tree-utils'
   semver: 5.5.0
@@ -397,6 +398,7 @@ specifiers:
   '@types/fs-extra': ^5.0.1
   '@types/semver': ^5.5.0
   '@types/yargs': ^11.0.0
+  extra-jest: ^0.0.0
   fs-extra: ^5.0.0
   fs-tree-utils: ^0.0.0
   semver: ^5.5.0

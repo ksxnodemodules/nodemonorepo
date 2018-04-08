@@ -13,5 +13,8 @@
     "@types/semver": "^5.5.0",
     "@types/fs-extra": "^5.0.1",
     "@types/yargs": "^11.0.0"
+  },
+  "devDependencies": {
+    "extra-jest": "^0.0.0"
   }
 }
