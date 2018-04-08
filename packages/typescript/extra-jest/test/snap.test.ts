@@ -1,4 +1,4 @@
-import * as snap from './snap'
+import * as snap from '../lib/snap'
 
 const refA = {}
 const refB = {refA}

@@ -1,4 +1,4 @@
-import * as snap from './snap'
-import * as promise from './promise'
-import * as setupTeardown from './setup-teardown'
+import * as snap from './lib/snap'
+import * as promise from './lib/promise'
+import * as setupTeardown from './lib/setup-teardown'
 export {snap, promise, setupTeardown}

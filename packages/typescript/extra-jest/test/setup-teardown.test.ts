@@ -1,4 +1,4 @@
-import * as subject from './setup-teardown'
+import * as subject from '../lib/setup-teardown'
 
 it('subject matches snapshot', () => {
   expect(subject).toMatchSnapshot()

@@ -1,4 +1,4 @@
-import * as promise from './promise'
+import * as promise from '../lib/promise'
 
 describe('promise.snapRejected', () => {
   it('fails on resolved promise', () => {
