@@ -1,4 +1,5 @@
 import * as path from 'path'
+import * as os from 'os'
 import {cwd, chdir} from 'process'
 import * as fsx from 'fs-extra'
 import * as xjest from 'extra-jest'
@@ -6,6 +7,7 @@ import * as subject from '../index'
 import {DeepFunc} from '../lib/traverse'
 const tree = require('./data/tree.yaml')
 const oldCwd = cwd()
+const tmpContainer = path.join(os.tmpdir(), 'fs-tree-utils.' + Math.random().toString(36).slice(2))
 const tmp = 'tmp'
 
 const createTreeGetter = (container: string) => () => Promise.all([
@@ -14,13 +16,15 @@ const createTreeGetter = (container: string) => () => Promise.all([
 ]).then(([nested, flat]) => ({nested, flat}))
 
 beforeAll(async () => {
-  chdir(__dirname)
+  await fsx.mkdir(tmpContainer)
+  chdir(tmpContainer)
   await fsx.remove(tmp)
   await fsx.mkdir(tmp)
 })
 
 afterAll(async () => {
   chdir(oldCwd)
+  await fsx.remove(tmpContainer)
 })
 
 describe('create function', () => {
