@@ -1,5 +1,7 @@
+import * as path from 'path'
 import * as os from 'os'
 import {spawnSync} from 'child_process'
+import * as envMod from 'path-env'
 import * as subject from './index'
 
 const checkTempPath = (tmp: string, rgx: RegExp) => {
@@ -9,13 +11,17 @@ const checkTempPath = (tmp: string, rgx: RegExp) => {
 
 const spawnTempPath = (argv: string[]) =>
   spawnSync(
-    'preloaded-node',
+    path.resolve(__dirname, 'node_modules/.bin/preloaded-node'),
     [
       require.resolve('./bin.inrepo.js'),
       ...argv
     ],
     {
-      encoding: 'utf8'
+      encoding: 'utf8',
+      env: envMod.pathEnv()
+        .set.name('PATH')
+        .path.append(module.paths.map(x => path.resolve(x, 'node_modules/.bin')))
+        .get.env()
     }
   )
 
