@@ -1,0 +1,18 @@
+devDependencies:
+  '@types/ramda': 0.25.21
+  ramda: 0.25.0
+packages:
+  /@types/ramda/0.25.21:
+    dev: true
+    resolution:
+      integrity: sha512-y4Dx3t+EA5Y+s87cwUoIzo0Tsj9z7QCu4gaXrdFln4wQRgk9igBskEEe7gZ0PG8dSXtQb29oA3RS//3XquHdiw==
+  /ramda/0.25.0:
+    dev: true
+    resolution:
+      integrity: sha512-GXpfrYVPwx3K7RQ6aYT8KPS8XViSXUVJT1ONhoKPE9VAleW42YE+U+8VEyGWt41EnEQW7gwecYJriTI0pKoecQ==
+registry: 'https://registry.npmjs.org/'
+shrinkwrapMinorVersion: 4
+shrinkwrapVersion: 3
+specifiers:
+  '@types/ramda': ^0.25.21
+  ramda: ^0.25.0

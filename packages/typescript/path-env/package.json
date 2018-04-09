@@ -1,0 +1,9 @@
+{
+  "name": "path-env",
+  "version": "0.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "ramda": "^0.25.0",
+    "@types/ramda": "^0.25.21"
+  }
+}
