@@ -2,5 +2,8 @@
   "name": "unique-temp-path",
   "version": "0.0.0",
   "main": "index.js",
-  "bin": "bin.inrepo.js"
+  "bin": "bin.inrepo.js",
+  "devDependencies": {
+    "preloaded-node": "^0.0.0"
+  }
 }

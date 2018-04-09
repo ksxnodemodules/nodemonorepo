@@ -1,0 +1,7 @@
+dependencies:
+  preloaded-node: 'link:../../javascript/preloaded-node'
+registry: 'https://registry.npmjs.org/'
+shrinkwrapMinorVersion: 4
+shrinkwrapVersion: 3
+specifiers:
+  preloaded-node: ^0.0.0
