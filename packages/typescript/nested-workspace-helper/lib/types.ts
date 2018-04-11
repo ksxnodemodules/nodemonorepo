@@ -15,6 +15,7 @@ export type PackageManifest = {
   main?: ModulePath,
   dependencies?: PackageDict,
   devDependencies?: PackageDict,
+  peerDependencies?: PackageDict,
   [_: string]: any
 }
 
@@ -25,3 +26,30 @@ export type PackageListItem = {
 }
 
 export type PackageList = PackageListItem[]
+
+export type DependencyName = PackageName
+export type DependencyVersion = PackageVersion
+export type DependencyType = 'prod' | 'dev' | 'peer'
+export type DependencyRequirement = PackageVersionRequirement
+
+export type Dependency = {
+  name: DependencyName,
+  version: DependencyVersion,
+  type: DependencyType,
+  requirement: DependencyRequirement
+}
+
+export type DependencyList = Dependency[]
+
+export type DependencyMap = {
+  [dirname: string]: DependencyList | undefined
+}
+
+export type MismatchedPackage = {
+  package: PackageManifest,
+  dependant: PackageManifest,
+  received: PackageVersionRequirement,
+  expected: PackageVersionRequirement
+}
+
+export type MismatchedPackageList = MismatchedPackage[]
