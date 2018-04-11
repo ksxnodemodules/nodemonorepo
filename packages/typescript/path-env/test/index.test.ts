@@ -60,7 +60,7 @@ function testEnvFactory (getFactory: () => EnvFactory, env: Env, name: string, d
   }
 
   describe('returns a factory', () => {
-    // it('has correct data', () => unit(getFactory(), array, delim, env))
+    it('has correct data', () => unit(getFactory(), array, delim, env))
   })
 
   describe('when alter a property', () => {
