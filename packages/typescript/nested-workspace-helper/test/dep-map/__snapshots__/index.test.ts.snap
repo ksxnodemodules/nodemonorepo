@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getDependencyMap matches snapshot 1`] = `
+Object {
+  "root": Array [
+    Object {
+      "name": "pkg00",
+      "requirement": "^0.1.0",
+      "type": "dev",
+      "version": "0.1.2",
+    },
+  ],
+  "root/wrkspc0dept/pkg00": Array [],
+  "root/wrkspc0dept/pkg01": Array [],
+  "root/wrkspc1dept/sub10/pkg100": Array [],
+  "root/wrkspc1dept/sub11/pkg110": Array [
+    Object {
+      "name": "pkg01",
+      "requirement": "^1.0.0",
+      "type": "prod",
+      "version": "1.2.3",
+    },
+    Object {
+      "name": "pkg100",
+      "requirement": "~2.2.1",
+      "type": "prod",
+      "version": "2.2.5",
+    },
+  ],
+  "root/wrkspc1dept/sub11/pkg111prv": Array [
+    Object {
+      "name": "pkg01",
+      "requirement": "*",
+      "type": "prod",
+      "version": "1.2.3",
+    },
+  ],
+  "root/wrkspc2dept/sub20/sub200/pkg2000": Array [
+    Object {
+      "name": "pkg111prv",
+      "requirement": "33.22.11",
+      "type": "dev",
+      "version": "33.22.11",
+    },
+  ],
+}
+`;
