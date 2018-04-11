@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "main": "index.js",
   "bin": "bin.inrepo.js",
+  "dependencies": {
+    "@types/node": "^9.6.4"
+  },
   "devDependencies": {
     "preloaded-node": "^0.0.0",
     "path-env": "^0.0.0"

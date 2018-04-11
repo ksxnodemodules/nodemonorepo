@@ -1,5 +1,6 @@
 dependencies:
   '@types/fs-extra': 5.0.1
+  '@types/node': 9.6.4
   fs-extra: 5.0.0
   fs-tree-utils: 'link:../fs-tree-utils'
   unique-temp-path: 'link:../unique-temp-path'
@@ -14,6 +15,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-UWkRY9X7RQHp5OhhRIIka58/gVVycL1zHZu0OTsT5LI86ABaMOSbUjAl+b0FeDhQcxclrkyft3kW5QWdMRs8wQ==
+  /@types/node/9.6.4:
+    dev: false
+    resolution:
+      integrity: sha512-Awg4BcUYiZtNKoveGOu654JVPt11V/KIC77iBz8NweyoOAZpz5rUJfPDwwD+ajfTs2HndbTCEB8IuLfX9m/mmw==
   /fs-extra/5.0.0:
     dependencies:
       graceful-fs: 4.1.11
@@ -43,6 +48,7 @@ shrinkwrapMinorVersion: 4
 shrinkwrapVersion: 3
 specifiers:
   '@types/fs-extra': ^5.0.1
+  '@types/node': ^9.6.4
   fs-extra: ^5.0.0
   fs-tree-utils: ^0.0.0
   unique-temp-path: ^0.0.0

@@ -1,7 +1,12 @@
 dependencies:
+  '@types/node': 9.6.4
   ts-node: 5.0.1
   typescript: 2.8.1
 packages:
+  /@types/node/9.6.4:
+    dev: false
+    resolution:
+      integrity: sha512-Awg4BcUYiZtNKoveGOu654JVPt11V/KIC77iBz8NweyoOAZpz5rUJfPDwwD+ajfTs2HndbTCEB8IuLfX9m/mmw==
   /ansi-styles/3.2.1:
     dependencies:
       color-convert: 1.9.1
@@ -123,5 +128,6 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 4
 shrinkwrapVersion: 3
 specifiers:
+  '@types/node': ^9.6.4
   ts-node: ^5.0.1
   typescript: ^2.8.1

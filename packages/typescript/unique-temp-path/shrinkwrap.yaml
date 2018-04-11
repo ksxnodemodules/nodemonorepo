@@ -1,9 +1,16 @@
 dependencies:
+  '@types/node': 9.6.4
   path-env: 'link:../path-env'
   preloaded-node: 'link:../../javascript/preloaded-node'
+packages:
+  /@types/node/9.6.4:
+    dev: false
+    resolution:
+      integrity: sha512-Awg4BcUYiZtNKoveGOu654JVPt11V/KIC77iBz8NweyoOAZpz5rUJfPDwwD+ajfTs2HndbTCEB8IuLfX9m/mmw==
 registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 4
 shrinkwrapVersion: 3
 specifiers:
+  '@types/node': ^9.6.4
   path-env: ^0.0.0
   preloaded-node: ^0.0.0

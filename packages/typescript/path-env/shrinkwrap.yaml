@@ -1,7 +1,13 @@
+dependencies:
+  '@types/node': 9.6.4
 devDependencies:
   '@types/ramda': 0.25.21
   ramda: 0.25.0
 packages:
+  /@types/node/9.6.4:
+    dev: false
+    resolution:
+      integrity: sha512-Awg4BcUYiZtNKoveGOu654JVPt11V/KIC77iBz8NweyoOAZpz5rUJfPDwwD+ajfTs2HndbTCEB8IuLfX9m/mmw==
   /@types/ramda/0.25.21:
     dev: true
     resolution:
@@ -14,5 +20,6 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 4
 shrinkwrapVersion: 3
 specifiers:
+  '@types/node': ^9.6.4
   '@types/ramda': ^0.25.21
   ramda: ^0.25.0
