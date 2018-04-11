@@ -5,7 +5,7 @@ devDependencies:
   '@types/glob': 5.0.35
   '@types/jest': 22.2.2
   '@types/js-yaml': 3.11.1
-  '@types/node': 9.6.2
+  '@types/node': 9.6.4
   babel-jest: 22.4.3
   coveralls: 3.0.0
   glob: 7.1.2
@@ -60,6 +60,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-UWkRY9X7RQHp5OhhRIIka58/gVVycL1zHZu0OTsT5LI86ABaMOSbUjAl+b0FeDhQcxclrkyft3kW5QWdMRs8wQ==
+  /@types/node/9.6.4:
+    dev: true
+    resolution:
+      integrity: sha512-Awg4BcUYiZtNKoveGOu654JVPt11V/KIC77iBz8NweyoOAZpz5rUJfPDwwD+ajfTs2HndbTCEB8IuLfX9m/mmw==
   /abab/1.0.4:
     dev: true
     resolution:
@@ -4743,7 +4747,7 @@ specifiers:
   '@types/glob': ^5.0.35
   '@types/jest': ^22.2.2
   '@types/js-yaml': ^3.11.1
-  '@types/node': ^9.6.2
+  '@types/node': ^9.6.4
   babel-jest: ^22.4.3
   coveralls: ^3.0.0
   extra-jest: ^0.0.0
