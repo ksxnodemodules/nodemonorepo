@@ -1,7 +1,9 @@
 import listAllPackages from './list-pkgs'
 import {DependencyList, DependencyMap, DependencyType, PackageDict} from './types'
 
-export async function getDependencyMap (dirname: string): Promise<DependencyMap> {
+export type DependencyMapResult = Promise<DependencyMap>
+
+export async function getDependencyMap (dirname: string): DependencyMapResult {
   const result: DependencyMap = {}
   const pkgs = await listAllPackages(dirname)
 
