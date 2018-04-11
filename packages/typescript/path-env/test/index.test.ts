@@ -146,14 +146,14 @@ describe('subject.pathString being called', () => {
   })
 
   describe('without specifying paramters', () => {
-    testPathFactory(subject.pathString, newPath, path.delimiter as PathDelimiter)
+    testPathFactory(subject.pathString, newPath, path.delimiter)
   })
 
   describe('with specified `string`, without specifying `delim`', () => {
     testPathFactory(
       () => subject.pathString('specified:string:param'),
       ['specified', 'string', 'param'],
-      path.delimiter as PathDelimiter
+      path.delimiter
     )
   })
 
@@ -203,7 +203,7 @@ describe('subject.pathEnv being called', () => {
       () => subject.pathEnv(),
       newEnv,
       'PATH',
-      path.delimiter as PathDelimiter
+      path.delimiter
     )
   })
 
@@ -212,7 +212,7 @@ describe('subject.pathEnv being called', () => {
       () => subject.pathEnv({...newEnv}),
       {...newEnv},
       'PATH',
-      path.delimiter as PathDelimiter
+      path.delimiter
     )
   })
 
@@ -221,14 +221,14 @@ describe('subject.pathEnv being called', () => {
       () => subject.pathEnv({...newEnv}, 'PATH'),
       {...newEnv},
       'PATH',
-      path.delimiter as PathDelimiter
+      path.delimiter
     )
 
     testEnvFactory(
       () => subject.pathEnv({...newEnv}, 'ALT_NAMED_PATH'),
       {...newEnv},
       'ALT_NAMED_PATH',
-      path.delimiter as PathDelimiter
+      path.delimiter
     )
   })
 
