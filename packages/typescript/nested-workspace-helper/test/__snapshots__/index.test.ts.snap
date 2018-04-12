@@ -4,5 +4,6 @@ exports[`main module matches snapshot 1`] = `
 Object {
   "getDependencyMap": [Function],
   "listAllPackages": [Function],
+  "listMismatchedDependencies": [Function],
 }
 `;
