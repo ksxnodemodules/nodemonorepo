@@ -1,42 +1,47 @@
 import listAllPackages from './list-pkgs'
-import {DependencyList, DependencyMap, DependencyType, PackageDict} from './types'
+import {DependencyList, DependencyMap, DependencyType, PackageDict, PackageList} from './types'
 
 export type DependencyMapResult = Promise<DependencyMap>
 
 export async function getDependencyMap (dirname: string): DependencyMapResult {
-  const result: DependencyMap = {}
-  const pkgs = await listAllPackages(dirname)
+  return getDependencyMap.fromList(await listAllPackages(dirname))
+}
 
-  function dict2list (dict: PackageDict, type: DependencyType): DependencyList {
-    const result: DependencyList = []
+export namespace getDependencyMap {
+  export function fromList (pkgs: PackageList): DependencyMap {
+    const result: DependencyMap = {}
 
-    for (const [name, requirement] of Object.entries(dict)) {
-      for (const {manifestContent} of pkgs) {
-        if (manifestContent.name !== name) continue
-        const {version = '0.0.0'} = manifestContent
-        result.push({name, version, type, requirement})
-        break
+    function dict2list (dict: PackageDict, type: DependencyType): DependencyList {
+      const result: DependencyList = []
+
+      for (const [name, requirement] of Object.entries(dict)) {
+        for (const {manifestContent} of pkgs) {
+          if (manifestContent.name !== name) continue
+          const {version = '0.0.0'} = manifestContent
+          result.push({name, version, type, requirement})
+          break
+        }
       }
+
+      return result
+    }
+
+    for (const item of pkgs) {
+      const {
+        dependencies = {},
+        devDependencies = {},
+        peerDependencies = {}
+      } = item.manifestContent
+
+      result[item.path] = [
+        ...dict2list(dependencies, 'prod'),
+        ...dict2list(devDependencies, 'dev'),
+        ...dict2list(peerDependencies, 'peer')
+      ]
     }
 
     return result
   }
-
-  for (const item of pkgs) {
-    const {
-      dependencies = {},
-      devDependencies = {},
-      peerDependencies = {}
-    } = item.manifestContent
-
-    result[item.path] = [
-      ...dict2list(dependencies, 'prod'),
-      ...dict2list(devDependencies, 'dev'),
-      ...dict2list(peerDependencies, 'peer')
-    ]
-  }
-
-  return result
 }
 
 export default getDependencyMap
