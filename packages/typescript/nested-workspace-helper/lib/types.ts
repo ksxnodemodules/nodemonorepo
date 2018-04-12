@@ -42,7 +42,7 @@ export type Dependency = {
 export type DependencyList = Dependency[]
 
 export type DependencyMap = {
-  [dirname: string]: DependencyList | undefined
+  [dirname: string]: DependencyList
 }
 
 export type MismatchedPackage = {
