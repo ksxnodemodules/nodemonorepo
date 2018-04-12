@@ -4,11 +4,11 @@ import {DependencyList, DependencyMap, DependencyType, PackageDict, PackageList}
 export type DependencyMapResult = Promise<DependencyMap>
 
 export async function getDependencyMap (dirname: string): DependencyMapResult {
-  return getDependencyMap.fromList(await listAllPackages(dirname))
+  return getDependencyMap.fromPackageList(await listAllPackages(dirname))
 }
 
 export namespace getDependencyMap {
-  export function fromList (pkgs: PackageList): DependencyMap {
+  export function fromPackageList (pkgs: PackageList): DependencyMap {
     const result: DependencyMap = {}
 
     function dict2list (dict: PackageDict, type: DependencyType): DependencyList {
