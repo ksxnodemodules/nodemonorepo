@@ -53,3 +53,13 @@ export type MismatchedPackage = {
 }
 
 export type MismatchedPackageList = MismatchedPackage[]
+
+export type MismatchedDependencyListItem = Dependency & {
+  update: PackageVersionRequirement
+}
+
+export type MismatchedDependencyList = MismatchedDependencyListItem[]
+
+export type MismatchedDependencyMap = {
+  [name: string]: MismatchedDependencyList
+}
