@@ -48,4 +48,11 @@ export type CheckerCollection = {[name: string]: Checker}
 export type PrvAllCheckerCollection = typeof prvAllCheckers
 export type AllCheckerCollection = CheckerCollection & PrvAllCheckerCollection
 export const allCheckers = prvAllCheckers as AllCheckerCollection
-export default allCheckers
+
+export function iterate (fn: (check: Checker, name: string) => void) {
+  Object
+    .entries(allCheckers)
+    .forEach(([name, check]) => fn(check, name))
+}
+
+export default iterate
