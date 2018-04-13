@@ -63,5 +63,5 @@ export type MismatchedDependencyMapValue = {
 }
 
 export type MismatchedDependencyMap = {
-  [name: string]: MismatchedDependencyList
+  [name: string]: MismatchedDependencyMapValue
 }
