@@ -22,7 +22,7 @@ const {
   ANY_OR_TILDA_MIN
 } = getMismatchedDependencies
 
-const prvAllCheckers = {
+export const prvAllCheckers = {
   ANY,
   EQUAL,
   TILDA_EQUAL,
