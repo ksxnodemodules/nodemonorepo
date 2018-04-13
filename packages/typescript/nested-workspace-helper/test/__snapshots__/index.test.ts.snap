@@ -5,5 +5,6 @@ Object {
   "getDependencyMap": [Function],
   "listAllPackages": [Function],
   "listMismatchedDependencies": [Function],
+  "updateDependencyVersions": [Function],
 }
 `;
