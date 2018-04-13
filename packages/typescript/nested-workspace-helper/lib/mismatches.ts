@@ -10,7 +10,6 @@ import {
   DependencyType,
   DependencyList,
   DependencyMap,
-  MismatchedPackageList,
   MismatchedDependencyList,
   MismatchedDependencyMap
 } from './types'

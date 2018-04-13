@@ -45,15 +45,6 @@ export type DependencyMap = {
   [dirname: string]: DependencyList
 }
 
-export type MismatchedPackage = {
-  package: PackageManifest,
-  dependant: PackageManifest,
-  received: PackageVersionRequirement,
-  expected: PackageVersionRequirement
-}
-
-export type MismatchedPackageList = MismatchedPackage[]
-
 export type MismatchedDependencyListItem = Dependency & {
   update: PackageVersionRequirement
 }
