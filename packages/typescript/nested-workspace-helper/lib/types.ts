@@ -36,13 +36,19 @@ export type Dependency = {
   name: DependencyName,
   version: DependencyVersion,
   type: DependencyType,
-  requirement: DependencyRequirement
+  requirement: DependencyRequirement,
+  info: PackageListItem
 }
 
 export type DependencyList = Dependency[]
 
+export type DependencyMapValue = {
+  list: DependencyList,
+  dependant: PackageListItem
+}
+
 export type DependencyMap = {
-  [dirname: string]: DependencyList
+  [dirname: string]: DependencyMapValue
 }
 
 export type MismatchedDependencyListItem = Dependency & {
@@ -50,6 +56,11 @@ export type MismatchedDependencyListItem = Dependency & {
 }
 
 export type MismatchedDependencyList = MismatchedDependencyListItem[]
+
+export type MismatchedDependencyMapValue = {
+  list: MismatchedDependencyList,
+  dependant: PackageListItem
+}
 
 export type MismatchedDependencyMap = {
   [name: string]: MismatchedDependencyList

@@ -74,8 +74,15 @@ export namespace listMismatchedDependencies {
   ): MismatchedDependencyMap {
     return Object
       .entries(map)
-      .map(([path, list]) => ({path, list: fromDependencyList(list, packages, check)}))
-      .reduce((obj, {path, list}) => Object.assign(obj, {[path]: list}), {})
+      .map(
+        ([path, {list, dependant}]) =>
+          ({path, dependant, list: fromDependencyList(list, packages, check)})
+      )
+      .reduce(
+        (obj, {path, list, dependant}) =>
+          Object.assign(obj, {[path]: {list, dependant}}),
+        {} as MismatchedDependencyMap
+      )
   }
 
   export function fromPackageList (
