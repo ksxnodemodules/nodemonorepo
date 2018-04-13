@@ -1,0 +1,438 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getMismatchedDependencies when checker is ANY matches snapshot 1`] = `
+Object {
+  "root": Array [
+    Object {
+      "name": "matched000",
+      "requirement": "1.2.3",
+      "type": "prod",
+      "update": "*",
+      "version": "1.2.3",
+    },
+    Object {
+      "name": "mismatched000",
+      "requirement": "^2.2.3",
+      "type": "prod",
+      "update": "*",
+      "version": "3.2.1",
+    },
+  ],
+  "root/matched/matched000": Array [],
+  "root/mismatched/mismatched000": Array [],
+}
+`;
+
+exports[`getMismatchedDependencies when checker is ANY_OR_CARET_EQUAL matches snapshot 1`] = `
+Object {
+  "root": Array [
+    Object {
+      "name": "matched000",
+      "requirement": "1.2.3",
+      "type": "prod",
+      "update": "*",
+      "version": "1.2.3",
+    },
+    Object {
+      "name": "mismatched000",
+      "requirement": "^2.2.3",
+      "type": "prod",
+      "update": "*",
+      "version": "3.2.1",
+    },
+  ],
+  "root/matched/matched000": Array [],
+  "root/mismatched/mismatched000": Array [],
+}
+`;
+
+exports[`getMismatchedDependencies when checker is ANY_OR_CARET_MIN matches snapshot 1`] = `
+Object {
+  "root": Array [
+    Object {
+      "name": "matched000",
+      "requirement": "1.2.3",
+      "type": "prod",
+      "update": "*",
+      "version": "1.2.3",
+    },
+    Object {
+      "name": "mismatched000",
+      "requirement": "^2.2.3",
+      "type": "prod",
+      "update": "*",
+      "version": "3.2.1",
+    },
+  ],
+  "root/matched/matched000": Array [],
+  "root/mismatched/mismatched000": Array [],
+}
+`;
+
+exports[`getMismatchedDependencies when checker is ANY_OR_EQUAL matches snapshot 1`] = `
+Object {
+  "root": Array [
+    Object {
+      "name": "matched000",
+      "requirement": "1.2.3",
+      "type": "prod",
+      "update": "*",
+      "version": "1.2.3",
+    },
+    Object {
+      "name": "mismatched000",
+      "requirement": "^2.2.3",
+      "type": "prod",
+      "update": "*",
+      "version": "3.2.1",
+    },
+  ],
+  "root/matched/matched000": Array [],
+  "root/mismatched/mismatched000": Array [],
+}
+`;
+
+exports[`getMismatchedDependencies when checker is ANY_OR_EQUAL_MIN matches snapshot 1`] = `
+Object {
+  "root": Array [
+    Object {
+      "name": "matched000",
+      "requirement": "1.2.3",
+      "type": "prod",
+      "update": "*",
+      "version": "1.2.3",
+    },
+    Object {
+      "name": "mismatched000",
+      "requirement": "^2.2.3",
+      "type": "prod",
+      "update": "*",
+      "version": "3.2.1",
+    },
+  ],
+  "root/matched/matched000": Array [],
+  "root/mismatched/mismatched000": Array [],
+}
+`;
+
+exports[`getMismatchedDependencies when checker is ANY_OR_TILDA_EQUAL matches snapshot 1`] = `
+Object {
+  "root": Array [
+    Object {
+      "name": "matched000",
+      "requirement": "1.2.3",
+      "type": "prod",
+      "update": "*",
+      "version": "1.2.3",
+    },
+    Object {
+      "name": "mismatched000",
+      "requirement": "^2.2.3",
+      "type": "prod",
+      "update": "*",
+      "version": "3.2.1",
+    },
+  ],
+  "root/matched/matched000": Array [],
+  "root/mismatched/mismatched000": Array [],
+}
+`;
+
+exports[`getMismatchedDependencies when checker is ANY_OR_TILDA_MIN matches snapshot 1`] = `
+Object {
+  "root": Array [
+    Object {
+      "name": "matched000",
+      "requirement": "1.2.3",
+      "type": "prod",
+      "update": "*",
+      "version": "1.2.3",
+    },
+    Object {
+      "name": "mismatched000",
+      "requirement": "^2.2.3",
+      "type": "prod",
+      "update": "*",
+      "version": "3.2.1",
+    },
+  ],
+  "root/matched/matched000": Array [],
+  "root/mismatched/mismatched000": Array [],
+}
+`;
+
+exports[`getMismatchedDependencies when checker is CARET_EQUAL matches snapshot 1`] = `
+Object {
+  "root": Array [
+    Object {
+      "name": "matched000",
+      "requirement": "1.2.3",
+      "type": "prod",
+      "update": "^1.2.3",
+      "version": "1.2.3",
+    },
+    Object {
+      "name": "mismatched000",
+      "requirement": "^2.2.3",
+      "type": "prod",
+      "update": "^3.2.1",
+      "version": "3.2.1",
+    },
+  ],
+  "root/matched/matched000": Array [],
+  "root/mismatched/mismatched000": Array [],
+}
+`;
+
+exports[`getMismatchedDependencies when checker is CARET_EQUAL_OR_ANY matches snapshot 1`] = `
+Object {
+  "root": Array [
+    Object {
+      "name": "matched000",
+      "requirement": "1.2.3",
+      "type": "prod",
+      "update": "^1.2.3",
+      "version": "1.2.3",
+    },
+    Object {
+      "name": "mismatched000",
+      "requirement": "^2.2.3",
+      "type": "prod",
+      "update": "^3.2.1",
+      "version": "3.2.1",
+    },
+  ],
+  "root/matched/matched000": Array [],
+  "root/mismatched/mismatched000": Array [],
+}
+`;
+
+exports[`getMismatchedDependencies when checker is CARET_MIN matches snapshot 1`] = `
+Object {
+  "root": Array [
+    Object {
+      "name": "matched000",
+      "requirement": "1.2.3",
+      "type": "prod",
+      "update": "1.2.3",
+      "version": "1.2.3",
+    },
+    Object {
+      "name": "mismatched000",
+      "requirement": "^2.2.3",
+      "type": "prod",
+      "update": "^3.2.1",
+      "version": "3.2.1",
+    },
+  ],
+  "root/matched/matched000": Array [],
+  "root/mismatched/mismatched000": Array [],
+}
+`;
+
+exports[`getMismatchedDependencies when checker is CARET_MIN_OR_ANY matches snapshot 1`] = `
+Object {
+  "root": Array [
+    Object {
+      "name": "matched000",
+      "requirement": "1.2.3",
+      "type": "prod",
+      "update": "1.2.3",
+      "version": "1.2.3",
+    },
+    Object {
+      "name": "mismatched000",
+      "requirement": "^2.2.3",
+      "type": "prod",
+      "update": "^3.2.1",
+      "version": "3.2.1",
+    },
+  ],
+  "root/matched/matched000": Array [],
+  "root/mismatched/mismatched000": Array [],
+}
+`;
+
+exports[`getMismatchedDependencies when checker is EQUAL matches snapshot 1`] = `
+Object {
+  "root": Array [
+    Object {
+      "name": "matched000",
+      "requirement": "1.2.3",
+      "type": "prod",
+      "update": "1.2.3",
+      "version": "1.2.3",
+    },
+    Object {
+      "name": "mismatched000",
+      "requirement": "^2.2.3",
+      "type": "prod",
+      "update": "3.2.1",
+      "version": "3.2.1",
+    },
+  ],
+  "root/matched/matched000": Array [],
+  "root/mismatched/mismatched000": Array [],
+}
+`;
+
+exports[`getMismatchedDependencies when checker is EQUAL_MIN matches snapshot 1`] = `
+Object {
+  "root": Array [
+    Object {
+      "name": "matched000",
+      "requirement": "1.2.3",
+      "type": "prod",
+      "update": "1.2.3",
+      "version": "1.2.3",
+    },
+    Object {
+      "name": "mismatched000",
+      "requirement": "^2.2.3",
+      "type": "prod",
+      "update": "3.2.1",
+      "version": "3.2.1",
+    },
+  ],
+  "root/matched/matched000": Array [],
+  "root/mismatched/mismatched000": Array [],
+}
+`;
+
+exports[`getMismatchedDependencies when checker is EQUAL_MIN_OR_ANY matches snapshot 1`] = `
+Object {
+  "root": Array [
+    Object {
+      "name": "matched000",
+      "requirement": "1.2.3",
+      "type": "prod",
+      "update": "1.2.3",
+      "version": "1.2.3",
+    },
+    Object {
+      "name": "mismatched000",
+      "requirement": "^2.2.3",
+      "type": "prod",
+      "update": "3.2.1",
+      "version": "3.2.1",
+    },
+  ],
+  "root/matched/matched000": Array [],
+  "root/mismatched/mismatched000": Array [],
+}
+`;
+
+exports[`getMismatchedDependencies when checker is EQUAL_OR_ANY matches snapshot 1`] = `
+Object {
+  "root": Array [
+    Object {
+      "name": "matched000",
+      "requirement": "1.2.3",
+      "type": "prod",
+      "update": "1.2.3",
+      "version": "1.2.3",
+    },
+    Object {
+      "name": "mismatched000",
+      "requirement": "^2.2.3",
+      "type": "prod",
+      "update": "3.2.1",
+      "version": "3.2.1",
+    },
+  ],
+  "root/matched/matched000": Array [],
+  "root/mismatched/mismatched000": Array [],
+}
+`;
+
+exports[`getMismatchedDependencies when checker is TILDA_EQUAL matches snapshot 1`] = `
+Object {
+  "root": Array [
+    Object {
+      "name": "matched000",
+      "requirement": "1.2.3",
+      "type": "prod",
+      "update": "~1.2.3",
+      "version": "1.2.3",
+    },
+    Object {
+      "name": "mismatched000",
+      "requirement": "^2.2.3",
+      "type": "prod",
+      "update": "~3.2.1",
+      "version": "3.2.1",
+    },
+  ],
+  "root/matched/matched000": Array [],
+  "root/mismatched/mismatched000": Array [],
+}
+`;
+
+exports[`getMismatchedDependencies when checker is TILDA_EQUAL_OR_ANY matches snapshot 1`] = `
+Object {
+  "root": Array [
+    Object {
+      "name": "matched000",
+      "requirement": "1.2.3",
+      "type": "prod",
+      "update": "~1.2.3",
+      "version": "1.2.3",
+    },
+    Object {
+      "name": "mismatched000",
+      "requirement": "^2.2.3",
+      "type": "prod",
+      "update": "~3.2.1",
+      "version": "3.2.1",
+    },
+  ],
+  "root/matched/matched000": Array [],
+  "root/mismatched/mismatched000": Array [],
+}
+`;
+
+exports[`getMismatchedDependencies when checker is TILDA_MIN matches snapshot 1`] = `
+Object {
+  "root": Array [
+    Object {
+      "name": "matched000",
+      "requirement": "1.2.3",
+      "type": "prod",
+      "update": "1.2.3",
+      "version": "1.2.3",
+    },
+    Object {
+      "name": "mismatched000",
+      "requirement": "^2.2.3",
+      "type": "prod",
+      "update": "~3.2.1",
+      "version": "3.2.1",
+    },
+  ],
+  "root/matched/matched000": Array [],
+  "root/mismatched/mismatched000": Array [],
+}
+`;
+
+exports[`getMismatchedDependencies when checker is TILDA_MIN_OR_ANY matches snapshot 1`] = `
+Object {
+  "root": Array [
+    Object {
+      "name": "matched000",
+      "requirement": "1.2.3",
+      "type": "prod",
+      "update": "1.2.3",
+      "version": "1.2.3",
+    },
+    Object {
+      "name": "mismatched000",
+      "requirement": "^2.2.3",
+      "type": "prod",
+      "update": "~3.2.1",
+      "version": "3.2.1",
+    },
+  ],
+  "root/matched/matched000": Array [],
+  "root/mismatched/mismatched000": Array [],
+}
+`;

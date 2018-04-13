@@ -1,0 +1,40 @@
+root:
+  package.json: |
+    {
+      "version": "0.0.0",
+      "private": true,
+      "dependencies": {
+        "matched000": "1.2.3",
+        "mismatched000": "^2.2.3",
+        "mismatched001": "^5.5.6",
+        "matched001": "*"
+      }
+    }
+  matched:
+    matched000:
+      package.json: |
+        {
+          "name": "matched000",
+          "version": "1.2.3"
+        }
+    matched001: |
+      package.json: |
+        {
+          "name": "matched001",
+          "version": "22.44.55"
+        }
+  mismatched:
+    mismatched000:
+      package.json: |
+        {
+          "name": "mismatched000",
+          "version": "3.2.1",
+          "description": "Requirement is too low"
+        }
+    mismatched001: |
+      package.json: |
+        {
+          "name": "mismatched001",
+          "version": "4.5.6",
+          "description": "Requirement is too high"
+        }
