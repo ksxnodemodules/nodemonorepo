@@ -29,6 +29,7 @@ rootArray:
   - package-lock.json
   - shrinkwrap*
   - renovate*
+  - TODO.md
 rootString: |-
   *.log
   quick-test
@@ -56,6 +57,7 @@ rootString: |-
   package-lock.json
   shrinkwrap*
   renovate*
+  TODO.md
 
 "
 `;
