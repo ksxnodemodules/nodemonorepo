@@ -1692,6 +1692,9 @@ packages:
     engines:
       node: '>=0.8.0'
     optional: true
+    os:
+      - darwin
+    requiresBuild: true
     resolution:
       integrity: sha512-WIr7iDkdmdbxu/Gh6eKEZJL6KPE74/5MEsf2whTOFNxbIoIixogroLdKYqB6FDav4Wavh/lZdzzd3b2KxIXC5Q==
   /function-bind/1.1.1:
@@ -4742,7 +4745,7 @@ packages:
     resolution:
       integrity: sha1-9+572FfdfB0tOMDnTvvWgdFDH9E=
 registry: 'https://registry.npmjs.org/'
-shrinkwrapMinorVersion: 4
+shrinkwrapMinorVersion: 5
 shrinkwrapVersion: 3
 specifiers:
   '@types/glob': ^5.0.35

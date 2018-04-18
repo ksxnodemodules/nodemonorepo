@@ -8,7 +8,7 @@ packages:
     resolution:
       integrity: sha512-Awg4BcUYiZtNKoveGOu654JVPt11V/KIC77iBz8NweyoOAZpz5rUJfPDwwD+ajfTs2HndbTCEB8IuLfX9m/mmw==
 registry: 'https://registry.npmjs.org/'
-shrinkwrapMinorVersion: 4
+shrinkwrapMinorVersion: 5
 shrinkwrapVersion: 3
 specifiers:
   '@types/node': ^9.6.4
