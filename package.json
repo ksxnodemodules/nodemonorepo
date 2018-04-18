@@ -16,6 +16,7 @@
     "glob": "^7.1.2",
     "extra-jest": "^0.0.0",
     "preloaded-node": "^0.0.0",
+    "nested-workspace-helper": "^0.0.0",
     "@types/jest": "^22.2.2",
     "@types/js-yaml": "^3.11.1",
     "@types/glob": "^5.0.35",

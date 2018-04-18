@@ -1,5 +1,6 @@
 dependencies:
   extra-jest: 'link:packages/typescript/extra-jest'
+  nested-workspace-helper: 'link:packages/typescript/nested-workspace-helper'
   preloaded-node: 'link:packages/javascript/preloaded-node'
 devDependencies:
   '@types/glob': 5.0.35
@@ -4755,6 +4756,7 @@ specifiers:
   jest: ^22.1.4
   jest-extended: ^0.6.0
   js-yaml: ^3.11.0
+  nested-workspace-helper: ^0.0.0
   preloaded-node: ^0.0.0
   standard: ^11.0.0
   ts-jest: ^22.4.2
