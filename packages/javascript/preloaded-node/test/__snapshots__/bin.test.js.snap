@@ -4,7 +4,7 @@ exports[`matches snapshot 1`] = `
 "
 error: null
 signal: null
-status: 0
+status: 123
 stderr: (Empty)
 stdout: |
   { TypeScript: 'Hello World !!' }

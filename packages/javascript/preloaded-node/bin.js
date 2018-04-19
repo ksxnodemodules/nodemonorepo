@@ -1,6 +1,6 @@
 #! /usr/bin/env node
 const path = require('path')
-const {argv, env} = require('process')
+const {argv, env, exit} = require('process')
 const {spawnSync} = require('child_process')
 const receivedArgv = argv.slice(2)
 const preloadedArgv = ['--require', 'ts-node/register/type-check']
@@ -10,7 +10,7 @@ const {PATH = '', NODE_PATH = ''} = env
 const addPath = (pathVar, ...addend) =>
   pathVar.trim().split(path.delimiter).concat(...addend).join(path.delimiter)
 
-spawnSync(
+const {status} = spawnSync(
   'node',
   finalArgv,
   {
@@ -22,3 +22,5 @@ spawnSync(
     }
   }
 )
+
+exit(status)
