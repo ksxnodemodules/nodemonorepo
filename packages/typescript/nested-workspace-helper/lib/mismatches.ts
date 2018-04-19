@@ -20,6 +20,10 @@ export type Checker = (
   type: DependencyType
 ) => PackageVersionRequirement
 
+export type CheckerCollection = {
+  [name: string]: Checker
+}
+
 export type CheckDependencyResult = Promise<MismatchedDependencyMap>
 
 export async function listMismatchedDependencies (
@@ -55,6 +59,20 @@ export namespace listMismatchedDependencies {
   export const ANY_OR_EQUAL_MIN = mkCndChecker(ANY, EQUAL_MIN)
   export const ANY_OR_TILDA_MIN = mkCndChecker(ANY, TILDA_MIN)
   export const ANY_OR_CARET_MIN = mkCndChecker(ANY, CARET_MIN)
+
+  export const prvAllCheckers = {
+    ANY,
+    EQUAL, TILDA_EQUAL, CARET_EQUAL,
+    EQUAL_MIN, TILDA_MIN, CARET_MIN,
+    EQUAL_OR_ANY, TILDA_EQUAL_OR_ANY, CARET_EQUAL_OR_ANY,
+    EQUAL_MIN_OR_ANY, TILDA_MIN_OR_ANY, CARET_MIN_OR_ANY,
+    ANY_OR_EQUAL, ANY_OR_TILDA_EQUAL, ANY_OR_CARET_EQUAL,
+    ANY_OR_EQUAL_MIN, ANY_OR_TILDA_MIN, ANY_OR_CARET_MIN
+  }
+
+  export type AllCheckerCollection = CheckerCollection & typeof prvAllCheckers
+
+  export const allCheckers: AllCheckerCollection = prvAllCheckers
 
   export function fromDependencyList (
     dependencies: DependencyList,
