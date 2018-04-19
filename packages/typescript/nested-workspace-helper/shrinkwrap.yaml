@@ -406,7 +406,7 @@ specifiers:
   '@types/node': ^9.6.4
   '@types/semver': ^5.5.0
   '@types/yargs': ^11.0.0
-  extra-jest: ^0.0.0
+  extra-jest: '*'
   fs-extra: ^5.0.0
   fs-tree-utils: ^0.0.0
   preloaded-node: ^0.0.0

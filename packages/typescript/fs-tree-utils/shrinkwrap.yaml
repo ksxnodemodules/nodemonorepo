@@ -60,7 +60,7 @@ specifiers:
   '@types/fs-extra': ^5.0.1
   '@types/node': ^9.6.4
   '@types/ramda': ^0.25.21
-  extra-jest: ^0.0.0
+  extra-jest: '*'
   fs-extra: ^5.0.0
   ramda: ^0.25.0
-  unique-temp-path: ^0.0.0
+  unique-temp-path: '*'

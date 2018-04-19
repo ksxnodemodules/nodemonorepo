@@ -12,5 +12,5 @@ shrinkwrapMinorVersion: 5
 shrinkwrapVersion: 3
 specifiers:
   '@types/node': ^9.6.4
-  path-env: ^0.0.0
-  preloaded-node: ^0.0.0
+  path-env: '*'
+  preloaded-node: '*'
