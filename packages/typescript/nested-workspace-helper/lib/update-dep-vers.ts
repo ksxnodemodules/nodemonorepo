@@ -81,7 +81,7 @@ export namespace updateDependencyVersions {
       dict: PackageDict
     ): void => {
       const newDict = getDict(manifest[name] as PackageDict, dict)
-      if (newDict) manifest[name] = newDict
+      if (newDict) result[name] = newDict
     }
 
     setDict('dependencies', refs.prod)

@@ -47,8 +47,8 @@ fileContents:
       \\"version\\": \\"0.0.0\\",
       \\"private\\": true,
       \\"dependencies\\": {
-        \\"matched000\\": \\"1.2.3\\",
-        \\"mismatched000\\": \\"^2.2.3\\",
+        \\"matched000\\": \\"*\\",
+        \\"mismatched000\\": \\"*\\",
         \\"mismatched001\\": \\"^5.5.6\\",
         \\"matched001\\": \\"*\\"
       }
@@ -110,8 +110,8 @@ fileContents:
       \\"version\\": \\"0.0.0\\",
       \\"private\\": true,
       \\"dependencies\\": {
-        \\"matched000\\": \\"1.2.3\\",
-        \\"mismatched000\\": \\"^2.2.3\\",
+        \\"matched000\\": \\"*\\",
+        \\"mismatched000\\": \\"*\\",
         \\"mismatched001\\": \\"^5.5.6\\",
         \\"matched001\\": \\"*\\"
       }
@@ -173,8 +173,8 @@ fileContents:
       \\"version\\": \\"0.0.0\\",
       \\"private\\": true,
       \\"dependencies\\": {
-        \\"matched000\\": \\"1.2.3\\",
-        \\"mismatched000\\": \\"^2.2.3\\",
+        \\"matched000\\": \\"*\\",
+        \\"mismatched000\\": \\"*\\",
         \\"mismatched001\\": \\"^5.5.6\\",
         \\"matched001\\": \\"*\\"
       }
@@ -236,8 +236,8 @@ fileContents:
       \\"version\\": \\"0.0.0\\",
       \\"private\\": true,
       \\"dependencies\\": {
-        \\"matched000\\": \\"1.2.3\\",
-        \\"mismatched000\\": \\"^2.2.3\\",
+        \\"matched000\\": \\"*\\",
+        \\"mismatched000\\": \\"*\\",
         \\"mismatched001\\": \\"^5.5.6\\",
         \\"matched001\\": \\"*\\"
       }
@@ -299,8 +299,8 @@ fileContents:
       \\"version\\": \\"0.0.0\\",
       \\"private\\": true,
       \\"dependencies\\": {
-        \\"matched000\\": \\"1.2.3\\",
-        \\"mismatched000\\": \\"^2.2.3\\",
+        \\"matched000\\": \\"*\\",
+        \\"mismatched000\\": \\"*\\",
         \\"mismatched001\\": \\"^5.5.6\\",
         \\"matched001\\": \\"*\\"
       }
@@ -362,8 +362,8 @@ fileContents:
       \\"version\\": \\"0.0.0\\",
       \\"private\\": true,
       \\"dependencies\\": {
-        \\"matched000\\": \\"1.2.3\\",
-        \\"mismatched000\\": \\"^2.2.3\\",
+        \\"matched000\\": \\"*\\",
+        \\"mismatched000\\": \\"*\\",
         \\"mismatched001\\": \\"^5.5.6\\",
         \\"matched001\\": \\"*\\"
       }
@@ -425,8 +425,8 @@ fileContents:
       \\"version\\": \\"0.0.0\\",
       \\"private\\": true,
       \\"dependencies\\": {
-        \\"matched000\\": \\"1.2.3\\",
-        \\"mismatched000\\": \\"^2.2.3\\",
+        \\"matched000\\": \\"*\\",
+        \\"mismatched000\\": \\"*\\",
         \\"mismatched001\\": \\"^5.5.6\\",
         \\"matched001\\": \\"*\\"
       }
@@ -488,8 +488,8 @@ fileContents:
       \\"version\\": \\"0.0.0\\",
       \\"private\\": true,
       \\"dependencies\\": {
-        \\"matched000\\": \\"1.2.3\\",
-        \\"mismatched000\\": \\"^2.2.3\\",
+        \\"matched000\\": \\"^1.2.3\\",
+        \\"mismatched000\\": \\"^3.2.1\\",
         \\"mismatched001\\": \\"^5.5.6\\",
         \\"matched001\\": \\"*\\"
       }
@@ -551,8 +551,8 @@ fileContents:
       \\"version\\": \\"0.0.0\\",
       \\"private\\": true,
       \\"dependencies\\": {
-        \\"matched000\\": \\"1.2.3\\",
-        \\"mismatched000\\": \\"^2.2.3\\",
+        \\"matched000\\": \\"^1.2.3\\",
+        \\"mismatched000\\": \\"^3.2.1\\",
         \\"mismatched001\\": \\"^5.5.6\\",
         \\"matched001\\": \\"*\\"
       }
@@ -615,7 +615,7 @@ fileContents:
       \\"private\\": true,
       \\"dependencies\\": {
         \\"matched000\\": \\"1.2.3\\",
-        \\"mismatched000\\": \\"^2.2.3\\",
+        \\"mismatched000\\": \\"^3.2.1\\",
         \\"mismatched001\\": \\"^5.5.6\\",
         \\"matched001\\": \\"*\\"
       }
@@ -678,7 +678,7 @@ fileContents:
       \\"private\\": true,
       \\"dependencies\\": {
         \\"matched000\\": \\"1.2.3\\",
-        \\"mismatched000\\": \\"^2.2.3\\",
+        \\"mismatched000\\": \\"^3.2.1\\",
         \\"mismatched001\\": \\"^5.5.6\\",
         \\"matched001\\": \\"*\\"
       }
@@ -741,7 +741,7 @@ fileContents:
       \\"private\\": true,
       \\"dependencies\\": {
         \\"matched000\\": \\"1.2.3\\",
-        \\"mismatched000\\": \\"^2.2.3\\",
+        \\"mismatched000\\": \\"3.2.1\\",
         \\"mismatched001\\": \\"^5.5.6\\",
         \\"matched001\\": \\"*\\"
       }
@@ -804,7 +804,7 @@ fileContents:
       \\"private\\": true,
       \\"dependencies\\": {
         \\"matched000\\": \\"1.2.3\\",
-        \\"mismatched000\\": \\"^2.2.3\\",
+        \\"mismatched000\\": \\"3.2.1\\",
         \\"mismatched001\\": \\"^5.5.6\\",
         \\"matched001\\": \\"*\\"
       }
@@ -867,7 +867,7 @@ fileContents:
       \\"private\\": true,
       \\"dependencies\\": {
         \\"matched000\\": \\"1.2.3\\",
-        \\"mismatched000\\": \\"^2.2.3\\",
+        \\"mismatched000\\": \\"3.2.1\\",
         \\"mismatched001\\": \\"^5.5.6\\",
         \\"matched001\\": \\"*\\"
       }
@@ -930,7 +930,7 @@ fileContents:
       \\"private\\": true,
       \\"dependencies\\": {
         \\"matched000\\": \\"1.2.3\\",
-        \\"mismatched000\\": \\"^2.2.3\\",
+        \\"mismatched000\\": \\"3.2.1\\",
         \\"mismatched001\\": \\"^5.5.6\\",
         \\"matched001\\": \\"*\\"
       }
@@ -992,8 +992,8 @@ fileContents:
       \\"version\\": \\"0.0.0\\",
       \\"private\\": true,
       \\"dependencies\\": {
-        \\"matched000\\": \\"1.2.3\\",
-        \\"mismatched000\\": \\"^2.2.3\\",
+        \\"matched000\\": \\"~1.2.3\\",
+        \\"mismatched000\\": \\"~3.2.1\\",
         \\"mismatched001\\": \\"^5.5.6\\",
         \\"matched001\\": \\"*\\"
       }
@@ -1055,8 +1055,8 @@ fileContents:
       \\"version\\": \\"0.0.0\\",
       \\"private\\": true,
       \\"dependencies\\": {
-        \\"matched000\\": \\"1.2.3\\",
-        \\"mismatched000\\": \\"^2.2.3\\",
+        \\"matched000\\": \\"~1.2.3\\",
+        \\"mismatched000\\": \\"~3.2.1\\",
         \\"mismatched001\\": \\"^5.5.6\\",
         \\"matched001\\": \\"*\\"
       }
@@ -1119,7 +1119,7 @@ fileContents:
       \\"private\\": true,
       \\"dependencies\\": {
         \\"matched000\\": \\"1.2.3\\",
-        \\"mismatched000\\": \\"^2.2.3\\",
+        \\"mismatched000\\": \\"~3.2.1\\",
         \\"mismatched001\\": \\"^5.5.6\\",
         \\"matched001\\": \\"*\\"
       }
@@ -1182,7 +1182,7 @@ fileContents:
       \\"private\\": true,
       \\"dependencies\\": {
         \\"matched000\\": \\"1.2.3\\",
-        \\"mismatched000\\": \\"^2.2.3\\",
+        \\"mismatched000\\": \\"~3.2.1\\",
         \\"mismatched001\\": \\"^5.5.6\\",
         \\"matched001\\": \\"*\\"
       }
