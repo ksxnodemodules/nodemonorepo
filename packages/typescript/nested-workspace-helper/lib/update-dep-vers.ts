@@ -1,4 +1,5 @@
 import * as fsx from 'fs-extra'
+import {deserialize} from './utils/json'
 import getMismatchedDependencies, {Checker} from './mismatches'
 
 import {
@@ -20,7 +21,7 @@ export async function updateDependencyVersions (
       await getMismatchedDependencies(dirname, check)
     ).map(item => fsx.writeFile(
       item.manifestFile,
-      JSON.stringify(item.manifestContent, undefined, jsonIndent)
+      deserialize(item.manifestContent, jsonIndent)
     ))
   )
 }

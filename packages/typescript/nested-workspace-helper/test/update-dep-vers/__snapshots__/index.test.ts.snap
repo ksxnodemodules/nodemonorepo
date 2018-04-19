@@ -18,7 +18,7 @@ directories:
   - root/mismatched
   - root/mismatched/mismatched000
 fileContents:
-  root/matched/matched000/package.json: |-
+  root/matched/matched000/package.json: |
     {
       \\"name\\": \\"matched000\\",
       \\"version\\": \\"1.2.3\\"
@@ -29,7 +29,7 @@ fileContents:
         \\"name\\": \\"matched001\\",
         \\"version\\": \\"22.44.55\\"
       }
-  root/mismatched/mismatched000/package.json: |-
+  root/mismatched/mismatched000/package.json: |
     {
       \\"name\\": \\"mismatched000\\",
       \\"version\\": \\"3.2.1\\",
@@ -42,7 +42,7 @@ fileContents:
         \\"version\\": \\"4.5.6\\",
         \\"description\\": \\"Requirement is too high\\"
       }
-  root/package.json: |-
+  root/package.json: |
     {
       \\"version\\": \\"0.0.0\\",
       \\"private\\": true,
@@ -81,7 +81,7 @@ directories:
   - root/mismatched
   - root/mismatched/mismatched000
 fileContents:
-  root/matched/matched000/package.json: |-
+  root/matched/matched000/package.json: |
     {
       \\"name\\": \\"matched000\\",
       \\"version\\": \\"1.2.3\\"
@@ -92,7 +92,7 @@ fileContents:
         \\"name\\": \\"matched001\\",
         \\"version\\": \\"22.44.55\\"
       }
-  root/mismatched/mismatched000/package.json: |-
+  root/mismatched/mismatched000/package.json: |
     {
       \\"name\\": \\"mismatched000\\",
       \\"version\\": \\"3.2.1\\",
@@ -105,7 +105,7 @@ fileContents:
         \\"version\\": \\"4.5.6\\",
         \\"description\\": \\"Requirement is too high\\"
       }
-  root/package.json: |-
+  root/package.json: |
     {
       \\"version\\": \\"0.0.0\\",
       \\"private\\": true,
@@ -144,7 +144,7 @@ directories:
   - root/mismatched
   - root/mismatched/mismatched000
 fileContents:
-  root/matched/matched000/package.json: |-
+  root/matched/matched000/package.json: |
     {
       \\"name\\": \\"matched000\\",
       \\"version\\": \\"1.2.3\\"
@@ -155,7 +155,7 @@ fileContents:
         \\"name\\": \\"matched001\\",
         \\"version\\": \\"22.44.55\\"
       }
-  root/mismatched/mismatched000/package.json: |-
+  root/mismatched/mismatched000/package.json: |
     {
       \\"name\\": \\"mismatched000\\",
       \\"version\\": \\"3.2.1\\",
@@ -168,7 +168,7 @@ fileContents:
         \\"version\\": \\"4.5.6\\",
         \\"description\\": \\"Requirement is too high\\"
       }
-  root/package.json: |-
+  root/package.json: |
     {
       \\"version\\": \\"0.0.0\\",
       \\"private\\": true,
@@ -207,7 +207,7 @@ directories:
   - root/mismatched
   - root/mismatched/mismatched000
 fileContents:
-  root/matched/matched000/package.json: |-
+  root/matched/matched000/package.json: |
     {
       \\"name\\": \\"matched000\\",
       \\"version\\": \\"1.2.3\\"
@@ -218,7 +218,7 @@ fileContents:
         \\"name\\": \\"matched001\\",
         \\"version\\": \\"22.44.55\\"
       }
-  root/mismatched/mismatched000/package.json: |-
+  root/mismatched/mismatched000/package.json: |
     {
       \\"name\\": \\"mismatched000\\",
       \\"version\\": \\"3.2.1\\",
@@ -231,7 +231,7 @@ fileContents:
         \\"version\\": \\"4.5.6\\",
         \\"description\\": \\"Requirement is too high\\"
       }
-  root/package.json: |-
+  root/package.json: |
     {
       \\"version\\": \\"0.0.0\\",
       \\"private\\": true,
@@ -270,7 +270,7 @@ directories:
   - root/mismatched
   - root/mismatched/mismatched000
 fileContents:
-  root/matched/matched000/package.json: |-
+  root/matched/matched000/package.json: |
     {
       \\"name\\": \\"matched000\\",
       \\"version\\": \\"1.2.3\\"
@@ -281,7 +281,7 @@ fileContents:
         \\"name\\": \\"matched001\\",
         \\"version\\": \\"22.44.55\\"
       }
-  root/mismatched/mismatched000/package.json: |-
+  root/mismatched/mismatched000/package.json: |
     {
       \\"name\\": \\"mismatched000\\",
       \\"version\\": \\"3.2.1\\",
@@ -294,7 +294,7 @@ fileContents:
         \\"version\\": \\"4.5.6\\",
         \\"description\\": \\"Requirement is too high\\"
       }
-  root/package.json: |-
+  root/package.json: |
     {
       \\"version\\": \\"0.0.0\\",
       \\"private\\": true,
@@ -333,7 +333,7 @@ directories:
   - root/mismatched
   - root/mismatched/mismatched000
 fileContents:
-  root/matched/matched000/package.json: |-
+  root/matched/matched000/package.json: |
     {
       \\"name\\": \\"matched000\\",
       \\"version\\": \\"1.2.3\\"
@@ -344,7 +344,7 @@ fileContents:
         \\"name\\": \\"matched001\\",
         \\"version\\": \\"22.44.55\\"
       }
-  root/mismatched/mismatched000/package.json: |-
+  root/mismatched/mismatched000/package.json: |
     {
       \\"name\\": \\"mismatched000\\",
       \\"version\\": \\"3.2.1\\",
@@ -357,7 +357,7 @@ fileContents:
         \\"version\\": \\"4.5.6\\",
         \\"description\\": \\"Requirement is too high\\"
       }
-  root/package.json: |-
+  root/package.json: |
     {
       \\"version\\": \\"0.0.0\\",
       \\"private\\": true,
@@ -396,7 +396,7 @@ directories:
   - root/mismatched
   - root/mismatched/mismatched000
 fileContents:
-  root/matched/matched000/package.json: |-
+  root/matched/matched000/package.json: |
     {
       \\"name\\": \\"matched000\\",
       \\"version\\": \\"1.2.3\\"
@@ -407,7 +407,7 @@ fileContents:
         \\"name\\": \\"matched001\\",
         \\"version\\": \\"22.44.55\\"
       }
-  root/mismatched/mismatched000/package.json: |-
+  root/mismatched/mismatched000/package.json: |
     {
       \\"name\\": \\"mismatched000\\",
       \\"version\\": \\"3.2.1\\",
@@ -420,7 +420,7 @@ fileContents:
         \\"version\\": \\"4.5.6\\",
         \\"description\\": \\"Requirement is too high\\"
       }
-  root/package.json: |-
+  root/package.json: |
     {
       \\"version\\": \\"0.0.0\\",
       \\"private\\": true,
@@ -459,7 +459,7 @@ directories:
   - root/mismatched
   - root/mismatched/mismatched000
 fileContents:
-  root/matched/matched000/package.json: |-
+  root/matched/matched000/package.json: |
     {
       \\"name\\": \\"matched000\\",
       \\"version\\": \\"1.2.3\\"
@@ -470,7 +470,7 @@ fileContents:
         \\"name\\": \\"matched001\\",
         \\"version\\": \\"22.44.55\\"
       }
-  root/mismatched/mismatched000/package.json: |-
+  root/mismatched/mismatched000/package.json: |
     {
       \\"name\\": \\"mismatched000\\",
       \\"version\\": \\"3.2.1\\",
@@ -483,7 +483,7 @@ fileContents:
         \\"version\\": \\"4.5.6\\",
         \\"description\\": \\"Requirement is too high\\"
       }
-  root/package.json: |-
+  root/package.json: |
     {
       \\"version\\": \\"0.0.0\\",
       \\"private\\": true,
@@ -522,7 +522,7 @@ directories:
   - root/mismatched
   - root/mismatched/mismatched000
 fileContents:
-  root/matched/matched000/package.json: |-
+  root/matched/matched000/package.json: |
     {
       \\"name\\": \\"matched000\\",
       \\"version\\": \\"1.2.3\\"
@@ -533,7 +533,7 @@ fileContents:
         \\"name\\": \\"matched001\\",
         \\"version\\": \\"22.44.55\\"
       }
-  root/mismatched/mismatched000/package.json: |-
+  root/mismatched/mismatched000/package.json: |
     {
       \\"name\\": \\"mismatched000\\",
       \\"version\\": \\"3.2.1\\",
@@ -546,7 +546,7 @@ fileContents:
         \\"version\\": \\"4.5.6\\",
         \\"description\\": \\"Requirement is too high\\"
       }
-  root/package.json: |-
+  root/package.json: |
     {
       \\"version\\": \\"0.0.0\\",
       \\"private\\": true,
@@ -585,7 +585,7 @@ directories:
   - root/mismatched
   - root/mismatched/mismatched000
 fileContents:
-  root/matched/matched000/package.json: |-
+  root/matched/matched000/package.json: |
     {
       \\"name\\": \\"matched000\\",
       \\"version\\": \\"1.2.3\\"
@@ -596,7 +596,7 @@ fileContents:
         \\"name\\": \\"matched001\\",
         \\"version\\": \\"22.44.55\\"
       }
-  root/mismatched/mismatched000/package.json: |-
+  root/mismatched/mismatched000/package.json: |
     {
       \\"name\\": \\"mismatched000\\",
       \\"version\\": \\"3.2.1\\",
@@ -609,7 +609,7 @@ fileContents:
         \\"version\\": \\"4.5.6\\",
         \\"description\\": \\"Requirement is too high\\"
       }
-  root/package.json: |-
+  root/package.json: |
     {
       \\"version\\": \\"0.0.0\\",
       \\"private\\": true,
@@ -648,7 +648,7 @@ directories:
   - root/mismatched
   - root/mismatched/mismatched000
 fileContents:
-  root/matched/matched000/package.json: |-
+  root/matched/matched000/package.json: |
     {
       \\"name\\": \\"matched000\\",
       \\"version\\": \\"1.2.3\\"
@@ -659,7 +659,7 @@ fileContents:
         \\"name\\": \\"matched001\\",
         \\"version\\": \\"22.44.55\\"
       }
-  root/mismatched/mismatched000/package.json: |-
+  root/mismatched/mismatched000/package.json: |
     {
       \\"name\\": \\"mismatched000\\",
       \\"version\\": \\"3.2.1\\",
@@ -672,7 +672,7 @@ fileContents:
         \\"version\\": \\"4.5.6\\",
         \\"description\\": \\"Requirement is too high\\"
       }
-  root/package.json: |-
+  root/package.json: |
     {
       \\"version\\": \\"0.0.0\\",
       \\"private\\": true,
@@ -711,7 +711,7 @@ directories:
   - root/mismatched
   - root/mismatched/mismatched000
 fileContents:
-  root/matched/matched000/package.json: |-
+  root/matched/matched000/package.json: |
     {
       \\"name\\": \\"matched000\\",
       \\"version\\": \\"1.2.3\\"
@@ -722,7 +722,7 @@ fileContents:
         \\"name\\": \\"matched001\\",
         \\"version\\": \\"22.44.55\\"
       }
-  root/mismatched/mismatched000/package.json: |-
+  root/mismatched/mismatched000/package.json: |
     {
       \\"name\\": \\"mismatched000\\",
       \\"version\\": \\"3.2.1\\",
@@ -735,7 +735,7 @@ fileContents:
         \\"version\\": \\"4.5.6\\",
         \\"description\\": \\"Requirement is too high\\"
       }
-  root/package.json: |-
+  root/package.json: |
     {
       \\"version\\": \\"0.0.0\\",
       \\"private\\": true,
@@ -774,7 +774,7 @@ directories:
   - root/mismatched
   - root/mismatched/mismatched000
 fileContents:
-  root/matched/matched000/package.json: |-
+  root/matched/matched000/package.json: |
     {
       \\"name\\": \\"matched000\\",
       \\"version\\": \\"1.2.3\\"
@@ -785,7 +785,7 @@ fileContents:
         \\"name\\": \\"matched001\\",
         \\"version\\": \\"22.44.55\\"
       }
-  root/mismatched/mismatched000/package.json: |-
+  root/mismatched/mismatched000/package.json: |
     {
       \\"name\\": \\"mismatched000\\",
       \\"version\\": \\"3.2.1\\",
@@ -798,7 +798,7 @@ fileContents:
         \\"version\\": \\"4.5.6\\",
         \\"description\\": \\"Requirement is too high\\"
       }
-  root/package.json: |-
+  root/package.json: |
     {
       \\"version\\": \\"0.0.0\\",
       \\"private\\": true,
@@ -837,7 +837,7 @@ directories:
   - root/mismatched
   - root/mismatched/mismatched000
 fileContents:
-  root/matched/matched000/package.json: |-
+  root/matched/matched000/package.json: |
     {
       \\"name\\": \\"matched000\\",
       \\"version\\": \\"1.2.3\\"
@@ -848,7 +848,7 @@ fileContents:
         \\"name\\": \\"matched001\\",
         \\"version\\": \\"22.44.55\\"
       }
-  root/mismatched/mismatched000/package.json: |-
+  root/mismatched/mismatched000/package.json: |
     {
       \\"name\\": \\"mismatched000\\",
       \\"version\\": \\"3.2.1\\",
@@ -861,7 +861,7 @@ fileContents:
         \\"version\\": \\"4.5.6\\",
         \\"description\\": \\"Requirement is too high\\"
       }
-  root/package.json: |-
+  root/package.json: |
     {
       \\"version\\": \\"0.0.0\\",
       \\"private\\": true,
@@ -900,7 +900,7 @@ directories:
   - root/mismatched
   - root/mismatched/mismatched000
 fileContents:
-  root/matched/matched000/package.json: |-
+  root/matched/matched000/package.json: |
     {
       \\"name\\": \\"matched000\\",
       \\"version\\": \\"1.2.3\\"
@@ -911,7 +911,7 @@ fileContents:
         \\"name\\": \\"matched001\\",
         \\"version\\": \\"22.44.55\\"
       }
-  root/mismatched/mismatched000/package.json: |-
+  root/mismatched/mismatched000/package.json: |
     {
       \\"name\\": \\"mismatched000\\",
       \\"version\\": \\"3.2.1\\",
@@ -924,7 +924,7 @@ fileContents:
         \\"version\\": \\"4.5.6\\",
         \\"description\\": \\"Requirement is too high\\"
       }
-  root/package.json: |-
+  root/package.json: |
     {
       \\"version\\": \\"0.0.0\\",
       \\"private\\": true,
@@ -963,7 +963,7 @@ directories:
   - root/mismatched
   - root/mismatched/mismatched000
 fileContents:
-  root/matched/matched000/package.json: |-
+  root/matched/matched000/package.json: |
     {
       \\"name\\": \\"matched000\\",
       \\"version\\": \\"1.2.3\\"
@@ -974,7 +974,7 @@ fileContents:
         \\"name\\": \\"matched001\\",
         \\"version\\": \\"22.44.55\\"
       }
-  root/mismatched/mismatched000/package.json: |-
+  root/mismatched/mismatched000/package.json: |
     {
       \\"name\\": \\"mismatched000\\",
       \\"version\\": \\"3.2.1\\",
@@ -987,7 +987,7 @@ fileContents:
         \\"version\\": \\"4.5.6\\",
         \\"description\\": \\"Requirement is too high\\"
       }
-  root/package.json: |-
+  root/package.json: |
     {
       \\"version\\": \\"0.0.0\\",
       \\"private\\": true,
@@ -1026,7 +1026,7 @@ directories:
   - root/mismatched
   - root/mismatched/mismatched000
 fileContents:
-  root/matched/matched000/package.json: |-
+  root/matched/matched000/package.json: |
     {
       \\"name\\": \\"matched000\\",
       \\"version\\": \\"1.2.3\\"
@@ -1037,7 +1037,7 @@ fileContents:
         \\"name\\": \\"matched001\\",
         \\"version\\": \\"22.44.55\\"
       }
-  root/mismatched/mismatched000/package.json: |-
+  root/mismatched/mismatched000/package.json: |
     {
       \\"name\\": \\"mismatched000\\",
       \\"version\\": \\"3.2.1\\",
@@ -1050,7 +1050,7 @@ fileContents:
         \\"version\\": \\"4.5.6\\",
         \\"description\\": \\"Requirement is too high\\"
       }
-  root/package.json: |-
+  root/package.json: |
     {
       \\"version\\": \\"0.0.0\\",
       \\"private\\": true,
@@ -1089,7 +1089,7 @@ directories:
   - root/mismatched
   - root/mismatched/mismatched000
 fileContents:
-  root/matched/matched000/package.json: |-
+  root/matched/matched000/package.json: |
     {
       \\"name\\": \\"matched000\\",
       \\"version\\": \\"1.2.3\\"
@@ -1100,7 +1100,7 @@ fileContents:
         \\"name\\": \\"matched001\\",
         \\"version\\": \\"22.44.55\\"
       }
-  root/mismatched/mismatched000/package.json: |-
+  root/mismatched/mismatched000/package.json: |
     {
       \\"name\\": \\"mismatched000\\",
       \\"version\\": \\"3.2.1\\",
@@ -1113,7 +1113,7 @@ fileContents:
         \\"version\\": \\"4.5.6\\",
         \\"description\\": \\"Requirement is too high\\"
       }
-  root/package.json: |-
+  root/package.json: |
     {
       \\"version\\": \\"0.0.0\\",
       \\"private\\": true,
@@ -1152,7 +1152,7 @@ directories:
   - root/mismatched
   - root/mismatched/mismatched000
 fileContents:
-  root/matched/matched000/package.json: |-
+  root/matched/matched000/package.json: |
     {
       \\"name\\": \\"matched000\\",
       \\"version\\": \\"1.2.3\\"
@@ -1163,7 +1163,7 @@ fileContents:
         \\"name\\": \\"matched001\\",
         \\"version\\": \\"22.44.55\\"
       }
-  root/mismatched/mismatched000/package.json: |-
+  root/mismatched/mismatched000/package.json: |
     {
       \\"name\\": \\"mismatched000\\",
       \\"version\\": \\"3.2.1\\",
@@ -1176,7 +1176,7 @@ fileContents:
         \\"version\\": \\"4.5.6\\",
         \\"description\\": \\"Requirement is too high\\"
       }
-  root/package.json: |-
+  root/package.json: |
     {
       \\"version\\": \\"0.0.0\\",
       \\"private\\": true,
