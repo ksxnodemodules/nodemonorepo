@@ -91,7 +91,7 @@ function handler (argv: Arguments & {
 
     let finalExitStatus = 0
 
-    const updateExitStatus = noExitStatus
+    const updateExitStatus = noExitStatus || update
       ? () => {}
       : () => { finalExitStatus = 1 }
 
