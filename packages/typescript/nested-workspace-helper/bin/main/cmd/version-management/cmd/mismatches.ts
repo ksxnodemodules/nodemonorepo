@@ -3,7 +3,8 @@ import * as process from 'process'
 import {
   CommandModule,
   Options,
-  Argv
+  Argv,
+  Arguments
 } from 'yargs'
 
 import {
@@ -44,7 +45,7 @@ function builder (yargs: Argv): Argv {
     })
 }
 
-function handler (yargs: Argv & {
+function handler (argv: Arguments & {
   directory: string,
   update: boolean,
   checker: string,
@@ -55,7 +56,7 @@ function handler (yargs: Argv & {
     update,
     checker,
     noExitStatus
-  } = yargs
+  } = argv
 
   const check = listMismatchedDependencies.allCheckers[checker]
 
