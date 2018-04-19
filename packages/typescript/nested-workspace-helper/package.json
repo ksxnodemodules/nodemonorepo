@@ -17,6 +17,6 @@
     "@types/node": "^9.6.4"
   },
   "devDependencies": {
-    "extra-jest": "^0.0.0"
+    "extra-jest": "*"
   }
 }
