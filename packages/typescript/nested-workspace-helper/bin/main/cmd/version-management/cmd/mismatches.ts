@@ -127,7 +127,7 @@ function handler (argv: Arguments & {
   }
 
   async function write () {
-    console.log('There is yet anything to do.') // to be continued...
+    await updateDependencyVersions(directory, check)
     return 0
   }
 }
