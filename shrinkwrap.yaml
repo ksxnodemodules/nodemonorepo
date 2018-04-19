@@ -11,7 +11,7 @@ devDependencies:
   coveralls: 3.0.0
   glob: 7.1.2
   jest: 22.4.3
-  jest-extended: 0.6.0
+  jest-extended: 0.7.1
   js-yaml: 3.11.0
   standard: 11.0.1
   ts-jest: 22.4.2
@@ -700,6 +700,16 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-ZM4j2/ld/YZDc3Ma8PgN7gyAk+kHMMMyzLNryCPGhWrsfAuDVeuid5bpRFTDgMH9JBK2lA4dyyAkkZYF/WcqDQ==
+  /chalk/2.4.0:
+    dependencies:
+      ansi-styles: 3.2.1
+      escape-string-regexp: 1.0.5
+      supports-color: 5.4.0
+    dev: true
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha512-Wr/w0f4o9LuE7K53cD0qmbAMM+2XNLzR29vFn5hqko4sxGlUsyy363NvmyGIyk5tpe9cjTr9SJYbysEyPkRnFw==
   /chardet/0.4.2:
     dev: true
     resolution:
@@ -2494,14 +2504,14 @@ packages:
     dev: true
     resolution:
       integrity: sha512-reZl8XF6t/lMEuPWwo9OLfttyC26A5AMgDyEQ6DBgZuyfyeNUzYT8BFo6uxCCP/Av/b7eb9fTi3sIHFPBzmlRA==
-  /jest-extended/0.6.0:
+  /jest-extended/0.7.1:
     dependencies:
-      chalk: 2.3.2
+      chalk: 2.4.0
       expect: 22.4.3
       jest-matcher-utils: 22.4.3
     dev: true
     resolution:
-      integrity: sha512-ZeY+/kSELTloZp0bGKJKCl8sR9Nit6AVdx8h3OC+1CSaG7hsKPKW755qPi5hsLL1uQwljrrVZBY5WkIjZN9spQ==
+      integrity: sha512-blRkIEV5pQ11ywK9IKXpTvmxCshybqzsQyfsIrGmDfgxUrvB8ru3o7qnq3kSldfrDJJ8jp/neuupD/hH3qFgJA==
   /jest-get-type/22.4.3:
     dev: true
     resolution:
@@ -4273,6 +4283,14 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-0aP01LLIskjKs3lq52EC0aGBAJhLq7B2Rd8HC/DR/PtNNpcLilNmHC12O+hu0usQpo7wtHNRqtrhBwtDb0+dNg==
+  /supports-color/5.4.0:
+    dependencies:
+      has-flag: 3.0.0
+    dev: true
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha512-zjaXglF5nnWpsq470jSv6P9DwPvgLkuapYmfDm3JWOm0vkNTVF2tI4UrN2r6jH1qM/uc/WtxYY1hYoA2dOKj5w==
   /symbol-tree/3.2.2:
     dev: true
     resolution:
@@ -4757,7 +4775,7 @@ specifiers:
   extra-jest: '*'
   glob: ^7.1.2
   jest: ^22.1.4
-  jest-extended: ^0.6.0
+  jest-extended: ^0.7.0
   js-yaml: ^3.11.0
   nested-workspace-helper: '*'
   preloaded-node: '*'
