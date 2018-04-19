@@ -41,6 +41,12 @@ function builder (yargs: Argv): Argv {
         describe: 'Do not exit with code 1 when there are outdated dependencies',
         type: 'boolean',
         default: false
+      },
+      noPrint: {
+        alias: ['quiet', 'q'],
+        describe: 'Do not print mismatches to stdout',
+        type: 'boolean',
+        default: false
       }
     })
 }
@@ -49,13 +55,15 @@ function handler (argv: Arguments & {
   directory: string,
   update: boolean,
   checker: string,
-  noExitStatus: boolean
+  noExitStatus: boolean,
+  noPrint: boolean
 }) {
   const {
     directory,
     update,
     checker,
-    noExitStatus
+    noExitStatus,
+    noPrint
   } = argv
 
   const check = listMismatchedDependencies.allCheckers[checker]
@@ -65,9 +73,12 @@ function handler (argv: Arguments & {
     process.exit(2)
   }
 
-  ; (
-    update ? write : read
-  )().then(
+  ; (async function main () {
+    let status = 0
+    if (!noPrint) status += await read()
+    if (update) status += await write()
+    return status
+  })().then(
     status => process.exit(status),
     error => {
       console.error(error)
