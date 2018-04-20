@@ -130,7 +130,7 @@ function handler (argv: Arguments & {
         }))
         .filter(x => x.list.length)
 
-      console.info(deserialize(output, jsonOutputIndent))
+      console.info(deserialize(output, jsonOutputIndent, 0))
       return 0
     } else {
       let finalExitStatus = 0
