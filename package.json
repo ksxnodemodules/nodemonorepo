@@ -14,7 +14,7 @@
     "x-iterable": "^6.0.1",
     "coveralls": "^3.0.0",
     "glob": "^7.1.2",
-    "extra-jest": "^0.0.0",
+    "extra-jest": "*",
     "preloaded-node": "*",
     "nested-workspace-helper": "*",
     "@types/jest": "^22.2.2",
