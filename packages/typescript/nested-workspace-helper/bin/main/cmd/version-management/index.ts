@@ -15,7 +15,7 @@ function builder (yargs: Argv): Argv {
 const main: CommandModule = {
   command: 'version-management <cmd> [args]',
   aliases: 'verman',
-  describe: 'Manage package versions',
+  describe: 'Manage internal package versions',
   builder,
   handler () {}
 }

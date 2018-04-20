@@ -134,7 +134,7 @@ function handler (argv: Arguments & {
 
 export default {
   command: 'mismatches <directory>',
-  describe: 'Manage mismatched dependency versions',
+  describe: 'Manage mismatched internal dependency versions',
   builder,
   handler
 } as CommandModule
