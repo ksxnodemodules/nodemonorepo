@@ -1,4 +1,4 @@
-import updateDependencyVersions from '../../lib/update-dep-vers'
+import updateDependencyVersions from '../../../lib/update-dep-vers'
 import createSetupTeardown from '../lib/setup-teardown'
 import iterate from '../lib/all-mismatch-checkers'
 import * as fsTreeUtils from 'fs-tree-utils'

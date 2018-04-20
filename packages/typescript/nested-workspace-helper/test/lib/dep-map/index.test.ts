@@ -1,11 +1,11 @@
-import listAllPackages from '../../lib/list-pkgs'
+import getDependencyMap from '../../../lib/dep-map'
 import createSetupTeardown from '../lib/setup-teardown'
 
 const {apply} = createSetupTeardown('valid.yaml')
 const root = 'root'
 
-describe('listAllPackages function', () => {
+describe('getDependencyMap', () => {
   it('matches snapshot', apply(async () => {
-    expect(await listAllPackages(root)).toMatchSnapshot()
+    expect(await getDependencyMap(root)).toMatchSnapshot()
   }))
 })

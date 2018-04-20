@@ -1,4 +1,4 @@
-import getMismatchedDependencies, {Checker} from '../../lib/mismatches'
+import getMismatchedDependencies, {Checker} from '../../../lib/mismatches'
 import createSetupTeardown from '../lib/setup-teardown'
 import iterate from '../lib/all-mismatch-checkers'
 
