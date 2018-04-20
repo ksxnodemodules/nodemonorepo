@@ -10,12 +10,18 @@ import {
 import {
   listMismatchedDependencies,
   updateDependencyVersions,
-  MismatchedDependencyListItem
+  MismatchedDependencyListItem,
+  MismatchedDependencyList,
+  MismatchedDependencyMap
 } from '../../../../../index'
 
 import {
   Checker
 } from '../../../../../lib/mismatches'
+
+import {
+  deserialize
+} from '../../../../../lib/utils/json'
 
 function builder (yargs: Argv): Argv {
   return yargs
@@ -37,6 +43,17 @@ function builder (yargs: Argv): Argv {
         default: 'CARET_EQUAL_OR_ANY',
         choices: Object.keys(listMismatchedDependencies.allCheckers)
       },
+      jsonOutput: {
+        alias: 'json',
+        describe: 'Output json instead of readdable text',
+        type: 'boolean',
+        default: false
+      },
+      jsonOutputIndent: {
+        describe: 'JSON output indentation if --jsonOutput is enabled',
+        type: 'number',
+        default: 2
+      },
       noExitStatus: {
         describe: 'Do not exit with code 1 when there are outdated dependencies',
         type: 'boolean',
@@ -55,6 +72,8 @@ function handler (argv: Arguments & {
   directory: string,
   update: boolean,
   checker: string,
+  jsonOutput: boolean,
+  jsonOutputIndent: number,
   noExitStatus: boolean,
   noPrint: boolean
 }) {
@@ -62,6 +81,8 @@ function handler (argv: Arguments & {
     directory,
     update,
     checker,
+    jsonOutput,
+    jsonOutputIndent,
     noExitStatus,
     noPrint
   } = argv
@@ -89,27 +110,51 @@ function handler (argv: Arguments & {
   async function read () {
     const map = await listMismatchedDependencies(directory, check)
 
-    let finalExitStatus = 0
+    if (jsonOutput) {
+      const output = Object
+        .values(map)
+        .map(({list, dependant}) => ({
+          dependant: {
+            name: dependant.manifestContent.name || null,
+            path: dependant.path
+          },
+          list: filter(list).map(
+            ({name, type, update, requirement, version}) => ({
+              name,
+              type,
+              update,
+              outdated: requirement,
+              upstream: version
+            })
+          )
+        }))
+        .filter(x => x.list.length)
 
-    const updateExitStatus = noExitStatus || update
-      ? () => {}
-      : () => { finalExitStatus = 1 }
+      console.info(deserialize(output, jsonOutputIndent))
+      return 0
+    } else {
+      let finalExitStatus = 0
 
-    for (const {list, dependant} of Object.values(map)) {
-      const messages: string[] = list
-        .filter(({update, requirement}) => update !== requirement)
-        .map(mkmsg)
+      const updateExitStatus = noExitStatus || update
+        ? () => {}
+        : () => { finalExitStatus = 1 }
 
-      if (messages.length) {
-        updateExitStatus()
+      for (const {list, dependant} of Object.values(map)) {
+        const messages = filter(list).map(mkmsg)
 
-        console.info(`* ${
-          dependant.manifestContent.name || '[anonymous]'
-        } (path: ${dependant.path})`)
+        if (messages.length) {
+          updateExitStatus()
 
-        messages.forEach(x => console.info(x))
-        console.info()
+          console.info(`* ${
+            dependant.manifestContent.name || '[anonymous]'
+          } (path: ${dependant.path})`)
+
+          messages.forEach(x => console.info(x))
+          console.info()
+        }
       }
+
+      return finalExitStatus
 
       function mkmsg ({
         name,
@@ -123,7 +168,9 @@ function handler (argv: Arguments & {
       }
     }
 
-    return finalExitStatus
+    function filter (list: MismatchedDependencyList): MismatchedDependencyList {
+      return list.filter(({update, requirement}) => update !== requirement)
+    }
   }
 
   async function write () {
