@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`help message from global command with --help 1`] = `
+"
+error: !<tag:yaml.org,2002:js/undefined> ''
+signal: null
+status: 0
+stderr: |+
+
+
+stdout: |+
+
+  Options:
+    --help     Show help                                                 [boolean]
+    --version  Show version number                                       [boolean]
+
+
+
+"
+`;
+
+exports[`help message from global command without arguments 1`] = `
+"
+error: !<tag:yaml.org,2002:js/undefined> ''
+signal: null
+status: 1
+stderr: |+
+
+  nested-workspace-helper.inrepo.js <cmd> [args]
+
+  Commands:
+    nested-workspace-helper.inrepo.js         Manage internal package versions
+    version-management <cmd> [args]                              [aliases: verman]
+
+  Options:
+    --version  Show version number                                       [boolean]
+    --help     Show help                                                 [boolean]
+
+  Not enough non-option arguments: got 0, need at least 1
+
+stdout: |+
+
+
+
+"
+`;
