@@ -5,10 +5,13 @@ import {bin} from './data'
 export type IOData = Buffer | string
 export type OptionalIOData = IOData | null | undefined
 
+const fmtNull = <X>(x: X) =>
+  x == null ? null : x
+
 const fmtStdIO = (buf: OptionalIOData): string | null => {
   if (buf == null) return null
-  if (buf) return `\n${buf}\n`
-  return '((EMPTY))'
+  const str = String(buf)
+  return str.trim() ? `\n${str}\n` : '((EMPTY))'
 }
 
 export interface SpawnReturns {
@@ -29,9 +32,9 @@ export default function spawn (
   )
 
   return {
-    status,
-    signal,
-    error,
+    status: fmtNull(status),
+    signal: fmtNull(signal),
+    error: fmtNull(error),
     stdout: fmtStdIO(stdout),
     stderr: fmtStdIO(stderr)
   }

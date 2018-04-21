@@ -2,12 +2,10 @@
 
 exports[`help message from global command with --help 1`] = `
 "
-error: !<tag:yaml.org,2002:js/undefined> ''
+error: null
 signal: null
 status: 0
-stderr: |+
-
-
+stderr: ((EMPTY))
 stdout: |+
 
   Options:
@@ -21,7 +19,7 @@ stdout: |+
 
 exports[`help message from global command without arguments 1`] = `
 "
-error: !<tag:yaml.org,2002:js/undefined> ''
+error: null
 signal: null
 status: 1
 stderr: |+
@@ -38,16 +36,14 @@ stderr: |+
 
   Not enough non-option arguments: got 0, need at least 1
 
-stdout: |+
-
-
+stdout: ((EMPTY))
 
 "
 `;
 
 exports[`help message from version-management as verman 1`] = `
 "
-error: !<tag:yaml.org,2002:js/undefined> ''
+error: null
 signal: null
 status: 1
 stderr: |+
@@ -66,16 +62,14 @@ stderr: |+
 
   Not enough non-option arguments: got 0, need at least 1
 
-stdout: |+
-
-
+stdout: ((EMPTY))
 
 "
 `;
 
 exports[`help message from version-management as version-management 1`] = `
 "
-error: !<tag:yaml.org,2002:js/undefined> ''
+error: null
 signal: null
 status: 1
 stderr: |+
@@ -95,16 +89,14 @@ stderr: |+
 
   Not enough non-option arguments: got 0, need at least 1
 
-stdout: |+
-
-
+stdout: ((EMPTY))
 
 "
 `;
 
 exports[`help message from version-management/mismatches 1`] = `
 "
-error: !<tag:yaml.org,2002:js/undefined> ''
+error: null
 signal: null
 status: 1
 stderr: |+
@@ -139,9 +131,7 @@ stderr: |+
 
   Not enough non-option arguments: got 0, need at least 1
 
-stdout: |+
-
-
+stdout: ((EMPTY))
 
 "
 `;
