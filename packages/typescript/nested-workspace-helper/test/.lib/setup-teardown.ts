@@ -3,7 +3,7 @@ import * as xjest from 'extra-jest'
 
 export function create (treefile: string, container?: string) {
   const tree = require(
-    path.resolve(__dirname, '../data', treefile)
+    path.resolve(__dirname, '../.data', treefile)
   )
 
   const {

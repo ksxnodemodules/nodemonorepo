@@ -1,5 +1,5 @@
 import getDependencyMap from '../../../lib/dep-map'
-import createSetupTeardown from '../lib/setup-teardown'
+import createSetupTeardown from '../../.lib/setup-teardown'
 
 const {apply} = createSetupTeardown('valid.yaml')
 const root = 'root'
