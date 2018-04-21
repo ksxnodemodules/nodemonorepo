@@ -4,6 +4,14 @@ const xjest = require('extra-jest')
 const {spawn, spawnSync} = require('../index')
 const script = path.resolve(__dirname, 'data/main.js')
 
+beforeEach(() => {
+  jest.setTimeout(12345)
+})
+
+afterEach(() => {
+  jest.setTimeout(5000)
+})
+
 it('spawn function works', () => {
   let stdout = ''
   let stderr = ''
