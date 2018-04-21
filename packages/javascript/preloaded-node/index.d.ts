@@ -12,7 +12,9 @@ export const bin: string
 export function spawn (argv?: Argv, options?: SpawnOptions): ChildProcess
 export function spawnSync(): SpawnSyncReturns<Buffer>
 export function spawnSync(argv: Argv): SpawnSyncReturns<Buffer>
+export function spawnSync(options: SpawnSyncOptions): SpawnSyncReturns<Buffer>
 export function spawnSync(options: SpawnSyncOptionsWithBufferEncoding): SpawnSyncReturns<Buffer>
 export function spawnSync(options: SpawnSyncOptionsWithStringEncoding): SpawnSyncReturns<string>
+export function spawnSync(argv: Argv, options: SpawnSyncOptions): SpawnSyncReturns<Buffer>
 export function spawnSync(argv: Argv, options: SpawnSyncOptionsWithBufferEncoding): SpawnSyncReturns<Buffer>
 export function spawnSync(argv: Argv, options: SpawnSyncOptionsWithStringEncoding): SpawnSyncReturns<string>
