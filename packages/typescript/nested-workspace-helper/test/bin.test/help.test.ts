@@ -1,4 +1,4 @@
-import snapSpawn from './lib/snap-spawn'
+import snapSpawn from './.lib/snap-spawn'
 
 describe('help message', () => {
   describe('from global command', () => {
