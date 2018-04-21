@@ -2,7 +2,7 @@
 const path = require('path')
 const {spawnSync} = require('child_process')
 const xjest = require('extra-jest')
-const runner = require('../index')
+const {bin} = require('../index')
 const script = path.resolve(__dirname, 'data/main.js')
 
 const {
@@ -13,7 +13,7 @@ const {
   stderr
 } = spawnSync(
   'node',
-  [runner, script],
+  [bin, script],
   {
     encoding: 'utf8'
   }
