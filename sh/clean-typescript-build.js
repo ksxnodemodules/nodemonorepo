@@ -6,7 +6,7 @@ const glob = require('glob')
 
 process.chdir(path.resolve(__dirname, '..'))
 console.info('Cleaning TypeScript build products...')
-const files = glob.sync('packages/typescript/**/*.{js,d.ts,js.map}')
+const files = glob.sync('packages/typescript/**/*.{js,d.ts,js.map}', {dot: true})
 
 for (const x of files) {
   if (/node_modules/.test(x)) continue
