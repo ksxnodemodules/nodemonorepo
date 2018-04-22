@@ -25,9 +25,8 @@ export async function create (tree: Tree, container: string = '') {
   )
 }
 
-export default Object.assign(
-  create,
-  {
-    async: create
-  }
-)
+export namespace create {
+  export const async = create
+}
+
+export default create

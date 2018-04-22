@@ -45,9 +45,8 @@ export async function traverse (
   return result
 }
 
-export default Object.assign(
-  traverse,
-  {
-    async: traverse
-  }
-)
+export namespace traverse {
+  export const async = traverse
+}
+
+export default traverse
