@@ -10,6 +10,9 @@ dependencies:
   semver: 5.5.0
   unique-temp-path: 'link:../unique-temp-path'
   yargs: 11.0.0
+devDependencies:
+  '@types/ramda': 0.25.24
+  ramda: 0.25.0
 packages:
   /@types/fs-extra/5.0.1:
     dependencies:
@@ -25,6 +28,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-Awg4BcUYiZtNKoveGOu654JVPt11V/KIC77iBz8NweyoOAZpz5rUJfPDwwD+ajfTs2HndbTCEB8IuLfX9m/mmw==
+  /@types/ramda/0.25.24:
+    dev: true
+    resolution:
+      integrity: sha512-c0TmWA7d4y9KLJJwL/cLPEfSReSgFQK9BtemcCATT48lMeyD7HG8IfGY8bamSuz/Byx1l+13hZV0PCvHsgMB3w==
   /@types/semver/5.5.0:
     dev: false
     resolution:
@@ -267,6 +274,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-8FKijacOYYkX7wqKw0wa5aaChrM=
+  /ramda/0.25.0:
+    dev: true
+    resolution:
+      integrity: sha512-GXpfrYVPwx3K7RQ6aYT8KPS8XViSXUVJT1ONhoKPE9VAleW42YE+U+8VEyGWt41EnEQW7gwecYJriTI0pKoecQ==
   /require-directory/2.1.1:
     dev: false
     engines:
@@ -404,11 +415,13 @@ shrinkwrapVersion: 3
 specifiers:
   '@types/fs-extra': ^5.0.1
   '@types/node': ^9.6.4
+  '@types/ramda': ^0.25.24
   '@types/semver': ^5.5.0
   '@types/yargs': ^11.0.0
   extra-jest: '*'
   fs-extra: ^5.0.0
   fs-tree-utils: ^0.0.0
   preloaded-node: ^0.0.0
+  ramda: ^0.25.0
   semver: ^5.5.0
   yargs: ^11.0.0

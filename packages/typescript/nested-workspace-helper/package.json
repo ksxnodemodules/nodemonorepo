@@ -17,6 +17,8 @@
     "@types/node": "^9.6.4"
   },
   "devDependencies": {
-    "extra-jest": "*"
+    "ramda": "^0.25.0",
+    "extra-jest": "*",
+    "@types/ramda": "^0.25.24"
   }
 }
