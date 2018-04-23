@@ -1,4 +1,5 @@
 import * as process from 'process'
+import chalk from 'chalk'
 
 import {
   CommandModule,
@@ -146,8 +147,10 @@ function handler (argv: Arguments & {
           updateExitStatus()
 
           console.info(`* ${
-            dependant.manifestContent.name || '[anonymous]'
-          } (path: ${dependant.path})`)
+            chalk.bold(
+              dependant.manifestContent.name || '[anonymous]'
+            )
+          } ` + chalk.dim(`(path: ${dependant.path})`))
 
           messages.forEach(x => console.info(x))
           console.info()
@@ -164,7 +167,7 @@ function handler (argv: Arguments & {
         requirement
       }: MismatchedDependencyListItem): string {
         const additionalInfo = `(type: ${type}, upstream: ${version}, outdated: ${requirement})`
-        return `  - ${name} → ${update} ${additionalInfo}`
+        return `  - ${name} → ${update} ${chalk.dim(additionalInfo)}`
       }
     }
 
