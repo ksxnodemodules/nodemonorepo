@@ -24,11 +24,11 @@ signal: null
 status: 1
 stderr: |+
 
-  nested-workspace-helper.inrepo.js <cmd> [args]
+  nested-wrkspc <cmd> [args]
 
   Commands:
-    nested-workspace-helper.inrepo.js         Manage internal package versions
-    version-management <cmd> [args]                              [aliases: verman]
+    nested-wrkspc version-management <cmd>    Manage internal package versions
+    [args]                                                       [aliases: verman]
 
   Options:
     --version  Show version number                                       [boolean]
@@ -48,13 +48,13 @@ signal: null
 status: 1
 stderr: |+
 
-  nested-workspace-helper.inrepo.js version-management <cmd> [args]
+  nested-wrkspc version-management <cmd> [args]
 
   Manage internal package versions
 
   Commands:
-    nested-workspace-helper.inrepo.js verman  Manage mismatched internal
-    mismatches <directory>                    dependency versions
+    nested-wrkspc verman mismatches           Manage mismatched internal
+    <directory>                               dependency versions
 
   Options:
     --version  Show version number                                       [boolean]
@@ -74,14 +74,13 @@ signal: null
 status: 1
 stderr: |+
 
-  nested-workspace-helper.inrepo.js version-management <cmd> [args]
+  nested-wrkspc version-management <cmd> [args]
 
   Manage internal package versions
 
   Commands:
-    nested-workspace-helper.inrepo.js         Manage mismatched internal
-    version-management mismatches             dependency versions
-    <directory>
+    nested-wrkspc version-management          Manage mismatched internal
+    mismatches <directory>                    dependency versions
 
   Options:
     --version  Show version number                                       [boolean]
@@ -101,7 +100,7 @@ signal: null
 status: 1
 stderr: |+
 
-  nested-workspace-helper.inrepo.js version-management mismatches <directory>
+  nested-wrkspc version-management mismatches <directory>
 
   Manage mismatched internal dependency versions
 

@@ -7,7 +7,7 @@ signal: null
 status: 1
 stderr: |+
 
-  nested-workspace-helper.inrepo.js version-management mismatches <directory>
+  nested-wrkspc version-management mismatches <directory>
 
   Manage mismatched internal dependency versions
 

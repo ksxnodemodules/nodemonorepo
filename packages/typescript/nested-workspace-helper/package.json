@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "main": "index.js",
   "bin": {
-    "nested-workspace-helper": "bin/nested-workspace-helper.inrepo.js"
+    "nested-workspace-helper": "bin/nested-wrkspc",
+    "nested-wrkspc": "bin/nested-wrkspc"
   },
   "dependencies": {
     "semver": "^5.5.0",

@@ -1,1 +1,1 @@
-export const bin = require.resolve('../../../bin/nested-workspace-helper.inrepo.js')
+export const bin = require.resolve('../../../bin/nested-wrkspc')
