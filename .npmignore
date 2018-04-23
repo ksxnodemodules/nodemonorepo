@@ -3,6 +3,8 @@
 quick-test
 test
 /check
+__mocks__
+__snapshots__
 tmp
 temp
 tmp.*
