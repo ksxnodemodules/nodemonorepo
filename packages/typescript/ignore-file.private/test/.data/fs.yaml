@@ -1,0 +1,34 @@
+root:
+  container:
+    foo:
+      '.myignore.yaml': |
+        preprend:
+          - headFoo123
+          - headFoo456
+        append:
+          - tailFoo123
+          - tailFoo456
+        remove:
+          - notInFoo
+    bar:
+      '.myignore.yaml': |
+        preprend:
+          - headFoo123
+          - headFoo456
+        append:
+          - tailFoo123
+          - tailFoo456
+        remove:
+          - notInBar
+
+  '.myignore': |
+
+    # to be included
+    root123
+    root456
+
+    # some are eliminated
+    notInFoo
+    notInBar
+
+    # in addition, comments are eliminated

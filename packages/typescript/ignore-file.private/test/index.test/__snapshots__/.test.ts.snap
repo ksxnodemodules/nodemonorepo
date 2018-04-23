@@ -1,0 +1,138 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`add 1`] = `
+Array [
+  "headA",
+  "headB",
+  "middleA",
+  "middleB",
+  "tailA",
+  "tailB",
+]
+`;
+
+exports[`getDeltaFiles 1`] = `
+Array [
+  "root/container/bar/.myignore.yaml",
+  "root/container/foo/.myignore.yaml",
+]
+`;
+
+exports[`readDeltaFiles 1`] = `
+Array [
+  Object {
+    "content": Object {
+      "append": Array [
+        "tailFoo123",
+        "tailFoo456",
+      ],
+      "preprend": Array [
+        "headFoo123",
+        "headFoo456",
+      ],
+      "remove": Array [
+        "notInBar",
+      ],
+    },
+    "filename": "root/container/bar/.myignore.yaml",
+  },
+  Object {
+    "content": Object {
+      "append": Array [
+        "tailFoo123",
+        "tailFoo456",
+      ],
+      "preprend": Array [
+        "headFoo123",
+        "headFoo456",
+      ],
+      "remove": Array [
+        "notInFoo",
+      ],
+    },
+    "filename": "root/container/foo/.myignore.yaml",
+  },
+]
+`;
+
+exports[`writeIgnoreFiles 1`] = `
+"
+.myignore: |
+
+  # to be included
+  root123
+  root456
+
+  # some are eliminated
+  notInFoo
+  notInBar
+
+  # in addition, comments are eliminated
+container:
+  bar:
+    .myignore: |-
+      root123
+      root456
+      notInFoo
+      tailFoo123
+      tailFoo456
+    .myignore.yaml: |
+      preprend:
+        - headFoo123
+        - headFoo456
+      append:
+        - tailFoo123
+        - tailFoo456
+      remove:
+        - notInBar
+  foo:
+    .myignore: |-
+      root123
+      root456
+      notInBar
+      tailFoo123
+      tailFoo456
+    .myignore.yaml: |
+      preprend:
+        - headFoo123
+        - headFoo456
+      append:
+        - tailFoo123
+        - tailFoo456
+      remove:
+        - notInFoo
+
+"
+`;
+
+exports[`writeIgnoreFiles 2`] = `
+"
+- - name: root/.myignore
+  - content: |
+
+      # to be included
+      root123
+      root456
+
+      # some are eliminated
+      notInFoo
+      notInBar
+
+      # in addition, comments are eliminated
+- - name: root/container/bar/.myignore
+  - content: |-
+      root123
+      root456
+      notInFoo
+      tailFoo123
+      tailFoo456
+- - name: root/container/foo/.myignore
+  - content: |-
+      root123
+      root456
+      notInBar
+      tailFoo123
+      tailFoo456
+
+"
+`;

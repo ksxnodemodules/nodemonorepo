@@ -1,0 +1,1198 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`updateDependencyVersions works when checker is ANY 1`] = `
+"
+all:
+  - root/matched
+  - root/matched/matched000
+  - root/matched/matched000/package.json
+  - root/matched/matched001
+  - root/mismatched
+  - root/mismatched/mismatched000
+  - root/mismatched/mismatched000/package.json
+  - root/mismatched/mismatched001
+  - root/package.json
+directories:
+  - root/matched
+  - root/matched/matched000
+  - root/mismatched
+  - root/mismatched/mismatched000
+fileContents:
+  root/matched/matched000/package.json: |
+    {
+      \\"name\\": \\"matched000\\",
+      \\"version\\": \\"1.2.3\\"
+    }
+  root/matched/matched001: |
+    package.json: |
+      {
+        \\"name\\": \\"matched001\\",
+        \\"version\\": \\"22.44.55\\"
+      }
+  root/mismatched/mismatched000/package.json: |
+    {
+      \\"name\\": \\"mismatched000\\",
+      \\"version\\": \\"3.2.1\\",
+      \\"description\\": \\"Requirement is too low\\"
+    }
+  root/mismatched/mismatched001: |
+    package.json: |
+      {
+        \\"name\\": \\"mismatched001\\",
+        \\"version\\": \\"4.5.6\\",
+        \\"description\\": \\"Requirement is too high\\"
+      }
+  root/package.json: |
+    {
+      \\"version\\": \\"0.0.0\\",
+      \\"private\\": true,
+      \\"dependencies\\": {
+        \\"matched000\\": \\"*\\",
+        \\"mismatched000\\": \\"*\\",
+        \\"mismatched001\\": \\"^5.5.6\\",
+        \\"matched001\\": \\"*\\"
+      }
+    }
+files:
+  - root/matched/matched000/package.json
+  - root/matched/matched001
+  - root/mismatched/mismatched000/package.json
+  - root/mismatched/mismatched001
+  - root/package.json
+
+"
+`;
+
+exports[`updateDependencyVersions works when checker is ANY_OR_CARET_EQUAL 1`] = `
+"
+all:
+  - root/matched
+  - root/matched/matched000
+  - root/matched/matched000/package.json
+  - root/matched/matched001
+  - root/mismatched
+  - root/mismatched/mismatched000
+  - root/mismatched/mismatched000/package.json
+  - root/mismatched/mismatched001
+  - root/package.json
+directories:
+  - root/matched
+  - root/matched/matched000
+  - root/mismatched
+  - root/mismatched/mismatched000
+fileContents:
+  root/matched/matched000/package.json: |
+    {
+      \\"name\\": \\"matched000\\",
+      \\"version\\": \\"1.2.3\\"
+    }
+  root/matched/matched001: |
+    package.json: |
+      {
+        \\"name\\": \\"matched001\\",
+        \\"version\\": \\"22.44.55\\"
+      }
+  root/mismatched/mismatched000/package.json: |
+    {
+      \\"name\\": \\"mismatched000\\",
+      \\"version\\": \\"3.2.1\\",
+      \\"description\\": \\"Requirement is too low\\"
+    }
+  root/mismatched/mismatched001: |
+    package.json: |
+      {
+        \\"name\\": \\"mismatched001\\",
+        \\"version\\": \\"4.5.6\\",
+        \\"description\\": \\"Requirement is too high\\"
+      }
+  root/package.json: |
+    {
+      \\"version\\": \\"0.0.0\\",
+      \\"private\\": true,
+      \\"dependencies\\": {
+        \\"matched000\\": \\"*\\",
+        \\"mismatched000\\": \\"*\\",
+        \\"mismatched001\\": \\"^5.5.6\\",
+        \\"matched001\\": \\"*\\"
+      }
+    }
+files:
+  - root/matched/matched000/package.json
+  - root/matched/matched001
+  - root/mismatched/mismatched000/package.json
+  - root/mismatched/mismatched001
+  - root/package.json
+
+"
+`;
+
+exports[`updateDependencyVersions works when checker is ANY_OR_CARET_MIN 1`] = `
+"
+all:
+  - root/matched
+  - root/matched/matched000
+  - root/matched/matched000/package.json
+  - root/matched/matched001
+  - root/mismatched
+  - root/mismatched/mismatched000
+  - root/mismatched/mismatched000/package.json
+  - root/mismatched/mismatched001
+  - root/package.json
+directories:
+  - root/matched
+  - root/matched/matched000
+  - root/mismatched
+  - root/mismatched/mismatched000
+fileContents:
+  root/matched/matched000/package.json: |
+    {
+      \\"name\\": \\"matched000\\",
+      \\"version\\": \\"1.2.3\\"
+    }
+  root/matched/matched001: |
+    package.json: |
+      {
+        \\"name\\": \\"matched001\\",
+        \\"version\\": \\"22.44.55\\"
+      }
+  root/mismatched/mismatched000/package.json: |
+    {
+      \\"name\\": \\"mismatched000\\",
+      \\"version\\": \\"3.2.1\\",
+      \\"description\\": \\"Requirement is too low\\"
+    }
+  root/mismatched/mismatched001: |
+    package.json: |
+      {
+        \\"name\\": \\"mismatched001\\",
+        \\"version\\": \\"4.5.6\\",
+        \\"description\\": \\"Requirement is too high\\"
+      }
+  root/package.json: |
+    {
+      \\"version\\": \\"0.0.0\\",
+      \\"private\\": true,
+      \\"dependencies\\": {
+        \\"matched000\\": \\"*\\",
+        \\"mismatched000\\": \\"*\\",
+        \\"mismatched001\\": \\"^5.5.6\\",
+        \\"matched001\\": \\"*\\"
+      }
+    }
+files:
+  - root/matched/matched000/package.json
+  - root/matched/matched001
+  - root/mismatched/mismatched000/package.json
+  - root/mismatched/mismatched001
+  - root/package.json
+
+"
+`;
+
+exports[`updateDependencyVersions works when checker is ANY_OR_EQUAL 1`] = `
+"
+all:
+  - root/matched
+  - root/matched/matched000
+  - root/matched/matched000/package.json
+  - root/matched/matched001
+  - root/mismatched
+  - root/mismatched/mismatched000
+  - root/mismatched/mismatched000/package.json
+  - root/mismatched/mismatched001
+  - root/package.json
+directories:
+  - root/matched
+  - root/matched/matched000
+  - root/mismatched
+  - root/mismatched/mismatched000
+fileContents:
+  root/matched/matched000/package.json: |
+    {
+      \\"name\\": \\"matched000\\",
+      \\"version\\": \\"1.2.3\\"
+    }
+  root/matched/matched001: |
+    package.json: |
+      {
+        \\"name\\": \\"matched001\\",
+        \\"version\\": \\"22.44.55\\"
+      }
+  root/mismatched/mismatched000/package.json: |
+    {
+      \\"name\\": \\"mismatched000\\",
+      \\"version\\": \\"3.2.1\\",
+      \\"description\\": \\"Requirement is too low\\"
+    }
+  root/mismatched/mismatched001: |
+    package.json: |
+      {
+        \\"name\\": \\"mismatched001\\",
+        \\"version\\": \\"4.5.6\\",
+        \\"description\\": \\"Requirement is too high\\"
+      }
+  root/package.json: |
+    {
+      \\"version\\": \\"0.0.0\\",
+      \\"private\\": true,
+      \\"dependencies\\": {
+        \\"matched000\\": \\"*\\",
+        \\"mismatched000\\": \\"*\\",
+        \\"mismatched001\\": \\"^5.5.6\\",
+        \\"matched001\\": \\"*\\"
+      }
+    }
+files:
+  - root/matched/matched000/package.json
+  - root/matched/matched001
+  - root/mismatched/mismatched000/package.json
+  - root/mismatched/mismatched001
+  - root/package.json
+
+"
+`;
+
+exports[`updateDependencyVersions works when checker is ANY_OR_EQUAL_MIN 1`] = `
+"
+all:
+  - root/matched
+  - root/matched/matched000
+  - root/matched/matched000/package.json
+  - root/matched/matched001
+  - root/mismatched
+  - root/mismatched/mismatched000
+  - root/mismatched/mismatched000/package.json
+  - root/mismatched/mismatched001
+  - root/package.json
+directories:
+  - root/matched
+  - root/matched/matched000
+  - root/mismatched
+  - root/mismatched/mismatched000
+fileContents:
+  root/matched/matched000/package.json: |
+    {
+      \\"name\\": \\"matched000\\",
+      \\"version\\": \\"1.2.3\\"
+    }
+  root/matched/matched001: |
+    package.json: |
+      {
+        \\"name\\": \\"matched001\\",
+        \\"version\\": \\"22.44.55\\"
+      }
+  root/mismatched/mismatched000/package.json: |
+    {
+      \\"name\\": \\"mismatched000\\",
+      \\"version\\": \\"3.2.1\\",
+      \\"description\\": \\"Requirement is too low\\"
+    }
+  root/mismatched/mismatched001: |
+    package.json: |
+      {
+        \\"name\\": \\"mismatched001\\",
+        \\"version\\": \\"4.5.6\\",
+        \\"description\\": \\"Requirement is too high\\"
+      }
+  root/package.json: |
+    {
+      \\"version\\": \\"0.0.0\\",
+      \\"private\\": true,
+      \\"dependencies\\": {
+        \\"matched000\\": \\"*\\",
+        \\"mismatched000\\": \\"*\\",
+        \\"mismatched001\\": \\"^5.5.6\\",
+        \\"matched001\\": \\"*\\"
+      }
+    }
+files:
+  - root/matched/matched000/package.json
+  - root/matched/matched001
+  - root/mismatched/mismatched000/package.json
+  - root/mismatched/mismatched001
+  - root/package.json
+
+"
+`;
+
+exports[`updateDependencyVersions works when checker is ANY_OR_TILDA_EQUAL 1`] = `
+"
+all:
+  - root/matched
+  - root/matched/matched000
+  - root/matched/matched000/package.json
+  - root/matched/matched001
+  - root/mismatched
+  - root/mismatched/mismatched000
+  - root/mismatched/mismatched000/package.json
+  - root/mismatched/mismatched001
+  - root/package.json
+directories:
+  - root/matched
+  - root/matched/matched000
+  - root/mismatched
+  - root/mismatched/mismatched000
+fileContents:
+  root/matched/matched000/package.json: |
+    {
+      \\"name\\": \\"matched000\\",
+      \\"version\\": \\"1.2.3\\"
+    }
+  root/matched/matched001: |
+    package.json: |
+      {
+        \\"name\\": \\"matched001\\",
+        \\"version\\": \\"22.44.55\\"
+      }
+  root/mismatched/mismatched000/package.json: |
+    {
+      \\"name\\": \\"mismatched000\\",
+      \\"version\\": \\"3.2.1\\",
+      \\"description\\": \\"Requirement is too low\\"
+    }
+  root/mismatched/mismatched001: |
+    package.json: |
+      {
+        \\"name\\": \\"mismatched001\\",
+        \\"version\\": \\"4.5.6\\",
+        \\"description\\": \\"Requirement is too high\\"
+      }
+  root/package.json: |
+    {
+      \\"version\\": \\"0.0.0\\",
+      \\"private\\": true,
+      \\"dependencies\\": {
+        \\"matched000\\": \\"*\\",
+        \\"mismatched000\\": \\"*\\",
+        \\"mismatched001\\": \\"^5.5.6\\",
+        \\"matched001\\": \\"*\\"
+      }
+    }
+files:
+  - root/matched/matched000/package.json
+  - root/matched/matched001
+  - root/mismatched/mismatched000/package.json
+  - root/mismatched/mismatched001
+  - root/package.json
+
+"
+`;
+
+exports[`updateDependencyVersions works when checker is ANY_OR_TILDA_MIN 1`] = `
+"
+all:
+  - root/matched
+  - root/matched/matched000
+  - root/matched/matched000/package.json
+  - root/matched/matched001
+  - root/mismatched
+  - root/mismatched/mismatched000
+  - root/mismatched/mismatched000/package.json
+  - root/mismatched/mismatched001
+  - root/package.json
+directories:
+  - root/matched
+  - root/matched/matched000
+  - root/mismatched
+  - root/mismatched/mismatched000
+fileContents:
+  root/matched/matched000/package.json: |
+    {
+      \\"name\\": \\"matched000\\",
+      \\"version\\": \\"1.2.3\\"
+    }
+  root/matched/matched001: |
+    package.json: |
+      {
+        \\"name\\": \\"matched001\\",
+        \\"version\\": \\"22.44.55\\"
+      }
+  root/mismatched/mismatched000/package.json: |
+    {
+      \\"name\\": \\"mismatched000\\",
+      \\"version\\": \\"3.2.1\\",
+      \\"description\\": \\"Requirement is too low\\"
+    }
+  root/mismatched/mismatched001: |
+    package.json: |
+      {
+        \\"name\\": \\"mismatched001\\",
+        \\"version\\": \\"4.5.6\\",
+        \\"description\\": \\"Requirement is too high\\"
+      }
+  root/package.json: |
+    {
+      \\"version\\": \\"0.0.0\\",
+      \\"private\\": true,
+      \\"dependencies\\": {
+        \\"matched000\\": \\"*\\",
+        \\"mismatched000\\": \\"*\\",
+        \\"mismatched001\\": \\"^5.5.6\\",
+        \\"matched001\\": \\"*\\"
+      }
+    }
+files:
+  - root/matched/matched000/package.json
+  - root/matched/matched001
+  - root/mismatched/mismatched000/package.json
+  - root/mismatched/mismatched001
+  - root/package.json
+
+"
+`;
+
+exports[`updateDependencyVersions works when checker is CARET_EQUAL 1`] = `
+"
+all:
+  - root/matched
+  - root/matched/matched000
+  - root/matched/matched000/package.json
+  - root/matched/matched001
+  - root/mismatched
+  - root/mismatched/mismatched000
+  - root/mismatched/mismatched000/package.json
+  - root/mismatched/mismatched001
+  - root/package.json
+directories:
+  - root/matched
+  - root/matched/matched000
+  - root/mismatched
+  - root/mismatched/mismatched000
+fileContents:
+  root/matched/matched000/package.json: |
+    {
+      \\"name\\": \\"matched000\\",
+      \\"version\\": \\"1.2.3\\"
+    }
+  root/matched/matched001: |
+    package.json: |
+      {
+        \\"name\\": \\"matched001\\",
+        \\"version\\": \\"22.44.55\\"
+      }
+  root/mismatched/mismatched000/package.json: |
+    {
+      \\"name\\": \\"mismatched000\\",
+      \\"version\\": \\"3.2.1\\",
+      \\"description\\": \\"Requirement is too low\\"
+    }
+  root/mismatched/mismatched001: |
+    package.json: |
+      {
+        \\"name\\": \\"mismatched001\\",
+        \\"version\\": \\"4.5.6\\",
+        \\"description\\": \\"Requirement is too high\\"
+      }
+  root/package.json: |
+    {
+      \\"version\\": \\"0.0.0\\",
+      \\"private\\": true,
+      \\"dependencies\\": {
+        \\"matched000\\": \\"^1.2.3\\",
+        \\"mismatched000\\": \\"^3.2.1\\",
+        \\"mismatched001\\": \\"^5.5.6\\",
+        \\"matched001\\": \\"*\\"
+      }
+    }
+files:
+  - root/matched/matched000/package.json
+  - root/matched/matched001
+  - root/mismatched/mismatched000/package.json
+  - root/mismatched/mismatched001
+  - root/package.json
+
+"
+`;
+
+exports[`updateDependencyVersions works when checker is CARET_EQUAL_OR_ANY 1`] = `
+"
+all:
+  - root/matched
+  - root/matched/matched000
+  - root/matched/matched000/package.json
+  - root/matched/matched001
+  - root/mismatched
+  - root/mismatched/mismatched000
+  - root/mismatched/mismatched000/package.json
+  - root/mismatched/mismatched001
+  - root/package.json
+directories:
+  - root/matched
+  - root/matched/matched000
+  - root/mismatched
+  - root/mismatched/mismatched000
+fileContents:
+  root/matched/matched000/package.json: |
+    {
+      \\"name\\": \\"matched000\\",
+      \\"version\\": \\"1.2.3\\"
+    }
+  root/matched/matched001: |
+    package.json: |
+      {
+        \\"name\\": \\"matched001\\",
+        \\"version\\": \\"22.44.55\\"
+      }
+  root/mismatched/mismatched000/package.json: |
+    {
+      \\"name\\": \\"mismatched000\\",
+      \\"version\\": \\"3.2.1\\",
+      \\"description\\": \\"Requirement is too low\\"
+    }
+  root/mismatched/mismatched001: |
+    package.json: |
+      {
+        \\"name\\": \\"mismatched001\\",
+        \\"version\\": \\"4.5.6\\",
+        \\"description\\": \\"Requirement is too high\\"
+      }
+  root/package.json: |
+    {
+      \\"version\\": \\"0.0.0\\",
+      \\"private\\": true,
+      \\"dependencies\\": {
+        \\"matched000\\": \\"^1.2.3\\",
+        \\"mismatched000\\": \\"^3.2.1\\",
+        \\"mismatched001\\": \\"^5.5.6\\",
+        \\"matched001\\": \\"*\\"
+      }
+    }
+files:
+  - root/matched/matched000/package.json
+  - root/matched/matched001
+  - root/mismatched/mismatched000/package.json
+  - root/mismatched/mismatched001
+  - root/package.json
+
+"
+`;
+
+exports[`updateDependencyVersions works when checker is CARET_MIN 1`] = `
+"
+all:
+  - root/matched
+  - root/matched/matched000
+  - root/matched/matched000/package.json
+  - root/matched/matched001
+  - root/mismatched
+  - root/mismatched/mismatched000
+  - root/mismatched/mismatched000/package.json
+  - root/mismatched/mismatched001
+  - root/package.json
+directories:
+  - root/matched
+  - root/matched/matched000
+  - root/mismatched
+  - root/mismatched/mismatched000
+fileContents:
+  root/matched/matched000/package.json: |
+    {
+      \\"name\\": \\"matched000\\",
+      \\"version\\": \\"1.2.3\\"
+    }
+  root/matched/matched001: |
+    package.json: |
+      {
+        \\"name\\": \\"matched001\\",
+        \\"version\\": \\"22.44.55\\"
+      }
+  root/mismatched/mismatched000/package.json: |
+    {
+      \\"name\\": \\"mismatched000\\",
+      \\"version\\": \\"3.2.1\\",
+      \\"description\\": \\"Requirement is too low\\"
+    }
+  root/mismatched/mismatched001: |
+    package.json: |
+      {
+        \\"name\\": \\"mismatched001\\",
+        \\"version\\": \\"4.5.6\\",
+        \\"description\\": \\"Requirement is too high\\"
+      }
+  root/package.json: |
+    {
+      \\"version\\": \\"0.0.0\\",
+      \\"private\\": true,
+      \\"dependencies\\": {
+        \\"matched000\\": \\"1.2.3\\",
+        \\"mismatched000\\": \\"^3.2.1\\",
+        \\"mismatched001\\": \\"^5.5.6\\",
+        \\"matched001\\": \\"*\\"
+      }
+    }
+files:
+  - root/matched/matched000/package.json
+  - root/matched/matched001
+  - root/mismatched/mismatched000/package.json
+  - root/mismatched/mismatched001
+  - root/package.json
+
+"
+`;
+
+exports[`updateDependencyVersions works when checker is CARET_MIN_OR_ANY 1`] = `
+"
+all:
+  - root/matched
+  - root/matched/matched000
+  - root/matched/matched000/package.json
+  - root/matched/matched001
+  - root/mismatched
+  - root/mismatched/mismatched000
+  - root/mismatched/mismatched000/package.json
+  - root/mismatched/mismatched001
+  - root/package.json
+directories:
+  - root/matched
+  - root/matched/matched000
+  - root/mismatched
+  - root/mismatched/mismatched000
+fileContents:
+  root/matched/matched000/package.json: |
+    {
+      \\"name\\": \\"matched000\\",
+      \\"version\\": \\"1.2.3\\"
+    }
+  root/matched/matched001: |
+    package.json: |
+      {
+        \\"name\\": \\"matched001\\",
+        \\"version\\": \\"22.44.55\\"
+      }
+  root/mismatched/mismatched000/package.json: |
+    {
+      \\"name\\": \\"mismatched000\\",
+      \\"version\\": \\"3.2.1\\",
+      \\"description\\": \\"Requirement is too low\\"
+    }
+  root/mismatched/mismatched001: |
+    package.json: |
+      {
+        \\"name\\": \\"mismatched001\\",
+        \\"version\\": \\"4.5.6\\",
+        \\"description\\": \\"Requirement is too high\\"
+      }
+  root/package.json: |
+    {
+      \\"version\\": \\"0.0.0\\",
+      \\"private\\": true,
+      \\"dependencies\\": {
+        \\"matched000\\": \\"1.2.3\\",
+        \\"mismatched000\\": \\"^3.2.1\\",
+        \\"mismatched001\\": \\"^5.5.6\\",
+        \\"matched001\\": \\"*\\"
+      }
+    }
+files:
+  - root/matched/matched000/package.json
+  - root/matched/matched001
+  - root/mismatched/mismatched000/package.json
+  - root/mismatched/mismatched001
+  - root/package.json
+
+"
+`;
+
+exports[`updateDependencyVersions works when checker is EQUAL 1`] = `
+"
+all:
+  - root/matched
+  - root/matched/matched000
+  - root/matched/matched000/package.json
+  - root/matched/matched001
+  - root/mismatched
+  - root/mismatched/mismatched000
+  - root/mismatched/mismatched000/package.json
+  - root/mismatched/mismatched001
+  - root/package.json
+directories:
+  - root/matched
+  - root/matched/matched000
+  - root/mismatched
+  - root/mismatched/mismatched000
+fileContents:
+  root/matched/matched000/package.json: |
+    {
+      \\"name\\": \\"matched000\\",
+      \\"version\\": \\"1.2.3\\"
+    }
+  root/matched/matched001: |
+    package.json: |
+      {
+        \\"name\\": \\"matched001\\",
+        \\"version\\": \\"22.44.55\\"
+      }
+  root/mismatched/mismatched000/package.json: |
+    {
+      \\"name\\": \\"mismatched000\\",
+      \\"version\\": \\"3.2.1\\",
+      \\"description\\": \\"Requirement is too low\\"
+    }
+  root/mismatched/mismatched001: |
+    package.json: |
+      {
+        \\"name\\": \\"mismatched001\\",
+        \\"version\\": \\"4.5.6\\",
+        \\"description\\": \\"Requirement is too high\\"
+      }
+  root/package.json: |
+    {
+      \\"version\\": \\"0.0.0\\",
+      \\"private\\": true,
+      \\"dependencies\\": {
+        \\"matched000\\": \\"1.2.3\\",
+        \\"mismatched000\\": \\"3.2.1\\",
+        \\"mismatched001\\": \\"^5.5.6\\",
+        \\"matched001\\": \\"*\\"
+      }
+    }
+files:
+  - root/matched/matched000/package.json
+  - root/matched/matched001
+  - root/mismatched/mismatched000/package.json
+  - root/mismatched/mismatched001
+  - root/package.json
+
+"
+`;
+
+exports[`updateDependencyVersions works when checker is EQUAL_MIN 1`] = `
+"
+all:
+  - root/matched
+  - root/matched/matched000
+  - root/matched/matched000/package.json
+  - root/matched/matched001
+  - root/mismatched
+  - root/mismatched/mismatched000
+  - root/mismatched/mismatched000/package.json
+  - root/mismatched/mismatched001
+  - root/package.json
+directories:
+  - root/matched
+  - root/matched/matched000
+  - root/mismatched
+  - root/mismatched/mismatched000
+fileContents:
+  root/matched/matched000/package.json: |
+    {
+      \\"name\\": \\"matched000\\",
+      \\"version\\": \\"1.2.3\\"
+    }
+  root/matched/matched001: |
+    package.json: |
+      {
+        \\"name\\": \\"matched001\\",
+        \\"version\\": \\"22.44.55\\"
+      }
+  root/mismatched/mismatched000/package.json: |
+    {
+      \\"name\\": \\"mismatched000\\",
+      \\"version\\": \\"3.2.1\\",
+      \\"description\\": \\"Requirement is too low\\"
+    }
+  root/mismatched/mismatched001: |
+    package.json: |
+      {
+        \\"name\\": \\"mismatched001\\",
+        \\"version\\": \\"4.5.6\\",
+        \\"description\\": \\"Requirement is too high\\"
+      }
+  root/package.json: |
+    {
+      \\"version\\": \\"0.0.0\\",
+      \\"private\\": true,
+      \\"dependencies\\": {
+        \\"matched000\\": \\"1.2.3\\",
+        \\"mismatched000\\": \\"3.2.1\\",
+        \\"mismatched001\\": \\"^5.5.6\\",
+        \\"matched001\\": \\"*\\"
+      }
+    }
+files:
+  - root/matched/matched000/package.json
+  - root/matched/matched001
+  - root/mismatched/mismatched000/package.json
+  - root/mismatched/mismatched001
+  - root/package.json
+
+"
+`;
+
+exports[`updateDependencyVersions works when checker is EQUAL_MIN_OR_ANY 1`] = `
+"
+all:
+  - root/matched
+  - root/matched/matched000
+  - root/matched/matched000/package.json
+  - root/matched/matched001
+  - root/mismatched
+  - root/mismatched/mismatched000
+  - root/mismatched/mismatched000/package.json
+  - root/mismatched/mismatched001
+  - root/package.json
+directories:
+  - root/matched
+  - root/matched/matched000
+  - root/mismatched
+  - root/mismatched/mismatched000
+fileContents:
+  root/matched/matched000/package.json: |
+    {
+      \\"name\\": \\"matched000\\",
+      \\"version\\": \\"1.2.3\\"
+    }
+  root/matched/matched001: |
+    package.json: |
+      {
+        \\"name\\": \\"matched001\\",
+        \\"version\\": \\"22.44.55\\"
+      }
+  root/mismatched/mismatched000/package.json: |
+    {
+      \\"name\\": \\"mismatched000\\",
+      \\"version\\": \\"3.2.1\\",
+      \\"description\\": \\"Requirement is too low\\"
+    }
+  root/mismatched/mismatched001: |
+    package.json: |
+      {
+        \\"name\\": \\"mismatched001\\",
+        \\"version\\": \\"4.5.6\\",
+        \\"description\\": \\"Requirement is too high\\"
+      }
+  root/package.json: |
+    {
+      \\"version\\": \\"0.0.0\\",
+      \\"private\\": true,
+      \\"dependencies\\": {
+        \\"matched000\\": \\"1.2.3\\",
+        \\"mismatched000\\": \\"3.2.1\\",
+        \\"mismatched001\\": \\"^5.5.6\\",
+        \\"matched001\\": \\"*\\"
+      }
+    }
+files:
+  - root/matched/matched000/package.json
+  - root/matched/matched001
+  - root/mismatched/mismatched000/package.json
+  - root/mismatched/mismatched001
+  - root/package.json
+
+"
+`;
+
+exports[`updateDependencyVersions works when checker is EQUAL_OR_ANY 1`] = `
+"
+all:
+  - root/matched
+  - root/matched/matched000
+  - root/matched/matched000/package.json
+  - root/matched/matched001
+  - root/mismatched
+  - root/mismatched/mismatched000
+  - root/mismatched/mismatched000/package.json
+  - root/mismatched/mismatched001
+  - root/package.json
+directories:
+  - root/matched
+  - root/matched/matched000
+  - root/mismatched
+  - root/mismatched/mismatched000
+fileContents:
+  root/matched/matched000/package.json: |
+    {
+      \\"name\\": \\"matched000\\",
+      \\"version\\": \\"1.2.3\\"
+    }
+  root/matched/matched001: |
+    package.json: |
+      {
+        \\"name\\": \\"matched001\\",
+        \\"version\\": \\"22.44.55\\"
+      }
+  root/mismatched/mismatched000/package.json: |
+    {
+      \\"name\\": \\"mismatched000\\",
+      \\"version\\": \\"3.2.1\\",
+      \\"description\\": \\"Requirement is too low\\"
+    }
+  root/mismatched/mismatched001: |
+    package.json: |
+      {
+        \\"name\\": \\"mismatched001\\",
+        \\"version\\": \\"4.5.6\\",
+        \\"description\\": \\"Requirement is too high\\"
+      }
+  root/package.json: |
+    {
+      \\"version\\": \\"0.0.0\\",
+      \\"private\\": true,
+      \\"dependencies\\": {
+        \\"matched000\\": \\"1.2.3\\",
+        \\"mismatched000\\": \\"3.2.1\\",
+        \\"mismatched001\\": \\"^5.5.6\\",
+        \\"matched001\\": \\"*\\"
+      }
+    }
+files:
+  - root/matched/matched000/package.json
+  - root/matched/matched001
+  - root/mismatched/mismatched000/package.json
+  - root/mismatched/mismatched001
+  - root/package.json
+
+"
+`;
+
+exports[`updateDependencyVersions works when checker is TILDA_EQUAL 1`] = `
+"
+all:
+  - root/matched
+  - root/matched/matched000
+  - root/matched/matched000/package.json
+  - root/matched/matched001
+  - root/mismatched
+  - root/mismatched/mismatched000
+  - root/mismatched/mismatched000/package.json
+  - root/mismatched/mismatched001
+  - root/package.json
+directories:
+  - root/matched
+  - root/matched/matched000
+  - root/mismatched
+  - root/mismatched/mismatched000
+fileContents:
+  root/matched/matched000/package.json: |
+    {
+      \\"name\\": \\"matched000\\",
+      \\"version\\": \\"1.2.3\\"
+    }
+  root/matched/matched001: |
+    package.json: |
+      {
+        \\"name\\": \\"matched001\\",
+        \\"version\\": \\"22.44.55\\"
+      }
+  root/mismatched/mismatched000/package.json: |
+    {
+      \\"name\\": \\"mismatched000\\",
+      \\"version\\": \\"3.2.1\\",
+      \\"description\\": \\"Requirement is too low\\"
+    }
+  root/mismatched/mismatched001: |
+    package.json: |
+      {
+        \\"name\\": \\"mismatched001\\",
+        \\"version\\": \\"4.5.6\\",
+        \\"description\\": \\"Requirement is too high\\"
+      }
+  root/package.json: |
+    {
+      \\"version\\": \\"0.0.0\\",
+      \\"private\\": true,
+      \\"dependencies\\": {
+        \\"matched000\\": \\"~1.2.3\\",
+        \\"mismatched000\\": \\"~3.2.1\\",
+        \\"mismatched001\\": \\"^5.5.6\\",
+        \\"matched001\\": \\"*\\"
+      }
+    }
+files:
+  - root/matched/matched000/package.json
+  - root/matched/matched001
+  - root/mismatched/mismatched000/package.json
+  - root/mismatched/mismatched001
+  - root/package.json
+
+"
+`;
+
+exports[`updateDependencyVersions works when checker is TILDA_EQUAL_OR_ANY 1`] = `
+"
+all:
+  - root/matched
+  - root/matched/matched000
+  - root/matched/matched000/package.json
+  - root/matched/matched001
+  - root/mismatched
+  - root/mismatched/mismatched000
+  - root/mismatched/mismatched000/package.json
+  - root/mismatched/mismatched001
+  - root/package.json
+directories:
+  - root/matched
+  - root/matched/matched000
+  - root/mismatched
+  - root/mismatched/mismatched000
+fileContents:
+  root/matched/matched000/package.json: |
+    {
+      \\"name\\": \\"matched000\\",
+      \\"version\\": \\"1.2.3\\"
+    }
+  root/matched/matched001: |
+    package.json: |
+      {
+        \\"name\\": \\"matched001\\",
+        \\"version\\": \\"22.44.55\\"
+      }
+  root/mismatched/mismatched000/package.json: |
+    {
+      \\"name\\": \\"mismatched000\\",
+      \\"version\\": \\"3.2.1\\",
+      \\"description\\": \\"Requirement is too low\\"
+    }
+  root/mismatched/mismatched001: |
+    package.json: |
+      {
+        \\"name\\": \\"mismatched001\\",
+        \\"version\\": \\"4.5.6\\",
+        \\"description\\": \\"Requirement is too high\\"
+      }
+  root/package.json: |
+    {
+      \\"version\\": \\"0.0.0\\",
+      \\"private\\": true,
+      \\"dependencies\\": {
+        \\"matched000\\": \\"~1.2.3\\",
+        \\"mismatched000\\": \\"~3.2.1\\",
+        \\"mismatched001\\": \\"^5.5.6\\",
+        \\"matched001\\": \\"*\\"
+      }
+    }
+files:
+  - root/matched/matched000/package.json
+  - root/matched/matched001
+  - root/mismatched/mismatched000/package.json
+  - root/mismatched/mismatched001
+  - root/package.json
+
+"
+`;
+
+exports[`updateDependencyVersions works when checker is TILDA_MIN 1`] = `
+"
+all:
+  - root/matched
+  - root/matched/matched000
+  - root/matched/matched000/package.json
+  - root/matched/matched001
+  - root/mismatched
+  - root/mismatched/mismatched000
+  - root/mismatched/mismatched000/package.json
+  - root/mismatched/mismatched001
+  - root/package.json
+directories:
+  - root/matched
+  - root/matched/matched000
+  - root/mismatched
+  - root/mismatched/mismatched000
+fileContents:
+  root/matched/matched000/package.json: |
+    {
+      \\"name\\": \\"matched000\\",
+      \\"version\\": \\"1.2.3\\"
+    }
+  root/matched/matched001: |
+    package.json: |
+      {
+        \\"name\\": \\"matched001\\",
+        \\"version\\": \\"22.44.55\\"
+      }
+  root/mismatched/mismatched000/package.json: |
+    {
+      \\"name\\": \\"mismatched000\\",
+      \\"version\\": \\"3.2.1\\",
+      \\"description\\": \\"Requirement is too low\\"
+    }
+  root/mismatched/mismatched001: |
+    package.json: |
+      {
+        \\"name\\": \\"mismatched001\\",
+        \\"version\\": \\"4.5.6\\",
+        \\"description\\": \\"Requirement is too high\\"
+      }
+  root/package.json: |
+    {
+      \\"version\\": \\"0.0.0\\",
+      \\"private\\": true,
+      \\"dependencies\\": {
+        \\"matched000\\": \\"1.2.3\\",
+        \\"mismatched000\\": \\"~3.2.1\\",
+        \\"mismatched001\\": \\"^5.5.6\\",
+        \\"matched001\\": \\"*\\"
+      }
+    }
+files:
+  - root/matched/matched000/package.json
+  - root/matched/matched001
+  - root/mismatched/mismatched000/package.json
+  - root/mismatched/mismatched001
+  - root/package.json
+
+"
+`;
+
+exports[`updateDependencyVersions works when checker is TILDA_MIN_OR_ANY 1`] = `
+"
+all:
+  - root/matched
+  - root/matched/matched000
+  - root/matched/matched000/package.json
+  - root/matched/matched001
+  - root/mismatched
+  - root/mismatched/mismatched000
+  - root/mismatched/mismatched000/package.json
+  - root/mismatched/mismatched001
+  - root/package.json
+directories:
+  - root/matched
+  - root/matched/matched000
+  - root/mismatched
+  - root/mismatched/mismatched000
+fileContents:
+  root/matched/matched000/package.json: |
+    {
+      \\"name\\": \\"matched000\\",
+      \\"version\\": \\"1.2.3\\"
+    }
+  root/matched/matched001: |
+    package.json: |
+      {
+        \\"name\\": \\"matched001\\",
+        \\"version\\": \\"22.44.55\\"
+      }
+  root/mismatched/mismatched000/package.json: |
+    {
+      \\"name\\": \\"mismatched000\\",
+      \\"version\\": \\"3.2.1\\",
+      \\"description\\": \\"Requirement is too low\\"
+    }
+  root/mismatched/mismatched001: |
+    package.json: |
+      {
+        \\"name\\": \\"mismatched001\\",
+        \\"version\\": \\"4.5.6\\",
+        \\"description\\": \\"Requirement is too high\\"
+      }
+  root/package.json: |
+    {
+      \\"version\\": \\"0.0.0\\",
+      \\"private\\": true,
+      \\"dependencies\\": {
+        \\"matched000\\": \\"1.2.3\\",
+        \\"mismatched000\\": \\"~3.2.1\\",
+        \\"mismatched001\\": \\"^5.5.6\\",
+        \\"matched001\\": \\"*\\"
+      }
+    }
+files:
+  - root/matched/matched000/package.json
+  - root/matched/matched001
+  - root/mismatched/mismatched000/package.json
+  - root/mismatched/mismatched001
+  - root/package.json
+
+"
+`;

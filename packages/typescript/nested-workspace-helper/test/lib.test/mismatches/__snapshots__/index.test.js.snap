@@ -1,0 +1,1464 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getMismatchedDependencies when checker is ANY matches snapshot 1`] = `
+Object {
+  "root": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "dependencies": Object {
+          "matched000": "1.2.3",
+          "matched001": "*",
+          "mismatched000": "^2.2.3",
+          "mismatched001": "^5.5.6",
+        },
+        "private": true,
+        "version": "0.0.0",
+      },
+      "manifestFile": "root/package.json",
+      "path": "root",
+    },
+    "list": Array [
+      Object {
+        "info": Object {
+          "manifestContent": Object {
+            "name": "matched000",
+            "version": "1.2.3",
+          },
+          "manifestFile": "root/matched/matched000/package.json",
+          "path": "root/matched/matched000",
+        },
+        "name": "matched000",
+        "requirement": "1.2.3",
+        "type": "prod",
+        "update": "*",
+        "version": "1.2.3",
+      },
+      Object {
+        "info": Object {
+          "manifestContent": Object {
+            "description": "Requirement is too low",
+            "name": "mismatched000",
+            "version": "3.2.1",
+          },
+          "manifestFile": "root/mismatched/mismatched000/package.json",
+          "path": "root/mismatched/mismatched000",
+        },
+        "name": "mismatched000",
+        "requirement": "^2.2.3",
+        "type": "prod",
+        "update": "*",
+        "version": "3.2.1",
+      },
+    ],
+  },
+  "root/matched/matched000": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "name": "matched000",
+        "version": "1.2.3",
+      },
+      "manifestFile": "root/matched/matched000/package.json",
+      "path": "root/matched/matched000",
+    },
+    "list": Array [],
+  },
+  "root/mismatched/mismatched000": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "description": "Requirement is too low",
+        "name": "mismatched000",
+        "version": "3.2.1",
+      },
+      "manifestFile": "root/mismatched/mismatched000/package.json",
+      "path": "root/mismatched/mismatched000",
+    },
+    "list": Array [],
+  },
+}
+`;
+
+exports[`getMismatchedDependencies when checker is ANY_OR_CARET_EQUAL matches snapshot 1`] = `
+Object {
+  "root": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "dependencies": Object {
+          "matched000": "1.2.3",
+          "matched001": "*",
+          "mismatched000": "^2.2.3",
+          "mismatched001": "^5.5.6",
+        },
+        "private": true,
+        "version": "0.0.0",
+      },
+      "manifestFile": "root/package.json",
+      "path": "root",
+    },
+    "list": Array [
+      Object {
+        "info": Object {
+          "manifestContent": Object {
+            "name": "matched000",
+            "version": "1.2.3",
+          },
+          "manifestFile": "root/matched/matched000/package.json",
+          "path": "root/matched/matched000",
+        },
+        "name": "matched000",
+        "requirement": "1.2.3",
+        "type": "prod",
+        "update": "*",
+        "version": "1.2.3",
+      },
+      Object {
+        "info": Object {
+          "manifestContent": Object {
+            "description": "Requirement is too low",
+            "name": "mismatched000",
+            "version": "3.2.1",
+          },
+          "manifestFile": "root/mismatched/mismatched000/package.json",
+          "path": "root/mismatched/mismatched000",
+        },
+        "name": "mismatched000",
+        "requirement": "^2.2.3",
+        "type": "prod",
+        "update": "*",
+        "version": "3.2.1",
+      },
+    ],
+  },
+  "root/matched/matched000": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "name": "matched000",
+        "version": "1.2.3",
+      },
+      "manifestFile": "root/matched/matched000/package.json",
+      "path": "root/matched/matched000",
+    },
+    "list": Array [],
+  },
+  "root/mismatched/mismatched000": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "description": "Requirement is too low",
+        "name": "mismatched000",
+        "version": "3.2.1",
+      },
+      "manifestFile": "root/mismatched/mismatched000/package.json",
+      "path": "root/mismatched/mismatched000",
+    },
+    "list": Array [],
+  },
+}
+`;
+
+exports[`getMismatchedDependencies when checker is ANY_OR_CARET_MIN matches snapshot 1`] = `
+Object {
+  "root": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "dependencies": Object {
+          "matched000": "1.2.3",
+          "matched001": "*",
+          "mismatched000": "^2.2.3",
+          "mismatched001": "^5.5.6",
+        },
+        "private": true,
+        "version": "0.0.0",
+      },
+      "manifestFile": "root/package.json",
+      "path": "root",
+    },
+    "list": Array [
+      Object {
+        "info": Object {
+          "manifestContent": Object {
+            "name": "matched000",
+            "version": "1.2.3",
+          },
+          "manifestFile": "root/matched/matched000/package.json",
+          "path": "root/matched/matched000",
+        },
+        "name": "matched000",
+        "requirement": "1.2.3",
+        "type": "prod",
+        "update": "*",
+        "version": "1.2.3",
+      },
+      Object {
+        "info": Object {
+          "manifestContent": Object {
+            "description": "Requirement is too low",
+            "name": "mismatched000",
+            "version": "3.2.1",
+          },
+          "manifestFile": "root/mismatched/mismatched000/package.json",
+          "path": "root/mismatched/mismatched000",
+        },
+        "name": "mismatched000",
+        "requirement": "^2.2.3",
+        "type": "prod",
+        "update": "*",
+        "version": "3.2.1",
+      },
+    ],
+  },
+  "root/matched/matched000": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "name": "matched000",
+        "version": "1.2.3",
+      },
+      "manifestFile": "root/matched/matched000/package.json",
+      "path": "root/matched/matched000",
+    },
+    "list": Array [],
+  },
+  "root/mismatched/mismatched000": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "description": "Requirement is too low",
+        "name": "mismatched000",
+        "version": "3.2.1",
+      },
+      "manifestFile": "root/mismatched/mismatched000/package.json",
+      "path": "root/mismatched/mismatched000",
+    },
+    "list": Array [],
+  },
+}
+`;
+
+exports[`getMismatchedDependencies when checker is ANY_OR_EQUAL matches snapshot 1`] = `
+Object {
+  "root": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "dependencies": Object {
+          "matched000": "1.2.3",
+          "matched001": "*",
+          "mismatched000": "^2.2.3",
+          "mismatched001": "^5.5.6",
+        },
+        "private": true,
+        "version": "0.0.0",
+      },
+      "manifestFile": "root/package.json",
+      "path": "root",
+    },
+    "list": Array [
+      Object {
+        "info": Object {
+          "manifestContent": Object {
+            "name": "matched000",
+            "version": "1.2.3",
+          },
+          "manifestFile": "root/matched/matched000/package.json",
+          "path": "root/matched/matched000",
+        },
+        "name": "matched000",
+        "requirement": "1.2.3",
+        "type": "prod",
+        "update": "*",
+        "version": "1.2.3",
+      },
+      Object {
+        "info": Object {
+          "manifestContent": Object {
+            "description": "Requirement is too low",
+            "name": "mismatched000",
+            "version": "3.2.1",
+          },
+          "manifestFile": "root/mismatched/mismatched000/package.json",
+          "path": "root/mismatched/mismatched000",
+        },
+        "name": "mismatched000",
+        "requirement": "^2.2.3",
+        "type": "prod",
+        "update": "*",
+        "version": "3.2.1",
+      },
+    ],
+  },
+  "root/matched/matched000": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "name": "matched000",
+        "version": "1.2.3",
+      },
+      "manifestFile": "root/matched/matched000/package.json",
+      "path": "root/matched/matched000",
+    },
+    "list": Array [],
+  },
+  "root/mismatched/mismatched000": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "description": "Requirement is too low",
+        "name": "mismatched000",
+        "version": "3.2.1",
+      },
+      "manifestFile": "root/mismatched/mismatched000/package.json",
+      "path": "root/mismatched/mismatched000",
+    },
+    "list": Array [],
+  },
+}
+`;
+
+exports[`getMismatchedDependencies when checker is ANY_OR_EQUAL_MIN matches snapshot 1`] = `
+Object {
+  "root": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "dependencies": Object {
+          "matched000": "1.2.3",
+          "matched001": "*",
+          "mismatched000": "^2.2.3",
+          "mismatched001": "^5.5.6",
+        },
+        "private": true,
+        "version": "0.0.0",
+      },
+      "manifestFile": "root/package.json",
+      "path": "root",
+    },
+    "list": Array [
+      Object {
+        "info": Object {
+          "manifestContent": Object {
+            "name": "matched000",
+            "version": "1.2.3",
+          },
+          "manifestFile": "root/matched/matched000/package.json",
+          "path": "root/matched/matched000",
+        },
+        "name": "matched000",
+        "requirement": "1.2.3",
+        "type": "prod",
+        "update": "*",
+        "version": "1.2.3",
+      },
+      Object {
+        "info": Object {
+          "manifestContent": Object {
+            "description": "Requirement is too low",
+            "name": "mismatched000",
+            "version": "3.2.1",
+          },
+          "manifestFile": "root/mismatched/mismatched000/package.json",
+          "path": "root/mismatched/mismatched000",
+        },
+        "name": "mismatched000",
+        "requirement": "^2.2.3",
+        "type": "prod",
+        "update": "*",
+        "version": "3.2.1",
+      },
+    ],
+  },
+  "root/matched/matched000": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "name": "matched000",
+        "version": "1.2.3",
+      },
+      "manifestFile": "root/matched/matched000/package.json",
+      "path": "root/matched/matched000",
+    },
+    "list": Array [],
+  },
+  "root/mismatched/mismatched000": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "description": "Requirement is too low",
+        "name": "mismatched000",
+        "version": "3.2.1",
+      },
+      "manifestFile": "root/mismatched/mismatched000/package.json",
+      "path": "root/mismatched/mismatched000",
+    },
+    "list": Array [],
+  },
+}
+`;
+
+exports[`getMismatchedDependencies when checker is ANY_OR_TILDA_EQUAL matches snapshot 1`] = `
+Object {
+  "root": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "dependencies": Object {
+          "matched000": "1.2.3",
+          "matched001": "*",
+          "mismatched000": "^2.2.3",
+          "mismatched001": "^5.5.6",
+        },
+        "private": true,
+        "version": "0.0.0",
+      },
+      "manifestFile": "root/package.json",
+      "path": "root",
+    },
+    "list": Array [
+      Object {
+        "info": Object {
+          "manifestContent": Object {
+            "name": "matched000",
+            "version": "1.2.3",
+          },
+          "manifestFile": "root/matched/matched000/package.json",
+          "path": "root/matched/matched000",
+        },
+        "name": "matched000",
+        "requirement": "1.2.3",
+        "type": "prod",
+        "update": "*",
+        "version": "1.2.3",
+      },
+      Object {
+        "info": Object {
+          "manifestContent": Object {
+            "description": "Requirement is too low",
+            "name": "mismatched000",
+            "version": "3.2.1",
+          },
+          "manifestFile": "root/mismatched/mismatched000/package.json",
+          "path": "root/mismatched/mismatched000",
+        },
+        "name": "mismatched000",
+        "requirement": "^2.2.3",
+        "type": "prod",
+        "update": "*",
+        "version": "3.2.1",
+      },
+    ],
+  },
+  "root/matched/matched000": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "name": "matched000",
+        "version": "1.2.3",
+      },
+      "manifestFile": "root/matched/matched000/package.json",
+      "path": "root/matched/matched000",
+    },
+    "list": Array [],
+  },
+  "root/mismatched/mismatched000": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "description": "Requirement is too low",
+        "name": "mismatched000",
+        "version": "3.2.1",
+      },
+      "manifestFile": "root/mismatched/mismatched000/package.json",
+      "path": "root/mismatched/mismatched000",
+    },
+    "list": Array [],
+  },
+}
+`;
+
+exports[`getMismatchedDependencies when checker is ANY_OR_TILDA_MIN matches snapshot 1`] = `
+Object {
+  "root": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "dependencies": Object {
+          "matched000": "1.2.3",
+          "matched001": "*",
+          "mismatched000": "^2.2.3",
+          "mismatched001": "^5.5.6",
+        },
+        "private": true,
+        "version": "0.0.0",
+      },
+      "manifestFile": "root/package.json",
+      "path": "root",
+    },
+    "list": Array [
+      Object {
+        "info": Object {
+          "manifestContent": Object {
+            "name": "matched000",
+            "version": "1.2.3",
+          },
+          "manifestFile": "root/matched/matched000/package.json",
+          "path": "root/matched/matched000",
+        },
+        "name": "matched000",
+        "requirement": "1.2.3",
+        "type": "prod",
+        "update": "*",
+        "version": "1.2.3",
+      },
+      Object {
+        "info": Object {
+          "manifestContent": Object {
+            "description": "Requirement is too low",
+            "name": "mismatched000",
+            "version": "3.2.1",
+          },
+          "manifestFile": "root/mismatched/mismatched000/package.json",
+          "path": "root/mismatched/mismatched000",
+        },
+        "name": "mismatched000",
+        "requirement": "^2.2.3",
+        "type": "prod",
+        "update": "*",
+        "version": "3.2.1",
+      },
+    ],
+  },
+  "root/matched/matched000": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "name": "matched000",
+        "version": "1.2.3",
+      },
+      "manifestFile": "root/matched/matched000/package.json",
+      "path": "root/matched/matched000",
+    },
+    "list": Array [],
+  },
+  "root/mismatched/mismatched000": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "description": "Requirement is too low",
+        "name": "mismatched000",
+        "version": "3.2.1",
+      },
+      "manifestFile": "root/mismatched/mismatched000/package.json",
+      "path": "root/mismatched/mismatched000",
+    },
+    "list": Array [],
+  },
+}
+`;
+
+exports[`getMismatchedDependencies when checker is CARET_EQUAL matches snapshot 1`] = `
+Object {
+  "root": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "dependencies": Object {
+          "matched000": "1.2.3",
+          "matched001": "*",
+          "mismatched000": "^2.2.3",
+          "mismatched001": "^5.5.6",
+        },
+        "private": true,
+        "version": "0.0.0",
+      },
+      "manifestFile": "root/package.json",
+      "path": "root",
+    },
+    "list": Array [
+      Object {
+        "info": Object {
+          "manifestContent": Object {
+            "name": "matched000",
+            "version": "1.2.3",
+          },
+          "manifestFile": "root/matched/matched000/package.json",
+          "path": "root/matched/matched000",
+        },
+        "name": "matched000",
+        "requirement": "1.2.3",
+        "type": "prod",
+        "update": "^1.2.3",
+        "version": "1.2.3",
+      },
+      Object {
+        "info": Object {
+          "manifestContent": Object {
+            "description": "Requirement is too low",
+            "name": "mismatched000",
+            "version": "3.2.1",
+          },
+          "manifestFile": "root/mismatched/mismatched000/package.json",
+          "path": "root/mismatched/mismatched000",
+        },
+        "name": "mismatched000",
+        "requirement": "^2.2.3",
+        "type": "prod",
+        "update": "^3.2.1",
+        "version": "3.2.1",
+      },
+    ],
+  },
+  "root/matched/matched000": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "name": "matched000",
+        "version": "1.2.3",
+      },
+      "manifestFile": "root/matched/matched000/package.json",
+      "path": "root/matched/matched000",
+    },
+    "list": Array [],
+  },
+  "root/mismatched/mismatched000": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "description": "Requirement is too low",
+        "name": "mismatched000",
+        "version": "3.2.1",
+      },
+      "manifestFile": "root/mismatched/mismatched000/package.json",
+      "path": "root/mismatched/mismatched000",
+    },
+    "list": Array [],
+  },
+}
+`;
+
+exports[`getMismatchedDependencies when checker is CARET_EQUAL_OR_ANY matches snapshot 1`] = `
+Object {
+  "root": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "dependencies": Object {
+          "matched000": "1.2.3",
+          "matched001": "*",
+          "mismatched000": "^2.2.3",
+          "mismatched001": "^5.5.6",
+        },
+        "private": true,
+        "version": "0.0.0",
+      },
+      "manifestFile": "root/package.json",
+      "path": "root",
+    },
+    "list": Array [
+      Object {
+        "info": Object {
+          "manifestContent": Object {
+            "name": "matched000",
+            "version": "1.2.3",
+          },
+          "manifestFile": "root/matched/matched000/package.json",
+          "path": "root/matched/matched000",
+        },
+        "name": "matched000",
+        "requirement": "1.2.3",
+        "type": "prod",
+        "update": "^1.2.3",
+        "version": "1.2.3",
+      },
+      Object {
+        "info": Object {
+          "manifestContent": Object {
+            "description": "Requirement is too low",
+            "name": "mismatched000",
+            "version": "3.2.1",
+          },
+          "manifestFile": "root/mismatched/mismatched000/package.json",
+          "path": "root/mismatched/mismatched000",
+        },
+        "name": "mismatched000",
+        "requirement": "^2.2.3",
+        "type": "prod",
+        "update": "^3.2.1",
+        "version": "3.2.1",
+      },
+    ],
+  },
+  "root/matched/matched000": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "name": "matched000",
+        "version": "1.2.3",
+      },
+      "manifestFile": "root/matched/matched000/package.json",
+      "path": "root/matched/matched000",
+    },
+    "list": Array [],
+  },
+  "root/mismatched/mismatched000": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "description": "Requirement is too low",
+        "name": "mismatched000",
+        "version": "3.2.1",
+      },
+      "manifestFile": "root/mismatched/mismatched000/package.json",
+      "path": "root/mismatched/mismatched000",
+    },
+    "list": Array [],
+  },
+}
+`;
+
+exports[`getMismatchedDependencies when checker is CARET_MIN matches snapshot 1`] = `
+Object {
+  "root": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "dependencies": Object {
+          "matched000": "1.2.3",
+          "matched001": "*",
+          "mismatched000": "^2.2.3",
+          "mismatched001": "^5.5.6",
+        },
+        "private": true,
+        "version": "0.0.0",
+      },
+      "manifestFile": "root/package.json",
+      "path": "root",
+    },
+    "list": Array [
+      Object {
+        "info": Object {
+          "manifestContent": Object {
+            "name": "matched000",
+            "version": "1.2.3",
+          },
+          "manifestFile": "root/matched/matched000/package.json",
+          "path": "root/matched/matched000",
+        },
+        "name": "matched000",
+        "requirement": "1.2.3",
+        "type": "prod",
+        "update": "1.2.3",
+        "version": "1.2.3",
+      },
+      Object {
+        "info": Object {
+          "manifestContent": Object {
+            "description": "Requirement is too low",
+            "name": "mismatched000",
+            "version": "3.2.1",
+          },
+          "manifestFile": "root/mismatched/mismatched000/package.json",
+          "path": "root/mismatched/mismatched000",
+        },
+        "name": "mismatched000",
+        "requirement": "^2.2.3",
+        "type": "prod",
+        "update": "^3.2.1",
+        "version": "3.2.1",
+      },
+    ],
+  },
+  "root/matched/matched000": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "name": "matched000",
+        "version": "1.2.3",
+      },
+      "manifestFile": "root/matched/matched000/package.json",
+      "path": "root/matched/matched000",
+    },
+    "list": Array [],
+  },
+  "root/mismatched/mismatched000": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "description": "Requirement is too low",
+        "name": "mismatched000",
+        "version": "3.2.1",
+      },
+      "manifestFile": "root/mismatched/mismatched000/package.json",
+      "path": "root/mismatched/mismatched000",
+    },
+    "list": Array [],
+  },
+}
+`;
+
+exports[`getMismatchedDependencies when checker is CARET_MIN_OR_ANY matches snapshot 1`] = `
+Object {
+  "root": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "dependencies": Object {
+          "matched000": "1.2.3",
+          "matched001": "*",
+          "mismatched000": "^2.2.3",
+          "mismatched001": "^5.5.6",
+        },
+        "private": true,
+        "version": "0.0.0",
+      },
+      "manifestFile": "root/package.json",
+      "path": "root",
+    },
+    "list": Array [
+      Object {
+        "info": Object {
+          "manifestContent": Object {
+            "name": "matched000",
+            "version": "1.2.3",
+          },
+          "manifestFile": "root/matched/matched000/package.json",
+          "path": "root/matched/matched000",
+        },
+        "name": "matched000",
+        "requirement": "1.2.3",
+        "type": "prod",
+        "update": "1.2.3",
+        "version": "1.2.3",
+      },
+      Object {
+        "info": Object {
+          "manifestContent": Object {
+            "description": "Requirement is too low",
+            "name": "mismatched000",
+            "version": "3.2.1",
+          },
+          "manifestFile": "root/mismatched/mismatched000/package.json",
+          "path": "root/mismatched/mismatched000",
+        },
+        "name": "mismatched000",
+        "requirement": "^2.2.3",
+        "type": "prod",
+        "update": "^3.2.1",
+        "version": "3.2.1",
+      },
+    ],
+  },
+  "root/matched/matched000": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "name": "matched000",
+        "version": "1.2.3",
+      },
+      "manifestFile": "root/matched/matched000/package.json",
+      "path": "root/matched/matched000",
+    },
+    "list": Array [],
+  },
+  "root/mismatched/mismatched000": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "description": "Requirement is too low",
+        "name": "mismatched000",
+        "version": "3.2.1",
+      },
+      "manifestFile": "root/mismatched/mismatched000/package.json",
+      "path": "root/mismatched/mismatched000",
+    },
+    "list": Array [],
+  },
+}
+`;
+
+exports[`getMismatchedDependencies when checker is EQUAL matches snapshot 1`] = `
+Object {
+  "root": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "dependencies": Object {
+          "matched000": "1.2.3",
+          "matched001": "*",
+          "mismatched000": "^2.2.3",
+          "mismatched001": "^5.5.6",
+        },
+        "private": true,
+        "version": "0.0.0",
+      },
+      "manifestFile": "root/package.json",
+      "path": "root",
+    },
+    "list": Array [
+      Object {
+        "info": Object {
+          "manifestContent": Object {
+            "name": "matched000",
+            "version": "1.2.3",
+          },
+          "manifestFile": "root/matched/matched000/package.json",
+          "path": "root/matched/matched000",
+        },
+        "name": "matched000",
+        "requirement": "1.2.3",
+        "type": "prod",
+        "update": "1.2.3",
+        "version": "1.2.3",
+      },
+      Object {
+        "info": Object {
+          "manifestContent": Object {
+            "description": "Requirement is too low",
+            "name": "mismatched000",
+            "version": "3.2.1",
+          },
+          "manifestFile": "root/mismatched/mismatched000/package.json",
+          "path": "root/mismatched/mismatched000",
+        },
+        "name": "mismatched000",
+        "requirement": "^2.2.3",
+        "type": "prod",
+        "update": "3.2.1",
+        "version": "3.2.1",
+      },
+    ],
+  },
+  "root/matched/matched000": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "name": "matched000",
+        "version": "1.2.3",
+      },
+      "manifestFile": "root/matched/matched000/package.json",
+      "path": "root/matched/matched000",
+    },
+    "list": Array [],
+  },
+  "root/mismatched/mismatched000": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "description": "Requirement is too low",
+        "name": "mismatched000",
+        "version": "3.2.1",
+      },
+      "manifestFile": "root/mismatched/mismatched000/package.json",
+      "path": "root/mismatched/mismatched000",
+    },
+    "list": Array [],
+  },
+}
+`;
+
+exports[`getMismatchedDependencies when checker is EQUAL_MIN matches snapshot 1`] = `
+Object {
+  "root": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "dependencies": Object {
+          "matched000": "1.2.3",
+          "matched001": "*",
+          "mismatched000": "^2.2.3",
+          "mismatched001": "^5.5.6",
+        },
+        "private": true,
+        "version": "0.0.0",
+      },
+      "manifestFile": "root/package.json",
+      "path": "root",
+    },
+    "list": Array [
+      Object {
+        "info": Object {
+          "manifestContent": Object {
+            "name": "matched000",
+            "version": "1.2.3",
+          },
+          "manifestFile": "root/matched/matched000/package.json",
+          "path": "root/matched/matched000",
+        },
+        "name": "matched000",
+        "requirement": "1.2.3",
+        "type": "prod",
+        "update": "1.2.3",
+        "version": "1.2.3",
+      },
+      Object {
+        "info": Object {
+          "manifestContent": Object {
+            "description": "Requirement is too low",
+            "name": "mismatched000",
+            "version": "3.2.1",
+          },
+          "manifestFile": "root/mismatched/mismatched000/package.json",
+          "path": "root/mismatched/mismatched000",
+        },
+        "name": "mismatched000",
+        "requirement": "^2.2.3",
+        "type": "prod",
+        "update": "3.2.1",
+        "version": "3.2.1",
+      },
+    ],
+  },
+  "root/matched/matched000": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "name": "matched000",
+        "version": "1.2.3",
+      },
+      "manifestFile": "root/matched/matched000/package.json",
+      "path": "root/matched/matched000",
+    },
+    "list": Array [],
+  },
+  "root/mismatched/mismatched000": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "description": "Requirement is too low",
+        "name": "mismatched000",
+        "version": "3.2.1",
+      },
+      "manifestFile": "root/mismatched/mismatched000/package.json",
+      "path": "root/mismatched/mismatched000",
+    },
+    "list": Array [],
+  },
+}
+`;
+
+exports[`getMismatchedDependencies when checker is EQUAL_MIN_OR_ANY matches snapshot 1`] = `
+Object {
+  "root": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "dependencies": Object {
+          "matched000": "1.2.3",
+          "matched001": "*",
+          "mismatched000": "^2.2.3",
+          "mismatched001": "^5.5.6",
+        },
+        "private": true,
+        "version": "0.0.0",
+      },
+      "manifestFile": "root/package.json",
+      "path": "root",
+    },
+    "list": Array [
+      Object {
+        "info": Object {
+          "manifestContent": Object {
+            "name": "matched000",
+            "version": "1.2.3",
+          },
+          "manifestFile": "root/matched/matched000/package.json",
+          "path": "root/matched/matched000",
+        },
+        "name": "matched000",
+        "requirement": "1.2.3",
+        "type": "prod",
+        "update": "1.2.3",
+        "version": "1.2.3",
+      },
+      Object {
+        "info": Object {
+          "manifestContent": Object {
+            "description": "Requirement is too low",
+            "name": "mismatched000",
+            "version": "3.2.1",
+          },
+          "manifestFile": "root/mismatched/mismatched000/package.json",
+          "path": "root/mismatched/mismatched000",
+        },
+        "name": "mismatched000",
+        "requirement": "^2.2.3",
+        "type": "prod",
+        "update": "3.2.1",
+        "version": "3.2.1",
+      },
+    ],
+  },
+  "root/matched/matched000": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "name": "matched000",
+        "version": "1.2.3",
+      },
+      "manifestFile": "root/matched/matched000/package.json",
+      "path": "root/matched/matched000",
+    },
+    "list": Array [],
+  },
+  "root/mismatched/mismatched000": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "description": "Requirement is too low",
+        "name": "mismatched000",
+        "version": "3.2.1",
+      },
+      "manifestFile": "root/mismatched/mismatched000/package.json",
+      "path": "root/mismatched/mismatched000",
+    },
+    "list": Array [],
+  },
+}
+`;
+
+exports[`getMismatchedDependencies when checker is EQUAL_OR_ANY matches snapshot 1`] = `
+Object {
+  "root": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "dependencies": Object {
+          "matched000": "1.2.3",
+          "matched001": "*",
+          "mismatched000": "^2.2.3",
+          "mismatched001": "^5.5.6",
+        },
+        "private": true,
+        "version": "0.0.0",
+      },
+      "manifestFile": "root/package.json",
+      "path": "root",
+    },
+    "list": Array [
+      Object {
+        "info": Object {
+          "manifestContent": Object {
+            "name": "matched000",
+            "version": "1.2.3",
+          },
+          "manifestFile": "root/matched/matched000/package.json",
+          "path": "root/matched/matched000",
+        },
+        "name": "matched000",
+        "requirement": "1.2.3",
+        "type": "prod",
+        "update": "1.2.3",
+        "version": "1.2.3",
+      },
+      Object {
+        "info": Object {
+          "manifestContent": Object {
+            "description": "Requirement is too low",
+            "name": "mismatched000",
+            "version": "3.2.1",
+          },
+          "manifestFile": "root/mismatched/mismatched000/package.json",
+          "path": "root/mismatched/mismatched000",
+        },
+        "name": "mismatched000",
+        "requirement": "^2.2.3",
+        "type": "prod",
+        "update": "3.2.1",
+        "version": "3.2.1",
+      },
+    ],
+  },
+  "root/matched/matched000": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "name": "matched000",
+        "version": "1.2.3",
+      },
+      "manifestFile": "root/matched/matched000/package.json",
+      "path": "root/matched/matched000",
+    },
+    "list": Array [],
+  },
+  "root/mismatched/mismatched000": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "description": "Requirement is too low",
+        "name": "mismatched000",
+        "version": "3.2.1",
+      },
+      "manifestFile": "root/mismatched/mismatched000/package.json",
+      "path": "root/mismatched/mismatched000",
+    },
+    "list": Array [],
+  },
+}
+`;
+
+exports[`getMismatchedDependencies when checker is TILDA_EQUAL matches snapshot 1`] = `
+Object {
+  "root": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "dependencies": Object {
+          "matched000": "1.2.3",
+          "matched001": "*",
+          "mismatched000": "^2.2.3",
+          "mismatched001": "^5.5.6",
+        },
+        "private": true,
+        "version": "0.0.0",
+      },
+      "manifestFile": "root/package.json",
+      "path": "root",
+    },
+    "list": Array [
+      Object {
+        "info": Object {
+          "manifestContent": Object {
+            "name": "matched000",
+            "version": "1.2.3",
+          },
+          "manifestFile": "root/matched/matched000/package.json",
+          "path": "root/matched/matched000",
+        },
+        "name": "matched000",
+        "requirement": "1.2.3",
+        "type": "prod",
+        "update": "~1.2.3",
+        "version": "1.2.3",
+      },
+      Object {
+        "info": Object {
+          "manifestContent": Object {
+            "description": "Requirement is too low",
+            "name": "mismatched000",
+            "version": "3.2.1",
+          },
+          "manifestFile": "root/mismatched/mismatched000/package.json",
+          "path": "root/mismatched/mismatched000",
+        },
+        "name": "mismatched000",
+        "requirement": "^2.2.3",
+        "type": "prod",
+        "update": "~3.2.1",
+        "version": "3.2.1",
+      },
+    ],
+  },
+  "root/matched/matched000": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "name": "matched000",
+        "version": "1.2.3",
+      },
+      "manifestFile": "root/matched/matched000/package.json",
+      "path": "root/matched/matched000",
+    },
+    "list": Array [],
+  },
+  "root/mismatched/mismatched000": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "description": "Requirement is too low",
+        "name": "mismatched000",
+        "version": "3.2.1",
+      },
+      "manifestFile": "root/mismatched/mismatched000/package.json",
+      "path": "root/mismatched/mismatched000",
+    },
+    "list": Array [],
+  },
+}
+`;
+
+exports[`getMismatchedDependencies when checker is TILDA_EQUAL_OR_ANY matches snapshot 1`] = `
+Object {
+  "root": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "dependencies": Object {
+          "matched000": "1.2.3",
+          "matched001": "*",
+          "mismatched000": "^2.2.3",
+          "mismatched001": "^5.5.6",
+        },
+        "private": true,
+        "version": "0.0.0",
+      },
+      "manifestFile": "root/package.json",
+      "path": "root",
+    },
+    "list": Array [
+      Object {
+        "info": Object {
+          "manifestContent": Object {
+            "name": "matched000",
+            "version": "1.2.3",
+          },
+          "manifestFile": "root/matched/matched000/package.json",
+          "path": "root/matched/matched000",
+        },
+        "name": "matched000",
+        "requirement": "1.2.3",
+        "type": "prod",
+        "update": "~1.2.3",
+        "version": "1.2.3",
+      },
+      Object {
+        "info": Object {
+          "manifestContent": Object {
+            "description": "Requirement is too low",
+            "name": "mismatched000",
+            "version": "3.2.1",
+          },
+          "manifestFile": "root/mismatched/mismatched000/package.json",
+          "path": "root/mismatched/mismatched000",
+        },
+        "name": "mismatched000",
+        "requirement": "^2.2.3",
+        "type": "prod",
+        "update": "~3.2.1",
+        "version": "3.2.1",
+      },
+    ],
+  },
+  "root/matched/matched000": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "name": "matched000",
+        "version": "1.2.3",
+      },
+      "manifestFile": "root/matched/matched000/package.json",
+      "path": "root/matched/matched000",
+    },
+    "list": Array [],
+  },
+  "root/mismatched/mismatched000": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "description": "Requirement is too low",
+        "name": "mismatched000",
+        "version": "3.2.1",
+      },
+      "manifestFile": "root/mismatched/mismatched000/package.json",
+      "path": "root/mismatched/mismatched000",
+    },
+    "list": Array [],
+  },
+}
+`;
+
+exports[`getMismatchedDependencies when checker is TILDA_MIN matches snapshot 1`] = `
+Object {
+  "root": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "dependencies": Object {
+          "matched000": "1.2.3",
+          "matched001": "*",
+          "mismatched000": "^2.2.3",
+          "mismatched001": "^5.5.6",
+        },
+        "private": true,
+        "version": "0.0.0",
+      },
+      "manifestFile": "root/package.json",
+      "path": "root",
+    },
+    "list": Array [
+      Object {
+        "info": Object {
+          "manifestContent": Object {
+            "name": "matched000",
+            "version": "1.2.3",
+          },
+          "manifestFile": "root/matched/matched000/package.json",
+          "path": "root/matched/matched000",
+        },
+        "name": "matched000",
+        "requirement": "1.2.3",
+        "type": "prod",
+        "update": "1.2.3",
+        "version": "1.2.3",
+      },
+      Object {
+        "info": Object {
+          "manifestContent": Object {
+            "description": "Requirement is too low",
+            "name": "mismatched000",
+            "version": "3.2.1",
+          },
+          "manifestFile": "root/mismatched/mismatched000/package.json",
+          "path": "root/mismatched/mismatched000",
+        },
+        "name": "mismatched000",
+        "requirement": "^2.2.3",
+        "type": "prod",
+        "update": "~3.2.1",
+        "version": "3.2.1",
+      },
+    ],
+  },
+  "root/matched/matched000": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "name": "matched000",
+        "version": "1.2.3",
+      },
+      "manifestFile": "root/matched/matched000/package.json",
+      "path": "root/matched/matched000",
+    },
+    "list": Array [],
+  },
+  "root/mismatched/mismatched000": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "description": "Requirement is too low",
+        "name": "mismatched000",
+        "version": "3.2.1",
+      },
+      "manifestFile": "root/mismatched/mismatched000/package.json",
+      "path": "root/mismatched/mismatched000",
+    },
+    "list": Array [],
+  },
+}
+`;
+
+exports[`getMismatchedDependencies when checker is TILDA_MIN_OR_ANY matches snapshot 1`] = `
+Object {
+  "root": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "dependencies": Object {
+          "matched000": "1.2.3",
+          "matched001": "*",
+          "mismatched000": "^2.2.3",
+          "mismatched001": "^5.5.6",
+        },
+        "private": true,
+        "version": "0.0.0",
+      },
+      "manifestFile": "root/package.json",
+      "path": "root",
+    },
+    "list": Array [
+      Object {
+        "info": Object {
+          "manifestContent": Object {
+            "name": "matched000",
+            "version": "1.2.3",
+          },
+          "manifestFile": "root/matched/matched000/package.json",
+          "path": "root/matched/matched000",
+        },
+        "name": "matched000",
+        "requirement": "1.2.3",
+        "type": "prod",
+        "update": "1.2.3",
+        "version": "1.2.3",
+      },
+      Object {
+        "info": Object {
+          "manifestContent": Object {
+            "description": "Requirement is too low",
+            "name": "mismatched000",
+            "version": "3.2.1",
+          },
+          "manifestFile": "root/mismatched/mismatched000/package.json",
+          "path": "root/mismatched/mismatched000",
+        },
+        "name": "mismatched000",
+        "requirement": "^2.2.3",
+        "type": "prod",
+        "update": "~3.2.1",
+        "version": "3.2.1",
+      },
+    ],
+  },
+  "root/matched/matched000": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "name": "matched000",
+        "version": "1.2.3",
+      },
+      "manifestFile": "root/matched/matched000/package.json",
+      "path": "root/matched/matched000",
+    },
+    "list": Array [],
+  },
+  "root/mismatched/mismatched000": Object {
+    "dependant": Object {
+      "manifestContent": Object {
+        "description": "Requirement is too low",
+        "name": "mismatched000",
+        "version": "3.2.1",
+      },
+      "manifestFile": "root/mismatched/mismatched000/package.json",
+      "path": "root/mismatched/mismatched000",
+    },
+    "list": Array [],
+  },
+}
+`;
