@@ -38,7 +38,7 @@ export namespace createFileChooser {
     const list = segment.map((_, i) => segment.slice(0, i + 1)).map(x => path.join(...x))
 
     const add = (ext: string) =>
-      ext ? base + '.' + ext : base
+      ext ? base + '.' + ext : base + '.dlt.yml'
 
     return extList
       .map(ext => add(ext.trim()))

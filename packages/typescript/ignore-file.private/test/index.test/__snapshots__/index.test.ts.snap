@@ -816,7 +816,7 @@ Array [
       ],
     },
     Array [
-      "foo",
+      "foo.dlt.yml",
       "foo.a",
       "foo.b",
       "foo.c",
@@ -835,7 +835,7 @@ Array [
       ],
     },
     Array [
-      "foo/bar",
+      "foo/bar.dlt.yml",
       "foo/bar.a",
       "foo/bar.b",
       "foo/bar.c",
@@ -854,8 +854,8 @@ Array [
       ],
     },
     Array [
-      "foo/baz",
-      "foo/bar/baz",
+      "foo/baz.dlt.yml",
+      "foo/bar/baz.dlt.yml",
       "foo/baz.a",
       "foo/bar/baz.a",
       "foo/baz.b",
