@@ -28,3 +28,4 @@ package-lock.json
 shrinkwrap*
 renovate*
 TODO.md
+.npmignore.*
