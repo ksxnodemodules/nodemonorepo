@@ -43,6 +43,7 @@
     "exec": "bash -c",
     "exec:win32": "cmd /c",
     "remake-package-json": "preloaded-node sh/remake-package-json",
+    "generate-npmignore": "bash sh/generate-npmignore.sh",
     "clean-typescript-build": "preloaded-node sh/clean-typescript-build",
     "clean": "bash 'sh/clean.sh'",
     "fix": "bash 'sh/fix.sh'",
