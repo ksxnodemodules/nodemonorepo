@@ -24,5 +24,10 @@ Object {
     "safe": [Function],
     "unsafe": [Function],
   },
+  "snapSpawn": Object {
+    "default": [Function],
+    "snap": [Function],
+    "spawn": [Function],
+  },
 }
 `;
