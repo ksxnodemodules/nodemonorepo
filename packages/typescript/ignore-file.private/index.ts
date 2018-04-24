@@ -59,7 +59,7 @@ export function getArray (string: string): IgnoreArray {
 }
 
 export function getString (array: IgnoreArray): string {
-  return array.join('\n')
+  return array.join('\n') + '\n'
 }
 
 export async function getDeltaContent (filename: string): Promise<LoadedDelta> {

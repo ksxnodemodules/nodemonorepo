@@ -885,7 +885,7 @@ exports[`writeIgnoreFiles 1`] = `
   # in addition, comments are eliminated
 container:
   withDeltaFileEverywhere:
-    .myignore: |-
+    .myignore: |
       headContainer123
       headContainer456
       root123
@@ -904,7 +904,7 @@ container:
       remove:
         - notInContainer
     bar:
-      .myignore: |-
+      .myignore: |
         headFoo123
         headFoo456
         headContainer123
@@ -926,7 +926,7 @@ container:
         remove:
           - notInBar
     foo:
-      .myignore: |-
+      .myignore: |
         headFoo123
         headFoo456
         headContainer123
@@ -948,7 +948,7 @@ container:
         remove:
           - notInFoo
   withDeltaFileInContainerOnly:
-    .myignore: |-
+    .myignore: |
       headContainer123
       headContainer456
       root123
@@ -967,7 +967,7 @@ container:
       remove:
         - notInContainer
     bar:
-      .myignore: |-
+      .myignore: |
         headContainer123
         headContainer456
         root123
@@ -977,7 +977,7 @@ container:
         tailContainer123
         tailContainer456
     foo:
-      .myignore: |-
+      .myignore: |
         headContainer123
         headContainer456
         root123
@@ -987,14 +987,14 @@ container:
         tailContainer123
         tailContainer456
   withDeltaFileInSubfolderOnly:
-    .myignore: |-
+    .myignore: |
       root123
       root456
       notInContainer
       notInFoo
       notInBar
     bar:
-      .myignore: |-
+      .myignore: |
         headFoo123
         headFoo456
         root123
@@ -1013,7 +1013,7 @@ container:
         remove:
           - notInBar
     foo:
-      .myignore: |-
+      .myignore: |
         headFoo123
         headFoo456
         root123
@@ -1032,21 +1032,21 @@ container:
         remove:
           - notInFoo
   withoutAnyDeltaFile:
-    .myignore: |-
+    .myignore: |
       root123
       root456
       notInContainer
       notInFoo
       notInBar
     bar:
-      .myignore: |-
+      .myignore: |
         root123
         root456
         notInContainer
         notInFoo
         notInBar
     foo:
-      .myignore: |-
+      .myignore: |
         root123
         root456
         notInContainer
@@ -1072,7 +1072,7 @@ exports[`writeIgnoreFiles 2`] = `
 
       # in addition, comments are eliminated
 - - name: root/container/withDeltaFileEverywhere/.myignore
-  - content: |-
+  - content: |
       headContainer123
       headContainer456
       root123
@@ -1082,7 +1082,7 @@ exports[`writeIgnoreFiles 2`] = `
       tailContainer123
       tailContainer456
 - - name: root/container/withDeltaFileEverywhere/bar/.myignore
-  - content: |-
+  - content: |
       headFoo123
       headFoo456
       headContainer123
@@ -1095,7 +1095,7 @@ exports[`writeIgnoreFiles 2`] = `
       tailFoo123
       tailFoo456
 - - name: root/container/withDeltaFileEverywhere/foo/.myignore
-  - content: |-
+  - content: |
       headFoo123
       headFoo456
       headContainer123
@@ -1108,7 +1108,7 @@ exports[`writeIgnoreFiles 2`] = `
       tailFoo123
       tailFoo456
 - - name: root/container/withDeltaFileInContainerOnly/.myignore
-  - content: |-
+  - content: |
       headContainer123
       headContainer456
       root123
@@ -1118,7 +1118,7 @@ exports[`writeIgnoreFiles 2`] = `
       tailContainer123
       tailContainer456
 - - name: root/container/withDeltaFileInContainerOnly/bar/.myignore
-  - content: |-
+  - content: |
       headContainer123
       headContainer456
       root123
@@ -1128,7 +1128,7 @@ exports[`writeIgnoreFiles 2`] = `
       tailContainer123
       tailContainer456
 - - name: root/container/withDeltaFileInContainerOnly/foo/.myignore
-  - content: |-
+  - content: |
       headContainer123
       headContainer456
       root123
@@ -1138,14 +1138,14 @@ exports[`writeIgnoreFiles 2`] = `
       tailContainer123
       tailContainer456
 - - name: root/container/withDeltaFileInSubfolderOnly/.myignore
-  - content: |-
+  - content: |
       root123
       root456
       notInContainer
       notInFoo
       notInBar
 - - name: root/container/withDeltaFileInSubfolderOnly/bar/.myignore
-  - content: |-
+  - content: |
       headFoo123
       headFoo456
       root123
@@ -1155,7 +1155,7 @@ exports[`writeIgnoreFiles 2`] = `
       tailFoo123
       tailFoo456
 - - name: root/container/withDeltaFileInSubfolderOnly/foo/.myignore
-  - content: |-
+  - content: |
       headFoo123
       headFoo456
       root123
@@ -1165,21 +1165,21 @@ exports[`writeIgnoreFiles 2`] = `
       tailFoo123
       tailFoo456
 - - name: root/container/withoutAnyDeltaFile/.myignore
-  - content: |-
+  - content: |
       root123
       root456
       notInContainer
       notInFoo
       notInBar
 - - name: root/container/withoutAnyDeltaFile/bar/.myignore
-  - content: |-
+  - content: |
       root123
       root456
       notInContainer
       notInFoo
       notInBar
 - - name: root/container/withoutAnyDeltaFile/foo/.myignore
-  - content: |-
+  - content: |
       root123
       root456
       notInContainer
