@@ -51,3 +51,26 @@ it('writeIgnoreFiles', apply(async () => {
       .map(({name, content}) => [{name}, {content}])
   )
 }))
+
+describe('minor features', () => {
+  const sample = [
+    'foo',
+    'foo/bar',
+    'foo/bar/baz'
+  ]
+
+  it('createFileChooser.byExt', () => {
+    const ext = ['', ...'abc', 'abc']
+    const choose = subject.createFileChooser.byExt(...ext)
+
+    expect(
+      sample.map(base => [{base, ext}, choose(base)])
+    ).toMatchSnapshot()
+  })
+
+  it('DEFAULT_FILE_CHOOSER', () => {
+    expect(
+      sample.map(base => [{base}, subject.DEFAULT_DELTA_FILES_CHOOSER(base)])
+    ).toMatchSnapshot()
+  })
+})

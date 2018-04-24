@@ -768,6 +768,107 @@ Array [
 ]
 `;
 
+exports[`minor features DEFAULT_FILE_CHOOSER 1`] = `
+Array [
+  Array [
+    Object {
+      "base": "foo",
+    },
+    Array [
+      "foo.yaml",
+      "foo.yml",
+    ],
+  ],
+  Array [
+    Object {
+      "base": "foo/bar",
+    },
+    Array [
+      "foo/bar.yaml",
+      "foo/bar.yml",
+    ],
+  ],
+  Array [
+    Object {
+      "base": "foo/bar/baz",
+    },
+    Array [
+      "foo/baz.yaml",
+      "foo/bar/baz.yaml",
+      "foo/baz.yml",
+      "foo/bar/baz.yml",
+    ],
+  ],
+]
+`;
+
+exports[`minor features createFileChooser.byExt 1`] = `
+Array [
+  Array [
+    Object {
+      "base": "foo",
+      "ext": Array [
+        "",
+        "a",
+        "b",
+        "c",
+        "abc",
+      ],
+    },
+    Array [
+      "foo",
+      "foo.a",
+      "foo.b",
+      "foo.c",
+      "foo.abc",
+    ],
+  ],
+  Array [
+    Object {
+      "base": "foo/bar",
+      "ext": Array [
+        "",
+        "a",
+        "b",
+        "c",
+        "abc",
+      ],
+    },
+    Array [
+      "foo/bar",
+      "foo/bar.a",
+      "foo/bar.b",
+      "foo/bar.c",
+      "foo/bar.abc",
+    ],
+  ],
+  Array [
+    Object {
+      "base": "foo/bar/baz",
+      "ext": Array [
+        "",
+        "a",
+        "b",
+        "c",
+        "abc",
+      ],
+    },
+    Array [
+      "foo/baz",
+      "foo/bar/baz",
+      "foo/baz.a",
+      "foo/bar/baz.a",
+      "foo/baz.b",
+      "foo/bar/baz.b",
+      "foo/baz.c",
+      "foo/bar/baz.c",
+      "foo/baz.abc",
+      "foo/bar/baz.abc",
+    ],
+  ],
+]
+`;
+
 exports[`writeIgnoreFiles 1`] = `
 "
 .myignore: |

@@ -31,19 +31,25 @@ export interface DeltaPair {
   readonly delta: LoadedDelta[]
 }
 
-export const DEFAULT_CONTAINER_PATTERN: IgnoreContainerPattern = '**'
-export const DEFAULT_DELTA_FILES_CHOOSER: DeltaFileChooser = defaultDeltaFilesChooser
-export const DEFAULT_TRAVERSE_DEEP: DeepFunc = x => x.item !== 'node_modules'
+export namespace createFileChooser {
+  export const byExt = (...extList: string[]): DeltaFileChooser => ignore => {
+    const {base, dir, root} = path.parse(ignore)
+    const segment = dir.split(/[/\\]/)
+    const list = segment.map((_, i) => segment.slice(0, i + 1)).map(x => path.join(...x))
 
-function defaultDeltaFilesChooser (ignore: string) {
-  const {base, dir, root} = path.parse(ignore)
-  const segment = dir.split(/[/\\]/)
-  const list = segment.map((_, i) => segment.slice(0, i + 1)).map(x => path.join(...x))
-  const fn = (ext: string) => (x: string) => path.join(root, x, base + ext)
-  const yamls = list.map(fn('.yaml'))
-  const ymls = list.map(fn('.yml'))
-  return [...yamls, ...ymls]
+    const add = (ext: string) =>
+      ext ? base + '.' + ext : base
+
+    return extList
+      .map(ext => add(ext.trim()))
+      .map(basename => list.map(x => path.join(root, x, basename)))
+      .reduce((prev, current) => [...prev, ...current], [])
+  }
 }
+
+export const DEFAULT_CONTAINER_PATTERN: IgnoreContainerPattern = '**'
+export const DEFAULT_DELTA_FILES_CHOOSER: DeltaFileChooser = createFileChooser.byExt('yaml', 'yml')
+export const DEFAULT_TRAVERSE_DEEP: DeepFunc = x => x.item !== 'node_modules'
 
 export function getArray (string: string): IgnoreArray {
   return string
