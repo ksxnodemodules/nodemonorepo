@@ -1,21 +1,48 @@
 import * as path from 'path'
+import minimatch from 'minimatch'
 import * as yaml from 'js-yaml'
 import * as fsx from 'fs-extra'
 import * as fsTreeUtils from 'fs-tree-utils'
+import {DeepFunc} from 'fs-tree-utils/lib/traverse'
 
 export type IgnoreArray = string[]
 export type StringTester = string
-export type LoadedDeltaFileList = LoadedDeltaFileListElement[]
+export type IgnoreContainerPattern = StringTester
+export type DeltaFileChooser = (ignoreFilePath: string) => string[]
 
-export interface IgnoreDelta {
+export interface FilePair {
+  readonly ignore: string
+  readonly delta: string[]
+}
+
+export interface Delta {
   readonly prepend?: IgnoreArray
   readonly append?: IgnoreArray
   readonly remove?: IgnoreArray
 }
 
-export interface LoadedDeltaFileListElement {
+export interface LoadedDelta {
   readonly filename: string
-  readonly content: IgnoreDelta
+  readonly content: Delta
+}
+
+export interface DeltaPair {
+  readonly ignore: string
+  readonly delta: LoadedDelta[]
+}
+
+export const DEFAULT_CONTAINER_PATTERN: IgnoreContainerPattern = '**'
+export const DEFAULT_DELTA_FILES_CHOOSER: DeltaFileChooser = defaultDeltaFilesChooser
+export const DEFAULT_TRAVERSE_DEEP: DeepFunc = x => x.item !== 'node_modules'
+
+function defaultDeltaFilesChooser (ignore: string) {
+  const {base, dir, root} = path.parse(ignore)
+  const segment = dir.split(/[/\\]/)
+  const list = segment.map((_, i) => segment.slice(0, i + 1)).map(x => path.join(...x))
+  const fn = (ext: string) => (x: string) => path.join(root, x, base + ext)
+  const yamls = list.map(fn('.yaml'))
+  const ymls = list.map(fn('.yml'))
+  return [...yamls, ...ymls]
 }
 
 export function getArray (string: string): IgnoreArray {
@@ -29,13 +56,23 @@ export function getString (array: IgnoreArray): string {
   return array.join('\n')
 }
 
+export async function getDeltaContent (filename: string): Promise<LoadedDelta> {
+  if (fsx.existsSync(filename)) {
+    const text = await fsx.readFile(filename, 'utf8')
+    const content: Delta = {...yaml.safeLoad(text)}
+    return {filename, content}
+  }
+
+  return {filename, content: {}}
+}
+
 export function add (
   array: IgnoreArray,
   {
     prepend = [],
     append = [],
     remove = []
-  }: IgnoreDelta
+  }: Delta
 ): IgnoreArray {
   return [
     ...prepend,
@@ -46,56 +83,104 @@ export function add (
   )
 }
 
-export async function getDeltaFiles (dirname: string, test: StringTester) {
+export namespace add {
+  export function multipleDeltas (array: IgnoreArray, addend: Delta[]) {
+    return addend.reduce(
+      (array, delta) => add(array, delta),
+      array
+    )
+  }
+
+  export function multipleLoadedDeltas (array: IgnoreArray, addend: LoadedDelta[]) {
+    return multipleDeltas(array, addend.map(x => x.content))
+  }
+}
+
+export async function getIgnoreFiles (
+  basename: string,
+  containerPattern = DEFAULT_CONTAINER_PATTERN,
+  dirname = '.',
+  deep = DEFAULT_TRAVERSE_DEEP
+): Promise<IgnoreArray> {
   return (
     await fsTreeUtils.traverse(
       dirname,
-      param => param.item !== 'node_modules'
+      deep
     )
   )
-    .filter(x => testString(test, x.item) && x.stats.isFile())
-    .map(x => x.path)
+    .filter(x => x.stats.isDirectory() && minimatch(x.path, containerPattern, {dot: true}))
+    .map(x => path.join(x.path, basename))
 }
 
-export async function readDeltaFiles (
-  dirname: string,
-  test: StringTester
-): Promise<LoadedDeltaFileList> {
-  const list = await getDeltaFiles(dirname, test)
+export async function getFilePairs (
+  ignoreFileBasename: string,
+  ignoreFileContainerPattern = DEFAULT_CONTAINER_PATTERN,
+  dirname = '.',
+  delta = DEFAULT_DELTA_FILES_CHOOSER,
+  deep = DEFAULT_TRAVERSE_DEEP
+): Promise<FilePair[]> {
+  return (
+    await getIgnoreFiles(ignoreFileBasename, ignoreFileContainerPattern, dirname, deep)
+  ).map(ignore => ({
+    ignore,
+    delta: delta(ignore)
+  }))
+}
 
-  return await Promise.all(
-    list.map(async filename => ({
-      filename,
-      content: yaml.safeLoad(await fsx.readFile(filename, 'utf8')) as IgnoreDelta
-    }))
+export async function getDeltaPairs (
+  ignoreFileBasename: string,
+  ignoreFileContainerPattern = DEFAULT_CONTAINER_PATTERN,
+  dirname = '.',
+  delta = DEFAULT_DELTA_FILES_CHOOSER,
+  deep = DEFAULT_TRAVERSE_DEEP
+): Promise<DeltaPair[]> {
+  return Promise.all(
+    (
+      await getFilePairs(
+        ignoreFileBasename,
+        ignoreFileContainerPattern,
+        dirname,
+        delta,
+        deep
+      )
+    ).map(
+      async ({delta, ignore}) => ({
+        ignore,
+        delta: await Promise.all(
+          delta.map(getDeltaContent)
+        )
+      })
+    )
   )
 }
 
 export async function writeIgnoreFiles (
-  base: string,
-  container: string,
-  delta: string,
-  filename = defaultFileName
+  basefile: string,
+  ignoreFileBasename: string,
+  ignoreFileContainerPattern = DEFAULT_CONTAINER_PATTERN,
+  dirname = '.',
+  delta = DEFAULT_DELTA_FILES_CHOOSER,
+  deep = DEFAULT_TRAVERSE_DEEP
 ) {
-  const [baseArray, list]: [IgnoreArray, LoadedDeltaFileList] = await Promise.all([
-    fsx.readFile(base, 'utf8').then(getArray),
-    readDeltaFiles(container, delta)
+  const [base, list] = await Promise.all([
+    fsx.readFile(basefile, 'utf8').then(getArray),
+    getDeltaPairs(
+      ignoreFileBasename,
+      ignoreFileContainerPattern,
+      dirname,
+      delta,
+      deep
+    )
   ])
 
   await Promise.all(
-    list.map(item => fsx.writeFile(
-      filename(item.filename),
-      getString(add(baseArray, item.content))
-    ))
+    list.map(
+      async x => x.ignore === basefile || ( // Do not overwrite basefile
+        await fsx.writeFile(
+          x.ignore,
+          getString(add.multipleLoadedDeltas(base, x.delta))
+        )
+      )
+    )
   )
-}
-
-function testString (test: StringTester, subject: string): boolean {
-  return test === subject
-}
-
-function defaultFileName (deltapath: string) {
-  const {root, dir, name, ext} = path.parse(deltapath)
-  const basename = name + (ext ? '' : '.txt')
-  return path.join(root, dir, basename)
 }

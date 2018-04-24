@@ -17,19 +17,28 @@ it('add', () => {
   )).toMatchSnapshot()
 })
 
-it('getDeltaFiles', apply(async () => {
-  expect(await subject.getDeltaFiles('root', '.myignore.yaml')).toMatchSnapshot()
+it('getIgnoreFiles', apply(async () => {
+  expect(await subject.getIgnoreFiles('.myignore')).toMatchSnapshot()
 }))
 
-it('readDeltaFiles', apply(async () => {
-  expect(await subject.readDeltaFiles('root', '.myignore.yaml')).toMatchSnapshot()
+it('getFilePairs', apply(async () => {
+  snap(await subject.getDeltaPairs('.myignore'))
+}))
+
+it('getDeltaPairs', apply(async () => {
+  const pairs = await subject.getDeltaPairs('.myignore')
+  snap(pairs)
+  snap(pairs.map(({delta, ignore}) => ({
+    ignore,
+    delta: delta.filter(x => Object.keys(x.content).length !== 0)
+  })))
 }))
 
 it('writeIgnoreFiles', apply(async () => {
   await subject.writeIgnoreFiles(
     'root/.myignore',
-    'root/container',
-    '.myignore.yaml'
+    '.myignore',
+    'root/container/**'
   )
 
   snap(await fsTreeUtils.read.nested('root'))

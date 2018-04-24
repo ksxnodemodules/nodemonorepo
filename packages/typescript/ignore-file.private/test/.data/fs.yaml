@@ -1,26 +1,4 @@
 root:
-  container:
-    foo:
-      '.myignore.yaml': |
-        preprend:
-          - headFoo123
-          - headFoo456
-        append:
-          - tailFoo123
-          - tailFoo456
-        remove:
-          - notInFoo
-    bar:
-      '.myignore.yaml': |
-        preprend:
-          - headFoo123
-          - headFoo456
-        append:
-          - tailFoo123
-          - tailFoo456
-        remove:
-          - notInBar
-
   '.myignore': |
 
     # to be included
@@ -28,7 +6,83 @@ root:
     root456
 
     # some are eliminated
+    notInContainer
     notInFoo
     notInBar
 
     # in addition, comments are eliminated
+
+  container:
+    withDeltaFileEverywhere:
+      '.myignore.yaml': |
+        prepend:
+          - headContainer123
+          - headContainer456
+        append:
+          - tailContainer123
+          - tailContainer456
+        remove:
+          - notInContainer
+
+      foo:
+        '.myignore.yaml': |
+          prepend:
+            - headFoo123
+            - headFoo456
+          append:
+            - tailFoo123
+            - tailFoo456
+          remove:
+            - notInFoo
+
+      bar:
+        '.myignore.yaml': |
+          prepend:
+            - headFoo123
+            - headFoo456
+          append:
+            - tailFoo123
+            - tailFoo456
+          remove:
+            - notInBar
+
+    withDeltaFileInContainerOnly:
+      '.myignore.yaml': |
+        prepend:
+          - headContainer123
+          - headContainer456
+        append:
+          - tailContainer123
+          - tailContainer456
+        remove:
+          - notInContainer
+
+      foo: {}
+      bar: {}
+
+    withDeltaFileInSubfolderOnly:
+      foo:
+        '.myignore.yaml': |
+          prepend:
+            - headFoo123
+            - headFoo456
+          append:
+            - tailFoo123
+            - tailFoo456
+          remove:
+            - notInFoo
+
+      bar:
+        '.myignore.yaml': |
+          prepend:
+            - headFoo123
+            - headFoo456
+          append:
+            - tailFoo123
+            - tailFoo456
+          remove:
+            - notInBar
+
+    withoutAnyDeltaFile:
+      foo: {}
+      bar: {}

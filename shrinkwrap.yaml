@@ -1,5 +1,6 @@
 dependencies:
   extra-jest: 'link:packages/typescript/extra-jest'
+  ignore-file.private: 'link:packages/typescript/ignore-file.private'
   nested-workspace-helper: 'link:packages/typescript/nested-workspace-helper'
   preloaded-node: 'link:packages/javascript/preloaded-node'
 devDependencies:
@@ -4774,6 +4775,7 @@ specifiers:
   coveralls: ^3.0.0
   extra-jest: '*'
   glob: ^7.1.2
+  ignore-file.private: '*'
   jest: ^22.1.4
   jest-extended: ^0.7.0
   js-yaml: ^3.11.0

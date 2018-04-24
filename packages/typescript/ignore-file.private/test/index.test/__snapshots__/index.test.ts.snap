@@ -11,47 +11,760 @@ Array [
 ]
 `;
 
-exports[`getDeltaFiles 1`] = `
-Array [
-  "root/container/bar/.myignore.yaml",
-  "root/container/foo/.myignore.yaml",
-]
+exports[`getDeltaPairs 1`] = `
+"
+- delta:
+    - content: {}
+      filename: root/.myignore.yaml
+    - content: {}
+      filename: root/.myignore.yml
+  ignore: root/.myignore
+- delta:
+    - content: {}
+      filename: root/.myignore.yaml
+    - content: {}
+      filename: root/container/.myignore.yaml
+    - content: {}
+      filename: root/.myignore.yml
+    - content: {}
+      filename: root/container/.myignore.yml
+  ignore: root/container/.myignore
+- delta:
+    - content: {}
+      filename: root/.myignore.yaml
+    - content: {}
+      filename: root/container/.myignore.yaml
+    - content:
+        append:
+          - tailContainer123
+          - tailContainer456
+        prepend:
+          - headContainer123
+          - headContainer456
+        remove:
+          - notInContainer
+      filename: root/container/withDeltaFileEverywhere/.myignore.yaml
+    - content: {}
+      filename: root/.myignore.yml
+    - content: {}
+      filename: root/container/.myignore.yml
+    - content: {}
+      filename: root/container/withDeltaFileEverywhere/.myignore.yml
+  ignore: root/container/withDeltaFileEverywhere/.myignore
+- delta:
+    - content: {}
+      filename: root/.myignore.yaml
+    - content: {}
+      filename: root/container/.myignore.yaml
+    - content:
+        append:
+          - tailContainer123
+          - tailContainer456
+        prepend:
+          - headContainer123
+          - headContainer456
+        remove:
+          - notInContainer
+      filename: root/container/withDeltaFileEverywhere/.myignore.yaml
+    - content:
+        append:
+          - tailFoo123
+          - tailFoo456
+        prepend:
+          - headFoo123
+          - headFoo456
+        remove:
+          - notInBar
+      filename: root/container/withDeltaFileEverywhere/bar/.myignore.yaml
+    - content: {}
+      filename: root/.myignore.yml
+    - content: {}
+      filename: root/container/.myignore.yml
+    - content: {}
+      filename: root/container/withDeltaFileEverywhere/.myignore.yml
+    - content: {}
+      filename: root/container/withDeltaFileEverywhere/bar/.myignore.yml
+  ignore: root/container/withDeltaFileEverywhere/bar/.myignore
+- delta:
+    - content: {}
+      filename: root/.myignore.yaml
+    - content: {}
+      filename: root/container/.myignore.yaml
+    - content:
+        append:
+          - tailContainer123
+          - tailContainer456
+        prepend:
+          - headContainer123
+          - headContainer456
+        remove:
+          - notInContainer
+      filename: root/container/withDeltaFileEverywhere/.myignore.yaml
+    - content:
+        append:
+          - tailFoo123
+          - tailFoo456
+        prepend:
+          - headFoo123
+          - headFoo456
+        remove:
+          - notInFoo
+      filename: root/container/withDeltaFileEverywhere/foo/.myignore.yaml
+    - content: {}
+      filename: root/.myignore.yml
+    - content: {}
+      filename: root/container/.myignore.yml
+    - content: {}
+      filename: root/container/withDeltaFileEverywhere/.myignore.yml
+    - content: {}
+      filename: root/container/withDeltaFileEverywhere/foo/.myignore.yml
+  ignore: root/container/withDeltaFileEverywhere/foo/.myignore
+- delta:
+    - content: {}
+      filename: root/.myignore.yaml
+    - content: {}
+      filename: root/container/.myignore.yaml
+    - content:
+        append:
+          - tailContainer123
+          - tailContainer456
+        prepend:
+          - headContainer123
+          - headContainer456
+        remove:
+          - notInContainer
+      filename: root/container/withDeltaFileInContainerOnly/.myignore.yaml
+    - content: {}
+      filename: root/.myignore.yml
+    - content: {}
+      filename: root/container/.myignore.yml
+    - content: {}
+      filename: root/container/withDeltaFileInContainerOnly/.myignore.yml
+  ignore: root/container/withDeltaFileInContainerOnly/.myignore
+- delta:
+    - content: {}
+      filename: root/.myignore.yaml
+    - content: {}
+      filename: root/container/.myignore.yaml
+    - content:
+        append:
+          - tailContainer123
+          - tailContainer456
+        prepend:
+          - headContainer123
+          - headContainer456
+        remove:
+          - notInContainer
+      filename: root/container/withDeltaFileInContainerOnly/.myignore.yaml
+    - content: {}
+      filename: root/container/withDeltaFileInContainerOnly/bar/.myignore.yaml
+    - content: {}
+      filename: root/.myignore.yml
+    - content: {}
+      filename: root/container/.myignore.yml
+    - content: {}
+      filename: root/container/withDeltaFileInContainerOnly/.myignore.yml
+    - content: {}
+      filename: root/container/withDeltaFileInContainerOnly/bar/.myignore.yml
+  ignore: root/container/withDeltaFileInContainerOnly/bar/.myignore
+- delta:
+    - content: {}
+      filename: root/.myignore.yaml
+    - content: {}
+      filename: root/container/.myignore.yaml
+    - content:
+        append:
+          - tailContainer123
+          - tailContainer456
+        prepend:
+          - headContainer123
+          - headContainer456
+        remove:
+          - notInContainer
+      filename: root/container/withDeltaFileInContainerOnly/.myignore.yaml
+    - content: {}
+      filename: root/container/withDeltaFileInContainerOnly/foo/.myignore.yaml
+    - content: {}
+      filename: root/.myignore.yml
+    - content: {}
+      filename: root/container/.myignore.yml
+    - content: {}
+      filename: root/container/withDeltaFileInContainerOnly/.myignore.yml
+    - content: {}
+      filename: root/container/withDeltaFileInContainerOnly/foo/.myignore.yml
+  ignore: root/container/withDeltaFileInContainerOnly/foo/.myignore
+- delta:
+    - content: {}
+      filename: root/.myignore.yaml
+    - content: {}
+      filename: root/container/.myignore.yaml
+    - content: {}
+      filename: root/container/withDeltaFileInSubfolderOnly/.myignore.yaml
+    - content: {}
+      filename: root/.myignore.yml
+    - content: {}
+      filename: root/container/.myignore.yml
+    - content: {}
+      filename: root/container/withDeltaFileInSubfolderOnly/.myignore.yml
+  ignore: root/container/withDeltaFileInSubfolderOnly/.myignore
+- delta:
+    - content: {}
+      filename: root/.myignore.yaml
+    - content: {}
+      filename: root/container/.myignore.yaml
+    - content: {}
+      filename: root/container/withDeltaFileInSubfolderOnly/.myignore.yaml
+    - content:
+        append:
+          - tailFoo123
+          - tailFoo456
+        prepend:
+          - headFoo123
+          - headFoo456
+        remove:
+          - notInBar
+      filename: root/container/withDeltaFileInSubfolderOnly/bar/.myignore.yaml
+    - content: {}
+      filename: root/.myignore.yml
+    - content: {}
+      filename: root/container/.myignore.yml
+    - content: {}
+      filename: root/container/withDeltaFileInSubfolderOnly/.myignore.yml
+    - content: {}
+      filename: root/container/withDeltaFileInSubfolderOnly/bar/.myignore.yml
+  ignore: root/container/withDeltaFileInSubfolderOnly/bar/.myignore
+- delta:
+    - content: {}
+      filename: root/.myignore.yaml
+    - content: {}
+      filename: root/container/.myignore.yaml
+    - content: {}
+      filename: root/container/withDeltaFileInSubfolderOnly/.myignore.yaml
+    - content:
+        append:
+          - tailFoo123
+          - tailFoo456
+        prepend:
+          - headFoo123
+          - headFoo456
+        remove:
+          - notInFoo
+      filename: root/container/withDeltaFileInSubfolderOnly/foo/.myignore.yaml
+    - content: {}
+      filename: root/.myignore.yml
+    - content: {}
+      filename: root/container/.myignore.yml
+    - content: {}
+      filename: root/container/withDeltaFileInSubfolderOnly/.myignore.yml
+    - content: {}
+      filename: root/container/withDeltaFileInSubfolderOnly/foo/.myignore.yml
+  ignore: root/container/withDeltaFileInSubfolderOnly/foo/.myignore
+- delta:
+    - content: {}
+      filename: root/.myignore.yaml
+    - content: {}
+      filename: root/container/.myignore.yaml
+    - content: {}
+      filename: root/container/withoutAnyDeltaFile/.myignore.yaml
+    - content: {}
+      filename: root/.myignore.yml
+    - content: {}
+      filename: root/container/.myignore.yml
+    - content: {}
+      filename: root/container/withoutAnyDeltaFile/.myignore.yml
+  ignore: root/container/withoutAnyDeltaFile/.myignore
+- delta:
+    - content: {}
+      filename: root/.myignore.yaml
+    - content: {}
+      filename: root/container/.myignore.yaml
+    - content: {}
+      filename: root/container/withoutAnyDeltaFile/.myignore.yaml
+    - content: {}
+      filename: root/container/withoutAnyDeltaFile/bar/.myignore.yaml
+    - content: {}
+      filename: root/.myignore.yml
+    - content: {}
+      filename: root/container/.myignore.yml
+    - content: {}
+      filename: root/container/withoutAnyDeltaFile/.myignore.yml
+    - content: {}
+      filename: root/container/withoutAnyDeltaFile/bar/.myignore.yml
+  ignore: root/container/withoutAnyDeltaFile/bar/.myignore
+- delta:
+    - content: {}
+      filename: root/.myignore.yaml
+    - content: {}
+      filename: root/container/.myignore.yaml
+    - content: {}
+      filename: root/container/withoutAnyDeltaFile/.myignore.yaml
+    - content: {}
+      filename: root/container/withoutAnyDeltaFile/foo/.myignore.yaml
+    - content: {}
+      filename: root/.myignore.yml
+    - content: {}
+      filename: root/container/.myignore.yml
+    - content: {}
+      filename: root/container/withoutAnyDeltaFile/.myignore.yml
+    - content: {}
+      filename: root/container/withoutAnyDeltaFile/foo/.myignore.yml
+  ignore: root/container/withoutAnyDeltaFile/foo/.myignore
+
+"
 `;
 
-exports[`readDeltaFiles 1`] = `
+exports[`getDeltaPairs 2`] = `
+"
+- delta: []
+  ignore: root/.myignore
+- delta: []
+  ignore: root/container/.myignore
+- delta:
+    - content:
+        append:
+          - tailContainer123
+          - tailContainer456
+        prepend:
+          - headContainer123
+          - headContainer456
+        remove:
+          - notInContainer
+      filename: root/container/withDeltaFileEverywhere/.myignore.yaml
+  ignore: root/container/withDeltaFileEverywhere/.myignore
+- delta:
+    - content:
+        append:
+          - tailContainer123
+          - tailContainer456
+        prepend:
+          - headContainer123
+          - headContainer456
+        remove:
+          - notInContainer
+      filename: root/container/withDeltaFileEverywhere/.myignore.yaml
+    - content:
+        append:
+          - tailFoo123
+          - tailFoo456
+        prepend:
+          - headFoo123
+          - headFoo456
+        remove:
+          - notInBar
+      filename: root/container/withDeltaFileEverywhere/bar/.myignore.yaml
+  ignore: root/container/withDeltaFileEverywhere/bar/.myignore
+- delta:
+    - content:
+        append:
+          - tailContainer123
+          - tailContainer456
+        prepend:
+          - headContainer123
+          - headContainer456
+        remove:
+          - notInContainer
+      filename: root/container/withDeltaFileEverywhere/.myignore.yaml
+    - content:
+        append:
+          - tailFoo123
+          - tailFoo456
+        prepend:
+          - headFoo123
+          - headFoo456
+        remove:
+          - notInFoo
+      filename: root/container/withDeltaFileEverywhere/foo/.myignore.yaml
+  ignore: root/container/withDeltaFileEverywhere/foo/.myignore
+- delta:
+    - content:
+        append:
+          - tailContainer123
+          - tailContainer456
+        prepend:
+          - headContainer123
+          - headContainer456
+        remove:
+          - notInContainer
+      filename: root/container/withDeltaFileInContainerOnly/.myignore.yaml
+  ignore: root/container/withDeltaFileInContainerOnly/.myignore
+- delta:
+    - content:
+        append:
+          - tailContainer123
+          - tailContainer456
+        prepend:
+          - headContainer123
+          - headContainer456
+        remove:
+          - notInContainer
+      filename: root/container/withDeltaFileInContainerOnly/.myignore.yaml
+  ignore: root/container/withDeltaFileInContainerOnly/bar/.myignore
+- delta:
+    - content:
+        append:
+          - tailContainer123
+          - tailContainer456
+        prepend:
+          - headContainer123
+          - headContainer456
+        remove:
+          - notInContainer
+      filename: root/container/withDeltaFileInContainerOnly/.myignore.yaml
+  ignore: root/container/withDeltaFileInContainerOnly/foo/.myignore
+- delta: []
+  ignore: root/container/withDeltaFileInSubfolderOnly/.myignore
+- delta:
+    - content:
+        append:
+          - tailFoo123
+          - tailFoo456
+        prepend:
+          - headFoo123
+          - headFoo456
+        remove:
+          - notInBar
+      filename: root/container/withDeltaFileInSubfolderOnly/bar/.myignore.yaml
+  ignore: root/container/withDeltaFileInSubfolderOnly/bar/.myignore
+- delta:
+    - content:
+        append:
+          - tailFoo123
+          - tailFoo456
+        prepend:
+          - headFoo123
+          - headFoo456
+        remove:
+          - notInFoo
+      filename: root/container/withDeltaFileInSubfolderOnly/foo/.myignore.yaml
+  ignore: root/container/withDeltaFileInSubfolderOnly/foo/.myignore
+- delta: []
+  ignore: root/container/withoutAnyDeltaFile/.myignore
+- delta: []
+  ignore: root/container/withoutAnyDeltaFile/bar/.myignore
+- delta: []
+  ignore: root/container/withoutAnyDeltaFile/foo/.myignore
+
+"
+`;
+
+exports[`getFilePairs 1`] = `
+"
+- delta:
+    - content: {}
+      filename: root/.myignore.yaml
+    - content: {}
+      filename: root/.myignore.yml
+  ignore: root/.myignore
+- delta:
+    - content: {}
+      filename: root/.myignore.yaml
+    - content: {}
+      filename: root/container/.myignore.yaml
+    - content: {}
+      filename: root/.myignore.yml
+    - content: {}
+      filename: root/container/.myignore.yml
+  ignore: root/container/.myignore
+- delta:
+    - content: {}
+      filename: root/.myignore.yaml
+    - content: {}
+      filename: root/container/.myignore.yaml
+    - content:
+        append:
+          - tailContainer123
+          - tailContainer456
+        prepend:
+          - headContainer123
+          - headContainer456
+        remove:
+          - notInContainer
+      filename: root/container/withDeltaFileEverywhere/.myignore.yaml
+    - content: {}
+      filename: root/.myignore.yml
+    - content: {}
+      filename: root/container/.myignore.yml
+    - content: {}
+      filename: root/container/withDeltaFileEverywhere/.myignore.yml
+  ignore: root/container/withDeltaFileEverywhere/.myignore
+- delta:
+    - content: {}
+      filename: root/.myignore.yaml
+    - content: {}
+      filename: root/container/.myignore.yaml
+    - content:
+        append:
+          - tailContainer123
+          - tailContainer456
+        prepend:
+          - headContainer123
+          - headContainer456
+        remove:
+          - notInContainer
+      filename: root/container/withDeltaFileEverywhere/.myignore.yaml
+    - content:
+        append:
+          - tailFoo123
+          - tailFoo456
+        prepend:
+          - headFoo123
+          - headFoo456
+        remove:
+          - notInBar
+      filename: root/container/withDeltaFileEverywhere/bar/.myignore.yaml
+    - content: {}
+      filename: root/.myignore.yml
+    - content: {}
+      filename: root/container/.myignore.yml
+    - content: {}
+      filename: root/container/withDeltaFileEverywhere/.myignore.yml
+    - content: {}
+      filename: root/container/withDeltaFileEverywhere/bar/.myignore.yml
+  ignore: root/container/withDeltaFileEverywhere/bar/.myignore
+- delta:
+    - content: {}
+      filename: root/.myignore.yaml
+    - content: {}
+      filename: root/container/.myignore.yaml
+    - content:
+        append:
+          - tailContainer123
+          - tailContainer456
+        prepend:
+          - headContainer123
+          - headContainer456
+        remove:
+          - notInContainer
+      filename: root/container/withDeltaFileEverywhere/.myignore.yaml
+    - content:
+        append:
+          - tailFoo123
+          - tailFoo456
+        prepend:
+          - headFoo123
+          - headFoo456
+        remove:
+          - notInFoo
+      filename: root/container/withDeltaFileEverywhere/foo/.myignore.yaml
+    - content: {}
+      filename: root/.myignore.yml
+    - content: {}
+      filename: root/container/.myignore.yml
+    - content: {}
+      filename: root/container/withDeltaFileEverywhere/.myignore.yml
+    - content: {}
+      filename: root/container/withDeltaFileEverywhere/foo/.myignore.yml
+  ignore: root/container/withDeltaFileEverywhere/foo/.myignore
+- delta:
+    - content: {}
+      filename: root/.myignore.yaml
+    - content: {}
+      filename: root/container/.myignore.yaml
+    - content:
+        append:
+          - tailContainer123
+          - tailContainer456
+        prepend:
+          - headContainer123
+          - headContainer456
+        remove:
+          - notInContainer
+      filename: root/container/withDeltaFileInContainerOnly/.myignore.yaml
+    - content: {}
+      filename: root/.myignore.yml
+    - content: {}
+      filename: root/container/.myignore.yml
+    - content: {}
+      filename: root/container/withDeltaFileInContainerOnly/.myignore.yml
+  ignore: root/container/withDeltaFileInContainerOnly/.myignore
+- delta:
+    - content: {}
+      filename: root/.myignore.yaml
+    - content: {}
+      filename: root/container/.myignore.yaml
+    - content:
+        append:
+          - tailContainer123
+          - tailContainer456
+        prepend:
+          - headContainer123
+          - headContainer456
+        remove:
+          - notInContainer
+      filename: root/container/withDeltaFileInContainerOnly/.myignore.yaml
+    - content: {}
+      filename: root/container/withDeltaFileInContainerOnly/bar/.myignore.yaml
+    - content: {}
+      filename: root/.myignore.yml
+    - content: {}
+      filename: root/container/.myignore.yml
+    - content: {}
+      filename: root/container/withDeltaFileInContainerOnly/.myignore.yml
+    - content: {}
+      filename: root/container/withDeltaFileInContainerOnly/bar/.myignore.yml
+  ignore: root/container/withDeltaFileInContainerOnly/bar/.myignore
+- delta:
+    - content: {}
+      filename: root/.myignore.yaml
+    - content: {}
+      filename: root/container/.myignore.yaml
+    - content:
+        append:
+          - tailContainer123
+          - tailContainer456
+        prepend:
+          - headContainer123
+          - headContainer456
+        remove:
+          - notInContainer
+      filename: root/container/withDeltaFileInContainerOnly/.myignore.yaml
+    - content: {}
+      filename: root/container/withDeltaFileInContainerOnly/foo/.myignore.yaml
+    - content: {}
+      filename: root/.myignore.yml
+    - content: {}
+      filename: root/container/.myignore.yml
+    - content: {}
+      filename: root/container/withDeltaFileInContainerOnly/.myignore.yml
+    - content: {}
+      filename: root/container/withDeltaFileInContainerOnly/foo/.myignore.yml
+  ignore: root/container/withDeltaFileInContainerOnly/foo/.myignore
+- delta:
+    - content: {}
+      filename: root/.myignore.yaml
+    - content: {}
+      filename: root/container/.myignore.yaml
+    - content: {}
+      filename: root/container/withDeltaFileInSubfolderOnly/.myignore.yaml
+    - content: {}
+      filename: root/.myignore.yml
+    - content: {}
+      filename: root/container/.myignore.yml
+    - content: {}
+      filename: root/container/withDeltaFileInSubfolderOnly/.myignore.yml
+  ignore: root/container/withDeltaFileInSubfolderOnly/.myignore
+- delta:
+    - content: {}
+      filename: root/.myignore.yaml
+    - content: {}
+      filename: root/container/.myignore.yaml
+    - content: {}
+      filename: root/container/withDeltaFileInSubfolderOnly/.myignore.yaml
+    - content:
+        append:
+          - tailFoo123
+          - tailFoo456
+        prepend:
+          - headFoo123
+          - headFoo456
+        remove:
+          - notInBar
+      filename: root/container/withDeltaFileInSubfolderOnly/bar/.myignore.yaml
+    - content: {}
+      filename: root/.myignore.yml
+    - content: {}
+      filename: root/container/.myignore.yml
+    - content: {}
+      filename: root/container/withDeltaFileInSubfolderOnly/.myignore.yml
+    - content: {}
+      filename: root/container/withDeltaFileInSubfolderOnly/bar/.myignore.yml
+  ignore: root/container/withDeltaFileInSubfolderOnly/bar/.myignore
+- delta:
+    - content: {}
+      filename: root/.myignore.yaml
+    - content: {}
+      filename: root/container/.myignore.yaml
+    - content: {}
+      filename: root/container/withDeltaFileInSubfolderOnly/.myignore.yaml
+    - content:
+        append:
+          - tailFoo123
+          - tailFoo456
+        prepend:
+          - headFoo123
+          - headFoo456
+        remove:
+          - notInFoo
+      filename: root/container/withDeltaFileInSubfolderOnly/foo/.myignore.yaml
+    - content: {}
+      filename: root/.myignore.yml
+    - content: {}
+      filename: root/container/.myignore.yml
+    - content: {}
+      filename: root/container/withDeltaFileInSubfolderOnly/.myignore.yml
+    - content: {}
+      filename: root/container/withDeltaFileInSubfolderOnly/foo/.myignore.yml
+  ignore: root/container/withDeltaFileInSubfolderOnly/foo/.myignore
+- delta:
+    - content: {}
+      filename: root/.myignore.yaml
+    - content: {}
+      filename: root/container/.myignore.yaml
+    - content: {}
+      filename: root/container/withoutAnyDeltaFile/.myignore.yaml
+    - content: {}
+      filename: root/.myignore.yml
+    - content: {}
+      filename: root/container/.myignore.yml
+    - content: {}
+      filename: root/container/withoutAnyDeltaFile/.myignore.yml
+  ignore: root/container/withoutAnyDeltaFile/.myignore
+- delta:
+    - content: {}
+      filename: root/.myignore.yaml
+    - content: {}
+      filename: root/container/.myignore.yaml
+    - content: {}
+      filename: root/container/withoutAnyDeltaFile/.myignore.yaml
+    - content: {}
+      filename: root/container/withoutAnyDeltaFile/bar/.myignore.yaml
+    - content: {}
+      filename: root/.myignore.yml
+    - content: {}
+      filename: root/container/.myignore.yml
+    - content: {}
+      filename: root/container/withoutAnyDeltaFile/.myignore.yml
+    - content: {}
+      filename: root/container/withoutAnyDeltaFile/bar/.myignore.yml
+  ignore: root/container/withoutAnyDeltaFile/bar/.myignore
+- delta:
+    - content: {}
+      filename: root/.myignore.yaml
+    - content: {}
+      filename: root/container/.myignore.yaml
+    - content: {}
+      filename: root/container/withoutAnyDeltaFile/.myignore.yaml
+    - content: {}
+      filename: root/container/withoutAnyDeltaFile/foo/.myignore.yaml
+    - content: {}
+      filename: root/.myignore.yml
+    - content: {}
+      filename: root/container/.myignore.yml
+    - content: {}
+      filename: root/container/withoutAnyDeltaFile/.myignore.yml
+    - content: {}
+      filename: root/container/withoutAnyDeltaFile/foo/.myignore.yml
+  ignore: root/container/withoutAnyDeltaFile/foo/.myignore
+
+"
+`;
+
+exports[`getIgnoreFiles 1`] = `
 Array [
-  Object {
-    "content": Object {
-      "append": Array [
-        "tailFoo123",
-        "tailFoo456",
-      ],
-      "preprend": Array [
-        "headFoo123",
-        "headFoo456",
-      ],
-      "remove": Array [
-        "notInBar",
-      ],
-    },
-    "filename": "root/container/bar/.myignore.yaml",
-  },
-  Object {
-    "content": Object {
-      "append": Array [
-        "tailFoo123",
-        "tailFoo456",
-      ],
-      "preprend": Array [
-        "headFoo123",
-        "headFoo456",
-      ],
-      "remove": Array [
-        "notInFoo",
-      ],
-    },
-    "filename": "root/container/foo/.myignore.yaml",
-  },
+  "root/.myignore",
+  "root/container/.myignore",
+  "root/container/withDeltaFileEverywhere/.myignore",
+  "root/container/withDeltaFileEverywhere/bar/.myignore",
+  "root/container/withDeltaFileEverywhere/foo/.myignore",
+  "root/container/withDeltaFileInContainerOnly/.myignore",
+  "root/container/withDeltaFileInContainerOnly/bar/.myignore",
+  "root/container/withDeltaFileInContainerOnly/foo/.myignore",
+  "root/container/withDeltaFileInSubfolderOnly/.myignore",
+  "root/container/withDeltaFileInSubfolderOnly/bar/.myignore",
+  "root/container/withDeltaFileInSubfolderOnly/foo/.myignore",
+  "root/container/withoutAnyDeltaFile/.myignore",
+  "root/container/withoutAnyDeltaFile/bar/.myignore",
+  "root/container/withoutAnyDeltaFile/foo/.myignore",
 ]
 `;
 
@@ -64,43 +777,180 @@ exports[`writeIgnoreFiles 1`] = `
   root456
 
   # some are eliminated
+  notInContainer
   notInFoo
   notInBar
 
   # in addition, comments are eliminated
 container:
-  bar:
+  withDeltaFileEverywhere:
     .myignore: |-
+      headContainer123
+      headContainer456
       root123
       root456
       notInFoo
-      tailFoo123
-      tailFoo456
+      notInBar
+      tailContainer123
+      tailContainer456
     .myignore.yaml: |
-      preprend:
-        - headFoo123
-        - headFoo456
+      prepend:
+        - headContainer123
+        - headContainer456
       append:
-        - tailFoo123
-        - tailFoo456
+        - tailContainer123
+        - tailContainer456
       remove:
-        - notInBar
-  foo:
+        - notInContainer
+    bar:
+      .myignore: |-
+        headFoo123
+        headFoo456
+        headContainer123
+        headContainer456
+        root123
+        root456
+        notInFoo
+        tailContainer123
+        tailContainer456
+        tailFoo123
+        tailFoo456
+      .myignore.yaml: |
+        prepend:
+          - headFoo123
+          - headFoo456
+        append:
+          - tailFoo123
+          - tailFoo456
+        remove:
+          - notInBar
+    foo:
+      .myignore: |-
+        headFoo123
+        headFoo456
+        headContainer123
+        headContainer456
+        root123
+        root456
+        notInBar
+        tailContainer123
+        tailContainer456
+        tailFoo123
+        tailFoo456
+      .myignore.yaml: |
+        prepend:
+          - headFoo123
+          - headFoo456
+        append:
+          - tailFoo123
+          - tailFoo456
+        remove:
+          - notInFoo
+  withDeltaFileInContainerOnly:
+    .myignore: |-
+      headContainer123
+      headContainer456
+      root123
+      root456
+      notInFoo
+      notInBar
+      tailContainer123
+      tailContainer456
+    .myignore.yaml: |
+      prepend:
+        - headContainer123
+        - headContainer456
+      append:
+        - tailContainer123
+        - tailContainer456
+      remove:
+        - notInContainer
+    bar:
+      .myignore: |-
+        headContainer123
+        headContainer456
+        root123
+        root456
+        notInFoo
+        notInBar
+        tailContainer123
+        tailContainer456
+    foo:
+      .myignore: |-
+        headContainer123
+        headContainer456
+        root123
+        root456
+        notInFoo
+        notInBar
+        tailContainer123
+        tailContainer456
+  withDeltaFileInSubfolderOnly:
     .myignore: |-
       root123
       root456
+      notInContainer
+      notInFoo
       notInBar
-      tailFoo123
-      tailFoo456
-    .myignore.yaml: |
-      preprend:
-        - headFoo123
-        - headFoo456
-      append:
-        - tailFoo123
-        - tailFoo456
-      remove:
-        - notInFoo
+    bar:
+      .myignore: |-
+        headFoo123
+        headFoo456
+        root123
+        root456
+        notInContainer
+        notInFoo
+        tailFoo123
+        tailFoo456
+      .myignore.yaml: |
+        prepend:
+          - headFoo123
+          - headFoo456
+        append:
+          - tailFoo123
+          - tailFoo456
+        remove:
+          - notInBar
+    foo:
+      .myignore: |-
+        headFoo123
+        headFoo456
+        root123
+        root456
+        notInContainer
+        notInBar
+        tailFoo123
+        tailFoo456
+      .myignore.yaml: |
+        prepend:
+          - headFoo123
+          - headFoo456
+        append:
+          - tailFoo123
+          - tailFoo456
+        remove:
+          - notInFoo
+  withoutAnyDeltaFile:
+    .myignore: |-
+      root123
+      root456
+      notInContainer
+      notInFoo
+      notInBar
+    bar:
+      .myignore: |-
+        root123
+        root456
+        notInContainer
+        notInFoo
+        notInBar
+    foo:
+      .myignore: |-
+        root123
+        root456
+        notInContainer
+        notInFoo
+        notInBar
 
 "
 `;
@@ -115,24 +965,125 @@ exports[`writeIgnoreFiles 2`] = `
       root456
 
       # some are eliminated
+      notInContainer
       notInFoo
       notInBar
 
       # in addition, comments are eliminated
-- - name: root/container/bar/.myignore
+- - name: root/container/withDeltaFileEverywhere/.myignore
   - content: |-
+      headContainer123
+      headContainer456
       root123
       root456
       notInFoo
+      notInBar
+      tailContainer123
+      tailContainer456
+- - name: root/container/withDeltaFileEverywhere/bar/.myignore
+  - content: |-
+      headFoo123
+      headFoo456
+      headContainer123
+      headContainer456
+      root123
+      root456
+      notInFoo
+      tailContainer123
+      tailContainer456
       tailFoo123
       tailFoo456
-- - name: root/container/foo/.myignore
+- - name: root/container/withDeltaFileEverywhere/foo/.myignore
   - content: |-
+      headFoo123
+      headFoo456
+      headContainer123
+      headContainer456
       root123
       root456
       notInBar
+      tailContainer123
+      tailContainer456
       tailFoo123
       tailFoo456
+- - name: root/container/withDeltaFileInContainerOnly/.myignore
+  - content: |-
+      headContainer123
+      headContainer456
+      root123
+      root456
+      notInFoo
+      notInBar
+      tailContainer123
+      tailContainer456
+- - name: root/container/withDeltaFileInContainerOnly/bar/.myignore
+  - content: |-
+      headContainer123
+      headContainer456
+      root123
+      root456
+      notInFoo
+      notInBar
+      tailContainer123
+      tailContainer456
+- - name: root/container/withDeltaFileInContainerOnly/foo/.myignore
+  - content: |-
+      headContainer123
+      headContainer456
+      root123
+      root456
+      notInFoo
+      notInBar
+      tailContainer123
+      tailContainer456
+- - name: root/container/withDeltaFileInSubfolderOnly/.myignore
+  - content: |-
+      root123
+      root456
+      notInContainer
+      notInFoo
+      notInBar
+- - name: root/container/withDeltaFileInSubfolderOnly/bar/.myignore
+  - content: |-
+      headFoo123
+      headFoo456
+      root123
+      root456
+      notInContainer
+      notInFoo
+      tailFoo123
+      tailFoo456
+- - name: root/container/withDeltaFileInSubfolderOnly/foo/.myignore
+  - content: |-
+      headFoo123
+      headFoo456
+      root123
+      root456
+      notInContainer
+      notInBar
+      tailFoo123
+      tailFoo456
+- - name: root/container/withoutAnyDeltaFile/.myignore
+  - content: |-
+      root123
+      root456
+      notInContainer
+      notInFoo
+      notInBar
+- - name: root/container/withoutAnyDeltaFile/bar/.myignore
+  - content: |-
+      root123
+      root456
+      notInContainer
+      notInFoo
+      notInBar
+- - name: root/container/withoutAnyDeltaFile/foo/.myignore
+  - content: |-
+      root123
+      root456
+      notInContainer
+      notInFoo
+      notInBar
 
 "
 `;
