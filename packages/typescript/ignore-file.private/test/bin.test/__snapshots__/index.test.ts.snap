@@ -1,0 +1,371 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`command igfileman write --base=root/.myignore --output=.myignore --container=root/container/** 1`] = `
+"
+.myignore: |
+
+  # to be included
+  root123
+  root456
+
+  # some are eliminated
+  notInContainer
+  notInFoo
+  notInBar
+
+  # in addition, comments are eliminated
+container:
+  withDeltaFileEverywhere:
+    .myignore: |-
+      headContainer123
+      headContainer456
+      root123
+      root456
+      notInFoo
+      notInBar
+      tailContainer123
+      tailContainer456
+    .myignore.yaml: |
+      prepend:
+        - headContainer123
+        - headContainer456
+      append:
+        - tailContainer123
+        - tailContainer456
+      remove:
+        - notInContainer
+    bar:
+      .myignore: |-
+        headFoo123
+        headFoo456
+        headContainer123
+        headContainer456
+        root123
+        root456
+        notInFoo
+        tailContainer123
+        tailContainer456
+        tailFoo123
+        tailFoo456
+      .myignore.yaml: |
+        prepend:
+          - headFoo123
+          - headFoo456
+        append:
+          - tailFoo123
+          - tailFoo456
+        remove:
+          - notInBar
+    foo:
+      .myignore: |-
+        headFoo123
+        headFoo456
+        headContainer123
+        headContainer456
+        root123
+        root456
+        notInBar
+        tailContainer123
+        tailContainer456
+        tailFoo123
+        tailFoo456
+      .myignore.yaml: |
+        prepend:
+          - headFoo123
+          - headFoo456
+        append:
+          - tailFoo123
+          - tailFoo456
+        remove:
+          - notInFoo
+  withDeltaFileInContainerOnly:
+    .myignore: |-
+      headContainer123
+      headContainer456
+      root123
+      root456
+      notInFoo
+      notInBar
+      tailContainer123
+      tailContainer456
+    .myignore.yaml: |
+      prepend:
+        - headContainer123
+        - headContainer456
+      append:
+        - tailContainer123
+        - tailContainer456
+      remove:
+        - notInContainer
+    bar:
+      .myignore: |-
+        headContainer123
+        headContainer456
+        root123
+        root456
+        notInFoo
+        notInBar
+        tailContainer123
+        tailContainer456
+    foo:
+      .myignore: |-
+        headContainer123
+        headContainer456
+        root123
+        root456
+        notInFoo
+        notInBar
+        tailContainer123
+        tailContainer456
+  withDeltaFileInSubfolderOnly:
+    .myignore: |-
+      root123
+      root456
+      notInContainer
+      notInFoo
+      notInBar
+    bar:
+      .myignore: |-
+        headFoo123
+        headFoo456
+        root123
+        root456
+        notInContainer
+        notInFoo
+        tailFoo123
+        tailFoo456
+      .myignore.yaml: |
+        prepend:
+          - headFoo123
+          - headFoo456
+        append:
+          - tailFoo123
+          - tailFoo456
+        remove:
+          - notInBar
+    foo:
+      .myignore: |-
+        headFoo123
+        headFoo456
+        root123
+        root456
+        notInContainer
+        notInBar
+        tailFoo123
+        tailFoo456
+      .myignore.yaml: |
+        prepend:
+          - headFoo123
+          - headFoo456
+        append:
+          - tailFoo123
+          - tailFoo456
+        remove:
+          - notInFoo
+  withoutAnyDeltaFile:
+    .myignore: |-
+      root123
+      root456
+      notInContainer
+      notInFoo
+      notInBar
+    bar:
+      .myignore: |-
+        root123
+        root456
+        notInContainer
+        notInFoo
+        notInBar
+    foo:
+      .myignore: |-
+        root123
+        root456
+        notInContainer
+        notInFoo
+        notInBar
+
+"
+`;
+
+exports[`command igfileman write --base=root/.myignore --output=.myignore --container=root/container/** 2`] = `
+"
+- - name: root/.myignore
+  - content: |
+
+      # to be included
+      root123
+      root456
+
+      # some are eliminated
+      notInContainer
+      notInFoo
+      notInBar
+
+      # in addition, comments are eliminated
+- - name: root/container/withDeltaFileEverywhere/.myignore
+  - content: |-
+      headContainer123
+      headContainer456
+      root123
+      root456
+      notInFoo
+      notInBar
+      tailContainer123
+      tailContainer456
+- - name: root/container/withDeltaFileEverywhere/bar/.myignore
+  - content: |-
+      headFoo123
+      headFoo456
+      headContainer123
+      headContainer456
+      root123
+      root456
+      notInFoo
+      tailContainer123
+      tailContainer456
+      tailFoo123
+      tailFoo456
+- - name: root/container/withDeltaFileEverywhere/foo/.myignore
+  - content: |-
+      headFoo123
+      headFoo456
+      headContainer123
+      headContainer456
+      root123
+      root456
+      notInBar
+      tailContainer123
+      tailContainer456
+      tailFoo123
+      tailFoo456
+- - name: root/container/withDeltaFileInContainerOnly/.myignore
+  - content: |-
+      headContainer123
+      headContainer456
+      root123
+      root456
+      notInFoo
+      notInBar
+      tailContainer123
+      tailContainer456
+- - name: root/container/withDeltaFileInContainerOnly/bar/.myignore
+  - content: |-
+      headContainer123
+      headContainer456
+      root123
+      root456
+      notInFoo
+      notInBar
+      tailContainer123
+      tailContainer456
+- - name: root/container/withDeltaFileInContainerOnly/foo/.myignore
+  - content: |-
+      headContainer123
+      headContainer456
+      root123
+      root456
+      notInFoo
+      notInBar
+      tailContainer123
+      tailContainer456
+- - name: root/container/withDeltaFileInSubfolderOnly/.myignore
+  - content: |-
+      root123
+      root456
+      notInContainer
+      notInFoo
+      notInBar
+- - name: root/container/withDeltaFileInSubfolderOnly/bar/.myignore
+  - content: |-
+      headFoo123
+      headFoo456
+      root123
+      root456
+      notInContainer
+      notInFoo
+      tailFoo123
+      tailFoo456
+- - name: root/container/withDeltaFileInSubfolderOnly/foo/.myignore
+  - content: |-
+      headFoo123
+      headFoo456
+      root123
+      root456
+      notInContainer
+      notInBar
+      tailFoo123
+      tailFoo456
+- - name: root/container/withoutAnyDeltaFile/.myignore
+  - content: |-
+      root123
+      root456
+      notInContainer
+      notInFoo
+      notInBar
+- - name: root/container/withoutAnyDeltaFile/bar/.myignore
+  - content: |-
+      root123
+      root456
+      notInContainer
+      notInFoo
+      notInBar
+- - name: root/container/withoutAnyDeltaFile/foo/.myignore
+  - content: |-
+      root123
+      root456
+      notInContainer
+      notInFoo
+      notInBar
+
+"
+`;
+
+exports[`help message from igfileman 1`] = `
+"
+error: null
+signal: null
+status: 1
+stderr: |+
+
+  igfileman <cmd> [args]
+
+  Commands:
+    igfileman write  Create ignore files
+
+  Options:
+    --version  Show version number                                       [boolean]
+    --help     Show help                                                 [boolean]
+
+  Not enough non-option arguments: got 0, need at least 1
+
+stdout: ((EMPTY))
+
+"
+`;
+
+exports[`help message from igfileman write 1`] = `
+"
+error: null
+signal: null
+status: 1
+stderr: |+
+
+  igfileman write
+
+  Create ignore files
+
+  Options:
+    --version        Show version number                                 [boolean]
+    --help           Show help                                           [boolean]
+    --base, -B       Base filename                             [string] [required]
+    --root, -R       Directory contains deltas and outputs [string] [default: \\".\\"]
+    --output, -O     Output basename                           [string] [required]
+    --delta, -D      Delta extensions            [array] [default: [\\"yaml\\",\\"yml\\"]]
+    --container, -C  Glob pattern of containing folders   [string] [default: \\"**\\"]
+
+  Missing required arguments: base, output
+
+stdout: ((EMPTY))
+
+"
+`;
