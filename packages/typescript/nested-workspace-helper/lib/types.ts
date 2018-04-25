@@ -82,6 +82,26 @@ export interface RegistryPackageVersionSet {
   readonly [version: string]: PackageVersionRegistry
 }
 
+export interface RegistryPackageSet {
+  readonly [name: string]: PackageRegistry
+}
+
 export interface RegistryPackageManifest extends PackageManifest {
   readonly version: string
 }
+
+/** Contains group of publishable, unpublishable and private packages */
+export interface PublishableClassification {
+  /** Public packages that can be publishes */
+  readonly publishables: PublishablePackageList
+
+  /** Public packages that have yet to be publishable */
+  readonly unpublishables: UnpublisablePackageList
+
+  /** Private and/or anonymous packages */
+  readonly skip: PrivatePackageList
+}
+
+export type PublishablePackageList = PackageList
+export type UnpublisablePackageList = PackageList
+export type PrivatePackageList = PackageList
