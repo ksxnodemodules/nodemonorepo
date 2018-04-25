@@ -65,3 +65,23 @@ export interface MismatchedDependencyMapValue {
 export interface MismatchedDependencyMap {
   readonly [name: string]: MismatchedDependencyMapValue
 }
+
+export interface Registry {
+  readonly name: string
+  readonly description?: string
+  readonly [_: string]: any
+}
+
+export interface PackageRegistry extends Registry {
+  readonly versions: RegistryPackageVersionSet
+}
+
+export interface PackageVersionRegistry extends RegistryPackageManifest {}
+
+export interface RegistryPackageVersionSet {
+  readonly [version: string]: PackageVersionRegistry
+}
+
+export interface RegistryPackageManifest extends PackageManifest {
+  readonly version: string
+}

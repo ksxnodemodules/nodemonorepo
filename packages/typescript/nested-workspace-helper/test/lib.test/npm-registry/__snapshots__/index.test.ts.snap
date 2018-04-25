@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mkhref 1`] = `"http://registry.npmjs.org/abc/def/ghi"`;
+
+exports[`mocked fetch getAllVersions of bar 1`] = `
+Object {
+  "name": "bar",
+  "versions": Object {
+    "3.3.3": Object {
+      "name": "bar",
+      "version": "3.3.3",
+    },
+    "3.3.4": Object {
+      "name": "bar",
+      "version": "3.3.4",
+    },
+    "3.4.4": Object {
+      "name": "bar",
+      "version": "3.4.4",
+    },
+    "4.4.4": Object {
+      "name": "bar",
+      "version": "4.4.4",
+    },
+  },
+}
+`;
+
+exports[`mocked fetch getAllVersions of foo 1`] = `
+Object {
+  "name": "foo",
+  "versions": Object {
+    "0.0.0": Object {
+      "name": "foo",
+      "version": "0.0.0",
+    },
+    "0.0.1": Object {
+      "name": "foo",
+      "version": "0.0.1",
+    },
+    "0.1.2": Object {
+      "name": "foo",
+      "version": "0.1.2",
+    },
+    "1.2.3": Object {
+      "name": "foo",
+      "version": "1.2.3",
+    },
+  },
+}
+`;
+
+exports[`mocked fetch getLatestVersion of bar 1`] = `
+Object {
+  "name": "bar",
+  "version": "4.4.4",
+}
+`;
+
+exports[`mocked fetch getLatestVersion of foo 1`] = `
+Object {
+  "name": "foo",
+  "version": "1.2.3",
+}
+`;
+
+exports[`mocked fetch getSpecificVersion of bar@3.3.4 1`] = `
+Object {
+  "name": "bar",
+  "version": "3.3.4",
+}
+`;
+
+exports[`mocked fetch getSpecificVersion of foo@0.1.2 1`] = `
+Object {
+  "name": "foo",
+  "version": "0.1.2",
+}
+`;

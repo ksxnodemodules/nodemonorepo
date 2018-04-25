@@ -1,12 +1,14 @@
 dependencies:
   '@types/fs-extra': 5.0.1
   '@types/node': 9.6.4
+  '@types/node-fetch': 1.6.9
   '@types/semver': 5.5.0
   '@types/yargs': 11.0.0
   chalk: 2.4.0
   extra-jest: 'link:../extra-jest'
   fs-extra: 5.0.0
   fs-tree-utils: 'link:../fs-tree-utils'
+  node-fetch: 2.1.2
   preloaded-node: 'link:../../javascript/preloaded-node'
   semver: 5.5.0
   unique-temp-path: 'link:../unique-temp-path'
@@ -21,6 +23,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-h3wnflb+jMTipvbbZnClgA2BexrT4w0GcfoCz5qyxd0IRsbqhLSyesM6mqZTAnhbVmhyTm5tuxfRu9R+8l+lGw==
+  /@types/node-fetch/1.6.9:
+    dependencies:
+      '@types/node': 9.6.6
+    dev: false
+    resolution:
+      integrity: sha512-n2r6WLoY7+uuPT7pnEtKJCmPUGyJ+cbyBR8Avnu4+m1nzz7DwBVuyIvvlBzCZ/nrpC7rIgb3D6pNavL7rFEa9g==
   /@types/node/9.6.2:
     dev: false
     resolution:
@@ -29,6 +37,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-Awg4BcUYiZtNKoveGOu654JVPt11V/KIC77iBz8NweyoOAZpz5rUJfPDwwD+ajfTs2HndbTCEB8IuLfX9m/mmw==
+  /@types/node/9.6.6:
+    dev: false
+    resolution:
+      integrity: sha512-SJe0g5cZeGNDP5sD8mIX3scb+eq8LQQZ60FXiKZHipYSeEFZ5EKml+NNMiO76F74TY4PoMWlNxF/YRY40FOvZQ==
   /@types/ramda/0.25.24:
     dev: true
     resolution:
@@ -247,6 +259,12 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-jf84uxzwiuiIVKiOLpfYk7N46TSy8ubTonmneY9vrpHNAnp0QBt2BxWV9dO3/j+BoVAb+a5G6YDPW3M5HOdMWQ==
+  /node-fetch/2.1.2:
+    dev: false
+    engines:
+      node: 4.x || >=6.0.0
+    resolution:
+      integrity: sha1-q4hOjn5X44qUR1POxwb3iNF2i7U=
   /npm-run-path/2.0.2:
     dependencies:
       path-key: 2.0.1
@@ -464,6 +482,7 @@ shrinkwrapVersion: 3
 specifiers:
   '@types/fs-extra': ^5.0.1
   '@types/node': ^9.6.4
+  '@types/node-fetch': ^1.6.9
   '@types/ramda': ^0.25.24
   '@types/semver': ^5.5.0
   '@types/yargs': ^11.0.0
@@ -471,6 +490,7 @@ specifiers:
   extra-jest: '*'
   fs-extra: ^5.0.0
   fs-tree-utils: ^0.0.0
+  node-fetch: ^2.1.2
   preloaded-node: ^0.0.0
   ramda: ^0.25.0
   semver: ^5.5.0
