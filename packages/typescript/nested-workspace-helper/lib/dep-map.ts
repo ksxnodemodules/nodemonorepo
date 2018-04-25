@@ -1,5 +1,13 @@
 import listAllPackages from './list-pkgs'
-import {DependencyList, DependencyMap, DependencyType, PackageDict, PackageList} from './types'
+
+import {
+  WritableDependencyMap,
+  DependencyList,
+  DependencyMap,
+  DependencyType,
+  PackageDict,
+  PackageList
+} from './types'
 
 export type DependencyMapResult = Promise<DependencyMap>
 
@@ -9,7 +17,7 @@ export async function getDependencyMap (dirname: string): DependencyMapResult {
 
 export namespace getDependencyMap {
   export function fromPackageList (pkgs: PackageList): DependencyMap {
-    const result: DependencyMap = {}
+    const result: WritableDependencyMap = {}
 
     function dict2list (dict: PackageDict, type: DependencyType): DependencyList {
       const result: DependencyList = []

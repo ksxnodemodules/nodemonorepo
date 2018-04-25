@@ -47,8 +47,12 @@ export interface DependencyMapValue {
   readonly dependant: PackageListItem
 }
 
-export interface DependencyMap {
+export interface WritableDependencyMap {
   [dirname: string]: DependencyMapValue
+}
+
+export interface DependencyMap {
+  readonly [dirname: string]: DependencyMapValue
 }
 
 export interface MismatchedDependencyListItem extends Dependency {
