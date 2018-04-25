@@ -1,19 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`executes echo 1`] = `
-Object {
-  "arguments": Object {
-    "argv": Array [
-      "Hello, World!!",
-    ],
-    "options": Object {
-      "encoding": "utf8",
-    },
-  },
-}
-`;
-
-exports[`executes echo 2`] = `
+exports[`passing command executes echo 1`] = `
 "
 error: null
 signal: null
@@ -27,7 +14,48 @@ stdout: |+
 "
 `;
 
-exports[`executes node 1`] = `
+exports[`passing command executes node 1`] = `
+"
+error: null
+signal: null
+status: 0
+stderr: ((EMPTY))
+stdout: |+
+
+  { abc: 123, def: 456 }
+
+
+"
+`;
+
+exports[`passing functions executes echo 1`] = `
+Object {
+  "arguments": Object {
+    "argv": Array [
+      "Hello, World!!",
+    ],
+    "options": Object {
+      "encoding": "utf8",
+    },
+  },
+}
+`;
+
+exports[`passing functions executes echo 2`] = `
+"
+error: null
+signal: null
+status: 0
+stderr: ((EMPTY))
+stdout: |+
+
+  Hello, World!!
+
+
+"
+`;
+
+exports[`passing functions executes node 1`] = `
 Object {
   "arguments": Object {
     "argv": Array [],
@@ -38,7 +66,7 @@ Object {
 }
 `;
 
-exports[`executes node 2`] = `
+exports[`passing functions executes node 2`] = `
 "
 error: null
 signal: null

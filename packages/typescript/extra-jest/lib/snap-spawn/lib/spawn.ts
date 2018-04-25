@@ -1,4 +1,5 @@
-import {SpawnSyncOptions, SpawnSyncReturns} from 'child_process'
+import {SpawnSyncOptions, SpawnSyncReturns, spawnSync} from 'child_process'
+import ramda from 'ramda'
 
 export type IOData = Buffer | string
 export type OptionalIOData = IOData | null | undefined
@@ -22,6 +23,8 @@ export interface SpawnReturns {
 
 export type SpawnFunc = (argv: string[], options: SpawnSyncOptions) => SpawnSyncReturns<IOData>
 
+export const createSpawnFunc = (command: string): SpawnFunc => ramda.partial(spawnSync, [command])
+
 export function spawn (
   fn: SpawnFunc,
   argv: string[] = [],
@@ -39,6 +42,14 @@ export function spawn (
     stdout: fmtStdIO(stdout),
     stderr: fmtStdIO(stderr)
   }
+}
+
+export namespace spawn {
+  export const withCommand = (
+    command: string,
+    argv?: string[],
+    options?: SpawnSyncOptions
+  ) => spawn(createSpawnFunc(command), argv, options)
 }
 
 export default spawn

@@ -25,6 +25,7 @@ Object {
     "unsafe": [Function],
   },
   "snapSpawn": Object {
+    "createSpawnFunc": [Function],
     "default": [Function],
     "snap": [Function],
     "spawn": [Function],
