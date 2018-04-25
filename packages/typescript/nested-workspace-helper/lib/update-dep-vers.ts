@@ -3,7 +3,6 @@ import {deserialize} from './utils/json'
 import getMismatchedDependencies, {Checker} from './mismatches'
 
 import {
-  WritablePackageDict,
   PackageList,
   PackageListItem,
   PackageDict,
@@ -11,6 +10,10 @@ import {
   MismatchedDependencyMap,
   MismatchedDependencyList
 } from './types'
+
+import {
+  WritablePackageDict
+} from './utils/private-types'
 
 export async function updateDependencyVersions (
   dirname: string,

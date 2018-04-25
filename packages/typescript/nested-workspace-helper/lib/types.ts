@@ -4,10 +4,6 @@ export type PackageVersion = string
 export type PackageVersionRequirement = string
 export type ModulePath = string
 
-export interface WritablePackageDict {
-  [name: string]: PackageVersionRequirement
-}
-
 export interface PackageDict {
   readonly [name: string]: PackageVersionRequirement
 }
@@ -49,10 +45,6 @@ export type DependencyList = Dependency[]
 export interface DependencyMapValue {
   readonly list: DependencyList
   readonly dependant: PackageListItem
-}
-
-export interface WritableDependencyMap {
-  [dirname: string]: DependencyMapValue
 }
 
 export interface DependencyMap {

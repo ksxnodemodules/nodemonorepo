@@ -1,13 +1,16 @@
 import listAllPackages from './list-pkgs'
 
 import {
-  WritableDependencyMap,
   DependencyList,
   DependencyMap,
   DependencyType,
   PackageDict,
   PackageList
 } from './types'
+
+import {
+  WritableDependencyMap
+} from './utils/private-types'
 
 export type DependencyMapResult = Promise<DependencyMap>
 
