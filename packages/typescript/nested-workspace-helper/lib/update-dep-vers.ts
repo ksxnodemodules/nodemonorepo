@@ -3,6 +3,7 @@ import {deserialize} from './utils/json'
 import getMismatchedDependencies, {Checker} from './mismatches'
 
 import {
+  WritablePackageDict,
   PackageList,
   PackageListItem,
   PackageDict,
@@ -54,7 +55,7 @@ export namespace updateDependencyVersions {
     list: MismatchedDependencyList
   ): PackageManifest {
     const refs: {
-      [_: string]: PackageDict
+      [_: string]: WritablePackageDict
     } = {
       prod: {},
       dev: {},

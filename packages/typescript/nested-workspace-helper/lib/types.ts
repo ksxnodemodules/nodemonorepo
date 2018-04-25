@@ -4,8 +4,12 @@ export type PackageVersion = string
 export type PackageVersionRequirement = string
 export type ModulePath = string
 
-export type PackageDict = {
+export interface WritablePackageDict {
   [name: string]: PackageVersionRequirement
+}
+
+export interface PackageDict {
+  readonly [name: string]: PackageVersionRequirement
 }
 
 export interface PackageManifest {
