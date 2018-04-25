@@ -1,0 +1,48 @@
+root:
+  toBeNew: # Didn't think about this one
+    package.json: |
+      {
+        "name": "to-be-new",
+        "version": "0.0.0",
+        "__describe": "Package has yet to exist in registry",
+        "__expect": "Should be publishable"
+      }
+  toNotBeDuplicated:
+    package.json: |
+      {
+        "name": "to-not-be-duplicated",
+        "version": "10.11.12",
+        "__describe": "Package's version (10.11.12) does not exist in registry",
+        "__expect": "Should be publishable"
+      }
+  toBeDuplicated:
+    package.json: |
+      {
+        "name": "to-be-duplicated",
+        "version": "1.2.3",
+        "__describe": "Package's version (1.2.3) already exist in registry",
+        "__expect": "Should be unpublishable"
+      }
+  toNotHaveVersion:
+    package.json: |
+      {
+        "name": "to-not-have-version",
+        "__describe": "Package does not have a version",
+        "__expect": "Should be in unpublishable"
+      }
+  toBePrivate:
+    package.json: |
+      {
+        "name": "to-be-private",
+        "private": true,
+        "version": "0.0.0",
+        "__describe": "Private package",
+        "__expect": "Should be in skip"
+      }
+  toNotBeNamed:
+    package.json: |
+      {
+        "version": "0.0.0",
+        "__describe": "Package has no name",
+        "__expect": "Should be in skip"
+      }
