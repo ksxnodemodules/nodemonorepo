@@ -1,5 +1,4 @@
 import {SpawnSyncOptions, SpawnSyncReturns} from 'child_process'
-import ramda from 'ramda'
 import prln from 'preloaded-node'
 
 export type IOData = Buffer | string
@@ -41,11 +40,6 @@ export function spawn (
     stdout: fmtStdIO(stdout),
     stderr: fmtStdIO(stderr)
   }
-}
-
-export namespace spawn {
-  export const curried = ramda.curry(spawn)
-  export const preloadedNode = curried(prln.spawnSync)
 }
 
 export default spawn
