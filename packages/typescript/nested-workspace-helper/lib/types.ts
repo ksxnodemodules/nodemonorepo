@@ -8,21 +8,21 @@ export type PackageDict = {
   [name: string]: PackageVersionRequirement
 }
 
-export type PackageManifest = {
-  name?: PackageName,
-  version?: PackageVersion,
-  private?: boolean,
-  main?: ModulePath,
-  dependencies?: PackageDict,
-  devDependencies?: PackageDict,
-  peerDependencies?: PackageDict,
-  [_: string]: any
+export interface PackageManifest {
+  readonly name?: PackageName
+  readonly version?: PackageVersion
+  readonly private?: boolean
+  readonly main?: ModulePath
+  readonly dependencies?: PackageDict
+  readonly devDependencies?: PackageDict
+  readonly peerDependencies?: PackageDict
+  readonly [_: string]: any
 }
 
-export type PackageListItem = {
-  path: Path,
-  manifestFile: Path,
-  manifestContent: PackageManifest
+export interface PackageListItem {
+  readonly path: Path
+  readonly manifestFile: Path
+  readonly manifestContent: PackageManifest
 }
 
 export type PackageList = PackageListItem[]
@@ -32,36 +32,36 @@ export type DependencyVersion = PackageVersion
 export type DependencyType = 'prod' | 'dev' | 'peer'
 export type DependencyRequirement = PackageVersionRequirement
 
-export type Dependency = {
-  name: DependencyName,
-  version: DependencyVersion,
-  type: DependencyType,
-  requirement: DependencyRequirement,
-  info: PackageListItem
+export interface Dependency {
+  readonly name: DependencyName
+  readonly version: DependencyVersion
+  readonly type: DependencyType
+  readonly requirement: DependencyRequirement
+  readonly info: PackageListItem
 }
 
 export type DependencyList = Dependency[]
 
-export type DependencyMapValue = {
-  list: DependencyList,
-  dependant: PackageListItem
+export interface DependencyMapValue {
+  readonly list: DependencyList
+  readonly dependant: PackageListItem
 }
 
-export type DependencyMap = {
+export interface DependencyMap {
   [dirname: string]: DependencyMapValue
 }
 
-export type MismatchedDependencyListItem = Dependency & {
+export interface MismatchedDependencyListItem extends Dependency {
   update: PackageVersionRequirement
 }
 
 export type MismatchedDependencyList = MismatchedDependencyListItem[]
 
-export type MismatchedDependencyMapValue = {
+export interface MismatchedDependencyMapValue {
   list: MismatchedDependencyList,
   dependant: PackageListItem
 }
 
-export type MismatchedDependencyMap = {
+export interface MismatchedDependencyMap {
   [name: string]: MismatchedDependencyMapValue
 }
