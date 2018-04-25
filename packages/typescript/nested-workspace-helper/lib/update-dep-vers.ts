@@ -12,6 +12,10 @@ import {
 } from './types'
 
 import {
+  WritablePackageList
+} from './utils/private-types'
+
+import {
   WritablePackageDict
 } from './utils/private-types'
 
@@ -38,7 +42,7 @@ export namespace updateDependencyVersions {
   }
 
   export function fromMismatchedDependencyMap (map: MismatchedDependencyMap) {
-    const result: PackageList = []
+    const result: WritablePackageList = []
 
     for (const {dependant, list} of Object.values(map)) {
       result.push({

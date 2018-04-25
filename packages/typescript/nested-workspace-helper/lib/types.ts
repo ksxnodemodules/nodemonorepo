@@ -25,7 +25,7 @@ export interface PackageListItem {
   readonly manifestContent: PackageManifest
 }
 
-export type PackageList = PackageListItem[]
+export type PackageList = ReadonlyArray<PackageListItem>
 
 export type DependencyName = PackageName
 export type DependencyVersion = PackageVersion
@@ -40,7 +40,7 @@ export interface Dependency {
   readonly info: PackageListItem
 }
 
-export type DependencyList = Dependency[]
+export type DependencyList = ReadonlyArray<Dependency>
 
 export interface DependencyMapValue {
   readonly list: DependencyList
@@ -55,7 +55,7 @@ export interface MismatchedDependencyListItem extends Dependency {
   update: PackageVersionRequirement
 }
 
-export type MismatchedDependencyList = MismatchedDependencyListItem[]
+export type MismatchedDependencyList = ReadonlyArray<MismatchedDependencyListItem>
 
 export interface MismatchedDependencyMapValue {
   readonly list: MismatchedDependencyList,

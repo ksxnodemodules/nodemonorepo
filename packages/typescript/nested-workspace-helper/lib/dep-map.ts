@@ -9,6 +9,7 @@ import {
 } from './types'
 
 import {
+  WritableDependencyList,
   WritableDependencyMap
 } from './utils/private-types'
 
@@ -23,7 +24,7 @@ export namespace getDependencyMap {
     const result: WritableDependencyMap = {}
 
     function dict2list (dict: PackageDict, type: DependencyType): DependencyList {
-      const result: DependencyList = []
+      const result: WritableDependencyList = []
 
       for (const [name, requirement] of Object.entries(dict)) {
         for (const info of pkgs) {
