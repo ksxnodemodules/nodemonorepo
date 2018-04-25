@@ -1,5 +1,4 @@
 import {SpawnSyncOptions, SpawnSyncReturns} from 'child_process'
-import prln from 'preloaded-node'
 
 export type IOData = Buffer | string
 export type OptionalIOData = IOData | null | undefined

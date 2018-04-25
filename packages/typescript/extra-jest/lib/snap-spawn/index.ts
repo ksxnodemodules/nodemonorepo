@@ -1,5 +1,4 @@
 import {SpawnSyncOptions} from 'child_process'
-import prln from 'preloaded-node'
 import * as xsnap from '../snap'
 import spawn, {SpawnFunc} from './lib/spawn'
 
