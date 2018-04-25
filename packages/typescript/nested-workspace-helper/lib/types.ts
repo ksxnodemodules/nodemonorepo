@@ -66,10 +66,10 @@ export interface MismatchedDependencyListItem extends Dependency {
 export type MismatchedDependencyList = MismatchedDependencyListItem[]
 
 export interface MismatchedDependencyMapValue {
-  list: MismatchedDependencyList,
-  dependant: PackageListItem
+  readonly list: MismatchedDependencyList,
+  readonly dependant: PackageListItem
 }
 
 export interface MismatchedDependencyMap {
-  [name: string]: MismatchedDependencyMapValue
+  readonly [name: string]: MismatchedDependencyMapValue
 }
