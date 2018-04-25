@@ -21,7 +21,7 @@ export interface SpawnReturns {
   readonly stderr: string | null
 }
 
-export type SpawnFunc = <T>(argv: string[], options: SpawnSyncOptions) => SpawnSyncReturns<T>
+export type SpawnFunc = (argv: string[], options: SpawnSyncOptions) => SpawnSyncReturns<IOData>
 
 export function spawn (
   fn: SpawnFunc,
