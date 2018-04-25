@@ -66,6 +66,12 @@ export interface MismatchedDependencyMap {
   readonly [name: string]: MismatchedDependencyMapValue
 }
 
+export type NetworkStatus = NetworkStatus.NotFound
+
+export namespace NetworkStatus {
+  export type NotFound = 'NotFound'
+}
+
 export interface Registry {
   readonly name: string
   readonly description?: string
@@ -76,7 +82,11 @@ export interface PackageRegistry extends Registry {
   readonly versions: RegistryPackageVersionSet
 }
 
+export type PackageRegistryResponse = PackageRegistry | NetworkStatus
+
 export interface PackageVersionRegistry extends RegistryPackageManifest {}
+
+export type PackageVersionRegistryResponse = PackageVersionRegistry | NetworkStatus
 
 export interface RegistryPackageVersionSet {
   readonly [version: string]: PackageVersionRegistry

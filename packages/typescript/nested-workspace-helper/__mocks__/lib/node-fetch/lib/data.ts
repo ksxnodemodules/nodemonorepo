@@ -1,6 +1,7 @@
 import {
   PackageRegistry,
   PackageVersionRegistry,
+  RegistryPackageSet,
   RegistryPackageVersionSet
 } from '../../../../lib/types'
 
@@ -11,11 +12,8 @@ const pkgVers = require('../data/pkg-vers.yaml') as Readonly<{
 export {
   PackageRegistry,
   PackageVersionRegistry,
+  RegistryPackageSet,
   RegistryPackageVersionSet
-}
-
-export interface PackageSet {
-  readonly [name: string]: PackageRegistry
 }
 
 export const packages = Object
@@ -34,5 +32,5 @@ export const packages = Object
   } as PackageRegistry))
   .reduce(
     (prev, current) => Object.assign(prev, {[current.name]: current}),
-    {} as PackageSet
+    {} as RegistryPackageSet
   )

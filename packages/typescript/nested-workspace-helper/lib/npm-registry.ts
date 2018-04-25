@@ -4,51 +4,73 @@ import fetch from 'node-fetch'
 import {
   PackageName,
   PackageVersion,
+  NetworkStatus,
   Registry,
-  PackageRegistry,
-  PackageVersionRegistry
+  PackageRegistryResponse,
+  PackageVersionRegistryResponse
 } from './types'
 
-export const registry = 'http://registry.npmjs.org'
+export const NPM_REGISTRY = 'http://registry.npmjs.org'
+export const YARN_REGISTRY = 'https://registry.yarnpkg.com'
 
-const regurlobj = new URL(registry)
-
-export const mkhref = (segments: string[]) =>
-  new URL(segments.join('/'), registry).href
+export const mkhref = (
+  segments: string[],
+  registry: string
+) => new URL(segments.join('/'), registry).href
 
 class NetworkError extends Error {
   public readonly name = 'NetworkError'
 }
 
-async function getRegistry<Result> (...segments: string[]): Promise<Result> {
-  const response = await fetch(mkhref(segments))
+export function createFactory (registry: string = NPM_REGISTRY) {
+  async function getRegistry<Result> (...segments: string[]): Promise<Result | NetworkStatus> {
+    const response = await fetch(mkhref(segments, registry))
 
-  if (!response.ok) {
-    throw new NetworkError(
-      `Server response with status ${response.status} (${response.statusText}) instead of OK`
-    )
+    if (!response.ok) {
+      if (response.status === 404) {
+        return 'NotFound'
+      }
+
+      throw new NetworkError(
+        `Server response with status ${response.status} (${response.statusText}) instead of OK`
+      )
+    }
+
+    return {...await response.json()}
   }
 
-  return {...await response.json()}
+  function getAllVersions (pkg: PackageName): Promise<PackageRegistryResponse> {
+    return getRegistry(pkg)
+  }
+
+  function getSpecificVersion (
+    pkg: PackageName,
+    version: PackageVersion
+  ): Promise<PackageVersionRegistryResponse> {
+    return getRegistry(pkg, version)
+  }
+
+  function getLatestVersion (pkg: PackageName): Promise<PackageVersionRegistryResponse> {
+    return getSpecificVersion(pkg, 'latest')
+  }
+
+  return {
+    registry,
+    getRegistry,
+    getAllVersions,
+    getSpecificVersion,
+    getLatestVersion
+  }
 }
 
-export function getAllVersions (pkg: PackageName): Promise<PackageRegistry> {
-  return getRegistry(pkg)
+export namespace createFactory {
+  export const REGISTRIES = {
+    NPM: NPM_REGISTRY,
+    YARN: YARN_REGISTRY
+  }
+
+  export const npm = createFactory(NPM_REGISTRY)
+  export const yarn = createFactory(YARN_REGISTRY)
 }
 
-export function getSpecificVersion (
-  pkg: PackageName,
-  version: PackageVersion
-): Promise<PackageVersionRegistry> {
-  return getRegistry(pkg, version)
-}
-
-export function getLatestVersion (pkg: PackageName): Promise<PackageVersionRegistry> {
-  return getSpecificVersion(pkg, 'latest')
-}
-
-export default {
-  getAllVersions,
-  getSpecificVersion,
-  getLatestVersion
-}
+export default createFactory

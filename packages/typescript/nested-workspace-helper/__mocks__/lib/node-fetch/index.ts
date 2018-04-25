@@ -1,6 +1,6 @@
 import {URL} from 'url'
 import * as semver from 'semver'
-import {registry} from '../../../lib/npm-registry'
+import {NPM_REGISTRY, YARN_REGISTRY} from '../../../lib/npm-registry'
 import {packages, PackageVersionRegistry, PackageRegistry} from './lib/data'
 
 export interface Response {
@@ -25,14 +25,21 @@ const latest = (versions: string[]) => versions.reduce(
 const latestOfPackage = (name: string) =>
   latest(Object.keys(packages[name].versions))
 
-const getAllVersions = ([name]: string[]): PackageRegistry => packages[name]
+export type EmptyResponse = 'EmptyResponse'
+
+const getAllVersions = (
+  [name]: string[]
+): PackageRegistry | EmptyResponse =>
+  name in packages ? packages[name] : 'EmptyResponse'
 
 const getSpecificVersion = (
   [name, version]: string[]
-): PackageVersionRegistry =>
-  version === 'latest'
-    ? getSpecificVersion([name, latestOfPackage(name)])
-    : packages[name].versions[version]
+): PackageVersionRegistry | EmptyResponse => {
+  if (version === 'latest') return getSpecificVersion([name, latestOfPackage(name)])
+  const pkg = packages[name]
+  if (pkg) return pkg.versions[version]
+  return 'EmptyResponse'
+}
 
 const getResponseObject = (segments: string[]) => {
   switch (segments.length) {
@@ -48,8 +55,10 @@ const getResponseObject = (segments: string[]) => {
 export async function fetch (request: string): Promise<Response> {
   const urlobj = new URL(request)
 
-  if (urlobj.origin !== registry) {
-    console.error(`[ERROR] Requested URL ${request} does not belongs to ${registry}`)
+  if (![NPM_REGISTRY, YARN_REGISTRY].includes(urlobj.origin)) {
+    console.warn(
+      `[WARN] Requested URL ${request} matches neither ${NPM_REGISTRY} nor ${YARN_REGISTRY}`
+    )
 
     return {
       ok: false,
@@ -61,6 +70,16 @@ export async function fetch (request: string): Promise<Response> {
   }
 
   const object = getResponseObject(getSegments(urlobj.pathname))
+
+  if (object === 'EmptyResponse') {
+    return {
+      ok: false,
+      status: 404,
+      statusText: 'Not Found',
+      text: async () => '{}',
+      json: async () => ({})
+    }
+  }
 
   const text = async () => JSON.stringify(object, undefined, 2)
   const json = async () => object

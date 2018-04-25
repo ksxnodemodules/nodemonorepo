@@ -5,11 +5,7 @@ Object {
   "getDependencyMap": [Function],
   "listAllPackages": [Function],
   "listMismatchedDependencies": [Function],
-  "npmRegistry": Object {
-    "getAllVersions": [Function],
-    "getLatestVersion": [Function],
-    "getSpecificVersion": [Function],
-  },
+  "npmRegistry": [Function],
   "updateDependencyVersions": [Function],
 }
 `;
