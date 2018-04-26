@@ -17,7 +17,7 @@ const NOT_FOUND_JSON_FUNC = async () => null
 const getSegments = (pathname: string) =>
   pathname.split('/').slice(1)
 
-const latest = (versions: string[]) => versions.reduce(
+const latest = (versions: ReadonlyArray<string>) => versions.reduce(
   (prev, current) =>
     semver.compare(prev, current) === 1 ? prev : current
 )

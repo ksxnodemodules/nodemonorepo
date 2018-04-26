@@ -5,14 +5,14 @@ import * as fsx from 'fs-extra'
 import * as fsTreeUtils from 'fs-tree-utils'
 import {DeepFunc} from 'fs-tree-utils/lib/traverse'
 
-export type IgnoreArray = string[]
+export type IgnoreArray = ReadonlyArray<string>
 export type StringTester = string
 export type IgnoreContainerPattern = StringTester
-export type DeltaFileChooser = (ignoreFilePath: string) => string[]
+export type DeltaFileChooser = (ignoreFilePath: string) => ReadonlyArray<string>
 
 export interface FilePair {
   readonly ignore: string
-  readonly delta: string[]
+  readonly delta: ReadonlyArray<string>
 }
 
 export interface Delta {
@@ -28,7 +28,7 @@ export interface LoadedDelta {
 
 export interface DeltaPair {
   readonly ignore: string
-  readonly delta: LoadedDelta[]
+  readonly delta: ReadonlyArray<LoadedDelta>
 }
 
 export namespace createFileChooser {
@@ -90,14 +90,14 @@ export function add (
 }
 
 export namespace add {
-  export function multipleDeltas (array: IgnoreArray, addend: Delta[]) {
+  export function multipleDeltas (array: IgnoreArray, addend: ReadonlyArray<Delta>) {
     return addend.reduce(
       (array, delta) => add(array, delta),
       array
     )
   }
 
-  export function multipleLoadedDeltas (array: IgnoreArray, addend: LoadedDelta[]) {
+  export function multipleLoadedDeltas (array: IgnoreArray, addend: ReadonlyArray<LoadedDelta>) {
     return multipleDeltas(array, addend.map(x => x.content))
   }
 }
@@ -124,7 +124,7 @@ export async function getFilePairs (
   dirname = '.',
   delta = DEFAULT_DELTA_FILES_CHOOSER,
   deep = DEFAULT_TRAVERSE_DEEP
-): Promise<FilePair[]> {
+): Promise<ReadonlyArray<FilePair>> {
   return (
     await getIgnoreFiles(ignoreFileBasename, ignoreFileContainerPattern, dirname, deep)
   ).map(ignore => ({
@@ -139,7 +139,7 @@ export async function getDeltaPairs (
   dirname = '.',
   delta = DEFAULT_DELTA_FILES_CHOOSER,
   deep = DEFAULT_TRAVERSE_DEEP
-): Promise<DeltaPair[]> {
+): Promise<ReadonlyArray<DeltaPair>> {
   return Promise.all(
     (
       await getFilePairs(

@@ -6,7 +6,7 @@ import virtualEnvironment from '../.lib/virtual-env'
 
 const {apply} = virtualEnvironment
 
-const addArgv = (argv: string[]) => [bin, ...argv]
+const addArgv = (argv: ReadonlyArray<string>) => [bin, ...argv]
 
 const snapSpawn = (...argv: string[]) =>
   xjest.snapSpawn.snap(spawnSync, addArgv(argv))
@@ -28,7 +28,7 @@ describe('help message', () => {
 
 describe('command', () => {
   describe('igfileman write', () => {
-    const mkfn = (argv: string[]) => {
+    const mkfn = (argv: ReadonlyArray<string>) => {
       const finalArgv = addArgv(['write', ...argv])
       return apply(async () => {
         xjest.snapSpawn.spawn(spawnSync, finalArgv)

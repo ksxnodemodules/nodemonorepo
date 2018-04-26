@@ -10,9 +10,9 @@ export type FlatReadResultFileContent = {[filename: string]: FileContent}
 
 export type FlatReadResultValue = {
   fileContents: FlatReadResultFileContent,
-  directories: string[],
-  files: string[],
-  all: string[]
+  directories: ReadonlyArray<string>,
+  files: ReadonlyArray<string>,
+  all: ReadonlyArray<string>
 }
 
 export type FlatReadResult = Promise<FlatReadResultValue>

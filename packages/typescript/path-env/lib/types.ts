@@ -1,6 +1,6 @@
 export type PathDelimiter = ':' | ';'
 export type PathElement = string
-export type PathArray = PathElement[]
+export type PathArray = ReadonlyArray<PathElement>
 export type PathString = PathElement
 export type Env = {[name: string]: string | undefined}
 

@@ -1,12 +1,12 @@
 import {SpawnSyncOptions} from 'child_process'
 import * as xsnap from '../snap'
-import spawn, {SpawnFunc, createSpawnFunc} from './lib/spawn'
+import spawn, {SpawnFunc, Argv, createSpawnFunc} from './lib/spawn'
 
 export * from './lib/spawn'
 
 export function snap (
   fn: SpawnFunc,
-  argv?: string[],
+  argv?: Argv,
   options?: SpawnSyncOptions,
   snap = xsnap.safe
 ) {
@@ -16,7 +16,7 @@ export function snap (
 export namespace snap {
   export const withCommand = (
     command: string,
-    argv?: string[],
+    argv?: Argv,
     options?: SpawnSyncOptions,
     fsnap = xsnap.safe
   ) => snap(createSpawnFunc(command), argv, options, fsnap)

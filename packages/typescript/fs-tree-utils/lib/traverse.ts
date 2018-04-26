@@ -13,7 +13,7 @@ export type DepsDict = {
   [packageName: string]: string
 }
 export type TraversalResultItem = TraversalDeepFuncParam
-export type TraversalResult = TraversalResultItem[]
+export type TraversalResult = ReadonlyArray<TraversalResultItem>
 export type AsyncTraversalResult = Promise<TraversalResult>
 
 /**
@@ -28,7 +28,7 @@ export async function traverse (
   level = 0
 ): AsyncTraversalResult {
   const dirChildren = await fsx.readdir(dirname)
-  let result: TraversalResult = []
+  const result: TraversalResultItem[] = []
 
   for (const item of dirChildren) {
     const itemPath = path.join(dirname, item)

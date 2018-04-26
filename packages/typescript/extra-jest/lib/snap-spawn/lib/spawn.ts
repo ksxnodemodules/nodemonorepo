@@ -13,6 +13,8 @@ const fmtStdIO = (buf: OptionalIOData): string | null => {
   return str.trim() ? `\n${str}\n` : '((EMPTY))'
 }
 
+export type Argv = ReadonlyArray<string>
+
 export interface SpawnReturns {
   readonly status: number | null
   readonly signal: string | null
@@ -21,13 +23,13 @@ export interface SpawnReturns {
   readonly stderr: string | null
 }
 
-export type SpawnFunc = (argv: string[], options: SpawnSyncOptions) => SpawnSyncReturns<IOData>
+export type SpawnFunc = (argv: Argv, options: SpawnSyncOptions) => SpawnSyncReturns<IOData>
 
 export const createSpawnFunc = (command: string): SpawnFunc => ramda.partial(spawnSync, [command])
 
 export function spawn (
   fn: SpawnFunc,
-  argv: string[] = [],
+  argv: Argv = [],
   options: SpawnSyncOptions = {}
 ): SpawnReturns {
   const {status, signal, error, stdout, stderr} = fn(
@@ -47,7 +49,7 @@ export function spawn (
 export namespace spawn {
   export const withCommand = (
     command: string,
-    argv?: string[],
+    argv?: Argv,
     options?: SpawnSyncOptions
   ) => spawn(createSpawnFunc(command), argv, options)
 }

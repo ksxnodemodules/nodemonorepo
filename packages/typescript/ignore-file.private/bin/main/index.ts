@@ -67,7 +67,7 @@ function writeHandler ({
   base: string,
   root: string,
   output: string,
-  delta: string[],
+  delta: ReadonlyArray<string>,
   container: string
 }): void {
   if (!delta.length) {
