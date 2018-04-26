@@ -13,7 +13,7 @@ const fmtStdIO = (buf: OptionalIOData): string | null => {
   return str.trim() ? `\n${str}\n` : '((EMPTY))'
 }
 
-export type Argv = ReadonlyArray<string>
+export type Argv = string[]
 
 export interface SpawnReturns {
   readonly status: number | null
