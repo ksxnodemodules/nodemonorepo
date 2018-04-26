@@ -2,6 +2,7 @@ dependencies:
   '@types/fs-extra': 5.0.1
   '@types/node': 9.6.4
   '@types/node-fetch': 1.6.9
+  '@types/ramda': 0.25.24
   '@types/semver': 5.5.0
   '@types/yargs': 11.0.0
   chalk: 2.4.0
@@ -10,12 +11,10 @@ dependencies:
   fs-tree-utils: 'link:../fs-tree-utils'
   node-fetch: 2.1.2
   preloaded-node: 'link:../../javascript/preloaded-node'
+  ramda: 0.25.0
   semver: 5.5.0
   unique-temp-path: 'link:../unique-temp-path'
   yargs: 11.0.0
-devDependencies:
-  '@types/ramda': 0.25.24
-  ramda: 0.25.0
 packages:
   /@types/fs-extra/5.0.1:
     dependencies:
@@ -42,7 +41,7 @@ packages:
     resolution:
       integrity: sha512-SJe0g5cZeGNDP5sD8mIX3scb+eq8LQQZ60FXiKZHipYSeEFZ5EKml+NNMiO76F74TY4PoMWlNxF/YRY40FOvZQ==
   /@types/ramda/0.25.24:
-    dev: true
+    dev: false
     resolution:
       integrity: sha512-c0TmWA7d4y9KLJJwL/cLPEfSReSgFQK9BtemcCATT48lMeyD7HG8IfGY8bamSuz/Byx1l+13hZV0PCvHsgMB3w==
   /@types/semver/5.5.0:
@@ -334,7 +333,7 @@ packages:
     resolution:
       integrity: sha1-8FKijacOYYkX7wqKw0wa5aaChrM=
   /ramda/0.25.0:
-    dev: true
+    dev: false
     resolution:
       integrity: sha512-GXpfrYVPwx3K7RQ6aYT8KPS8XViSXUVJT1ONhoKPE9VAleW42YE+U+8VEyGWt41EnEQW7gwecYJriTI0pKoecQ==
   /require-directory/2.1.1:
