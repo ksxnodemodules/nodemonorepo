@@ -5,6 +5,10 @@ import {PackageList, PackageListItem} from './types'
 
 export type ListPackageResult = Promise<PackageList>
 
+/**
+ * List all packages in a monorepo
+ * @param dirname Directory of the monorepo
+ */
 export async function listAllPackages (dirname: string): ListPackageResult {
   const createItem = async (x: TraversalResultItem): Promise<PackageListItem> =>
     ({path: x.container, manifestFile: x.path, manifestContent: await fsx.readJSON(x.path)})

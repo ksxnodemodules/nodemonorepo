@@ -16,6 +16,9 @@ export type PartitionResult = Promise<PublishableClassification>
  *   - `publishables`: Public packages that can be published (version does not exist in registry)
  *   - `unpublishables`: Public packages that are not publishable (version exists in registry)
  *   - `skip`: Private and/or anonymous packages that are not meant to be published
+ * @param dirname Directory that contains all packages
+ * @param registry URL origin of registry (e.g. `http://registry.npmjs.org`)
+ * @returns The three groups of packages
  */
 export async function partition (dirname: string, registry?: string) {
   return partition.fromPackageList(await listAllPackages(dirname), registry)
@@ -24,6 +27,9 @@ export async function partition (dirname: string, registry?: string) {
 export namespace partition {
   /**
    * Classify packages from list
+   * @param list List of packages
+   * @param registry URL origin of registry (e.g. `http://registry.npmjs.org`)
+   * @returns The three groups of packages
    * @see partition
    */
   export async function fromPackageList (list: PackageList, registry?: string): PartitionResult {
@@ -74,6 +80,8 @@ export namespace partition {
 
   /**
    * Create a factory base on registry
+   * @param registry URL origin of registry (e.g. `http://registry.npmjs.org`)
+   * @returns A collection of functions
    */
   export function createFactory (registry?: string) {
     const param: [typeof registry] = [registry]

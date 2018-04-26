@@ -15,11 +15,20 @@ import {
 
 export type DependencyMapResult = Promise<DependencyMap>
 
+/**
+ * @param dirname Directory that contains all packages
+ * @returns A dependant-dependency map
+ */
 export async function getDependencyMap (dirname: string): DependencyMapResult {
   return getDependencyMap.fromPackageList(await listAllPackages(dirname))
 }
 
 export namespace getDependencyMap {
+  /**
+   * Get dependency map from package list
+   * @param pkgs List of packages
+   * @returns A dependant-dependency map
+   */
   export function fromPackageList (pkgs: PackageList): DependencyMap {
     const result: WritableDependencyMap = {}
 

@@ -19,6 +19,12 @@ import {
   WritablePackageDict
 } from './utils/private-types'
 
+/**
+ * Update mismatched version requirements
+ * @param dirname Directory that contains all packages
+ * @param check Corrects version requirement
+ * @param jsonIndent JSON indentiation of every `package.json` files
+ */
 export async function updateDependencyVersions (
   dirname: string,
   check: Checker,

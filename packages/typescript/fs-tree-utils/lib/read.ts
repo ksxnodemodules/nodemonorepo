@@ -17,6 +17,10 @@ export type FlatReadResultValue = {
 
 export type FlatReadResult = Promise<FlatReadResultValue>
 
+/**
+ * @param name Directory name
+ * @returns Nested directory tree representation
+ */
 export async function readNested (name: string): NestedReadResult {
   const stats = await fsx.stat(name)
 
@@ -36,6 +40,11 @@ export async function readNested (name: string): NestedReadResult {
   throw new Error(`Unknown filesystem type of path '${name}'`)
 }
 
+/**
+ * @param name Directory name
+ * @param deep When to dive deeper
+ * @returns List of files, directories and file contents
+ */
 export async function readFlat (name: string, deep?: DeepFunc): FlatReadResult {
   const array = await traverse(name, deep)
   const [fileList, dirList] = ramda.partition(x => x.stats.isFile(), array)

@@ -2,6 +2,11 @@ import * as path from 'path'
 import * as fsx from 'fs-extra'
 import {Tree} from './types'
 
+/**
+ * Create a directory tree
+ * @param tree Tree structure that needs to create
+ * @param container Where to place the tree
+ */
 export async function create (tree: Tree, container: string = '') {
   if (typeof tree === 'string') {
     await fsx.writeFile(container, tree)

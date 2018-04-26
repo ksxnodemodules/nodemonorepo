@@ -13,6 +13,9 @@ import {
 export const NPM_REGISTRY = 'http://registry.npmjs.org'
 export const YARN_REGISTRY = 'https://registry.yarnpkg.com'
 
+/**
+ * Create an URL of registry
+ */
 export const mkhref = (
   segments: string[],
   registry: string
@@ -22,6 +25,10 @@ class NetworkError extends Error {
   public readonly name = 'NetworkError'
 }
 
+/**
+ * @param registry Registry URL origin
+ * @returns A collection of functions
+ */
 export function createFactory (registry: string = NPM_REGISTRY) {
   async function getRegistry<Result> (...segments: string[]): Promise<Result | NetworkStatus> {
     const response = await fetch(mkhref(segments, registry))
@@ -39,10 +46,19 @@ export function createFactory (registry: string = NPM_REGISTRY) {
     return {...await response.json()}
   }
 
+  /**
+   * @param pkg Package name
+   * @returns Information of the package with all of its versions
+   */
   function getAllVersions (pkg: PackageName): Promise<PackageRegistryResponse> {
     return getRegistry(pkg)
   }
 
+  /**
+   * @param pkg Package name
+   * @param version Package version
+   * @returns Information of a single version of the package
+   */
   function getSpecificVersion (
     pkg: PackageName,
     version: PackageVersion
@@ -50,6 +66,10 @@ export function createFactory (registry: string = NPM_REGISTRY) {
     return getRegistry(pkg, version)
   }
 
+  /**
+   * @param pkg Package name
+   * @returns Information of the latest version of the package
+   */
   function getLatestVersion (pkg: PackageName): Promise<PackageVersionRegistryResponse> {
     return getSpecificVersion(pkg, 'latest')
   }

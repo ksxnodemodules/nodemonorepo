@@ -16,6 +16,12 @@ export type TraversalResultItem = TraversalDeepFuncParam
 export type TraversalResult = TraversalResultItem[]
 export type AsyncTraversalResult = Promise<TraversalResult>
 
+/**
+ * @param dirname Top directory
+ * @param deep When to dive deeper
+ * @param level Initial level of dept
+ * @returns Array of traversed files/directories
+ */
 export async function traverse (
   dirname: string,
   deep: DeepFunc = () => true,

@@ -14,6 +14,12 @@ import {
   MismatchedDependencyMap
 } from './types'
 
+/**
+ * Function that corrects version requirement
+ * @param version Dependency's actual version
+ * @param range Dependency's old version requirement
+ * @param type Whether dependency is `prod`, `dev` or `peer`
+ */
 export type Checker = (
   version: PackageVersion,
   range: PackageVersionRequirement,
@@ -26,6 +32,12 @@ export type CheckerCollection = {
 
 export type CheckDependencyResult = Promise<MismatchedDependencyMap>
 
+/**
+ * List all mismatched dependencies
+ * @param dirname Directory that contains all packages
+ * @param check Corrects mismatched version requirement
+ * @returns A map of updated dependency
+ */
 export async function listMismatchedDependencies (
   dirname: string,
   check: Checker
@@ -72,6 +84,7 @@ export namespace listMismatchedDependencies {
 
   export type AllCheckerCollection = CheckerCollection & typeof prvAllCheckers
 
+  /** Collection of all checkers */
   export const allCheckers: AllCheckerCollection = prvAllCheckers
 
   export function fromDependencyList (
