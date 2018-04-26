@@ -54,10 +54,10 @@ export namespace base {
 export const createFactory = base.createFactory
 
 export namespace virtualEnvironment {
-  export type Info = {
-    tree: TreeObject,
-    container: string,
-    previousWorkingDirectory: string
+  export interface Info {
+    readonly tree: TreeObject
+    readonly container: string
+    readonly previousWorkingDirectory: string
   }
 
   export function createFactory (tree: TreeObject, container = tempPath()) {
