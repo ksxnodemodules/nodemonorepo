@@ -1,17 +1,19 @@
 import * as path from 'path'
 import * as fsx from 'fs-extra'
 
-export type TraversalDeepFuncParam = {
-  container: string,
-  item: string,
-  path: string,
-  stats: fsx.Stats,
-  level: number
+export interface TraversalDeepFuncParam {
+  readonly container: string
+  readonly item: string
+  readonly path: string
+  readonly stats: fsx.Stats
+  readonly level: number
 }
+
+export interface DepsDict {
+  readonly [packageName: string]: string
+}
+
 export type DeepFunc = (x: TraversalDeepFuncParam) => boolean
-export type DepsDict = {
-  [packageName: string]: string
-}
 export type TraversalResultItem = TraversalDeepFuncParam
 export type TraversalResult = ReadonlyArray<TraversalResultItem>
 export type AsyncTraversalResult = Promise<TraversalResult>

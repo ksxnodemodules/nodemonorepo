@@ -6,13 +6,19 @@ import {Tree, TreeObject, FileContent} from './types'
 
 export type NestedReadResult = Promise<Tree>
 
-export type FlatReadResultFileContent = {[filename: string]: FileContent}
+export interface FlatReadResultFileContent {
+  readonly [filename: string]: FileContent
+}
 
-export type FlatReadResultValue = {
-  fileContents: FlatReadResultFileContent,
-  directories: ReadonlyArray<string>,
-  files: ReadonlyArray<string>,
-  all: ReadonlyArray<string>
+interface WritableFlatReadResultFileContent {
+  [filename: string]: FileContent
+}
+
+export interface FlatReadResultValue {
+  readonly fileContents: FlatReadResultFileContent
+  readonly directories: ReadonlyArray<string>
+  readonly files: ReadonlyArray<string>
+  readonly all: ReadonlyArray<string>
 }
 
 export type FlatReadResult = Promise<FlatReadResultValue>
@@ -56,7 +62,7 @@ export async function readFlat (name: string, deep?: DeepFunc): FlatReadResult {
     )
   )
 
-  let fileContents: FlatReadResultFileContent = {}
+  let fileContents: WritableFlatReadResultFileContent = {}
   for (const [name, promise] of map) {
     fileContents[name] = await promise
   }

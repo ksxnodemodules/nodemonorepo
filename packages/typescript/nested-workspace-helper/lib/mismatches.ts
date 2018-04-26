@@ -26,8 +26,8 @@ export type Checker = (
   type: DependencyType
 ) => PackageVersionRequirement
 
-export type CheckerCollection = {
-  [name: string]: Checker
+export interface CheckerCollection {
+  readonly [name: string]: Checker
 }
 
 export type CheckDependencyResult = Promise<MismatchedDependencyMap>
@@ -82,7 +82,8 @@ export namespace listMismatchedDependencies {
     ANY_OR_EQUAL_MIN, ANY_OR_TILDA_MIN, ANY_OR_CARET_MIN
   }
 
-  export type AllCheckerCollection = CheckerCollection & typeof prvAllCheckers
+  export type PrvCheckerCollection = Readonly<typeof prvAllCheckers>
+  export interface AllCheckerCollection extends CheckerCollection, PrvCheckerCollection {}
 
   /** Collection of all checkers */
   export const allCheckers: AllCheckerCollection = prvAllCheckers

@@ -2,7 +2,10 @@ export type PathDelimiter = ':' | ';'
 export type PathElement = string
 export type PathArray = ReadonlyArray<PathElement>
 export type PathString = PathElement
-export type Env = {[name: string]: string | undefined}
+
+export interface Env {
+  readonly [name: string]: string | undefined
+}
 
 export type PathFactory = {
   get: {
