@@ -1,5 +1,5 @@
 root:
-  toBeNew: # Didn't think about this one
+  toBeNew:
     package.json: |
       {
         "name": "to-be-new",

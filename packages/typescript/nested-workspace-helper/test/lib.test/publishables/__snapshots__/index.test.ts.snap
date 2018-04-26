@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+Object {
+  "publishables": Array [
+    Object {
+      "manifestContent": Object {
+        "__describe": "Package has yet to exist in registry",
+        "__expect": "Should be publishable",
+        "name": "to-be-new",
+        "version": "0.0.0",
+      },
+      "manifestFile": "root/toBeNew/package.json",
+      "path": "root/toBeNew",
+    },
+    Object {
+      "manifestContent": Object {
+        "__describe": "Package's version (10.11.12) does not exist in registry",
+        "__expect": "Should be publishable",
+        "name": "to-not-be-duplicated",
+        "version": "10.11.12",
+      },
+      "manifestFile": "root/toNotBeDuplicated/package.json",
+      "path": "root/toNotBeDuplicated",
+    },
+  ],
+  "skip": Array [
+    Object {
+      "manifestContent": Object {
+        "__describe": "Private package",
+        "__expect": "Should be in skip",
+        "name": "to-be-private",
+        "private": true,
+        "version": "0.0.0",
+      },
+      "manifestFile": "root/toBePrivate/package.json",
+      "path": "root/toBePrivate",
+    },
+    Object {
+      "manifestContent": Object {
+        "__describe": "Package has no name",
+        "__expect": "Should be in skip",
+        "version": "0.0.0",
+      },
+      "manifestFile": "root/toNotBeNamed/package.json",
+      "path": "root/toNotBeNamed",
+    },
+  ],
+  "unpublishables": Array [
+    Object {
+      "manifestContent": Object {
+        "__describe": "Package's version (1.2.3) already exist in registry",
+        "__expect": "Should be unpublishable",
+        "name": "to-be-duplicated",
+        "version": "1.2.3",
+      },
+      "manifestFile": "root/toBeDuplicated/package.json",
+      "path": "root/toBeDuplicated",
+    },
+    Object {
+      "manifestContent": Object {
+        "__describe": "Package does not have a version",
+        "__expect": "Should be in unpublishable",
+        "name": "to-not-have-version",
+      },
+      "manifestFile": "root/toNotHaveVersion/package.json",
+      "path": "root/toNotHaveVersion",
+    },
+  ],
+}
+`;
