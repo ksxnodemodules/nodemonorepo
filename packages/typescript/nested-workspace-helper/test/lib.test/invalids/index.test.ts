@@ -13,3 +13,9 @@ it('contains no valid packages', apply(async () => {
   const failure = result.filter(x => x.manifestContent.__expect === 'Valid')
   expect(failure).toEqual([])
 }))
+
+it('contains only invalid packages', apply(async () => {
+  const result = await getPromise()
+  const failure = result.filter(x => x.manifestContent.__expect !== 'Invalid')
+  expect(failure).toEqual([])
+}))
