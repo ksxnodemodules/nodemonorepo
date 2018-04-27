@@ -1,0 +1,138 @@
+root:
+  dependencies:
+    public:
+      package.json: |
+        {
+          "name": "public",
+          "version": "0.0.0",
+          "private": false
+        }
+    private:
+      package.json: |
+        {
+          "name": "private",
+          "version": "0.0.0",
+          "private": true
+        }
+  dependants:
+    publicPackages:
+      useNoDependencies:
+        package.json: |
+          {
+            "name": "pub-use-no-dependencies",
+            "version": "0.0.0",
+            "__describe": "This public package uses no dependencies",
+            "__expect": "Valid"
+          }
+      useOnlyPublicDependencies:
+        package.json: |
+          {
+            "name": "pub-use-only-public-dependencies",
+            "version": "0.0.0",
+            "dependencies": {
+              "public": "^0.0.0"
+            },
+            "peerDependencies": {
+              "useNoDependencies": "^0.0.0"
+            },
+            "__describe": "This public package uses only public dependencies",
+            "__expect": "Valid"
+          }
+      usePrivateDependenciesInProduction:
+        package.json: |
+          {
+            "name": "pub-use-private-dependencies-in-production",
+            "version": "0.0.0",
+            "dependencies": {
+              "private": "^0.0.0"
+            },
+            "__describe": "This public package has a private dependencies in its `dependencies` object",
+            "__expect": "Invalid"
+          }
+      usePrivateDependenciesInDevelopment:
+        package.json: |
+          {
+            "name": "pub-use-private-dependencies-in-development",
+            "version": "0.0.0",
+            "devDependencies": {
+              "private": "^0.0.0"
+            },
+            "__describe": "This public package has a private dependencies in its `devDependencies` object",
+            "__expect": "Valid"
+          }
+      usePrivateDependenciesAsPeer:
+        package.json: |
+          {
+            "name": "pub-use-private-dependencies-as-peer",
+            "version": "0.0.0",
+            "peerDependencies": {
+              "private": "^0.0.0"
+            },
+            "__describe": "This public package has a private dependencies in its `peerDependencies` object",
+            "__expect": "Invalid"
+          }
+      useInvalidDependenciesInProduction:
+        package.json: |
+          {
+            "name": "pub-use-invalid-dependencies-in-production",
+            "version": "0.0.0",
+            "dependencies": {
+              "pub-use-private-dependencies-in-production": "^0.0.0",
+              "pub-use-private-dependencies-as-peer": "^0.0.0"
+            },
+            "__describe": "This public package has an invalid dependencies in its `dependencies` object",
+            "__expect": "Invalid"
+          }
+      useInvalidDependenciesInDepevelopment:
+        package.json: |
+          {
+            "name": "pub-use-invalid-dependencies-in-development",
+            "version": "0.0.0",
+            "devDependencies": {
+              "pub-use-private-dependencies-in-production": "^0.0.0",
+              "pub-use-private-dependencies-as-peer": "^0.0.0",
+              "pub-use-invalid-dependencies-in-production": "^0.0.0"
+            },
+            "__describe": "This public package has an invalid dependencies in its `devDependencies` object",
+            "__expect": "Invalid"
+          }
+      useInvalidDependenciesAsPeer:
+        package.json: |
+          {
+            "name": "pub-use-invalid-dependencies-as-peer",
+            "version": "0.0.0",
+            "peerDependencies": {
+              "pub-use-private-dependencies-in-production": "^0.0.0",
+              "pub-use-private-dependencies-as-peer": "^0.0.0",
+              "pub-use-invalid-dependencies-in-production": "^0.0.0",
+              "pub-use-invalid-dependencies-in-development": "^0.0.0"
+            },
+            "__describe": "This public package has an invalid dependencies in its `peerDependencies` object",
+            "__expect": "Invalid"
+          }
+    privatePackages:
+      usePrivateDependenciesInProduction:
+        package.json: |
+          {
+            "name": "prv-use-private-dependencies-in-production",
+            "version": "0.0.0",
+            "private": true,
+            "dependencies": {
+              "private": "^0.0.0"
+            },
+            "__describe": "This private package has a private dependencies in its `dependencies` object",
+            "__expect": "Valid"
+          }
+      usePrivateDependenciesAsPeer:
+        package.json: |
+          {
+            "name": "prv-use-private-dependencies-as-peer",
+            "version": "0.0.0",
+            "private": true,
+            "peerDependencies": {
+              "prv-use-private-dependencies-in-production": "^0.0.0",
+              "private": "^0.0.0"
+            },
+            "__describe": "This private package has a private dependencies in its `peerDependencies` object",
+            "__expect": "Valid"
+          }

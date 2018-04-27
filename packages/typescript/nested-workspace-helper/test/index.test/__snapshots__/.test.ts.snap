@@ -2,7 +2,15 @@
 
 exports[`main module matches snapshot 1`] = `
 Object {
+  "InvalidPackage": Object {
+    "Reason": Object {
+      "Base": [Function],
+      "InvalidDependencies": [Function],
+      "PrivateDependencies": [Function],
+    },
+  },
   "getDependencyMap": [Function],
+  "listAllInvalidPackages": [Function],
   "listAllPackages": [Function],
   "listMismatchedDependencies": [Function],
   "npmRegistry": [Function],

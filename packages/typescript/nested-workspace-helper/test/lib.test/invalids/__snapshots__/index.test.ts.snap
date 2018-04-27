@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+Array [
+  Object {
+    "manifestContent": Object {
+      "__describe": "This public package has a private dependencies in its \`peerDependencies\` object",
+      "__expect": "Invalid",
+      "name": "pub-use-private-dependencies-as-peer",
+      "peerDependencies": Object {
+        "private": "^0.0.0",
+      },
+      "version": "0.0.0",
+    },
+    "manifestFile": "root/dependants/publicPackages/usePrivateDependenciesAsPeer/package.json",
+    "path": "root/dependants/publicPackages/usePrivateDependenciesAsPeer",
+    "reason": Array [
+      PrivateDependencies {
+        "dependencies": Array [
+          Object {
+            "info": Object {
+              "manifestContent": Object {
+                "name": "private",
+                "private": true,
+                "version": "0.0.0",
+              },
+              "manifestFile": "root/dependencies/private/package.json",
+              "path": "root/dependencies/private",
+            },
+            "name": "private",
+            "requirement": "^0.0.0",
+            "type": "peer",
+            "version": "0.0.0",
+          },
+        ],
+        "description": "Public package depends on non-dev private dependencies",
+      },
+    ],
+  },
+  Object {
+    "manifestContent": Object {
+      "__describe": "This public package has a private dependencies in its \`dependencies\` object",
+      "__expect": "Invalid",
+      "dependencies": Object {
+        "private": "^0.0.0",
+      },
+      "name": "pub-use-private-dependencies-in-production",
+      "version": "0.0.0",
+    },
+    "manifestFile": "root/dependants/publicPackages/usePrivateDependenciesInProduction/package.json",
+    "path": "root/dependants/publicPackages/usePrivateDependenciesInProduction",
+    "reason": Array [
+      PrivateDependencies {
+        "dependencies": Array [
+          Object {
+            "info": Object {
+              "manifestContent": Object {
+                "name": "private",
+                "private": true,
+                "version": "0.0.0",
+              },
+              "manifestFile": "root/dependencies/private/package.json",
+              "path": "root/dependencies/private",
+            },
+            "name": "private",
+            "requirement": "^0.0.0",
+            "type": "prod",
+            "version": "0.0.0",
+          },
+        ],
+        "description": "Public package depends on non-dev private dependencies",
+      },
+    ],
+  },
+]
+`;

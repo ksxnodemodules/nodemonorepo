@@ -177,3 +177,66 @@ export interface PublishableClassification {
 export type PublishablePackageList = PackageList
 export type UnpublisablePackageList = PackageList
 export type PrivatePackageList = PackageList
+
+export namespace InvalidPackage {
+  export type List = ReadonlyArray<ListItem>
+
+  export interface ListItem<ReasonElement = Reason> extends PackageListItem {
+    readonly reason: ReadonlyArray<ReasonElement>
+  }
+
+  export type Reason =
+    Reason.InvalidDependencies |
+    Reason.PrivateDependencies
+
+  export namespace Reason {
+    export abstract class Base {
+      /**
+       * Helpful description that can be use as error message
+       */
+      abstract readonly description: string
+    }
+
+    export class InvalidDependencies extends Base {
+      readonly description = 'Package depends on invalid dependencies'
+
+      /**
+       * List of invalid dependecies that the package depended on
+       */
+      readonly dependencies: InvalidDependencies.DependencyList
+
+      /**
+       * @param dependencies Intended value of `this.dependencies`
+       */
+      constructor (dependencies: InvalidDependencies.DependencyList) {
+        super()
+        this.dependencies = dependencies
+      }
+    }
+
+    export namespace InvalidDependencies {
+      export type DependencyList = ReadonlyArray<ListItem>
+    }
+
+    export class PrivateDependencies extends Base {
+      readonly description = 'Public package depends on non-dev private dependencies'
+
+      /**
+       * List of private dependencies that this package depended on as prod or peer
+       */
+      readonly dependencies: PrivateDependencies.DependencyList
+
+      /**
+       * @param dependencies Intended value of `this.dependencies`
+       */
+      constructor (dependencies: PrivateDependencies.DependencyList) {
+        super()
+        this.dependencies = dependencies
+      }
+    }
+
+    export namespace PrivateDependencies {
+      export type DependencyList = ReadonlyArray<Dependency>
+    }
+  }
+}
