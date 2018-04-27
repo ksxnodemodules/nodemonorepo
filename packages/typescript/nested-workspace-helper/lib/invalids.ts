@@ -13,7 +13,9 @@ export async function listAllInvalidPackages (dirname: string): Promise<InvalidP
 export namespace listAllInvalidPackages {
   export function fromDependencyMap (map: DependencyMap): InvalidPackage.List {
     const prvs = fromDependencyMap.getPrivateDependencyVictims(map)
-    const ivls = fromDependencyMap.getInvalidDependencyVictims(map, prvs)
+    const dups = fromDependencyMap.getNameDuplicationVictims(map)
+    const sfds = fromDependencyMap.getSelfDependenceVictims(map)
+    const ivls = fromDependencyMap.getInvalidDependencyVictims(map, [...prvs, ...dups, ...sfds])
 
     const db: {
       [name: string]: InvalidPackage.ListItem
@@ -50,9 +52,17 @@ export namespace listAllInvalidPackages {
       const newInvalids: getInvalidDependencyVictims.Victim[] = []
 
       for (const {list, dependant} of Object.values(map)) {
-        const filtered = invalids.filter(
-          x => list.some(y => x.manifestContent.name === y.name)
-        )
+        const filtered = invalids
+          .filter(
+            x => x.reason.map(
+              xx => xx instanceof InvalidPackage.Reason.NameDuplication
+            ).length === 0
+          )
+          .filter(
+            x => list.some(
+              xx => x.manifestContent.name === xx.name
+            )
+          )
 
         if (filtered.length) {
           const reason = [new InvalidPackage.Reason.InvalidDependencies(filtered)]
@@ -93,6 +103,73 @@ export namespace listAllInvalidPackages {
     export namespace getPrivateDependencyVictims {
       export interface Victim extends InvalidPackage.ListItem<
         InvalidPackage.Reason.PrivateDependencies
+      > {}
+    }
+
+    export function getNameDuplicationVictims (
+      map: DependencyMap
+    ): ReadonlyArray<getNameDuplicationVictims.Victim> {
+      const result: getNameDuplicationVictims.Victim[] = []
+
+      const duplications = new Set<string>()
+
+      const db: {
+        [name: string]: PackageListItem[]
+      } = {}
+
+      for (const {dependant} of Object.values(map)) {
+        const {name} = dependant.manifestContent
+        if (!name) continue
+
+        if (name in db) {
+          duplications.add(name)
+          db[name].push(dependant)
+        } else {
+          db[name] = [dependant]
+        }
+      }
+
+      for (const name of duplications) {
+        const list = db[name]
+
+        for (const item of list) {
+          const reason = [new InvalidPackage.Reason.NameDuplication(list)]
+          result.push({...item, reason})
+        }
+      }
+
+      return result
+    }
+
+    export namespace getNameDuplicationVictims {
+      export interface Victim extends InvalidPackage.ListItem<
+        InvalidPackage.Reason.NameDuplication
+      > {}
+    }
+
+    export function getSelfDependenceVictims (
+      map: DependencyMap
+    ): ReadonlyArray<getSelfDependenceVictims.Victim> {
+      const reason = [new InvalidPackage.Reason.SelfDependence()]
+
+      const filter = ({manifestContent: {
+        name,
+        dependencies = {},
+        devDependencies = {},
+        peerDependencies = {}
+      }}: PackageListItem) =>
+        name && name in {...dependencies, ...devDependencies, ...peerDependencies}
+
+      return Object
+        .values(map)
+        .map(x => x.dependant)
+        .filter(filter)
+        .map(x => ({...x, reason}))
+    }
+
+    export namespace getSelfDependenceVictims {
+      export interface Victim extends InvalidPackage.ListItem<
+        InvalidPackage.Reason.SelfDependence
       > {}
     }
   }

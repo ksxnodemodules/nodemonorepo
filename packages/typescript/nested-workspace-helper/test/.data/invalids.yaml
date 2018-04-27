@@ -110,6 +110,57 @@ root:
             "__describe": "This public package has an invalid dependencies in its `peerDependencies` object",
             "__expect": "Invalid"
           }
+      duplicatedNames:
+        abc:
+          package.json: |
+            {
+              "name": "duplicated-name",
+              "version": "0.0.0",
+              "__describe": "This package is named 'duplicated-name'",
+              "__expect": "Invalid"
+            }
+        def:
+          package.json: |
+            {
+              "name": "duplicated-name",
+              "version": "0.0.0",
+              "__describe": "This package is named 'duplicated-name'",
+              "__expect": "Invalid"
+            }
+      useItselfAsDependency:
+        inProduction:
+          package.json: |
+            {
+              "name": "pub-use-itself-as-prod",
+              "version": "0.0.0",
+              "dependencies": {
+                "pub-use-itself-as-prod": "^0.0.0"
+              },
+              "__describe": "This package has its own name in its `dependencies`",
+              "__expect": "Invalid"
+            }
+        inDevelopment:
+          package.json: |
+            {
+              "name": "pub-use-itself-as-dev",
+              "version": "0.0.0",
+              "devDependencies": {
+                "pub-use-itself-as-dev": "^0.0.0"
+              },
+              "__describe": "This package has its own name in its `dependencies`",
+              "__expect": "Invalid"
+            }
+        asPeer:
+          package.json: |
+            {
+              "name": "pub-use-itself-as-peer",
+              "version": "0.0.0",
+              "peerDependencies": {
+                "pub-use-itself-as-peer": "^0.0.0"
+              },
+              "__describe": "This package has its own name in its `peerDependencies`",
+              "__expect": "Invalid"
+            }
     privatePackages:
       usePrivateDependenciesInProduction:
         package.json: |
@@ -136,3 +187,71 @@ root:
             "__describe": "This private package has a private dependencies in its `peerDependencies` object",
             "__expect": "Valid"
           }
+      useInvalidDependencies:
+        package.json: |
+          {
+            "name": "prv-use-invalid-dependencies",
+            "version": "0.0.0",
+            "private": true,
+            "devDependencies": {
+              "duplicated-name": "^0.0.0"
+            },
+            "__describe": "This private package has an invalid dependencies in its `devDependencies` object",
+            "__expect": "Invalid"
+          }
+      duplicatedNames:
+        ghi:
+          package.json: |
+            {
+              "name": "duplicated-name",
+              "version": "0.0.0",
+              "private": true,
+              "__describe": "This package is named 'duplicated-name'",
+              "__expect": "Invalid"
+            }
+        jkl:
+          package.json: |
+            {
+              "name": "duplicated-name",
+              "version": "0.0.0",
+              "private": true,
+              "__describe": "This package is named 'duplicated-name'",
+              "__expect": "Invalid"
+            }
+      useItselfAsDependency:
+        inProduction:
+          package.json: |
+            {
+              "name": "prv-use-itself-as-prod",
+              "version": "0.0.0",
+              "private": true,
+              "dependencies": {
+                "prv-use-itself-as-prod": "^0.0.0"
+              },
+              "__describe": "This package has its own name in its `dependencies`",
+              "__expect": "Invalid"
+            }
+        inDevelopment:
+          package.json: |
+            {
+              "name": "prv-use-itself-as-dev",
+              "version": "0.0.0",
+              "private": true,
+              "devDependencies": {
+                "prv-use-itself-as-dev": "^0.0.0"
+              },
+              "__describe": "This package has its own name in its `dependencies`",
+              "__expect": "Invalid"
+            }
+        asPeer:
+          package.json: |
+            {
+              "name": "prv-use-itself-as-peer",
+              "version": "0.0.0",
+              "private": true,
+              "peerDependencies": {
+                "prv-use-itself-as-peer": "^0.0.0"
+              },
+              "__describe": "This package has its own name in its `peerDependencies`",
+              "__expect": "Invalid"
+            }

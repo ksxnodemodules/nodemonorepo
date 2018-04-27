@@ -187,7 +187,9 @@ export namespace InvalidPackage {
 
   export type Reason =
     Reason.InvalidDependencies |
-    Reason.PrivateDependencies
+    Reason.PrivateDependencies |
+    Reason.NameDuplication |
+    Reason.SelfDependence
 
   export namespace Reason {
     export abstract class Base {
@@ -237,6 +239,28 @@ export namespace InvalidPackage {
 
     export namespace PrivateDependencies {
       export type DependencyList = ReadonlyArray<Dependency>
+    }
+
+    export class NameDuplication extends Base {
+      readonly description = 'Package with name that is used by another package'
+
+      /**
+       * List of packages that used the name
+       */
+      readonly duplicates: NameDuplication.PackageList
+
+      constructor (duplicates: NameDuplication.PackageList) {
+        super()
+        this.duplicates = duplicates
+      }
+    }
+
+    export namespace NameDuplication {
+      export type PackageList = ReadonlyArray<PackageListItem>
+    }
+
+    export class SelfDependence extends Base {
+      readonly description = 'Package that depends on itself'
     }
   }
 }
