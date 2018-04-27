@@ -1,9 +1,10 @@
 'use strict'
 const main = require('./lib/test-spawn')
 
-test('JavaScript Code Style: StandardJS', () => {
+test('TypeScript: Type Check', () => {
   main({
-    defaultExecutable: 'standard',
+    defaultExecutable: 'tsc',
+    argvPrefix: ['--noEmit'],
     envMiddleName: 'STANDARDJS'
   })
 })
