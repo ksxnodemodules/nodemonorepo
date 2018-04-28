@@ -55,7 +55,9 @@ export namespace classify {
             classified.set(id, new Set([item]))
           }
         }
-      } else {}
+      } else {
+        unclassified.add(item)
+      }
     }
 
     return {classified, unclassified}

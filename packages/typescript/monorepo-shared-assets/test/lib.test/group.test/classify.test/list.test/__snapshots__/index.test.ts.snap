@@ -1,5 +1,107 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`multiple distribution in advanced use 1`] = `
+Object {
+  "classified": Map {
+    Multiple {
+      "factor": 2,
+    } => Set {
+      0,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+    },
+    Multiple {
+      "factor": 3,
+    } => Set {
+      0,
+      6,
+      9,
+      12,
+      15,
+    },
+    Multiple {
+      "factor": 4,
+    } => Set {
+      0,
+      8,
+      12,
+    },
+    Multiple {
+      "factor": 5,
+    } => Set {
+      0,
+      10,
+      15,
+    },
+    Multiple {
+      "factor": 6,
+    } => Set {
+      0,
+      12,
+    },
+    Multiple {
+      "factor": 7,
+    } => Set {
+      0,
+      14,
+    },
+    Multiple {
+      "factor": 8,
+    } => Set {
+      0,
+    },
+    Multiple {
+      "factor": 9,
+    } => Set {
+      0,
+    },
+    Multiple {
+      "factor": 10,
+    } => Set {
+      0,
+    },
+    Multiple {
+      "factor": 11,
+    } => Set {
+      0,
+    },
+    Multiple {
+      "factor": 12,
+    } => Set {
+      0,
+    },
+    Multiple {
+      "factor": 13,
+    } => Set {
+      0,
+    },
+    Multiple {
+      "factor": 14,
+    } => Set {
+      0,
+    },
+    Multiple {
+      "factor": 15,
+    } => Set {
+      0,
+    },
+  },
+  "unclassified": Set {
+    1,
+    2,
+    3,
+    5,
+    7,
+    11,
+    13,
+  },
+}
+`;
+
 exports[`multiple distribution in basic use 1`] = `
 Object {
   "classified": Map {
@@ -62,7 +164,15 @@ Object {
       0,
     },
   },
-  "unclassified": Set {},
+  "unclassified": Set {
+    1,
+    2,
+    3,
+    5,
+    7,
+    11,
+    13,
+  },
 }
 `;
 
@@ -72,80 +182,32 @@ Map {
     "shift": 0,
   } => Set {
     0,
+    4,
+    8,
+    12,
   },
   RingOf4 {
     "shift": 1,
   } => Set {
     1,
+    5,
+    9,
+    13,
   },
   RingOf4 {
     "shift": 2,
   } => Set {
     2,
+    6,
+    10,
+    14,
   },
   RingOf4 {
     "shift": 3,
   } => Set {
     3,
-  },
-  RingOf4 {
-    "shift": 4,
-  } => Set {
-    4,
-  },
-  RingOf4 {
-    "shift": 5,
-  } => Set {
-    5,
-  },
-  RingOf4 {
-    "shift": 6,
-  } => Set {
-    6,
-  },
-  RingOf4 {
-    "shift": 7,
-  } => Set {
     7,
-  },
-  RingOf4 {
-    "shift": 8,
-  } => Set {
-    8,
-  },
-  RingOf4 {
-    "shift": 9,
-  } => Set {
-    9,
-  },
-  RingOf4 {
-    "shift": 10,
-  } => Set {
-    10,
-  },
-  RingOf4 {
-    "shift": 11,
-  } => Set {
     11,
-  },
-  RingOf4 {
-    "shift": 12,
-  } => Set {
-    12,
-  },
-  RingOf4 {
-    "shift": 13,
-  } => Set {
-    13,
-  },
-  RingOf4 {
-    "shift": 14,
-  } => Set {
-    14,
-  },
-  RingOf4 {
-    "shift": 15,
-  } => Set {
     15,
   },
 }
