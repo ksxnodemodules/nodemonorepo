@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`multiple distribution 1`] = `
+Object {
+  "classified": Object {
+    "x10": Array [
+      0,
+    ],
+    "x11": Array [
+      0,
+    ],
+    "x12": Array [
+      0,
+    ],
+    "x13": Array [
+      0,
+    ],
+    "x14": Array [
+      0,
+    ],
+    "x15": Array [
+      0,
+    ],
+    "x2": Array [
+      0,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+    ],
+    "x3": Array [
+      0,
+      6,
+      9,
+      12,
+      15,
+    ],
+    "x4": Array [
+      0,
+      8,
+      12,
+    ],
+    "x5": Array [
+      0,
+      10,
+      15,
+    ],
+    "x6": Array [
+      0,
+      12,
+    ],
+    "x7": Array [
+      0,
+      14,
+    ],
+    "x8": Array [
+      0,
+    ],
+    "x9": Array [
+      0,
+    ],
+  },
+  "unclassified": Array [
+    1,
+    2,
+    3,
+    5,
+    7,
+    11,
+    13,
+  ],
+}
+`;
+
+exports[`single distribution 1`] = `
+Object {
+  "Ring(4, 0)": Set {
+    0,
+    4,
+    8,
+    12,
+  },
+  "Ring(4, 1)": Set {
+    1,
+    5,
+    9,
+    13,
+  },
+  "Ring(4, 2)": Set {
+    2,
+    6,
+    10,
+    14,
+  },
+  "Ring(4, 3)": Set {
+    3,
+    7,
+    11,
+    15,
+  },
+}
+`;

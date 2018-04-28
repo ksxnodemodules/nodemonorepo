@@ -1,0 +1,181 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`multiple distribution in basic use 1`] = `
+Object {
+  "classified": Map {
+    "x2" => Set {
+      0,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+    },
+    "x3" => Set {
+      0,
+      6,
+      9,
+      12,
+      15,
+    },
+    "x4" => Set {
+      0,
+      8,
+      12,
+    },
+    "x5" => Set {
+      0,
+      10,
+      15,
+    },
+    "x6" => Set {
+      0,
+      12,
+    },
+    "x7" => Set {
+      0,
+      14,
+    },
+    "x8" => Set {
+      0,
+    },
+    "x9" => Set {
+      0,
+    },
+    "x10" => Set {
+      0,
+    },
+    "x11" => Set {
+      0,
+    },
+    "x12" => Set {
+      0,
+    },
+    "x13" => Set {
+      0,
+    },
+    "x14" => Set {
+      0,
+    },
+    "x15" => Set {
+      0,
+    },
+  },
+  "unclassified": Set {},
+}
+`;
+
+exports[`single distribution in advanced use 1`] = `
+Map {
+  RingOf4 {
+    "shift": 0,
+  } => Set {
+    0,
+  },
+  RingOf4 {
+    "shift": 1,
+  } => Set {
+    1,
+  },
+  RingOf4 {
+    "shift": 2,
+  } => Set {
+    2,
+  },
+  RingOf4 {
+    "shift": 3,
+  } => Set {
+    3,
+  },
+  RingOf4 {
+    "shift": 4,
+  } => Set {
+    4,
+  },
+  RingOf4 {
+    "shift": 5,
+  } => Set {
+    5,
+  },
+  RingOf4 {
+    "shift": 6,
+  } => Set {
+    6,
+  },
+  RingOf4 {
+    "shift": 7,
+  } => Set {
+    7,
+  },
+  RingOf4 {
+    "shift": 8,
+  } => Set {
+    8,
+  },
+  RingOf4 {
+    "shift": 9,
+  } => Set {
+    9,
+  },
+  RingOf4 {
+    "shift": 10,
+  } => Set {
+    10,
+  },
+  RingOf4 {
+    "shift": 11,
+  } => Set {
+    11,
+  },
+  RingOf4 {
+    "shift": 12,
+  } => Set {
+    12,
+  },
+  RingOf4 {
+    "shift": 13,
+  } => Set {
+    13,
+  },
+  RingOf4 {
+    "shift": 14,
+  } => Set {
+    14,
+  },
+  RingOf4 {
+    "shift": 15,
+  } => Set {
+    15,
+  },
+}
+`;
+
+exports[`single distribution in basic use 1`] = `
+Map {
+  "Ring(4, 0)" => Set {
+    0,
+    4,
+    8,
+    12,
+  },
+  "Ring(4, 1)" => Set {
+    1,
+    5,
+    9,
+    13,
+  },
+  "Ring(4, 2)" => Set {
+    2,
+    6,
+    10,
+    14,
+  },
+  "Ring(4, 3)" => Set {
+    3,
+    7,
+    11,
+    15,
+  },
+}
+`;
