@@ -1,4 +1,4 @@
-import classify from '../../../../../lib/group/classify/list'
+import classify from '../../../../../lib/group/classify/map'
 
 const getList = () => range(0, 16)
 const factors = Array.from(range(2, 16))

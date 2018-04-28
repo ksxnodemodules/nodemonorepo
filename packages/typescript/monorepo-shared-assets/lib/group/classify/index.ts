@@ -1,3 +1,3 @@
 import dict from './dict'
-import list from './list'
-export {dict, list}
+import map from './map'
+export {dict, map}
