@@ -1,9 +1,11 @@
+import {iter} from '../../../../index'
 import partition from '../../../../lib/group/partition'
 
 it('using list of classifiers', () => {
   type Classifier = partition.Classifier<any>
 
-  const list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  const list = Array
+    .from(iter.fns.range(10))
     .map(x => [x, String(x), Symbol(x), [x], {x}, Boolean(x & 1)])
     .reduce((prev, current) => [...prev, ...current])
 

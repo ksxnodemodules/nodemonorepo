@@ -1,7 +1,7 @@
-import classify from '../../../../../lib/group/classify/map'
-
-const getList = () => range(0, 16)
-const factors = Array.from(range(2, 16))
+import {iter, group} from '../../../../../index'
+const classify = group.classify.map
+const getList = () => iter.fns.range(16)
+const factors = Array.from(iter.fns.range(2).up.to(16))
 
 describe('single distribution', () => {
   it('in basic use', () => {
@@ -60,9 +60,3 @@ describe('multiple distribution', () => {
     expect(classify.multiDistribute(getList(), classifier, identifier)).toMatchSnapshot()
   })
 })
-
-function * range (begin: number, end: number): IterableIterator<number> {
-  if (begin === end) return
-  yield begin
-  yield * range(begin + 1, end)
-}
