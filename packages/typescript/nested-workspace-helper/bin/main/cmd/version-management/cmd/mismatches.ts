@@ -11,9 +11,7 @@ import {
 import {
   listMismatchedDependencies,
   updateDependencyVersions,
-  MismatchedDependencyListItem,
-  MismatchedDependencyList,
-  MismatchedDependencyMap
+  MismatchedDependency
 } from '../../../../../index'
 
 import {
@@ -165,13 +163,13 @@ function handler (argv: Arguments & {
         type,
         version,
         requirement
-      }: MismatchedDependencyListItem): string {
+      }: MismatchedDependency.ListItem): string {
         const additionalInfo = `(type: ${type}, upstream: ${version}, outdated: ${requirement})`
         return `  - ${name} → ${update} ${chalk.dim(additionalInfo)}`
       }
     }
 
-    function filter (list: MismatchedDependencyList): MismatchedDependencyList {
+    function filter (list: MismatchedDependency.List): MismatchedDependency.List {
       return list.filter(({update, requirement}) => update !== requirement)
     }
   }

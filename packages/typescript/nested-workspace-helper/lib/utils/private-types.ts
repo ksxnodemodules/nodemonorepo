@@ -1,17 +1,16 @@
 import {
-  PackageListItem,
-  PackageVersionRequirement,
-  Dependency,
-  DependencyMapValue
+  Package,
+  Basic,
+  Dependency
 } from '../types'
 
-export type WritablePackageList = PackageListItem[]
+export type WritablePackageList = Package.ListItem[]
 export type WritableDependencyList = Dependency[]
 
 export interface WritablePackageDict {
-  [name: string]: PackageVersionRequirement
+  [name: string]: Basic.PackageVersionRequirement
 }
 
 export interface WritableDependencyMap {
-  [dirname: string]: DependencyMapValue
+  [dirname: string]: Dependency.MapValue
 }

@@ -1,8 +1,8 @@
 import getDependencyMap from './dep-map'
 
 import {
-  PackageListItem,
-  DependencyMap,
+  Package,
+  Dependency,
   InvalidPackage
 } from './types'
 
@@ -11,7 +11,7 @@ export async function listAllInvalidPackages (dirname: string): Promise<InvalidP
 }
 
 export namespace listAllInvalidPackages {
-  export function fromDependencyMap (map: DependencyMap): InvalidPackage.List {
+  export function fromDependencyMap (map: Dependency.Map): InvalidPackage.List {
     const prvs = fromDependencyMap.getPrivateDependencyVictims(map)
     const dups = fromDependencyMap.getNameDuplicationVictims(map)
     const sfds = fromDependencyMap.getSelfDependenceVictims(map)
@@ -46,7 +46,7 @@ export namespace listAllInvalidPackages {
 
   export namespace fromDependencyMap {
     export function getInvalidDependencyVictims (
-      map: DependencyMap,
+      map: Dependency.Map,
       invalids: InvalidPackage.List
     ): ReadonlyArray<getInvalidDependencyVictims.Victim> {
       const newInvalids: getInvalidDependencyVictims.Victim[] = []
@@ -78,7 +78,7 @@ export namespace listAllInvalidPackages {
     }
 
     export function getPrivateDependencyVictims (
-      map: DependencyMap
+      map: Dependency.Map
     ): ReadonlyArray<getPrivateDependencyVictims.Victim> {
       const result: getPrivateDependencyVictims.Victim[] = []
 
@@ -105,14 +105,14 @@ export namespace listAllInvalidPackages {
     }
 
     export function getNameDuplicationVictims (
-      map: DependencyMap
+      map: Dependency.Map
     ): ReadonlyArray<getNameDuplicationVictims.Victim> {
       const result: getNameDuplicationVictims.Victim[] = []
 
       const duplications = new Set<string>()
 
       const db: {
-        [name: string]: PackageListItem[]
+        [name: string]: Package.ListItem[]
       } = {}
 
       for (const {dependant} of Object.values(map)) {
@@ -146,7 +146,7 @@ export namespace listAllInvalidPackages {
     }
 
     export function getSelfDependenceVictims (
-      map: DependencyMap
+      map: Dependency.Map
     ): ReadonlyArray<getSelfDependenceVictims.Victim> {
       const reason = [new InvalidPackage.Reason.SelfDependence()]
 
@@ -155,7 +155,7 @@ export namespace listAllInvalidPackages {
         dependencies = {},
         devDependencies = {},
         peerDependencies = {}
-      }}: PackageListItem) =>
+      }}: Package.ListItem) =>
         name && name in {...dependencies, ...devDependencies, ...peerDependencies}
 
       return Object

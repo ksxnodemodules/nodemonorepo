@@ -3,12 +3,8 @@ import {deserialize} from './utils/json'
 import getMismatchedDependencies, {Checker} from './mismatches'
 
 import {
-  PackageList,
-  PackageListItem,
-  PackageDict,
-  PackageManifest,
-  MismatchedDependencyMap,
-  MismatchedDependencyList
+  Package,
+  MismatchedDependency
 } from './types'
 
 import {
@@ -41,13 +37,13 @@ export async function updateDependencyVersions (
 }
 
 export namespace updateDependencyVersions {
-  export function fromPackageList (pkgs: PackageList, check: Checker) {
+  export function fromPackageList (pkgs: Package.List, check: Checker) {
     return fromMismatchedDependencyMap(
       getMismatchedDependencies.fromPackageList(pkgs, check)
     )
   }
 
-  export function fromMismatchedDependencyMap (map: MismatchedDependencyMap) {
+  export function fromMismatchedDependencyMap (map: MismatchedDependency.Map) {
     const result: WritablePackageList = []
 
     for (const {dependant, list} of Object.values(map)) {
@@ -64,9 +60,9 @@ export namespace updateDependencyVersions {
   }
 
   export function updateDependencies (
-    manifest: PackageManifest,
-    list: MismatchedDependencyList
-  ): PackageManifest {
+    manifest: Package.Manifest,
+    list: MismatchedDependency.List
+  ): Package.Manifest {
     const refs: {
       [_: string]: WritablePackageDict
     } = {
@@ -82,9 +78,9 @@ export namespace updateDependencyVersions {
     const result = {...manifest}
 
     const getDict = (
-      prev: PackageDict | void,
-      current: PackageDict
-    ): PackageDict | void => {
+      prev: Package.Dict | void,
+      current: Package.Dict
+    ): Package.Dict | void => {
       if (prev) return {...prev, ...current}
       if (Object.keys(current).length) return current
       return undefined
@@ -92,9 +88,9 @@ export namespace updateDependencyVersions {
 
     const setDict = (
       name: 'dependencies' | 'devDependencies' | 'peerDependencies',
-      dict: PackageDict
+      dict: Package.Dict
     ): void => {
-      const newDict = getDict(manifest[name] as PackageDict, dict)
+      const newDict = getDict(manifest[name] as Package.Dict, dict)
       if (newDict) result[name] = newDict
     }
 

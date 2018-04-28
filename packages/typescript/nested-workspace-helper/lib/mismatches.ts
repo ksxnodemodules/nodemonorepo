@@ -3,15 +3,10 @@ import listAllPackages from './list-pkgs'
 import getDependencyMap from './dep-map'
 
 import {
-  PackageVersion,
-  PackageVersionRequirement,
-  PackageList,
+  Basic,
+  Package,
   Dependency,
-  DependencyType,
-  DependencyList,
-  DependencyMap,
-  MismatchedDependencyList,
-  MismatchedDependencyMap
+  MismatchedDependency
 } from './types'
 
 /**
@@ -21,16 +16,16 @@ import {
  * @param type Whether dependency is `prod`, `dev` or `peer`
  */
 export type Checker = (
-  version: PackageVersion,
-  range: PackageVersionRequirement,
-  type: DependencyType
-) => PackageVersionRequirement
+  version: Basic.PackageVersion,
+  range: Basic.PackageVersionRequirement,
+  type: Dependency.Type
+) => Basic.PackageVersionRequirement
 
 export interface CheckerCollection {
   readonly [name: string]: Checker
 }
 
-export type CheckDependencyResult = Promise<MismatchedDependencyMap>
+export type CheckDependencyResult = Promise<MismatchedDependency.Map>
 
 /**
  * List all mismatched dependencies
@@ -89,10 +84,10 @@ export namespace listMismatchedDependencies {
   export const allCheckers: AllCheckerCollection = prvAllCheckers
 
   export function fromDependencyList (
-    dependencies: DependencyList,
-    packages: PackageList,
+    dependencies: Dependency.List,
+    packages: Package.List,
     check: Checker
-  ): MismatchedDependencyList {
+  ): MismatchedDependency.List {
     return dependencies.map(dependency => ({
       update: check(dependency.version, dependency.requirement, dependency.type),
       ...dependency
@@ -100,10 +95,10 @@ export namespace listMismatchedDependencies {
   }
 
   export function fromDependencyMap (
-    map: DependencyMap,
-    packages: PackageList,
+    map: Dependency.Map,
+    packages: Package.List,
     check: Checker
-  ): MismatchedDependencyMap {
+  ): MismatchedDependency.Map {
     return Object
       .entries(map)
       .map(
@@ -113,14 +108,14 @@ export namespace listMismatchedDependencies {
       .reduce(
         (obj, {path, list, dependant}) =>
           Object.assign(obj, {[path]: {list, dependant}}),
-        {} as MismatchedDependencyMap
+        {} as MismatchedDependency.Map
       )
   }
 
   export function fromPackageList (
-    pkgs: PackageList,
+    pkgs: Package.List,
     check: Checker
-  ): MismatchedDependencyMap {
+  ): MismatchedDependency.Map {
     const map = getDependencyMap.fromPackageList(pkgs)
     return fromDependencyMap(map, pkgs, check)
   }

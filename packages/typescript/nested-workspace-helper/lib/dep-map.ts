@@ -1,11 +1,8 @@
 import listAllPackages from './list-pkgs'
 
 import {
-  DependencyList,
-  DependencyMap,
-  DependencyType,
-  PackageDict,
-  PackageList
+  Dependency,
+  Package
 } from './types'
 
 import {
@@ -13,7 +10,7 @@ import {
   WritableDependencyMap
 } from './utils/private-types'
 
-export type DependencyMapResult = Promise<DependencyMap>
+export type DependencyMapResult = Promise<Dependency.Map>
 
 /**
  * @param dirname Directory that contains all packages
@@ -29,10 +26,10 @@ export namespace getDependencyMap {
    * @param pkgs List of packages
    * @returns A dependant-dependency map
    */
-  export function fromPackageList (pkgs: PackageList): DependencyMap {
+  export function fromPackageList (pkgs: Package.List): Dependency.Map {
     const result: WritableDependencyMap = {}
 
-    function dict2list (dict: PackageDict, type: DependencyType): DependencyList {
+    function dict2list (dict: Package.Dict, type: Dependency.Type): Dependency.List {
       const result: WritableDependencyList = []
 
       for (const [name, requirement] of Object.entries(dict)) {

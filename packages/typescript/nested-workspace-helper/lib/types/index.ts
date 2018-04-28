@@ -1,103 +1,117 @@
-export type Path = string
-export type PackageName = string
-export type PackageVersion = string
-export type PackageVersionRequirement = string
-export type ModulePath = string
-
 /**
- * Structure found in `dependencies`, `devDependencies` and `peerDependencies` in `package.json` files
+ * Basic types that other types base upon
  */
-export interface PackageDict {
-  readonly [name: string]: PackageVersionRequirement
+export namespace Basic {
+  export type Path = string
+  export type PackageName = string
+  export type PackageVersion = string
+  export type PackageVersionRequirement = string
+  export type ModulePath = string
 }
 
 /**
- * Structure of `package.json`
+ * Basic types for packages
  */
-export interface PackageManifest {
-  readonly name?: PackageName
-  readonly version?: PackageVersion
-  readonly private?: boolean
-  readonly main?: ModulePath
-  readonly dependencies?: PackageDict
-  readonly devDependencies?: PackageDict
-  readonly peerDependencies?: PackageDict
-  readonly [_: string]: any
+export namespace Package {
+  /**
+   * Structure found in `dependencies`, `devDependencies` and `peerDependencies` in `package.json` files
+   */
+  export interface Dict {
+    readonly [name: string]: Basic.PackageVersionRequirement
+  }
+
+  /**
+   * Structure of `package.json`
+   */
+  export interface Manifest {
+    readonly name?: Basic.PackageName
+    readonly version?: Basic.PackageVersion
+    readonly private?: boolean
+    readonly main?: Basic.ModulePath
+    readonly dependencies?: Dict
+    readonly devDependencies?: Dict
+    readonly peerDependencies?: Dict
+    readonly [_: string]: any
+  }
+
+  /**
+   * Returning value of `listAllPackages`
+   * @see listAllPackages
+   */
+  export type List = ReadonlyArray<ListItem>
+
+  export interface ListItem {
+    readonly path: Basic.Path
+    readonly manifestFile: Basic.Path
+    readonly manifestContent: Manifest
+  }
 }
-
-export interface PackageListItem {
-  readonly path: Path
-  readonly manifestFile: Path
-  readonly manifestContent: PackageManifest
-}
-
-/**
- * Returning value of `listAllPackages`
- * @see listAllPackages
- */
-export type PackageList = ReadonlyArray<PackageListItem>
-
-export type DependencyName = PackageName
-export type DependencyVersion = PackageVersion
-export type DependencyType = 'prod' | 'dev' | 'peer'
-export type DependencyRequirement = PackageVersionRequirement
 
 /**
  * Representation of a dependency listed in `package.json`
  */
 export interface Dependency {
   /** Name of dependency, it is property name in dependant's `package.json` dependencies object */
-  readonly name: DependencyName
+  readonly name: Dependency.Name
 
   /** Dependency's actual version, it is field `version` in dependency's own `package.json` */
-  readonly version: DependencyVersion
+  readonly version: Dependency.Version
 
   /** Whether dependency is `prod`, `dev`, or `peer` */
-  readonly type: DependencyType
+  readonly type: Dependency.Type
 
   /** Requirement of dependency, it is property value in dependant's `package.json` dependencies object */
-  readonly requirement: DependencyRequirement
+  readonly requirement: Dependency.Requirement
 
   /** Other information */
-  readonly info: PackageListItem
+  readonly info: Package.ListItem
 }
 
-export type DependencyList = ReadonlyArray<Dependency>
+export namespace Dependency {
+  export type Name = Basic.PackageName
+  export type Version = Basic.PackageVersion
+  export type Type = 'prod' | 'dev' | 'peer'
+  export type Requirement = Basic.PackageVersionRequirement
 
-export interface DependencyMapValue {
-  readonly list: DependencyList
-  readonly dependant: PackageListItem
+  export type List = ReadonlyArray<Dependency>
+
+  /**
+   * Dependant-dependency map within a project (directory)
+   *   - Key: Directory that contain dependant's `package.json`
+   *   - Value:
+   *     - `list`: List of dependencies
+   *     - `dependant`: Dependant's information
+   */
+  export interface Map {
+    readonly [dirname: string]: MapValue
+  }
+
+  export interface MapValue {
+    readonly list: List
+    readonly dependant: Package.ListItem
+  }
 }
 
-/**
- * Dependant-dependency map within a project (directory)
- *   - Key: Directory that contain dependant's `package.json`
- *   - Value:
- *     - `list`: List of dependencies
- *     - `dependant`: Dependant's information
- */
-export interface DependencyMap {
-  readonly [dirname: string]: DependencyMapValue
-}
+export namespace MismatchedDependency {
+  export interface ListItem extends Dependency {
+    update: Basic.PackageVersionRequirement
+  }
 
-export interface MismatchedDependencyListItem extends Dependency {
-  update: PackageVersionRequirement
-}
+  export type List = ReadonlyArray<ListItem>
 
-export type MismatchedDependencyList = ReadonlyArray<MismatchedDependencyListItem>
+  export interface MapValue {
+    readonly list: List,
+    readonly dependant: Package.ListItem
+  }
 
-export interface MismatchedDependencyMapValue {
-  readonly list: MismatchedDependencyList,
-  readonly dependant: PackageListItem
-}
-
-/**
- * Map of mismatched dependency
- * Structure similar to `DependencyMap`
- * @see DependencyMap
- */
-export interface MismatchedDependencyMap {
-  readonly [name: string]: MismatchedDependencyMapValue
+  /**
+   * Map of mismatched dependency
+   * Structure similar to `DependencyMap`
+   * @see DependencyMap
+   */
+  export interface Map {
+    readonly [name: string]: MapValue
+  }
 }
 
 /**
@@ -158,7 +172,7 @@ export interface RegistryPackageSet {
   readonly [name: string]: PackageRegistry
 }
 
-export interface RegistryPackageManifest extends PackageManifest {
+export interface RegistryPackageManifest extends Package.Manifest {
   readonly version: string
 }
 
@@ -174,14 +188,14 @@ export interface PublishableClassification {
   readonly skip: PrivatePackageList
 }
 
-export type PublishablePackageList = PackageList
-export type UnpublisablePackageList = PackageList
-export type PrivatePackageList = PackageList
+export type PublishablePackageList = Package.List
+export type UnpublisablePackageList = Package.List
+export type PrivatePackageList = Package.List
 
 export namespace InvalidPackage {
   export type List = ReadonlyArray<ListItem>
 
-  export interface ListItem<ReasonElement = Reason> extends PackageListItem {
+  export interface ListItem<ReasonElement = Reason> extends Package.ListItem {
     readonly reason: ReadonlyArray<ReasonElement>
   }
 
@@ -256,7 +270,7 @@ export namespace InvalidPackage {
     }
 
     export namespace NameDuplication {
-      export type PackageList = ReadonlyArray<PackageListItem>
+      export type PackageList = ReadonlyArray<Package.ListItem>
     }
 
     export class SelfDependence extends Base {

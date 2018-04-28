@@ -1,16 +1,16 @@
 import * as fsx from 'fs-extra'
 import * as fsTreeUtils from 'fs-tree-utils'
 import {TraversalResultItem} from 'fs-tree-utils/lib/traverse'
-import {PackageList, PackageListItem} from './types'
+import {Package} from './types'
 
-export type ListPackageResult = Promise<PackageList>
+export type ListPackageResult = Promise<Package.List>
 
 /**
  * List all packages in a monorepo
  * @param dirname Directory of the monorepo
  */
 export async function listAllPackages (dirname: string): ListPackageResult {
-  const createItem = async (x: TraversalResultItem): Promise<PackageListItem> =>
+  const createItem = async (x: TraversalResultItem): Promise<Package.ListItem> =>
     ({path: x.container, manifestFile: x.path, manifestContent: await fsx.readJSON(x.path)})
 
   return await Promise.all(

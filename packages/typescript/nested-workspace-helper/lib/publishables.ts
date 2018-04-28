@@ -3,8 +3,7 @@ import createRegistryFactory from './npm-registry'
 import listAllPackages from './list-pkgs'
 
 import {
-  PackageList,
-  PackageListItem,
+  Package,
   PackageRegistryResponse,
   PublishableClassification
 } from './types'
@@ -32,7 +31,7 @@ export namespace partition {
    * @returns The three groups of packages
    * @see partition
    */
-  export async function fromPackageList (list: PackageList, registry?: string): PartitionResult {
+  export async function fromPackageList (list: Package.List, registry?: string): PartitionResult {
     enum Classification {
       publishable,
       unpublishable,
@@ -68,7 +67,7 @@ export namespace partition {
     )
 
     const getpkg = (x: {
-      pkg: PackageListItem
+      pkg: Package.ListItem
     }) => x.pkg
 
     return {

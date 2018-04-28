@@ -2,8 +2,7 @@ import {URL} from 'url'
 import fetch from 'node-fetch'
 
 import {
-  PackageName,
-  PackageVersion,
+  Basic,
   NetworkStatus,
   Registry,
   PackageRegistryResponse,
@@ -50,7 +49,7 @@ export function createFactory (registry: string = NPM_REGISTRY) {
    * @param pkg Package name
    * @returns Information of the package with all of its versions
    */
-  function getAllVersions (pkg: PackageName): Promise<PackageRegistryResponse> {
+  function getAllVersions (pkg: Basic.PackageName): Promise<PackageRegistryResponse> {
     return getRegistry(pkg)
   }
 
@@ -60,8 +59,8 @@ export function createFactory (registry: string = NPM_REGISTRY) {
    * @returns Information of a single version of the package
    */
   function getSpecificVersion (
-    pkg: PackageName,
-    version: PackageVersion
+    pkg: Basic.PackageName,
+    version: Basic.PackageVersion
   ): Promise<PackageVersionRegistryResponse> {
     return getRegistry(pkg, version)
   }
@@ -70,7 +69,7 @@ export function createFactory (registry: string = NPM_REGISTRY) {
    * @param pkg Package name
    * @returns Information of the latest version of the package
    */
-  function getLatestVersion (pkg: PackageName): Promise<PackageVersionRegistryResponse> {
+  function getLatestVersion (pkg: Basic.PackageName): Promise<PackageVersionRegistryResponse> {
     return getSpecificVersion(pkg, 'latest')
   }
 
