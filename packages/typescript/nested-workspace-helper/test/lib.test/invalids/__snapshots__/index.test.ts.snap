@@ -72,5 +72,316 @@ Array [
       },
     ],
   },
+  Object {
+    "manifestContent": Object {
+      "__describe": "This package is named 'duplicated-name'",
+      "__expect": "Invalid",
+      "name": "duplicated-name",
+      "version": "0.0.0",
+    },
+    "manifestFile": "root/dependants/publicPackages/duplicatedNames/def/package.json",
+    "path": "root/dependants/publicPackages/duplicatedNames/def",
+    "reason": Array [
+      NameDuplication {
+        "description": "Package with name that is used by another package",
+        "duplicates": Array [
+          Object {
+            "manifestContent": Object {
+              "__describe": "This package is named 'duplicated-name'",
+              "__expect": "Invalid",
+              "name": "duplicated-name",
+              "private": true,
+              "version": "0.0.0",
+            },
+            "manifestFile": "root/dependants/privatePackages/duplicatedNames/ghi/package.json",
+            "path": "root/dependants/privatePackages/duplicatedNames/ghi",
+          },
+          Object {
+            "manifestContent": Object {
+              "__describe": "This package is named 'duplicated-name'",
+              "__expect": "Invalid",
+              "name": "duplicated-name",
+              "private": true,
+              "version": "0.0.0",
+            },
+            "manifestFile": "root/dependants/privatePackages/duplicatedNames/jkl/package.json",
+            "path": "root/dependants/privatePackages/duplicatedNames/jkl",
+          },
+          Object {
+            "manifestContent": Object {
+              "__describe": "This package is named 'duplicated-name'",
+              "__expect": "Invalid",
+              "name": "duplicated-name",
+              "version": "0.0.0",
+            },
+            "manifestFile": "root/dependants/publicPackages/duplicatedNames/abc/package.json",
+            "path": "root/dependants/publicPackages/duplicatedNames/abc",
+          },
+          Object {
+            "manifestContent": Object {
+              "__describe": "This package is named 'duplicated-name'",
+              "__expect": "Invalid",
+              "name": "duplicated-name",
+              "version": "0.0.0",
+            },
+            "manifestFile": "root/dependants/publicPackages/duplicatedNames/def/package.json",
+            "path": "root/dependants/publicPackages/duplicatedNames/def",
+          },
+        ],
+      },
+      NameDuplication {
+        "description": "Package with name that is used by another package",
+        "duplicates": Array [
+          Object {
+            "manifestContent": Object {
+              "__describe": "This package is named 'duplicated-name'",
+              "__expect": "Invalid",
+              "name": "duplicated-name",
+              "private": true,
+              "version": "0.0.0",
+            },
+            "manifestFile": "root/dependants/privatePackages/duplicatedNames/ghi/package.json",
+            "path": "root/dependants/privatePackages/duplicatedNames/ghi",
+          },
+          Object {
+            "manifestContent": Object {
+              "__describe": "This package is named 'duplicated-name'",
+              "__expect": "Invalid",
+              "name": "duplicated-name",
+              "private": true,
+              "version": "0.0.0",
+            },
+            "manifestFile": "root/dependants/privatePackages/duplicatedNames/jkl/package.json",
+            "path": "root/dependants/privatePackages/duplicatedNames/jkl",
+          },
+          Object {
+            "manifestContent": Object {
+              "__describe": "This package is named 'duplicated-name'",
+              "__expect": "Invalid",
+              "name": "duplicated-name",
+              "version": "0.0.0",
+            },
+            "manifestFile": "root/dependants/publicPackages/duplicatedNames/abc/package.json",
+            "path": "root/dependants/publicPackages/duplicatedNames/abc",
+          },
+          Object {
+            "manifestContent": Object {
+              "__describe": "This package is named 'duplicated-name'",
+              "__expect": "Invalid",
+              "name": "duplicated-name",
+              "version": "0.0.0",
+            },
+            "manifestFile": "root/dependants/publicPackages/duplicatedNames/def/package.json",
+            "path": "root/dependants/publicPackages/duplicatedNames/def",
+          },
+        ],
+      },
+      NameDuplication {
+        "description": "Package with name that is used by another package",
+        "duplicates": Array [
+          Object {
+            "manifestContent": Object {
+              "__describe": "This package is named 'duplicated-name'",
+              "__expect": "Invalid",
+              "name": "duplicated-name",
+              "private": true,
+              "version": "0.0.0",
+            },
+            "manifestFile": "root/dependants/privatePackages/duplicatedNames/ghi/package.json",
+            "path": "root/dependants/privatePackages/duplicatedNames/ghi",
+          },
+          Object {
+            "manifestContent": Object {
+              "__describe": "This package is named 'duplicated-name'",
+              "__expect": "Invalid",
+              "name": "duplicated-name",
+              "private": true,
+              "version": "0.0.0",
+            },
+            "manifestFile": "root/dependants/privatePackages/duplicatedNames/jkl/package.json",
+            "path": "root/dependants/privatePackages/duplicatedNames/jkl",
+          },
+          Object {
+            "manifestContent": Object {
+              "__describe": "This package is named 'duplicated-name'",
+              "__expect": "Invalid",
+              "name": "duplicated-name",
+              "version": "0.0.0",
+            },
+            "manifestFile": "root/dependants/publicPackages/duplicatedNames/abc/package.json",
+            "path": "root/dependants/publicPackages/duplicatedNames/abc",
+          },
+          Object {
+            "manifestContent": Object {
+              "__describe": "This package is named 'duplicated-name'",
+              "__expect": "Invalid",
+              "name": "duplicated-name",
+              "version": "0.0.0",
+            },
+            "manifestFile": "root/dependants/publicPackages/duplicatedNames/def/package.json",
+            "path": "root/dependants/publicPackages/duplicatedNames/def",
+          },
+        ],
+      },
+      NameDuplication {
+        "description": "Package with name that is used by another package",
+        "duplicates": Array [
+          Object {
+            "manifestContent": Object {
+              "__describe": "This package is named 'duplicated-name'",
+              "__expect": "Invalid",
+              "name": "duplicated-name",
+              "private": true,
+              "version": "0.0.0",
+            },
+            "manifestFile": "root/dependants/privatePackages/duplicatedNames/ghi/package.json",
+            "path": "root/dependants/privatePackages/duplicatedNames/ghi",
+          },
+          Object {
+            "manifestContent": Object {
+              "__describe": "This package is named 'duplicated-name'",
+              "__expect": "Invalid",
+              "name": "duplicated-name",
+              "private": true,
+              "version": "0.0.0",
+            },
+            "manifestFile": "root/dependants/privatePackages/duplicatedNames/jkl/package.json",
+            "path": "root/dependants/privatePackages/duplicatedNames/jkl",
+          },
+          Object {
+            "manifestContent": Object {
+              "__describe": "This package is named 'duplicated-name'",
+              "__expect": "Invalid",
+              "name": "duplicated-name",
+              "version": "0.0.0",
+            },
+            "manifestFile": "root/dependants/publicPackages/duplicatedNames/abc/package.json",
+            "path": "root/dependants/publicPackages/duplicatedNames/abc",
+          },
+          Object {
+            "manifestContent": Object {
+              "__describe": "This package is named 'duplicated-name'",
+              "__expect": "Invalid",
+              "name": "duplicated-name",
+              "version": "0.0.0",
+            },
+            "manifestFile": "root/dependants/publicPackages/duplicatedNames/def/package.json",
+            "path": "root/dependants/publicPackages/duplicatedNames/def",
+          },
+        ],
+      },
+    ],
+  },
+  Object {
+    "manifestContent": Object {
+      "__describe": "This package has its own name in its \`peerDependencies\`",
+      "__expect": "Invalid",
+      "name": "prv-use-itself-as-peer",
+      "peerDependencies": Object {
+        "prv-use-itself-as-peer": "^0.0.0",
+      },
+      "private": true,
+      "version": "0.0.0",
+    },
+    "manifestFile": "root/dependants/privatePackages/useItselfAsDependency/asPeer/package.json",
+    "path": "root/dependants/privatePackages/useItselfAsDependency/asPeer",
+    "reason": Array [
+      SelfDependence {
+        "description": "Package that depends on itself",
+      },
+    ],
+  },
+  Object {
+    "manifestContent": Object {
+      "__describe": "This package has its own name in its \`dependencies\`",
+      "__expect": "Invalid",
+      "devDependencies": Object {
+        "prv-use-itself-as-dev": "^0.0.0",
+      },
+      "name": "prv-use-itself-as-dev",
+      "private": true,
+      "version": "0.0.0",
+    },
+    "manifestFile": "root/dependants/privatePackages/useItselfAsDependency/inDevelopment/package.json",
+    "path": "root/dependants/privatePackages/useItselfAsDependency/inDevelopment",
+    "reason": Array [
+      SelfDependence {
+        "description": "Package that depends on itself",
+      },
+    ],
+  },
+  Object {
+    "manifestContent": Object {
+      "__describe": "This package has its own name in its \`dependencies\`",
+      "__expect": "Invalid",
+      "dependencies": Object {
+        "prv-use-itself-as-prod": "^0.0.0",
+      },
+      "name": "prv-use-itself-as-prod",
+      "private": true,
+      "version": "0.0.0",
+    },
+    "manifestFile": "root/dependants/privatePackages/useItselfAsDependency/inProduction/package.json",
+    "path": "root/dependants/privatePackages/useItselfAsDependency/inProduction",
+    "reason": Array [
+      SelfDependence {
+        "description": "Package that depends on itself",
+      },
+    ],
+  },
+  Object {
+    "manifestContent": Object {
+      "__describe": "This package has its own name in its \`peerDependencies\`",
+      "__expect": "Invalid",
+      "name": "pub-use-itself-as-peer",
+      "peerDependencies": Object {
+        "pub-use-itself-as-peer": "^0.0.0",
+      },
+      "version": "0.0.0",
+    },
+    "manifestFile": "root/dependants/publicPackages/useItselfAsDependency/asPeer/package.json",
+    "path": "root/dependants/publicPackages/useItselfAsDependency/asPeer",
+    "reason": Array [
+      SelfDependence {
+        "description": "Package that depends on itself",
+      },
+    ],
+  },
+  Object {
+    "manifestContent": Object {
+      "__describe": "This package has its own name in its \`dependencies\`",
+      "__expect": "Invalid",
+      "devDependencies": Object {
+        "pub-use-itself-as-dev": "^0.0.0",
+      },
+      "name": "pub-use-itself-as-dev",
+      "version": "0.0.0",
+    },
+    "manifestFile": "root/dependants/publicPackages/useItselfAsDependency/inDevelopment/package.json",
+    "path": "root/dependants/publicPackages/useItselfAsDependency/inDevelopment",
+    "reason": Array [
+      SelfDependence {
+        "description": "Package that depends on itself",
+      },
+    ],
+  },
+  Object {
+    "manifestContent": Object {
+      "__describe": "This package has its own name in its \`dependencies\`",
+      "__expect": "Invalid",
+      "dependencies": Object {
+        "pub-use-itself-as-prod": "^0.0.0",
+      },
+      "name": "pub-use-itself-as-prod",
+      "version": "0.0.0",
+    },
+    "manifestFile": "root/dependants/publicPackages/useItselfAsDependency/inProduction/package.json",
+    "path": "root/dependants/publicPackages/useItselfAsDependency/inProduction",
+    "reason": Array [
+      SelfDependence {
+        "description": "Package that depends on itself",
+      },
+    ],
+  },
 ]
 `;

@@ -21,7 +21,7 @@ export namespace listAllInvalidPackages {
       [name: string]: InvalidPackage.ListItem
     } = {}
 
-    for (const victim of [...prvs, ...ivls]) {
+    for (const victim of [...prvs, ...dups, ...sfds, ...ivls]) {
       const {name = ''} = (victim as PackageListItem).manifestContent
 
       if (name in db) {
@@ -53,10 +53,16 @@ export namespace listAllInvalidPackages {
 
       for (const {list, dependant} of Object.values(map)) {
         const filtered = invalids
+          .map(
+            x => ({
+              ...x,
+              reason: x.reason.filter(
+                xx => !(xx instanceof InvalidPackage.Reason.SelfDependence)
+              )
+            })
+          )
           .filter(
-            x => x.reason.map(
-              xx => xx instanceof InvalidPackage.Reason.NameDuplication
-            ).length === 0
+            x => x.reason.length
           )
           .filter(
             x => list.some(
