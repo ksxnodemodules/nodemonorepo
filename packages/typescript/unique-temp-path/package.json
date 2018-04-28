@@ -4,7 +4,7 @@
   "main": "index.js",
   "bin": "bin.inrepo.js",
   "dependencies": {
-    "@types/node": "^9.6.4"
+    "@types/node": "^10.0.0"
   },
   "devDependencies": {
     "preloaded-node": "*",

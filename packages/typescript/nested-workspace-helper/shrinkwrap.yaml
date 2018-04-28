@@ -1,6 +1,6 @@
 dependencies:
   '@types/fs-extra': 5.0.1
-  '@types/node': 9.6.4
+  '@types/node': 10.0.0
   '@types/node-fetch': 1.6.9
   '@types/ramda': 0.25.24
   '@types/semver': 5.5.0
@@ -28,14 +28,14 @@ packages:
     dev: false
     resolution:
       integrity: sha512-n2r6WLoY7+uuPT7pnEtKJCmPUGyJ+cbyBR8Avnu4+m1nzz7DwBVuyIvvlBzCZ/nrpC7rIgb3D6pNavL7rFEa9g==
+  /@types/node/10.0.0:
+    dev: false
+    resolution:
+      integrity: sha512-kctoM36XiNZT86a7tPsUje+Q/yl+dqELjtYApi0T5eOQ90Elhu0MI10rmYk44yEP4v1jdDvtjQ9DFtpRtHf2Bw==
   /@types/node/9.6.2:
     dev: false
     resolution:
       integrity: sha512-UWkRY9X7RQHp5OhhRIIka58/gVVycL1zHZu0OTsT5LI86ABaMOSbUjAl+b0FeDhQcxclrkyft3kW5QWdMRs8wQ==
-  /@types/node/9.6.4:
-    dev: false
-    resolution:
-      integrity: sha512-Awg4BcUYiZtNKoveGOu654JVPt11V/KIC77iBz8NweyoOAZpz5rUJfPDwwD+ajfTs2HndbTCEB8IuLfX9m/mmw==
   /@types/node/9.6.6:
     dev: false
     resolution:
@@ -480,7 +480,7 @@ shrinkwrapMinorVersion: 5
 shrinkwrapVersion: 3
 specifiers:
   '@types/fs-extra': ^5.0.1
-  '@types/node': ^9.6.4
+  '@types/node': ^10.0.0
   '@types/node-fetch': ^1.6.9
   '@types/ramda': ^0.25.24
   '@types/semver': ^5.5.0

@@ -7,7 +7,7 @@
     "ramda": "^0.25.0",
     "@types/fs-extra": "^5.0.1",
     "@types/ramda": "^0.25.21",
-    "@types/node": "^9.6.4"
+    "@types/node": "^10.0.0"
   },
   "devDependencies": {
     "unique-temp-path": "*",

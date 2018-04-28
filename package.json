@@ -5,12 +5,12 @@
   "devDependencies": {
     "jest": "^22.1.4",
     "jest-extended": "^0.7.0",
-    "ts-jest": "^22.4.2",
+    "ts-jest": "^22.4.4",
     "babel-jest": "^22.4.3",
     "yaml-jest": "^1.0.5",
     "js-yaml": "^3.11.0",
     "standard": "^11.0.0",
-    "typescript": "^2.8.1",
+    "typescript": "^2.8.3",
     "x-iterable": "^6.0.1",
     "coveralls": "^3.0.0",
     "glob": "^7.1.2",
@@ -18,10 +18,10 @@
     "preloaded-node": "*",
     "ignore-file.private": "*",
     "nested-workspace-helper": "*",
-    "@types/jest": "^22.2.2",
+    "@types/jest": "^22.2.3",
     "@types/js-yaml": "^3.11.1",
     "@types/glob": "^5.0.35",
-    "@types/node": "^9.6.4"
+    "@types/node": "^10.0.0"
   },
   "workspaces": [
     "packages/*/*"

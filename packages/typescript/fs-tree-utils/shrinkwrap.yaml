@@ -1,6 +1,6 @@
 dependencies:
   '@types/fs-extra': 5.0.1
-  '@types/node': 9.6.4
+  '@types/node': 10.0.0
   '@types/ramda': 0.25.21
   extra-jest: 'link:../extra-jest'
   fs-extra: 5.0.0
@@ -13,14 +13,14 @@ packages:
     dev: false
     resolution:
       integrity: sha512-h3wnflb+jMTipvbbZnClgA2BexrT4w0GcfoCz5qyxd0IRsbqhLSyesM6mqZTAnhbVmhyTm5tuxfRu9R+8l+lGw==
+  /@types/node/10.0.0:
+    dev: false
+    resolution:
+      integrity: sha512-kctoM36XiNZT86a7tPsUje+Q/yl+dqELjtYApi0T5eOQ90Elhu0MI10rmYk44yEP4v1jdDvtjQ9DFtpRtHf2Bw==
   /@types/node/9.6.2:
     dev: false
     resolution:
       integrity: sha512-UWkRY9X7RQHp5OhhRIIka58/gVVycL1zHZu0OTsT5LI86ABaMOSbUjAl+b0FeDhQcxclrkyft3kW5QWdMRs8wQ==
-  /@types/node/9.6.4:
-    dev: false
-    resolution:
-      integrity: sha512-Awg4BcUYiZtNKoveGOu654JVPt11V/KIC77iBz8NweyoOAZpz5rUJfPDwwD+ajfTs2HndbTCEB8IuLfX9m/mmw==
   /@types/ramda/0.25.21:
     dev: false
     resolution:
@@ -58,7 +58,7 @@ shrinkwrapMinorVersion: 5
 shrinkwrapVersion: 3
 specifiers:
   '@types/fs-extra': ^5.0.1
-  '@types/node': ^9.6.4
+  '@types/node': ^10.0.0
   '@types/ramda': ^0.25.21
   extra-jest: '*'
   fs-extra: ^5.0.0

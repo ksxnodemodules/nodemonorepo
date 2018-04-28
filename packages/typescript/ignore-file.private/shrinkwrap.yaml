@@ -1,7 +1,7 @@
 dependencies:
   '@types/fs-extra': 5.0.2
   '@types/minimatch': 3.0.3
-  '@types/node': 9.6.6
+  '@types/node': 10.0.0
   '@types/yargs': 11.0.0
   chalk: 2.4.0
   extra-jest: 'link:../extra-jest'
@@ -21,6 +21,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
+  /@types/node/10.0.0:
+    dev: false
+    resolution:
+      integrity: sha512-kctoM36XiNZT86a7tPsUje+Q/yl+dqELjtYApi0T5eOQ90Elhu0MI10rmYk44yEP4v1jdDvtjQ9DFtpRtHf2Bw==
   /@types/node/9.6.6:
     dev: false
     resolution:
@@ -465,7 +469,7 @@ shrinkwrapVersion: 3
 specifiers:
   '@types/fs-extra': ^5.0.1
   '@types/minimatch': ^3.0.3
-  '@types/node': ^9.6.4
+  '@types/node': ^10.0.0
   '@types/yargs': ^11.0.0
   chalk: ^2.4.0
   extra-jest: '*'
