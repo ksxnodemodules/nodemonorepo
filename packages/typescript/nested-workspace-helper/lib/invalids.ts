@@ -50,6 +50,10 @@ export namespace listAllInvalidPackages {
       invalids: InvalidPackage.List
     ): ReadonlyArray<getInvalidDependencyVictims.Victim> {
       const newInvalids: getInvalidDependencyVictims.Victim[] = []
+      for (const item of invalids) {
+        if (newInvalids.some(x => item.path === x.path)) continue
+        newInvalids.push(item)
+      }
 
       for (const {list, dependant} of Object.values(map)) {
         const filtered = invalids.filter(
