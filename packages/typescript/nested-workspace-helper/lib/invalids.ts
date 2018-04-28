@@ -58,7 +58,9 @@ export namespace listAllInvalidPackages {
       for (const {list, dependant} of Object.values(map)) {
         const filtered = invalids.filter(
           x => list.some(
-            xx => x.manifestContent.name === xx.name
+            xx =>
+              x.manifestContent.name === xx.name &&
+              x.manifestContent.name !== dependant.manifestContent.name
           )
         )
 
