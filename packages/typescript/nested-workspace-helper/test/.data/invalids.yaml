@@ -5,14 +5,18 @@ root:
         {
           "name": "public",
           "version": "0.0.0",
-          "private": false
+          "private": false,
+          "__describe": "This package is meant to be used by other package",
+          "__expect": "Valid"
         }
     private:
       package.json: |
         {
           "name": "private",
           "version": "0.0.0",
-          "private": true
+          "private": true,
+          "__describe": "This package is meant to be used by other package",
+          "__expect": "Valid"
         }
   dependants:
     publicPackages:
