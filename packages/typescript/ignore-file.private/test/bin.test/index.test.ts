@@ -14,7 +14,7 @@ const snapSpawn = (...argv: string[]) =>
 const snapAny = (x: any) => xjest.snap.safe(x)()
 
 beforeEach(() => {
-  jest.setTimeout(65536)
+  jest.setTimeout(131072)
 })
 
 afterEach(() => {
