@@ -190,13 +190,13 @@ root:
       useInvalidDependencies:
         package.json: |
           {
-            "name": "prv-use-invalid-dependencies",
+            "name": "prv-use-duplicated-dependencies",
             "version": "0.0.0",
             "private": true,
             "devDependencies": {
               "duplicated-name": "^0.0.0"
             },
-            "__describe": "This private package has an invalid dependencies in its `devDependencies` object",
+            "__describe": "This private package has an duplicated dependencies in its `devDependencies` object",
             "__expect": "Invalid"
           }
       duplicatedNames:
@@ -255,3 +255,21 @@ root:
               "__describe": "This package has its own name in its `peerDependencies`",
               "__expect": "Invalid"
             }
+    advancedDetails:
+      useSelfDependenceDependencies:
+        package.json: |
+          {
+            "name": "use-self-dependence-dependencies",
+            "version": "0.0.0",
+            "dependencies": {
+              "pub-use-itself-as-prod": "^0.0.0"
+            },
+            "devDependencies": {
+              "pub-use-itself-as-dev": "^0.0.0"
+            },
+            "peerDependencies": {
+              "pub-use-itself-as-peer": "^0.0.0"
+            },
+            "__describe": "This package use self-dependence dependencies",
+            "__expect": "Invalid"
+          }

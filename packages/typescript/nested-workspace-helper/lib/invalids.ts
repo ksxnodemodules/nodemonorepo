@@ -18,26 +18,26 @@ export namespace listAllInvalidPackages {
     const ivls = fromDependencyMap.getInvalidDependencyVictims(map, [...prvs, ...dups, ...sfds])
 
     const db: {
-      [name: string]: InvalidPackage.ListItem
+      [path: string]: InvalidPackage.ListItem
     } = {}
 
     for (const victim of [...prvs, ...dups, ...sfds, ...ivls]) {
-      const {name = ''} = (victim as PackageListItem).manifestContent
+      const {path} = victim
 
-      if (name in db) {
-        const temp = db[name]
+      if (path in db) {
+        const temp = db[path]
 
         const reason = [
           ...temp.reason,
           ...victim.reason
         ]
 
-        db[name] = {
+        db[path] = {
           ...victim,
           reason
         }
       } else {
-        db[name] = {...victim}
+        db[path] = {...victim}
       }
     }
 
@@ -52,23 +52,11 @@ export namespace listAllInvalidPackages {
       const newInvalids: getInvalidDependencyVictims.Victim[] = []
 
       for (const {list, dependant} of Object.values(map)) {
-        const filtered = invalids
-          .map(
-            x => ({
-              ...x,
-              reason: x.reason.filter(
-                xx => !(xx instanceof InvalidPackage.Reason.SelfDependence)
-              )
-            })
+        const filtered = invalids.filter(
+          x => list.some(
+            xx => x.manifestContent.name === xx.name
           )
-          .filter(
-            x => x.reason.length
-          )
-          .filter(
-            x => list.some(
-              xx => x.manifestContent.name === xx.name
-            )
-          )
+        )
 
         if (filtered.length) {
           const reason = [new InvalidPackage.Reason.InvalidDependencies(filtered)]
@@ -135,8 +123,8 @@ export namespace listAllInvalidPackages {
         }
       }
 
-      for (const name of duplications) {
-        const list = db[name]
+      for (const dirname of duplications) {
+        const list = db[dirname]
 
         for (const item of list) {
           const reason = [new InvalidPackage.Reason.NameDuplication(list)]
