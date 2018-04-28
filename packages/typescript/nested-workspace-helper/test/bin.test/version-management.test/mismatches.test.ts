@@ -26,7 +26,7 @@ const trackVermanMismatches = createTester(tracker.unchanged.snap)
 const trackVermanMismatchesUpdate = createTester(tracker, '--update')
 
 beforeEach(() => {
-  jest.setTimeout(32768)
+  jest.setTimeout(65536)
 })
 
 afterEach(() => {

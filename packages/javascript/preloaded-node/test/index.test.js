@@ -5,7 +5,7 @@ const {spawn, spawnSync} = require('../index')
 const script = path.resolve(__dirname, 'data/main.js')
 
 beforeEach(() => {
-  jest.setTimeout(32768)
+  jest.setTimeout(65536)
 })
 
 afterEach(() => {
