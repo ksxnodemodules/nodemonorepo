@@ -2591,3 +2591,382 @@ Array [
   },
 ]
 `;
+
+exports[`no reason object shall have its name different than its class 1`] = `
+Array [
+  Object {
+    "package": Object {
+      "name": "pub-use-private-dependencies-as-peer",
+      "path": "root/dependants/publicPackages/usePrivateDependenciesAsPeer",
+    },
+    "reason": Array [
+      Object {
+        "compare": true,
+        "name": Object {
+          "constructor": "PrivateDependencies",
+          "instance": "PrivateDependencies",
+        },
+      },
+      Object {
+        "compare": true,
+        "name": Object {
+          "constructor": "PrivateDependencies",
+          "instance": "PrivateDependencies",
+        },
+      },
+    ],
+  },
+  Object {
+    "package": Object {
+      "name": "pub-use-private-dependencies-in-production",
+      "path": "root/dependants/publicPackages/usePrivateDependenciesInProduction",
+    },
+    "reason": Array [
+      Object {
+        "compare": true,
+        "name": Object {
+          "constructor": "PrivateDependencies",
+          "instance": "PrivateDependencies",
+        },
+      },
+      Object {
+        "compare": true,
+        "name": Object {
+          "constructor": "PrivateDependencies",
+          "instance": "PrivateDependencies",
+        },
+      },
+    ],
+  },
+  Object {
+    "package": Object {
+      "name": "duplicated-name",
+      "path": "root/dependants/privatePackages/duplicatedNames/ghi",
+    },
+    "reason": Array [
+      Object {
+        "compare": true,
+        "name": Object {
+          "constructor": "NameDuplication",
+          "instance": "NameDuplication",
+        },
+      },
+      Object {
+        "compare": true,
+        "name": Object {
+          "constructor": "NameDuplication",
+          "instance": "NameDuplication",
+        },
+      },
+    ],
+  },
+  Object {
+    "package": Object {
+      "name": "duplicated-name",
+      "path": "root/dependants/privatePackages/duplicatedNames/jkl",
+    },
+    "reason": Array [
+      Object {
+        "compare": true,
+        "name": Object {
+          "constructor": "NameDuplication",
+          "instance": "NameDuplication",
+        },
+      },
+      Object {
+        "compare": true,
+        "name": Object {
+          "constructor": "NameDuplication",
+          "instance": "NameDuplication",
+        },
+      },
+    ],
+  },
+  Object {
+    "package": Object {
+      "name": "duplicated-name",
+      "path": "root/dependants/publicPackages/duplicatedNames/abc",
+    },
+    "reason": Array [
+      Object {
+        "compare": true,
+        "name": Object {
+          "constructor": "NameDuplication",
+          "instance": "NameDuplication",
+        },
+      },
+      Object {
+        "compare": true,
+        "name": Object {
+          "constructor": "NameDuplication",
+          "instance": "NameDuplication",
+        },
+      },
+    ],
+  },
+  Object {
+    "package": Object {
+      "name": "duplicated-name",
+      "path": "root/dependants/publicPackages/duplicatedNames/def",
+    },
+    "reason": Array [
+      Object {
+        "compare": true,
+        "name": Object {
+          "constructor": "NameDuplication",
+          "instance": "NameDuplication",
+        },
+      },
+      Object {
+        "compare": true,
+        "name": Object {
+          "constructor": "NameDuplication",
+          "instance": "NameDuplication",
+        },
+      },
+    ],
+  },
+  Object {
+    "package": Object {
+      "name": "prv-use-itself-as-peer",
+      "path": "root/dependants/privatePackages/useItselfAsDependency/asPeer",
+    },
+    "reason": Array [
+      Object {
+        "compare": true,
+        "name": Object {
+          "constructor": "SelfDependence",
+          "instance": "SelfDependence",
+        },
+      },
+      Object {
+        "compare": true,
+        "name": Object {
+          "constructor": "SelfDependence",
+          "instance": "SelfDependence",
+        },
+      },
+    ],
+  },
+  Object {
+    "package": Object {
+      "name": "prv-use-itself-as-dev",
+      "path": "root/dependants/privatePackages/useItselfAsDependency/inDevelopment",
+    },
+    "reason": Array [
+      Object {
+        "compare": true,
+        "name": Object {
+          "constructor": "SelfDependence",
+          "instance": "SelfDependence",
+        },
+      },
+      Object {
+        "compare": true,
+        "name": Object {
+          "constructor": "SelfDependence",
+          "instance": "SelfDependence",
+        },
+      },
+    ],
+  },
+  Object {
+    "package": Object {
+      "name": "prv-use-itself-as-prod",
+      "path": "root/dependants/privatePackages/useItselfAsDependency/inProduction",
+    },
+    "reason": Array [
+      Object {
+        "compare": true,
+        "name": Object {
+          "constructor": "SelfDependence",
+          "instance": "SelfDependence",
+        },
+      },
+      Object {
+        "compare": true,
+        "name": Object {
+          "constructor": "SelfDependence",
+          "instance": "SelfDependence",
+        },
+      },
+    ],
+  },
+  Object {
+    "package": Object {
+      "name": "pub-use-itself-as-peer",
+      "path": "root/dependants/publicPackages/useItselfAsDependency/asPeer",
+    },
+    "reason": Array [
+      Object {
+        "compare": true,
+        "name": Object {
+          "constructor": "SelfDependence",
+          "instance": "SelfDependence",
+        },
+      },
+      Object {
+        "compare": true,
+        "name": Object {
+          "constructor": "SelfDependence",
+          "instance": "SelfDependence",
+        },
+      },
+    ],
+  },
+  Object {
+    "package": Object {
+      "name": "pub-use-itself-as-dev",
+      "path": "root/dependants/publicPackages/useItselfAsDependency/inDevelopment",
+    },
+    "reason": Array [
+      Object {
+        "compare": true,
+        "name": Object {
+          "constructor": "SelfDependence",
+          "instance": "SelfDependence",
+        },
+      },
+      Object {
+        "compare": true,
+        "name": Object {
+          "constructor": "SelfDependence",
+          "instance": "SelfDependence",
+        },
+      },
+    ],
+  },
+  Object {
+    "package": Object {
+      "name": "pub-use-itself-as-prod",
+      "path": "root/dependants/publicPackages/useItselfAsDependency/inProduction",
+    },
+    "reason": Array [
+      Object {
+        "compare": true,
+        "name": Object {
+          "constructor": "SelfDependence",
+          "instance": "SelfDependence",
+        },
+      },
+      Object {
+        "compare": true,
+        "name": Object {
+          "constructor": "SelfDependence",
+          "instance": "SelfDependence",
+        },
+      },
+    ],
+  },
+  Object {
+    "package": Object {
+      "name": "use-self-dependence-dependencies",
+      "path": "root/dependants/advancedDetails/useSelfDependenceDependencies",
+    },
+    "reason": Array [
+      Object {
+        "compare": true,
+        "name": Object {
+          "constructor": "InvalidDependencies",
+          "instance": "InvalidDependencies",
+        },
+      },
+      Object {
+        "compare": true,
+        "name": Object {
+          "constructor": "InvalidDependencies",
+          "instance": "InvalidDependencies",
+        },
+      },
+    ],
+  },
+  Object {
+    "package": Object {
+      "name": "prv-use-duplicated-dependencies",
+      "path": "root/dependants/privatePackages/useInvalidDependencies",
+    },
+    "reason": Array [
+      Object {
+        "compare": true,
+        "name": Object {
+          "constructor": "InvalidDependencies",
+          "instance": "InvalidDependencies",
+        },
+      },
+      Object {
+        "compare": true,
+        "name": Object {
+          "constructor": "InvalidDependencies",
+          "instance": "InvalidDependencies",
+        },
+      },
+    ],
+  },
+  Object {
+    "package": Object {
+      "name": "pub-use-invalid-dependencies-as-peer",
+      "path": "root/dependants/publicPackages/useInvalidDependenciesAsPeer",
+    },
+    "reason": Array [
+      Object {
+        "compare": true,
+        "name": Object {
+          "constructor": "InvalidDependencies",
+          "instance": "InvalidDependencies",
+        },
+      },
+      Object {
+        "compare": true,
+        "name": Object {
+          "constructor": "InvalidDependencies",
+          "instance": "InvalidDependencies",
+        },
+      },
+    ],
+  },
+  Object {
+    "package": Object {
+      "name": "pub-use-invalid-dependencies-in-development",
+      "path": "root/dependants/publicPackages/useInvalidDependenciesInDepevelopment",
+    },
+    "reason": Array [
+      Object {
+        "compare": true,
+        "name": Object {
+          "constructor": "InvalidDependencies",
+          "instance": "InvalidDependencies",
+        },
+      },
+      Object {
+        "compare": true,
+        "name": Object {
+          "constructor": "InvalidDependencies",
+          "instance": "InvalidDependencies",
+        },
+      },
+    ],
+  },
+  Object {
+    "package": Object {
+      "name": "pub-use-invalid-dependencies-in-production",
+      "path": "root/dependants/publicPackages/useInvalidDependenciesInProduction",
+    },
+    "reason": Array [
+      Object {
+        "compare": true,
+        "name": Object {
+          "constructor": "InvalidDependencies",
+          "instance": "InvalidDependencies",
+        },
+      },
+      Object {
+        "compare": true,
+        "name": Object {
+          "constructor": "InvalidDependencies",
+          "instance": "InvalidDependencies",
+        },
+      },
+    ],
+  },
+]
+`;

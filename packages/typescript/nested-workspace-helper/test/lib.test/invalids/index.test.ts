@@ -33,6 +33,32 @@ it('leaves no invalid packages', apply(async () => {
   expect(failure).toEqual([])
 }))
 
+it('no reason object shall have its name different than its class', apply(async () => {
+  const invalids = await getInvalids()
+
+  const comparisions = invalids.map(x => ({
+    package: {
+      path: x.path,
+      name: x.manifestContent.name
+    },
+    reason: x.reason.map(x => ({
+      name: {
+        instance: x.name,
+        constructor: x.constructor.name
+      },
+      compare: x.name === x.constructor.name
+    }))
+  }))
+
+  expect(comparisions).toMatchSnapshot()
+
+  comparisions.forEach(
+    x => x.reason.forEach(
+      xx => expect(xx.compare).toBe(true)
+    )
+  )
+}))
+
 async function getValids () {
   const list = await listAllPackages('root')
   const invalids = await listAllInvalidPackages('root')
