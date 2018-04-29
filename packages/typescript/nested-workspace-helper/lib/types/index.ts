@@ -208,21 +208,50 @@ export namespace InvalidPackage {
   export namespace Reason {
     export abstract class Base {
       /**
+       * Information accessible from classes themselve
+       */
+      static readonly description: Base.Description
+
+      /**
        * Name of reason
        *   - Is the name of class when not compressed
        *   - More reliant than class names
        */
-      abstract readonly name: string
+      readonly name: string
 
       /**
        * Helpful description that can be use as error message
        */
-      abstract readonly description: string
+      readonly message: string
+
+      get info () {
+        return (this.constructor as typeof Base).description
+      }
+
+      constructor () {
+        const {description} = this.constructor as typeof Base
+        this.name = description.name
+        this.message = description.message
+      }
+    }
+
+    export namespace Base {
+      export class Description {
+        readonly name: string
+        readonly message: string
+
+        constructor (name: string, message: string) {
+          this.name = name
+          this.message = message
+        }
+      }
     }
 
     export class InvalidDependencies extends Base {
-      readonly name = 'InvalidDependencies'
-      readonly description = 'Package depends on invalid dependencies'
+      static readonly description = new Base.Description(
+        'InvalidDependencies',
+        'Package depends on invalid dependencies'
+      )
 
       /**
        * List of invalid dependecies that the package depended on
@@ -243,8 +272,10 @@ export namespace InvalidPackage {
     }
 
     export class PrivateDependencies extends Base {
-      readonly name = 'PrivateDependencies'
-      readonly description = 'Public package depends on non-dev private dependencies'
+      static readonly description = new Base.Description(
+        'PrivateDependencies',
+        'Public package depends on non-dev private dependencies'
+      )
 
       /**
        * List of private dependencies that this package depended on as prod or peer
@@ -265,8 +296,10 @@ export namespace InvalidPackage {
     }
 
     export class NameDuplication extends Base {
-      readonly name = 'NameDuplication'
-      readonly description = 'Package with name that is used by another package'
+      static readonly description = new Base.Description(
+        'NameDuplication',
+        'Package with name that is used by another package'
+      )
 
       /**
        * List of packages that used the name
@@ -284,8 +317,10 @@ export namespace InvalidPackage {
     }
 
     export class SelfDependence extends Base {
-      readonly name = 'SelfDependence'
-      readonly description = 'Package that depends on itself'
+      static readonly description = new Base.Description(
+        'SelfDependence',
+        'Package that depends on itself'
+      )
     }
   }
 }

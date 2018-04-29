@@ -38,7 +38,7 @@ Object {
               "path": "root/dependants/publicPackages/useItselfAsDependency/asPeer",
               "reason": Array [
                 SelfDependence {
-                  "description": "Package that depends on itself",
+                  "message": "Package that depends on itself",
                   "name": "SelfDependence",
                 },
               ],
@@ -57,7 +57,7 @@ Object {
               "path": "root/dependants/publicPackages/useItselfAsDependency/inDevelopment",
               "reason": Array [
                 SelfDependence {
-                  "description": "Package that depends on itself",
+                  "message": "Package that depends on itself",
                   "name": "SelfDependence",
                 },
               ],
@@ -76,13 +76,13 @@ Object {
               "path": "root/dependants/publicPackages/useItselfAsDependency/inProduction",
               "reason": Array [
                 SelfDependence {
-                  "description": "Package that depends on itself",
+                  "message": "Package that depends on itself",
                   "name": "SelfDependence",
                 },
               ],
             },
           ],
-          "description": "Package depends on invalid dependencies",
+          "message": "Package depends on invalid dependencies",
           "name": "InvalidDependencies",
         },
         InvalidDependencies {
@@ -101,7 +101,7 @@ Object {
               "path": "root/dependants/publicPackages/useItselfAsDependency/asPeer",
               "reason": Array [
                 SelfDependence {
-                  "description": "Package that depends on itself",
+                  "message": "Package that depends on itself",
                   "name": "SelfDependence",
                 },
               ],
@@ -120,7 +120,7 @@ Object {
               "path": "root/dependants/publicPackages/useItselfAsDependency/inDevelopment",
               "reason": Array [
                 SelfDependence {
-                  "description": "Package that depends on itself",
+                  "message": "Package that depends on itself",
                   "name": "SelfDependence",
                 },
               ],
@@ -139,13 +139,13 @@ Object {
               "path": "root/dependants/publicPackages/useItselfAsDependency/inProduction",
               "reason": Array [
                 SelfDependence {
-                  "description": "Package that depends on itself",
+                  "message": "Package that depends on itself",
                   "name": "SelfDependence",
                 },
               ],
             },
           ],
-          "description": "Package depends on invalid dependencies",
+          "message": "Package depends on invalid dependencies",
           "name": "InvalidDependencies",
         },
       ],
@@ -185,7 +185,7 @@ Object {
               "path": "root/dependants/publicPackages/useItselfAsDependency/asPeer",
               "reason": Array [
                 SelfDependence {
-                  "description": "Package that depends on itself",
+                  "message": "Package that depends on itself",
                   "name": "SelfDependence",
                 },
               ],
@@ -204,7 +204,7 @@ Object {
               "path": "root/dependants/publicPackages/useItselfAsDependency/inDevelopment",
               "reason": Array [
                 SelfDependence {
-                  "description": "Package that depends on itself",
+                  "message": "Package that depends on itself",
                   "name": "SelfDependence",
                 },
               ],
@@ -223,13 +223,13 @@ Object {
               "path": "root/dependants/publicPackages/useItselfAsDependency/inProduction",
               "reason": Array [
                 SelfDependence {
-                  "description": "Package that depends on itself",
+                  "message": "Package that depends on itself",
                   "name": "SelfDependence",
                 },
               ],
             },
           ],
-          "description": "Package depends on invalid dependencies",
+          "message": "Package depends on invalid dependencies",
           "name": "InvalidDependencies",
         },
         InvalidDependencies {
@@ -248,7 +248,7 @@ Object {
               "path": "root/dependants/publicPackages/useItselfAsDependency/asPeer",
               "reason": Array [
                 SelfDependence {
-                  "description": "Package that depends on itself",
+                  "message": "Package that depends on itself",
                   "name": "SelfDependence",
                 },
               ],
@@ -267,7 +267,7 @@ Object {
               "path": "root/dependants/publicPackages/useItselfAsDependency/inDevelopment",
               "reason": Array [
                 SelfDependence {
-                  "description": "Package that depends on itself",
+                  "message": "Package that depends on itself",
                   "name": "SelfDependence",
                 },
               ],
@@ -286,13 +286,13 @@ Object {
               "path": "root/dependants/publicPackages/useItselfAsDependency/inProduction",
               "reason": Array [
                 SelfDependence {
-                  "description": "Package that depends on itself",
+                  "message": "Package that depends on itself",
                   "name": "SelfDependence",
                 },
               ],
             },
           ],
-          "description": "Package depends on invalid dependencies",
+          "message": "Package depends on invalid dependencies",
           "name": "InvalidDependencies",
         },
       ],
@@ -325,7 +325,6 @@ Object {
               "path": "root/dependants/privatePackages/duplicatedNames/ghi",
               "reason": Array [
                 NameDuplication {
-                  "description": "Package with name that is used by another package",
                   "duplicates": Array [
                     Object {
                       "manifestContent": Object {
@@ -370,6 +369,7 @@ Object {
                       "path": "root/dependants/publicPackages/duplicatedNames/def",
                     },
                   ],
+                  "message": "Package with name that is used by another package",
                   "name": "NameDuplication",
                 },
               ],
@@ -386,7 +386,6 @@ Object {
               "path": "root/dependants/privatePackages/duplicatedNames/jkl",
               "reason": Array [
                 NameDuplication {
-                  "description": "Package with name that is used by another package",
                   "duplicates": Array [
                     Object {
                       "manifestContent": Object {
@@ -431,6 +430,7 @@ Object {
                       "path": "root/dependants/publicPackages/duplicatedNames/def",
                     },
                   ],
+                  "message": "Package with name that is used by another package",
                   "name": "NameDuplication",
                 },
               ],
@@ -446,7 +446,6 @@ Object {
               "path": "root/dependants/publicPackages/duplicatedNames/abc",
               "reason": Array [
                 NameDuplication {
-                  "description": "Package with name that is used by another package",
                   "duplicates": Array [
                     Object {
                       "manifestContent": Object {
@@ -491,6 +490,7 @@ Object {
                       "path": "root/dependants/publicPackages/duplicatedNames/def",
                     },
                   ],
+                  "message": "Package with name that is used by another package",
                   "name": "NameDuplication",
                 },
               ],
@@ -506,7 +506,6 @@ Object {
               "path": "root/dependants/publicPackages/duplicatedNames/def",
               "reason": Array [
                 NameDuplication {
-                  "description": "Package with name that is used by another package",
                   "duplicates": Array [
                     Object {
                       "manifestContent": Object {
@@ -551,12 +550,13 @@ Object {
                       "path": "root/dependants/publicPackages/duplicatedNames/def",
                     },
                   ],
+                  "message": "Package with name that is used by another package",
                   "name": "NameDuplication",
                 },
               ],
             },
           ],
-          "description": "Package depends on invalid dependencies",
+          "message": "Package depends on invalid dependencies",
           "name": "InvalidDependencies",
         },
         InvalidDependencies {
@@ -573,7 +573,6 @@ Object {
               "path": "root/dependants/privatePackages/duplicatedNames/ghi",
               "reason": Array [
                 NameDuplication {
-                  "description": "Package with name that is used by another package",
                   "duplicates": Array [
                     Object {
                       "manifestContent": Object {
@@ -618,6 +617,7 @@ Object {
                       "path": "root/dependants/publicPackages/duplicatedNames/def",
                     },
                   ],
+                  "message": "Package with name that is used by another package",
                   "name": "NameDuplication",
                 },
               ],
@@ -634,7 +634,6 @@ Object {
               "path": "root/dependants/privatePackages/duplicatedNames/jkl",
               "reason": Array [
                 NameDuplication {
-                  "description": "Package with name that is used by another package",
                   "duplicates": Array [
                     Object {
                       "manifestContent": Object {
@@ -679,6 +678,7 @@ Object {
                       "path": "root/dependants/publicPackages/duplicatedNames/def",
                     },
                   ],
+                  "message": "Package with name that is used by another package",
                   "name": "NameDuplication",
                 },
               ],
@@ -694,7 +694,6 @@ Object {
               "path": "root/dependants/publicPackages/duplicatedNames/abc",
               "reason": Array [
                 NameDuplication {
-                  "description": "Package with name that is used by another package",
                   "duplicates": Array [
                     Object {
                       "manifestContent": Object {
@@ -739,6 +738,7 @@ Object {
                       "path": "root/dependants/publicPackages/duplicatedNames/def",
                     },
                   ],
+                  "message": "Package with name that is used by another package",
                   "name": "NameDuplication",
                 },
               ],
@@ -754,7 +754,6 @@ Object {
               "path": "root/dependants/publicPackages/duplicatedNames/def",
               "reason": Array [
                 NameDuplication {
-                  "description": "Package with name that is used by another package",
                   "duplicates": Array [
                     Object {
                       "manifestContent": Object {
@@ -799,12 +798,13 @@ Object {
                       "path": "root/dependants/publicPackages/duplicatedNames/def",
                     },
                   ],
+                  "message": "Package with name that is used by another package",
                   "name": "NameDuplication",
                 },
               ],
             },
           ],
-          "description": "Package depends on invalid dependencies",
+          "message": "Package depends on invalid dependencies",
           "name": "InvalidDependencies",
         },
       ],
@@ -837,7 +837,6 @@ Object {
               "path": "root/dependants/privatePackages/duplicatedNames/ghi",
               "reason": Array [
                 NameDuplication {
-                  "description": "Package with name that is used by another package",
                   "duplicates": Array [
                     Object {
                       "manifestContent": Object {
@@ -882,6 +881,7 @@ Object {
                       "path": "root/dependants/publicPackages/duplicatedNames/def",
                     },
                   ],
+                  "message": "Package with name that is used by another package",
                   "name": "NameDuplication",
                 },
               ],
@@ -898,7 +898,6 @@ Object {
               "path": "root/dependants/privatePackages/duplicatedNames/jkl",
               "reason": Array [
                 NameDuplication {
-                  "description": "Package with name that is used by another package",
                   "duplicates": Array [
                     Object {
                       "manifestContent": Object {
@@ -943,6 +942,7 @@ Object {
                       "path": "root/dependants/publicPackages/duplicatedNames/def",
                     },
                   ],
+                  "message": "Package with name that is used by another package",
                   "name": "NameDuplication",
                 },
               ],
@@ -958,7 +958,6 @@ Object {
               "path": "root/dependants/publicPackages/duplicatedNames/abc",
               "reason": Array [
                 NameDuplication {
-                  "description": "Package with name that is used by another package",
                   "duplicates": Array [
                     Object {
                       "manifestContent": Object {
@@ -1003,6 +1002,7 @@ Object {
                       "path": "root/dependants/publicPackages/duplicatedNames/def",
                     },
                   ],
+                  "message": "Package with name that is used by another package",
                   "name": "NameDuplication",
                 },
               ],
@@ -1018,7 +1018,6 @@ Object {
               "path": "root/dependants/publicPackages/duplicatedNames/def",
               "reason": Array [
                 NameDuplication {
-                  "description": "Package with name that is used by another package",
                   "duplicates": Array [
                     Object {
                       "manifestContent": Object {
@@ -1063,12 +1062,13 @@ Object {
                       "path": "root/dependants/publicPackages/duplicatedNames/def",
                     },
                   ],
+                  "message": "Package with name that is used by another package",
                   "name": "NameDuplication",
                 },
               ],
             },
           ],
-          "description": "Package depends on invalid dependencies",
+          "message": "Package depends on invalid dependencies",
           "name": "InvalidDependencies",
         },
         InvalidDependencies {
@@ -1085,7 +1085,6 @@ Object {
               "path": "root/dependants/privatePackages/duplicatedNames/ghi",
               "reason": Array [
                 NameDuplication {
-                  "description": "Package with name that is used by another package",
                   "duplicates": Array [
                     Object {
                       "manifestContent": Object {
@@ -1130,6 +1129,7 @@ Object {
                       "path": "root/dependants/publicPackages/duplicatedNames/def",
                     },
                   ],
+                  "message": "Package with name that is used by another package",
                   "name": "NameDuplication",
                 },
               ],
@@ -1146,7 +1146,6 @@ Object {
               "path": "root/dependants/privatePackages/duplicatedNames/jkl",
               "reason": Array [
                 NameDuplication {
-                  "description": "Package with name that is used by another package",
                   "duplicates": Array [
                     Object {
                       "manifestContent": Object {
@@ -1191,6 +1190,7 @@ Object {
                       "path": "root/dependants/publicPackages/duplicatedNames/def",
                     },
                   ],
+                  "message": "Package with name that is used by another package",
                   "name": "NameDuplication",
                 },
               ],
@@ -1206,7 +1206,6 @@ Object {
               "path": "root/dependants/publicPackages/duplicatedNames/abc",
               "reason": Array [
                 NameDuplication {
-                  "description": "Package with name that is used by another package",
                   "duplicates": Array [
                     Object {
                       "manifestContent": Object {
@@ -1251,6 +1250,7 @@ Object {
                       "path": "root/dependants/publicPackages/duplicatedNames/def",
                     },
                   ],
+                  "message": "Package with name that is used by another package",
                   "name": "NameDuplication",
                 },
               ],
@@ -1266,7 +1266,6 @@ Object {
               "path": "root/dependants/publicPackages/duplicatedNames/def",
               "reason": Array [
                 NameDuplication {
-                  "description": "Package with name that is used by another package",
                   "duplicates": Array [
                     Object {
                       "manifestContent": Object {
@@ -1311,12 +1310,13 @@ Object {
                       "path": "root/dependants/publicPackages/duplicatedNames/def",
                     },
                   ],
+                  "message": "Package with name that is used by another package",
                   "name": "NameDuplication",
                 },
               ],
             },
           ],
-          "description": "Package depends on invalid dependencies",
+          "message": "Package depends on invalid dependencies",
           "name": "InvalidDependencies",
         },
       ],
@@ -1372,7 +1372,7 @@ Object {
                       "version": "0.0.0",
                     },
                   ],
-                  "description": "Public package depends on non-dev private dependencies",
+                  "message": "Public package depends on non-dev private dependencies",
                   "name": "PrivateDependencies",
                 },
               ],
@@ -1410,13 +1410,13 @@ Object {
                       "version": "0.0.0",
                     },
                   ],
-                  "description": "Public package depends on non-dev private dependencies",
+                  "message": "Public package depends on non-dev private dependencies",
                   "name": "PrivateDependencies",
                 },
               ],
             },
           ],
-          "description": "Package depends on invalid dependencies",
+          "message": "Package depends on invalid dependencies",
           "name": "InvalidDependencies",
         },
         InvalidDependencies {
@@ -1454,7 +1454,7 @@ Object {
                       "version": "0.0.0",
                     },
                   ],
-                  "description": "Public package depends on non-dev private dependencies",
+                  "message": "Public package depends on non-dev private dependencies",
                   "name": "PrivateDependencies",
                 },
               ],
@@ -1492,7 +1492,7 @@ Object {
                       "version": "0.0.0",
                     },
                   ],
-                  "description": "Public package depends on non-dev private dependencies",
+                  "message": "Public package depends on non-dev private dependencies",
                   "name": "PrivateDependencies",
                 },
               ],
@@ -1547,7 +1547,7 @@ Object {
                               "version": "0.0.0",
                             },
                           ],
-                          "description": "Public package depends on non-dev private dependencies",
+                          "message": "Public package depends on non-dev private dependencies",
                           "name": "PrivateDependencies",
                         },
                       ],
@@ -1585,13 +1585,13 @@ Object {
                               "version": "0.0.0",
                             },
                           ],
-                          "description": "Public package depends on non-dev private dependencies",
+                          "message": "Public package depends on non-dev private dependencies",
                           "name": "PrivateDependencies",
                         },
                       ],
                     },
                   ],
-                  "description": "Package depends on invalid dependencies",
+                  "message": "Package depends on invalid dependencies",
                   "name": "InvalidDependencies",
                 },
               ],
@@ -1645,7 +1645,7 @@ Object {
                               "version": "0.0.0",
                             },
                           ],
-                          "description": "Public package depends on non-dev private dependencies",
+                          "message": "Public package depends on non-dev private dependencies",
                           "name": "PrivateDependencies",
                         },
                       ],
@@ -1683,13 +1683,13 @@ Object {
                               "version": "0.0.0",
                             },
                           ],
-                          "description": "Public package depends on non-dev private dependencies",
+                          "message": "Public package depends on non-dev private dependencies",
                           "name": "PrivateDependencies",
                         },
                       ],
                     },
                   ],
-                  "description": "Package depends on invalid dependencies",
+                  "message": "Package depends on invalid dependencies",
                   "name": "InvalidDependencies",
                 },
               ],
@@ -1744,7 +1744,7 @@ Object {
                               "version": "0.0.0",
                             },
                           ],
-                          "description": "Public package depends on non-dev private dependencies",
+                          "message": "Public package depends on non-dev private dependencies",
                           "name": "PrivateDependencies",
                         },
                       ],
@@ -1782,7 +1782,7 @@ Object {
                               "version": "0.0.0",
                             },
                           ],
-                          "description": "Public package depends on non-dev private dependencies",
+                          "message": "Public package depends on non-dev private dependencies",
                           "name": "PrivateDependencies",
                         },
                       ],
@@ -1836,7 +1836,7 @@ Object {
                                       "version": "0.0.0",
                                     },
                                   ],
-                                  "description": "Public package depends on non-dev private dependencies",
+                                  "message": "Public package depends on non-dev private dependencies",
                                   "name": "PrivateDependencies",
                                 },
                               ],
@@ -1874,19 +1874,19 @@ Object {
                                       "version": "0.0.0",
                                     },
                                   ],
-                                  "description": "Public package depends on non-dev private dependencies",
+                                  "message": "Public package depends on non-dev private dependencies",
                                   "name": "PrivateDependencies",
                                 },
                               ],
                             },
                           ],
-                          "description": "Package depends on invalid dependencies",
+                          "message": "Package depends on invalid dependencies",
                           "name": "InvalidDependencies",
                         },
                       ],
                     },
                   ],
-                  "description": "Package depends on invalid dependencies",
+                  "message": "Package depends on invalid dependencies",
                   "name": "InvalidDependencies",
                 },
               ],
@@ -1940,7 +1940,7 @@ Object {
                               "version": "0.0.0",
                             },
                           ],
-                          "description": "Public package depends on non-dev private dependencies",
+                          "message": "Public package depends on non-dev private dependencies",
                           "name": "PrivateDependencies",
                         },
                       ],
@@ -1978,19 +1978,19 @@ Object {
                               "version": "0.0.0",
                             },
                           ],
-                          "description": "Public package depends on non-dev private dependencies",
+                          "message": "Public package depends on non-dev private dependencies",
                           "name": "PrivateDependencies",
                         },
                       ],
                     },
                   ],
-                  "description": "Package depends on invalid dependencies",
+                  "message": "Package depends on invalid dependencies",
                   "name": "InvalidDependencies",
                 },
               ],
             },
           ],
-          "description": "Package depends on invalid dependencies",
+          "message": "Package depends on invalid dependencies",
           "name": "InvalidDependencies",
         },
       ],
@@ -2046,7 +2046,7 @@ Object {
                       "version": "0.0.0",
                     },
                   ],
-                  "description": "Public package depends on non-dev private dependencies",
+                  "message": "Public package depends on non-dev private dependencies",
                   "name": "PrivateDependencies",
                 },
               ],
@@ -2084,13 +2084,13 @@ Object {
                       "version": "0.0.0",
                     },
                   ],
-                  "description": "Public package depends on non-dev private dependencies",
+                  "message": "Public package depends on non-dev private dependencies",
                   "name": "PrivateDependencies",
                 },
               ],
             },
           ],
-          "description": "Package depends on invalid dependencies",
+          "message": "Package depends on invalid dependencies",
           "name": "InvalidDependencies",
         },
         InvalidDependencies {
@@ -2128,7 +2128,7 @@ Object {
                       "version": "0.0.0",
                     },
                   ],
-                  "description": "Public package depends on non-dev private dependencies",
+                  "message": "Public package depends on non-dev private dependencies",
                   "name": "PrivateDependencies",
                 },
               ],
@@ -2166,7 +2166,7 @@ Object {
                       "version": "0.0.0",
                     },
                   ],
-                  "description": "Public package depends on non-dev private dependencies",
+                  "message": "Public package depends on non-dev private dependencies",
                   "name": "PrivateDependencies",
                 },
               ],
@@ -2221,7 +2221,7 @@ Object {
                               "version": "0.0.0",
                             },
                           ],
-                          "description": "Public package depends on non-dev private dependencies",
+                          "message": "Public package depends on non-dev private dependencies",
                           "name": "PrivateDependencies",
                         },
                       ],
@@ -2259,13 +2259,13 @@ Object {
                               "version": "0.0.0",
                             },
                           ],
-                          "description": "Public package depends on non-dev private dependencies",
+                          "message": "Public package depends on non-dev private dependencies",
                           "name": "PrivateDependencies",
                         },
                       ],
                     },
                   ],
-                  "description": "Package depends on invalid dependencies",
+                  "message": "Package depends on invalid dependencies",
                   "name": "InvalidDependencies",
                 },
               ],
@@ -2319,7 +2319,7 @@ Object {
                               "version": "0.0.0",
                             },
                           ],
-                          "description": "Public package depends on non-dev private dependencies",
+                          "message": "Public package depends on non-dev private dependencies",
                           "name": "PrivateDependencies",
                         },
                       ],
@@ -2357,13 +2357,13 @@ Object {
                               "version": "0.0.0",
                             },
                           ],
-                          "description": "Public package depends on non-dev private dependencies",
+                          "message": "Public package depends on non-dev private dependencies",
                           "name": "PrivateDependencies",
                         },
                       ],
                     },
                   ],
-                  "description": "Package depends on invalid dependencies",
+                  "message": "Package depends on invalid dependencies",
                   "name": "InvalidDependencies",
                 },
               ],
@@ -2418,7 +2418,7 @@ Object {
                               "version": "0.0.0",
                             },
                           ],
-                          "description": "Public package depends on non-dev private dependencies",
+                          "message": "Public package depends on non-dev private dependencies",
                           "name": "PrivateDependencies",
                         },
                       ],
@@ -2456,7 +2456,7 @@ Object {
                               "version": "0.0.0",
                             },
                           ],
-                          "description": "Public package depends on non-dev private dependencies",
+                          "message": "Public package depends on non-dev private dependencies",
                           "name": "PrivateDependencies",
                         },
                       ],
@@ -2510,7 +2510,7 @@ Object {
                                       "version": "0.0.0",
                                     },
                                   ],
-                                  "description": "Public package depends on non-dev private dependencies",
+                                  "message": "Public package depends on non-dev private dependencies",
                                   "name": "PrivateDependencies",
                                 },
                               ],
@@ -2548,19 +2548,19 @@ Object {
                                       "version": "0.0.0",
                                     },
                                   ],
-                                  "description": "Public package depends on non-dev private dependencies",
+                                  "message": "Public package depends on non-dev private dependencies",
                                   "name": "PrivateDependencies",
                                 },
                               ],
                             },
                           ],
-                          "description": "Package depends on invalid dependencies",
+                          "message": "Package depends on invalid dependencies",
                           "name": "InvalidDependencies",
                         },
                       ],
                     },
                   ],
-                  "description": "Package depends on invalid dependencies",
+                  "message": "Package depends on invalid dependencies",
                   "name": "InvalidDependencies",
                 },
               ],
@@ -2614,7 +2614,7 @@ Object {
                               "version": "0.0.0",
                             },
                           ],
-                          "description": "Public package depends on non-dev private dependencies",
+                          "message": "Public package depends on non-dev private dependencies",
                           "name": "PrivateDependencies",
                         },
                       ],
@@ -2652,19 +2652,19 @@ Object {
                               "version": "0.0.0",
                             },
                           ],
-                          "description": "Public package depends on non-dev private dependencies",
+                          "message": "Public package depends on non-dev private dependencies",
                           "name": "PrivateDependencies",
                         },
                       ],
                     },
                   ],
-                  "description": "Package depends on invalid dependencies",
+                  "message": "Package depends on invalid dependencies",
                   "name": "InvalidDependencies",
                 },
               ],
             },
           ],
-          "description": "Package depends on invalid dependencies",
+          "message": "Package depends on invalid dependencies",
           "name": "InvalidDependencies",
         },
       ],
@@ -2719,7 +2719,7 @@ Object {
                       "version": "0.0.0",
                     },
                   ],
-                  "description": "Public package depends on non-dev private dependencies",
+                  "message": "Public package depends on non-dev private dependencies",
                   "name": "PrivateDependencies",
                 },
               ],
@@ -2757,13 +2757,13 @@ Object {
                       "version": "0.0.0",
                     },
                   ],
-                  "description": "Public package depends on non-dev private dependencies",
+                  "message": "Public package depends on non-dev private dependencies",
                   "name": "PrivateDependencies",
                 },
               ],
             },
           ],
-          "description": "Package depends on invalid dependencies",
+          "message": "Package depends on invalid dependencies",
           "name": "InvalidDependencies",
         },
         InvalidDependencies {
@@ -2801,7 +2801,7 @@ Object {
                       "version": "0.0.0",
                     },
                   ],
-                  "description": "Public package depends on non-dev private dependencies",
+                  "message": "Public package depends on non-dev private dependencies",
                   "name": "PrivateDependencies",
                 },
               ],
@@ -2839,7 +2839,7 @@ Object {
                       "version": "0.0.0",
                     },
                   ],
-                  "description": "Public package depends on non-dev private dependencies",
+                  "message": "Public package depends on non-dev private dependencies",
                   "name": "PrivateDependencies",
                 },
               ],
@@ -2893,7 +2893,7 @@ Object {
                               "version": "0.0.0",
                             },
                           ],
-                          "description": "Public package depends on non-dev private dependencies",
+                          "message": "Public package depends on non-dev private dependencies",
                           "name": "PrivateDependencies",
                         },
                       ],
@@ -2931,13 +2931,13 @@ Object {
                               "version": "0.0.0",
                             },
                           ],
-                          "description": "Public package depends on non-dev private dependencies",
+                          "message": "Public package depends on non-dev private dependencies",
                           "name": "PrivateDependencies",
                         },
                       ],
                     },
                   ],
-                  "description": "Package depends on invalid dependencies",
+                  "message": "Package depends on invalid dependencies",
                   "name": "InvalidDependencies",
                 },
               ],
@@ -2991,7 +2991,7 @@ Object {
                               "version": "0.0.0",
                             },
                           ],
-                          "description": "Public package depends on non-dev private dependencies",
+                          "message": "Public package depends on non-dev private dependencies",
                           "name": "PrivateDependencies",
                         },
                       ],
@@ -3029,19 +3029,19 @@ Object {
                               "version": "0.0.0",
                             },
                           ],
-                          "description": "Public package depends on non-dev private dependencies",
+                          "message": "Public package depends on non-dev private dependencies",
                           "name": "PrivateDependencies",
                         },
                       ],
                     },
                   ],
-                  "description": "Package depends on invalid dependencies",
+                  "message": "Package depends on invalid dependencies",
                   "name": "InvalidDependencies",
                 },
               ],
             },
           ],
-          "description": "Package depends on invalid dependencies",
+          "message": "Package depends on invalid dependencies",
           "name": "InvalidDependencies",
         },
       ],
@@ -3096,7 +3096,7 @@ Object {
                       "version": "0.0.0",
                     },
                   ],
-                  "description": "Public package depends on non-dev private dependencies",
+                  "message": "Public package depends on non-dev private dependencies",
                   "name": "PrivateDependencies",
                 },
               ],
@@ -3134,13 +3134,13 @@ Object {
                       "version": "0.0.0",
                     },
                   ],
-                  "description": "Public package depends on non-dev private dependencies",
+                  "message": "Public package depends on non-dev private dependencies",
                   "name": "PrivateDependencies",
                 },
               ],
             },
           ],
-          "description": "Package depends on invalid dependencies",
+          "message": "Package depends on invalid dependencies",
           "name": "InvalidDependencies",
         },
         InvalidDependencies {
@@ -3178,7 +3178,7 @@ Object {
                       "version": "0.0.0",
                     },
                   ],
-                  "description": "Public package depends on non-dev private dependencies",
+                  "message": "Public package depends on non-dev private dependencies",
                   "name": "PrivateDependencies",
                 },
               ],
@@ -3216,7 +3216,7 @@ Object {
                       "version": "0.0.0",
                     },
                   ],
-                  "description": "Public package depends on non-dev private dependencies",
+                  "message": "Public package depends on non-dev private dependencies",
                   "name": "PrivateDependencies",
                 },
               ],
@@ -3270,7 +3270,7 @@ Object {
                               "version": "0.0.0",
                             },
                           ],
-                          "description": "Public package depends on non-dev private dependencies",
+                          "message": "Public package depends on non-dev private dependencies",
                           "name": "PrivateDependencies",
                         },
                       ],
@@ -3308,13 +3308,13 @@ Object {
                               "version": "0.0.0",
                             },
                           ],
-                          "description": "Public package depends on non-dev private dependencies",
+                          "message": "Public package depends on non-dev private dependencies",
                           "name": "PrivateDependencies",
                         },
                       ],
                     },
                   ],
-                  "description": "Package depends on invalid dependencies",
+                  "message": "Package depends on invalid dependencies",
                   "name": "InvalidDependencies",
                 },
               ],
@@ -3368,7 +3368,7 @@ Object {
                               "version": "0.0.0",
                             },
                           ],
-                          "description": "Public package depends on non-dev private dependencies",
+                          "message": "Public package depends on non-dev private dependencies",
                           "name": "PrivateDependencies",
                         },
                       ],
@@ -3406,19 +3406,19 @@ Object {
                               "version": "0.0.0",
                             },
                           ],
-                          "description": "Public package depends on non-dev private dependencies",
+                          "message": "Public package depends on non-dev private dependencies",
                           "name": "PrivateDependencies",
                         },
                       ],
                     },
                   ],
-                  "description": "Package depends on invalid dependencies",
+                  "message": "Package depends on invalid dependencies",
                   "name": "InvalidDependencies",
                 },
               ],
             },
           ],
-          "description": "Package depends on invalid dependencies",
+          "message": "Package depends on invalid dependencies",
           "name": "InvalidDependencies",
         },
       ],
@@ -3472,7 +3472,7 @@ Object {
                       "version": "0.0.0",
                     },
                   ],
-                  "description": "Public package depends on non-dev private dependencies",
+                  "message": "Public package depends on non-dev private dependencies",
                   "name": "PrivateDependencies",
                 },
               ],
@@ -3510,13 +3510,13 @@ Object {
                       "version": "0.0.0",
                     },
                   ],
-                  "description": "Public package depends on non-dev private dependencies",
+                  "message": "Public package depends on non-dev private dependencies",
                   "name": "PrivateDependencies",
                 },
               ],
             },
           ],
-          "description": "Package depends on invalid dependencies",
+          "message": "Package depends on invalid dependencies",
           "name": "InvalidDependencies",
         },
         InvalidDependencies {
@@ -3554,7 +3554,7 @@ Object {
                       "version": "0.0.0",
                     },
                   ],
-                  "description": "Public package depends on non-dev private dependencies",
+                  "message": "Public package depends on non-dev private dependencies",
                   "name": "PrivateDependencies",
                 },
               ],
@@ -3592,13 +3592,13 @@ Object {
                       "version": "0.0.0",
                     },
                   ],
-                  "description": "Public package depends on non-dev private dependencies",
+                  "message": "Public package depends on non-dev private dependencies",
                   "name": "PrivateDependencies",
                 },
               ],
             },
           ],
-          "description": "Package depends on invalid dependencies",
+          "message": "Package depends on invalid dependencies",
           "name": "InvalidDependencies",
         },
       ],
@@ -3652,7 +3652,7 @@ Object {
                       "version": "0.0.0",
                     },
                   ],
-                  "description": "Public package depends on non-dev private dependencies",
+                  "message": "Public package depends on non-dev private dependencies",
                   "name": "PrivateDependencies",
                 },
               ],
@@ -3690,13 +3690,13 @@ Object {
                       "version": "0.0.0",
                     },
                   ],
-                  "description": "Public package depends on non-dev private dependencies",
+                  "message": "Public package depends on non-dev private dependencies",
                   "name": "PrivateDependencies",
                 },
               ],
             },
           ],
-          "description": "Package depends on invalid dependencies",
+          "message": "Package depends on invalid dependencies",
           "name": "InvalidDependencies",
         },
         InvalidDependencies {
@@ -3734,7 +3734,7 @@ Object {
                       "version": "0.0.0",
                     },
                   ],
-                  "description": "Public package depends on non-dev private dependencies",
+                  "message": "Public package depends on non-dev private dependencies",
                   "name": "PrivateDependencies",
                 },
               ],
@@ -3772,13 +3772,13 @@ Object {
                       "version": "0.0.0",
                     },
                   ],
-                  "description": "Public package depends on non-dev private dependencies",
+                  "message": "Public package depends on non-dev private dependencies",
                   "name": "PrivateDependencies",
                 },
               ],
             },
           ],
-          "description": "Package depends on invalid dependencies",
+          "message": "Package depends on invalid dependencies",
           "name": "InvalidDependencies",
         },
       ],
@@ -3797,7 +3797,6 @@ Object {
       "path": "root/dependants/privatePackages/duplicatedNames/ghi",
       "reason": Array [
         NameDuplication {
-          "description": "Package with name that is used by another package",
           "duplicates": Array [
             Object {
               "manifestContent": Object {
@@ -3842,10 +3841,10 @@ Object {
               "path": "root/dependants/publicPackages/duplicatedNames/def",
             },
           ],
+          "message": "Package with name that is used by another package",
           "name": "NameDuplication",
         },
         NameDuplication {
-          "description": "Package with name that is used by another package",
           "duplicates": Array [
             Object {
               "manifestContent": Object {
@@ -3890,6 +3889,7 @@ Object {
               "path": "root/dependants/publicPackages/duplicatedNames/def",
             },
           ],
+          "message": "Package with name that is used by another package",
           "name": "NameDuplication",
         },
       ],
@@ -3906,7 +3906,6 @@ Object {
       "path": "root/dependants/privatePackages/duplicatedNames/ghi",
       "reason": Array [
         NameDuplication {
-          "description": "Package with name that is used by another package",
           "duplicates": Array [
             Object {
               "manifestContent": Object {
@@ -3951,10 +3950,10 @@ Object {
               "path": "root/dependants/publicPackages/duplicatedNames/def",
             },
           ],
+          "message": "Package with name that is used by another package",
           "name": "NameDuplication",
         },
         NameDuplication {
-          "description": "Package with name that is used by another package",
           "duplicates": Array [
             Object {
               "manifestContent": Object {
@@ -3999,115 +3998,7 @@ Object {
               "path": "root/dependants/publicPackages/duplicatedNames/def",
             },
           ],
-          "name": "NameDuplication",
-        },
-      ],
-    },
-    Object {
-      "manifestContent": Object {
-        "__describe": "This package is named 'duplicated-name'",
-        "__expect": "Invalid",
-        "name": "duplicated-name",
-        "private": true,
-        "version": "0.0.0",
-      },
-      "manifestFile": "root/dependants/privatePackages/duplicatedNames/jkl/package.json",
-      "path": "root/dependants/privatePackages/duplicatedNames/jkl",
-      "reason": Array [
-        NameDuplication {
-          "description": "Package with name that is used by another package",
-          "duplicates": Array [
-            Object {
-              "manifestContent": Object {
-                "__describe": "This package is named 'duplicated-name'",
-                "__expect": "Invalid",
-                "name": "duplicated-name",
-                "private": true,
-                "version": "0.0.0",
-              },
-              "manifestFile": "root/dependants/privatePackages/duplicatedNames/ghi/package.json",
-              "path": "root/dependants/privatePackages/duplicatedNames/ghi",
-            },
-            Object {
-              "manifestContent": Object {
-                "__describe": "This package is named 'duplicated-name'",
-                "__expect": "Invalid",
-                "name": "duplicated-name",
-                "private": true,
-                "version": "0.0.0",
-              },
-              "manifestFile": "root/dependants/privatePackages/duplicatedNames/jkl/package.json",
-              "path": "root/dependants/privatePackages/duplicatedNames/jkl",
-            },
-            Object {
-              "manifestContent": Object {
-                "__describe": "This package is named 'duplicated-name'",
-                "__expect": "Invalid",
-                "name": "duplicated-name",
-                "version": "0.0.0",
-              },
-              "manifestFile": "root/dependants/publicPackages/duplicatedNames/abc/package.json",
-              "path": "root/dependants/publicPackages/duplicatedNames/abc",
-            },
-            Object {
-              "manifestContent": Object {
-                "__describe": "This package is named 'duplicated-name'",
-                "__expect": "Invalid",
-                "name": "duplicated-name",
-                "version": "0.0.0",
-              },
-              "manifestFile": "root/dependants/publicPackages/duplicatedNames/def/package.json",
-              "path": "root/dependants/publicPackages/duplicatedNames/def",
-            },
-          ],
-          "name": "NameDuplication",
-        },
-        NameDuplication {
-          "description": "Package with name that is used by another package",
-          "duplicates": Array [
-            Object {
-              "manifestContent": Object {
-                "__describe": "This package is named 'duplicated-name'",
-                "__expect": "Invalid",
-                "name": "duplicated-name",
-                "private": true,
-                "version": "0.0.0",
-              },
-              "manifestFile": "root/dependants/privatePackages/duplicatedNames/ghi/package.json",
-              "path": "root/dependants/privatePackages/duplicatedNames/ghi",
-            },
-            Object {
-              "manifestContent": Object {
-                "__describe": "This package is named 'duplicated-name'",
-                "__expect": "Invalid",
-                "name": "duplicated-name",
-                "private": true,
-                "version": "0.0.0",
-              },
-              "manifestFile": "root/dependants/privatePackages/duplicatedNames/jkl/package.json",
-              "path": "root/dependants/privatePackages/duplicatedNames/jkl",
-            },
-            Object {
-              "manifestContent": Object {
-                "__describe": "This package is named 'duplicated-name'",
-                "__expect": "Invalid",
-                "name": "duplicated-name",
-                "version": "0.0.0",
-              },
-              "manifestFile": "root/dependants/publicPackages/duplicatedNames/abc/package.json",
-              "path": "root/dependants/publicPackages/duplicatedNames/abc",
-            },
-            Object {
-              "manifestContent": Object {
-                "__describe": "This package is named 'duplicated-name'",
-                "__expect": "Invalid",
-                "name": "duplicated-name",
-                "version": "0.0.0",
-              },
-              "manifestFile": "root/dependants/publicPackages/duplicatedNames/def/package.json",
-              "path": "root/dependants/publicPackages/duplicatedNames/def",
-            },
-          ],
+          "message": "Package with name that is used by another package",
           "name": "NameDuplication",
         },
       ],
@@ -4124,7 +4015,6 @@ Object {
       "path": "root/dependants/privatePackages/duplicatedNames/jkl",
       "reason": Array [
         NameDuplication {
-          "description": "Package with name that is used by another package",
           "duplicates": Array [
             Object {
               "manifestContent": Object {
@@ -4169,10 +4059,10 @@ Object {
               "path": "root/dependants/publicPackages/duplicatedNames/def",
             },
           ],
+          "message": "Package with name that is used by another package",
           "name": "NameDuplication",
         },
         NameDuplication {
-          "description": "Package with name that is used by another package",
           "duplicates": Array [
             Object {
               "manifestContent": Object {
@@ -4217,6 +4107,116 @@ Object {
               "path": "root/dependants/publicPackages/duplicatedNames/def",
             },
           ],
+          "message": "Package with name that is used by another package",
+          "name": "NameDuplication",
+        },
+      ],
+    },
+    Object {
+      "manifestContent": Object {
+        "__describe": "This package is named 'duplicated-name'",
+        "__expect": "Invalid",
+        "name": "duplicated-name",
+        "private": true,
+        "version": "0.0.0",
+      },
+      "manifestFile": "root/dependants/privatePackages/duplicatedNames/jkl/package.json",
+      "path": "root/dependants/privatePackages/duplicatedNames/jkl",
+      "reason": Array [
+        NameDuplication {
+          "duplicates": Array [
+            Object {
+              "manifestContent": Object {
+                "__describe": "This package is named 'duplicated-name'",
+                "__expect": "Invalid",
+                "name": "duplicated-name",
+                "private": true,
+                "version": "0.0.0",
+              },
+              "manifestFile": "root/dependants/privatePackages/duplicatedNames/ghi/package.json",
+              "path": "root/dependants/privatePackages/duplicatedNames/ghi",
+            },
+            Object {
+              "manifestContent": Object {
+                "__describe": "This package is named 'duplicated-name'",
+                "__expect": "Invalid",
+                "name": "duplicated-name",
+                "private": true,
+                "version": "0.0.0",
+              },
+              "manifestFile": "root/dependants/privatePackages/duplicatedNames/jkl/package.json",
+              "path": "root/dependants/privatePackages/duplicatedNames/jkl",
+            },
+            Object {
+              "manifestContent": Object {
+                "__describe": "This package is named 'duplicated-name'",
+                "__expect": "Invalid",
+                "name": "duplicated-name",
+                "version": "0.0.0",
+              },
+              "manifestFile": "root/dependants/publicPackages/duplicatedNames/abc/package.json",
+              "path": "root/dependants/publicPackages/duplicatedNames/abc",
+            },
+            Object {
+              "manifestContent": Object {
+                "__describe": "This package is named 'duplicated-name'",
+                "__expect": "Invalid",
+                "name": "duplicated-name",
+                "version": "0.0.0",
+              },
+              "manifestFile": "root/dependants/publicPackages/duplicatedNames/def/package.json",
+              "path": "root/dependants/publicPackages/duplicatedNames/def",
+            },
+          ],
+          "message": "Package with name that is used by another package",
+          "name": "NameDuplication",
+        },
+        NameDuplication {
+          "duplicates": Array [
+            Object {
+              "manifestContent": Object {
+                "__describe": "This package is named 'duplicated-name'",
+                "__expect": "Invalid",
+                "name": "duplicated-name",
+                "private": true,
+                "version": "0.0.0",
+              },
+              "manifestFile": "root/dependants/privatePackages/duplicatedNames/ghi/package.json",
+              "path": "root/dependants/privatePackages/duplicatedNames/ghi",
+            },
+            Object {
+              "manifestContent": Object {
+                "__describe": "This package is named 'duplicated-name'",
+                "__expect": "Invalid",
+                "name": "duplicated-name",
+                "private": true,
+                "version": "0.0.0",
+              },
+              "manifestFile": "root/dependants/privatePackages/duplicatedNames/jkl/package.json",
+              "path": "root/dependants/privatePackages/duplicatedNames/jkl",
+            },
+            Object {
+              "manifestContent": Object {
+                "__describe": "This package is named 'duplicated-name'",
+                "__expect": "Invalid",
+                "name": "duplicated-name",
+                "version": "0.0.0",
+              },
+              "manifestFile": "root/dependants/publicPackages/duplicatedNames/abc/package.json",
+              "path": "root/dependants/publicPackages/duplicatedNames/abc",
+            },
+            Object {
+              "manifestContent": Object {
+                "__describe": "This package is named 'duplicated-name'",
+                "__expect": "Invalid",
+                "name": "duplicated-name",
+                "version": "0.0.0",
+              },
+              "manifestFile": "root/dependants/publicPackages/duplicatedNames/def/package.json",
+              "path": "root/dependants/publicPackages/duplicatedNames/def",
+            },
+          ],
+          "message": "Package with name that is used by another package",
           "name": "NameDuplication",
         },
       ],
@@ -4232,7 +4232,6 @@ Object {
       "path": "root/dependants/publicPackages/duplicatedNames/abc",
       "reason": Array [
         NameDuplication {
-          "description": "Package with name that is used by another package",
           "duplicates": Array [
             Object {
               "manifestContent": Object {
@@ -4277,10 +4276,10 @@ Object {
               "path": "root/dependants/publicPackages/duplicatedNames/def",
             },
           ],
+          "message": "Package with name that is used by another package",
           "name": "NameDuplication",
         },
         NameDuplication {
-          "description": "Package with name that is used by another package",
           "duplicates": Array [
             Object {
               "manifestContent": Object {
@@ -4325,6 +4324,7 @@ Object {
               "path": "root/dependants/publicPackages/duplicatedNames/def",
             },
           ],
+          "message": "Package with name that is used by another package",
           "name": "NameDuplication",
         },
       ],
@@ -4340,7 +4340,6 @@ Object {
       "path": "root/dependants/publicPackages/duplicatedNames/abc",
       "reason": Array [
         NameDuplication {
-          "description": "Package with name that is used by another package",
           "duplicates": Array [
             Object {
               "manifestContent": Object {
@@ -4385,10 +4384,10 @@ Object {
               "path": "root/dependants/publicPackages/duplicatedNames/def",
             },
           ],
+          "message": "Package with name that is used by another package",
           "name": "NameDuplication",
         },
         NameDuplication {
-          "description": "Package with name that is used by another package",
           "duplicates": Array [
             Object {
               "manifestContent": Object {
@@ -4433,114 +4432,7 @@ Object {
               "path": "root/dependants/publicPackages/duplicatedNames/def",
             },
           ],
-          "name": "NameDuplication",
-        },
-      ],
-    },
-    Object {
-      "manifestContent": Object {
-        "__describe": "This package is named 'duplicated-name'",
-        "__expect": "Invalid",
-        "name": "duplicated-name",
-        "version": "0.0.0",
-      },
-      "manifestFile": "root/dependants/publicPackages/duplicatedNames/def/package.json",
-      "path": "root/dependants/publicPackages/duplicatedNames/def",
-      "reason": Array [
-        NameDuplication {
-          "description": "Package with name that is used by another package",
-          "duplicates": Array [
-            Object {
-              "manifestContent": Object {
-                "__describe": "This package is named 'duplicated-name'",
-                "__expect": "Invalid",
-                "name": "duplicated-name",
-                "private": true,
-                "version": "0.0.0",
-              },
-              "manifestFile": "root/dependants/privatePackages/duplicatedNames/ghi/package.json",
-              "path": "root/dependants/privatePackages/duplicatedNames/ghi",
-            },
-            Object {
-              "manifestContent": Object {
-                "__describe": "This package is named 'duplicated-name'",
-                "__expect": "Invalid",
-                "name": "duplicated-name",
-                "private": true,
-                "version": "0.0.0",
-              },
-              "manifestFile": "root/dependants/privatePackages/duplicatedNames/jkl/package.json",
-              "path": "root/dependants/privatePackages/duplicatedNames/jkl",
-            },
-            Object {
-              "manifestContent": Object {
-                "__describe": "This package is named 'duplicated-name'",
-                "__expect": "Invalid",
-                "name": "duplicated-name",
-                "version": "0.0.0",
-              },
-              "manifestFile": "root/dependants/publicPackages/duplicatedNames/abc/package.json",
-              "path": "root/dependants/publicPackages/duplicatedNames/abc",
-            },
-            Object {
-              "manifestContent": Object {
-                "__describe": "This package is named 'duplicated-name'",
-                "__expect": "Invalid",
-                "name": "duplicated-name",
-                "version": "0.0.0",
-              },
-              "manifestFile": "root/dependants/publicPackages/duplicatedNames/def/package.json",
-              "path": "root/dependants/publicPackages/duplicatedNames/def",
-            },
-          ],
-          "name": "NameDuplication",
-        },
-        NameDuplication {
-          "description": "Package with name that is used by another package",
-          "duplicates": Array [
-            Object {
-              "manifestContent": Object {
-                "__describe": "This package is named 'duplicated-name'",
-                "__expect": "Invalid",
-                "name": "duplicated-name",
-                "private": true,
-                "version": "0.0.0",
-              },
-              "manifestFile": "root/dependants/privatePackages/duplicatedNames/ghi/package.json",
-              "path": "root/dependants/privatePackages/duplicatedNames/ghi",
-            },
-            Object {
-              "manifestContent": Object {
-                "__describe": "This package is named 'duplicated-name'",
-                "__expect": "Invalid",
-                "name": "duplicated-name",
-                "private": true,
-                "version": "0.0.0",
-              },
-              "manifestFile": "root/dependants/privatePackages/duplicatedNames/jkl/package.json",
-              "path": "root/dependants/privatePackages/duplicatedNames/jkl",
-            },
-            Object {
-              "manifestContent": Object {
-                "__describe": "This package is named 'duplicated-name'",
-                "__expect": "Invalid",
-                "name": "duplicated-name",
-                "version": "0.0.0",
-              },
-              "manifestFile": "root/dependants/publicPackages/duplicatedNames/abc/package.json",
-              "path": "root/dependants/publicPackages/duplicatedNames/abc",
-            },
-            Object {
-              "manifestContent": Object {
-                "__describe": "This package is named 'duplicated-name'",
-                "__expect": "Invalid",
-                "name": "duplicated-name",
-                "version": "0.0.0",
-              },
-              "manifestFile": "root/dependants/publicPackages/duplicatedNames/def/package.json",
-              "path": "root/dependants/publicPackages/duplicatedNames/def",
-            },
-          ],
+          "message": "Package with name that is used by another package",
           "name": "NameDuplication",
         },
       ],
@@ -4556,7 +4448,6 @@ Object {
       "path": "root/dependants/publicPackages/duplicatedNames/def",
       "reason": Array [
         NameDuplication {
-          "description": "Package with name that is used by another package",
           "duplicates": Array [
             Object {
               "manifestContent": Object {
@@ -4601,10 +4492,10 @@ Object {
               "path": "root/dependants/publicPackages/duplicatedNames/def",
             },
           ],
+          "message": "Package with name that is used by another package",
           "name": "NameDuplication",
         },
         NameDuplication {
-          "description": "Package with name that is used by another package",
           "duplicates": Array [
             Object {
               "manifestContent": Object {
@@ -4649,6 +4540,115 @@ Object {
               "path": "root/dependants/publicPackages/duplicatedNames/def",
             },
           ],
+          "message": "Package with name that is used by another package",
+          "name": "NameDuplication",
+        },
+      ],
+    },
+    Object {
+      "manifestContent": Object {
+        "__describe": "This package is named 'duplicated-name'",
+        "__expect": "Invalid",
+        "name": "duplicated-name",
+        "version": "0.0.0",
+      },
+      "manifestFile": "root/dependants/publicPackages/duplicatedNames/def/package.json",
+      "path": "root/dependants/publicPackages/duplicatedNames/def",
+      "reason": Array [
+        NameDuplication {
+          "duplicates": Array [
+            Object {
+              "manifestContent": Object {
+                "__describe": "This package is named 'duplicated-name'",
+                "__expect": "Invalid",
+                "name": "duplicated-name",
+                "private": true,
+                "version": "0.0.0",
+              },
+              "manifestFile": "root/dependants/privatePackages/duplicatedNames/ghi/package.json",
+              "path": "root/dependants/privatePackages/duplicatedNames/ghi",
+            },
+            Object {
+              "manifestContent": Object {
+                "__describe": "This package is named 'duplicated-name'",
+                "__expect": "Invalid",
+                "name": "duplicated-name",
+                "private": true,
+                "version": "0.0.0",
+              },
+              "manifestFile": "root/dependants/privatePackages/duplicatedNames/jkl/package.json",
+              "path": "root/dependants/privatePackages/duplicatedNames/jkl",
+            },
+            Object {
+              "manifestContent": Object {
+                "__describe": "This package is named 'duplicated-name'",
+                "__expect": "Invalid",
+                "name": "duplicated-name",
+                "version": "0.0.0",
+              },
+              "manifestFile": "root/dependants/publicPackages/duplicatedNames/abc/package.json",
+              "path": "root/dependants/publicPackages/duplicatedNames/abc",
+            },
+            Object {
+              "manifestContent": Object {
+                "__describe": "This package is named 'duplicated-name'",
+                "__expect": "Invalid",
+                "name": "duplicated-name",
+                "version": "0.0.0",
+              },
+              "manifestFile": "root/dependants/publicPackages/duplicatedNames/def/package.json",
+              "path": "root/dependants/publicPackages/duplicatedNames/def",
+            },
+          ],
+          "message": "Package with name that is used by another package",
+          "name": "NameDuplication",
+        },
+        NameDuplication {
+          "duplicates": Array [
+            Object {
+              "manifestContent": Object {
+                "__describe": "This package is named 'duplicated-name'",
+                "__expect": "Invalid",
+                "name": "duplicated-name",
+                "private": true,
+                "version": "0.0.0",
+              },
+              "manifestFile": "root/dependants/privatePackages/duplicatedNames/ghi/package.json",
+              "path": "root/dependants/privatePackages/duplicatedNames/ghi",
+            },
+            Object {
+              "manifestContent": Object {
+                "__describe": "This package is named 'duplicated-name'",
+                "__expect": "Invalid",
+                "name": "duplicated-name",
+                "private": true,
+                "version": "0.0.0",
+              },
+              "manifestFile": "root/dependants/privatePackages/duplicatedNames/jkl/package.json",
+              "path": "root/dependants/privatePackages/duplicatedNames/jkl",
+            },
+            Object {
+              "manifestContent": Object {
+                "__describe": "This package is named 'duplicated-name'",
+                "__expect": "Invalid",
+                "name": "duplicated-name",
+                "version": "0.0.0",
+              },
+              "manifestFile": "root/dependants/publicPackages/duplicatedNames/abc/package.json",
+              "path": "root/dependants/publicPackages/duplicatedNames/abc",
+            },
+            Object {
+              "manifestContent": Object {
+                "__describe": "This package is named 'duplicated-name'",
+                "__expect": "Invalid",
+                "name": "duplicated-name",
+                "version": "0.0.0",
+              },
+              "manifestFile": "root/dependants/publicPackages/duplicatedNames/def/package.json",
+              "path": "root/dependants/publicPackages/duplicatedNames/def",
+            },
+          ],
+          "message": "Package with name that is used by another package",
           "name": "NameDuplication",
         },
       ],
@@ -4688,7 +4688,7 @@ Object {
               "version": "0.0.0",
             },
           ],
-          "description": "Public package depends on non-dev private dependencies",
+          "message": "Public package depends on non-dev private dependencies",
           "name": "PrivateDependencies",
         },
         PrivateDependencies {
@@ -4711,7 +4711,7 @@ Object {
               "version": "0.0.0",
             },
           ],
-          "description": "Public package depends on non-dev private dependencies",
+          "message": "Public package depends on non-dev private dependencies",
           "name": "PrivateDependencies",
         },
       ],
@@ -4749,7 +4749,7 @@ Object {
               "version": "0.0.0",
             },
           ],
-          "description": "Public package depends on non-dev private dependencies",
+          "message": "Public package depends on non-dev private dependencies",
           "name": "PrivateDependencies",
         },
         PrivateDependencies {
@@ -4772,7 +4772,7 @@ Object {
               "version": "0.0.0",
             },
           ],
-          "description": "Public package depends on non-dev private dependencies",
+          "message": "Public package depends on non-dev private dependencies",
           "name": "PrivateDependencies",
         },
       ],
@@ -4810,7 +4810,7 @@ Object {
               "version": "0.0.0",
             },
           ],
-          "description": "Public package depends on non-dev private dependencies",
+          "message": "Public package depends on non-dev private dependencies",
           "name": "PrivateDependencies",
         },
         PrivateDependencies {
@@ -4833,7 +4833,7 @@ Object {
               "version": "0.0.0",
             },
           ],
-          "description": "Public package depends on non-dev private dependencies",
+          "message": "Public package depends on non-dev private dependencies",
           "name": "PrivateDependencies",
         },
       ],
@@ -4871,7 +4871,7 @@ Object {
               "version": "0.0.0",
             },
           ],
-          "description": "Public package depends on non-dev private dependencies",
+          "message": "Public package depends on non-dev private dependencies",
           "name": "PrivateDependencies",
         },
         PrivateDependencies {
@@ -4894,7 +4894,7 @@ Object {
               "version": "0.0.0",
             },
           ],
-          "description": "Public package depends on non-dev private dependencies",
+          "message": "Public package depends on non-dev private dependencies",
           "name": "PrivateDependencies",
         },
       ],
@@ -4916,11 +4916,11 @@ Object {
       "path": "root/dependants/privatePackages/useItselfAsDependency/asPeer",
       "reason": Array [
         SelfDependence {
-          "description": "Package that depends on itself",
+          "message": "Package that depends on itself",
           "name": "SelfDependence",
         },
         SelfDependence {
-          "description": "Package that depends on itself",
+          "message": "Package that depends on itself",
           "name": "SelfDependence",
         },
       ],
@@ -4940,35 +4940,11 @@ Object {
       "path": "root/dependants/privatePackages/useItselfAsDependency/asPeer",
       "reason": Array [
         SelfDependence {
-          "description": "Package that depends on itself",
+          "message": "Package that depends on itself",
           "name": "SelfDependence",
         },
         SelfDependence {
-          "description": "Package that depends on itself",
-          "name": "SelfDependence",
-        },
-      ],
-    },
-    Object {
-      "manifestContent": Object {
-        "__describe": "This package has its own name in its \`dependencies\`",
-        "__expect": "Invalid",
-        "devDependencies": Object {
-          "prv-use-itself-as-dev": "^0.0.0",
-        },
-        "name": "prv-use-itself-as-dev",
-        "private": true,
-        "version": "0.0.0",
-      },
-      "manifestFile": "root/dependants/privatePackages/useItselfAsDependency/inDevelopment/package.json",
-      "path": "root/dependants/privatePackages/useItselfAsDependency/inDevelopment",
-      "reason": Array [
-        SelfDependence {
-          "description": "Package that depends on itself",
-          "name": "SelfDependence",
-        },
-        SelfDependence {
-          "description": "Package that depends on itself",
+          "message": "Package that depends on itself",
           "name": "SelfDependence",
         },
       ],
@@ -4988,11 +4964,35 @@ Object {
       "path": "root/dependants/privatePackages/useItselfAsDependency/inDevelopment",
       "reason": Array [
         SelfDependence {
-          "description": "Package that depends on itself",
+          "message": "Package that depends on itself",
           "name": "SelfDependence",
         },
         SelfDependence {
-          "description": "Package that depends on itself",
+          "message": "Package that depends on itself",
+          "name": "SelfDependence",
+        },
+      ],
+    },
+    Object {
+      "manifestContent": Object {
+        "__describe": "This package has its own name in its \`dependencies\`",
+        "__expect": "Invalid",
+        "devDependencies": Object {
+          "prv-use-itself-as-dev": "^0.0.0",
+        },
+        "name": "prv-use-itself-as-dev",
+        "private": true,
+        "version": "0.0.0",
+      },
+      "manifestFile": "root/dependants/privatePackages/useItselfAsDependency/inDevelopment/package.json",
+      "path": "root/dependants/privatePackages/useItselfAsDependency/inDevelopment",
+      "reason": Array [
+        SelfDependence {
+          "message": "Package that depends on itself",
+          "name": "SelfDependence",
+        },
+        SelfDependence {
+          "message": "Package that depends on itself",
           "name": "SelfDependence",
         },
       ],
@@ -5012,11 +5012,11 @@ Object {
       "path": "root/dependants/privatePackages/useItselfAsDependency/inProduction",
       "reason": Array [
         SelfDependence {
-          "description": "Package that depends on itself",
+          "message": "Package that depends on itself",
           "name": "SelfDependence",
         },
         SelfDependence {
-          "description": "Package that depends on itself",
+          "message": "Package that depends on itself",
           "name": "SelfDependence",
         },
       ],
@@ -5036,34 +5036,11 @@ Object {
       "path": "root/dependants/privatePackages/useItselfAsDependency/inProduction",
       "reason": Array [
         SelfDependence {
-          "description": "Package that depends on itself",
+          "message": "Package that depends on itself",
           "name": "SelfDependence",
         },
         SelfDependence {
-          "description": "Package that depends on itself",
-          "name": "SelfDependence",
-        },
-      ],
-    },
-    Object {
-      "manifestContent": Object {
-        "__describe": "This package has its own name in its \`peerDependencies\`",
-        "__expect": "Invalid",
-        "name": "pub-use-itself-as-peer",
-        "peerDependencies": Object {
-          "pub-use-itself-as-peer": "^0.0.0",
-        },
-        "version": "0.0.0",
-      },
-      "manifestFile": "root/dependants/publicPackages/useItselfAsDependency/asPeer/package.json",
-      "path": "root/dependants/publicPackages/useItselfAsDependency/asPeer",
-      "reason": Array [
-        SelfDependence {
-          "description": "Package that depends on itself",
-          "name": "SelfDependence",
-        },
-        SelfDependence {
-          "description": "Package that depends on itself",
+          "message": "Package that depends on itself",
           "name": "SelfDependence",
         },
       ],
@@ -5082,11 +5059,34 @@ Object {
       "path": "root/dependants/publicPackages/useItselfAsDependency/asPeer",
       "reason": Array [
         SelfDependence {
-          "description": "Package that depends on itself",
+          "message": "Package that depends on itself",
           "name": "SelfDependence",
         },
         SelfDependence {
-          "description": "Package that depends on itself",
+          "message": "Package that depends on itself",
+          "name": "SelfDependence",
+        },
+      ],
+    },
+    Object {
+      "manifestContent": Object {
+        "__describe": "This package has its own name in its \`peerDependencies\`",
+        "__expect": "Invalid",
+        "name": "pub-use-itself-as-peer",
+        "peerDependencies": Object {
+          "pub-use-itself-as-peer": "^0.0.0",
+        },
+        "version": "0.0.0",
+      },
+      "manifestFile": "root/dependants/publicPackages/useItselfAsDependency/asPeer/package.json",
+      "path": "root/dependants/publicPackages/useItselfAsDependency/asPeer",
+      "reason": Array [
+        SelfDependence {
+          "message": "Package that depends on itself",
+          "name": "SelfDependence",
+        },
+        SelfDependence {
+          "message": "Package that depends on itself",
           "name": "SelfDependence",
         },
       ],
@@ -5105,11 +5105,11 @@ Object {
       "path": "root/dependants/publicPackages/useItselfAsDependency/inDevelopment",
       "reason": Array [
         SelfDependence {
-          "description": "Package that depends on itself",
+          "message": "Package that depends on itself",
           "name": "SelfDependence",
         },
         SelfDependence {
-          "description": "Package that depends on itself",
+          "message": "Package that depends on itself",
           "name": "SelfDependence",
         },
       ],
@@ -5128,34 +5128,11 @@ Object {
       "path": "root/dependants/publicPackages/useItselfAsDependency/inDevelopment",
       "reason": Array [
         SelfDependence {
-          "description": "Package that depends on itself",
+          "message": "Package that depends on itself",
           "name": "SelfDependence",
         },
         SelfDependence {
-          "description": "Package that depends on itself",
-          "name": "SelfDependence",
-        },
-      ],
-    },
-    Object {
-      "manifestContent": Object {
-        "__describe": "This package has its own name in its \`dependencies\`",
-        "__expect": "Invalid",
-        "dependencies": Object {
-          "pub-use-itself-as-prod": "^0.0.0",
-        },
-        "name": "pub-use-itself-as-prod",
-        "version": "0.0.0",
-      },
-      "manifestFile": "root/dependants/publicPackages/useItselfAsDependency/inProduction/package.json",
-      "path": "root/dependants/publicPackages/useItselfAsDependency/inProduction",
-      "reason": Array [
-        SelfDependence {
-          "description": "Package that depends on itself",
-          "name": "SelfDependence",
-        },
-        SelfDependence {
-          "description": "Package that depends on itself",
+          "message": "Package that depends on itself",
           "name": "SelfDependence",
         },
       ],
@@ -5174,11 +5151,34 @@ Object {
       "path": "root/dependants/publicPackages/useItselfAsDependency/inProduction",
       "reason": Array [
         SelfDependence {
-          "description": "Package that depends on itself",
+          "message": "Package that depends on itself",
           "name": "SelfDependence",
         },
         SelfDependence {
-          "description": "Package that depends on itself",
+          "message": "Package that depends on itself",
+          "name": "SelfDependence",
+        },
+      ],
+    },
+    Object {
+      "manifestContent": Object {
+        "__describe": "This package has its own name in its \`dependencies\`",
+        "__expect": "Invalid",
+        "dependencies": Object {
+          "pub-use-itself-as-prod": "^0.0.0",
+        },
+        "name": "pub-use-itself-as-prod",
+        "version": "0.0.0",
+      },
+      "manifestFile": "root/dependants/publicPackages/useItselfAsDependency/inProduction/package.json",
+      "path": "root/dependants/publicPackages/useItselfAsDependency/inProduction",
+      "reason": Array [
+        SelfDependence {
+          "message": "Package that depends on itself",
+          "name": "SelfDependence",
+        },
+        SelfDependence {
+          "message": "Package that depends on itself",
           "name": "SelfDependence",
         },
       ],
@@ -5222,7 +5222,7 @@ Array [
             "version": "0.0.0",
           },
         ],
-        "description": "Public package depends on non-dev private dependencies",
+        "message": "Public package depends on non-dev private dependencies",
         "name": "PrivateDependencies",
       },
       PrivateDependencies {
@@ -5245,7 +5245,7 @@ Array [
             "version": "0.0.0",
           },
         ],
-        "description": "Public package depends on non-dev private dependencies",
+        "message": "Public package depends on non-dev private dependencies",
         "name": "PrivateDependencies",
       },
     ],
@@ -5283,7 +5283,7 @@ Array [
             "version": "0.0.0",
           },
         ],
-        "description": "Public package depends on non-dev private dependencies",
+        "message": "Public package depends on non-dev private dependencies",
         "name": "PrivateDependencies",
       },
       PrivateDependencies {
@@ -5306,7 +5306,7 @@ Array [
             "version": "0.0.0",
           },
         ],
-        "description": "Public package depends on non-dev private dependencies",
+        "message": "Public package depends on non-dev private dependencies",
         "name": "PrivateDependencies",
       },
     ],
@@ -5323,7 +5323,6 @@ Array [
     "path": "root/dependants/privatePackages/duplicatedNames/ghi",
     "reason": Array [
       NameDuplication {
-        "description": "Package with name that is used by another package",
         "duplicates": Array [
           Object {
             "manifestContent": Object {
@@ -5368,10 +5367,10 @@ Array [
             "path": "root/dependants/publicPackages/duplicatedNames/def",
           },
         ],
+        "message": "Package with name that is used by another package",
         "name": "NameDuplication",
       },
       NameDuplication {
-        "description": "Package with name that is used by another package",
         "duplicates": Array [
           Object {
             "manifestContent": Object {
@@ -5416,6 +5415,7 @@ Array [
             "path": "root/dependants/publicPackages/duplicatedNames/def",
           },
         ],
+        "message": "Package with name that is used by another package",
         "name": "NameDuplication",
       },
     ],
@@ -5432,7 +5432,6 @@ Array [
     "path": "root/dependants/privatePackages/duplicatedNames/jkl",
     "reason": Array [
       NameDuplication {
-        "description": "Package with name that is used by another package",
         "duplicates": Array [
           Object {
             "manifestContent": Object {
@@ -5477,10 +5476,10 @@ Array [
             "path": "root/dependants/publicPackages/duplicatedNames/def",
           },
         ],
+        "message": "Package with name that is used by another package",
         "name": "NameDuplication",
       },
       NameDuplication {
-        "description": "Package with name that is used by another package",
         "duplicates": Array [
           Object {
             "manifestContent": Object {
@@ -5525,6 +5524,7 @@ Array [
             "path": "root/dependants/publicPackages/duplicatedNames/def",
           },
         ],
+        "message": "Package with name that is used by another package",
         "name": "NameDuplication",
       },
     ],
@@ -5540,7 +5540,6 @@ Array [
     "path": "root/dependants/publicPackages/duplicatedNames/abc",
     "reason": Array [
       NameDuplication {
-        "description": "Package with name that is used by another package",
         "duplicates": Array [
           Object {
             "manifestContent": Object {
@@ -5585,10 +5584,10 @@ Array [
             "path": "root/dependants/publicPackages/duplicatedNames/def",
           },
         ],
+        "message": "Package with name that is used by another package",
         "name": "NameDuplication",
       },
       NameDuplication {
-        "description": "Package with name that is used by another package",
         "duplicates": Array [
           Object {
             "manifestContent": Object {
@@ -5633,6 +5632,7 @@ Array [
             "path": "root/dependants/publicPackages/duplicatedNames/def",
           },
         ],
+        "message": "Package with name that is used by another package",
         "name": "NameDuplication",
       },
     ],
@@ -5648,7 +5648,6 @@ Array [
     "path": "root/dependants/publicPackages/duplicatedNames/def",
     "reason": Array [
       NameDuplication {
-        "description": "Package with name that is used by another package",
         "duplicates": Array [
           Object {
             "manifestContent": Object {
@@ -5693,10 +5692,10 @@ Array [
             "path": "root/dependants/publicPackages/duplicatedNames/def",
           },
         ],
+        "message": "Package with name that is used by another package",
         "name": "NameDuplication",
       },
       NameDuplication {
-        "description": "Package with name that is used by another package",
         "duplicates": Array [
           Object {
             "manifestContent": Object {
@@ -5741,6 +5740,7 @@ Array [
             "path": "root/dependants/publicPackages/duplicatedNames/def",
           },
         ],
+        "message": "Package with name that is used by another package",
         "name": "NameDuplication",
       },
     ],
@@ -5760,11 +5760,11 @@ Array [
     "path": "root/dependants/privatePackages/useItselfAsDependency/asPeer",
     "reason": Array [
       SelfDependence {
-        "description": "Package that depends on itself",
+        "message": "Package that depends on itself",
         "name": "SelfDependence",
       },
       SelfDependence {
-        "description": "Package that depends on itself",
+        "message": "Package that depends on itself",
         "name": "SelfDependence",
       },
     ],
@@ -5784,11 +5784,11 @@ Array [
     "path": "root/dependants/privatePackages/useItselfAsDependency/inDevelopment",
     "reason": Array [
       SelfDependence {
-        "description": "Package that depends on itself",
+        "message": "Package that depends on itself",
         "name": "SelfDependence",
       },
       SelfDependence {
-        "description": "Package that depends on itself",
+        "message": "Package that depends on itself",
         "name": "SelfDependence",
       },
     ],
@@ -5808,11 +5808,11 @@ Array [
     "path": "root/dependants/privatePackages/useItselfAsDependency/inProduction",
     "reason": Array [
       SelfDependence {
-        "description": "Package that depends on itself",
+        "message": "Package that depends on itself",
         "name": "SelfDependence",
       },
       SelfDependence {
-        "description": "Package that depends on itself",
+        "message": "Package that depends on itself",
         "name": "SelfDependence",
       },
     ],
@@ -5831,11 +5831,11 @@ Array [
     "path": "root/dependants/publicPackages/useItselfAsDependency/asPeer",
     "reason": Array [
       SelfDependence {
-        "description": "Package that depends on itself",
+        "message": "Package that depends on itself",
         "name": "SelfDependence",
       },
       SelfDependence {
-        "description": "Package that depends on itself",
+        "message": "Package that depends on itself",
         "name": "SelfDependence",
       },
     ],
@@ -5854,11 +5854,11 @@ Array [
     "path": "root/dependants/publicPackages/useItselfAsDependency/inDevelopment",
     "reason": Array [
       SelfDependence {
-        "description": "Package that depends on itself",
+        "message": "Package that depends on itself",
         "name": "SelfDependence",
       },
       SelfDependence {
-        "description": "Package that depends on itself",
+        "message": "Package that depends on itself",
         "name": "SelfDependence",
       },
     ],
@@ -5877,11 +5877,11 @@ Array [
     "path": "root/dependants/publicPackages/useItselfAsDependency/inProduction",
     "reason": Array [
       SelfDependence {
-        "description": "Package that depends on itself",
+        "message": "Package that depends on itself",
         "name": "SelfDependence",
       },
       SelfDependence {
-        "description": "Package that depends on itself",
+        "message": "Package that depends on itself",
         "name": "SelfDependence",
       },
     ],
@@ -5921,7 +5921,7 @@ Array [
             "path": "root/dependants/publicPackages/useItselfAsDependency/asPeer",
             "reason": Array [
               SelfDependence {
-                "description": "Package that depends on itself",
+                "message": "Package that depends on itself",
                 "name": "SelfDependence",
               },
             ],
@@ -5940,7 +5940,7 @@ Array [
             "path": "root/dependants/publicPackages/useItselfAsDependency/inDevelopment",
             "reason": Array [
               SelfDependence {
-                "description": "Package that depends on itself",
+                "message": "Package that depends on itself",
                 "name": "SelfDependence",
               },
             ],
@@ -5959,13 +5959,13 @@ Array [
             "path": "root/dependants/publicPackages/useItselfAsDependency/inProduction",
             "reason": Array [
               SelfDependence {
-                "description": "Package that depends on itself",
+                "message": "Package that depends on itself",
                 "name": "SelfDependence",
               },
             ],
           },
         ],
-        "description": "Package depends on invalid dependencies",
+        "message": "Package depends on invalid dependencies",
         "name": "InvalidDependencies",
       },
       InvalidDependencies {
@@ -5984,7 +5984,7 @@ Array [
             "path": "root/dependants/publicPackages/useItselfAsDependency/asPeer",
             "reason": Array [
               SelfDependence {
-                "description": "Package that depends on itself",
+                "message": "Package that depends on itself",
                 "name": "SelfDependence",
               },
             ],
@@ -6003,7 +6003,7 @@ Array [
             "path": "root/dependants/publicPackages/useItselfAsDependency/inDevelopment",
             "reason": Array [
               SelfDependence {
-                "description": "Package that depends on itself",
+                "message": "Package that depends on itself",
                 "name": "SelfDependence",
               },
             ],
@@ -6022,13 +6022,13 @@ Array [
             "path": "root/dependants/publicPackages/useItselfAsDependency/inProduction",
             "reason": Array [
               SelfDependence {
-                "description": "Package that depends on itself",
+                "message": "Package that depends on itself",
                 "name": "SelfDependence",
               },
             ],
           },
         ],
-        "description": "Package depends on invalid dependencies",
+        "message": "Package depends on invalid dependencies",
         "name": "InvalidDependencies",
       },
     ],
@@ -6061,7 +6061,6 @@ Array [
             "path": "root/dependants/privatePackages/duplicatedNames/ghi",
             "reason": Array [
               NameDuplication {
-                "description": "Package with name that is used by another package",
                 "duplicates": Array [
                   Object {
                     "manifestContent": Object {
@@ -6106,6 +6105,7 @@ Array [
                     "path": "root/dependants/publicPackages/duplicatedNames/def",
                   },
                 ],
+                "message": "Package with name that is used by another package",
                 "name": "NameDuplication",
               },
             ],
@@ -6122,7 +6122,6 @@ Array [
             "path": "root/dependants/privatePackages/duplicatedNames/jkl",
             "reason": Array [
               NameDuplication {
-                "description": "Package with name that is used by another package",
                 "duplicates": Array [
                   Object {
                     "manifestContent": Object {
@@ -6167,6 +6166,7 @@ Array [
                     "path": "root/dependants/publicPackages/duplicatedNames/def",
                   },
                 ],
+                "message": "Package with name that is used by another package",
                 "name": "NameDuplication",
               },
             ],
@@ -6182,7 +6182,6 @@ Array [
             "path": "root/dependants/publicPackages/duplicatedNames/abc",
             "reason": Array [
               NameDuplication {
-                "description": "Package with name that is used by another package",
                 "duplicates": Array [
                   Object {
                     "manifestContent": Object {
@@ -6227,6 +6226,7 @@ Array [
                     "path": "root/dependants/publicPackages/duplicatedNames/def",
                   },
                 ],
+                "message": "Package with name that is used by another package",
                 "name": "NameDuplication",
               },
             ],
@@ -6242,7 +6242,6 @@ Array [
             "path": "root/dependants/publicPackages/duplicatedNames/def",
             "reason": Array [
               NameDuplication {
-                "description": "Package with name that is used by another package",
                 "duplicates": Array [
                   Object {
                     "manifestContent": Object {
@@ -6287,12 +6286,13 @@ Array [
                     "path": "root/dependants/publicPackages/duplicatedNames/def",
                   },
                 ],
+                "message": "Package with name that is used by another package",
                 "name": "NameDuplication",
               },
             ],
           },
         ],
-        "description": "Package depends on invalid dependencies",
+        "message": "Package depends on invalid dependencies",
         "name": "InvalidDependencies",
       },
       InvalidDependencies {
@@ -6309,7 +6309,6 @@ Array [
             "path": "root/dependants/privatePackages/duplicatedNames/ghi",
             "reason": Array [
               NameDuplication {
-                "description": "Package with name that is used by another package",
                 "duplicates": Array [
                   Object {
                     "manifestContent": Object {
@@ -6354,6 +6353,7 @@ Array [
                     "path": "root/dependants/publicPackages/duplicatedNames/def",
                   },
                 ],
+                "message": "Package with name that is used by another package",
                 "name": "NameDuplication",
               },
             ],
@@ -6370,7 +6370,6 @@ Array [
             "path": "root/dependants/privatePackages/duplicatedNames/jkl",
             "reason": Array [
               NameDuplication {
-                "description": "Package with name that is used by another package",
                 "duplicates": Array [
                   Object {
                     "manifestContent": Object {
@@ -6415,6 +6414,7 @@ Array [
                     "path": "root/dependants/publicPackages/duplicatedNames/def",
                   },
                 ],
+                "message": "Package with name that is used by another package",
                 "name": "NameDuplication",
               },
             ],
@@ -6430,7 +6430,6 @@ Array [
             "path": "root/dependants/publicPackages/duplicatedNames/abc",
             "reason": Array [
               NameDuplication {
-                "description": "Package with name that is used by another package",
                 "duplicates": Array [
                   Object {
                     "manifestContent": Object {
@@ -6475,6 +6474,7 @@ Array [
                     "path": "root/dependants/publicPackages/duplicatedNames/def",
                   },
                 ],
+                "message": "Package with name that is used by another package",
                 "name": "NameDuplication",
               },
             ],
@@ -6490,7 +6490,6 @@ Array [
             "path": "root/dependants/publicPackages/duplicatedNames/def",
             "reason": Array [
               NameDuplication {
-                "description": "Package with name that is used by another package",
                 "duplicates": Array [
                   Object {
                     "manifestContent": Object {
@@ -6535,12 +6534,13 @@ Array [
                     "path": "root/dependants/publicPackages/duplicatedNames/def",
                   },
                 ],
+                "message": "Package with name that is used by another package",
                 "name": "NameDuplication",
               },
             ],
           },
         ],
-        "description": "Package depends on invalid dependencies",
+        "message": "Package depends on invalid dependencies",
         "name": "InvalidDependencies",
       },
     ],
@@ -6596,7 +6596,7 @@ Array [
                     "version": "0.0.0",
                   },
                 ],
-                "description": "Public package depends on non-dev private dependencies",
+                "message": "Public package depends on non-dev private dependencies",
                 "name": "PrivateDependencies",
               },
             ],
@@ -6634,13 +6634,13 @@ Array [
                     "version": "0.0.0",
                   },
                 ],
-                "description": "Public package depends on non-dev private dependencies",
+                "message": "Public package depends on non-dev private dependencies",
                 "name": "PrivateDependencies",
               },
             ],
           },
         ],
-        "description": "Package depends on invalid dependencies",
+        "message": "Package depends on invalid dependencies",
         "name": "InvalidDependencies",
       },
       InvalidDependencies {
@@ -6678,7 +6678,7 @@ Array [
                     "version": "0.0.0",
                   },
                 ],
-                "description": "Public package depends on non-dev private dependencies",
+                "message": "Public package depends on non-dev private dependencies",
                 "name": "PrivateDependencies",
               },
             ],
@@ -6716,7 +6716,7 @@ Array [
                     "version": "0.0.0",
                   },
                 ],
-                "description": "Public package depends on non-dev private dependencies",
+                "message": "Public package depends on non-dev private dependencies",
                 "name": "PrivateDependencies",
               },
             ],
@@ -6771,7 +6771,7 @@ Array [
                             "version": "0.0.0",
                           },
                         ],
-                        "description": "Public package depends on non-dev private dependencies",
+                        "message": "Public package depends on non-dev private dependencies",
                         "name": "PrivateDependencies",
                       },
                     ],
@@ -6809,13 +6809,13 @@ Array [
                             "version": "0.0.0",
                           },
                         ],
-                        "description": "Public package depends on non-dev private dependencies",
+                        "message": "Public package depends on non-dev private dependencies",
                         "name": "PrivateDependencies",
                       },
                     ],
                   },
                 ],
-                "description": "Package depends on invalid dependencies",
+                "message": "Package depends on invalid dependencies",
                 "name": "InvalidDependencies",
               },
             ],
@@ -6869,7 +6869,7 @@ Array [
                             "version": "0.0.0",
                           },
                         ],
-                        "description": "Public package depends on non-dev private dependencies",
+                        "message": "Public package depends on non-dev private dependencies",
                         "name": "PrivateDependencies",
                       },
                     ],
@@ -6907,13 +6907,13 @@ Array [
                             "version": "0.0.0",
                           },
                         ],
-                        "description": "Public package depends on non-dev private dependencies",
+                        "message": "Public package depends on non-dev private dependencies",
                         "name": "PrivateDependencies",
                       },
                     ],
                   },
                 ],
-                "description": "Package depends on invalid dependencies",
+                "message": "Package depends on invalid dependencies",
                 "name": "InvalidDependencies",
               },
             ],
@@ -6968,7 +6968,7 @@ Array [
                             "version": "0.0.0",
                           },
                         ],
-                        "description": "Public package depends on non-dev private dependencies",
+                        "message": "Public package depends on non-dev private dependencies",
                         "name": "PrivateDependencies",
                       },
                     ],
@@ -7006,7 +7006,7 @@ Array [
                             "version": "0.0.0",
                           },
                         ],
-                        "description": "Public package depends on non-dev private dependencies",
+                        "message": "Public package depends on non-dev private dependencies",
                         "name": "PrivateDependencies",
                       },
                     ],
@@ -7060,7 +7060,7 @@ Array [
                                     "version": "0.0.0",
                                   },
                                 ],
-                                "description": "Public package depends on non-dev private dependencies",
+                                "message": "Public package depends on non-dev private dependencies",
                                 "name": "PrivateDependencies",
                               },
                             ],
@@ -7098,19 +7098,19 @@ Array [
                                     "version": "0.0.0",
                                   },
                                 ],
-                                "description": "Public package depends on non-dev private dependencies",
+                                "message": "Public package depends on non-dev private dependencies",
                                 "name": "PrivateDependencies",
                               },
                             ],
                           },
                         ],
-                        "description": "Package depends on invalid dependencies",
+                        "message": "Package depends on invalid dependencies",
                         "name": "InvalidDependencies",
                       },
                     ],
                   },
                 ],
-                "description": "Package depends on invalid dependencies",
+                "message": "Package depends on invalid dependencies",
                 "name": "InvalidDependencies",
               },
             ],
@@ -7164,7 +7164,7 @@ Array [
                             "version": "0.0.0",
                           },
                         ],
-                        "description": "Public package depends on non-dev private dependencies",
+                        "message": "Public package depends on non-dev private dependencies",
                         "name": "PrivateDependencies",
                       },
                     ],
@@ -7202,19 +7202,19 @@ Array [
                             "version": "0.0.0",
                           },
                         ],
-                        "description": "Public package depends on non-dev private dependencies",
+                        "message": "Public package depends on non-dev private dependencies",
                         "name": "PrivateDependencies",
                       },
                     ],
                   },
                 ],
-                "description": "Package depends on invalid dependencies",
+                "message": "Package depends on invalid dependencies",
                 "name": "InvalidDependencies",
               },
             ],
           },
         ],
-        "description": "Package depends on invalid dependencies",
+        "message": "Package depends on invalid dependencies",
         "name": "InvalidDependencies",
       },
     ],
@@ -7269,7 +7269,7 @@ Array [
                     "version": "0.0.0",
                   },
                 ],
-                "description": "Public package depends on non-dev private dependencies",
+                "message": "Public package depends on non-dev private dependencies",
                 "name": "PrivateDependencies",
               },
             ],
@@ -7307,13 +7307,13 @@ Array [
                     "version": "0.0.0",
                   },
                 ],
-                "description": "Public package depends on non-dev private dependencies",
+                "message": "Public package depends on non-dev private dependencies",
                 "name": "PrivateDependencies",
               },
             ],
           },
         ],
-        "description": "Package depends on invalid dependencies",
+        "message": "Package depends on invalid dependencies",
         "name": "InvalidDependencies",
       },
       InvalidDependencies {
@@ -7351,7 +7351,7 @@ Array [
                     "version": "0.0.0",
                   },
                 ],
-                "description": "Public package depends on non-dev private dependencies",
+                "message": "Public package depends on non-dev private dependencies",
                 "name": "PrivateDependencies",
               },
             ],
@@ -7389,7 +7389,7 @@ Array [
                     "version": "0.0.0",
                   },
                 ],
-                "description": "Public package depends on non-dev private dependencies",
+                "message": "Public package depends on non-dev private dependencies",
                 "name": "PrivateDependencies",
               },
             ],
@@ -7443,7 +7443,7 @@ Array [
                             "version": "0.0.0",
                           },
                         ],
-                        "description": "Public package depends on non-dev private dependencies",
+                        "message": "Public package depends on non-dev private dependencies",
                         "name": "PrivateDependencies",
                       },
                     ],
@@ -7481,13 +7481,13 @@ Array [
                             "version": "0.0.0",
                           },
                         ],
-                        "description": "Public package depends on non-dev private dependencies",
+                        "message": "Public package depends on non-dev private dependencies",
                         "name": "PrivateDependencies",
                       },
                     ],
                   },
                 ],
-                "description": "Package depends on invalid dependencies",
+                "message": "Package depends on invalid dependencies",
                 "name": "InvalidDependencies",
               },
             ],
@@ -7541,7 +7541,7 @@ Array [
                             "version": "0.0.0",
                           },
                         ],
-                        "description": "Public package depends on non-dev private dependencies",
+                        "message": "Public package depends on non-dev private dependencies",
                         "name": "PrivateDependencies",
                       },
                     ],
@@ -7579,19 +7579,19 @@ Array [
                             "version": "0.0.0",
                           },
                         ],
-                        "description": "Public package depends on non-dev private dependencies",
+                        "message": "Public package depends on non-dev private dependencies",
                         "name": "PrivateDependencies",
                       },
                     ],
                   },
                 ],
-                "description": "Package depends on invalid dependencies",
+                "message": "Package depends on invalid dependencies",
                 "name": "InvalidDependencies",
               },
             ],
           },
         ],
-        "description": "Package depends on invalid dependencies",
+        "message": "Package depends on invalid dependencies",
         "name": "InvalidDependencies",
       },
     ],
@@ -7645,7 +7645,7 @@ Array [
                     "version": "0.0.0",
                   },
                 ],
-                "description": "Public package depends on non-dev private dependencies",
+                "message": "Public package depends on non-dev private dependencies",
                 "name": "PrivateDependencies",
               },
             ],
@@ -7683,13 +7683,13 @@ Array [
                     "version": "0.0.0",
                   },
                 ],
-                "description": "Public package depends on non-dev private dependencies",
+                "message": "Public package depends on non-dev private dependencies",
                 "name": "PrivateDependencies",
               },
             ],
           },
         ],
-        "description": "Package depends on invalid dependencies",
+        "message": "Package depends on invalid dependencies",
         "name": "InvalidDependencies",
       },
       InvalidDependencies {
@@ -7727,7 +7727,7 @@ Array [
                     "version": "0.0.0",
                   },
                 ],
-                "description": "Public package depends on non-dev private dependencies",
+                "message": "Public package depends on non-dev private dependencies",
                 "name": "PrivateDependencies",
               },
             ],
@@ -7765,13 +7765,13 @@ Array [
                     "version": "0.0.0",
                   },
                 ],
-                "description": "Public package depends on non-dev private dependencies",
+                "message": "Public package depends on non-dev private dependencies",
                 "name": "PrivateDependencies",
               },
             ],
           },
         ],
-        "description": "Package depends on invalid dependencies",
+        "message": "Package depends on invalid dependencies",
         "name": "InvalidDependencies",
       },
     ],
