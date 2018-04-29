@@ -29,5 +29,5 @@ install:
   - yarn
 
 script:
-  - yarn test
+  - travis_wait 240 yarn test
   - yarn run build
