@@ -60,7 +60,12 @@ it('no reason object shall have its name different than its class', apply(async 
 
 it('grouping result matches snapshot', apply(async () => {
   const invalids = await getInvalids()
-  expect(converters.invalids.group(invalids)).toMatchSnapshot()
+
+  const groups = Array
+    .from(converters.invalids.group(invalids))
+    .map(([{name}, list]) => ({name, list}))
+
+  expect(groups).toMatchSnapshot()
 }))
 
 async function getValids () {
