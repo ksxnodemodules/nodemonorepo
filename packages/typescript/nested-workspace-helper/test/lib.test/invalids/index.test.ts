@@ -1,5 +1,5 @@
 import createSetupTeardown from '../../.lib/setup-teardown'
-import {listAllInvalidPackages, listAllPackages} from '../../../index'
+import {listAllInvalidPackages, listAllPackages, converters} from '../../../index'
 
 const {apply} = createSetupTeardown('invalids.yaml')
 const getInvalids = () => listAllInvalidPackages('root')
@@ -56,6 +56,11 @@ it('no reason object shall have its name different than its class', apply(async 
       xx => expect(xx.compare).toBe(true)
     )
   )
+}))
+
+it('grouping result matches snapshot', apply(async () => {
+  const invalids = await getInvalids()
+  expect(converters.invalids.group(invalids)).toMatchSnapshot()
 }))
 
 async function getValids () {

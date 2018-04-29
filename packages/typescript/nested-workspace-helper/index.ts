@@ -5,6 +5,7 @@ import listAllInvalidPackages from './lib/invalids'
 import updateDependencyVersions from './lib/update-dep-vers'
 import classifyPublishability from './lib/publishables'
 import npmRegistry from './lib/npm-registry'
+import * as converters from './lib/converters'
 
 export * from './lib/types'
 
@@ -15,5 +16,6 @@ export {
   listAllInvalidPackages,
   updateDependencyVersions,
   classifyPublishability,
-  npmRegistry
+  npmRegistry,
+  converters
 }
