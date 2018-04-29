@@ -1,5 +1,5 @@
 import createSetupTeardown from '../../.lib/setup-teardown'
-import partition from '../../../lib/publishables'
+import {classifyPublishability} from '../../../index'
 
 import {
   PublishablePackageList,
@@ -13,6 +13,6 @@ type PackageList = PublishablePackageList | UnpublisablePackageList | PrivatePac
 const {apply} = createSetupTeardown('publishability.yaml')
 
 it('matches snapshot', apply(async () => {
-  const classified = await partition('root')
+  const classified = await classifyPublishability('root')
   expect(classified).toMatchSnapshot()
 }))

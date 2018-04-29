@@ -1,4 +1,4 @@
-import getDependencyMap from '../../../lib/dep-map'
+import {getDependencyMap} from '../../../index'
 import createSetupTeardown from '../../.lib/setup-teardown'
 
 const {apply} = createSetupTeardown('valid.yaml')

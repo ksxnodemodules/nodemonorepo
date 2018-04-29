@@ -1,6 +1,7 @@
-import getMismatchedDependencies, {Checker} from '../../../lib/mismatches'
+import {listMismatchedDependencies} from '../../../index'
 import createSetupTeardown from '../../.lib/setup-teardown'
 import iterate from '../../.lib/all-mismatch-checkers'
+import {Checker} from '../../../lib/mismatches'
 
 const {apply} = createSetupTeardown('mismatched-deps.yaml')
 const root = 'root'
@@ -8,7 +9,7 @@ const root = 'root'
 describe('getMismatchedDependencies', () => {
   iterate((check, checkerName) => {
     describe(`when checker is ${checkerName}`, () => {
-      const get = () => getMismatchedDependencies(root, check)
+      const get = () => listMismatchedDependencies(root, check)
       it('matches snapshot', apply(async () => {
         expect(await get()).toMatchSnapshot()
       }))

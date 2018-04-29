@@ -1,6 +1,6 @@
 import createSetupTeardown from '../../.lib/setup-teardown'
-import listAllPackages from '../../../lib/list-pkgs'
-import listAllInvalidPackages from '../../../lib/invalids'
+import {listAllPackages} from '../../../index'
+import {listAllInvalidPackages} from '../../../index'
 
 const {apply} = createSetupTeardown('invalids.yaml')
 const getInvalids = () => listAllInvalidPackages('root')

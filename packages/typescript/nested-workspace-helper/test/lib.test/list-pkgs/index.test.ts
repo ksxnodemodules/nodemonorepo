@@ -1,4 +1,4 @@
-import listAllPackages from '../../../lib/list-pkgs'
+import {listAllPackages} from '../../../index'
 import createSetupTeardown from '../../.lib/setup-teardown'
 
 const {apply} = createSetupTeardown('valid.yaml')
