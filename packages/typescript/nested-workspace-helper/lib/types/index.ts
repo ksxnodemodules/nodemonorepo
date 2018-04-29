@@ -208,12 +208,20 @@ export namespace InvalidPackage {
   export namespace Reason {
     export abstract class Base {
       /**
+       * Name of reason
+       *   - Is the name of class when not compressed
+       *   - More reliant than class names
+       */
+      abstract readonly name: string
+
+      /**
        * Helpful description that can be use as error message
        */
       abstract readonly description: string
     }
 
     export class InvalidDependencies extends Base {
+      readonly name = 'InvalidDependencies'
       readonly description = 'Package depends on invalid dependencies'
 
       /**
@@ -235,6 +243,7 @@ export namespace InvalidPackage {
     }
 
     export class PrivateDependencies extends Base {
+      readonly name = 'PrivateDependencies'
       readonly description = 'Public package depends on non-dev private dependencies'
 
       /**
@@ -256,6 +265,7 @@ export namespace InvalidPackage {
     }
 
     export class NameDuplication extends Base {
+      readonly name = 'NameDuplication'
       readonly description = 'Package with name that is used by another package'
 
       /**
@@ -274,6 +284,7 @@ export namespace InvalidPackage {
     }
 
     export class SelfDependence extends Base {
+      readonly name = 'SelfDependence'
       readonly description = 'Package that depends on itself'
     }
   }
