@@ -13,7 +13,6 @@ env:
   - COVERALLS=true
 
 cache:
-  yarn: true
   directories:
     - $HOME/.npm
     - $HOME/.nvm
@@ -25,9 +24,12 @@ cache:
 before_script:
   - chmod -R +x sh
 
+before_install:
+  - curl -L https://unpkg.com/@pnpm/self-installer | node
+
 install:
-  - yarn
+  - pnpm recursive link --shamefully-flatten
 
 script:
-  - yarn test -- --runInBand
-  - yarn run build
+  - pnpm test
+  - pnpm run build
