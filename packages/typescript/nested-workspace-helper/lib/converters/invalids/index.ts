@@ -11,9 +11,7 @@ export namespace group {
   export function asDict (list: InvalidPackage.List) {
     return assets.group.classify.dict.multiDistribute(
       list,
-      item => item.reason.map(
-        x => (x.constructor as typeof InvalidPackage.Reason.Base).description.name
-      )
+      item => item.reason.map(x => x.name)
     ).classified
   }
 
