@@ -1,9 +1,11 @@
 import * as types from '../../../.types'
+import isInIter from '../.utils/in-iter'
 
 export namespace classify {
   export function singleDistribute<X> (
     values: Iterable<X>,
-    classifier: singleDistribute.Classifier<X>
+    classifier: singleDistribute.Classifier<X>,
+    duplicationChecker?: isInIter.Comparator<X>
   ): singleDistribute.Classification<X> {
     const db: types.Dict.StrKey<Set<X>> = {}
 
@@ -11,7 +13,8 @@ export namespace classify {
       const name = classifier(item)
 
       if (name in db) {
-        db[name].add(item)
+        const set = db[name]
+        isInIter(item, set, duplicationChecker) || set.add(item)
       } else {
         db[name] = new Set([item])
       }
@@ -32,7 +35,8 @@ export namespace classify {
 
   export function multiDistribute<X> (
     values: Iterable<X>,
-    classifier: multiDistribute.Classifier<X>
+    classifier: multiDistribute.Classifier<X>,
+    duplicationChecker?: isInIter.Comparator<X>
   ): multiDistribute.MultipleDistribution<X> {
     const classified: types.Dict.StrKey<X[]> = {}
     const unclassified: X[] = []
@@ -43,7 +47,8 @@ export namespace classify {
       if (classes.length) {
         for (const name of classes) {
           if (name in classified) {
-            classified[name].push(item)
+            const array = classified[name]
+            isInIter(item, array, duplicationChecker) || classified[name].push(item)
           } else {
             classified[name] = [item]
           }
