@@ -490,6 +490,7 @@ specifiers:
   extra-jest: '*'
   fs-extra: ^5.0.0
   fs-tree-utils: ^0.0.0
+  monorepo-shared-assets: ^0.0.0
   node-fetch: ^2.1.2
   preloaded-node: ^0.0.0
   ramda: ^0.25.0
