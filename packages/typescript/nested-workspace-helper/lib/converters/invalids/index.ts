@@ -11,7 +11,8 @@ export namespace group {
   export function asDict (list: InvalidPackage.List) {
     return assets.group.classify.dict.multiDistribute(
       list,
-      item => item.reason.map(x => x.name)
+      item => item.reason.map(x => x.name),
+      utils.DUPLICATION_CHECKER
     ).classified
   }
 
@@ -60,7 +61,9 @@ export namespace group {
       list,
       item => item.reason.map(
         x => x.constructor as typeof InvalidPackage.Reason.Base
-      )
+      ),
+      undefined,
+      utils.DUPLICATION_CHECKER
     ).classified
   }
 
@@ -149,5 +152,12 @@ namespace utils {
         ? heading + '\n' + content.join('\n')
         : heading
     }
+  }
+
+  export function DUPLICATION_CHECKER (
+    a: InvalidPackage.ListItem,
+    b: InvalidPackage.ListItem
+  ): boolean {
+    return a.path === b.path
   }
 }
