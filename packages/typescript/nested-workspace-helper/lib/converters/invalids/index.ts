@@ -13,15 +13,6 @@ export function group (list: InvalidPackage.List) {
 }
 
 export namespace group {
-  namespace indent {
-    const character = ' '
-    const prefixes = '*—→'
-
-    export const lv = Array
-      .from(assets.iter.fns.range(3))
-      .map(x => character.repeat(x << 1) + prefixes[x] + ' ')
-  }
-
   export function asString (list: InvalidPackage.List): string {
     return asString.fromClassifiedMap(group(list))
   }
@@ -86,6 +77,15 @@ export namespace group {
     typeof InvalidPackage.Reason.Base,
     ReadonlySet<InvalidPackage.ListItem>
   >
+
+  namespace indent {
+    const character = ' '
+    const prefixes = '*—→'
+
+    export const lv = Array
+      .from(assets.iter.fns.range(3))
+      .map(x => character.repeat(x << 1) + prefixes[x] + ' ')
+  }
 }
 
 namespace utils {
