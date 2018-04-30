@@ -1,5 +1,67 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`grouping result as string matches snapshot 1`] = `
+"* Public package depends on non-dev private dependencies[1m (PrivateDependencies)[22m
+  — pub-use-private-dependencies-as-peer[2m (root/dependants/publicPackages/usePrivateDependenciesAsPeer)[22m
+    → private
+  — pub-use-private-dependencies-in-production[2m (root/dependants/publicPackages/usePrivateDependenciesInProduction)[22m
+    → private
+
+* Package with name that is used by another package[1m (NameDuplication)[22m
+  — duplicated-name[2m (root/dependants/privatePackages/duplicatedNames/ghi)[22m
+    → root/dependants/privatePackages/duplicatedNames/ghi
+    → root/dependants/privatePackages/duplicatedNames/jkl
+    → root/dependants/publicPackages/duplicatedNames/abc
+    → root/dependants/publicPackages/duplicatedNames/def
+  — duplicated-name[2m (root/dependants/privatePackages/duplicatedNames/jkl)[22m
+    → root/dependants/privatePackages/duplicatedNames/ghi
+    → root/dependants/privatePackages/duplicatedNames/jkl
+    → root/dependants/publicPackages/duplicatedNames/abc
+    → root/dependants/publicPackages/duplicatedNames/def
+  — duplicated-name[2m (root/dependants/publicPackages/duplicatedNames/abc)[22m
+    → root/dependants/privatePackages/duplicatedNames/ghi
+    → root/dependants/privatePackages/duplicatedNames/jkl
+    → root/dependants/publicPackages/duplicatedNames/abc
+    → root/dependants/publicPackages/duplicatedNames/def
+  — duplicated-name[2m (root/dependants/publicPackages/duplicatedNames/def)[22m
+    → root/dependants/privatePackages/duplicatedNames/ghi
+    → root/dependants/privatePackages/duplicatedNames/jkl
+    → root/dependants/publicPackages/duplicatedNames/abc
+    → root/dependants/publicPackages/duplicatedNames/def
+
+* Package that depends on itself[1m (SelfDependence)[22m
+  — prv-use-itself-as-peer[2m (root/dependants/privatePackages/useItselfAsDependency/asPeer)[22m
+  — prv-use-itself-as-dev[2m (root/dependants/privatePackages/useItselfAsDependency/inDevelopment)[22m
+  — prv-use-itself-as-prod[2m (root/dependants/privatePackages/useItselfAsDependency/inProduction)[22m
+  — pub-use-itself-as-peer[2m (root/dependants/publicPackages/useItselfAsDependency/asPeer)[22m
+  — pub-use-itself-as-dev[2m (root/dependants/publicPackages/useItselfAsDependency/inDevelopment)[22m
+  — pub-use-itself-as-prod[2m (root/dependants/publicPackages/useItselfAsDependency/inProduction)[22m
+
+* Package depends on invalid dependencies[1m (InvalidDependencies)[22m
+  — use-self-dependence-dependencies[2m (root/dependants/advancedDetails/useSelfDependenceDependencies)[22m
+    → pub-use-itself-as-peer
+    → pub-use-itself-as-dev
+    → pub-use-itself-as-prod
+  — prv-use-duplicated-dependencies[2m (root/dependants/privatePackages/useInvalidDependencies)[22m
+    → duplicated-name
+  — pub-use-invalid-dependencies-as-peer[2m (root/dependants/publicPackages/useInvalidDependenciesAsPeer)[22m
+    → pub-use-private-dependencies-as-peer
+    → pub-use-private-dependencies-in-production
+    → pub-use-private-dependencies-as-peer
+    → pub-use-private-dependencies-in-production
+    → pub-use-invalid-dependencies-in-development
+    → pub-use-invalid-dependencies-in-production
+  — pub-use-invalid-dependencies-in-development[2m (root/dependants/publicPackages/useInvalidDependenciesInDepevelopment)[22m
+    → pub-use-private-dependencies-as-peer
+    → pub-use-private-dependencies-in-production
+    → pub-use-private-dependencies-as-peer
+    → pub-use-private-dependencies-in-production
+    → pub-use-invalid-dependencies-in-production
+  — pub-use-invalid-dependencies-in-production[2m (root/dependants/publicPackages/useInvalidDependenciesInProduction)[22m
+    → pub-use-private-dependencies-as-peer
+    → pub-use-private-dependencies-in-production"
+`;
+
 exports[`grouping result matches snapshot 1`] = `
 Array [
   Object {

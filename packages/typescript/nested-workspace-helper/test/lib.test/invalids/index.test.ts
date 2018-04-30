@@ -68,6 +68,11 @@ it('grouping result matches snapshot', apply(async () => {
   expect(groups).toMatchSnapshot()
 }))
 
+it('grouping result as string matches snapshot', apply(async () => {
+  const invalids = await getInvalids()
+  expect(converters.invalids.group.asString(invalids)).toMatchSnapshot()
+}))
+
 async function getValids () {
   const list = await listAllPackages('root')
   const invalids = await listAllInvalidPackages('root')
