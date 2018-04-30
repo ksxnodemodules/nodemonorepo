@@ -1,2 +1,3 @@
 import range from './range'
-export {range}
+import repeat from './repeat'
+export {range, repeat}
