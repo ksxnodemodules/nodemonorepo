@@ -7,16 +7,16 @@ export namespace classify {
     classifier: singleDistribute.Classifier<X>,
     duplicationChecker?: isInIter.Comparator<X>
   ): singleDistribute.Classification<X> {
-    const db: types.Dict.StrKey<Set<X>> = {}
+    const db: types.Dict.StrKey<X[]> = {}
 
     for (const item of values) {
       const name = classifier(item)
 
       if (name in db) {
         const set = db[name]
-        isInIter(item, set, duplicationChecker) || set.add(item)
+        isInIter(item, set, duplicationChecker) || set.push(item)
       } else {
-        db[name] = new Set([item])
+        db[name] = [item]
       }
     }
 
@@ -24,10 +24,10 @@ export namespace classify {
   }
 
   export namespace singleDistribute {
-    export type Classification<X> = Readonly<Dict<Classification.Set<X>>>
+    export type Classification<X> = Readonly<Dict<Classification.Array<X>>>
 
     export namespace Classification {
-      export type Set<X> = ReadonlySet<X>
+      export type Array<X> = ReadonlyArray<X>
     }
 
     export type Classifier<X> = (x: X) => string

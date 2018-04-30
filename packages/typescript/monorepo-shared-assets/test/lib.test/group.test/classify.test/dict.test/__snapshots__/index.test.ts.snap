@@ -266,36 +266,36 @@ Object {
 
 exports[`single distribution in basic use 1`] = `
 Object {
-  "Ring(4, 0)": Set {
+  "Ring(4, 0)": Array [
     0,
     4,
     8,
     12,
-  },
-  "Ring(4, 1)": Set {
+  ],
+  "Ring(4, 1)": Array [
     1,
     5,
     9,
     13,
-  },
-  "Ring(4, 2)": Set {
+  ],
+  "Ring(4, 2)": Array [
     2,
     6,
     10,
     14,
-  },
-  "Ring(4, 3)": Set {
+  ],
+  "Ring(4, 3)": Array [
     3,
     7,
     11,
     15,
-  },
+  ],
 }
 `;
 
 exports[`single distribution with specified duplicationChecker 1`] = `
 Object {
-  "Ring(4, 0)": Set {
+  "Ring(4, 0)": Array [
     ValueCarrier {
       "value": 0,
     },
@@ -308,8 +308,8 @@ Object {
     ValueCarrier {
       "value": 12,
     },
-  },
-  "Ring(4, 1)": Set {
+  ],
+  "Ring(4, 1)": Array [
     ValueCarrier {
       "value": 1,
     },
@@ -322,8 +322,8 @@ Object {
     ValueCarrier {
       "value": 13,
     },
-  },
-  "Ring(4, 2)": Set {
+  ],
+  "Ring(4, 2)": Array [
     ValueCarrier {
       "value": 2,
     },
@@ -336,8 +336,8 @@ Object {
     ValueCarrier {
       "value": 14,
     },
-  },
-  "Ring(4, 3)": Set {
+  ],
+  "Ring(4, 3)": Array [
     ValueCarrier {
       "value": 3,
     },
@@ -350,6 +350,6 @@ Object {
     ValueCarrier {
       "value": 15,
     },
-  },
+  ],
 }
 `;
