@@ -58,14 +58,25 @@ it('no reason object shall have its name different than its class', apply(async 
   )
 }))
 
-it('grouping result matches snapshot', apply(async () => {
+it('grouping result default to map', apply(async () => {
+  const {group} = converters.invalids
+  const invalids = await getInvalids()
+  expect(group(invalids)).toEqual(group.asMap(invalids))
+}))
+
+it('grouping result as map matches snapshot', apply(async () => {
   const invalids = await getInvalids()
 
   const groups = Array
-    .from(converters.invalids.group(invalids))
+    .from(converters.invalids.group.asMap(invalids))
     .map(([{name}, list]) => ({name, list}))
 
   expect(groups).toMatchSnapshot()
+}))
+
+it('grouping result as dict matches snapshot', apply(async () => {
+  const invalids = await getInvalids()
+  expect(converters.invalids.group.asDict(invalids)).toMatchSnapshot()
 }))
 
 it('grouping result as string matches snapshot', apply(async () => {

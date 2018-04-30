@@ -4,15 +4,28 @@ import {InvalidPackage} from '../../types'
 import * as pkgUtils from '../../utils/pkg'
 
 export function group (list: InvalidPackage.List) {
-  return assets.group.classify.map.multiDistribute(
-    list,
-    item => item.reason.map(
-      x => x.constructor as typeof InvalidPackage.Reason.Base
-    )
-  ).classified
+  return group.asMap(list)
 }
 
 export namespace group {
+  export function asDict (list: InvalidPackage.List) {
+    return assets.group.classify.dict.multiDistribute(
+      list,
+      item => item.reason.map(
+        x => (x.constructor as typeof InvalidPackage.Reason.Base).description.name
+      )
+    ).classified
+  }
+
+  export function asMap (list: InvalidPackage.List) {
+    return assets.group.classify.map.multiDistribute(
+      list,
+      item => item.reason.map(
+        x => x.constructor as typeof InvalidPackage.Reason.Base
+      )
+    ).classified
+  }
+
   export function asString (list: InvalidPackage.List): string {
     return asString.fromClassifiedMap(group(list))
   }
