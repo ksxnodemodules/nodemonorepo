@@ -1,5 +1,6 @@
 import * as process from 'process'
 import chalk from 'chalk'
+import * as pkgUtils from '../../../../../lib/utils/pkg'
 
 import {
   CommandModule,
@@ -145,9 +146,7 @@ function handler (argv: Arguments & {
           updateExitStatus()
 
           console.info(`* ${
-            chalk.bold(
-              dependant.manifestContent.name || '[anonymous]'
-            )
+            chalk.bold(pkgUtils.name(dependant))
           } ` + chalk.dim(`(path: ${dependant.path})`))
 
           messages.forEach(x => console.info(x))
