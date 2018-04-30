@@ -15,6 +15,46 @@ export namespace group {
     ).classified
   }
 
+  export namespace asDict {
+    export function simple (list: InvalidPackage.List): simple.Dict {
+      const result: {
+        [name: string]: simple.Dict.Value
+      } = {}
+
+      for (const [name, pkgs] of Object.entries(asDict(list))) {
+        result[name] = pkgs.map(x => ({
+          name: x.manifestContent.name,
+          path: x.path,
+          causes: Array.from(new Set(
+            x.reason
+              .map(asString.getReasonCauses)
+              .reduce((prev, current) => [...prev, ...current])
+          ))
+        }))
+      }
+
+      return result
+    }
+
+    export namespace simple {
+      export interface Dict {
+        readonly [name: string]: Dict.Value
+      }
+
+      export namespace Dict {
+        export type Value = ReadonlyArray<Value.Element>
+
+        export namespace Value {
+          export interface Element {
+            readonly name?: string
+            readonly path: string
+            readonly causes: ReadonlyArray<string>
+          }
+        }
+      }
+    }
+  }
+
   export function asMap (list: InvalidPackage.List) {
     return assets.group.classify.map.multiDistribute(
       list,

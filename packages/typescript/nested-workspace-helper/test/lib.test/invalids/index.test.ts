@@ -79,6 +79,11 @@ it('grouping result as dict matches snapshot', apply(async () => {
   expect(converters.invalids.group.asDict(invalids)).toMatchSnapshot()
 }))
 
+it('grouping result as simple dict matches snapshot', apply(async () => {
+  const invalids = await getInvalids()
+  expect(converters.invalids.group.asDict.simple(invalids)).toMatchSnapshot()
+}))
+
 it('grouping result as string matches snapshot', apply(async () => {
   const invalids = await getInvalids()
   expect(converters.invalids.group.asString(invalids)).toMatchSnapshot()

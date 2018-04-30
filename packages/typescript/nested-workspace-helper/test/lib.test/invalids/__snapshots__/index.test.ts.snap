@@ -7799,6 +7799,273 @@ Array [
 ]
 `;
 
+exports[`grouping result as simple dict matches snapshot 1`] = `
+Object {
+  "InvalidDependencies": Array [
+    Object {
+      "causes": Array [
+        "pub-use-itself-as-peer",
+        "pub-use-itself-as-dev",
+        "pub-use-itself-as-prod",
+      ],
+      "name": "use-self-dependence-dependencies",
+      "path": "root/dependants/advancedDetails/useSelfDependenceDependencies",
+    },
+    Object {
+      "causes": Array [
+        "pub-use-itself-as-peer",
+        "pub-use-itself-as-dev",
+        "pub-use-itself-as-prod",
+      ],
+      "name": "use-self-dependence-dependencies",
+      "path": "root/dependants/advancedDetails/useSelfDependenceDependencies",
+    },
+    Object {
+      "causes": Array [
+        "duplicated-name",
+      ],
+      "name": "prv-use-duplicated-dependencies",
+      "path": "root/dependants/privatePackages/useInvalidDependencies",
+    },
+    Object {
+      "causes": Array [
+        "duplicated-name",
+      ],
+      "name": "prv-use-duplicated-dependencies",
+      "path": "root/dependants/privatePackages/useInvalidDependencies",
+    },
+    Object {
+      "causes": Array [
+        "pub-use-private-dependencies-as-peer",
+        "pub-use-private-dependencies-in-production",
+        "pub-use-invalid-dependencies-in-development",
+        "pub-use-invalid-dependencies-in-production",
+      ],
+      "name": "pub-use-invalid-dependencies-as-peer",
+      "path": "root/dependants/publicPackages/useInvalidDependenciesAsPeer",
+    },
+    Object {
+      "causes": Array [
+        "pub-use-private-dependencies-as-peer",
+        "pub-use-private-dependencies-in-production",
+        "pub-use-invalid-dependencies-in-development",
+        "pub-use-invalid-dependencies-in-production",
+      ],
+      "name": "pub-use-invalid-dependencies-as-peer",
+      "path": "root/dependants/publicPackages/useInvalidDependenciesAsPeer",
+    },
+    Object {
+      "causes": Array [
+        "pub-use-private-dependencies-as-peer",
+        "pub-use-private-dependencies-in-production",
+        "pub-use-invalid-dependencies-in-production",
+      ],
+      "name": "pub-use-invalid-dependencies-in-development",
+      "path": "root/dependants/publicPackages/useInvalidDependenciesInDepevelopment",
+    },
+    Object {
+      "causes": Array [
+        "pub-use-private-dependencies-as-peer",
+        "pub-use-private-dependencies-in-production",
+        "pub-use-invalid-dependencies-in-production",
+      ],
+      "name": "pub-use-invalid-dependencies-in-development",
+      "path": "root/dependants/publicPackages/useInvalidDependenciesInDepevelopment",
+    },
+    Object {
+      "causes": Array [
+        "pub-use-private-dependencies-as-peer",
+        "pub-use-private-dependencies-in-production",
+      ],
+      "name": "pub-use-invalid-dependencies-in-production",
+      "path": "root/dependants/publicPackages/useInvalidDependenciesInProduction",
+    },
+    Object {
+      "causes": Array [
+        "pub-use-private-dependencies-as-peer",
+        "pub-use-private-dependencies-in-production",
+      ],
+      "name": "pub-use-invalid-dependencies-in-production",
+      "path": "root/dependants/publicPackages/useInvalidDependenciesInProduction",
+    },
+  ],
+  "NameDuplication": Array [
+    Object {
+      "causes": Array [
+        "root/dependants/privatePackages/duplicatedNames/ghi",
+        "root/dependants/privatePackages/duplicatedNames/jkl",
+        "root/dependants/publicPackages/duplicatedNames/abc",
+        "root/dependants/publicPackages/duplicatedNames/def",
+      ],
+      "name": "duplicated-name",
+      "path": "root/dependants/privatePackages/duplicatedNames/ghi",
+    },
+    Object {
+      "causes": Array [
+        "root/dependants/privatePackages/duplicatedNames/ghi",
+        "root/dependants/privatePackages/duplicatedNames/jkl",
+        "root/dependants/publicPackages/duplicatedNames/abc",
+        "root/dependants/publicPackages/duplicatedNames/def",
+      ],
+      "name": "duplicated-name",
+      "path": "root/dependants/privatePackages/duplicatedNames/ghi",
+    },
+    Object {
+      "causes": Array [
+        "root/dependants/privatePackages/duplicatedNames/ghi",
+        "root/dependants/privatePackages/duplicatedNames/jkl",
+        "root/dependants/publicPackages/duplicatedNames/abc",
+        "root/dependants/publicPackages/duplicatedNames/def",
+      ],
+      "name": "duplicated-name",
+      "path": "root/dependants/privatePackages/duplicatedNames/jkl",
+    },
+    Object {
+      "causes": Array [
+        "root/dependants/privatePackages/duplicatedNames/ghi",
+        "root/dependants/privatePackages/duplicatedNames/jkl",
+        "root/dependants/publicPackages/duplicatedNames/abc",
+        "root/dependants/publicPackages/duplicatedNames/def",
+      ],
+      "name": "duplicated-name",
+      "path": "root/dependants/privatePackages/duplicatedNames/jkl",
+    },
+    Object {
+      "causes": Array [
+        "root/dependants/privatePackages/duplicatedNames/ghi",
+        "root/dependants/privatePackages/duplicatedNames/jkl",
+        "root/dependants/publicPackages/duplicatedNames/abc",
+        "root/dependants/publicPackages/duplicatedNames/def",
+      ],
+      "name": "duplicated-name",
+      "path": "root/dependants/publicPackages/duplicatedNames/abc",
+    },
+    Object {
+      "causes": Array [
+        "root/dependants/privatePackages/duplicatedNames/ghi",
+        "root/dependants/privatePackages/duplicatedNames/jkl",
+        "root/dependants/publicPackages/duplicatedNames/abc",
+        "root/dependants/publicPackages/duplicatedNames/def",
+      ],
+      "name": "duplicated-name",
+      "path": "root/dependants/publicPackages/duplicatedNames/abc",
+    },
+    Object {
+      "causes": Array [
+        "root/dependants/privatePackages/duplicatedNames/ghi",
+        "root/dependants/privatePackages/duplicatedNames/jkl",
+        "root/dependants/publicPackages/duplicatedNames/abc",
+        "root/dependants/publicPackages/duplicatedNames/def",
+      ],
+      "name": "duplicated-name",
+      "path": "root/dependants/publicPackages/duplicatedNames/def",
+    },
+    Object {
+      "causes": Array [
+        "root/dependants/privatePackages/duplicatedNames/ghi",
+        "root/dependants/privatePackages/duplicatedNames/jkl",
+        "root/dependants/publicPackages/duplicatedNames/abc",
+        "root/dependants/publicPackages/duplicatedNames/def",
+      ],
+      "name": "duplicated-name",
+      "path": "root/dependants/publicPackages/duplicatedNames/def",
+    },
+  ],
+  "PrivateDependencies": Array [
+    Object {
+      "causes": Array [
+        "private",
+      ],
+      "name": "pub-use-private-dependencies-as-peer",
+      "path": "root/dependants/publicPackages/usePrivateDependenciesAsPeer",
+    },
+    Object {
+      "causes": Array [
+        "private",
+      ],
+      "name": "pub-use-private-dependencies-as-peer",
+      "path": "root/dependants/publicPackages/usePrivateDependenciesAsPeer",
+    },
+    Object {
+      "causes": Array [
+        "private",
+      ],
+      "name": "pub-use-private-dependencies-in-production",
+      "path": "root/dependants/publicPackages/usePrivateDependenciesInProduction",
+    },
+    Object {
+      "causes": Array [
+        "private",
+      ],
+      "name": "pub-use-private-dependencies-in-production",
+      "path": "root/dependants/publicPackages/usePrivateDependenciesInProduction",
+    },
+  ],
+  "SelfDependence": Array [
+    Object {
+      "causes": Array [],
+      "name": "prv-use-itself-as-peer",
+      "path": "root/dependants/privatePackages/useItselfAsDependency/asPeer",
+    },
+    Object {
+      "causes": Array [],
+      "name": "prv-use-itself-as-peer",
+      "path": "root/dependants/privatePackages/useItselfAsDependency/asPeer",
+    },
+    Object {
+      "causes": Array [],
+      "name": "prv-use-itself-as-dev",
+      "path": "root/dependants/privatePackages/useItselfAsDependency/inDevelopment",
+    },
+    Object {
+      "causes": Array [],
+      "name": "prv-use-itself-as-dev",
+      "path": "root/dependants/privatePackages/useItselfAsDependency/inDevelopment",
+    },
+    Object {
+      "causes": Array [],
+      "name": "prv-use-itself-as-prod",
+      "path": "root/dependants/privatePackages/useItselfAsDependency/inProduction",
+    },
+    Object {
+      "causes": Array [],
+      "name": "prv-use-itself-as-prod",
+      "path": "root/dependants/privatePackages/useItselfAsDependency/inProduction",
+    },
+    Object {
+      "causes": Array [],
+      "name": "pub-use-itself-as-peer",
+      "path": "root/dependants/publicPackages/useItselfAsDependency/asPeer",
+    },
+    Object {
+      "causes": Array [],
+      "name": "pub-use-itself-as-peer",
+      "path": "root/dependants/publicPackages/useItselfAsDependency/asPeer",
+    },
+    Object {
+      "causes": Array [],
+      "name": "pub-use-itself-as-dev",
+      "path": "root/dependants/publicPackages/useItselfAsDependency/inDevelopment",
+    },
+    Object {
+      "causes": Array [],
+      "name": "pub-use-itself-as-dev",
+      "path": "root/dependants/publicPackages/useItselfAsDependency/inDevelopment",
+    },
+    Object {
+      "causes": Array [],
+      "name": "pub-use-itself-as-prod",
+      "path": "root/dependants/publicPackages/useItselfAsDependency/inProduction",
+    },
+    Object {
+      "causes": Array [],
+      "name": "pub-use-itself-as-prod",
+      "path": "root/dependants/publicPackages/useItselfAsDependency/inProduction",
+    },
+  ],
+}
+`;
+
 exports[`grouping result as string matches snapshot 1`] = `
 "* Public package depends on non-dev private dependencies[1m (PrivateDependencies)[22m
   — pub-use-private-dependencies-as-peer[2m (root/dependants/publicPackages/usePrivateDependenciesAsPeer)[22m
