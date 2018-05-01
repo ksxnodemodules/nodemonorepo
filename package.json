@@ -45,10 +45,17 @@
     "remake-package-json": "preloaded-node sh/remake-package-json",
     "generate-npmignore": "bash sh/generate-npmignore.sh",
     "clean-typescript-build": "preloaded-node sh/clean-typescript-build",
+    "check-publishability": "bash sh/check-publishability.sh",
+    "validate-packages": "bash sh/validate-packages.sh",
+    "mismatched-versions": "bash sh/mismatched-versions.sh",
     "type-check": "tsc --noEmit",
     "clean": "bash 'sh/clean.sh'",
     "fix": "bash 'sh/fix.sh'",
     "test": "bash 'sh/test.sh'",
-    "build": "bash 'sh/build.sh'"
+    "build": "bash 'sh/build.sh'",
+    "project-build": "bash sh/build",
+    "project-publish": "bash sh/publish.sh",
+    "project-perpublish": "bash sh/prepublish.sh",
+    "wrkspc": "nested-wrkspc.prv"
   }
 }
