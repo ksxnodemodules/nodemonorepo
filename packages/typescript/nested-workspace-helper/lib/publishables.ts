@@ -58,7 +58,11 @@ export namespace partition {
     )
 
     const classification = assets.group.classify.dict.singleDistribute(labeled, x => String(x.cls))
-    const getpkgs = (id: Classification) => classification[id].map(x => x.pkg)
+
+    const getpkgs = (id: Classification) => {
+      const list = classification[id]
+      return list ? list.map(x => x.pkg) : []
+    }
 
     return {
       publishables: getpkgs(Classification.publishable),
