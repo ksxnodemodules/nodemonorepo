@@ -1,56 +1,84 @@
 dependencies:
-  '@types/fs-extra': 5.0.1
-  '@types/node': 10.0.0
-  '@types/ramda': 0.25.21
-  extra-jest: 'link:../extra-jest'
-  fs-extra: 5.0.0
+  '@types/fs-extra': 5.0.2
+  '@types/node': 10.0.1
+  '@types/ramda': 0.25.24
+  fs-extra: 6.0.0
   ramda: 0.25.0
-  unique-temp-path: 'link:../unique-temp-path'
+devDependencies:
+  extra-jest: 0.0.1
+  unique-temp-path: 0.0.1
 packages:
-  /@types/fs-extra/5.0.1:
+  /@types/fs-extra/5.0.2:
     dependencies:
-      '@types/node': 9.6.2
-    dev: false
+      '@types/node': 10.0.1
     resolution:
-      integrity: sha512-h3wnflb+jMTipvbbZnClgA2BexrT4w0GcfoCz5qyxd0IRsbqhLSyesM6mqZTAnhbVmhyTm5tuxfRu9R+8l+lGw==
-  /@types/node/10.0.0:
-    dev: false
+      integrity: sha512-Q3FWsbdmkQd1ib11A4XNWQvRD//5KpPoGawA8aB2DR7pWKoW9XQv3+dGxD/Z1eVFze23Okdo27ZQytVFlweKvQ==
+  /@types/node/10.0.1:
     resolution:
-      integrity: sha512-kctoM36XiNZT86a7tPsUje+Q/yl+dqELjtYApi0T5eOQ90Elhu0MI10rmYk44yEP4v1jdDvtjQ9DFtpRtHf2Bw==
-  /@types/node/9.6.2:
-    dev: false
+      integrity: sha512-HKTs07TC1RJRBd9z0Kf/cy37j2HCbUfcVKS6Xm9orZVcLqZ1JXWe/JTDLw6AwxmLOxV45fDpOMPXyqXU3TfOPQ==
+  /@types/ramda/0.25.24:
     resolution:
-      integrity: sha512-UWkRY9X7RQHp5OhhRIIka58/gVVycL1zHZu0OTsT5LI86ABaMOSbUjAl+b0FeDhQcxclrkyft3kW5QWdMRs8wQ==
-  /@types/ramda/0.25.21:
-    dev: false
+      integrity: sha512-c0TmWA7d4y9KLJJwL/cLPEfSReSgFQK9BtemcCATT48lMeyD7HG8IfGY8bamSuz/Byx1l+13hZV0PCvHsgMB3w==
+  /extra-jest/0.0.1:
+    dependencies:
+      '@types/fs-extra': 5.0.2
+      '@types/node': 10.0.1
+      '@types/ramda': 0.25.24
+      fs-extra: 5.0.0
+      fs-tree-utils: 0.0.1
+      ramda: 0.25.0
+      unique-temp-path: 0.0.1
+    dev: true
+    peerDependencies:
+      jest: ^22.4.3
     resolution:
-      integrity: sha512-y4Dx3t+EA5Y+s87cwUoIzo0Tsj9z7QCu4gaXrdFln4wQRgk9igBskEEe7gZ0PG8dSXtQb29oA3RS//3XquHdiw==
+      integrity: sha512-yTYU/9HJqf6C4usHQZFbqMEhJ8yU1wgwbKnUOxB+TG1e+DcugDqYIYIRCXDY9ZsjMzoxmhfnwuC1dPyFz68SxA==
   /fs-extra/5.0.0:
+    dependencies:
+      graceful-fs: 4.1.11
+      jsonfile: 4.0.0
+      universalify: 0.1.1
+    dev: true
+    resolution:
+      integrity: sha512-66Pm4RYbjzdyeuqudYqhFiNBbCIuI9kgRqLPSHIlXHidW8NIQtVdkM1yeZ4lXwuhbTETv3EUGMNHAAw6hiundQ==
+  /fs-extra/6.0.0:
     dependencies:
       graceful-fs: 4.1.11
       jsonfile: 4.0.0
       universalify: 0.1.1
     dev: false
     resolution:
-      integrity: sha512-66Pm4RYbjzdyeuqudYqhFiNBbCIuI9kgRqLPSHIlXHidW8NIQtVdkM1yeZ4lXwuhbTETv3EUGMNHAAw6hiundQ==
+      integrity: sha512-lk2cUCo8QzbiEWEbt7Cw3m27WMiRG321xsssbcIpfMhpRjrlC08WBOVQqj1/nQYYNnPtyIhP1oqLO3QwT2tPCw==
+  /fs-tree-utils/0.0.1:
+    dependencies:
+      '@types/fs-extra': 5.0.2
+      '@types/node': 10.0.1
+      '@types/ramda': 0.25.24
+      fs-extra: 5.0.0
+      ramda: 0.25.0
+    dev: true
+    resolution:
+      integrity: sha512-SCNlfBNLX8iXAQamg0wXlzKeBDOH0nPZ5+tOe7egHqdKsM8UHSIW5fG4+2P/Mmw3u/xFxuBQjWEn/AiK4D9U/g==
   /graceful-fs/4.1.11:
-    dev: false
     engines:
       node: '>=0.4.0'
     resolution:
       integrity: sha1-Dovf5NHduIVNZOBOp8AOKgJuVlg=
   /jsonfile/4.0.0:
-    dev: false
     optionalDependencies:
       graceful-fs: 4.1.11
     resolution:
       integrity: sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss=
   /ramda/0.25.0:
-    dev: false
     resolution:
       integrity: sha512-GXpfrYVPwx3K7RQ6aYT8KPS8XViSXUVJT1ONhoKPE9VAleW42YE+U+8VEyGWt41EnEQW7gwecYJriTI0pKoecQ==
+  /unique-temp-path/0.0.1:
+    dependencies:
+      '@types/node': 10.0.1
+    dev: true
+    resolution:
+      integrity: sha512-PXCxQV/cQTSF2OgdM2DlKWdCTlJ1Pes5NCXDeUZ5gN6HJx30vCCqC/vVaX7IfAmSDnx+JEQzIWMtxH7kU0vmZA==
   /universalify/0.1.1:
-    dev: false
     resolution:
       integrity: sha1-+nG63UQ3r0wUiEHjs7Fl+enlkLc=
 registry: 'https://registry.npmjs.org/'
@@ -61,6 +89,6 @@ specifiers:
   '@types/node': ^10.0.0
   '@types/ramda': ^0.25.21
   extra-jest: '*'
-  fs-extra: ^5.0.0
+  fs-extra: ^6.0.0
   ramda: ^0.25.0
   unique-temp-path: '*'
