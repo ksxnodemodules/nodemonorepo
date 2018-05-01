@@ -1,5 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`coverter function convert list to arrays 1`] = `
+Array [
+  "[1mroot[22m[2m (root)[22m",
+  "[1mpkg00[22m[2m (root/wrkspc0dept/pkg00)[22m",
+  "[1mpkg01[22m[2m (root/wrkspc0dept/pkg01)[22m",
+  "[1mpkg100[22m[2m (root/wrkspc1dept/sub10/pkg100)[22m",
+  "[1mpkg110[22m[2m (root/wrkspc1dept/sub11/pkg110)[22m",
+  "[1mpkg111prv[22m[2m (root/wrkspc1dept/sub11/pkg111prv)[22m",
+  "[1mpkg2000[22m[2m (root/wrkspc2dept/sub20/sub200/pkg2000)[22m",
+]
+`;
+
+exports[`coverter function convert list to string 1`] = `
+"[1mroot[22m[2m (root)[22m
+[1mpkg00[22m[2m (root/wrkspc0dept/pkg00)[22m
+[1mpkg01[22m[2m (root/wrkspc0dept/pkg01)[22m
+[1mpkg100[22m[2m (root/wrkspc1dept/sub10/pkg100)[22m
+[1mpkg110[22m[2m (root/wrkspc1dept/sub11/pkg110)[22m
+[1mpkg111prv[22m[2m (root/wrkspc1dept/sub11/pkg111prv)[22m
+[1mpkg2000[22m[2m (root/wrkspc2dept/sub20/sub200/pkg2000)[22m"
+`;
+
 exports[`listAllPackages function matches snapshot 1`] = `
 Array [
   Object {

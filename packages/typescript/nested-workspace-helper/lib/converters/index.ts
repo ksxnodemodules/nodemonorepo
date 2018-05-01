@@ -1,2 +1,3 @@
+import * as pkgList from './pkg-list'
 import * as invalids from './invalids'
-export {invalids}
+export {pkgList, invalids}
