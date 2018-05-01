@@ -1,4 +1,5 @@
 import ramda from 'ramda'
+import * as assets from 'monorepo-shared-assets'
 import createRegistryFactory from './npm-registry'
 import listAllPackages from './list-pkgs'
 
@@ -40,7 +41,7 @@ export namespace partition {
 
     const {getAllVersions} = createRegistryFactory(registry)
 
-    const classified = await Promise.all(
+    const labeled = await Promise.all(
       list.map(async pkg => {
         const {private: prv, name = '', version} = pkg.manifestContent
         const res = (cls: Classification) => ({pkg, cls})
@@ -56,24 +57,13 @@ export namespace partition {
       })
     )
 
-    const [skip, notskip] = ramda.partition(
-      x => x.cls === Classification.skip,
-      classified
-    )
-
-    const [publishables, unpublishables] = ramda.partition(
-      x => x.cls === Classification.publishable,
-      notskip
-    )
-
-    const getpkg = (x: {
-      pkg: Package.ListItem
-    }) => x.pkg
+    const classification = assets.group.classify.dict.singleDistribute(labeled, x => String(x.cls))
+    const getpkgs = (id: Classification) => classification[id].map(x => x.pkg)
 
     return {
-      publishables: publishables.map(getpkg),
-      unpublishables: unpublishables.map(getpkg),
-      skip: skip.map(getpkg)
+      publishables: getpkgs(Classification.publishable),
+      unpublishables: getpkgs(Classification.unpublishable),
+      skip: getpkgs(Classification.skip)
     }
   }
 
