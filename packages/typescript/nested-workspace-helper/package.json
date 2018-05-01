@@ -15,7 +15,6 @@
     "chalk": "^2.4.0",
     "monorepo-shared-assets": "^0.0.0",
     "fs-tree-utils": "^0.0.0",
-    "preloaded-node": "^0.0.0",
     "@types/ramda": "^0.25.24",
     "@types/semver": "^5.5.0",
     "@types/fs-extra": "^5.0.1",
@@ -24,6 +23,7 @@
     "@types/node": "^10.0.0"
   },
   "devDependencies": {
+    "preloaded-node": "*",
     "extra-jest": "*"
   }
 }
