@@ -5,7 +5,7 @@ dependencies:
   '@types/yargs': 11.0.0
   chalk: 2.4.1
   extra-jest: 'link:../extra-jest'
-  fs-extra: 5.0.0
+  fs-extra: 6.0.0
   fs-tree-utils: 'link:../fs-tree-utils'
   minimatch: 'link:../minimatch'
   preloaded-node: 'link:../../javascript/preloaded-node'
@@ -136,14 +136,14 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-RdG35QbHF93UgndaK3eSCjwMV6c=
-  /fs-extra/5.0.0:
+  /fs-extra/6.0.0:
     dependencies:
       graceful-fs: 4.1.11
       jsonfile: 4.0.0
       universalify: 0.1.1
     dev: false
     resolution:
-      integrity: sha512-66Pm4RYbjzdyeuqudYqhFiNBbCIuI9kgRqLPSHIlXHidW8NIQtVdkM1yeZ4lXwuhbTETv3EUGMNHAAw6hiundQ==
+      integrity: sha512-lk2cUCo8QzbiEWEbt7Cw3m27WMiRG321xsssbcIpfMhpRjrlC08WBOVQqj1/nQYYNnPtyIhP1oqLO3QwT2tPCw==
   /get-caller-file/1.0.2:
     dev: false
     resolution:
@@ -453,8 +453,8 @@ specifiers:
   '@types/yargs': ^11.0.0
   chalk: ^2.4.0
   extra-jest: '*'
-  fs-extra: ^5.0.0
-  fs-tree-utils: ^0.0.0
+  fs-extra: ^6.0.0
+  fs-tree-utils: ^0.0.1
   minimatch: ^3.0.4
   preloaded-node.private: ^0.0.0
   yargs: ^11.0.0
