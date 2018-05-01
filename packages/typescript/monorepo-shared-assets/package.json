@@ -1,6 +1,6 @@
 {
   "name": "monorepo-shared-assets",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "dependencies": {
     "ramda": "^0.25.0",
     "immutable": "^3.8.2",

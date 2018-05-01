@@ -1,12 +1,12 @@
 {
   "name": "extra-jest",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "index.js",
   "dependencies": {
     "ramda": "^0.25.0",
     "fs-extra": "^5.0.0",
-    "fs-tree-utils": "^0.0.0",
-    "unique-temp-path": "^0.0.0",
+    "fs-tree-utils": "^0.0.1",
+    "unique-temp-path": "^0.0.1",
     "@types/ramda": "^0.25.24",
     "@types/fs-extra": "^5.0.1",
     "@types/node": "^10.0.0"
