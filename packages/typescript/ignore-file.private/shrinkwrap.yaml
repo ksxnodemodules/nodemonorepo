@@ -9,6 +9,7 @@ dependencies:
   fs-tree-utils: 'link:../fs-tree-utils'
   minimatch: 3.0.4
   preloaded-node: 'link:../../javascript/preloaded-node'
+  preloaded-node.private: 'link:../../javascript/preloaded-node.private'
   yargs: 11.0.0
 packages:
   /@types/fs-extra/5.0.2:
@@ -476,5 +477,5 @@ specifiers:
   fs-extra: ^5.0.0
   fs-tree-utils: ^0.0.0
   minimatch: ^3.0.4
-  preloaded-node: ^0.0.0
+  preloaded-node.private: ^0.0.0
   yargs: ^11.0.0

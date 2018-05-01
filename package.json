@@ -15,7 +15,7 @@
     "coveralls": "^3.0.0",
     "glob": "^7.1.2",
     "extra-jest": "*",
-    "preloaded-node": "*",
+    "preloaded-node.private": "*",
     "ignore-file.private": "*",
     "nested-workspace-helper": "*",
     "@types/jest": "^22.2.3",

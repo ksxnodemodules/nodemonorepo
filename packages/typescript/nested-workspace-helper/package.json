@@ -23,7 +23,7 @@
     "@types/node": "^10.0.0"
   },
   "devDependencies": {
-    "preloaded-node": "*",
+    "preloaded-node.private": "*",
     "extra-jest": "*"
   }
 }
