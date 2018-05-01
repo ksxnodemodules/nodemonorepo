@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "main": "index.js",
   "dependencies": {
-    "fs-extra": "^5.0.0",
+    "fs-extra": "^6.0.0",
     "ramda": "^0.25.0",
     "@types/fs-extra": "^5.0.1",
     "@types/ramda": "^0.25.21",
