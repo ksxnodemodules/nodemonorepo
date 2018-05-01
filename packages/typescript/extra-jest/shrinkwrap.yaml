@@ -1,6 +1,6 @@
 dependencies:
   '@types/fs-extra': 5.0.1
-  '@types/node': 10.0.0
+  '@types/node': 'link:../@types/node'
   '@types/ramda': 0.25.24
   fs-extra: 5.0.0
   fs-tree-utils: 'link:../fs-tree-utils'
@@ -13,10 +13,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-h3wnflb+jMTipvbbZnClgA2BexrT4w0GcfoCz5qyxd0IRsbqhLSyesM6mqZTAnhbVmhyTm5tuxfRu9R+8l+lGw==
-  /@types/node/10.0.0:
-    dev: false
-    resolution:
-      integrity: sha512-kctoM36XiNZT86a7tPsUje+Q/yl+dqELjtYApi0T5eOQ90Elhu0MI10rmYk44yEP4v1jdDvtjQ9DFtpRtHf2Bw==
   /@types/node/9.6.2:
     dev: false
     resolution:

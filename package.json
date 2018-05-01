@@ -17,7 +17,7 @@
     "extra-jest": "*",
     "preloaded-node.private": "*",
     "ignore-file.private": "*",
-    "nested-workspace-helper": "*",
+    "nested-workspace-helper.private": "*",
     "@types/jest": "^22.2.3",
     "@types/js-yaml": "^3.11.1",
     "@types/glob": "^5.0.35",
