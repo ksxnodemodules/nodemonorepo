@@ -138,5 +138,7 @@ function handler ({
 }
 
 export default {
-  command: 'write <directory> <action> <propertyPath> [value]'
+  command: 'write <directory> <action> <propertyPath> [value]',
+  builder,
+  handler
 } as CommandModule
