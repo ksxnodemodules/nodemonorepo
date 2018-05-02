@@ -1,9 +1,11 @@
+import * as yaml from 'js-yaml'
+
 export type Serialized = object | any[] | string | number | null
 export type Deserialized = string
 export type Indentation = string | number
 
 export function serialize (json: Deserialized): Serialized {
-  return JSON.parse(json)
+  return yaml.safeLoad
 }
 
 export function deserialize (

@@ -9,6 +9,7 @@
   "dependencies": {
     "ramda": "^0.25.0",
     "semver": "^5.5.0",
+    "js-yaml": "^3.11.0",
     "fs-extra": "^6.0.0",
     "node-fetch": "^2.1.2",
     "yargs": "^11.0.0",
@@ -17,6 +18,7 @@
     "fs-tree-utils": "^0.0.1",
     "@types/ramda": "^0.25.24",
     "@types/semver": "^5.5.0",
+    "@types/js-yaml": "^3.11.1",
     "@types/fs-extra": "^5.0.1",
     "@types/node-fetch": "^1.6.9",
     "@types/yargs": "^11.0.0",
