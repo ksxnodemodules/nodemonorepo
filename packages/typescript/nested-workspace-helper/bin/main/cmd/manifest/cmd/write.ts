@@ -8,8 +8,7 @@ import {
 } from 'yargs'
 
 import {
-  writePackageManifests,
-  Package
+  writePackageManifests
 } from '../../../../../index'
 
 import {serialize} from '../../../../../lib/utils/json'
