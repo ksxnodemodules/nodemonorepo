@@ -4,7 +4,7 @@ export type Serialized = object | any[] | string | number | null
 export type Deserialized = string
 export type Indentation = string | number
 
-export function serialize (json: Deserialized): Serialized {
+export function serialize (json: Deserialized): Serialized | undefined {
   return yaml.safeLoad(json)
 }
 
