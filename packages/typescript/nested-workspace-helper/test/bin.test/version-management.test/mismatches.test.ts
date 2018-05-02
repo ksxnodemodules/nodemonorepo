@@ -2,7 +2,6 @@ import createSetupTeardown from '../../.lib/setup-teardown'
 import tracker, {Executor} from '../.lib/spawn-fs'
 
 const {apply} = createSetupTeardown('mismatched-deps.yaml')
-
 const argv2desc = (...argv: string[]): string => `$ ${argv.join(' ')}`
 
 const createTester = (
