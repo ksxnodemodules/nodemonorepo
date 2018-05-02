@@ -8,7 +8,7 @@ export function serialize (json: Deserialized): Serialized {
 
 export function deserialize (
   object: Serialized,
-  indent?: Indentation,
+  indent: Indentation = 2,
   finalNewLine = 1
 ): Deserialized {
   return JSON.stringify(object, undefined, indent) + '\n'.repeat(finalNewLine)
