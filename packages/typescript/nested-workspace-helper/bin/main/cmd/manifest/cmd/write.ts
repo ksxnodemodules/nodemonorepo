@@ -1,4 +1,4 @@
-import * as process
+import * as process from 'process'
 import ramda from 'ramda'
 
 import {
@@ -98,6 +98,8 @@ function handler ({
         finalNewLine
       }
     )
+
+    return 0
   }
 
   function getActualValue () {
