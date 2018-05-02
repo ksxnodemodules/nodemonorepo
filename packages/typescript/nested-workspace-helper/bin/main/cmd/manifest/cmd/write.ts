@@ -1,5 +1,4 @@
 import * as process from 'process'
-import ramda from 'ramda'
 
 import {
   CommandModule,
