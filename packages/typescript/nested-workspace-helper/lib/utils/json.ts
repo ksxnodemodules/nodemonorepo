@@ -5,7 +5,7 @@ export type Deserialized = string
 export type Indentation = string | number
 
 export function serialize (json: Deserialized): Serialized {
-  return yaml.safeLoad
+  return yaml.safeLoad(json)
 }
 
 export function deserialize (
