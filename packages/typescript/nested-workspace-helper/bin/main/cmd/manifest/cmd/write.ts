@@ -15,6 +15,11 @@ import {
 
 import {serialize} from '../../../../../lib/utils/json'
 
+import {
+  getActionFunction,
+  ActionChoice
+} from '../lib/get-act-fn'
+
 function builder (yargs: Argv) {
   return yargs
     .positional('directory', {
@@ -64,7 +69,7 @@ function handler ({
   finalNewLine
 }: Arguments & {
   directory: string,
-  action: 'set' | 'delete' | 'assign',
+  action: ActionChoice,
   propertyPath: string,
   value?: string,
   propertyPathSeparator: string,
@@ -88,7 +93,7 @@ function handler ({
     }
 
     const actualPropertyPath = propertyPath.split(propertyPathSeparator)
-    const act = getActionFunction()
+    const act = getActionFunction(action)
 
     await writePackageManifests(
       directory,
@@ -119,22 +124,6 @@ function handler ({
         return {error: null, value: null}
     }
   }
-
-  function getActionFunction (): ActionFunction {
-    switch (action) {
-      case 'set':
-        return (object, path, value) =>
-          ramda.assocPath(path, value, object)
-      case 'delete':
-        return (object, path) =>
-          ramda.dissocPath(path, object)
-      case 'assign':
-        return (object, path, value) =>
-          ramda.assocPath(path, {...ramda.path(path) || {}, ...value}, object)
-    }
-  }
-
-  type ActionFunction = (manifest: object, path: string[], value?: any) => object
 }
 
 export default {
