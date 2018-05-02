@@ -4,10 +4,12 @@ import {
   Argv
 } from 'yargs'
 
+import cmdSync from './cmd/sync'
 import cmdWrite from './cmd/write'
 
 function builder (yargs: Argv): Argv {
   return yargs
+    .command(cmdSync)
     .command(cmdWrite)
 }
 

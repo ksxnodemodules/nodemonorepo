@@ -1,0 +1,84 @@
+root:
+  source:
+    package.json: |
+      {
+        "name": "source",
+        "version": "0.0.0",
+        "tree": {
+          "a": {
+            "a": {
+              "a": 123,
+              "b": 456
+            },
+            "b": {
+              "a": null,
+              "b": [0, 1, 2, 3]
+            }
+          },
+          "b": {
+            "a": {
+              "a": 123,
+              "b": 456
+            },
+            "b": {
+              "a": null,
+              "b": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+  target:
+    allNull:
+      package.json: |
+        {
+          "name": "all-null",
+          "version": "0.0.0",
+          "tree": {
+            "a": {
+              "a": {
+                "a": null,
+                "b": null
+              },
+              "b": {
+                "a": null,
+                "b": null
+              }
+            },
+            "b": {
+              "a": {
+                "a": null,
+                "b": null
+              },
+              "b": {
+                "a": null,
+                "b": null
+              }
+            }
+          }
+        }
+    lackOfA:
+      package.json: |
+        {
+          "name": "lack-of-a",
+          "version": "0.0.0",
+          "tree": {
+            "b": {
+              "b": {
+                "b": [0, 1, 2, 3]
+              }
+            }
+          }
+        }
+    lackOfB:
+      package.json: |
+        {
+          "name": "lack-of-b",
+          "version": "0.0.0",
+          "tree": {
+            "a": {
+              "a": {
+                "a": 123
+              }
+            }
+          }
+        }

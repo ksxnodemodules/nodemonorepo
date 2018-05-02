@@ -1,0 +1,5175 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Delete properties $ manifest sync root/target delete tree 1`] = `
+"
+error: null
+signal: null
+status: 0
+stderr: ((EMPTY))
+stdout: ((EMPTY))
+
+"
+`;
+
+exports[`Delete properties $ manifest sync root/target delete tree 2`] = `
+"
+after:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\"
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\"
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\"
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+before:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          }
+        }
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"b\\": {
+            \\"b\\": {
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123
+            }
+          }
+        }
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+
+"
+`;
+
+exports[`Delete properties $ manifest sync root/target delete tree.b 1`] = `
+"
+error: null
+signal: null
+status: 0
+stderr: ((EMPTY))
+stdout: ((EMPTY))
+
+"
+`;
+
+exports[`Delete properties $ manifest sync root/target delete tree.b 2`] = `
+"
+after:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          }
+        }
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {}
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123
+            }
+          }
+        }
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+before:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          }
+        }
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"b\\": {
+            \\"b\\": {
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123
+            }
+          }
+        }
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+
+"
+`;
+
+exports[`Delete properties $ manifest sync root/target delete tree.b.b 1`] = `
+"
+error: null
+signal: null
+status: 0
+stderr: ((EMPTY))
+stdout: ((EMPTY))
+
+"
+`;
+
+exports[`Delete properties $ manifest sync root/target delete tree.b.b 2`] = `
+"
+after:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          }
+        }
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"b\\": {}
+        }
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123
+            }
+          }
+        }
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+before:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          }
+        }
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"b\\": {
+            \\"b\\": {
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123
+            }
+          }
+        }
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+
+"
+`;
+
+exports[`Delete properties $ manifest sync root/target delete tree.b.b.b 1`] = `
+"
+error: null
+signal: null
+status: 0
+stderr: ((EMPTY))
+stdout: ((EMPTY))
+
+"
+`;
+
+exports[`Delete properties $ manifest sync root/target delete tree.b.b.b 2`] = `
+"
+after:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null
+            }
+          }
+        }
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"b\\": {
+            \\"b\\": {}
+          }
+        }
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123
+            }
+          }
+        }
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+before:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          }
+        }
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"b\\": {
+            \\"b\\": {
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123
+            }
+          }
+        }
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+
+"
+`;
+
+exports[`Merge properties $ manifest sync root/target assign tree --source=root/source 1`] = `
+"
+error: null
+signal: null
+status: 0
+stderr: ((EMPTY))
+stdout: ((EMPTY))
+
+"
+`;
+
+exports[`Merge properties $ manifest sync root/target assign tree --source=root/source 2`] = `
+"
+after:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+before:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          }
+        }
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"b\\": {
+            \\"b\\": {
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123
+            }
+          }
+        }
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+
+"
+`;
+
+exports[`Merge properties $ manifest sync root/target assign tree --source=root/source/package.json 1`] = `
+"
+error: null
+signal: null
+status: 0
+stderr: ((EMPTY))
+stdout: ((EMPTY))
+
+"
+`;
+
+exports[`Merge properties $ manifest sync root/target assign tree --source=root/source/package.json 2`] = `
+"
+after:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+before:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          }
+        }
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"b\\": {
+            \\"b\\": {
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123
+            }
+          }
+        }
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+
+"
+`;
+
+exports[`Merge properties $ manifest sync root/target assign tree.b --source=root/source 1`] = `
+"
+error: null
+signal: null
+status: 0
+stderr: ((EMPTY))
+stdout: ((EMPTY))
+
+"
+`;
+
+exports[`Merge properties $ manifest sync root/target assign tree.b --source=root/source 2`] = `
+"
+after:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+before:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          }
+        }
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"b\\": {
+            \\"b\\": {
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123
+            }
+          }
+        }
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+
+"
+`;
+
+exports[`Merge properties $ manifest sync root/target assign tree.b --source=root/source/package.json 1`] = `
+"
+error: null
+signal: null
+status: 0
+stderr: ((EMPTY))
+stdout: ((EMPTY))
+
+"
+`;
+
+exports[`Merge properties $ manifest sync root/target assign tree.b --source=root/source/package.json 2`] = `
+"
+after:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+before:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          }
+        }
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"b\\": {
+            \\"b\\": {
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123
+            }
+          }
+        }
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+
+"
+`;
+
+exports[`Merge properties $ manifest sync root/target assign tree.b.b --source=root/source 1`] = `
+"
+error: null
+signal: null
+status: 0
+stderr: ((EMPTY))
+stdout: ((EMPTY))
+
+"
+`;
+
+exports[`Merge properties $ manifest sync root/target assign tree.b.b --source=root/source 2`] = `
+"
+after:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"b\\": {
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123
+            }
+          },
+          \\"b\\": {
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+before:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          }
+        }
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"b\\": {
+            \\"b\\": {
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123
+            }
+          }
+        }
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+
+"
+`;
+
+exports[`Merge properties $ manifest sync root/target assign tree.b.b --source=root/source/package.json 1`] = `
+"
+error: null
+signal: null
+status: 0
+stderr: ((EMPTY))
+stdout: ((EMPTY))
+
+"
+`;
+
+exports[`Merge properties $ manifest sync root/target assign tree.b.b --source=root/source/package.json 2`] = `
+"
+after:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"b\\": {
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123
+            }
+          },
+          \\"b\\": {
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+before:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          }
+        }
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"b\\": {
+            \\"b\\": {
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123
+            }
+          }
+        }
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+
+"
+`;
+
+exports[`Merge properties $ manifest sync root/target assign tree.b.b.b --source=root/source 1`] = `
+"
+error: null
+signal: null
+status: 0
+stderr: ((EMPTY))
+stdout: ((EMPTY))
+
+"
+`;
+
+exports[`Merge properties $ manifest sync root/target assign tree.b.b.b --source=root/source 2`] = `
+"
+after:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": {
+                \\"0\\": 0,
+                \\"1\\": 1,
+                \\"2\\": 2,
+                \\"3\\": 3
+              }
+            }
+          }
+        }
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"b\\": {
+            \\"b\\": {
+              \\"b\\": {
+                \\"0\\": 0,
+                \\"1\\": 1,
+                \\"2\\": 2,
+                \\"3\\": 3
+              }
+            }
+          }
+        }
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123
+            }
+          },
+          \\"b\\": {
+            \\"b\\": {
+              \\"b\\": {
+                \\"0\\": 0,
+                \\"1\\": 1,
+                \\"2\\": 2,
+                \\"3\\": 3
+              }
+            }
+          }
+        }
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+before:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          }
+        }
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"b\\": {
+            \\"b\\": {
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123
+            }
+          }
+        }
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+
+"
+`;
+
+exports[`Merge properties $ manifest sync root/target assign tree.b.b.b --source=root/source/package.json 1`] = `
+"
+error: null
+signal: null
+status: 0
+stderr: ((EMPTY))
+stdout: ((EMPTY))
+
+"
+`;
+
+exports[`Merge properties $ manifest sync root/target assign tree.b.b.b --source=root/source/package.json 2`] = `
+"
+after:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": {
+                \\"0\\": 0,
+                \\"1\\": 1,
+                \\"2\\": 2,
+                \\"3\\": 3
+              }
+            }
+          }
+        }
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"b\\": {
+            \\"b\\": {
+              \\"b\\": {
+                \\"0\\": 0,
+                \\"1\\": 1,
+                \\"2\\": 2,
+                \\"3\\": 3
+              }
+            }
+          }
+        }
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123
+            }
+          },
+          \\"b\\": {
+            \\"b\\": {
+              \\"b\\": {
+                \\"0\\": 0,
+                \\"1\\": 1,
+                \\"2\\": 2,
+                \\"3\\": 3
+              }
+            }
+          }
+        }
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+before:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          }
+        }
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"b\\": {
+            \\"b\\": {
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123
+            }
+          }
+        }
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+
+"
+`;
+
+exports[`Set properties $ manifest sync root/target set tree --source=root/source 1`] = `
+"
+error: null
+signal: null
+status: 0
+stderr: ((EMPTY))
+stdout: ((EMPTY))
+
+"
+`;
+
+exports[`Set properties $ manifest sync root/target set tree --source=root/source 2`] = `
+"
+after:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+before:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          }
+        }
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"b\\": {
+            \\"b\\": {
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123
+            }
+          }
+        }
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+
+"
+`;
+
+exports[`Set properties $ manifest sync root/target set tree --source=root/source/package.json 1`] = `
+"
+error: null
+signal: null
+status: 0
+stderr: ((EMPTY))
+stdout: ((EMPTY))
+
+"
+`;
+
+exports[`Set properties $ manifest sync root/target set tree --source=root/source/package.json 2`] = `
+"
+after:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+before:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          }
+        }
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"b\\": {
+            \\"b\\": {
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123
+            }
+          }
+        }
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+
+"
+`;
+
+exports[`Set properties $ manifest sync root/target set tree.b --source=root/source 1`] = `
+"
+error: null
+signal: null
+status: 0
+stderr: ((EMPTY))
+stdout: ((EMPTY))
+
+"
+`;
+
+exports[`Set properties $ manifest sync root/target set tree.b --source=root/source 2`] = `
+"
+after:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+before:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          }
+        }
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"b\\": {
+            \\"b\\": {
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123
+            }
+          }
+        }
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+
+"
+`;
+
+exports[`Set properties $ manifest sync root/target set tree.b --source=root/source/package.json 1`] = `
+"
+error: null
+signal: null
+status: 0
+stderr: ((EMPTY))
+stdout: ((EMPTY))
+
+"
+`;
+
+exports[`Set properties $ manifest sync root/target set tree.b --source=root/source/package.json 2`] = `
+"
+after:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+before:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          }
+        }
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"b\\": {
+            \\"b\\": {
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123
+            }
+          }
+        }
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+
+"
+`;
+
+exports[`Set properties $ manifest sync root/target set tree.b.b --source=root/source 1`] = `
+"
+error: null
+signal: null
+status: 0
+stderr: ((EMPTY))
+stdout: ((EMPTY))
+
+"
+`;
+
+exports[`Set properties $ manifest sync root/target set tree.b.b --source=root/source 2`] = `
+"
+after:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"b\\": {
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123
+            }
+          },
+          \\"b\\": {
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+before:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          }
+        }
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"b\\": {
+            \\"b\\": {
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123
+            }
+          }
+        }
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+
+"
+`;
+
+exports[`Set properties $ manifest sync root/target set tree.b.b --source=root/source/package.json 1`] = `
+"
+error: null
+signal: null
+status: 0
+stderr: ((EMPTY))
+stdout: ((EMPTY))
+
+"
+`;
+
+exports[`Set properties $ manifest sync root/target set tree.b.b --source=root/source/package.json 2`] = `
+"
+after:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"b\\": {
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123
+            }
+          },
+          \\"b\\": {
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+before:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          }
+        }
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"b\\": {
+            \\"b\\": {
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123
+            }
+          }
+        }
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+
+"
+`;
+
+exports[`Set properties $ manifest sync root/target set tree.b.b.b --source=root/source 1`] = `
+"
+error: null
+signal: null
+status: 0
+stderr: ((EMPTY))
+stdout: ((EMPTY))
+
+"
+`;
+
+exports[`Set properties $ manifest sync root/target set tree.b.b.b --source=root/source 2`] = `
+"
+after:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"b\\": {
+            \\"b\\": {
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123
+            }
+          },
+          \\"b\\": {
+            \\"b\\": {
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+before:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          }
+        }
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"b\\": {
+            \\"b\\": {
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123
+            }
+          }
+        }
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+
+"
+`;
+
+exports[`Set properties $ manifest sync root/target set tree.b.b.b --source=root/source/package.json 1`] = `
+"
+error: null
+signal: null
+status: 0
+stderr: ((EMPTY))
+stdout: ((EMPTY))
+
+"
+`;
+
+exports[`Set properties $ manifest sync root/target set tree.b.b.b --source=root/source/package.json 2`] = `
+"
+after:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"b\\": {
+            \\"b\\": {
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123
+            }
+          },
+          \\"b\\": {
+            \\"b\\": {
+              \\"b\\": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+before:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          }
+        }
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"b\\": {
+            \\"b\\": {
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123
+            }
+          }
+        }
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+
+"
+`;
+
+exports[`Show help $ manifest sync 1`] = `
+"
+error: null
+signal: null
+status: 1
+stderr: |+
+
+  nested-wrkspc manifest sync <directory> <action> <propertyPath> [args]
+
+  Positionals:
+    directory     Directory that contains all packages         [string] [required]
+    action        Action to be taken
+                                   [required] [choices: \\"set\\", \\"delete\\", \\"assign\\"]
+    propertyPath  Dot separated property path                  [string] [required]
+
+  Options:
+    --version                                 Show version number        [boolean]
+    --help                                    Show help                  [boolean]
+    --source                                  Path to a json file or a directory
+                                              that contain package.json where
+                                              values come from
+                                                           [string] [default: \\".\\"]
+    --propertyPathSeparator, --seperator,     Separator between property names in
+    --sep                                     property path[string] [default: \\".\\"]
+    --indentation, --indent                   Manifest json indentation (number of
+                                              spaces)        [number] [default: 2]
+    --finalNewLine                            How many new line to be added to the
+                                              end of manifest file
+                                                             [number] [default: 1]
+
+  Not enough non-option arguments: got 0, need at least 3
+
+stdout: ((EMPTY))
+
+"
+`;
+
+exports[`Show help $ manifest sync 2`] = `
+"
+after:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          }
+        }
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"b\\": {
+            \\"b\\": {
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123
+            }
+          }
+        }
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+before:
+  all:
+    - root
+    - root/source
+    - root/source/package.json
+    - root/target
+    - root/target/allNull
+    - root/target/allNull/package.json
+    - root/target/lackOfA
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB
+    - root/target/lackOfB/package.json
+  directories:
+    - root
+    - root/source
+    - root/target
+    - root/target/allNull
+    - root/target/lackOfA
+    - root/target/lackOfB
+  fileContents:
+    root/source/package.json: |
+      {
+        \\"name\\": \\"source\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": 123,
+              \\"b\\": 456
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/allNull/package.json: |
+      {
+        \\"name\\": \\"all-null\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          },
+          \\"b\\": {
+            \\"a\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            },
+            \\"b\\": {
+              \\"a\\": null,
+              \\"b\\": null
+            }
+          }
+        }
+      }
+    root/target/lackOfA/package.json: |
+      {
+        \\"name\\": \\"lack-of-a\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"b\\": {
+            \\"b\\": {
+              \\"b\\": [0, 1, 2, 3]
+            }
+          }
+        }
+      }
+    root/target/lackOfB/package.json: |
+      {
+        \\"name\\": \\"lack-of-b\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"tree\\": {
+          \\"a\\": {
+            \\"a\\": {
+              \\"a\\": 123
+            }
+          }
+        }
+      }
+  files:
+    - root/source/package.json
+    - root/target/allNull/package.json
+    - root/target/lackOfA/package.json
+    - root/target/lackOfB/package.json
+
+"
+`;
