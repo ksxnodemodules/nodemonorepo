@@ -1,6 +1,12 @@
 {
   "name": "monorepo-shared-assets",
   "version": "0.0.1",
+  "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
+  "bugs": {
+    "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
+  }
   "dependencies": {
     "ramda": "^0.25.0",
     "immutable": "^3.8.2",
