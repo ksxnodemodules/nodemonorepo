@@ -2,6 +2,15 @@
   "version": "0.0.0",
   "private": true,
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksxnodemodules/nodemonorepo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
+  },
   "devDependencies": {
     "jest": "^22.1.4",
     "jest-extended": "^0.7.0",
