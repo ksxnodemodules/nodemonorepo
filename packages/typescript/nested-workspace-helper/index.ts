@@ -1,4 +1,5 @@
 import listAllPackages from './lib/list-pkgs'
+import writePackageManifests from './lib/write-pkg-manifests'
 import getDependencyMap from './lib/dep-map'
 import listMismatchedDependencies from './lib/mismatches'
 import listAllInvalidPackages from './lib/invalids'
@@ -11,6 +12,7 @@ export * from './lib/types'
 
 export {
   listAllPackages,
+  writePackageManifests,
   getDependencyMap,
   listMismatchedDependencies,
   listAllInvalidPackages,

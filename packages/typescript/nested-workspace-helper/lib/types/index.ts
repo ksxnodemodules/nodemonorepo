@@ -10,6 +10,25 @@ export namespace Basic {
 }
 
 /**
+ * Functions that take `X` and return `Y`
+ */
+export type Transformer<X, Y> = (x: X) => Y
+
+export namespace Transformer {
+  /**
+   * Functions that take `Package.ListItem` and return `Y`
+   */
+  export type FromListItem<Y> = Transformer<Package.ListItem, Y>
+
+  export namespace FromListItem {
+    /**
+     * Functions that take `Package.ListItem` and return `Package.Manifest`
+     */
+    export type ToManifest = FromListItem<Package.Manifest>
+  }
+}
+
+/**
  * Basic types for packages
  */
 export namespace Package {
@@ -32,6 +51,27 @@ export namespace Package {
     readonly devDependencies?: Dict
     readonly peerDependencies?: Dict
     readonly [_: string]: any
+  }
+
+  export namespace Manifest {
+    export namespace Writer {
+      /**
+       * Options to be passed to `writePackageManifest`/`writePackageManifest.write`
+       */
+      export interface Options {
+        /**
+         * Indentation of `package.json`
+         * - As number, it is number of spaces per indentation unit
+         * - As string, it is literally indentation unit
+         */
+        readonly indentation?: string | number
+
+        /**
+         * How many final new line to be inserted? Default is 1
+         */
+        readonly finalNewLine?: number
+      }
+    }
   }
 
   /**
