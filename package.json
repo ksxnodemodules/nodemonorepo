@@ -56,6 +56,7 @@
     "project-build": "bash sh/build",
     "project-publish": "bash sh/publish.sh",
     "project-perpublish": "bash sh/prepublish.sh",
+    "project-postpublish": "bash sh/postpublish.sh",
     "wrkspc": "nested-wrkspc.prv"
   }
 }
