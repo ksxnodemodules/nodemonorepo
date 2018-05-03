@@ -74,6 +74,11 @@ function builder (yargs: Argv): Argv {
         type: 'string',
         default: npmRegistry.REGISTRIES.NPM
       },
+      noUnpublishablePackages: {
+        describe: 'Emit error when there are unpublishable packages',
+        type: 'boolean',
+        default: false
+      },
       showExitStatus: {
         describe: 'Show meaning of exit status codes',
         type: 'boolean',
@@ -87,12 +92,14 @@ function handler ({
   dry,
   executable,
   registry,
+  noUnpublishablePackages,
   showExitStatus
 }: Arguments & {
   directory: string,
   dry: boolean,
   executable: string,
   registry: string,
+  noUnpublishablePackages: boolean,
   showExitStatus: boolean
 }) {
   main().then(
@@ -120,7 +127,7 @@ function handler ({
       return ExitStatus.InvalidPackages
     }
 
-    if (publishability.unpublishables.length) {
+    if (noUnpublishablePackages && publishability.unpublishables.length) {
       console.error('[ERROR] Unpublishable packages: Version already exist in registry')
       console.info(pkgs2text(publishability.unpublishables))
       return ExitStatus.UnpublishablePackages
