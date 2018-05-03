@@ -133,6 +133,15 @@ function handler ({
       return ExitStatus.UnpublishablePackages
     }
 
+    const {length} = publishability.publishables
+
+    if (!length) {
+      console.info('[INFO] No publishable packages')
+      return ExitStatus.Success
+    }
+
+    console.info(`Publishing ${length} packages`, publishability.publisables)
+
     const publish = dry ? publisher.fake : publisher.real
 
     let finalStatus = 0
