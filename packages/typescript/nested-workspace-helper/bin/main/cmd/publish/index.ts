@@ -147,7 +147,9 @@ function handler ({
         return ExitStatus.Success
       }
 
-      console.info(`Packages to be published (${length}): ${publishables.join(', ')}`)
+      console.info(`Packages to be published (${length})`)
+      console.info(pkgs2text(publishables).split('\n').map(x => '* ' + x).join('\n'))
+      console.info()
 
       const publish = dry ? publisher.fake : publisher.real
 
