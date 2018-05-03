@@ -147,7 +147,7 @@ function handler ({
         return ExitStatus.Success
       }
 
-      console.info(`Packages to be published (${length})`)
+      console.info(`${chalk.bold.green(String(length))} packages are going to be published`)
       console.info(pkgs2text(publishables).split('\n').map(x => '* ' + x).join('\n'))
       console.info()
 
