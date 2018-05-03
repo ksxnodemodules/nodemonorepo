@@ -140,7 +140,7 @@ function handler ({
       return ExitStatus.Success
     }
 
-    console.info(`Publishing ${length} packages`, publishability.publisables)
+    console.info(`Packages to be published (${length}): ${publishability.publishables.join(', ')}`)
 
     const publish = dry ? publisher.fake : publisher.real
 
