@@ -121,40 +121,48 @@ function handler ({
     const invalids = listAllInvalidPackages.fromDependencyMap(depMap)
     const publishability = await checkPublisability.fromPackageList(allPackages)
 
+    // no invalids allowed
     if (invalids.length) {
       console.error('[ERROR] Invalid packages')
       console.info(ivls2text(invalids))
       return ExitStatus.InvalidPackages
     }
 
-    if (noUnpublishablePackages && publishability.unpublishables.length) {
-      console.error('[ERROR] Unpublishable packages: Version already exist in registry')
-      console.info(pkgs2text(publishability.unpublishables))
-      return ExitStatus.UnpublishablePackages
+    { // when unpublishables exist but not allowed
+      const {unpublishables} = publishability
+
+      if (noUnpublishablePackages && unpublishables.length) {
+        console.error('[ERROR] Unpublishable packages: Version already exist in registry')
+        console.info(pkgs2text(unpublishables))
+        return ExitStatus.UnpublishablePackages
+      }
     }
 
-    const {length} = publishability.publishables
+    { // publishing packages
+      const {publishables} = publishability
+      const {length} = publishables
 
-    if (!length) {
-      console.info('[INFO] No publishable packages')
-      return ExitStatus.Success
+      if (!length) {
+        console.info('[INFO] No publishable packages')
+        return ExitStatus.Success
+      }
+
+      console.info(`Packages to be published (${length}): ${publishables.join(', ')}`)
+
+      const publish = dry ? publisher.fake : publisher.real
+
+      let finalStatus = 0
+
+      for (const item of publishables) {
+        const {name} = item.manifestContent
+        console.info(`Publishing ${chalk.bold(name as string)}...`)
+        const {status, error, signal} = publish(executable, item.path)
+        if (status || error || signal) console.info('[FAILED]', {status, error, signal})
+        finalStatus |= status
+      }
+
+      return finalStatus
     }
-
-    console.info(`Packages to be published (${length}): ${publishability.publishables.join(', ')}`)
-
-    const publish = dry ? publisher.fake : publisher.real
-
-    let finalStatus = 0
-
-    for (const item of publishability.publishables) {
-      const {name} = item.manifestContent
-      console.info(`Publishing ${chalk.bold(name as string)}...`)
-      const {status, error, signal} = publish(executable, item.path)
-      if (status || error || signal) console.info('[FAILED]', {status, error, signal})
-      finalStatus |= status
-    }
-
-    return finalStatus
   }
 }
 
