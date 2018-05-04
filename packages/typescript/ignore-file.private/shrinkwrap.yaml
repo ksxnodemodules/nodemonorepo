@@ -453,7 +453,7 @@ specifiers:
   '@types/yargs': ^11.0.0
   chalk: ^2.4.0
   fs-extra: ^6.0.0
-  fs-tree-utils: ^0.0.2
+  fs-tree-utils: ^0.0.3
   minimatch: ^3.0.4
   preloaded-node.private: ^0.0.0
   yargs: ^11.0.0
