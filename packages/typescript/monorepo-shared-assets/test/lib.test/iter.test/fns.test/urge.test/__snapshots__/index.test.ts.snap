@@ -1,6 +1,81 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`keep remaining part 1`] = `
+exports[`keep remaining part when no elements remain 1`] = `
+Array [
+  Array [
+    "a",
+    "b",
+    "c",
+    "d",
+  ],
+  Array [
+    "e",
+    "f",
+    "g",
+    "h",
+  ],
+  Array [
+    "i",
+    "j",
+    "k",
+    "l",
+  ],
+  Array [],
+]
+`;
+
+exports[`keep remaining part when some elements remain 1`] = `
+Array [
+  Array [
+    "a",
+    "b",
+    "c",
+    "d",
+  ],
+  Array [
+    "e",
+    "f",
+    "g",
+    "h",
+  ],
+  Array [
+    "i",
+    "j",
+    "k",
+    "l",
+  ],
+  Array [
+    "m",
+    "n",
+    "o",
+  ],
+]
+`;
+
+exports[`omit only empty remaining part when no elements remain 1`] = `
+Array [
+  Array [
+    "a",
+    "b",
+    "c",
+    "d",
+  ],
+  Array [
+    "e",
+    "f",
+    "g",
+    "h",
+  ],
+  Array [
+    "i",
+    "j",
+    "k",
+    "l",
+  ],
+]
+`;
+
+exports[`omit only empty remaining part when some elements remain 1`] = `
 Array [
   Array [
     "a",

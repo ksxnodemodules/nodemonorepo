@@ -27,9 +27,10 @@ export function * urge<X> (
 }
 
 export namespace urge {
+  export const OMIT_EMPTY_REMAINING_PART = <X>(x: ReadonlyArray<X>) => x.length ? [x] : []
   export const KEEP_REMAINING_PART = <X>(x: X) => [x]
   export const OMIT_REMAINING_PART = () => []
-  export const DEFAULT_REMAINING_HANDLER = KEEP_REMAINING_PART
+  export const DEFAULT_REMAINING_HANDLER = OMIT_EMPTY_REMAINING_PART
   export type RemainingHandler<X> = (tray: ReadonlyArray<X>) => ReadonlyArray<ReadonlyArray<X>>
 }
 
