@@ -3,6 +3,7 @@ dependencies:
   '@types/js-yaml': 3.11.1
   '@types/node': 10.0.3
   fs-extra: 6.0.0
+  fs-tree-utils: 'link:../fs-tree-utils'
   js-yaml: 3.11.0
 packages:
   /@types/fs-extra/5.0.2:
@@ -74,4 +75,5 @@ specifiers:
   '@types/js-yaml': ^3.11.1
   '@types/node': ^10.0.3
   fs-extra: ^6.0.0
+  fs-tree-utils: '*'
   js-yaml: ^3.11.0
