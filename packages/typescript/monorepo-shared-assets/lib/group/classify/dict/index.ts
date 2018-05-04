@@ -11,9 +11,9 @@ export namespace classify {
 
     for (const item of values) {
       const name = classifier(item)
+      const set = db[name]
 
-      if (name in db) {
-        const set = db[name]
+      if (set) {
         isInIter(item, set, duplicationChecker) || set.push(item)
       } else {
         db[name] = [item]
@@ -46,9 +46,10 @@ export namespace classify {
 
       if (classes.length) {
         for (const name of classes) {
-          if (name in classified) {
-            const array = classified[name]
-            isInIter(item, array, duplicationChecker) || classified[name].push(item)
+          const array = classified[name]
+
+          if (array) {
+            isInIter(item, array, duplicationChecker) || array.push(item)
           } else {
             classified[name] = [item]
           }

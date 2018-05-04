@@ -22,9 +22,16 @@ export namespace partition {
       values: Iterable<X>,
       classifiers: Classifier.Iter<X>
     ): Partition<X> {
-      const result = fromClassifierList.array(Array.from(values), Array.from(classifiers))
-      const classified = immutable.Map(result.classified).map(x => new Set(x)).toObject()
+      const result = fromClassifierList
+        .array(Array.from(values), Array.from(classifiers))
+
+      const classified = immutable
+        .Map(result.classified)
+        .map(x => new Set(x as ReadonlyArray<X>))
+        .toObject()
+
       const untouched = new Set(result.untouched)
+
       return {classified, untouched}
     }
 
@@ -46,7 +53,10 @@ export namespace partition {
     list: Iterable<X>,
     classifiers: Classifier.Dict<X>
   ): Partition<X> {
-    return partition(list, Object.entries(classifiers))
+    return partition(
+      list,
+      Object.entries(classifiers as {[_: string]: Classifier.Func<X>})
+    )
   }
 
   export type Partition<X> = Partition.Set<X>

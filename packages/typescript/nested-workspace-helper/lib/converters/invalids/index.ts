@@ -23,6 +23,8 @@ export namespace group {
       } = {}
 
       for (const [name, pkgs] of Object.entries(asDict(list))) {
+        if (!pkgs) continue
+
         result[name] = pkgs.map(x => ({
           name: x.manifestContent.name,
           path: x.path,
