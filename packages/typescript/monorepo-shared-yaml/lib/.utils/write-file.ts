@@ -6,7 +6,7 @@ export function writeFile (
   data: types.FileSystem.WritableData,
   options?: types.FileSystem.WriteOptions
 ): Promise<void> {
-  return fsx.writeFile(String(filename), data, options)
+  return fsx.writeFile(filename, data, options as fsx.WriteFileOptions)
 }
 
 export default writeFile
