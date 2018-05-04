@@ -1,3 +1,6 @@
 root:
   source.yaml: |
     hello: world
+  not-yaml: |
+    this: is: not: valid: yaml: syntax:
+    because: semicolons: is: placed: everywhere:

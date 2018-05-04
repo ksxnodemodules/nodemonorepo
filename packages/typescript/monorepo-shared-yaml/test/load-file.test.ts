@@ -6,3 +6,7 @@ const {apply} = createVirtualEnvironment('load.yaml')
 it('matches snapshot', apply(async () => {
   expect(await subject.loadFile('root/source.yaml')).toMatchSnapshot()
 }))
+
+it('throws error matching snapshot', apply(async () => {
+  expect(subject.loadFile('root/not-yaml')).rejects.toMatchSnapshot()
+}))

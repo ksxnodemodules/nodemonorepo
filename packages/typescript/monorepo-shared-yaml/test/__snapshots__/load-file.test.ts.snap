@@ -5,3 +5,9 @@ Object {
   "hello": "world",
 }
 `;
+
+exports[`throws error matching snapshot 1`] = `
+[Error: Failed to parse 'root/not-yaml': incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
+    this: is: not: valid: yaml: syntax:
+            ^]
+`;
