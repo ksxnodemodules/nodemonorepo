@@ -20,7 +20,7 @@
     "node-fetch": "^2.1.2",
     "yargs": "^11.0.0",
     "chalk": "^2.4.0",
-    "monorepo-shared-assets": "^0.0.4",
+    "monorepo-shared-assets": "^0.0.5",
     "fs-tree-utils": "^0.0.3",
     "@types/ramda": "^0.25.24",
     "@types/semver": "^5.5.0",
