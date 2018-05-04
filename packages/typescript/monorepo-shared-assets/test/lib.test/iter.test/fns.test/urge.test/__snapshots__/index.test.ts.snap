@@ -3,22 +3,34 @@
 exports[`keep remaining part when no elements remain 1`] = `
 Array [
   Array [
-    "a",
-    "b",
-    "c",
-    "d",
+    0,
+    1,
+    2,
+    3,
   ],
   Array [
-    "e",
-    "f",
-    "g",
-    "h",
+    4,
+    5,
+    6,
+    7,
   ],
   Array [
-    "i",
-    "j",
-    "k",
-    "l",
+    8,
+    9,
+    10,
+    11,
+  ],
+  Array [
+    12,
+    13,
+    14,
+    15,
+  ],
+  Array [
+    16,
+    17,
+    18,
+    19,
   ],
   Array [],
 ]
@@ -27,27 +39,39 @@ Array [
 exports[`keep remaining part when some elements remain 1`] = `
 Array [
   Array [
-    "a",
-    "b",
-    "c",
-    "d",
+    0,
+    1,
+    2,
+    3,
   ],
   Array [
-    "e",
-    "f",
-    "g",
-    "h",
+    4,
+    5,
+    6,
+    7,
   ],
   Array [
-    "i",
-    "j",
-    "k",
-    "l",
+    8,
+    9,
+    10,
+    11,
   ],
   Array [
-    "m",
-    "n",
-    "o",
+    12,
+    13,
+    14,
+    15,
+  ],
+  Array [
+    16,
+    17,
+    18,
+    19,
+  ],
+  Array [
+    20,
+    21,
+    22,
   ],
 ]
 `;
@@ -55,22 +79,34 @@ Array [
 exports[`omit only empty remaining part when no elements remain 1`] = `
 Array [
   Array [
-    "a",
-    "b",
-    "c",
-    "d",
+    0,
+    1,
+    2,
+    3,
   ],
   Array [
-    "e",
-    "f",
-    "g",
-    "h",
+    4,
+    5,
+    6,
+    7,
   ],
   Array [
-    "i",
-    "j",
-    "k",
-    "l",
+    8,
+    9,
+    10,
+    11,
+  ],
+  Array [
+    12,
+    13,
+    14,
+    15,
+  ],
+  Array [
+    16,
+    17,
+    18,
+    19,
   ],
 ]
 `;
@@ -78,27 +114,39 @@ Array [
 exports[`omit only empty remaining part when some elements remain 1`] = `
 Array [
   Array [
-    "a",
-    "b",
-    "c",
-    "d",
+    0,
+    1,
+    2,
+    3,
   ],
   Array [
-    "e",
-    "f",
-    "g",
-    "h",
+    4,
+    5,
+    6,
+    7,
   ],
   Array [
-    "i",
-    "j",
-    "k",
-    "l",
+    8,
+    9,
+    10,
+    11,
   ],
   Array [
-    "m",
-    "n",
-    "o",
+    12,
+    13,
+    14,
+    15,
+  ],
+  Array [
+    16,
+    17,
+    18,
+    19,
+  ],
+  Array [
+    20,
+    21,
+    22,
   ],
 ]
 `;
@@ -106,22 +154,34 @@ Array [
 exports[`omit remaining part 1`] = `
 Array [
   Array [
-    "a",
-    "b",
-    "c",
-    "d",
+    0,
+    1,
+    2,
+    3,
   ],
   Array [
-    "e",
-    "f",
-    "g",
-    "h",
+    4,
+    5,
+    6,
+    7,
   ],
   Array [
-    "i",
-    "j",
-    "k",
-    "l",
+    8,
+    9,
+    10,
+    11,
+  ],
+  Array [
+    12,
+    13,
+    14,
+    15,
+  ],
+  Array [
+    16,
+    17,
+    18,
+    19,
   ],
 ]
 `;
