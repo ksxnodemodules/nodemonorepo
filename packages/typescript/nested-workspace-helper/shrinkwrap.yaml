@@ -125,7 +125,6 @@ specifiers:
   '@types/semver': ^5.5.0
   '@types/yargs': ^11.0.0
   chalk: ^2.4.0
-  extra-jest: '*'
   fs-extra: ^6.0.0
   fs-tree-utils: ^0.0.2
   js-yaml: ^3.11.0

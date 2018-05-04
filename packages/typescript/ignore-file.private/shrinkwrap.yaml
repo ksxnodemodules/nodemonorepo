@@ -452,7 +452,6 @@ specifiers:
   '@types/node': ^10.0.0
   '@types/yargs': ^11.0.0
   chalk: ^2.4.0
-  extra-jest: '*'
   fs-extra: ^6.0.0
   fs-tree-utils: ^0.0.2
   minimatch: ^3.0.4

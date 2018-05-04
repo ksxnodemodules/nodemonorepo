@@ -5,7 +5,6 @@ dependencies:
   fs-extra: 6.0.0
   ramda: 0.25.0
 devDependencies:
-  extra-jest: 'link:../extra-jest'
   unique-temp-path: 'link:../unique-temp-path'
 packages:
   /@types/fs-extra/5.0.2:
@@ -57,7 +56,6 @@ specifiers:
   '@types/fs-extra': ^5.0.1
   '@types/node': ^10.0.0
   '@types/ramda': ^0.25.21
-  extra-jest: '*'
   fs-extra: ^6.0.0
   ramda: ^0.25.0
   unique-temp-path: '*'

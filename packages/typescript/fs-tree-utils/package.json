@@ -16,7 +16,6 @@
     "@types/node": "^10.0.0"
   },
   "devDependencies": {
-    "unique-temp-path": "*",
-    "extra-jest": "*"
+    "unique-temp-path": "*"
   }
 }
