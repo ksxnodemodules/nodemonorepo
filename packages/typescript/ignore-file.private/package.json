@@ -2,6 +2,15 @@
   "name": "ignore-file.private",
   "version": "0.0.0",
   "private": true,
+  "license": "MIT",
+  "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksxnodemodules/nodemonorepo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
+  },
   "bin": {
     "ignore-file-manager": "bin/igfileman",
     "igfileman": "bin/igfileman"
