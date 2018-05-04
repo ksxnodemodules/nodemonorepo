@@ -20,5 +20,8 @@
   },
   "devDependencies": {
     "fs-tree-utils": "*"
+  },
+  "engines": {
+    "node": ">= 8.9.0"
   }
 }

@@ -19,5 +19,8 @@
   },
   "peerDependencies": {
     "jest": "^22.4.3"
+  },
+  "engines": {
+    "node": ">= 8.9.0"
   }
 }

@@ -15,5 +15,8 @@
   "devDependencies": {
     "preloaded-node.private": "*",
     "path-env": "*"
+  },
+  "engines": {
+    "node": ">= 8.9.0"
   }
 }

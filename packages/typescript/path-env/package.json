@@ -14,5 +14,8 @@
   "devDependencies": {
     "ramda": "^0.25.0",
     "@types/ramda": "^0.25.21"
+  },
+  "engines": {
+    "node": ">= 8.9.0"
   }
 }
