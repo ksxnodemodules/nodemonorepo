@@ -174,7 +174,7 @@ export namespace spawn {
       process
         .on('error', error => reject(error))
         .on('disconnect', () => reject(new DisconnectionException(process, params)))
-        .on('exit', (status, signal) => resolve(new ResultItem(process, status, signal, stdout, stderr)))
+        .on('close', (status, signal) => resolve(new ResultItem(process, status, signal, stdout, stderr)))
     })
   }
 
