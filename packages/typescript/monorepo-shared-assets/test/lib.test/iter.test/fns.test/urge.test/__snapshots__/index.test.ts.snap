@@ -1,0 +1,187 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`keep remaining part when no elements remain 1`] = `
+Array [
+  Array [
+    0,
+    1,
+    2,
+    3,
+  ],
+  Array [
+    4,
+    5,
+    6,
+    7,
+  ],
+  Array [
+    8,
+    9,
+    10,
+    11,
+  ],
+  Array [
+    12,
+    13,
+    14,
+    15,
+  ],
+  Array [
+    16,
+    17,
+    18,
+    19,
+  ],
+  Array [],
+]
+`;
+
+exports[`keep remaining part when some elements remain 1`] = `
+Array [
+  Array [
+    0,
+    1,
+    2,
+    3,
+  ],
+  Array [
+    4,
+    5,
+    6,
+    7,
+  ],
+  Array [
+    8,
+    9,
+    10,
+    11,
+  ],
+  Array [
+    12,
+    13,
+    14,
+    15,
+  ],
+  Array [
+    16,
+    17,
+    18,
+    19,
+  ],
+  Array [
+    20,
+    21,
+    22,
+  ],
+]
+`;
+
+exports[`omit only empty remaining part when no elements remain 1`] = `
+Array [
+  Array [
+    0,
+    1,
+    2,
+    3,
+  ],
+  Array [
+    4,
+    5,
+    6,
+    7,
+  ],
+  Array [
+    8,
+    9,
+    10,
+    11,
+  ],
+  Array [
+    12,
+    13,
+    14,
+    15,
+  ],
+  Array [
+    16,
+    17,
+    18,
+    19,
+  ],
+]
+`;
+
+exports[`omit only empty remaining part when some elements remain 1`] = `
+Array [
+  Array [
+    0,
+    1,
+    2,
+    3,
+  ],
+  Array [
+    4,
+    5,
+    6,
+    7,
+  ],
+  Array [
+    8,
+    9,
+    10,
+    11,
+  ],
+  Array [
+    12,
+    13,
+    14,
+    15,
+  ],
+  Array [
+    16,
+    17,
+    18,
+    19,
+  ],
+  Array [
+    20,
+    21,
+    22,
+  ],
+]
+`;
+
+exports[`omit remaining part 1`] = `
+Array [
+  Array [
+    0,
+    1,
+    2,
+    3,
+  ],
+  Array [
+    4,
+    5,
+    6,
+    7,
+  ],
+  Array [
+    8,
+    9,
+    10,
+    11,
+  ],
+  Array [
+    12,
+    13,
+    14,
+    15,
+  ],
+  Array [
+    16,
+    17,
+    18,
+    19,
+  ],
+]
+`;

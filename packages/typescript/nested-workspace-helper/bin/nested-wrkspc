@@ -1,2 +1,2 @@
-#! /usr/bin/env preloaded-node
+#! /usr/bin/env node
 require('./main')

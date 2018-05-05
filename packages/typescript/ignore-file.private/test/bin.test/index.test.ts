@@ -1,6 +1,6 @@
 import * as xjest from 'extra-jest'
 import * as fsTreeUtils from 'fs-tree-utils'
-import {spawnSync} from 'preloaded-node'
+import {spawnSync} from 'preloaded-node.private'
 import {bin} from '../.lib/data'
 import virtualEnvironment from '../.lib/virtual-env'
 

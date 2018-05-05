@@ -1,11 +1,13 @@
-import identify from './utils/identify'
 import * as types from '../../../.types'
+import isInIter from '../.utils/in-iter'
+import identify from './utils/identify'
 
 export namespace classify {
   export function singleDistribute<X, ID> (
     values: Iterable<X>,
     classifier: singleDistribute.Classifier<X, ID>,
-    identifier?: singleDistribute.Identifier<ID>
+    identifier?: singleDistribute.Identifier<ID>,
+    duplicateChecker?: isInIter.Comparator<X>
   ): singleDistribute.Classification<X, ID> {
     const db = new Map<ID, Set<X>>()
 
@@ -14,7 +16,8 @@ export namespace classify {
       const foundID = identify(id, db, identifier)
 
       if (foundID) {
-        (db.get(foundID) as Set<X>).add(item)
+        const set = db.get(foundID) as Set<X>
+        isInIter(item, set, duplicateChecker) || set.add(item)
       } else {
         db.set(id, new Set([item]))
       }
@@ -37,7 +40,8 @@ export namespace classify {
   export function multiDistribute<X, ID> (
     values: Iterable<X>,
     classifier: multiDistribute.Classifier<X, ID>,
-    identifier?: multiDistribute.Identifier<ID>
+    identifier?: multiDistribute.Identifier<ID>,
+    duplicateChecker?: isInIter.Comparator<X>
   ): multiDistribute.MultipleDistribution<X, ID> {
     const classified = new Map<ID, Set<X>>()
     const unclassified = new Set<X>()
@@ -50,7 +54,8 @@ export namespace classify {
           const foundID = identify(id, classified, identifier)
 
           if (foundID) {
-            (classified.get(foundID) as Set<X>).add(item)
+            const set = classified.get(foundID) as Set<X>
+            isInIter(item, set, duplicateChecker) || set.add(item)
           } else {
             classified.set(id, new Set([item]))
           }

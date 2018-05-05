@@ -1,0 +1,503 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`show help $ validate 1`] = `
+"
+error: null
+signal: null
+status: 1
+stderr: |+
+
+  nested-wrkspc validate <directory>
+
+  Check for invalid packages
+
+  Positionals:
+    directory  Directory that contains all packages            [string] [required]
+
+  Options:
+    --version           Show version number                              [boolean]
+    --help              Show help                                        [boolean]
+    --jsonOutput        Whether output should be json   [boolean] [default: false]
+    --jsonOutputIndent  JSON output indentation when --jsonOutput is provided
+                                                             [number] [default: 2]
+    --noExitStatus      Do not exit with code 1 when there are invalid packages
+                                                        [boolean] [default: false]
+
+  Not enough non-option arguments: got 0, need at least 1
+
+stdout: ((EMPTY))
+
+"
+`;
+
+exports[`show invalid packages in json format with exit status $ validate --jsonOutput . 1`] = `
+"
+error: null
+signal: null
+status: 1
+stderr: ((EMPTY))
+stdout: |+
+
+  {
+    \\"PrivateDependencies\\": [
+      {
+        \\"name\\": \\"pub-use-private-dependencies-as-peer\\",
+        \\"path\\": \\"root/dependants/publicPackages/usePrivateDependenciesAsPeer\\",
+        \\"causes\\": [
+          \\"private\\"
+        ]
+      },
+      {
+        \\"name\\": \\"pub-use-private-dependencies-in-production\\",
+        \\"path\\": \\"root/dependants/publicPackages/usePrivateDependenciesInProduction\\",
+        \\"causes\\": [
+          \\"private\\"
+        ]
+      }
+    ],
+    \\"NameDuplication\\": [
+      {
+        \\"name\\": \\"duplicated-name\\",
+        \\"path\\": \\"root/dependants/privatePackages/duplicatedNames/ghi\\",
+        \\"causes\\": [
+          \\"root/dependants/privatePackages/duplicatedNames/ghi\\",
+          \\"root/dependants/privatePackages/duplicatedNames/jkl\\",
+          \\"root/dependants/publicPackages/duplicatedNames/abc\\",
+          \\"root/dependants/publicPackages/duplicatedNames/def\\"
+        ]
+      },
+      {
+        \\"name\\": \\"duplicated-name\\",
+        \\"path\\": \\"root/dependants/privatePackages/duplicatedNames/jkl\\",
+        \\"causes\\": [
+          \\"root/dependants/privatePackages/duplicatedNames/ghi\\",
+          \\"root/dependants/privatePackages/duplicatedNames/jkl\\",
+          \\"root/dependants/publicPackages/duplicatedNames/abc\\",
+          \\"root/dependants/publicPackages/duplicatedNames/def\\"
+        ]
+      },
+      {
+        \\"name\\": \\"duplicated-name\\",
+        \\"path\\": \\"root/dependants/publicPackages/duplicatedNames/abc\\",
+        \\"causes\\": [
+          \\"root/dependants/privatePackages/duplicatedNames/ghi\\",
+          \\"root/dependants/privatePackages/duplicatedNames/jkl\\",
+          \\"root/dependants/publicPackages/duplicatedNames/abc\\",
+          \\"root/dependants/publicPackages/duplicatedNames/def\\"
+        ]
+      },
+      {
+        \\"name\\": \\"duplicated-name\\",
+        \\"path\\": \\"root/dependants/publicPackages/duplicatedNames/def\\",
+        \\"causes\\": [
+          \\"root/dependants/privatePackages/duplicatedNames/ghi\\",
+          \\"root/dependants/privatePackages/duplicatedNames/jkl\\",
+          \\"root/dependants/publicPackages/duplicatedNames/abc\\",
+          \\"root/dependants/publicPackages/duplicatedNames/def\\"
+        ]
+      }
+    ],
+    \\"SelfDependence\\": [
+      {
+        \\"name\\": \\"prv-use-itself-as-peer\\",
+        \\"path\\": \\"root/dependants/privatePackages/useItselfAsDependency/asPeer\\",
+        \\"causes\\": []
+      },
+      {
+        \\"name\\": \\"prv-use-itself-as-dev\\",
+        \\"path\\": \\"root/dependants/privatePackages/useItselfAsDependency/inDevelopment\\",
+        \\"causes\\": []
+      },
+      {
+        \\"name\\": \\"prv-use-itself-as-prod\\",
+        \\"path\\": \\"root/dependants/privatePackages/useItselfAsDependency/inProduction\\",
+        \\"causes\\": []
+      },
+      {
+        \\"name\\": \\"pub-use-itself-as-peer\\",
+        \\"path\\": \\"root/dependants/publicPackages/useItselfAsDependency/asPeer\\",
+        \\"causes\\": []
+      },
+      {
+        \\"name\\": \\"pub-use-itself-as-dev\\",
+        \\"path\\": \\"root/dependants/publicPackages/useItselfAsDependency/inDevelopment\\",
+        \\"causes\\": []
+      },
+      {
+        \\"name\\": \\"pub-use-itself-as-prod\\",
+        \\"path\\": \\"root/dependants/publicPackages/useItselfAsDependency/inProduction\\",
+        \\"causes\\": []
+      }
+    ],
+    \\"InvalidDependencies\\": [
+      {
+        \\"name\\": \\"use-self-dependence-dependencies\\",
+        \\"path\\": \\"root/dependants/advancedDetails/useSelfDependenceDependencies\\",
+        \\"causes\\": [
+          \\"pub-use-itself-as-peer\\",
+          \\"pub-use-itself-as-dev\\",
+          \\"pub-use-itself-as-prod\\"
+        ]
+      },
+      {
+        \\"name\\": \\"prv-use-duplicated-dependencies\\",
+        \\"path\\": \\"root/dependants/privatePackages/useInvalidDependencies\\",
+        \\"causes\\": [
+          \\"duplicated-name\\"
+        ]
+      },
+      {
+        \\"name\\": \\"pub-use-invalid-dependencies-as-peer\\",
+        \\"path\\": \\"root/dependants/publicPackages/useInvalidDependenciesAsPeer\\",
+        \\"causes\\": [
+          \\"pub-use-private-dependencies-as-peer\\",
+          \\"pub-use-private-dependencies-in-production\\",
+          \\"pub-use-invalid-dependencies-in-development\\",
+          \\"pub-use-invalid-dependencies-in-production\\"
+        ]
+      },
+      {
+        \\"name\\": \\"pub-use-invalid-dependencies-in-development\\",
+        \\"path\\": \\"root/dependants/publicPackages/useInvalidDependenciesInDepevelopment\\",
+        \\"causes\\": [
+          \\"pub-use-private-dependencies-as-peer\\",
+          \\"pub-use-private-dependencies-in-production\\",
+          \\"pub-use-invalid-dependencies-in-production\\"
+        ]
+      },
+      {
+        \\"name\\": \\"pub-use-invalid-dependencies-in-production\\",
+        \\"path\\": \\"root/dependants/publicPackages/useInvalidDependenciesInProduction\\",
+        \\"causes\\": [
+          \\"pub-use-private-dependencies-as-peer\\",
+          \\"pub-use-private-dependencies-in-production\\"
+        ]
+      }
+    ]
+  }
+
+
+
+"
+`;
+
+exports[`show invalid packages in json format without exit status $ validate --jsonOutput --noExitStatus . 1`] = `
+"
+error: null
+signal: null
+status: 0
+stderr: ((EMPTY))
+stdout: |+
+
+  {
+    \\"PrivateDependencies\\": [
+      {
+        \\"name\\": \\"pub-use-private-dependencies-as-peer\\",
+        \\"path\\": \\"root/dependants/publicPackages/usePrivateDependenciesAsPeer\\",
+        \\"causes\\": [
+          \\"private\\"
+        ]
+      },
+      {
+        \\"name\\": \\"pub-use-private-dependencies-in-production\\",
+        \\"path\\": \\"root/dependants/publicPackages/usePrivateDependenciesInProduction\\",
+        \\"causes\\": [
+          \\"private\\"
+        ]
+      }
+    ],
+    \\"NameDuplication\\": [
+      {
+        \\"name\\": \\"duplicated-name\\",
+        \\"path\\": \\"root/dependants/privatePackages/duplicatedNames/ghi\\",
+        \\"causes\\": [
+          \\"root/dependants/privatePackages/duplicatedNames/ghi\\",
+          \\"root/dependants/privatePackages/duplicatedNames/jkl\\",
+          \\"root/dependants/publicPackages/duplicatedNames/abc\\",
+          \\"root/dependants/publicPackages/duplicatedNames/def\\"
+        ]
+      },
+      {
+        \\"name\\": \\"duplicated-name\\",
+        \\"path\\": \\"root/dependants/privatePackages/duplicatedNames/jkl\\",
+        \\"causes\\": [
+          \\"root/dependants/privatePackages/duplicatedNames/ghi\\",
+          \\"root/dependants/privatePackages/duplicatedNames/jkl\\",
+          \\"root/dependants/publicPackages/duplicatedNames/abc\\",
+          \\"root/dependants/publicPackages/duplicatedNames/def\\"
+        ]
+      },
+      {
+        \\"name\\": \\"duplicated-name\\",
+        \\"path\\": \\"root/dependants/publicPackages/duplicatedNames/abc\\",
+        \\"causes\\": [
+          \\"root/dependants/privatePackages/duplicatedNames/ghi\\",
+          \\"root/dependants/privatePackages/duplicatedNames/jkl\\",
+          \\"root/dependants/publicPackages/duplicatedNames/abc\\",
+          \\"root/dependants/publicPackages/duplicatedNames/def\\"
+        ]
+      },
+      {
+        \\"name\\": \\"duplicated-name\\",
+        \\"path\\": \\"root/dependants/publicPackages/duplicatedNames/def\\",
+        \\"causes\\": [
+          \\"root/dependants/privatePackages/duplicatedNames/ghi\\",
+          \\"root/dependants/privatePackages/duplicatedNames/jkl\\",
+          \\"root/dependants/publicPackages/duplicatedNames/abc\\",
+          \\"root/dependants/publicPackages/duplicatedNames/def\\"
+        ]
+      }
+    ],
+    \\"SelfDependence\\": [
+      {
+        \\"name\\": \\"prv-use-itself-as-peer\\",
+        \\"path\\": \\"root/dependants/privatePackages/useItselfAsDependency/asPeer\\",
+        \\"causes\\": []
+      },
+      {
+        \\"name\\": \\"prv-use-itself-as-dev\\",
+        \\"path\\": \\"root/dependants/privatePackages/useItselfAsDependency/inDevelopment\\",
+        \\"causes\\": []
+      },
+      {
+        \\"name\\": \\"prv-use-itself-as-prod\\",
+        \\"path\\": \\"root/dependants/privatePackages/useItselfAsDependency/inProduction\\",
+        \\"causes\\": []
+      },
+      {
+        \\"name\\": \\"pub-use-itself-as-peer\\",
+        \\"path\\": \\"root/dependants/publicPackages/useItselfAsDependency/asPeer\\",
+        \\"causes\\": []
+      },
+      {
+        \\"name\\": \\"pub-use-itself-as-dev\\",
+        \\"path\\": \\"root/dependants/publicPackages/useItselfAsDependency/inDevelopment\\",
+        \\"causes\\": []
+      },
+      {
+        \\"name\\": \\"pub-use-itself-as-prod\\",
+        \\"path\\": \\"root/dependants/publicPackages/useItselfAsDependency/inProduction\\",
+        \\"causes\\": []
+      }
+    ],
+    \\"InvalidDependencies\\": [
+      {
+        \\"name\\": \\"use-self-dependence-dependencies\\",
+        \\"path\\": \\"root/dependants/advancedDetails/useSelfDependenceDependencies\\",
+        \\"causes\\": [
+          \\"pub-use-itself-as-peer\\",
+          \\"pub-use-itself-as-dev\\",
+          \\"pub-use-itself-as-prod\\"
+        ]
+      },
+      {
+        \\"name\\": \\"prv-use-duplicated-dependencies\\",
+        \\"path\\": \\"root/dependants/privatePackages/useInvalidDependencies\\",
+        \\"causes\\": [
+          \\"duplicated-name\\"
+        ]
+      },
+      {
+        \\"name\\": \\"pub-use-invalid-dependencies-as-peer\\",
+        \\"path\\": \\"root/dependants/publicPackages/useInvalidDependenciesAsPeer\\",
+        \\"causes\\": [
+          \\"pub-use-private-dependencies-as-peer\\",
+          \\"pub-use-private-dependencies-in-production\\",
+          \\"pub-use-invalid-dependencies-in-development\\",
+          \\"pub-use-invalid-dependencies-in-production\\"
+        ]
+      },
+      {
+        \\"name\\": \\"pub-use-invalid-dependencies-in-development\\",
+        \\"path\\": \\"root/dependants/publicPackages/useInvalidDependenciesInDepevelopment\\",
+        \\"causes\\": [
+          \\"pub-use-private-dependencies-as-peer\\",
+          \\"pub-use-private-dependencies-in-production\\",
+          \\"pub-use-invalid-dependencies-in-production\\"
+        ]
+      },
+      {
+        \\"name\\": \\"pub-use-invalid-dependencies-in-production\\",
+        \\"path\\": \\"root/dependants/publicPackages/useInvalidDependenciesInProduction\\",
+        \\"causes\\": [
+          \\"pub-use-private-dependencies-as-peer\\",
+          \\"pub-use-private-dependencies-in-production\\"
+        ]
+      }
+    ]
+  }
+
+
+
+"
+`;
+
+exports[`show invalid packages in lines of text with exit status $ validate . 1`] = `
+"
+error: null
+signal: null
+status: 1
+stderr: ((EMPTY))
+stdout: |+
+
+  * Public package depends on non-dev private dependencies (PrivateDependencies)
+    — pub-use-private-dependencies-as-peer (root/dependants/publicPackages/usePrivateDependenciesAsPeer)
+      → private
+    — pub-use-private-dependencies-in-production (root/dependants/publicPackages/usePrivateDependenciesInProduction)
+      → private
+
+  * Package with name that is used by another package (NameDuplication)
+    — duplicated-name (root/dependants/privatePackages/duplicatedNames/ghi)
+      → root/dependants/privatePackages/duplicatedNames/ghi
+      → root/dependants/privatePackages/duplicatedNames/jkl
+      → root/dependants/publicPackages/duplicatedNames/abc
+      → root/dependants/publicPackages/duplicatedNames/def
+    — duplicated-name (root/dependants/privatePackages/duplicatedNames/jkl)
+      → root/dependants/privatePackages/duplicatedNames/ghi
+      → root/dependants/privatePackages/duplicatedNames/jkl
+      → root/dependants/publicPackages/duplicatedNames/abc
+      → root/dependants/publicPackages/duplicatedNames/def
+    — duplicated-name (root/dependants/publicPackages/duplicatedNames/abc)
+      → root/dependants/privatePackages/duplicatedNames/ghi
+      → root/dependants/privatePackages/duplicatedNames/jkl
+      → root/dependants/publicPackages/duplicatedNames/abc
+      → root/dependants/publicPackages/duplicatedNames/def
+    — duplicated-name (root/dependants/publicPackages/duplicatedNames/def)
+      → root/dependants/privatePackages/duplicatedNames/ghi
+      → root/dependants/privatePackages/duplicatedNames/jkl
+      → root/dependants/publicPackages/duplicatedNames/abc
+      → root/dependants/publicPackages/duplicatedNames/def
+
+  * Package that depends on itself (SelfDependence)
+    — prv-use-itself-as-peer (root/dependants/privatePackages/useItselfAsDependency/asPeer)
+    — prv-use-itself-as-dev (root/dependants/privatePackages/useItselfAsDependency/inDevelopment)
+    — prv-use-itself-as-prod (root/dependants/privatePackages/useItselfAsDependency/inProduction)
+    — pub-use-itself-as-peer (root/dependants/publicPackages/useItselfAsDependency/asPeer)
+    — pub-use-itself-as-dev (root/dependants/publicPackages/useItselfAsDependency/inDevelopment)
+    — pub-use-itself-as-prod (root/dependants/publicPackages/useItselfAsDependency/inProduction)
+
+  * Package depends on invalid dependencies (InvalidDependencies)
+    — use-self-dependence-dependencies (root/dependants/advancedDetails/useSelfDependenceDependencies)
+      → pub-use-itself-as-peer
+      → pub-use-itself-as-dev
+      → pub-use-itself-as-prod
+    — prv-use-duplicated-dependencies (root/dependants/privatePackages/useInvalidDependencies)
+      → duplicated-name
+    — pub-use-invalid-dependencies-as-peer (root/dependants/publicPackages/useInvalidDependenciesAsPeer)
+      → pub-use-private-dependencies-as-peer
+      → pub-use-private-dependencies-in-production
+      → pub-use-private-dependencies-as-peer
+      → pub-use-private-dependencies-in-production
+      → pub-use-invalid-dependencies-in-development
+      → pub-use-invalid-dependencies-in-production
+    — pub-use-invalid-dependencies-in-development (root/dependants/publicPackages/useInvalidDependenciesInDepevelopment)
+      → pub-use-private-dependencies-as-peer
+      → pub-use-private-dependencies-in-production
+      → pub-use-private-dependencies-as-peer
+      → pub-use-private-dependencies-in-production
+      → pub-use-invalid-dependencies-in-production
+    — pub-use-invalid-dependencies-in-production (root/dependants/publicPackages/useInvalidDependenciesInProduction)
+      → pub-use-private-dependencies-as-peer
+      → pub-use-private-dependencies-in-production
+
+
+"
+`;
+
+exports[`show invalid packages in lines of text without exit status $ validate --noExitStatus . 1`] = `
+"
+error: null
+signal: null
+status: 0
+stderr: ((EMPTY))
+stdout: |+
+
+  * Public package depends on non-dev private dependencies (PrivateDependencies)
+    — pub-use-private-dependencies-as-peer (root/dependants/publicPackages/usePrivateDependenciesAsPeer)
+      → private
+    — pub-use-private-dependencies-in-production (root/dependants/publicPackages/usePrivateDependenciesInProduction)
+      → private
+
+  * Package with name that is used by another package (NameDuplication)
+    — duplicated-name (root/dependants/privatePackages/duplicatedNames/ghi)
+      → root/dependants/privatePackages/duplicatedNames/ghi
+      → root/dependants/privatePackages/duplicatedNames/jkl
+      → root/dependants/publicPackages/duplicatedNames/abc
+      → root/dependants/publicPackages/duplicatedNames/def
+    — duplicated-name (root/dependants/privatePackages/duplicatedNames/jkl)
+      → root/dependants/privatePackages/duplicatedNames/ghi
+      → root/dependants/privatePackages/duplicatedNames/jkl
+      → root/dependants/publicPackages/duplicatedNames/abc
+      → root/dependants/publicPackages/duplicatedNames/def
+    — duplicated-name (root/dependants/publicPackages/duplicatedNames/abc)
+      → root/dependants/privatePackages/duplicatedNames/ghi
+      → root/dependants/privatePackages/duplicatedNames/jkl
+      → root/dependants/publicPackages/duplicatedNames/abc
+      → root/dependants/publicPackages/duplicatedNames/def
+    — duplicated-name (root/dependants/publicPackages/duplicatedNames/def)
+      → root/dependants/privatePackages/duplicatedNames/ghi
+      → root/dependants/privatePackages/duplicatedNames/jkl
+      → root/dependants/publicPackages/duplicatedNames/abc
+      → root/dependants/publicPackages/duplicatedNames/def
+
+  * Package that depends on itself (SelfDependence)
+    — prv-use-itself-as-peer (root/dependants/privatePackages/useItselfAsDependency/asPeer)
+    — prv-use-itself-as-dev (root/dependants/privatePackages/useItselfAsDependency/inDevelopment)
+    — prv-use-itself-as-prod (root/dependants/privatePackages/useItselfAsDependency/inProduction)
+    — pub-use-itself-as-peer (root/dependants/publicPackages/useItselfAsDependency/asPeer)
+    — pub-use-itself-as-dev (root/dependants/publicPackages/useItselfAsDependency/inDevelopment)
+    — pub-use-itself-as-prod (root/dependants/publicPackages/useItselfAsDependency/inProduction)
+
+  * Package depends on invalid dependencies (InvalidDependencies)
+    — use-self-dependence-dependencies (root/dependants/advancedDetails/useSelfDependenceDependencies)
+      → pub-use-itself-as-peer
+      → pub-use-itself-as-dev
+      → pub-use-itself-as-prod
+    — prv-use-duplicated-dependencies (root/dependants/privatePackages/useInvalidDependencies)
+      → duplicated-name
+    — pub-use-invalid-dependencies-as-peer (root/dependants/publicPackages/useInvalidDependenciesAsPeer)
+      → pub-use-private-dependencies-as-peer
+      → pub-use-private-dependencies-in-production
+      → pub-use-private-dependencies-as-peer
+      → pub-use-private-dependencies-in-production
+      → pub-use-invalid-dependencies-in-development
+      → pub-use-invalid-dependencies-in-production
+    — pub-use-invalid-dependencies-in-development (root/dependants/publicPackages/useInvalidDependenciesInDepevelopment)
+      → pub-use-private-dependencies-as-peer
+      → pub-use-private-dependencies-in-production
+      → pub-use-private-dependencies-as-peer
+      → pub-use-private-dependencies-in-production
+      → pub-use-invalid-dependencies-in-production
+    — pub-use-invalid-dependencies-in-production (root/dependants/publicPackages/useInvalidDependenciesInProduction)
+      → pub-use-private-dependencies-as-peer
+      → pub-use-private-dependencies-in-production
+
+
+"
+`;
+
+exports[`show invalid packages when there is none in json format $ validate --jsonOutput . 1`] = `
+"
+error: null
+signal: null
+status: 0
+stderr: ((EMPTY))
+stdout: |+
+
+  {}
+
+
+
+"
+`;
+
+exports[`show invalid packages when there is none in lines of text $ validate . 1`] = `
+"
+error: null
+signal: null
+status: 0
+stderr: ((EMPTY))
+stdout: ((EMPTY))
+
+"
+`;

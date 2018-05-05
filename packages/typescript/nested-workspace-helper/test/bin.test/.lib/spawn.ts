@@ -1,5 +1,5 @@
 import {SpawnSyncOptions} from 'child_process'
-import preloadedNode from 'preloaded-node'
+import preloadedNode from 'preloaded-node.private'
 import {bin} from './data'
 
 export type IOData = Buffer | string

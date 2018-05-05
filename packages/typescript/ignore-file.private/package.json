@@ -2,23 +2,32 @@
   "name": "ignore-file.private",
   "version": "0.0.0",
   "private": true,
+  "license": "MIT",
+  "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksxnodemodules/nodemonorepo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
+  },
   "bin": {
     "ignore-file-manager": "bin/igfileman",
     "igfileman": "bin/igfileman"
   },
   "dependencies": {
     "minimatch": "^3.0.4",
-    "fs-extra": "^5.0.0",
+    "fs-extra": "^6.0.0",
     "yargs": "^11.0.0",
     "chalk": "^2.4.0",
-    "fs-tree-utils": "^0.0.0",
-    "preloaded-node": "^0.0.0",
+    "fs-tree-utils": "^0.0.3",
+    "preloaded-node.private": "^0.0.0",
     "@types/minimatch": "^3.0.3",
     "@types/fs-extra": "^5.0.1",
     "@types/yargs": "^11.0.0",
     "@types/node": "^10.0.0"
   },
-  "devDependencies": {
-    "extra-jest": "*"
+  "engines": {
+    "node": ">= 8.9.0"
   }
 }

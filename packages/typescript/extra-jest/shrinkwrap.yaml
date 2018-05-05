@@ -1,38 +1,34 @@
 dependencies:
-  '@types/fs-extra': 5.0.1
-  '@types/node': 10.0.0
+  '@types/fs-extra': 5.0.2
+  '@types/node': 10.0.1
   '@types/ramda': 0.25.24
-  fs-extra: 5.0.0
+  fs-extra: 6.0.0
   fs-tree-utils: 'link:../fs-tree-utils'
   ramda: 0.25.0
   unique-temp-path: 'link:../unique-temp-path'
 packages:
-  /@types/fs-extra/5.0.1:
+  /@types/fs-extra/5.0.2:
     dependencies:
-      '@types/node': 9.6.2
+      '@types/node': 10.0.1
     dev: false
     resolution:
-      integrity: sha512-h3wnflb+jMTipvbbZnClgA2BexrT4w0GcfoCz5qyxd0IRsbqhLSyesM6mqZTAnhbVmhyTm5tuxfRu9R+8l+lGw==
-  /@types/node/10.0.0:
+      integrity: sha512-Q3FWsbdmkQd1ib11A4XNWQvRD//5KpPoGawA8aB2DR7pWKoW9XQv3+dGxD/Z1eVFze23Okdo27ZQytVFlweKvQ==
+  /@types/node/10.0.1:
     dev: false
     resolution:
-      integrity: sha512-kctoM36XiNZT86a7tPsUje+Q/yl+dqELjtYApi0T5eOQ90Elhu0MI10rmYk44yEP4v1jdDvtjQ9DFtpRtHf2Bw==
-  /@types/node/9.6.2:
-    dev: false
-    resolution:
-      integrity: sha512-UWkRY9X7RQHp5OhhRIIka58/gVVycL1zHZu0OTsT5LI86ABaMOSbUjAl+b0FeDhQcxclrkyft3kW5QWdMRs8wQ==
+      integrity: sha512-HKTs07TC1RJRBd9z0Kf/cy37j2HCbUfcVKS6Xm9orZVcLqZ1JXWe/JTDLw6AwxmLOxV45fDpOMPXyqXU3TfOPQ==
   /@types/ramda/0.25.24:
     dev: false
     resolution:
       integrity: sha512-c0TmWA7d4y9KLJJwL/cLPEfSReSgFQK9BtemcCATT48lMeyD7HG8IfGY8bamSuz/Byx1l+13hZV0PCvHsgMB3w==
-  /fs-extra/5.0.0:
+  /fs-extra/6.0.0:
     dependencies:
       graceful-fs: 4.1.11
       jsonfile: 4.0.0
       universalify: 0.1.1
     dev: false
     resolution:
-      integrity: sha512-66Pm4RYbjzdyeuqudYqhFiNBbCIuI9kgRqLPSHIlXHidW8NIQtVdkM1yeZ4lXwuhbTETv3EUGMNHAAw6hiundQ==
+      integrity: sha512-lk2cUCo8QzbiEWEbt7Cw3m27WMiRG321xsssbcIpfMhpRjrlC08WBOVQqj1/nQYYNnPtyIhP1oqLO3QwT2tPCw==
   /graceful-fs/4.1.11:
     dev: false
     engines:
@@ -60,7 +56,7 @@ specifiers:
   '@types/fs-extra': ^5.0.1
   '@types/node': ^10.0.0
   '@types/ramda': ^0.25.24
-  fs-extra: ^5.0.0
-  fs-tree-utils: ^0.0.0
+  fs-extra: ^6.0.0
+  fs-tree-utils: ^0.0.3
   ramda: ^0.25.0
-  unique-temp-path: ^0.0.0
+  unique-temp-path: ^0.0.3

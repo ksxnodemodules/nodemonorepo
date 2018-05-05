@@ -1,0 +1,243 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`works with default parameters 1`] = `
+"
+node_modules:
+  ignoreda: |
+    {
+      \\"name\\": \\"ignoreda\\",
+      \\"version\\": \\"2.2.2\\"
+    }
+  ignoredb: |
+    {
+      \\"name\\": \\"ignoredb\\",
+      \\"version\\": \\"3.3.3\\"
+    }
+package.json: |
+  {
+    \\"name\\": \\"root\\",
+    \\"version\\": \\"0.0.0\\",
+    \\"private\\": true,
+    \\"workspaces\\": [
+      \\"wrkspc0dept/*\\",
+      \\"wrkspc1dept/*/*\\",
+      \\"wrkspc2dept/*/*/*\\"
+    ],
+    \\"devDependencies\\": {
+      \\"pkg00\\": \\"^0.1.0\\"
+    },
+    \\"extra\\": {
+      \\"dirname\\": \\"root\\",
+      \\"filename\\": \\"root/package.json\\"
+    }
+  }
+wrkspc0dept:
+  pkg00:
+    package.json: |
+      {
+        \\"name\\": \\"pkg00\\",
+        \\"version\\": \\"0.1.2\\",
+        \\"extra\\": {
+          \\"dirname\\": \\"root/wrkspc0dept/pkg00\\",
+          \\"filename\\": \\"root/wrkspc0dept/pkg00/package.json\\"
+        }
+      }
+  pkg01:
+    package.json: |
+      {
+        \\"name\\": \\"pkg01\\",
+        \\"version\\": \\"1.2.3\\",
+        \\"private\\": false,
+        \\"extra\\": {
+          \\"dirname\\": \\"root/wrkspc0dept/pkg01\\",
+          \\"filename\\": \\"root/wrkspc0dept/pkg01/package.json\\"
+        }
+      }
+wrkspc1dept:
+  sub10:
+    pkg100:
+      package.json: |
+        {
+          \\"name\\": \\"pkg100\\",
+          \\"version\\": \\"2.2.5\\",
+          \\"extra\\": {
+            \\"dirname\\": \\"root/wrkspc1dept/sub10/pkg100\\",
+            \\"filename\\": \\"root/wrkspc1dept/sub10/pkg100/package.json\\"
+          }
+        }
+  sub11:
+    pkg110:
+      package.json: |
+        {
+          \\"name\\": \\"pkg110\\",
+          \\"version\\": \\"22.3.5\\",
+          \\"dependencies\\": {
+            \\"pkg01\\": \\"^1.0.0\\",
+            \\"pkg100\\": \\"~2.2.1\\"
+          },
+          \\"extra\\": {
+            \\"dirname\\": \\"root/wrkspc1dept/sub11/pkg110\\",
+            \\"filename\\": \\"root/wrkspc1dept/sub11/pkg110/package.json\\"
+          }
+        }
+    pkg111prv:
+      package.json: |
+        {
+          \\"name\\": \\"pkg111prv\\",
+          \\"private\\": true,
+          \\"version\\": \\"33.22.11\\",
+          \\"dependencies\\": {
+            \\"pkg01\\": \\"*\\"
+          },
+          \\"extra\\": {
+            \\"dirname\\": \\"root/wrkspc1dept/sub11/pkg111prv\\",
+            \\"filename\\": \\"root/wrkspc1dept/sub11/pkg111prv/package.json\\"
+          }
+        }
+wrkspc2dept:
+  sub20:
+    sub200:
+      pkg2000:
+        node_modules:
+          ignored2000a: |
+            {
+              \\"name\\": \\"ignored2000a\\",
+              \\"version\\": \\"1.2.3\\"
+            }
+        package.json: |
+          {
+            \\"name\\": \\"pkg2000\\",
+            \\"version\\": \\"123.456.789\\",
+            \\"devDependencies\\": {
+              \\"pkg111prv\\": \\"33.22.11\\",
+              \\"foreign-foo\\": \\"^1.2.3\\"
+            },
+            \\"extra\\": {
+              \\"dirname\\": \\"root/wrkspc2dept/sub20/sub200/pkg2000\\",
+              \\"filename\\": \\"root/wrkspc2dept/sub20/sub200/pkg2000/package.json\\"
+            }
+          }
+
+"
+`;
+
+exports[`works with specified options 1`] = `
+"
+node_modules:
+  ignoreda: |
+    {
+      \\"name\\": \\"ignoreda\\",
+      \\"version\\": \\"2.2.2\\"
+    }
+  ignoredb: |
+    {
+      \\"name\\": \\"ignoredb\\",
+      \\"version\\": \\"3.3.3\\"
+    }
+package.json: |-
+  {
+      \\"name\\": \\"root\\",
+      \\"version\\": \\"0.0.0\\",
+      \\"private\\": true,
+      \\"workspaces\\": [
+          \\"wrkspc0dept/*\\",
+          \\"wrkspc1dept/*/*\\",
+          \\"wrkspc2dept/*/*/*\\"
+      ],
+      \\"devDependencies\\": {
+          \\"pkg00\\": \\"^0.1.0\\"
+      },
+      \\"extra\\": {
+          \\"dirname\\": \\"root\\",
+          \\"filename\\": \\"root/package.json\\"
+      }
+  }
+wrkspc0dept:
+  pkg00:
+    package.json: |-
+      {
+          \\"name\\": \\"pkg00\\",
+          \\"version\\": \\"0.1.2\\",
+          \\"extra\\": {
+              \\"dirname\\": \\"root/wrkspc0dept/pkg00\\",
+              \\"filename\\": \\"root/wrkspc0dept/pkg00/package.json\\"
+          }
+      }
+  pkg01:
+    package.json: |-
+      {
+          \\"name\\": \\"pkg01\\",
+          \\"version\\": \\"1.2.3\\",
+          \\"private\\": false,
+          \\"extra\\": {
+              \\"dirname\\": \\"root/wrkspc0dept/pkg01\\",
+              \\"filename\\": \\"root/wrkspc0dept/pkg01/package.json\\"
+          }
+      }
+wrkspc1dept:
+  sub10:
+    pkg100:
+      package.json: |-
+        {
+            \\"name\\": \\"pkg100\\",
+            \\"version\\": \\"2.2.5\\",
+            \\"extra\\": {
+                \\"dirname\\": \\"root/wrkspc1dept/sub10/pkg100\\",
+                \\"filename\\": \\"root/wrkspc1dept/sub10/pkg100/package.json\\"
+            }
+        }
+  sub11:
+    pkg110:
+      package.json: |-
+        {
+            \\"name\\": \\"pkg110\\",
+            \\"version\\": \\"22.3.5\\",
+            \\"dependencies\\": {
+                \\"pkg01\\": \\"^1.0.0\\",
+                \\"pkg100\\": \\"~2.2.1\\"
+            },
+            \\"extra\\": {
+                \\"dirname\\": \\"root/wrkspc1dept/sub11/pkg110\\",
+                \\"filename\\": \\"root/wrkspc1dept/sub11/pkg110/package.json\\"
+            }
+        }
+    pkg111prv:
+      package.json: |-
+        {
+            \\"name\\": \\"pkg111prv\\",
+            \\"private\\": true,
+            \\"version\\": \\"33.22.11\\",
+            \\"dependencies\\": {
+                \\"pkg01\\": \\"*\\"
+            },
+            \\"extra\\": {
+                \\"dirname\\": \\"root/wrkspc1dept/sub11/pkg111prv\\",
+                \\"filename\\": \\"root/wrkspc1dept/sub11/pkg111prv/package.json\\"
+            }
+        }
+wrkspc2dept:
+  sub20:
+    sub200:
+      pkg2000:
+        node_modules:
+          ignored2000a: |
+            {
+              \\"name\\": \\"ignored2000a\\",
+              \\"version\\": \\"1.2.3\\"
+            }
+        package.json: |-
+          {
+              \\"name\\": \\"pkg2000\\",
+              \\"version\\": \\"123.456.789\\",
+              \\"devDependencies\\": {
+                  \\"pkg111prv\\": \\"33.22.11\\",
+                  \\"foreign-foo\\": \\"^1.2.3\\"
+              },
+              \\"extra\\": {
+                  \\"dirname\\": \\"root/wrkspc2dept/sub20/sub200/pkg2000\\",
+                  \\"filename\\": \\"root/wrkspc2dept/sub20/sub200/pkg2000/package.json\\"
+              }
+          }
+
+"
+`;

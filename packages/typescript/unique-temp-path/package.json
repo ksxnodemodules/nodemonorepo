@@ -1,13 +1,22 @@
 {
   "name": "unique-temp-path",
-  "version": "0.0.0",
+  "version": "0.0.3",
+  "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
+  "bugs": {
+    "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
+  },
   "main": "index.js",
   "bin": "bin.inrepo.js",
   "dependencies": {
     "@types/node": "^10.0.0"
   },
   "devDependencies": {
-    "preloaded-node": "*",
+    "preloaded-node.private": "*",
     "path-env": "*"
+  },
+  "engines": {
+    "node": ">= 8.9.0"
   }
 }

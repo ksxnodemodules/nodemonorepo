@@ -5,9 +5,9 @@ branches:
 language: node_js
 
 node_js:
-  - 8
-  - 9
-  - 10
+  - '8'
+  - '9'
+  - '10'
 
 env:
   - COVERALLS=true

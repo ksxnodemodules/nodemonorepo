@@ -1,6 +1,12 @@
 {
   "name": "nested-workspace-helper",
-  "version": "0.0.0",
+  "version": "0.0.5",
+  "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
+  "bugs": {
+    "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
+  },
   "main": "index.js",
   "bin": {
     "nested-workspace-helper": "bin/nested-wrkspc",
@@ -9,20 +15,25 @@
   "dependencies": {
     "ramda": "^0.25.0",
     "semver": "^5.5.0",
-    "fs-extra": "^5.0.0",
+    "js-yaml": "^3.11.0",
+    "fs-extra": "^6.0.0",
     "node-fetch": "^2.1.2",
     "yargs": "^11.0.0",
     "chalk": "^2.4.0",
-    "fs-tree-utils": "^0.0.0",
-    "preloaded-node": "^0.0.0",
+    "monorepo-shared-assets": "^0.0.5",
+    "fs-tree-utils": "^0.0.3",
     "@types/ramda": "^0.25.24",
     "@types/semver": "^5.5.0",
+    "@types/js-yaml": "^3.11.1",
     "@types/fs-extra": "^5.0.1",
     "@types/node-fetch": "^1.6.9",
     "@types/yargs": "^11.0.0",
     "@types/node": "^10.0.0"
   },
   "devDependencies": {
-    "extra-jest": "*"
+    "preloaded-node.private": "*"
+  },
+  "engines": {
+    "node": ">= 8.9.0"
   }
 }

@@ -1,0 +1,28 @@
+{
+  "name": "nested-workspace-helper.private",
+  "version": "0.0.0",
+  "description": "Transitional package for nested-workspace-helper with preloaded-node",
+  "private": true,
+  "license": "MIT",
+  "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksxnodemodules/nodemonorepo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
+  },
+  "bin": {
+    "nested-workspace-helper.private": "bin.js",
+    "nested-wrkspc.prv": "bin.js",
+    "nested-workspace-helper": "bin.js",
+    "nested-wrkspc": "bin.js"
+  },
+  "dependencies": {
+    "nested-workspace-helper": "^0.0.5",
+    "preloaded-node.private": "^0.0.0"
+  },
+  "engines": {
+    "node": ">= 8.9.0"
+  }
+}

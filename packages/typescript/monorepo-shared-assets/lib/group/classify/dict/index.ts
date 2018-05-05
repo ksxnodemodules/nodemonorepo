@@ -1,19 +1,22 @@
 import * as types from '../../../.types'
+import isInIter from '../.utils/in-iter'
 
 export namespace classify {
   export function singleDistribute<X> (
     values: Iterable<X>,
-    classifier: singleDistribute.Classifier<X>
+    classifier: singleDistribute.Classifier<X>,
+    duplicationChecker?: isInIter.Comparator<X>
   ): singleDistribute.Classification<X> {
-    const db: types.Dict.StrKey<Set<X>> = {}
+    const db: types.Dict.StrKey<X[]> = {}
 
     for (const item of values) {
       const name = classifier(item)
+      const set = db[name]
 
-      if (name in db) {
-        db[name].add(item)
+      if (set) {
+        isInIter(item, set, duplicationChecker) || set.push(item)
       } else {
-        db[name] = new Set([item])
+        db[name] = [item]
       }
     }
 
@@ -21,10 +24,10 @@ export namespace classify {
   }
 
   export namespace singleDistribute {
-    export type Classification<X> = Readonly<Dict<Classification.Set<X>>>
+    export type Classification<X> = Readonly<Dict<Classification.Array<X>>>
 
     export namespace Classification {
-      export type Set<X> = ReadonlySet<X>
+      export type Array<X> = ReadonlyArray<X>
     }
 
     export type Classifier<X> = (x: X) => string
@@ -32,7 +35,8 @@ export namespace classify {
 
   export function multiDistribute<X> (
     values: Iterable<X>,
-    classifier: multiDistribute.Classifier<X>
+    classifier: multiDistribute.Classifier<X>,
+    duplicationChecker?: isInIter.Comparator<X>
   ): multiDistribute.MultipleDistribution<X> {
     const classified: types.Dict.StrKey<X[]> = {}
     const unclassified: X[] = []
@@ -42,8 +46,10 @@ export namespace classify {
 
       if (classes.length) {
         for (const name of classes) {
-          if (name in classified) {
-            classified[name].push(item)
+          const array = classified[name]
+
+          if (array) {
+            isInIter(item, array, duplicationChecker) || array.push(item)
           } else {
             classified[name] = [item]
           }

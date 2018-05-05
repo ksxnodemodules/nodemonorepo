@@ -1,0 +1,1181 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Delete property $ manifest write . delete version 1`] = `
+"
+error: null
+signal: null
+status: 0
+stderr: ((EMPTY))
+stdout: ((EMPTY))
+
+"
+`;
+
+exports[`Delete property $ manifest write . delete version 2`] = `
+"
+after:
+  all:
+    - root
+    - root/node_modules
+    - root/node_modules/ignoreda
+    - root/node_modules/ignoredb
+    - root/package.json
+    - root/wrkspc0dept
+    - root/wrkspc0dept/pkg00
+    - root/wrkspc0dept/pkg00/package.json
+    - root/wrkspc0dept/pkg01
+    - root/wrkspc0dept/pkg01/package.json
+    - root/wrkspc1dept
+    - root/wrkspc1dept/sub10
+    - root/wrkspc1dept/sub10/pkg100
+    - root/wrkspc1dept/sub10/pkg100/package.json
+    - root/wrkspc1dept/sub11
+    - root/wrkspc1dept/sub11/pkg110
+    - root/wrkspc1dept/sub11/pkg110/package.json
+    - root/wrkspc1dept/sub11/pkg111prv
+    - root/wrkspc1dept/sub11/pkg111prv/package.json
+    - root/wrkspc2dept
+    - root/wrkspc2dept/sub20
+    - root/wrkspc2dept/sub20/sub200
+    - root/wrkspc2dept/sub20/sub200/pkg2000
+    - root/wrkspc2dept/sub20/sub200/pkg2000/node_modules
+    - root/wrkspc2dept/sub20/sub200/pkg2000/node_modules/ignored2000a
+    - root/wrkspc2dept/sub20/sub200/pkg2000/package.json
+  directories:
+    - root
+    - root/node_modules
+    - root/wrkspc0dept
+    - root/wrkspc0dept/pkg00
+    - root/wrkspc0dept/pkg01
+    - root/wrkspc1dept
+    - root/wrkspc1dept/sub10
+    - root/wrkspc1dept/sub10/pkg100
+    - root/wrkspc1dept/sub11
+    - root/wrkspc1dept/sub11/pkg110
+    - root/wrkspc1dept/sub11/pkg111prv
+    - root/wrkspc2dept
+    - root/wrkspc2dept/sub20
+    - root/wrkspc2dept/sub20/sub200
+    - root/wrkspc2dept/sub20/sub200/pkg2000
+    - root/wrkspc2dept/sub20/sub200/pkg2000/node_modules
+  fileContents:
+    root/node_modules/ignoreda: |
+      {
+        \\"name\\": \\"ignoreda\\",
+        \\"version\\": \\"2.2.2\\"
+      }
+    root/node_modules/ignoredb: |
+      {
+        \\"name\\": \\"ignoredb\\",
+        \\"version\\": \\"3.3.3\\"
+      }
+    root/package.json: |
+      {
+        \\"name\\": \\"root\\",
+        \\"private\\": true,
+        \\"workspaces\\": [
+          \\"wrkspc0dept/*\\",
+          \\"wrkspc1dept/*/*\\",
+          \\"wrkspc2dept/*/*/*\\"
+        ],
+        \\"devDependencies\\": {
+          \\"pkg00\\": \\"^0.1.0\\"
+        }
+      }
+    root/wrkspc0dept/pkg00/package.json: |
+      {
+        \\"name\\": \\"pkg00\\"
+      }
+    root/wrkspc0dept/pkg01/package.json: |
+      {
+        \\"name\\": \\"pkg01\\",
+        \\"private\\": false
+      }
+    root/wrkspc1dept/sub10/pkg100/package.json: |
+      {
+        \\"name\\": \\"pkg100\\"
+      }
+    root/wrkspc1dept/sub11/pkg110/package.json: |
+      {
+        \\"name\\": \\"pkg110\\",
+        \\"dependencies\\": {
+          \\"pkg01\\": \\"^1.0.0\\",
+          \\"pkg100\\": \\"~2.2.1\\"
+        }
+      }
+    root/wrkspc1dept/sub11/pkg111prv/package.json: |
+      {
+        \\"name\\": \\"pkg111prv\\",
+        \\"private\\": true,
+        \\"dependencies\\": {
+          \\"pkg01\\": \\"*\\"
+        }
+      }
+    root/wrkspc2dept/sub20/sub200/pkg2000/node_modules/ignored2000a: |
+      {
+        \\"name\\": \\"ignored2000a\\",
+        \\"version\\": \\"1.2.3\\"
+      }
+    root/wrkspc2dept/sub20/sub200/pkg2000/package.json: |
+      {
+        \\"name\\": \\"pkg2000\\",
+        \\"devDependencies\\": {
+          \\"pkg111prv\\": \\"33.22.11\\",
+          \\"foreign-foo\\": \\"^1.2.3\\"
+        }
+      }
+  files:
+    - root/node_modules/ignoreda
+    - root/node_modules/ignoredb
+    - root/package.json
+    - root/wrkspc0dept/pkg00/package.json
+    - root/wrkspc0dept/pkg01/package.json
+    - root/wrkspc1dept/sub10/pkg100/package.json
+    - root/wrkspc1dept/sub11/pkg110/package.json
+    - root/wrkspc1dept/sub11/pkg111prv/package.json
+    - root/wrkspc2dept/sub20/sub200/pkg2000/node_modules/ignored2000a
+    - root/wrkspc2dept/sub20/sub200/pkg2000/package.json
+before:
+  all:
+    - root
+    - root/node_modules
+    - root/node_modules/ignoreda
+    - root/node_modules/ignoredb
+    - root/package.json
+    - root/wrkspc0dept
+    - root/wrkspc0dept/pkg00
+    - root/wrkspc0dept/pkg00/package.json
+    - root/wrkspc0dept/pkg01
+    - root/wrkspc0dept/pkg01/package.json
+    - root/wrkspc1dept
+    - root/wrkspc1dept/sub10
+    - root/wrkspc1dept/sub10/pkg100
+    - root/wrkspc1dept/sub10/pkg100/package.json
+    - root/wrkspc1dept/sub11
+    - root/wrkspc1dept/sub11/pkg110
+    - root/wrkspc1dept/sub11/pkg110/package.json
+    - root/wrkspc1dept/sub11/pkg111prv
+    - root/wrkspc1dept/sub11/pkg111prv/package.json
+    - root/wrkspc2dept
+    - root/wrkspc2dept/sub20
+    - root/wrkspc2dept/sub20/sub200
+    - root/wrkspc2dept/sub20/sub200/pkg2000
+    - root/wrkspc2dept/sub20/sub200/pkg2000/node_modules
+    - root/wrkspc2dept/sub20/sub200/pkg2000/node_modules/ignored2000a
+    - root/wrkspc2dept/sub20/sub200/pkg2000/package.json
+  directories:
+    - root
+    - root/node_modules
+    - root/wrkspc0dept
+    - root/wrkspc0dept/pkg00
+    - root/wrkspc0dept/pkg01
+    - root/wrkspc1dept
+    - root/wrkspc1dept/sub10
+    - root/wrkspc1dept/sub10/pkg100
+    - root/wrkspc1dept/sub11
+    - root/wrkspc1dept/sub11/pkg110
+    - root/wrkspc1dept/sub11/pkg111prv
+    - root/wrkspc2dept
+    - root/wrkspc2dept/sub20
+    - root/wrkspc2dept/sub20/sub200
+    - root/wrkspc2dept/sub20/sub200/pkg2000
+    - root/wrkspc2dept/sub20/sub200/pkg2000/node_modules
+  fileContents:
+    root/node_modules/ignoreda: |
+      {
+        \\"name\\": \\"ignoreda\\",
+        \\"version\\": \\"2.2.2\\"
+      }
+    root/node_modules/ignoredb: |
+      {
+        \\"name\\": \\"ignoredb\\",
+        \\"version\\": \\"3.3.3\\"
+      }
+    root/package.json: |
+      {
+        \\"name\\": \\"root\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"private\\": true,
+        \\"workspaces\\": [
+          \\"wrkspc0dept/*\\",
+          \\"wrkspc1dept/*/*\\",
+          \\"wrkspc2dept/*/*/*\\"
+        ],
+        \\"devDependencies\\": {
+          \\"pkg00\\": \\"^0.1.0\\"
+        }
+      }
+    root/wrkspc0dept/pkg00/package.json: |
+      {
+        \\"name\\": \\"pkg00\\",
+        \\"version\\": \\"0.1.2\\"
+      }
+    root/wrkspc0dept/pkg01/package.json: |
+      {
+        \\"name\\": \\"pkg01\\",
+        \\"version\\": \\"1.2.3\\",
+        \\"private\\": false
+      }
+    root/wrkspc1dept/sub10/pkg100/package.json: |
+      {
+        \\"name\\": \\"pkg100\\",
+        \\"version\\": \\"2.2.5\\"
+      }
+    root/wrkspc1dept/sub11/pkg110/package.json: |
+      {
+        \\"name\\": \\"pkg110\\",
+        \\"version\\": \\"22.3.5\\",
+        \\"dependencies\\": {
+          \\"pkg01\\": \\"^1.0.0\\",
+          \\"pkg100\\": \\"~2.2.1\\"
+        }
+      }
+    root/wrkspc1dept/sub11/pkg111prv/package.json: |
+      {
+        \\"name\\": \\"pkg111prv\\",
+        \\"private\\": true,
+        \\"version\\": \\"33.22.11\\",
+        \\"dependencies\\": {
+          \\"pkg01\\": \\"*\\"
+        }
+      }
+    root/wrkspc2dept/sub20/sub200/pkg2000/node_modules/ignored2000a: |
+      {
+        \\"name\\": \\"ignored2000a\\",
+        \\"version\\": \\"1.2.3\\"
+      }
+    root/wrkspc2dept/sub20/sub200/pkg2000/package.json: |
+      {
+        \\"name\\": \\"pkg2000\\",
+        \\"version\\": \\"123.456.789\\",
+        \\"devDependencies\\": {
+          \\"pkg111prv\\": \\"33.22.11\\",
+          \\"foreign-foo\\": \\"^1.2.3\\"
+        }
+      }
+  files:
+    - root/node_modules/ignoreda
+    - root/node_modules/ignoredb
+    - root/package.json
+    - root/wrkspc0dept/pkg00/package.json
+    - root/wrkspc0dept/pkg01/package.json
+    - root/wrkspc1dept/sub10/pkg100/package.json
+    - root/wrkspc1dept/sub11/pkg110/package.json
+    - root/wrkspc1dept/sub11/pkg111prv/package.json
+    - root/wrkspc2dept/sub20/sub200/pkg2000/node_modules/ignored2000a
+    - root/wrkspc2dept/sub20/sub200/pkg2000/package.json
+
+"
+`;
+
+exports[`Merge property $ manifest write . assign dependencies {foo: bar} 1`] = `
+"
+error: null
+signal: null
+status: 0
+stderr: ((EMPTY))
+stdout: ((EMPTY))
+
+"
+`;
+
+exports[`Merge property $ manifest write . assign dependencies {foo: bar} 2`] = `
+"
+after:
+  all:
+    - root
+    - root/node_modules
+    - root/node_modules/ignoreda
+    - root/node_modules/ignoredb
+    - root/package.json
+    - root/wrkspc0dept
+    - root/wrkspc0dept/pkg00
+    - root/wrkspc0dept/pkg00/package.json
+    - root/wrkspc0dept/pkg01
+    - root/wrkspc0dept/pkg01/package.json
+    - root/wrkspc1dept
+    - root/wrkspc1dept/sub10
+    - root/wrkspc1dept/sub10/pkg100
+    - root/wrkspc1dept/sub10/pkg100/package.json
+    - root/wrkspc1dept/sub11
+    - root/wrkspc1dept/sub11/pkg110
+    - root/wrkspc1dept/sub11/pkg110/package.json
+    - root/wrkspc1dept/sub11/pkg111prv
+    - root/wrkspc1dept/sub11/pkg111prv/package.json
+    - root/wrkspc2dept
+    - root/wrkspc2dept/sub20
+    - root/wrkspc2dept/sub20/sub200
+    - root/wrkspc2dept/sub20/sub200/pkg2000
+    - root/wrkspc2dept/sub20/sub200/pkg2000/node_modules
+    - root/wrkspc2dept/sub20/sub200/pkg2000/node_modules/ignored2000a
+    - root/wrkspc2dept/sub20/sub200/pkg2000/package.json
+  directories:
+    - root
+    - root/node_modules
+    - root/wrkspc0dept
+    - root/wrkspc0dept/pkg00
+    - root/wrkspc0dept/pkg01
+    - root/wrkspc1dept
+    - root/wrkspc1dept/sub10
+    - root/wrkspc1dept/sub10/pkg100
+    - root/wrkspc1dept/sub11
+    - root/wrkspc1dept/sub11/pkg110
+    - root/wrkspc1dept/sub11/pkg111prv
+    - root/wrkspc2dept
+    - root/wrkspc2dept/sub20
+    - root/wrkspc2dept/sub20/sub200
+    - root/wrkspc2dept/sub20/sub200/pkg2000
+    - root/wrkspc2dept/sub20/sub200/pkg2000/node_modules
+  fileContents:
+    root/node_modules/ignoreda: |
+      {
+        \\"name\\": \\"ignoreda\\",
+        \\"version\\": \\"2.2.2\\"
+      }
+    root/node_modules/ignoredb: |
+      {
+        \\"name\\": \\"ignoredb\\",
+        \\"version\\": \\"3.3.3\\"
+      }
+    root/package.json: |
+      {
+        \\"name\\": \\"root\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"private\\": true,
+        \\"workspaces\\": [
+          \\"wrkspc0dept/*\\",
+          \\"wrkspc1dept/*/*\\",
+          \\"wrkspc2dept/*/*/*\\"
+        ],
+        \\"devDependencies\\": {
+          \\"pkg00\\": \\"^0.1.0\\"
+        },
+        \\"dependencies\\": {
+          \\"foo\\": \\"bar\\"
+        }
+      }
+    root/wrkspc0dept/pkg00/package.json: |
+      {
+        \\"name\\": \\"pkg00\\",
+        \\"version\\": \\"0.1.2\\",
+        \\"dependencies\\": {
+          \\"foo\\": \\"bar\\"
+        }
+      }
+    root/wrkspc0dept/pkg01/package.json: |
+      {
+        \\"name\\": \\"pkg01\\",
+        \\"version\\": \\"1.2.3\\",
+        \\"private\\": false,
+        \\"dependencies\\": {
+          \\"foo\\": \\"bar\\"
+        }
+      }
+    root/wrkspc1dept/sub10/pkg100/package.json: |
+      {
+        \\"name\\": \\"pkg100\\",
+        \\"version\\": \\"2.2.5\\",
+        \\"dependencies\\": {
+          \\"foo\\": \\"bar\\"
+        }
+      }
+    root/wrkspc1dept/sub11/pkg110/package.json: |
+      {
+        \\"name\\": \\"pkg110\\",
+        \\"version\\": \\"22.3.5\\",
+        \\"dependencies\\": {
+          \\"foo\\": \\"bar\\"
+        }
+      }
+    root/wrkspc1dept/sub11/pkg111prv/package.json: |
+      {
+        \\"name\\": \\"pkg111prv\\",
+        \\"private\\": true,
+        \\"version\\": \\"33.22.11\\",
+        \\"dependencies\\": {
+          \\"foo\\": \\"bar\\"
+        }
+      }
+    root/wrkspc2dept/sub20/sub200/pkg2000/node_modules/ignored2000a: |
+      {
+        \\"name\\": \\"ignored2000a\\",
+        \\"version\\": \\"1.2.3\\"
+      }
+    root/wrkspc2dept/sub20/sub200/pkg2000/package.json: |
+      {
+        \\"name\\": \\"pkg2000\\",
+        \\"version\\": \\"123.456.789\\",
+        \\"devDependencies\\": {
+          \\"pkg111prv\\": \\"33.22.11\\",
+          \\"foreign-foo\\": \\"^1.2.3\\"
+        },
+        \\"dependencies\\": {
+          \\"foo\\": \\"bar\\"
+        }
+      }
+  files:
+    - root/node_modules/ignoreda
+    - root/node_modules/ignoredb
+    - root/package.json
+    - root/wrkspc0dept/pkg00/package.json
+    - root/wrkspc0dept/pkg01/package.json
+    - root/wrkspc1dept/sub10/pkg100/package.json
+    - root/wrkspc1dept/sub11/pkg110/package.json
+    - root/wrkspc1dept/sub11/pkg111prv/package.json
+    - root/wrkspc2dept/sub20/sub200/pkg2000/node_modules/ignored2000a
+    - root/wrkspc2dept/sub20/sub200/pkg2000/package.json
+before:
+  all:
+    - root
+    - root/node_modules
+    - root/node_modules/ignoreda
+    - root/node_modules/ignoredb
+    - root/package.json
+    - root/wrkspc0dept
+    - root/wrkspc0dept/pkg00
+    - root/wrkspc0dept/pkg00/package.json
+    - root/wrkspc0dept/pkg01
+    - root/wrkspc0dept/pkg01/package.json
+    - root/wrkspc1dept
+    - root/wrkspc1dept/sub10
+    - root/wrkspc1dept/sub10/pkg100
+    - root/wrkspc1dept/sub10/pkg100/package.json
+    - root/wrkspc1dept/sub11
+    - root/wrkspc1dept/sub11/pkg110
+    - root/wrkspc1dept/sub11/pkg110/package.json
+    - root/wrkspc1dept/sub11/pkg111prv
+    - root/wrkspc1dept/sub11/pkg111prv/package.json
+    - root/wrkspc2dept
+    - root/wrkspc2dept/sub20
+    - root/wrkspc2dept/sub20/sub200
+    - root/wrkspc2dept/sub20/sub200/pkg2000
+    - root/wrkspc2dept/sub20/sub200/pkg2000/node_modules
+    - root/wrkspc2dept/sub20/sub200/pkg2000/node_modules/ignored2000a
+    - root/wrkspc2dept/sub20/sub200/pkg2000/package.json
+  directories:
+    - root
+    - root/node_modules
+    - root/wrkspc0dept
+    - root/wrkspc0dept/pkg00
+    - root/wrkspc0dept/pkg01
+    - root/wrkspc1dept
+    - root/wrkspc1dept/sub10
+    - root/wrkspc1dept/sub10/pkg100
+    - root/wrkspc1dept/sub11
+    - root/wrkspc1dept/sub11/pkg110
+    - root/wrkspc1dept/sub11/pkg111prv
+    - root/wrkspc2dept
+    - root/wrkspc2dept/sub20
+    - root/wrkspc2dept/sub20/sub200
+    - root/wrkspc2dept/sub20/sub200/pkg2000
+    - root/wrkspc2dept/sub20/sub200/pkg2000/node_modules
+  fileContents:
+    root/node_modules/ignoreda: |
+      {
+        \\"name\\": \\"ignoreda\\",
+        \\"version\\": \\"2.2.2\\"
+      }
+    root/node_modules/ignoredb: |
+      {
+        \\"name\\": \\"ignoredb\\",
+        \\"version\\": \\"3.3.3\\"
+      }
+    root/package.json: |
+      {
+        \\"name\\": \\"root\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"private\\": true,
+        \\"workspaces\\": [
+          \\"wrkspc0dept/*\\",
+          \\"wrkspc1dept/*/*\\",
+          \\"wrkspc2dept/*/*/*\\"
+        ],
+        \\"devDependencies\\": {
+          \\"pkg00\\": \\"^0.1.0\\"
+        }
+      }
+    root/wrkspc0dept/pkg00/package.json: |
+      {
+        \\"name\\": \\"pkg00\\",
+        \\"version\\": \\"0.1.2\\"
+      }
+    root/wrkspc0dept/pkg01/package.json: |
+      {
+        \\"name\\": \\"pkg01\\",
+        \\"version\\": \\"1.2.3\\",
+        \\"private\\": false
+      }
+    root/wrkspc1dept/sub10/pkg100/package.json: |
+      {
+        \\"name\\": \\"pkg100\\",
+        \\"version\\": \\"2.2.5\\"
+      }
+    root/wrkspc1dept/sub11/pkg110/package.json: |
+      {
+        \\"name\\": \\"pkg110\\",
+        \\"version\\": \\"22.3.5\\",
+        \\"dependencies\\": {
+          \\"pkg01\\": \\"^1.0.0\\",
+          \\"pkg100\\": \\"~2.2.1\\"
+        }
+      }
+    root/wrkspc1dept/sub11/pkg111prv/package.json: |
+      {
+        \\"name\\": \\"pkg111prv\\",
+        \\"private\\": true,
+        \\"version\\": \\"33.22.11\\",
+        \\"dependencies\\": {
+          \\"pkg01\\": \\"*\\"
+        }
+      }
+    root/wrkspc2dept/sub20/sub200/pkg2000/node_modules/ignored2000a: |
+      {
+        \\"name\\": \\"ignored2000a\\",
+        \\"version\\": \\"1.2.3\\"
+      }
+    root/wrkspc2dept/sub20/sub200/pkg2000/package.json: |
+      {
+        \\"name\\": \\"pkg2000\\",
+        \\"version\\": \\"123.456.789\\",
+        \\"devDependencies\\": {
+          \\"pkg111prv\\": \\"33.22.11\\",
+          \\"foreign-foo\\": \\"^1.2.3\\"
+        }
+      }
+  files:
+    - root/node_modules/ignoreda
+    - root/node_modules/ignoredb
+    - root/package.json
+    - root/wrkspc0dept/pkg00/package.json
+    - root/wrkspc0dept/pkg01/package.json
+    - root/wrkspc1dept/sub10/pkg100/package.json
+    - root/wrkspc1dept/sub11/pkg110/package.json
+    - root/wrkspc1dept/sub11/pkg111prv/package.json
+    - root/wrkspc2dept/sub20/sub200/pkg2000/node_modules/ignored2000a
+    - root/wrkspc2dept/sub20/sub200/pkg2000/package.json
+
+"
+`;
+
+exports[`Set property $ manifest write . set abc.def.ghi {hello: world} 1`] = `
+"
+error: null
+signal: null
+status: 0
+stderr: ((EMPTY))
+stdout: ((EMPTY))
+
+"
+`;
+
+exports[`Set property $ manifest write . set abc.def.ghi {hello: world} 2`] = `
+"
+after:
+  all:
+    - root
+    - root/node_modules
+    - root/node_modules/ignoreda
+    - root/node_modules/ignoredb
+    - root/package.json
+    - root/wrkspc0dept
+    - root/wrkspc0dept/pkg00
+    - root/wrkspc0dept/pkg00/package.json
+    - root/wrkspc0dept/pkg01
+    - root/wrkspc0dept/pkg01/package.json
+    - root/wrkspc1dept
+    - root/wrkspc1dept/sub10
+    - root/wrkspc1dept/sub10/pkg100
+    - root/wrkspc1dept/sub10/pkg100/package.json
+    - root/wrkspc1dept/sub11
+    - root/wrkspc1dept/sub11/pkg110
+    - root/wrkspc1dept/sub11/pkg110/package.json
+    - root/wrkspc1dept/sub11/pkg111prv
+    - root/wrkspc1dept/sub11/pkg111prv/package.json
+    - root/wrkspc2dept
+    - root/wrkspc2dept/sub20
+    - root/wrkspc2dept/sub20/sub200
+    - root/wrkspc2dept/sub20/sub200/pkg2000
+    - root/wrkspc2dept/sub20/sub200/pkg2000/node_modules
+    - root/wrkspc2dept/sub20/sub200/pkg2000/node_modules/ignored2000a
+    - root/wrkspc2dept/sub20/sub200/pkg2000/package.json
+  directories:
+    - root
+    - root/node_modules
+    - root/wrkspc0dept
+    - root/wrkspc0dept/pkg00
+    - root/wrkspc0dept/pkg01
+    - root/wrkspc1dept
+    - root/wrkspc1dept/sub10
+    - root/wrkspc1dept/sub10/pkg100
+    - root/wrkspc1dept/sub11
+    - root/wrkspc1dept/sub11/pkg110
+    - root/wrkspc1dept/sub11/pkg111prv
+    - root/wrkspc2dept
+    - root/wrkspc2dept/sub20
+    - root/wrkspc2dept/sub20/sub200
+    - root/wrkspc2dept/sub20/sub200/pkg2000
+    - root/wrkspc2dept/sub20/sub200/pkg2000/node_modules
+  fileContents:
+    root/node_modules/ignoreda: |
+      {
+        \\"name\\": \\"ignoreda\\",
+        \\"version\\": \\"2.2.2\\"
+      }
+    root/node_modules/ignoredb: |
+      {
+        \\"name\\": \\"ignoredb\\",
+        \\"version\\": \\"3.3.3\\"
+      }
+    root/package.json: |
+      {
+        \\"name\\": \\"root\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"private\\": true,
+        \\"workspaces\\": [
+          \\"wrkspc0dept/*\\",
+          \\"wrkspc1dept/*/*\\",
+          \\"wrkspc2dept/*/*/*\\"
+        ],
+        \\"devDependencies\\": {
+          \\"pkg00\\": \\"^0.1.0\\"
+        },
+        \\"abc\\": {
+          \\"def\\": {
+            \\"ghi\\": {
+              \\"hello\\": \\"world\\"
+            }
+          }
+        }
+      }
+    root/wrkspc0dept/pkg00/package.json: |
+      {
+        \\"name\\": \\"pkg00\\",
+        \\"version\\": \\"0.1.2\\",
+        \\"abc\\": {
+          \\"def\\": {
+            \\"ghi\\": {
+              \\"hello\\": \\"world\\"
+            }
+          }
+        }
+      }
+    root/wrkspc0dept/pkg01/package.json: |
+      {
+        \\"name\\": \\"pkg01\\",
+        \\"version\\": \\"1.2.3\\",
+        \\"private\\": false,
+        \\"abc\\": {
+          \\"def\\": {
+            \\"ghi\\": {
+              \\"hello\\": \\"world\\"
+            }
+          }
+        }
+      }
+    root/wrkspc1dept/sub10/pkg100/package.json: |
+      {
+        \\"name\\": \\"pkg100\\",
+        \\"version\\": \\"2.2.5\\",
+        \\"abc\\": {
+          \\"def\\": {
+            \\"ghi\\": {
+              \\"hello\\": \\"world\\"
+            }
+          }
+        }
+      }
+    root/wrkspc1dept/sub11/pkg110/package.json: |
+      {
+        \\"name\\": \\"pkg110\\",
+        \\"version\\": \\"22.3.5\\",
+        \\"dependencies\\": {
+          \\"pkg01\\": \\"^1.0.0\\",
+          \\"pkg100\\": \\"~2.2.1\\"
+        },
+        \\"abc\\": {
+          \\"def\\": {
+            \\"ghi\\": {
+              \\"hello\\": \\"world\\"
+            }
+          }
+        }
+      }
+    root/wrkspc1dept/sub11/pkg111prv/package.json: |
+      {
+        \\"name\\": \\"pkg111prv\\",
+        \\"private\\": true,
+        \\"version\\": \\"33.22.11\\",
+        \\"dependencies\\": {
+          \\"pkg01\\": \\"*\\"
+        },
+        \\"abc\\": {
+          \\"def\\": {
+            \\"ghi\\": {
+              \\"hello\\": \\"world\\"
+            }
+          }
+        }
+      }
+    root/wrkspc2dept/sub20/sub200/pkg2000/node_modules/ignored2000a: |
+      {
+        \\"name\\": \\"ignored2000a\\",
+        \\"version\\": \\"1.2.3\\"
+      }
+    root/wrkspc2dept/sub20/sub200/pkg2000/package.json: |
+      {
+        \\"name\\": \\"pkg2000\\",
+        \\"version\\": \\"123.456.789\\",
+        \\"devDependencies\\": {
+          \\"pkg111prv\\": \\"33.22.11\\",
+          \\"foreign-foo\\": \\"^1.2.3\\"
+        },
+        \\"abc\\": {
+          \\"def\\": {
+            \\"ghi\\": {
+              \\"hello\\": \\"world\\"
+            }
+          }
+        }
+      }
+  files:
+    - root/node_modules/ignoreda
+    - root/node_modules/ignoredb
+    - root/package.json
+    - root/wrkspc0dept/pkg00/package.json
+    - root/wrkspc0dept/pkg01/package.json
+    - root/wrkspc1dept/sub10/pkg100/package.json
+    - root/wrkspc1dept/sub11/pkg110/package.json
+    - root/wrkspc1dept/sub11/pkg111prv/package.json
+    - root/wrkspc2dept/sub20/sub200/pkg2000/node_modules/ignored2000a
+    - root/wrkspc2dept/sub20/sub200/pkg2000/package.json
+before:
+  all:
+    - root
+    - root/node_modules
+    - root/node_modules/ignoreda
+    - root/node_modules/ignoredb
+    - root/package.json
+    - root/wrkspc0dept
+    - root/wrkspc0dept/pkg00
+    - root/wrkspc0dept/pkg00/package.json
+    - root/wrkspc0dept/pkg01
+    - root/wrkspc0dept/pkg01/package.json
+    - root/wrkspc1dept
+    - root/wrkspc1dept/sub10
+    - root/wrkspc1dept/sub10/pkg100
+    - root/wrkspc1dept/sub10/pkg100/package.json
+    - root/wrkspc1dept/sub11
+    - root/wrkspc1dept/sub11/pkg110
+    - root/wrkspc1dept/sub11/pkg110/package.json
+    - root/wrkspc1dept/sub11/pkg111prv
+    - root/wrkspc1dept/sub11/pkg111prv/package.json
+    - root/wrkspc2dept
+    - root/wrkspc2dept/sub20
+    - root/wrkspc2dept/sub20/sub200
+    - root/wrkspc2dept/sub20/sub200/pkg2000
+    - root/wrkspc2dept/sub20/sub200/pkg2000/node_modules
+    - root/wrkspc2dept/sub20/sub200/pkg2000/node_modules/ignored2000a
+    - root/wrkspc2dept/sub20/sub200/pkg2000/package.json
+  directories:
+    - root
+    - root/node_modules
+    - root/wrkspc0dept
+    - root/wrkspc0dept/pkg00
+    - root/wrkspc0dept/pkg01
+    - root/wrkspc1dept
+    - root/wrkspc1dept/sub10
+    - root/wrkspc1dept/sub10/pkg100
+    - root/wrkspc1dept/sub11
+    - root/wrkspc1dept/sub11/pkg110
+    - root/wrkspc1dept/sub11/pkg111prv
+    - root/wrkspc2dept
+    - root/wrkspc2dept/sub20
+    - root/wrkspc2dept/sub20/sub200
+    - root/wrkspc2dept/sub20/sub200/pkg2000
+    - root/wrkspc2dept/sub20/sub200/pkg2000/node_modules
+  fileContents:
+    root/node_modules/ignoreda: |
+      {
+        \\"name\\": \\"ignoreda\\",
+        \\"version\\": \\"2.2.2\\"
+      }
+    root/node_modules/ignoredb: |
+      {
+        \\"name\\": \\"ignoredb\\",
+        \\"version\\": \\"3.3.3\\"
+      }
+    root/package.json: |
+      {
+        \\"name\\": \\"root\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"private\\": true,
+        \\"workspaces\\": [
+          \\"wrkspc0dept/*\\",
+          \\"wrkspc1dept/*/*\\",
+          \\"wrkspc2dept/*/*/*\\"
+        ],
+        \\"devDependencies\\": {
+          \\"pkg00\\": \\"^0.1.0\\"
+        }
+      }
+    root/wrkspc0dept/pkg00/package.json: |
+      {
+        \\"name\\": \\"pkg00\\",
+        \\"version\\": \\"0.1.2\\"
+      }
+    root/wrkspc0dept/pkg01/package.json: |
+      {
+        \\"name\\": \\"pkg01\\",
+        \\"version\\": \\"1.2.3\\",
+        \\"private\\": false
+      }
+    root/wrkspc1dept/sub10/pkg100/package.json: |
+      {
+        \\"name\\": \\"pkg100\\",
+        \\"version\\": \\"2.2.5\\"
+      }
+    root/wrkspc1dept/sub11/pkg110/package.json: |
+      {
+        \\"name\\": \\"pkg110\\",
+        \\"version\\": \\"22.3.5\\",
+        \\"dependencies\\": {
+          \\"pkg01\\": \\"^1.0.0\\",
+          \\"pkg100\\": \\"~2.2.1\\"
+        }
+      }
+    root/wrkspc1dept/sub11/pkg111prv/package.json: |
+      {
+        \\"name\\": \\"pkg111prv\\",
+        \\"private\\": true,
+        \\"version\\": \\"33.22.11\\",
+        \\"dependencies\\": {
+          \\"pkg01\\": \\"*\\"
+        }
+      }
+    root/wrkspc2dept/sub20/sub200/pkg2000/node_modules/ignored2000a: |
+      {
+        \\"name\\": \\"ignored2000a\\",
+        \\"version\\": \\"1.2.3\\"
+      }
+    root/wrkspc2dept/sub20/sub200/pkg2000/package.json: |
+      {
+        \\"name\\": \\"pkg2000\\",
+        \\"version\\": \\"123.456.789\\",
+        \\"devDependencies\\": {
+          \\"pkg111prv\\": \\"33.22.11\\",
+          \\"foreign-foo\\": \\"^1.2.3\\"
+        }
+      }
+  files:
+    - root/node_modules/ignoreda
+    - root/node_modules/ignoredb
+    - root/package.json
+    - root/wrkspc0dept/pkg00/package.json
+    - root/wrkspc0dept/pkg01/package.json
+    - root/wrkspc1dept/sub10/pkg100/package.json
+    - root/wrkspc1dept/sub11/pkg110/package.json
+    - root/wrkspc1dept/sub11/pkg111prv/package.json
+    - root/wrkspc2dept/sub20/sub200/pkg2000/node_modules/ignored2000a
+    - root/wrkspc2dept/sub20/sub200/pkg2000/package.json
+
+"
+`;
+
+exports[`Show help $ manifest write 1`] = `
+"
+error: null
+signal: null
+status: 1
+stderr: |+
+
+  nested-wrkspc manifest write <directory> <action> <propertyPath> [value]
+
+  Positionals:
+    directory     Directory that contains all packages         [string] [required]
+    action        Action to be taken
+                                   [required] [choices: \\"set\\", \\"delete\\", \\"assign\\"]
+    propertyPath  Dot separated property path                  [string] [required]
+    value         Value (in JSON/YAML format) to be used when action is \\"set\\" or
+                  \\"assign\\"                                                [string]
+
+  Options:
+    --version                                 Show version number        [boolean]
+    --help                                    Show help                  [boolean]
+    --propertyPathSeparator, --seperator,     Separator between property names in
+    --sep                                     property path[string] [default: \\".\\"]
+    --indentation, --indent                   Manifest json indentation (number of
+                                              spaces)        [number] [default: 2]
+    --finalNewLine                            How many new line to be added to the
+                                              end of manifest file
+                                                             [number] [default: 1]
+
+  Not enough non-option arguments: got 0, need at least 3
+
+stdout: ((EMPTY))
+
+"
+`;
+
+exports[`Show help $ manifest write 2`] = `
+"
+after:
+  all:
+    - root
+    - root/node_modules
+    - root/node_modules/ignoreda
+    - root/node_modules/ignoredb
+    - root/package.json
+    - root/wrkspc0dept
+    - root/wrkspc0dept/pkg00
+    - root/wrkspc0dept/pkg00/package.json
+    - root/wrkspc0dept/pkg01
+    - root/wrkspc0dept/pkg01/package.json
+    - root/wrkspc1dept
+    - root/wrkspc1dept/sub10
+    - root/wrkspc1dept/sub10/pkg100
+    - root/wrkspc1dept/sub10/pkg100/package.json
+    - root/wrkspc1dept/sub11
+    - root/wrkspc1dept/sub11/pkg110
+    - root/wrkspc1dept/sub11/pkg110/package.json
+    - root/wrkspc1dept/sub11/pkg111prv
+    - root/wrkspc1dept/sub11/pkg111prv/package.json
+    - root/wrkspc2dept
+    - root/wrkspc2dept/sub20
+    - root/wrkspc2dept/sub20/sub200
+    - root/wrkspc2dept/sub20/sub200/pkg2000
+    - root/wrkspc2dept/sub20/sub200/pkg2000/node_modules
+    - root/wrkspc2dept/sub20/sub200/pkg2000/node_modules/ignored2000a
+    - root/wrkspc2dept/sub20/sub200/pkg2000/package.json
+  directories:
+    - root
+    - root/node_modules
+    - root/wrkspc0dept
+    - root/wrkspc0dept/pkg00
+    - root/wrkspc0dept/pkg01
+    - root/wrkspc1dept
+    - root/wrkspc1dept/sub10
+    - root/wrkspc1dept/sub10/pkg100
+    - root/wrkspc1dept/sub11
+    - root/wrkspc1dept/sub11/pkg110
+    - root/wrkspc1dept/sub11/pkg111prv
+    - root/wrkspc2dept
+    - root/wrkspc2dept/sub20
+    - root/wrkspc2dept/sub20/sub200
+    - root/wrkspc2dept/sub20/sub200/pkg2000
+    - root/wrkspc2dept/sub20/sub200/pkg2000/node_modules
+  fileContents:
+    root/node_modules/ignoreda: |
+      {
+        \\"name\\": \\"ignoreda\\",
+        \\"version\\": \\"2.2.2\\"
+      }
+    root/node_modules/ignoredb: |
+      {
+        \\"name\\": \\"ignoredb\\",
+        \\"version\\": \\"3.3.3\\"
+      }
+    root/package.json: |
+      {
+        \\"name\\": \\"root\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"private\\": true,
+        \\"workspaces\\": [
+          \\"wrkspc0dept/*\\",
+          \\"wrkspc1dept/*/*\\",
+          \\"wrkspc2dept/*/*/*\\"
+        ],
+        \\"devDependencies\\": {
+          \\"pkg00\\": \\"^0.1.0\\"
+        }
+      }
+    root/wrkspc0dept/pkg00/package.json: |
+      {
+        \\"name\\": \\"pkg00\\",
+        \\"version\\": \\"0.1.2\\"
+      }
+    root/wrkspc0dept/pkg01/package.json: |
+      {
+        \\"name\\": \\"pkg01\\",
+        \\"version\\": \\"1.2.3\\",
+        \\"private\\": false
+      }
+    root/wrkspc1dept/sub10/pkg100/package.json: |
+      {
+        \\"name\\": \\"pkg100\\",
+        \\"version\\": \\"2.2.5\\"
+      }
+    root/wrkspc1dept/sub11/pkg110/package.json: |
+      {
+        \\"name\\": \\"pkg110\\",
+        \\"version\\": \\"22.3.5\\",
+        \\"dependencies\\": {
+          \\"pkg01\\": \\"^1.0.0\\",
+          \\"pkg100\\": \\"~2.2.1\\"
+        }
+      }
+    root/wrkspc1dept/sub11/pkg111prv/package.json: |
+      {
+        \\"name\\": \\"pkg111prv\\",
+        \\"private\\": true,
+        \\"version\\": \\"33.22.11\\",
+        \\"dependencies\\": {
+          \\"pkg01\\": \\"*\\"
+        }
+      }
+    root/wrkspc2dept/sub20/sub200/pkg2000/node_modules/ignored2000a: |
+      {
+        \\"name\\": \\"ignored2000a\\",
+        \\"version\\": \\"1.2.3\\"
+      }
+    root/wrkspc2dept/sub20/sub200/pkg2000/package.json: |
+      {
+        \\"name\\": \\"pkg2000\\",
+        \\"version\\": \\"123.456.789\\",
+        \\"devDependencies\\": {
+          \\"pkg111prv\\": \\"33.22.11\\",
+          \\"foreign-foo\\": \\"^1.2.3\\"
+        }
+      }
+  files:
+    - root/node_modules/ignoreda
+    - root/node_modules/ignoredb
+    - root/package.json
+    - root/wrkspc0dept/pkg00/package.json
+    - root/wrkspc0dept/pkg01/package.json
+    - root/wrkspc1dept/sub10/pkg100/package.json
+    - root/wrkspc1dept/sub11/pkg110/package.json
+    - root/wrkspc1dept/sub11/pkg111prv/package.json
+    - root/wrkspc2dept/sub20/sub200/pkg2000/node_modules/ignored2000a
+    - root/wrkspc2dept/sub20/sub200/pkg2000/package.json
+before:
+  all:
+    - root
+    - root/node_modules
+    - root/node_modules/ignoreda
+    - root/node_modules/ignoredb
+    - root/package.json
+    - root/wrkspc0dept
+    - root/wrkspc0dept/pkg00
+    - root/wrkspc0dept/pkg00/package.json
+    - root/wrkspc0dept/pkg01
+    - root/wrkspc0dept/pkg01/package.json
+    - root/wrkspc1dept
+    - root/wrkspc1dept/sub10
+    - root/wrkspc1dept/sub10/pkg100
+    - root/wrkspc1dept/sub10/pkg100/package.json
+    - root/wrkspc1dept/sub11
+    - root/wrkspc1dept/sub11/pkg110
+    - root/wrkspc1dept/sub11/pkg110/package.json
+    - root/wrkspc1dept/sub11/pkg111prv
+    - root/wrkspc1dept/sub11/pkg111prv/package.json
+    - root/wrkspc2dept
+    - root/wrkspc2dept/sub20
+    - root/wrkspc2dept/sub20/sub200
+    - root/wrkspc2dept/sub20/sub200/pkg2000
+    - root/wrkspc2dept/sub20/sub200/pkg2000/node_modules
+    - root/wrkspc2dept/sub20/sub200/pkg2000/node_modules/ignored2000a
+    - root/wrkspc2dept/sub20/sub200/pkg2000/package.json
+  directories:
+    - root
+    - root/node_modules
+    - root/wrkspc0dept
+    - root/wrkspc0dept/pkg00
+    - root/wrkspc0dept/pkg01
+    - root/wrkspc1dept
+    - root/wrkspc1dept/sub10
+    - root/wrkspc1dept/sub10/pkg100
+    - root/wrkspc1dept/sub11
+    - root/wrkspc1dept/sub11/pkg110
+    - root/wrkspc1dept/sub11/pkg111prv
+    - root/wrkspc2dept
+    - root/wrkspc2dept/sub20
+    - root/wrkspc2dept/sub20/sub200
+    - root/wrkspc2dept/sub20/sub200/pkg2000
+    - root/wrkspc2dept/sub20/sub200/pkg2000/node_modules
+  fileContents:
+    root/node_modules/ignoreda: |
+      {
+        \\"name\\": \\"ignoreda\\",
+        \\"version\\": \\"2.2.2\\"
+      }
+    root/node_modules/ignoredb: |
+      {
+        \\"name\\": \\"ignoredb\\",
+        \\"version\\": \\"3.3.3\\"
+      }
+    root/package.json: |
+      {
+        \\"name\\": \\"root\\",
+        \\"version\\": \\"0.0.0\\",
+        \\"private\\": true,
+        \\"workspaces\\": [
+          \\"wrkspc0dept/*\\",
+          \\"wrkspc1dept/*/*\\",
+          \\"wrkspc2dept/*/*/*\\"
+        ],
+        \\"devDependencies\\": {
+          \\"pkg00\\": \\"^0.1.0\\"
+        }
+      }
+    root/wrkspc0dept/pkg00/package.json: |
+      {
+        \\"name\\": \\"pkg00\\",
+        \\"version\\": \\"0.1.2\\"
+      }
+    root/wrkspc0dept/pkg01/package.json: |
+      {
+        \\"name\\": \\"pkg01\\",
+        \\"version\\": \\"1.2.3\\",
+        \\"private\\": false
+      }
+    root/wrkspc1dept/sub10/pkg100/package.json: |
+      {
+        \\"name\\": \\"pkg100\\",
+        \\"version\\": \\"2.2.5\\"
+      }
+    root/wrkspc1dept/sub11/pkg110/package.json: |
+      {
+        \\"name\\": \\"pkg110\\",
+        \\"version\\": \\"22.3.5\\",
+        \\"dependencies\\": {
+          \\"pkg01\\": \\"^1.0.0\\",
+          \\"pkg100\\": \\"~2.2.1\\"
+        }
+      }
+    root/wrkspc1dept/sub11/pkg111prv/package.json: |
+      {
+        \\"name\\": \\"pkg111prv\\",
+        \\"private\\": true,
+        \\"version\\": \\"33.22.11\\",
+        \\"dependencies\\": {
+          \\"pkg01\\": \\"*\\"
+        }
+      }
+    root/wrkspc2dept/sub20/sub200/pkg2000/node_modules/ignored2000a: |
+      {
+        \\"name\\": \\"ignored2000a\\",
+        \\"version\\": \\"1.2.3\\"
+      }
+    root/wrkspc2dept/sub20/sub200/pkg2000/package.json: |
+      {
+        \\"name\\": \\"pkg2000\\",
+        \\"version\\": \\"123.456.789\\",
+        \\"devDependencies\\": {
+          \\"pkg111prv\\": \\"33.22.11\\",
+          \\"foreign-foo\\": \\"^1.2.3\\"
+        }
+      }
+  files:
+    - root/node_modules/ignoreda
+    - root/node_modules/ignoredb
+    - root/package.json
+    - root/wrkspc0dept/pkg00/package.json
+    - root/wrkspc0dept/pkg01/package.json
+    - root/wrkspc1dept/sub10/pkg100/package.json
+    - root/wrkspc1dept/sub11/pkg110/package.json
+    - root/wrkspc1dept/sub11/pkg111prv/package.json
+    - root/wrkspc2dept/sub20/sub200/pkg2000/node_modules/ignored2000a
+    - root/wrkspc2dept/sub20/sub200/pkg2000/package.json
+
+"
+`;

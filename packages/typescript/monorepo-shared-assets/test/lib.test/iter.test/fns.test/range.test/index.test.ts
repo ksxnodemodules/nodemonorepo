@@ -1,4 +1,5 @@
-import range from '../../../../../lib/iter/fns/range'
+import {iter} from '../../../../../index'
+const {range} = iter.fns
 
 type Iter = Iterable<number>
 

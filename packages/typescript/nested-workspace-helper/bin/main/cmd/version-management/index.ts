@@ -12,12 +12,9 @@ function builder (yargs: Argv): Argv {
     .demandCommand()
 }
 
-const main: CommandModule = {
+export default {
   command: 'version-management <cmd> [args]',
   aliases: 'verman',
   describe: 'Manage internal package versions',
-  builder,
-  handler () {}
-}
-
-export default main
+  builder
+} as CommandModule

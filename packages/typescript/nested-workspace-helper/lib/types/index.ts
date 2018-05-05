@@ -10,6 +10,25 @@ export namespace Basic {
 }
 
 /**
+ * Functions that take `X` and return `Y`
+ */
+export type Transformer<X, Y> = (x: X) => Y
+
+export namespace Transformer {
+  /**
+   * Functions that take `Package.ListItem` and return `Y`
+   */
+  export type FromListItem<Y> = Transformer<Package.ListItem, Y>
+
+  export namespace FromListItem {
+    /**
+     * Functions that take `Package.ListItem` and return `Package.Manifest`
+     */
+    export type ToManifest = FromListItem<Package.Manifest>
+  }
+}
+
+/**
  * Basic types for packages
  */
 export namespace Package {
@@ -32,6 +51,27 @@ export namespace Package {
     readonly devDependencies?: Dict
     readonly peerDependencies?: Dict
     readonly [_: string]: any
+  }
+
+  export namespace Manifest {
+    export namespace Writer {
+      /**
+       * Options to be passed to `writePackageManifest`/`writePackageManifest.write`
+       */
+      export interface Options {
+        /**
+         * Indentation of `package.json`
+         * - As number, it is number of spaces per indentation unit
+         * - As string, it is literally indentation unit
+         */
+        readonly indentation?: string | number
+
+        /**
+         * How many final new line to be inserted? Default is 1
+         */
+        readonly finalNewLine?: number
+      }
+    }
   }
 
   /**
@@ -208,13 +248,50 @@ export namespace InvalidPackage {
   export namespace Reason {
     export abstract class Base {
       /**
+       * Information accessible from classes themselve
+       */
+      static readonly description: Base.Description
+
+      /**
+       * Name of reason
+       *   - Is the name of class when not compressed
+       *   - More reliant than class names
+       */
+      readonly name: string
+
+      /**
        * Helpful description that can be use as error message
        */
-      abstract readonly description: string
+      readonly message: string
+
+      get info () {
+        return (this.constructor as typeof Base).description
+      }
+
+      constructor () {
+        const {description} = this.constructor as typeof Base
+        this.name = description.name
+        this.message = description.message
+      }
+    }
+
+    export namespace Base {
+      export class Description {
+        readonly name: string
+        readonly message: string
+
+        constructor (name: string, message: string) {
+          this.name = name
+          this.message = message
+        }
+      }
     }
 
     export class InvalidDependencies extends Base {
-      readonly description = 'Package depends on invalid dependencies'
+      static readonly description = new Base.Description(
+        'InvalidDependencies',
+        'Package depends on invalid dependencies'
+      )
 
       /**
        * List of invalid dependecies that the package depended on
@@ -235,7 +312,10 @@ export namespace InvalidPackage {
     }
 
     export class PrivateDependencies extends Base {
-      readonly description = 'Public package depends on non-dev private dependencies'
+      static readonly description = new Base.Description(
+        'PrivateDependencies',
+        'Public package depends on non-dev private dependencies'
+      )
 
       /**
        * List of private dependencies that this package depended on as prod or peer
@@ -256,7 +336,10 @@ export namespace InvalidPackage {
     }
 
     export class NameDuplication extends Base {
-      readonly description = 'Package with name that is used by another package'
+      static readonly description = new Base.Description(
+        'NameDuplication',
+        'Package with name that is used by another package'
+      )
 
       /**
        * List of packages that used the name
@@ -274,7 +357,10 @@ export namespace InvalidPackage {
     }
 
     export class SelfDependence extends Base {
-      readonly description = 'Package that depends on itself'
+      static readonly description = new Base.Description(
+        'SelfDependence',
+        'Package that depends on itself'
+      )
     }
   }
 }

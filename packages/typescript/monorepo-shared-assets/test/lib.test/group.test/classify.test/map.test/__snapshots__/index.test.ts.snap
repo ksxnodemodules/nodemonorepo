@@ -1,6 +1,270 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`multiple distribution in advanced use 1`] = `
+exports[`multiple distribution in basic use 1`] = `
+Object {
+  "classified": Map {
+    "x2" => Set {
+      0,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+    },
+    "x3" => Set {
+      0,
+      6,
+      9,
+      12,
+      15,
+    },
+    "x4" => Set {
+      0,
+      8,
+      12,
+    },
+    "x5" => Set {
+      0,
+      10,
+      15,
+    },
+    "x6" => Set {
+      0,
+      12,
+    },
+    "x7" => Set {
+      0,
+      14,
+    },
+    "x8" => Set {
+      0,
+    },
+    "x9" => Set {
+      0,
+    },
+    "x10" => Set {
+      0,
+    },
+    "x11" => Set {
+      0,
+    },
+    "x12" => Set {
+      0,
+    },
+    "x13" => Set {
+      0,
+    },
+    "x14" => Set {
+      0,
+    },
+    "x15" => Set {
+      0,
+    },
+  },
+  "unclassified": Set {
+    1,
+    2,
+    3,
+    5,
+    7,
+    11,
+    13,
+  },
+}
+`;
+
+exports[`multiple distribution with specified duplicationChecker 1`] = `
+Object {
+  "classified": Map {
+    "x2" => Set {
+      ValueCarrier {
+        "value": 0,
+      },
+      ValueCarrier {
+        "value": 4,
+      },
+      ValueCarrier {
+        "value": 6,
+      },
+      ValueCarrier {
+        "value": 8,
+      },
+      ValueCarrier {
+        "value": 10,
+      },
+      ValueCarrier {
+        "value": 12,
+      },
+      ValueCarrier {
+        "value": 14,
+      },
+    },
+    "x3" => Set {
+      ValueCarrier {
+        "value": 0,
+      },
+      ValueCarrier {
+        "value": 6,
+      },
+      ValueCarrier {
+        "value": 9,
+      },
+      ValueCarrier {
+        "value": 12,
+      },
+      ValueCarrier {
+        "value": 15,
+      },
+    },
+    "x4" => Set {
+      ValueCarrier {
+        "value": 0,
+      },
+      ValueCarrier {
+        "value": 8,
+      },
+      ValueCarrier {
+        "value": 12,
+      },
+    },
+    "x5" => Set {
+      ValueCarrier {
+        "value": 0,
+      },
+      ValueCarrier {
+        "value": 10,
+      },
+      ValueCarrier {
+        "value": 15,
+      },
+    },
+    "x6" => Set {
+      ValueCarrier {
+        "value": 0,
+      },
+      ValueCarrier {
+        "value": 12,
+      },
+    },
+    "x7" => Set {
+      ValueCarrier {
+        "value": 0,
+      },
+      ValueCarrier {
+        "value": 14,
+      },
+    },
+    "x8" => Set {
+      ValueCarrier {
+        "value": 0,
+      },
+    },
+    "x9" => Set {
+      ValueCarrier {
+        "value": 0,
+      },
+    },
+    "x10" => Set {
+      ValueCarrier {
+        "value": 0,
+      },
+    },
+    "x11" => Set {
+      ValueCarrier {
+        "value": 0,
+      },
+    },
+    "x12" => Set {
+      ValueCarrier {
+        "value": 0,
+      },
+    },
+    "x13" => Set {
+      ValueCarrier {
+        "value": 0,
+      },
+    },
+    "x14" => Set {
+      ValueCarrier {
+        "value": 0,
+      },
+    },
+    "x15" => Set {
+      ValueCarrier {
+        "value": 0,
+      },
+    },
+  },
+  "unclassified": Set {
+    ValueCarrier {
+      "value": 1,
+    },
+    ValueCarrier {
+      "value": 2,
+    },
+    ValueCarrier {
+      "value": 3,
+    },
+    ValueCarrier {
+      "value": 5,
+    },
+    ValueCarrier {
+      "value": 7,
+    },
+    ValueCarrier {
+      "value": 11,
+    },
+    ValueCarrier {
+      "value": 13,
+    },
+    ValueCarrier {
+      "value": 1,
+    },
+    ValueCarrier {
+      "value": 2,
+    },
+    ValueCarrier {
+      "value": 3,
+    },
+    ValueCarrier {
+      "value": 5,
+    },
+    ValueCarrier {
+      "value": 7,
+    },
+    ValueCarrier {
+      "value": 11,
+    },
+    ValueCarrier {
+      "value": 13,
+    },
+    ValueCarrier {
+      "value": 1,
+    },
+    ValueCarrier {
+      "value": 2,
+    },
+    ValueCarrier {
+      "value": 3,
+    },
+    ValueCarrier {
+      "value": 5,
+    },
+    ValueCarrier {
+      "value": 7,
+    },
+    ValueCarrier {
+      "value": 11,
+    },
+    ValueCarrier {
+      "value": 13,
+    },
+  },
+}
+`;
+
+exports[`multiple distribution with specified identifier 1`] = `
 Object {
   "classified": Map {
     Multiple {
@@ -102,81 +366,97 @@ Object {
 }
 `;
 
-exports[`multiple distribution in basic use 1`] = `
-Object {
-  "classified": Map {
-    "x2" => Set {
-      0,
-      4,
-      6,
-      8,
-      10,
-      12,
-      14,
-    },
-    "x3" => Set {
-      0,
-      6,
-      9,
-      12,
-      15,
-    },
-    "x4" => Set {
-      0,
-      8,
-      12,
-    },
-    "x5" => Set {
-      0,
-      10,
-      15,
-    },
-    "x6" => Set {
-      0,
-      12,
-    },
-    "x7" => Set {
-      0,
-      14,
-    },
-    "x8" => Set {
-      0,
-    },
-    "x9" => Set {
-      0,
-    },
-    "x10" => Set {
-      0,
-    },
-    "x11" => Set {
-      0,
-    },
-    "x12" => Set {
-      0,
-    },
-    "x13" => Set {
-      0,
-    },
-    "x14" => Set {
-      0,
-    },
-    "x15" => Set {
-      0,
-    },
+exports[`single distribution in basic use 1`] = `
+Map {
+  "Ring(4, 0)" => Set {
+    0,
+    4,
+    8,
+    12,
   },
-  "unclassified": Set {
+  "Ring(4, 1)" => Set {
     1,
-    2,
-    3,
     5,
+    9,
+    13,
+  },
+  "Ring(4, 2)" => Set {
+    2,
+    6,
+    10,
+    14,
+  },
+  "Ring(4, 3)" => Set {
+    3,
     7,
     11,
-    13,
+    15,
   },
 }
 `;
 
-exports[`single distribution in advanced use 1`] = `
+exports[`single distribution with specified duplicationChecker 1`] = `
+Map {
+  "Ring(4, 0)" => Set {
+    ValueCarrier {
+      "value": 0,
+    },
+    ValueCarrier {
+      "value": 4,
+    },
+    ValueCarrier {
+      "value": 8,
+    },
+    ValueCarrier {
+      "value": 12,
+    },
+  },
+  "Ring(4, 1)" => Set {
+    ValueCarrier {
+      "value": 1,
+    },
+    ValueCarrier {
+      "value": 5,
+    },
+    ValueCarrier {
+      "value": 9,
+    },
+    ValueCarrier {
+      "value": 13,
+    },
+  },
+  "Ring(4, 2)" => Set {
+    ValueCarrier {
+      "value": 2,
+    },
+    ValueCarrier {
+      "value": 6,
+    },
+    ValueCarrier {
+      "value": 10,
+    },
+    ValueCarrier {
+      "value": 14,
+    },
+  },
+  "Ring(4, 3)" => Set {
+    ValueCarrier {
+      "value": 3,
+    },
+    ValueCarrier {
+      "value": 7,
+    },
+    ValueCarrier {
+      "value": 11,
+    },
+    ValueCarrier {
+      "value": 15,
+    },
+  },
+}
+`;
+
+exports[`single distribution with specified identifier 1`] = `
 Map {
   RingOf4 {
     "shift": 0,
@@ -205,35 +485,6 @@ Map {
   RingOf4 {
     "shift": 3,
   } => Set {
-    3,
-    7,
-    11,
-    15,
-  },
-}
-`;
-
-exports[`single distribution in basic use 1`] = `
-Map {
-  "Ring(4, 0)" => Set {
-    0,
-    4,
-    8,
-    12,
-  },
-  "Ring(4, 1)" => Set {
-    1,
-    5,
-    9,
-    13,
-  },
-  "Ring(4, 2)" => Set {
-    2,
-    6,
-    10,
-    14,
-  },
-  "Ring(4, 3)" => Set {
     3,
     7,
     11,

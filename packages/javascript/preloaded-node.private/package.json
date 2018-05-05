@@ -1,0 +1,27 @@
+{
+  "name": "preloaded-node.private",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksxnodemodules/nodemonorepo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
+  },
+  "bin": {
+    "preloaded-node.private": "bin.js",
+    "preloaded-node": "bin.js"
+  },
+  "index": "index.js",
+  "dependencies": {
+    "ts-node": "^6.0.0",
+    "typescript": "^2.8.3",
+    "@types/node": "^10.0.0"
+  },
+  "engines": {
+    "node": ">= 8.9.0"
+  }
+}
