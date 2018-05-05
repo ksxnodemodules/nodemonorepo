@@ -3,6 +3,7 @@ dependencies:
   '@types/node': 10.0.1
   json5: 1.0.1
   ts-node: 6.0.0
+  tsconfig.private: 'link:../../typescript/tsconfig.private'
   typescript: 2.8.3
 packages:
   /@types/json5/0.0.29:
