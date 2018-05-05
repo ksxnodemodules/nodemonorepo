@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+Array [
+  Array [
+    Result {
+      "signal": null,
+      "status": 0,
+      "stderr": "",
+      "stdout": "seg0 no0",
+    },
+    Result {
+      "signal": null,
+      "status": 0,
+      "stderr": "",
+      "stdout": "seg0 no1",
+    },
+    Result {
+      "signal": null,
+      "status": 0,
+      "stderr": "",
+      "stdout": "seg0 no2",
+    },
+    Result {
+      "signal": null,
+      "status": 0,
+      "stderr": "",
+      "stdout": "seg0 no3",
+    },
+  ],
+  Array [
+    Result {
+      "signal": null,
+      "status": 0,
+      "stderr": "",
+      "stdout": "seg1 no0",
+    },
+    Result {
+      "signal": null,
+      "status": 0,
+      "stderr": "",
+      "stdout": "seg1 no1",
+    },
+    Result {
+      "signal": null,
+      "status": 0,
+      "stderr": "",
+      "stdout": "seg1 no2",
+    },
+    Result {
+      "signal": null,
+      "status": 0,
+      "stderr": "",
+      "stdout": "seg1 no3",
+    },
+  ],
+  Array [
+    Result {
+      "signal": null,
+      "status": 0,
+      "stderr": "",
+      "stdout": "seg2 no0",
+    },
+    Result {
+      "signal": null,
+      "status": 0,
+      "stderr": "",
+      "stdout": "seg2 no1",
+    },
+    Result {
+      "signal": null,
+      "status": 0,
+      "stderr": "",
+      "stdout": "seg2 no2",
+    },
+    Result {
+      "signal": null,
+      "status": 0,
+      "stderr": "",
+      "stdout": "seg2 no3",
+    },
+  ],
+  Array [
+    Result {
+      "signal": null,
+      "status": 0,
+      "stderr": "",
+      "stdout": "seg3 no0",
+    },
+    Result {
+      "signal": null,
+      "status": 0,
+      "stderr": "",
+      "stdout": "seg3 no1",
+    },
+  ],
+]
+`;
