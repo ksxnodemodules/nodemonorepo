@@ -20,7 +20,7 @@
     "restricted"
   ],
   "dependencies": {
-    "restricted-concurrent-actions": "^0.0.1",
+    "restricted-concurrent-actions": "^0.0.2",
     "@types/node": "^10.0.4"
   }
 }
