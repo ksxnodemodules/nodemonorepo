@@ -1,3 +1,8 @@
+/**
+ * NOTES:
+ *  Although this file's extension is json5, it must follow jsonc syntax (tsc only read those)
+ */
+
 {
   "compilerOptions": {
     /* Basic Options */
