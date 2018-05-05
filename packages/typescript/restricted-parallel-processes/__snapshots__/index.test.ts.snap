@@ -193,3 +193,92 @@ Array [
   ],
 ]
 `;
+
+exports[`calls oncreate 1`] = `
+Array [
+  Object {
+    "command": "echo seg0 no0",
+    "signal": null,
+    "status": 0,
+    "stdout": "seg0 no0",
+  },
+  Object {
+    "command": "echo seg0 no1",
+    "signal": null,
+    "status": 0,
+    "stdout": "seg0 no1",
+  },
+  Object {
+    "command": "echo seg0 no2",
+    "signal": null,
+    "status": 0,
+    "stdout": "seg0 no2",
+  },
+  Object {
+    "command": "echo seg0 no3",
+    "signal": null,
+    "status": 0,
+    "stdout": "seg0 no3",
+  },
+  Object {
+    "command": "echo seg1 no0",
+    "signal": null,
+    "status": 0,
+    "stdout": "seg1 no0",
+  },
+  Object {
+    "command": "echo seg1 no1",
+    "signal": null,
+    "status": 0,
+    "stdout": "seg1 no1",
+  },
+  Object {
+    "command": "echo seg1 no2",
+    "signal": null,
+    "status": 0,
+    "stdout": "seg1 no2",
+  },
+  Object {
+    "command": "echo seg1 no3",
+    "signal": null,
+    "status": 0,
+    "stdout": "seg1 no3",
+  },
+  Object {
+    "command": "echo seg2 no0",
+    "signal": null,
+    "status": 0,
+    "stdout": "seg2 no0",
+  },
+  Object {
+    "command": "echo seg2 no1",
+    "signal": null,
+    "status": 0,
+    "stdout": "seg2 no1",
+  },
+  Object {
+    "command": "echo seg2 no2",
+    "signal": null,
+    "status": 0,
+    "stdout": "seg2 no2",
+  },
+  Object {
+    "command": "echo seg2 no3",
+    "signal": null,
+    "status": 0,
+    "stdout": "seg2 no3",
+  },
+  Object {
+    "command": "echo seg3 no0",
+    "signal": null,
+    "status": 0,
+    "stdout": "seg3 no0",
+  },
+  Object {
+    "command": "echo seg3 no1",
+    "signal": null,
+    "status": 0,
+    "stdout": "seg3 no1",
+  },
+]
+`;

@@ -33,6 +33,46 @@ it('array matches snapshot', async () => {
   expect(sample).toMatchSnapshot()
 })
 
+it('calls oncreate', async () => {
+  const allEventHandlers = Array<any>()
+  const allCommandOutputs = Array<CommandOutput>()
+
+  interface CommandOutput {
+    readonly command: string
+    readonly stdout: string
+    readonly status: number
+    readonly signal: string | null
+  }
+
+  const oncreate: subject.ObjectParams.CreationEventHandler = event => {
+    allEventHandlers.push(event.params.oncreate)
+
+    let stdout = ''
+
+    event.process.stdout.on('data', chunk => {
+      stdout += chunk
+    })
+
+    event.process.on('close', (status, signal) => {
+      allCommandOutputs.push({
+        command: [event.params.command, ...event.params.argv || []].join(' '),
+        stdout: stdout.trim(),
+        status,
+        signal
+      })
+    })
+  }
+
+  const objparams = params
+    .map(subject.getObjectParam)
+    .map(x => ({...x, oncreate}))
+
+  await subject.asArray(objparams, 4)
+
+  expect(allEventHandlers).toEqual(allEventHandlers.map(() => oncreate))
+  expect(allCommandOutputs.sort((a, b) => a.command > b.command ? 1 : -1)).toMatchSnapshot()
+})
+
 function getStringFromChunks (chunks: subject.ResultItem.DataChunkList): string {
   return chunks.map(x => String(x)).join('').trim()
 }
