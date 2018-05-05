@@ -1,23 +1,34 @@
 import subject from './index'
 
-it('matches snapshot', async () => {
-  const params = [
-    'echo seg0 no0',
-    'echo seg0 no1',
-    'echo seg0 no2',
-    'echo seg0 no3',
-    'echo seg1 no0',
-    'echo seg1 no1',
-    'echo seg1 no2',
-    'echo seg1 no3',
-    'echo seg2 no0',
-    'echo seg2 no1',
-    'echo seg2 no2',
-    'echo seg2 no3',
-    'echo seg3 no0', // remaining
-    'echo seg3 no1'
-  ]
+const params = [
+  'echo seg0 no0',
+  'echo seg0 no1',
+  'echo seg0 no2',
+  'echo seg0 no3',
+  'echo seg1 no0',
+  'echo seg1 no1',
+  'echo seg1 no2',
+  'echo seg1 no3',
+  'echo seg2 no0',
+  'echo seg2 no1',
+  'echo seg2 no2',
+  'echo seg2 no3',
+  'echo seg3 no0', // remaining
+  'echo seg3 no1'
+]
 
+it('async iterator matches snapshot', async () => {
+  const list = Array<ReadonlyArray<subject.ResultItem>>()
+
+  for await (const item of subject(params, 4)) {
+    list.push(item)
+  }
+
+  const sample = sortSegment(list)
+  expect(sample).toMatchSnapshot()
+})
+
+it('array matches snapshot', async () => {
   const sample = sortSegment(await subject.asArray(params, 4))
   expect(sample).toMatchSnapshot()
 })
