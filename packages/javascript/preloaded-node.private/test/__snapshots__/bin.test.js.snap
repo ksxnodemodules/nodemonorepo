@@ -7,7 +7,7 @@ signal: null
 status: 123
 stderr: (Empty)
 stdout: |
-  { TypeScript: 'Hello World !!' }
+  { JSON5: { hello: 'world' }, TypeScript: 'Hello World !!' }
 
 "
 `;

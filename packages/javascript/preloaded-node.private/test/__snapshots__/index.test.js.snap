@@ -5,7 +5,7 @@ exports[`spawn function works 1`] = `
 status: 123
 stderr: ''
 stdout: |
-  { TypeScript: 'Hello World !!' }
+  { JSON5: { hello: 'world' }, TypeScript: 'Hello World !!' }
 
 "
 `;
@@ -17,7 +17,7 @@ signal: null
 status: 123
 stderr: ''
 stdout: |
-  { TypeScript: 'Hello World !!' }
+  { JSON5: { hello: 'world' }, TypeScript: 'Hello World !!' }
 
 "
 `;
