@@ -61,7 +61,31 @@ export namespace spawn {
   }
 
   export namespace ObjectParams {
-    export type CreationEventHandler = (process: ChildProcess) => void
+    export type CreationEventHandler = (event: CreationEvent) => void
+
+    export class CreationEvent {
+      readonly name = 'CreationEvent'
+      readonly process: ChildProcess
+      readonly params: ObjectParams
+      readonly promise: CreationEvent.PromiseFunc
+
+      constructor (
+        process: ChildProcess,
+        params: ObjectParams,
+        promise: CreationEvent.PromiseFunc
+      ) {
+        this.process = process
+        this.params = params
+        this.promise = promise
+      }
+    }
+
+    export namespace CreationEvent {
+      export interface PromiseFunc {
+        readonly resolve: (value?: ResultItem | PromiseLike<ResultItem>) => void
+        readonly reject: (error: any) => void
+      }
+    }
   }
 
   export class ResultItem {
@@ -164,7 +188,7 @@ export namespace spawn {
 
     return () => new Promise((resolve, reject) => {
       const process = childProcess.spawn(command, Array.from(argv), options)
-      oncreate(process)
+      oncreate(new ObjectParams.CreationEvent(process, params, {resolve, reject}))
 
       let stdout = Array<ResultItem.DataChunk>()
       let stderr = Array<ResultItem.DataChunk>()
