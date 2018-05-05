@@ -4,6 +4,11 @@ require('ts-node').register({
     target: 'es2017',
     module: 'commonjs',
     esModuleInterop: true,
-    strict: true
+    strict: true,
+    lib: [
+      'es2017',
+      'es2018',
+      'esnext'
+    ]
   }
 })
