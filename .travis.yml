@@ -13,7 +13,6 @@ env:
   - COVERALLS=true
 
 cache:
-  yarn: true
   directories:
     - $HOME/.pnpm-store
     - $HOME/.npm
