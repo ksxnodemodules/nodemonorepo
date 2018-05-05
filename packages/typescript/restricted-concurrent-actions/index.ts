@@ -1,5 +1,6 @@
 import * as assets from 'monorepo-shared-assets'
 import urge = assets.iter.fns.urge
+import getAsyncArray = assets.asyncIter.fns.getArray
 
 export async function * restrictedConcurrentActions<Y> (
   actions: restrictedConcurrentActions.ActionList<Y>,
@@ -31,13 +32,9 @@ export namespace restrictedConcurrentActions {
     partLength: PartLength,
     handleRemain?: RemainingHandler<Y>
   ): asArray.ReturningPromise<Y> {
-    let array = Array<ReadonlyArray<Y>>()
-
-    for await (const part of restrictedConcurrentActions(actions, partLength, handleRemain)) {
-      array.push(part)
-    }
-
-    return array
+    return getAsyncArray(
+      restrictedConcurrentActions(actions, partLength, handleRemain)
+    )
   }
 
   export namespace asArray {
