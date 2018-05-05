@@ -12,7 +12,7 @@
     "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
   },
   "dependencies": {
-    "monorepo-shared-assets": "^0.0.5",
+    "monorepo-shared-assets": "^0.0.6",
     "@types/node": "^10.0.3"
   }
 }
