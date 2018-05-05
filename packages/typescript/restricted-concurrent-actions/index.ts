@@ -19,6 +19,13 @@ export namespace restrictedConcurrentActions {
   export type ReturningValue<Y> = ReadonlyArray<Y>
   export type ReturningPromise<Y> = AsyncIterableIterator<ReturningValue<Y>>
 
+  export const {
+    OMIT_EMPTY_REMAINING_PART,
+    KEEP_REMAINING_PART,
+    OMIT_REMAINING_PART,
+    DEFAULT_REMAINING_HANDLER
+  } = urge
+
   export async function asArray<Y> (
     actions: ActionList<Y>,
     partLength: PartLength,
