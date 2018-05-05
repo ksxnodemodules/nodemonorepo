@@ -30,5 +30,5 @@ install:
   - pnpm recursive link --shamefully-flatten
 
 script:
-  - yarn test -- --runInBand
-  - yarn run build
+  - pnpm test -- --runInBand
+  - pnpm run build

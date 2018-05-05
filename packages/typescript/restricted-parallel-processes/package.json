@@ -1,0 +1,26 @@
+{
+  "name": "restricted-parallel-processes",
+  "version": "0.0.0",
+  "description": "Spawn a certain number of processes after processes",
+  "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksxnodemodules/nodemonorepo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
+  },
+  "keywords": [
+    "process",
+    "spawn",
+    "child_process",
+    "parallel",
+    "restricted"
+  ],
+  "dependencies": {
+    "restricted-concurrent-actions": "^0.0.0",
+    "@types/node": "^10.0.4"
+  }
+}
