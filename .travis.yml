@@ -15,18 +15,20 @@ env:
 cache:
   yarn: true
   directories:
+    - $HOME/.pnpm-store
     - $HOME/.npm
     - $HOME/.nvm
     - $HOME/.node-gyp
     - $HOME/.node_libraries
-    - $HOME/node_modules
-    - node_modules
 
 before_script:
   - chmod -R +x sh
 
+before_install:
+  - curl -L https://unpkg.com/@pnpm/self-installer | node
+
 install:
-  - yarn
+  - pnpm recursive link --shamefully-flatten
 
 script:
   - yarn test -- --runInBand
