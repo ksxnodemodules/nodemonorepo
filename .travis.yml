@@ -29,6 +29,7 @@ before_install:
 install:
   - pnpm recursive link --shamefully-flatten
 
-script:
-  - pnpm test -- --runInBand
-  - pnpm run build
+jobs:
+  include:
+    - script: pnpm test -- --runInBand
+    - script: pnpm run build
