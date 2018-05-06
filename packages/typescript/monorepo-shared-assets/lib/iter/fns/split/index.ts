@@ -4,7 +4,7 @@ export function split<X> (
 ): split.Result<X> {
   const first = Array<X>()
   const second = Array<X>()
-  let line: any
+  let line: X | undefined = undefined
 
   let addElement = (item: X) => {
     if (choose(item)) {
@@ -30,7 +30,7 @@ export namespace split {
   export type LineChooser<X> = (x: X) => boolean
 
   export interface Result<X> extends Halves<X> {
-    line: X
+    line?: X
   }
 
   export interface Halves<X> {
