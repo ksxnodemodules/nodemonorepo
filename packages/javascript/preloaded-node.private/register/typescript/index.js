@@ -4,5 +4,9 @@ const {compilerOptions} = require('../../../../../packages/typescript/tsconfig.j
 
 require('ts-node').register({
   typeCheck: true,
-  compilerOptions
+  compilerOptions: {
+    ...compilerOptions,
+    noUnusedLocals: false,
+    noUnusedParameters: false
+  }
 })
