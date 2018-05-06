@@ -4,7 +4,6 @@ import fetch from 'node-fetch'
 import {
   Basic,
   NetworkStatus,
-  Registry,
   PackageRegistryResponse,
   PackageVersionRegistryResponse
 } from './types'

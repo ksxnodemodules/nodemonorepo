@@ -1,4 +1,3 @@
-import * as path from 'path'
 import * as process from 'process'
 import * as fsx from 'fs-extra'
 import * as fsTreeUtils from 'fs-tree-utils'

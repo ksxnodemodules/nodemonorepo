@@ -6,7 +6,6 @@ import {getDict, getString} from '../../lib/ivls-cvts'
 import {
   Argv,
   Arguments,
-  Options,
   CommandModule
 } from 'yargs'
 

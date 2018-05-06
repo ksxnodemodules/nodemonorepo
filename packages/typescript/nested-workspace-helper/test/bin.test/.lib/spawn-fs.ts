@@ -1,11 +1,9 @@
-import * as fsTreeUtils from 'fs-tree-utils'
 import {snapSpawn} from './snap-spawn'
 
 import {
   snapFileSystem,
   unchangedFileSystem,
-  snapAndUnchanged,
-  Factory
+  snapAndUnchanged
 } from './filesystem'
 
 export type Executor = (dirname?: string, ...argv: string[]) => () => Promise<void>

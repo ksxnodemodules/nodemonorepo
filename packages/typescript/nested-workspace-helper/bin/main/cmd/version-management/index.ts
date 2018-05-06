@@ -1,6 +1,5 @@
 import {
   CommandModule,
-  Options,
   Argv
 } from 'yargs'
 

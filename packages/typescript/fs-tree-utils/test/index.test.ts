@@ -95,7 +95,6 @@ describe('create function', () => {
   describe('throws error when encounter mismatched entities', () => {
     it('in which a file is requested in place of a folder', async () => {
       const container = path.join(tmp, 'create.2.0')
-      const getTree = createTreeGetter(container)
       await fsx.remove(container)
 
       const existingTree = {
@@ -112,7 +111,6 @@ describe('create function', () => {
 
     it('in which a folder is requested in place of a file', async () => {
       const container = path.join(tmp, 'create.2.1')
-      const getTree = createTreeGetter(container)
       await fsx.remove(container)
 
       const existingTree = {

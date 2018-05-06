@@ -4,7 +4,6 @@ import * as pkgUtils from '../../../../../lib/utils/pkg'
 
 import {
   CommandModule,
-  Options,
   Argv,
   Arguments
 } from 'yargs'
@@ -14,10 +13,6 @@ import {
   updateDependencyVersions,
   MismatchedDependency
 } from '../../../../../index'
-
-import {
-  Checker
-} from '../../../../../lib/mismatches'
 
 import {
   deserialize

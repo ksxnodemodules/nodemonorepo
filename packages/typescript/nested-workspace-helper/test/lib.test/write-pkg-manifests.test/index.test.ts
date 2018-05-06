@@ -1,4 +1,3 @@
-import * as fsx from 'fs-extra'
 import * as xjest from 'extra-jest'
 import * as fsTreeUtils from 'fs-tree-utils'
 import {writePackageManifests} from '../../../index'

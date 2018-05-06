@@ -1,14 +1,13 @@
 import {env} from 'process'
 import * as base from './path-env'
-import {PathDelimiter, PathFactory, Env, EnvFactory} from './types'
+import * as types from './types'
 
 export * from './types'
 
-export const pathString = (string = env.PATH || '', delim?: PathDelimiter) =>
+export const pathString = (string = env.PATH || '', delim?: types.PathDelimiter) =>
   base.pathString(string, delim)
 
-export const pathEnv = (envObject: Env = env, name?: string, delim?: PathDelimiter) =>
+export const pathEnv = (envObject: types.Env = env, name?: string, delim?: types.PathDelimiter) =>
   base.pathEnv(envObject, name, delim)
 
-
-export {base}
+export {base, types}

@@ -5,7 +5,6 @@ import ramda from 'ramda'
 
 import {
   CommandModule,
-  Options,
   Argv,
   Arguments
 } from 'yargs'

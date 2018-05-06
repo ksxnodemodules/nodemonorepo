@@ -12,7 +12,6 @@ import {getString as pkgs2text} from '../../lib/list-cvts'
 import {
   Argv,
   Arguments,
-  Options,
   CommandModule
 } from 'yargs'
 
@@ -119,7 +118,7 @@ function handler ({
     const allPackages = await listAllPackages(directory)
     const depMap = getDependencyMap.fromPackageList(allPackages)
     const invalids = listAllInvalidPackages.fromDependencyMap(depMap)
-    const publishability = await checkPublisability.fromPackageList(allPackages)
+    const publishability = await checkPublisability.fromPackageList(allPackages, registry)
 
     // no invalids allowed
     if (invalids.length) {

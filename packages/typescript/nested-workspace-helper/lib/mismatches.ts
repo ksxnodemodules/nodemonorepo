@@ -85,7 +85,6 @@ export namespace listMismatchedDependencies {
 
   export function fromDependencyList (
     dependencies: Dependency.List,
-    packages: Package.List,
     check: Checker
   ): MismatchedDependency.List {
     return dependencies.map(dependency => ({
@@ -96,14 +95,13 @@ export namespace listMismatchedDependencies {
 
   export function fromDependencyMap (
     map: Dependency.Map,
-    packages: Package.List,
     check: Checker
   ): MismatchedDependency.Map {
     return Object
       .entries(map)
       .map(
         ([path, {list, dependant}]) =>
-          ({path, dependant, list: fromDependencyList(list, packages, check)})
+          ({path, dependant, list: fromDependencyList(list, check)})
       )
       .reduce(
         (obj, {path, list, dependant}) =>
@@ -117,7 +115,7 @@ export namespace listMismatchedDependencies {
     check: Checker
   ): MismatchedDependency.Map {
     const map = getDependencyMap.fromPackageList(pkgs)
-    return fromDependencyMap(map, pkgs, check)
+    return fromDependencyMap(map, check)
   }
 }
 

@@ -14,14 +14,13 @@ export async function writePackageManifests (
 ) {
   const input = await writePackageManifests.read(dirname)
   const output = writePackageManifests.transform(input, transformer)
-  await writePackageManifests.write(dirname, output, options)
+  await writePackageManifests.write(output, options)
 }
 
 export namespace writePackageManifests {
   export const read = listAllPackages
 
   export async function write (
-    dirname: string,
     list: Package.List,
     options: Package.Manifest.Writer.Options = {}
   ) {

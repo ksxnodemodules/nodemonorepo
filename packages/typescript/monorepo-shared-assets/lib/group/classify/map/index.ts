@@ -1,4 +1,3 @@
-import * as types from '../../../.types'
 import isInIter from '../.utils/in-iter'
 import identify from './utils/identify'
 

@@ -1,15 +1,6 @@
 import createSetupTeardown from '../../.lib/setup-teardown'
 import {classifyPublishability} from '../../../index'
 
-import {
-  PublishablePackageList,
-  UnpublisablePackageList,
-  PrivatePackageList,
-  PublishableClassification
-} from '../../../lib/types'
-
-type PackageList = PublishablePackageList | UnpublisablePackageList | PrivatePackageList
-
 const {apply} = createSetupTeardown('publishability.yaml')
 
 describe('matches snapshot', () => {

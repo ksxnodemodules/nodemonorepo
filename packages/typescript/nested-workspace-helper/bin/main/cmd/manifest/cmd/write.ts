@@ -2,7 +2,6 @@ import * as process from 'process'
 
 import {
   CommandModule,
-  Options,
   Argv,
   Arguments
 } from 'yargs'

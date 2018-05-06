@@ -5,7 +5,6 @@ import listAllPackages from './list-pkgs'
 
 import {
   Package,
-  PackageRegistryResponse,
   PublishableClassification
 } from './types'
 

@@ -1,4 +1,3 @@
-import * as path from 'path'
 import * as process from 'process'
 import * as yargs from 'yargs'
 import {writeIgnoreFiles, createFileChooser} from '../../index'
