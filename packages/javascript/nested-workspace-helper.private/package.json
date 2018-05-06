@@ -19,7 +19,7 @@
     "nested-wrkspc": "bin.js"
   },
   "dependencies": {
-    "nested-workspace-helper": "^0.0.5",
+    "nested-workspace-helper": "^0.1.0",
     "preloaded-node.private": "^0.0.0"
   },
   "engines": {
