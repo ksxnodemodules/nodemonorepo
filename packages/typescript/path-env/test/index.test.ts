@@ -120,11 +120,6 @@ function testEnvFactory (getFactory: () => EnvFactory, env: Env, name: string, d
   })
 }
 
-
-it('module matches snapshot', () => {
-  expect(subject).toMatchSnapshot()
-})
-
 it('subject.base.delimiter() returns path.delimiter', () => {
   expect(subject.base.delimiter()).toBe(path.delimiter)
 })
