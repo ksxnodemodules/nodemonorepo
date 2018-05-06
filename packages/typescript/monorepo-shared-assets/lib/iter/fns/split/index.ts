@@ -30,7 +30,7 @@ export namespace split {
   export type LineChooser<X> = (x: X) => boolean
 
   export interface Result<X> extends Halves<X> {
-    line?: X
+    readonly line?: X
   }
 
   export interface Halves<X> {
