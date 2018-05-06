@@ -5,11 +5,13 @@ export function split<X> (
   const first = Array<X>()
   const second = Array<X>()
   let line: X | undefined = undefined
+  let foundLine = false
 
   let addElement = (item: X) => {
     if (choose(item)) {
       addElement = x => second.push(x)
       line = item
+      foundLine = true
     } else {
       first.push(item)
     }
@@ -22,7 +24,8 @@ export function split<X> (
   return {
     first,
     second,
-    line
+    line,
+    foundLine
   }
 }
 
@@ -31,6 +34,7 @@ export namespace split {
 
   export interface Result<X> extends Halves<X> {
     readonly line?: X
+    readonly foundLine: boolean
   }
 
   export interface Halves<X> {
