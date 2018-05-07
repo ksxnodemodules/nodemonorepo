@@ -1,3 +1,5 @@
+import map from '../map'
+
 export type Iter<X> = IterableIterator<X>
 
 export function split<X> (
@@ -50,14 +52,15 @@ export namespace split {
     export type LineChooser<X> = (x: X) => boolean
   }
 
-  export function * line<X> (
+  export function line<X> (
     iterable: Iterable<X>,
     line: X,
     compare: split.line.Comparator<X> = split.line.DEFAULT_COMPARATOR
   ): Iter<ReadonlyArray<X>> {
-    for (const segment of func(iterable, x => compare(line, x))) {
-      yield segment.list
-    }
+    return map(
+      func(iterable, x => compare(line, x)),
+      x => x.list
+    )
   }
 
   export namespace line {
