@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+Array [
+  ValueCarrier {
+    "value": 0,
+  },
+  ValueCarrier {
+    "value": 1,
+  },
+  ValueCarrier {
+    "value": 2,
+  },
+  ValueCarrier {
+    "value": 3,
+  },
+  ValueCarrier {
+    "value": 4,
+  },
+  ValueCarrier {
+    "value": 5,
+  },
+  ValueCarrier {
+    "value": 6,
+  },
+  ValueCarrier {
+    "value": 7,
+  },
+  ValueCarrier {
+    "value": 8,
+  },
+  ValueCarrier {
+    "value": 9,
+  },
+  ValueCarrier {
+    "value": 10,
+  },
+  ValueCarrier {
+    "value": 11,
+  },
+  ValueCarrier {
+    "value": 12,
+  },
+  ValueCarrier {
+    "value": 13,
+  },
+  ValueCarrier {
+    "value": 14,
+  },
+  ValueCarrier {
+    "value": 15,
+  },
+]
+`;
