@@ -1,4 +1,4 @@
-import '../../../../.fallback'
+import '../../../../.polyfill'
 
 export type Iter<X> = AsyncIterable<X>
 

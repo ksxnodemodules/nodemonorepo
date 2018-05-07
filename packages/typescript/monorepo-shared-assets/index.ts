@@ -1,2 +1,2 @@
-import './.fallback'
+import './.polyfill'
 export * from './lib'
