@@ -1,45 +1,68 @@
+export type Iter<X> = IterableIterator<X>
+
 export function split<X> (
   iterable: Iterable<X>,
-  choose: split.LineChooser<X>
-): split.Result<X> {
-  const first = Array<X>()
-  const second = Array<X>()
-  let line: X | undefined = undefined
-  let foundLine = false
-
-  let addElement = (item: X) => {
-    if (choose(item)) {
-      addElement = x => second.push(x)
-      line = item
-      foundLine = true
-    } else {
-      first.push(item)
-    }
-  }
-
-  for (const item of iterable) {
-    addElement(item)
-  }
-
-  return {
-    first,
-    second,
-    line,
-    foundLine
-  }
+  choose: split.func.LineChooser<X>
+): Iter<split.func.Segment<X>> {
+  return split.func(iterable, choose)
 }
 
 export namespace split {
-  export type LineChooser<X> = (x: X) => boolean
+  export function * func<X> (
+    iterable: Iterable<X>,
+    choose: func.LineChooser<X>
+  ): Iter<func.Segment<X>> {
+    let list = Array<X>()
 
-  export interface Result<X> extends Halves<X> {
-    readonly line?: X
-    readonly foundLine: boolean
+    for (const item of iterable) {
+      if (choose(item)) {
+        yield {list, line: item, last: false}
+        list = []
+      } else {
+        list.push(item)
+      }
+    }
+
+    yield {list, line: undefined, last: true}
   }
 
-  export interface Halves<X> {
-    readonly first: ReadonlyArray<X>
-    readonly second: ReadonlyArray<X>
+  export namespace func {
+    export type Segment<X> = Segment.NotLast<X> | Segment.Last<X>
+
+    export namespace Segment {
+      export interface Base<X> {
+        readonly list: ReadonlyArray<X>
+        readonly line: X | void
+        readonly last: boolean
+      }
+
+      export interface NotLast<X> extends Base<X> {
+        readonly line: X
+        readonly last: false
+      }
+
+      export interface Last<X> extends Base<X> {
+        readonly line: void
+        readonly last: true
+      }
+    }
+
+    export type LineChooser<X> = (x: X) => boolean
+  }
+
+  export function * line<X> (
+    iterable: Iterable<X>,
+    line: X,
+    compare: split.line.Comparator<X> = split.line.DEFAULT_COMPARATOR
+  ): Iter<ReadonlyArray<X>> {
+    for (const segment of func(iterable, x => compare(line, x))) {
+      yield segment.list
+    }
+  }
+
+  export namespace line {
+    export type Comparator<X> = (a: X, b: X) => boolean
+    export const DEFAULT_COMPARATOR = Object.is
   }
 }
 

@@ -1,41 +1,130 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`when line does not exist 1`] = `
-Object {
-  "first": Array [
+exports[`split by function when tail is empty 1`] = `
+Array [
+  Object {
+    "last": false,
+    "line": 5,
+    "list": Array [
+      1,
+      2,
+      3,
+      4,
+    ],
+  },
+  Object {
+    "last": false,
+    "line": 10,
+    "list": Array [
+      6,
+      7,
+      8,
+      9,
+    ],
+  },
+  Object {
+    "last": false,
+    "line": 15,
+    "list": Array [
+      11,
+      12,
+      13,
+      14,
+    ],
+  },
+  Object {
+    "last": true,
+    "line": undefined,
+    "list": Array [],
+  },
+]
+`;
+
+exports[`split by function when tail is not empty 1`] = `
+Array [
+  Object {
+    "last": false,
+    "line": 5,
+    "list": Array [
+      1,
+      2,
+      3,
+      4,
+    ],
+  },
+  Object {
+    "last": false,
+    "line": 10,
+    "list": Array [
+      6,
+      7,
+      8,
+      9,
+    ],
+  },
+  Object {
+    "last": false,
+    "line": 15,
+    "list": Array [
+      11,
+      12,
+      13,
+      14,
+    ],
+  },
+  Object {
+    "last": true,
+    "line": undefined,
+    "list": Array [
+      16,
+      17,
+    ],
+  },
+]
+`;
+
+exports[`split by line using custom comparator 1`] = `
+Array [
+  Array [
     0,
+  ],
+  Array [
     1,
     2,
+  ],
+  Array [
     3,
     4,
     5,
+  ],
+  Array [
     6,
     7,
     8,
     9,
   ],
-  "foundLine": false,
-  "line": undefined,
-  "second": Array [],
-}
+]
 `;
 
-exports[`when line exists 1`] = `
-Object {
-  "first": Array [
+exports[`split by line using default comparator 1`] = `
+Array [
+  Array [
     0,
+  ],
+  Array [
     1,
     2,
+  ],
+  Array [
     3,
     4,
+    5,
   ],
-  "foundLine": true,
-  "line": 5,
-  "second": Array [
+  Array [
     6,
     7,
     8,
     9,
   ],
-}
+]
 `;
