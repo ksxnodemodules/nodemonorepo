@@ -1,6 +1,7 @@
 {
   "name": "restricted-concurrent-actions",
   "version": "0.0.2",
+  "description": "Execute a certain number of promises after promises",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
@@ -11,6 +12,9 @@
   "bugs": {
     "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
   },
+  "keywords": [
+    "promise"
+  ],
   "dependencies": {
     "monorepo-shared-assets": "^0.0.6",
     "@types/node": "^10.0.3"

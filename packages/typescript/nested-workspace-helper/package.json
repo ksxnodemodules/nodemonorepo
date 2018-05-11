@@ -1,6 +1,7 @@
 {
   "name": "nested-workspace-helper",
   "version": "0.1.0",
+  "description": "Some commands to in needs for nodemonorepo",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
@@ -12,6 +13,11 @@
     "nested-workspace-helper": "bin/nested-wrkspc",
     "nested-wrkspc": "bin/nested-wrkspc"
   },
+  "keywords": [
+    "monorepo",
+    "workspace",
+    "helper"
+  ],
   "dependencies": {
     "ramda": "^0.25.0",
     "semver": "^5.5.0",

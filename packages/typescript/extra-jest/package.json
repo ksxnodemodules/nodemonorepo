@@ -1,6 +1,7 @@
 {
   "name": "extra-jest",
   "version": "0.0.3",
+  "description": "Some extra functions to work with jest testing framework",
   "main": "index.js",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
@@ -8,6 +9,9 @@
   "bugs": {
     "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
   },
+  "keywords": [
+    "jest"
+  ],
   "dependencies": {
     "ramda": "^0.25.0",
     "fs-extra": "^6.0.0",

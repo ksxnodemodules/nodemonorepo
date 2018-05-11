@@ -1,6 +1,7 @@
 {
   "name": "monorepo-shared-yaml",
   "version": "0.0.1",
+  "description": "Just js-yaml + some extra methods",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
@@ -11,6 +12,11 @@
   "bugs": {
     "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
   },
+  "keywords": [
+    "yaml",
+    "extra",
+    "file"
+  ],
   "dependencies": {
     "js-yaml": "^3.11.0",
     "fs-extra": "^6.0.0",

@@ -1,12 +1,18 @@
 {
   "name": "path-env",
   "version": "0.0.3",
+  "description": "Manipulate $PATH environment variable",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
   "bugs": {
     "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
   },
+  "keywords": [
+    "PATH",
+    "env",
+    "env.PATH"
+  ],
   "main": "index.js",
   "dependencies": {
     "@types/node": "^10.0.0"

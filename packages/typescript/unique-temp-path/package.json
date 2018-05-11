@@ -1,12 +1,17 @@
 {
   "name": "unique-temp-path",
   "version": "0.0.3",
+  "description": "Create temporary directory/file names that are unique",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
   "bugs": {
     "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
   },
+  "keywords": [
+    "temp",
+    "unique"
+  ],
   "main": "index.js",
   "bin": "bin.inrepo.js",
   "dependencies": {

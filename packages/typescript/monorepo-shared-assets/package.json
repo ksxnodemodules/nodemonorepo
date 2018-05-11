@@ -1,6 +1,7 @@
 {
   "name": "monorepo-shared-assets",
   "version": "0.0.6",
+  "description": "Shared assets used by various packages from nodemonorepo",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
