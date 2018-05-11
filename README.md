@@ -83,3 +83,8 @@ pnpm run mismatched-versions
 ```sh
 pnpx nested-wrkspc.prv verman mismatches -u .
 ```
+
+### Untested Features
+
+1. CLI subcommand `publish` in package [`nested-workspace-helper`](./packages/typescript/nested-workspace-helper): Cannot mock npm registry in CLI environment.
+2. Entire package [`git-ts`](./packages/typescript/git-ts): It's too complicated to create a test friendly git repo.
