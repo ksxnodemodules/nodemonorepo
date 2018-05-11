@@ -2,7 +2,7 @@ dependencies:
   '@types/fs-extra': 5.0.2
   '@types/node': 10.0.1
   '@types/ramda': 0.25.24
-  fs-extra: 6.0.0
+  fs-extra: 6.0.1
   ramda: 0.25.0
 devDependencies:
   unique-temp-path: 'link:../unique-temp-path'
@@ -21,14 +21,14 @@ packages:
     dev: false
     resolution:
       integrity: sha512-c0TmWA7d4y9KLJJwL/cLPEfSReSgFQK9BtemcCATT48lMeyD7HG8IfGY8bamSuz/Byx1l+13hZV0PCvHsgMB3w==
-  /fs-extra/6.0.0:
+  /fs-extra/6.0.1:
     dependencies:
       graceful-fs: 4.1.11
       jsonfile: 4.0.0
       universalify: 0.1.1
     dev: false
     resolution:
-      integrity: sha512-lk2cUCo8QzbiEWEbt7Cw3m27WMiRG321xsssbcIpfMhpRjrlC08WBOVQqj1/nQYYNnPtyIhP1oqLO3QwT2tPCw==
+      integrity: sha512-GnyIkKhhzXZUWFCaJzvyDLEEgDkPfb4/TPvJCJVuS8MWZgoSsErf++QpiAlDnKFcqhRlm+tIOcencCjyJE6ZCA==
   /graceful-fs/4.1.11:
     dev: false
     engines:
@@ -56,6 +56,6 @@ specifiers:
   '@types/fs-extra': ^5.0.1
   '@types/node': ^10.0.0
   '@types/ramda': ^0.25.21
-  fs-extra: ^6.0.0
+  fs-extra: ^6.0.1
   ramda: ^0.25.0
   unique-temp-path: '*'

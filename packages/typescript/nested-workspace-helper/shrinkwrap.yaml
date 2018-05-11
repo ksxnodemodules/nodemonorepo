@@ -8,7 +8,7 @@ dependencies:
   '@types/yargs': 11.0.0
   chalk: 'link:../chalk'
   extra-jest: 'link:../extra-jest'
-  fs-extra: 6.0.0
+  fs-extra: 6.0.1
   fs-tree-utils: 'link:../fs-tree-utils'
   js-yaml: 3.11.0
   monorepo-shared-assets: 'link:../monorepo-shared-assets'
@@ -68,14 +68,14 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-oftTcaMu/EGrEIu904mWteKIv8vMuOgGYo7EhVJJN00R/EED9DCua/xxHRdYnKtcECzVg7xOWhflvJMnqcFZjw==
-  /fs-extra/6.0.0:
+  /fs-extra/6.0.1:
     dependencies:
       graceful-fs: 4.1.11
       jsonfile: 4.0.0
       universalify: 0.1.1
     dev: false
     resolution:
-      integrity: sha512-lk2cUCo8QzbiEWEbt7Cw3m27WMiRG321xsssbcIpfMhpRjrlC08WBOVQqj1/nQYYNnPtyIhP1oqLO3QwT2tPCw==
+      integrity: sha512-GnyIkKhhzXZUWFCaJzvyDLEEgDkPfb4/TPvJCJVuS8MWZgoSsErf++QpiAlDnKFcqhRlm+tIOcencCjyJE6ZCA==
   /graceful-fs/4.1.11:
     dev: false
     engines:
@@ -125,7 +125,7 @@ specifiers:
   '@types/semver': ^5.5.0
   '@types/yargs': ^11.0.0
   chalk: ^2.4.0
-  fs-extra: ^6.0.0
+  fs-extra: ^6.0.1
   fs-tree-utils: ^0.0.4
   js-yaml: ^3.11.0
   monorepo-shared-assets: ^0.0.7
