@@ -20,7 +20,6 @@ devDependencies:
   standard: 11.0.1
   ts-jest: 22.4.4
   typescript: 2.8.3
-  x-iterable: 6.0.1
   yaml-jest: 1.0.5
 packages:
   /@babel/code-frame/7.0.0-beta.46:
@@ -814,15 +813,6 @@ packages:
     dev: true
     resolution:
       integrity: sha1-E3kY1teCg/ffemt8WmPhQOaUJeY=
-  /concat-iterable/3.0.1:
-    dependencies:
-      x-iterable-base: 4.0.1
-      x-iterable-utils: 1.0.1
-    dev: true
-    engines:
-      node: '>=6.0.0'
-    resolution:
-      integrity: sha1-UmZn3takG22iTWlqIO8KO+aV6j0=
   /concat-map/0.0.1:
     dev: true
     resolution:
@@ -970,16 +960,6 @@ packages:
     dev: true
     resolution:
       integrity: sha1-s2nW+128E+7PUk+RsHD+7cNXzzQ=
-  /deep-iterable/3.0.1:
-    dependencies:
-      simple-function-utils: 2.3.0
-      x-iterable-base: 4.0.1
-      x-iterable-utils: 1.0.1
-    dev: true
-    engines:
-      node: '>=6.0.0'
-    resolution:
-      integrity: sha1-YelrWbVV4sx14gQN3Ufwso6B/sw=
   /default-require-extensions/1.0.0:
     dependencies:
       strip-bom: 2.0.0
@@ -3290,15 +3270,6 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-y8ec26+P1CKOE/Yh8rGiN8GyB7M=
-  /parallel-iterable/3.0.1:
-    dependencies:
-      x-iterable-base: 4.0.1
-      x-iterable-utils: 1.0.1
-    dev: true
-    engines:
-      node: '>= 6.0.0'
-    resolution:
-      integrity: sha1-mkAzvj/quPlFGdqQZyP2CcqHrRA=
   /parse-glob/3.0.4:
     dependencies:
       glob-base: 0.3.0
@@ -3499,16 +3470,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-MtEC1TqN0EU5nephaJ4rAtThHtC86dNN9qCuEhtshvpVBkAW5ZO7BASN9REnF9eoXGcRub+pFuKEpOHE+HbEMw==
-  /product-iterable/3.0.1:
-    dependencies:
-      simple-class-utils: 0.3.0
-      x-iterable-base: 4.0.1
-      x-iterable-utils: 1.0.1
-    dev: true
-    engines:
-      node: '>=6.0.0'
-    resolution:
-      integrity: sha1-vwwtrzeHZ/EDW18lLCdYqEFLsrw=
   /progress/2.0.0:
     dev: true
     engines:
@@ -3558,15 +3519,6 @@ packages:
       node: '>= 0.10.0'
     resolution:
       integrity: sha512-D5JUjPyJbaJDkuAazpVnSfVkLlpeO3wDlPROTMLGKG1zMFNFRgrciKo1ltz/AzNTkqE0HzDx655QOL51N06how==
-  /range-iterable/3.0.1:
-    dependencies:
-      x-iterable-base: 4.0.1
-      x-iterable-utils: 1.0.1
-    dev: true
-    engines:
-      node: '>= 6.0.0'
-    resolution:
-      integrity: sha1-Ljfjo/b6YptcgyqK1FYfQXHV4VM=
   /read-pkg-up/1.0.1:
     dependencies:
       find-up: 1.1.2
@@ -3946,18 +3898,6 @@ packages:
     dev: true
     resolution:
       integrity: sha1-tf3AjxKH6hF4Yo5BXiUTK3NkbG0=
-  /simple-class-utils/0.3.0:
-    dev: true
-    engines:
-      node: '>=6.0.0'
-    resolution:
-      integrity: sha1-bUYj9QgTcViZL+Puxcbz8Q8N3rs=
-  /simple-function-utils/2.3.0:
-    dev: true
-    engines:
-      node: '>=5.0.0'
-    resolution:
-      integrity: sha1-3VdNdPXohkiU1JYlnh9JO/9yUTQ=
   /slash/1.0.0:
     dev: true
     engines:
@@ -4090,15 +4030,6 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-NzNVhJDYpwceVVii8/Hu6DKfD2G+NrQHlS/V/qgv763EYudVwEcMQNxd2lh+0VrUByXN/oJkl5grOhYWvQUYiw==
-  /spread-iterable/3.0.1:
-    dependencies:
-      x-iterable-base: 4.0.1
-      x-iterable-utils: 1.0.1
-    dev: true
-    engines:
-      node: '>=6.0.0'
-    resolution:
-      integrity: sha1-ng3GfKJXNjkMoWhxiup7R6jSnKk=
   /sprintf-js/1.0.3:
     dev: true
     resolution:
@@ -4632,38 +4563,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-ZGh/8kF9rrRNffkLFV4AzhvooEclrOH0xaugmqGsIfFgOE/pIz4fMc4Ef+5HSQqTEug2S9JZIWDR47duDSLfaA==
-  /x-iterable-base/4.0.1:
-    dependencies:
-      simple-class-utils: 0.3.0
-      simple-function-utils: 2.3.0
-    dev: true
-    engines:
-      node: '>=6.0.0'
-    resolution:
-      integrity: sha512-xizoCftGtsDTKtu3xd5VMziVkJZ8TsQs/zKcfZsXILB1tcNbwZeGjCqW/2BXcxK9gkMwyoSa4qKRjj21KOxfgA==
-  /x-iterable-utils/1.0.1:
-    dependencies:
-      x-iterable-base: 4.0.1
-    dev: true
-    engines:
-      node: '>= 6.0.0'
-    resolution:
-      integrity: sha1-xlhPMy/7zeHpJFt7XcBtLps+nMY=
-  /x-iterable/6.0.1:
-    dependencies:
-      concat-iterable: 3.0.1
-      deep-iterable: 3.0.1
-      parallel-iterable: 3.0.1
-      product-iterable: 3.0.1
-      range-iterable: 3.0.1
-      spread-iterable: 3.0.1
-      x-iterable-base: 4.0.1
-      x-iterable-utils: 1.0.1
-    dev: true
-    engines:
-      node: '>=6.0.0'
-    resolution:
-      integrity: sha1-PD61AvGsN7AQQTq29EFGKXs+0to=
   /xml-name-validator/3.0.0:
     dev: true
     resolution:
@@ -4766,5 +4665,4 @@ specifiers:
   standard: ^11.0.0
   ts-jest: ^22.4.4
   typescript: ^2.8.3
-  x-iterable: ^6.0.1
   yaml-jest: ^1.0.5

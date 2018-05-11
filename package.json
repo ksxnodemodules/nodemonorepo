@@ -20,7 +20,6 @@
     "js-yaml": "^3.11.0",
     "standard": "^11.0.0",
     "typescript": "^2.8.3",
-    "x-iterable": "^6.0.1",
     "coveralls": "^3.0.0",
     "glob": "^7.1.2",
     "extra-jest": "*",
