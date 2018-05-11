@@ -1,5 +1,6 @@
 dependencies:
   extra-jest: 'link:packages/typescript/extra-jest'
+  git-ts: 'link:packages/typescript/git-ts'
   ignore-file.private: 'link:packages/typescript/ignore-file.private'
   nested-workspace-helper: 'link:packages/typescript/nested-workspace-helper'
   nested-workspace-helper.private: 'link:packages/javascript/nested-workspace-helper.private'
@@ -4754,6 +4755,7 @@ specifiers:
   babel-jest: ^22.4.3
   coveralls: ^3.0.0
   extra-jest: '*'
+  git-ts: '*'
   glob: ^7.1.2
   ignore-file.private: '*'
   jest: ^22.1.4

@@ -1,0 +1,23 @@
+{
+  "name": "git-ts",
+  "description": "A Git wrapper built by TypeScript",
+  "version": "0.0.0",
+  "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksxnodemodules/nodemonorepo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
+  },
+  "keywords": [
+    "git",
+    "typescript",
+    "wrapper"
+  ],
+  "dependencies": {
+    "@types/node": "^10.0.8"
+  }
+}

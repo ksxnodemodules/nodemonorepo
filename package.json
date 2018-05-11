@@ -24,6 +24,7 @@
     "coveralls": "^3.0.0",
     "glob": "^7.1.2",
     "extra-jest": "*",
+    "git-ts": "*",
     "preloaded-node.private": "*",
     "ignore-file.private": "*",
     "nested-workspace-helper.private": "*",
