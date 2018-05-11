@@ -1,4 +1,3 @@
-#! /usr/bin/env preloaded-node
 import * as path from 'path'
 import * as process from 'process'
 import * as childProcess from 'child_process'
