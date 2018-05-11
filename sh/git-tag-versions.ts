@@ -1,7 +1,6 @@
 import * as path from 'path'
-import * as process from 'process'
-import * as childProcess from 'child_process'
-import * as wrkspc from 'nested-workspace-helper.private'
+import {Repository} from 'git-ts'
+import {listAllPackages} from 'nested-workspace-helper.private'
 
 main().then(
   code => process.exit(code),
@@ -13,30 +12,28 @@ main().then(
 
 async function main (): Promise<number> {
   const projdir = path.resolve(__dirname, '..')
-  const {publishables} = await wrkspc.classifyPublishability(projdir)
+  const pkgs = await listAllPackages(projdir)
+  const tagman = new Repository.Tags(projdir)
+  const allTags = tagman.getAllTags()
 
-  let finalStatus = 0
-  for (const item of publishables) {
-    const {name, version} = item.manifestContent
+  let fails = 0
+  for (const {manifestContent} of pkgs) {
+    const {name, version, private: prv} = manifestContent
+    if (prv) continue
+    if (!name) continue
+
     const tag = `${name}-v${version}`
+    if (allTags.includes(tag)) continue
+
     console.info(`$ git tag ${tag}`)
 
-    const {error, signal, status} = childProcess.spawnSync(
-      'git',
-      ['tag', tag],
-      {
-        cwd: projdir,
-        stdio: 'inherit'
-      }
-    )
-
-    if (error) throw error
-
-    if (status) {
-      console.error({signal, status})
-      finalStatus |= status
+    try {
+      tagman.addTag(tag)
+    } catch (error) {
+      console.error(error)
+      ++fails
     }
   }
 
-  return finalStatus
+  return fails
 }
