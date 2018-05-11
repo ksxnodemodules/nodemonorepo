@@ -54,6 +54,7 @@
     "remake-package-json": "preloaded-node sh/remake-package-json",
     "generate-npmignore": "bash sh/generate-npmignore.sh",
     "clean-typescript-build": "preloaded-node sh/clean-typescript-build",
+    "git-tag-versions": "preloaded-node sh/git-tag-versions",
     "check-publishability": "bash sh/check-publishability.sh",
     "validate-packages": "bash sh/validate-packages.sh",
     "mismatched-versions": "bash sh/mismatched-versions.sh",
