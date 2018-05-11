@@ -47,8 +47,8 @@ export namespace Repository {
      */
     constructor (location: string) {
       super(location)
-      const {execute, subCmdName} = this
-      this.command = (args, options) => execute([subCmdName, ...args], options)
+      const {execute} = this
+      this.command = (args, options) => execute([this.subCmdName, ...args], options)
     }
   }
 
