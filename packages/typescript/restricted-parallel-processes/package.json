@@ -1,6 +1,6 @@
 {
   "name": "restricted-parallel-processes",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Spawn a certain number of processes after processes",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
@@ -20,7 +20,7 @@
     "restricted"
   ],
   "dependencies": {
-    "restricted-concurrent-actions": "^0.0.2",
+    "restricted-concurrent-actions": "^0.0.3",
     "@types/node": "^10.0.4"
   }
 }
