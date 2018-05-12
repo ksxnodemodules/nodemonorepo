@@ -3,6 +3,7 @@ import writePackageManifests from './lib/write-pkg-manifests'
 import getDependencyMap from './lib/dep-map'
 import listMismatchedDependencies from './lib/mismatches'
 import listAllInvalidPackages from './lib/invalids'
+import listOutdatedDependencies from './lib/outdated'
 import updateDependencyVersions from './lib/update-dep-vers'
 import classifyPublishability from './lib/publishables'
 import npmRegistry from './lib/npm-registry'
@@ -16,6 +17,7 @@ export {
   getDependencyMap,
   listMismatchedDependencies,
   listAllInvalidPackages,
+  listOutdatedDependencies,
   updateDependencyVersions,
   classifyPublishability,
   npmRegistry,

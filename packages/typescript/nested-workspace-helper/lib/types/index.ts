@@ -154,6 +154,40 @@ export namespace MismatchedDependency {
   }
 }
 
+export namespace Outdated {
+  export type List = ReadonlyArray<ListItem>
+
+  export interface ListItem extends Package.ListItem {
+    /**
+     * Out-of-date dependencies
+     */
+    readonly update: Update
+  }
+
+  /**
+   * Contains only out-of-date dependencies
+   */
+  export interface Update {
+    readonly prod: Package.Dict,
+    readonly dev: Package.Dict,
+    readonly peer: Package.Dict
+  }
+
+  /**
+   * Function that takes a version and returns a dependency requirement
+   * @param version Dependency's version
+   * @returns Corresponding dependency requirement
+   */
+  export type VersionRequirementGenerator = (version: Basic.PackageVersion) => Basic.PackageVersionRequirement
+
+  /**
+   * Function that transform version requirements
+   * @param requirement Input requirement
+   * @returns Output requirement
+   */
+  export type VersionRequirementTransformer = (requirement: Basic.PackageVersionRequirement) => Basic.PackageVersionRequirement
+}
+
 /**
  * Status when interact in network (e.g. Internet)
  */

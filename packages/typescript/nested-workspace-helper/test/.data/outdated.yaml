@@ -1,0 +1,226 @@
+root:
+  allUpToDate:
+    node_modules:
+      foo:
+        package.json: |
+          {
+            "name": "foo",
+            "version": "1.2.3"
+          }
+      bar:
+        package.json: |
+          {
+            "name": "bar",
+            "version": "4.4.4"
+          }
+    package.json: |
+      {
+        "__describe": "All is up-to-date",
+        "version": "0.0.0",
+        "dependencies": {
+          "foo": "^1.2.3"
+        },
+        "devDependencies": {
+          "bar": "^4.4.4"
+        }
+      }
+  allOutOfDate:
+    node_modules:
+      foo:
+        package.json: |
+          {
+            "name": "foo",
+            "version": "0.1.2"
+          }
+      bar:
+        package.json: |
+          {
+            "name": "bar",
+            "version": "3.3.3"
+          }
+    package.json: |
+      {
+        "__describe": "All is out-of-date",
+        "version": "0.0.0",
+        "dependencies": {
+          "foo": "^0.1.2"
+        },
+        "devDependencies": {
+          "bar": "^3.3.3"
+        }
+      }
+  manifestUpToDate-installedOutOfDate:
+    node_modules:
+      foo:
+        package.json: |
+          {
+            "name": "foo",
+            "version": "0.1.2"
+          }
+      bar:
+        package.json: |
+          {
+            "name": "bar",
+            "version": "3.3.3"
+          }
+    package.json: |
+      {
+        "__describe": "package.json is up-to-date, node_modules is out-of-date",
+        "version": "0.0.0",
+        "dependencies": {
+          "foo": "^1.2.3"
+        },
+        "devDependencies": {
+          "bar": "^4.4.4"
+        }
+      }
+  installedUpToDate-manifestOutOfDate:
+    node_modules:
+      foo:
+        package.json: |
+          {
+            "name": "foo",
+            "version": "1.2.3"
+          }
+      bar:
+        package.json: |
+          {
+            "name": "bar",
+            "version": "4.4.4"
+          }
+    package.json: |
+      {
+        "__describe": "node_modules is up-to-date, package.json is out-of-date",
+        "version": "0.0.0",
+        "dependencies": {
+          "foo": "^0.1.2"
+        },
+        "devDependencies": {
+          "bar": "^3.3.3"
+        }
+      }
+  fooUpToDate-barOutOfDate:
+    node_modules:
+      foo:
+        package.json: |
+          {
+            "name": "foo",
+            "version": "1.2.3"
+          }
+      bar:
+        package.json: |
+          {
+            "name": "bar",
+            "version": "3.3.3"
+          }
+    package.json: |
+      {
+        "__describe": "foo is up-to-date, bar is out-of-date",
+        "version": "0.0.0",
+        "dependencies": {
+          "foo": "^1.2.3"
+        },
+        "devDependencies": {
+          "bar": "^3.3.3"
+        }
+      }
+  barUpToDate-fooOutOfDate:
+    node_modules:
+      foo:
+        package.json: |
+          {
+            "name": "foo",
+            "version": "0.1.2"
+          }
+      bar:
+        package.json: |
+          {
+            "name": "bar",
+            "version": "4.4.4"
+          }
+    package.json: |
+      {
+        "__describe": "bar is up-to-date, foo is out-of-date",
+        "version": "0.0.0",
+        "dependencies": {
+          "foo": "^0.1.2"
+        },
+        "devDependencies": {
+          "bar": "^4.4.4"
+        }
+      }
+  barelySatisfy:
+    node_modules:
+      foo:
+        package.json: |
+          {
+            "name": "foo",
+            "version": "1.2.3"
+          }
+      bar:
+        package.json: |
+          {
+            "name": "bar",
+            "version": "4.4.4"
+          }
+    package.json: |
+      {
+        "__describe": "Current requirement barely covers latest version",
+        "version": "0.0.0",
+        "dependencies": {
+          "foo": "^1.0.0"
+        },
+        "devDependencies": {
+          "bar": "^4.0.0"
+        }
+      }
+  pinnedStatisfy:
+    node_modules:
+      foo:
+        package.json: |
+          {
+            "name": "foo",
+            "version": "1.2.3"
+          }
+      bar:
+        package.json: |
+          {
+            "name": "bar",
+            "version": "4.4.4"
+          }
+    package.json: |
+      {
+        "__describe": "Current requirement is exactly latest version",
+        "version": "0.0.0",
+        "dependencies": {
+          "foo": "1.2.3"
+        },
+        "devDependencies": {
+          "bar": "4.4.4"
+        }
+      }
+  pinnedUnsatisfy:
+    node_modules:
+      foo:
+        package.json: |
+          {
+            "name": "foo",
+            "version": "1.0.0"
+          }
+      bar:
+        package.json: |
+          {
+            "name": "bar",
+            "version": "4.0.0"
+          }
+    package.json: |
+      {
+        "__describe": "Current requirement does not cover latest version",
+        "version": "0.0.0",
+        "dependencies": {
+          "foo": "1.0.0"
+        },
+        "devDependencies": {
+          "bar": "4.0.0"
+        }
+      }
