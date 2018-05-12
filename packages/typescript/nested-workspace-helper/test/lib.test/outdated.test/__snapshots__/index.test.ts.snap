@@ -11,7 +11,8 @@ Array [
       "devDependencies": Object {
         "bar": "^3.3.3",
       },
-      "version": "0.0.0",
+      "name": "all-out-of-date",
+      "version": "987.654.321",
     },
     "manifestFile": "root/allOutOfDate/package.json",
     "path": "root/allOutOfDate",
@@ -34,7 +35,8 @@ Array [
       "devDependencies": Object {
         "bar": "^4.4.4",
       },
-      "version": "0.0.0",
+      "name": "bar-foo",
+      "version": "987.654.321",
     },
     "manifestFile": "root/barUpToDate-fooOutOfDate/package.json",
     "path": "root/barUpToDate-fooOutOfDate",
@@ -55,7 +57,8 @@ Array [
       "devDependencies": Object {
         "bar": "^3.3.3",
       },
-      "version": "0.0.0",
+      "name": "foo-bar",
+      "version": "987.654.321",
     },
     "manifestFile": "root/fooUpToDate-barOutOfDate/package.json",
     "path": "root/fooUpToDate-barOutOfDate",
@@ -76,7 +79,8 @@ Array [
       "devDependencies": Object {
         "bar": "^4.4.4",
       },
-      "version": "0.0.0",
+      "name": "manifest-installed",
+      "version": "987.654.321",
     },
     "manifestFile": "root/manifestUpToDate-installedOutOfDate/package.json",
     "path": "root/manifestUpToDate-installedOutOfDate",
@@ -99,7 +103,8 @@ Array [
       "devDependencies": Object {
         "bar": "4.0.0",
       },
-      "version": "0.0.0",
+      "name": "pinned-unsatisfy",
+      "version": "987.654.321",
     },
     "manifestFile": "root/pinnedUnsatisfy/package.json",
     "path": "root/pinnedUnsatisfy",
@@ -127,7 +132,8 @@ Array [
       "devDependencies": Object {
         "bar": "^3.3.3",
       },
-      "version": "0.0.0",
+      "name": "all-out-of-date",
+      "version": "987.654.321",
     },
     "manifestFile": "root/allOutOfDate/package.json",
     "path": "root/allOutOfDate",
@@ -150,7 +156,8 @@ Array [
       "devDependencies": Object {
         "bar": "^4.4.4",
       },
-      "version": "0.0.0",
+      "name": "bar-foo",
+      "version": "987.654.321",
     },
     "manifestFile": "root/barUpToDate-fooOutOfDate/package.json",
     "path": "root/barUpToDate-fooOutOfDate",
@@ -171,7 +178,8 @@ Array [
       "devDependencies": Object {
         "bar": "^3.3.3",
       },
-      "version": "0.0.0",
+      "name": "foo-bar",
+      "version": "987.654.321",
     },
     "manifestFile": "root/fooUpToDate-barOutOfDate/package.json",
     "path": "root/fooUpToDate-barOutOfDate",
@@ -192,7 +200,8 @@ Array [
       "devDependencies": Object {
         "bar": "^4.4.4",
       },
-      "version": "0.0.0",
+      "name": "manifest-installed",
+      "version": "987.654.321",
     },
     "manifestFile": "root/manifestUpToDate-installedOutOfDate/package.json",
     "path": "root/manifestUpToDate-installedOutOfDate",
@@ -215,7 +224,8 @@ Array [
       "devDependencies": Object {
         "bar": "4.0.0",
       },
-      "version": "0.0.0",
+      "name": "pinned-unsatisfy",
+      "version": "987.654.321",
     },
     "manifestFile": "root/pinnedUnsatisfy/package.json",
     "path": "root/pinnedUnsatisfy",
@@ -243,7 +253,8 @@ Array [
       "devDependencies": Object {
         "bar": "^3.3.3",
       },
-      "version": "0.0.0",
+      "name": "all-out-of-date",
+      "version": "987.654.321",
     },
     "manifestFile": "root/allOutOfDate/package.json",
     "path": "root/allOutOfDate",
@@ -266,7 +277,8 @@ Array [
       "devDependencies": Object {
         "bar": "^4.4.4",
       },
-      "version": "0.0.0",
+      "name": "bar-foo",
+      "version": "987.654.321",
     },
     "manifestFile": "root/barUpToDate-fooOutOfDate/package.json",
     "path": "root/barUpToDate-fooOutOfDate",
@@ -287,7 +299,8 @@ Array [
       "devDependencies": Object {
         "bar": "^4.0.0",
       },
-      "version": "0.0.0",
+      "name": "barely-satisfy",
+      "version": "987.654.321",
     },
     "manifestFile": "root/barelySatisfy/package.json",
     "path": "root/barelySatisfy",
@@ -310,7 +323,8 @@ Array [
       "devDependencies": Object {
         "bar": "^3.3.3",
       },
-      "version": "0.0.0",
+      "name": "foo-bar",
+      "version": "987.654.321",
     },
     "manifestFile": "root/fooUpToDate-barOutOfDate/package.json",
     "path": "root/fooUpToDate-barOutOfDate",
@@ -331,7 +345,8 @@ Array [
       "devDependencies": Object {
         "bar": "^3.3.3",
       },
-      "version": "0.0.0",
+      "name": "installed-manifest",
+      "version": "987.654.321",
     },
     "manifestFile": "root/installedUpToDate-manifestOutOfDate/package.json",
     "path": "root/installedUpToDate-manifestOutOfDate",
@@ -354,7 +369,8 @@ Array [
       "devDependencies": Object {
         "bar": "4.0.0",
       },
-      "version": "0.0.0",
+      "name": "pinned-unsatisfy",
+      "version": "987.654.321",
     },
     "manifestFile": "root/pinnedUnsatisfy/package.json",
     "path": "root/pinnedUnsatisfy",
@@ -382,7 +398,8 @@ Array [
       "devDependencies": Object {
         "bar": "^3.3.3",
       },
-      "version": "0.0.0",
+      "name": "all-out-of-date",
+      "version": "987.654.321",
     },
     "manifestFile": "root/allOutOfDate/package.json",
     "path": "root/allOutOfDate",
@@ -405,7 +422,8 @@ Array [
       "devDependencies": Object {
         "bar": "^4.4.4",
       },
-      "version": "0.0.0",
+      "name": "bar-foo",
+      "version": "987.654.321",
     },
     "manifestFile": "root/barUpToDate-fooOutOfDate/package.json",
     "path": "root/barUpToDate-fooOutOfDate",
@@ -426,7 +444,8 @@ Array [
       "devDependencies": Object {
         "bar": "^3.3.3",
       },
-      "version": "0.0.0",
+      "name": "foo-bar",
+      "version": "987.654.321",
     },
     "manifestFile": "root/fooUpToDate-barOutOfDate/package.json",
     "path": "root/fooUpToDate-barOutOfDate",
@@ -447,7 +466,8 @@ Array [
       "devDependencies": Object {
         "bar": "^3.3.3",
       },
-      "version": "0.0.0",
+      "name": "installed-manifest",
+      "version": "987.654.321",
     },
     "manifestFile": "root/installedUpToDate-manifestOutOfDate/package.json",
     "path": "root/installedUpToDate-manifestOutOfDate",
@@ -470,7 +490,8 @@ Array [
       "devDependencies": Object {
         "bar": "4.0.0",
       },
-      "version": "0.0.0",
+      "name": "pinned-unsatisfy",
+      "version": "987.654.321",
     },
     "manifestFile": "root/pinnedUnsatisfy/package.json",
     "path": "root/pinnedUnsatisfy",
@@ -498,7 +519,8 @@ Array [
       "devDependencies": Object {
         "bar": "^3.3.3",
       },
-      "version": "0.0.0",
+      "name": "all-out-of-date",
+      "version": "987.654.321",
     },
     "manifestFile": "root/allOutOfDate/package.json",
     "path": "root/allOutOfDate",
@@ -521,7 +543,8 @@ Array [
       "devDependencies": Object {
         "bar": "^4.4.4",
       },
-      "version": "0.0.0",
+      "name": "bar-foo",
+      "version": "987.654.321",
     },
     "manifestFile": "root/barUpToDate-fooOutOfDate/package.json",
     "path": "root/barUpToDate-fooOutOfDate",
@@ -542,7 +565,8 @@ Array [
       "devDependencies": Object {
         "bar": "^4.0.0",
       },
-      "version": "0.0.0",
+      "name": "barely-satisfy",
+      "version": "987.654.321",
     },
     "manifestFile": "root/barelySatisfy/package.json",
     "path": "root/barelySatisfy",
@@ -565,7 +589,8 @@ Array [
       "devDependencies": Object {
         "bar": "^3.3.3",
       },
-      "version": "0.0.0",
+      "name": "foo-bar",
+      "version": "987.654.321",
     },
     "manifestFile": "root/fooUpToDate-barOutOfDate/package.json",
     "path": "root/fooUpToDate-barOutOfDate",
@@ -586,7 +611,8 @@ Array [
       "devDependencies": Object {
         "bar": "^3.3.3",
       },
-      "version": "0.0.0",
+      "name": "installed-manifest",
+      "version": "987.654.321",
     },
     "manifestFile": "root/installedUpToDate-manifestOutOfDate/package.json",
     "path": "root/installedUpToDate-manifestOutOfDate",
@@ -609,7 +635,8 @@ Array [
       "devDependencies": Object {
         "bar": "4.0.0",
       },
-      "version": "0.0.0",
+      "name": "pinned-unsatisfy",
+      "version": "987.654.321",
     },
     "manifestFile": "root/pinnedUnsatisfy/package.json",
     "path": "root/pinnedUnsatisfy",

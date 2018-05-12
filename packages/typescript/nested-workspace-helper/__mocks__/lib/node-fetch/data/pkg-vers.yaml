@@ -20,3 +20,32 @@ to-be-duplicated:
   - 1.2.3
   - 2.3.4
   - 4.5.6
+
+# Packages in outdated.yaml
+all-up-to-date:
+  - 123.456.789
+  - 987.654.321
+all-out-of-date:
+  - 123.456.789
+  - 987.654.321
+manifest-installed:
+  - 123.456.789
+  - 987.654.321
+installed-manifest:
+  - 123.456.789
+  - 987.654.321
+foo-bar:
+  - 123.456.789
+  - 987.654.321
+bar-foo:
+  - 123.456.789
+  - 987.654.321
+barely-satisfy:
+  - 123.456.789
+  - 987.654.321
+pinned-satisfy:
+  - 123.456.789
+  - 987.654.321
+pinned-unsatisfy:
+  - 123.456.789
+  - 987.654.321

@@ -16,7 +16,8 @@ root:
     package.json: |
       {
         "__describe": "All is up-to-date",
-        "version": "0.0.0",
+        "name": "all-up-to-date",
+        "version": "987.654.321",
         "dependencies": {
           "foo": "^1.2.3"
         },
@@ -41,7 +42,8 @@ root:
     package.json: |
       {
         "__describe": "All is out-of-date",
-        "version": "0.0.0",
+        "name": "all-out-of-date",
+        "version": "987.654.321",
         "dependencies": {
           "foo": "^0.1.2"
         },
@@ -66,7 +68,8 @@ root:
     package.json: |
       {
         "__describe": "package.json is up-to-date, node_modules is out-of-date",
-        "version": "0.0.0",
+        "name": "manifest-installed",
+        "version": "987.654.321",
         "dependencies": {
           "foo": "^1.2.3"
         },
@@ -91,7 +94,8 @@ root:
     package.json: |
       {
         "__describe": "node_modules is up-to-date, package.json is out-of-date",
-        "version": "0.0.0",
+        "name": "installed-manifest",
+        "version": "987.654.321",
         "dependencies": {
           "foo": "^0.1.2"
         },
@@ -116,7 +120,8 @@ root:
     package.json: |
       {
         "__describe": "foo is up-to-date, bar is out-of-date",
-        "version": "0.0.0",
+        "name": "foo-bar",
+        "version": "987.654.321",
         "dependencies": {
           "foo": "^1.2.3"
         },
@@ -141,7 +146,8 @@ root:
     package.json: |
       {
         "__describe": "bar is up-to-date, foo is out-of-date",
-        "version": "0.0.0",
+        "name": "bar-foo",
+        "version": "987.654.321",
         "dependencies": {
           "foo": "^0.1.2"
         },
@@ -166,7 +172,8 @@ root:
     package.json: |
       {
         "__describe": "Current requirement barely covers latest version",
-        "version": "0.0.0",
+        "name": "barely-satisfy",
+        "version": "987.654.321",
         "dependencies": {
           "foo": "^1.0.0"
         },
@@ -191,7 +198,8 @@ root:
     package.json: |
       {
         "__describe": "Current requirement is exactly latest version",
-        "version": "0.0.0",
+        "name": "pinned-satisfy",
+        "version": "987.654.321",
         "dependencies": {
           "foo": "1.2.3"
         },
@@ -216,11 +224,90 @@ root:
     package.json: |
       {
         "__describe": "Current requirement does not cover latest version",
-        "version": "0.0.0",
+        "name": "pinned-unsatisfy",
+        "version": "987.654.321",
         "dependencies": {
           "foo": "1.0.0"
         },
         "devDependencies": {
           "bar": "4.0.0"
+        }
+      }
+  internalDependant:
+    node_modules:
+      all-up-to-date:
+        package.json: |
+          {
+            "name": "all-up-to-date",
+            "version": "123.456.789"
+          }
+      all-out-of-date:
+        package.json: |
+          {
+            "name": "all-out-of-date",
+            "version": "123.456.789"
+          }
+      manifest-installed:
+        package.json: |
+          {
+            "name": "manifest-installed",
+            "version": "123.456.789"
+          }
+      installed-manifest:
+        package.json: |
+          {
+            "name": "installed-manifest",
+            "version": "123.456.789"
+          }
+      foo-bar:
+        package.json: |
+          {
+            "name": "foo-bar",
+            "version": "123.456.789"
+          }
+      bar-foo:
+        package.json: |
+          {
+            "name": "bar-foo",
+            "version": "123.456.789"
+          }
+      barely-satisfy:
+        package.json: |
+          {
+            "name": "barely-satisfy",
+            "version": "123.456.789"
+          }
+      pinned-satisfy:
+        package.json: |
+          {
+            "name": "pinned-satisfy",
+            "version": "123.456.789"
+          }
+      pinned-unsatisfy:
+        package.json: |
+          {
+            "name": "pinned-unsatisfy",
+            "version": "123.456.789"
+          }
+    package.json: |
+      {
+        "__describe": "This package depends on every local package except itself with outdated version requirement",
+        "__expect": "Should not appear",
+        "name": "internal-dependant",
+        "version": "0.0.0",
+        "dependencies": {
+          "all-up-to-date": "^123.456.789",
+          "manifest-installed": "^123.456.789",
+          "foo-bar": "^123.456.789"
+        },
+        "devDependencies": {
+          "all-out-of-date": "^123.456.789",
+          "installed-manifest": "^123.456.789",
+          "bar-foo": "^123.456.789"
+        },
+        "peerDependencies": {
+          "barely-satisfy": "^123.456.789",
+          "pinned-satisfy": "^123.456.789",
+          "pinned-unsatisfy": "^123.456.789"
         }
       }
