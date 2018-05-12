@@ -291,7 +291,7 @@ root:
           }
     package.json: |
       {
-        "__describe": "This package depends on every local package except itself with outdated version requirement",
+        "__describe": "This package depends on every local package with version of '987.654.321' by requirement of '^123.456.789'",
         "__expect": "Should not appear",
         "name": "internal-dependant",
         "version": "0.0.0",
@@ -309,5 +309,41 @@ root:
           "barely-satisfy": "^123.456.789",
           "pinned-satisfy": "^123.456.789",
           "pinned-unsatisfy": "^123.456.789"
+        }
+      }
+  falseHopeDependant:
+    node_modules:
+      false-dependency-123:
+        package.json: |
+          {
+            "name": "false-dependency-123",
+            "version": "1.2.3"
+          }
+      false-dependency-456:
+        package.json: |
+          {
+            "name": "false-dependency-456",
+            "version": "4.5.6"
+          }
+      false-dependency-789:
+        package.json: |
+          {
+            "name": "false-dependency-789",
+            "version": "7.8.9"
+          }
+    package.json: |
+      {
+        "__describe": "This package depends on packages that don't exist",
+        "__expect": "Should not appear",
+        "name": "false-hope-dependant",
+        "version": "0.0.0",
+        "dependencies": {
+          "false-dependency-123": "^1.2.3"
+        },
+        "devDependencies": {
+          "false-dependency-456": "^4.5.6"
+        },
+        "peerDependencies": {
+          "false-dependency-789": "^7.8.9"
         }
       }
