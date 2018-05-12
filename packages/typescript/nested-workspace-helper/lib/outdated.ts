@@ -14,6 +14,11 @@ import {
   RegistryPackageManifest
 } from './types'
 
+/**
+ * @param dirname Directory that contains all packages
+ * @param options Options
+ * @returns List of outdated external dependencies
+ */
 export async function listOutdatedDependencies (
   dirname: string,
   options?: listOutdatedDependencies.Options
@@ -28,7 +33,7 @@ export namespace listOutdatedDependencies {
   /**
    * @param pkgs List of local packages
    * @param options Options
-   * @returns List of outdated dependencies
+   * @returns List of outdated external dependencies
    */
   export async function fromPackageList (
     pkgs: Package.List,
