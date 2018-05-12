@@ -213,6 +213,7 @@ export interface RegistryPackageSet {
 }
 
 export interface RegistryPackageManifest extends Package.Manifest {
+  readonly name: string
   readonly version: string
 }
 
