@@ -35,10 +35,14 @@ const getAllVersions = (
 const getSpecificVersion = (
   [name, version]: string[]
 ): PackageVersionRegistry | EmptyResponse => {
-  if (version === 'latest') return getSpecificVersion([name, latestOfPackage(name)])
   const pkg = packages[name]
-  if (pkg) return pkg.versions[version]
-  return 'EmptyResponse'
+  if (!pkg) return 'EmptyResponse'
+
+  return pkg.versions[
+    version === 'latest'
+      ? latest(Object.keys(pkg.versions))
+      : version
+  ]
 }
 
 const getResponseObject = (segments: string[]) => {
