@@ -213,8 +213,8 @@ export interface RegistryPackageSet {
 }
 
 export interface RegistryPackageManifest extends Package.Manifest {
-  readonly name: string
-  readonly version: string
+  readonly name: Basic.PackageName
+  readonly version: Basic.PackageVersion
 }
 
 /** Contains group of publishable, unpublishable and private packages */
