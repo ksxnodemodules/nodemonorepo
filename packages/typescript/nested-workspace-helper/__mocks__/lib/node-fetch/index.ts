@@ -22,9 +22,6 @@ const latest = (versions: ReadonlyArray<string>) => versions.reduce(
     semver.compare(prev, current) === 1 ? prev : current
 )
 
-const latestOfPackage = (name: string) =>
-  latest(Object.keys(packages[name].versions))
-
 export type EmptyResponse = 'EmptyResponse'
 
 const getAllVersions = (
