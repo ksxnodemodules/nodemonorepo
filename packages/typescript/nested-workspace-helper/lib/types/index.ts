@@ -110,6 +110,7 @@ export interface Dependency {
 export namespace Dependency {
   export type Name = Basic.PackageName
   export type Version = Basic.PackageVersion
+  export type ManifestField = 'dependencies' | 'devDependencies' | 'peerDependencies'
   export type Type = 'prod' | 'dev' | 'peer'
   export type Requirement = Basic.PackageVersionRequirement
 
