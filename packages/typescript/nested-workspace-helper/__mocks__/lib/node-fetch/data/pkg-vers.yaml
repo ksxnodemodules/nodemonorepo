@@ -8,6 +8,8 @@ bar:
   - 3.3.4
   - 3.4.4
   - 4.4.4
+
+# For publishability classification
 to-not-be-duplicated:
   - 2.2.2
   - 4.4.4
