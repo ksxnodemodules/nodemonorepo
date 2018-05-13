@@ -30,6 +30,8 @@ stderr: |+
     nested-wrkspc manifest <cmd> [args]       Manage package manifest files
     nested-wrkspc version-management <cmd>    Manage internal package versions
     [args]                                                       [aliases: verman]
+    nested-wrkspc dependency-management       Manage internal package versions
+    <cmd> [args]                                                 [aliases: depman]
     nested-wrkspc validate <directory>        Check for invalid packages
     nested-wrkspc publish <directory>         Publishing packages
 
