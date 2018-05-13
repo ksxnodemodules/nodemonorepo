@@ -1,8 +1,10 @@
 import {URL} from 'url'
+import semver from 'semver'
 import fetch from 'node-fetch'
 
 import {
   Basic,
+  PackageRegistry,
   NetworkStatus,
   PackageRegistryResponse,
   PackageVersionRegistryResponse
@@ -12,12 +14,17 @@ export const NPM_REGISTRY = 'http://registry.npmjs.org'
 export const YARN_REGISTRY = 'https://registry.yarnpkg.com'
 
 /**
+ * Encode scoped package
+ */
+export const encodePkgName = (name: string) => name.split('/').join('%2F')
+
+/**
  * Create an URL of registry
  */
 export const mkhref = (
   segments: string[],
   registry: string
-) => new URL(segments.join('/'), registry).href
+) => new URL(segments.map(encodePkgName).join('/'), registry).href
 
 class NetworkError extends Error {
   public readonly name = 'NetworkError'
@@ -35,6 +42,9 @@ export function createFactory (registry: string = NPM_REGISTRY) {
       if (response.status === 404) {
         return 'NotFound'
       }
+
+      console.log(mkhref(segments, registry))
+      console.log(response.headers)
 
       throw new NetworkError(
         `Server response with status ${response.status} (${response.statusText}) instead of OK`
@@ -68,8 +78,19 @@ export function createFactory (registry: string = NPM_REGISTRY) {
    * @param pkg Package name
    * @returns Information of the latest version of the package
    */
-  function getLatestVersion (pkg: Basic.PackageName): Promise<PackageVersionRegistryResponse> {
-    return getSpecificVersion(pkg, 'latest')
+  async function getLatestVersion (pkg: Basic.PackageName): Promise<PackageVersionRegistryResponse> {
+    if (!/^@[^.]+\//.test(pkg)) return getSpecificVersion(pkg, 'latest')
+
+    const response = await getRegistry<PackageRegistry>(pkg)
+    if (response === 'NotFound') throw new NetworkError(`Cannot find '${pkg}' in registry`)
+
+    const {versions} = response
+
+    const latest = Object
+      .keys(versions)
+      .reduce((a, b) => semver.compare(a, b) === 1 ? a : b)
+
+    return versions[latest]
   }
 
   return {
