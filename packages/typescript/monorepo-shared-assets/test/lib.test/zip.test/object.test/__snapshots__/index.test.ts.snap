@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`with KeySetProvider=FIRST with bar as first argument 1`] = `
+Object {
+  "ownBarC": Array [
+    "barC",
+    undefined,
+  ],
+  "ownBarD": Array [
+    "barD",
+    undefined,
+  ],
+  "sharedA": Array [
+    "barA",
+    "fooA",
+  ],
+  "sharedB": Array [
+    "barB",
+    "fooB",
+  ],
+}
+`;
+
+exports[`with KeySetProvider=FIRST with foo as first argument 1`] = `
+Object {
+  "ownFooC": Array [
+    "fooC",
+    undefined,
+  ],
+  "ownFooD": Array [
+    "fooD",
+    undefined,
+  ],
+  "sharedA": Array [
+    "fooA",
+    "barA",
+  ],
+  "sharedB": Array [
+    "fooB",
+    "barB",
+  ],
+}
+`;
+
+exports[`with KeySetProvider=INNER_JOIN 1`] = `
+Object {
+  "sharedA": Array [
+    "fooA",
+    "barA",
+  ],
+  "sharedB": Array [
+    "fooB",
+    "barB",
+  ],
+}
+`;
+
+exports[`with KeySetProvider=OUTER_JOIN 1`] = `
+Object {
+  "ownBarC": Array [
+    undefined,
+    "barC",
+  ],
+  "ownBarD": Array [
+    undefined,
+    "barD",
+  ],
+  "ownFooC": Array [
+    "fooC",
+    undefined,
+  ],
+  "ownFooD": Array [
+    "fooD",
+    undefined,
+  ],
+  "sharedA": Array [
+    "fooA",
+    "barA",
+  ],
+  "sharedB": Array [
+    "fooB",
+    "barB",
+  ],
+}
+`;
