@@ -1,0 +1,595 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`with options={"baseOnInstalled":true} 1`] = `
+Object {
+  "root/allOutOfDate/package.json": Array [
+    Object {
+      "__describe": "All is out-of-date",
+      "dependencies": Object {
+        "foo": "^0.1.2",
+      },
+      "devDependencies": Object {
+        "bar": "^3.3.3",
+      },
+      "name": "all-out-of-date",
+      "version": "987.654.321",
+    },
+    Object {
+      "__describe": "All is out-of-date",
+      "dependencies": Object {
+        "foo": "^1.2.3",
+      },
+      "devDependencies": Object {
+        "bar": "^4.4.4",
+      },
+      "name": "all-out-of-date",
+      "version": "987.654.321",
+    },
+  ],
+  "root/allUpToDate/package.json": Array [
+    Object {
+      "__describe": "All is up-to-date",
+      "dependencies": Object {
+        "foo": "^1.2.3",
+      },
+      "devDependencies": Object {
+        "bar": "^4.4.4",
+      },
+      "name": "all-up-to-date",
+      "version": "987.654.321",
+    },
+    Object {
+      "__describe": "All is up-to-date",
+      "dependencies": Object {
+        "foo": "^1.2.3",
+      },
+      "devDependencies": Object {
+        "bar": "^4.4.4",
+      },
+      "name": "all-up-to-date",
+      "version": "987.654.321",
+    },
+  ],
+  "root/barUpToDate-fooOutOfDate/package.json": Array [
+    Object {
+      "__describe": "bar is up-to-date, foo is out-of-date",
+      "dependencies": Object {
+        "foo": "^0.1.2",
+      },
+      "devDependencies": Object {
+        "bar": "^4.4.4",
+      },
+      "name": "bar-foo",
+      "version": "987.654.321",
+    },
+    Object {
+      "__describe": "bar is up-to-date, foo is out-of-date",
+      "dependencies": Object {
+        "foo": "^1.2.3",
+      },
+      "devDependencies": Object {
+        "bar": "^4.4.4",
+      },
+      "name": "bar-foo",
+      "version": "987.654.321",
+    },
+  ],
+  "root/barelySatisfy/package.json": Array [
+    Object {
+      "__describe": "Current requirement barely covers latest version",
+      "dependencies": Object {
+        "foo": "^1.0.0",
+      },
+      "devDependencies": Object {
+        "bar": "^4.0.0",
+      },
+      "name": "barely-satisfy",
+      "version": "987.654.321",
+    },
+    Object {
+      "__describe": "Current requirement barely covers latest version",
+      "dependencies": Object {
+        "foo": "^1.0.0",
+      },
+      "devDependencies": Object {
+        "bar": "^4.0.0",
+      },
+      "name": "barely-satisfy",
+      "version": "987.654.321",
+    },
+  ],
+  "root/falseHopeDependant/package.json": Array [
+    Object {
+      "__describe": "This package depends on packages that don't exist",
+      "__expect": "Should not appear",
+      "dependencies": Object {
+        "false-dependency-123": "^1.2.3",
+      },
+      "devDependencies": Object {
+        "false-dependency-456": "^4.5.6",
+      },
+      "name": "false-hope-dependant",
+      "peerDependencies": Object {
+        "false-dependency-789": "^7.8.9",
+      },
+      "version": "0.0.0",
+    },
+    Object {
+      "__describe": "This package depends on packages that don't exist",
+      "__expect": "Should not appear",
+      "dependencies": Object {
+        "false-dependency-123": "^1.2.3",
+      },
+      "devDependencies": Object {
+        "false-dependency-456": "^4.5.6",
+      },
+      "name": "false-hope-dependant",
+      "peerDependencies": Object {
+        "false-dependency-789": "^7.8.9",
+      },
+      "version": "0.0.0",
+    },
+  ],
+  "root/fooUpToDate-barOutOfDate/package.json": Array [
+    Object {
+      "__describe": "foo is up-to-date, bar is out-of-date",
+      "dependencies": Object {
+        "foo": "^1.2.3",
+      },
+      "devDependencies": Object {
+        "bar": "^3.3.3",
+      },
+      "name": "foo-bar",
+      "version": "987.654.321",
+    },
+    Object {
+      "__describe": "foo is up-to-date, bar is out-of-date",
+      "dependencies": Object {
+        "foo": "^1.2.3",
+      },
+      "devDependencies": Object {
+        "bar": "^4.4.4",
+      },
+      "name": "foo-bar",
+      "version": "987.654.321",
+    },
+  ],
+  "root/installedUpToDate-manifestOutOfDate/package.json": Array [
+    Object {
+      "__describe": "node_modules is up-to-date, package.json is out-of-date",
+      "dependencies": Object {
+        "foo": "^0.1.2",
+      },
+      "devDependencies": Object {
+        "bar": "^3.3.3",
+      },
+      "name": "installed-manifest",
+      "version": "987.654.321",
+    },
+    Object {
+      "__describe": "node_modules is up-to-date, package.json is out-of-date",
+      "dependencies": Object {
+        "foo": "^0.1.2",
+      },
+      "devDependencies": Object {
+        "bar": "^3.3.3",
+      },
+      "name": "installed-manifest",
+      "version": "987.654.321",
+    },
+  ],
+  "root/internalDependant/package.json": Array [
+    Object {
+      "__describe": "This package depends on every local package with version of '987.654.321' by requirement of '^123.456.789'",
+      "__expect": "Should not appear",
+      "dependencies": Object {
+        "all-up-to-date": "^123.456.789",
+        "foo-bar": "^123.456.789",
+        "manifest-installed": "^123.456.789",
+      },
+      "devDependencies": Object {
+        "all-out-of-date": "^123.456.789",
+        "bar-foo": "^123.456.789",
+        "installed-manifest": "^123.456.789",
+      },
+      "name": "internal-dependant",
+      "peerDependencies": Object {
+        "barely-satisfy": "^123.456.789",
+        "pinned-satisfy": "^123.456.789",
+        "pinned-unsatisfy": "^123.456.789",
+      },
+      "version": "0.0.0",
+    },
+    Object {
+      "__describe": "This package depends on every local package with version of '987.654.321' by requirement of '^123.456.789'",
+      "__expect": "Should not appear",
+      "dependencies": Object {
+        "all-up-to-date": "^123.456.789",
+        "foo-bar": "^123.456.789",
+        "manifest-installed": "^123.456.789",
+      },
+      "devDependencies": Object {
+        "all-out-of-date": "^123.456.789",
+        "bar-foo": "^123.456.789",
+        "installed-manifest": "^123.456.789",
+      },
+      "name": "internal-dependant",
+      "peerDependencies": Object {
+        "barely-satisfy": "^123.456.789",
+        "pinned-satisfy": "^123.456.789",
+        "pinned-unsatisfy": "^123.456.789",
+      },
+      "version": "0.0.0",
+    },
+  ],
+  "root/manifestUpToDate-installedOutOfDate/package.json": Array [
+    Object {
+      "__describe": "package.json is up-to-date, node_modules is out-of-date",
+      "dependencies": Object {
+        "foo": "^1.2.3",
+      },
+      "devDependencies": Object {
+        "bar": "^4.4.4",
+      },
+      "name": "manifest-installed",
+      "version": "987.654.321",
+    },
+    Object {
+      "__describe": "package.json is up-to-date, node_modules is out-of-date",
+      "dependencies": Object {
+        "foo": "^1.2.3",
+      },
+      "devDependencies": Object {
+        "bar": "^4.4.4",
+      },
+      "name": "manifest-installed",
+      "version": "987.654.321",
+    },
+  ],
+  "root/pinnedStatisfy/package.json": Array [
+    Object {
+      "__describe": "Current requirement is exactly latest version",
+      "dependencies": Object {
+        "foo": "1.2.3",
+      },
+      "devDependencies": Object {
+        "bar": "4.4.4",
+      },
+      "name": "pinned-satisfy",
+      "version": "987.654.321",
+    },
+    Object {
+      "__describe": "Current requirement is exactly latest version",
+      "dependencies": Object {
+        "foo": "1.2.3",
+      },
+      "devDependencies": Object {
+        "bar": "4.4.4",
+      },
+      "name": "pinned-satisfy",
+      "version": "987.654.321",
+    },
+  ],
+  "root/pinnedUnsatisfy/package.json": Array [
+    Object {
+      "__describe": "Current requirement does not cover latest version",
+      "dependencies": Object {
+        "foo": "1.0.0",
+      },
+      "devDependencies": Object {
+        "bar": "4.0.0",
+      },
+      "name": "pinned-unsatisfy",
+      "version": "987.654.321",
+    },
+    Object {
+      "__describe": "Current requirement does not cover latest version",
+      "dependencies": Object {
+        "foo": "^1.2.3",
+      },
+      "devDependencies": Object {
+        "bar": "^4.4.4",
+      },
+      "name": "pinned-unsatisfy",
+      "version": "987.654.321",
+    },
+  ],
+}
+`;
+
+exports[`with options=undefined 1`] = `
+Object {
+  "root/allOutOfDate/package.json": Array [
+    Object {
+      "__describe": "All is out-of-date",
+      "dependencies": Object {
+        "foo": "^0.1.2",
+      },
+      "devDependencies": Object {
+        "bar": "^3.3.3",
+      },
+      "name": "all-out-of-date",
+      "version": "987.654.321",
+    },
+    Object {
+      "__describe": "All is out-of-date",
+      "dependencies": Object {
+        "foo": "^1.2.3",
+      },
+      "devDependencies": Object {
+        "bar": "^4.4.4",
+      },
+      "name": "all-out-of-date",
+      "version": "987.654.321",
+    },
+  ],
+  "root/allUpToDate/package.json": Array [
+    Object {
+      "__describe": "All is up-to-date",
+      "dependencies": Object {
+        "foo": "^1.2.3",
+      },
+      "devDependencies": Object {
+        "bar": "^4.4.4",
+      },
+      "name": "all-up-to-date",
+      "version": "987.654.321",
+    },
+    Object {
+      "__describe": "All is up-to-date",
+      "dependencies": Object {
+        "foo": "^1.2.3",
+      },
+      "devDependencies": Object {
+        "bar": "^4.4.4",
+      },
+      "name": "all-up-to-date",
+      "version": "987.654.321",
+    },
+  ],
+  "root/barUpToDate-fooOutOfDate/package.json": Array [
+    Object {
+      "__describe": "bar is up-to-date, foo is out-of-date",
+      "dependencies": Object {
+        "foo": "^0.1.2",
+      },
+      "devDependencies": Object {
+        "bar": "^4.4.4",
+      },
+      "name": "bar-foo",
+      "version": "987.654.321",
+    },
+    Object {
+      "__describe": "bar is up-to-date, foo is out-of-date",
+      "dependencies": Object {
+        "foo": "^1.2.3",
+      },
+      "devDependencies": Object {
+        "bar": "^4.4.4",
+      },
+      "name": "bar-foo",
+      "version": "987.654.321",
+    },
+  ],
+  "root/barelySatisfy/package.json": Array [
+    Object {
+      "__describe": "Current requirement barely covers latest version",
+      "dependencies": Object {
+        "foo": "^1.0.0",
+      },
+      "devDependencies": Object {
+        "bar": "^4.0.0",
+      },
+      "name": "barely-satisfy",
+      "version": "987.654.321",
+    },
+    Object {
+      "__describe": "Current requirement barely covers latest version",
+      "dependencies": Object {
+        "foo": "^1.2.3",
+      },
+      "devDependencies": Object {
+        "bar": "^4.4.4",
+      },
+      "name": "barely-satisfy",
+      "version": "987.654.321",
+    },
+  ],
+  "root/falseHopeDependant/package.json": Array [
+    Object {
+      "__describe": "This package depends on packages that don't exist",
+      "__expect": "Should not appear",
+      "dependencies": Object {
+        "false-dependency-123": "^1.2.3",
+      },
+      "devDependencies": Object {
+        "false-dependency-456": "^4.5.6",
+      },
+      "name": "false-hope-dependant",
+      "peerDependencies": Object {
+        "false-dependency-789": "^7.8.9",
+      },
+      "version": "0.0.0",
+    },
+    Object {
+      "__describe": "This package depends on packages that don't exist",
+      "__expect": "Should not appear",
+      "dependencies": Object {
+        "false-dependency-123": "^1.2.3",
+      },
+      "devDependencies": Object {
+        "false-dependency-456": "^4.5.6",
+      },
+      "name": "false-hope-dependant",
+      "peerDependencies": Object {
+        "false-dependency-789": "^7.8.9",
+      },
+      "version": "0.0.0",
+    },
+  ],
+  "root/fooUpToDate-barOutOfDate/package.json": Array [
+    Object {
+      "__describe": "foo is up-to-date, bar is out-of-date",
+      "dependencies": Object {
+        "foo": "^1.2.3",
+      },
+      "devDependencies": Object {
+        "bar": "^3.3.3",
+      },
+      "name": "foo-bar",
+      "version": "987.654.321",
+    },
+    Object {
+      "__describe": "foo is up-to-date, bar is out-of-date",
+      "dependencies": Object {
+        "foo": "^1.2.3",
+      },
+      "devDependencies": Object {
+        "bar": "^4.4.4",
+      },
+      "name": "foo-bar",
+      "version": "987.654.321",
+    },
+  ],
+  "root/installedUpToDate-manifestOutOfDate/package.json": Array [
+    Object {
+      "__describe": "node_modules is up-to-date, package.json is out-of-date",
+      "dependencies": Object {
+        "foo": "^0.1.2",
+      },
+      "devDependencies": Object {
+        "bar": "^3.3.3",
+      },
+      "name": "installed-manifest",
+      "version": "987.654.321",
+    },
+    Object {
+      "__describe": "node_modules is up-to-date, package.json is out-of-date",
+      "dependencies": Object {
+        "foo": "^1.2.3",
+      },
+      "devDependencies": Object {
+        "bar": "^4.4.4",
+      },
+      "name": "installed-manifest",
+      "version": "987.654.321",
+    },
+  ],
+  "root/internalDependant/package.json": Array [
+    Object {
+      "__describe": "This package depends on every local package with version of '987.654.321' by requirement of '^123.456.789'",
+      "__expect": "Should not appear",
+      "dependencies": Object {
+        "all-up-to-date": "^123.456.789",
+        "foo-bar": "^123.456.789",
+        "manifest-installed": "^123.456.789",
+      },
+      "devDependencies": Object {
+        "all-out-of-date": "^123.456.789",
+        "bar-foo": "^123.456.789",
+        "installed-manifest": "^123.456.789",
+      },
+      "name": "internal-dependant",
+      "peerDependencies": Object {
+        "barely-satisfy": "^123.456.789",
+        "pinned-satisfy": "^123.456.789",
+        "pinned-unsatisfy": "^123.456.789",
+      },
+      "version": "0.0.0",
+    },
+    Object {
+      "__describe": "This package depends on every local package with version of '987.654.321' by requirement of '^123.456.789'",
+      "__expect": "Should not appear",
+      "dependencies": Object {
+        "all-up-to-date": "^123.456.789",
+        "foo-bar": "^123.456.789",
+        "manifest-installed": "^123.456.789",
+      },
+      "devDependencies": Object {
+        "all-out-of-date": "^123.456.789",
+        "bar-foo": "^123.456.789",
+        "installed-manifest": "^123.456.789",
+      },
+      "name": "internal-dependant",
+      "peerDependencies": Object {
+        "barely-satisfy": "^123.456.789",
+        "pinned-satisfy": "^123.456.789",
+        "pinned-unsatisfy": "^123.456.789",
+      },
+      "version": "0.0.0",
+    },
+  ],
+  "root/manifestUpToDate-installedOutOfDate/package.json": Array [
+    Object {
+      "__describe": "package.json is up-to-date, node_modules is out-of-date",
+      "dependencies": Object {
+        "foo": "^1.2.3",
+      },
+      "devDependencies": Object {
+        "bar": "^4.4.4",
+      },
+      "name": "manifest-installed",
+      "version": "987.654.321",
+    },
+    Object {
+      "__describe": "package.json is up-to-date, node_modules is out-of-date",
+      "dependencies": Object {
+        "foo": "^1.2.3",
+      },
+      "devDependencies": Object {
+        "bar": "^4.4.4",
+      },
+      "name": "manifest-installed",
+      "version": "987.654.321",
+    },
+  ],
+  "root/pinnedStatisfy/package.json": Array [
+    Object {
+      "__describe": "Current requirement is exactly latest version",
+      "dependencies": Object {
+        "foo": "1.2.3",
+      },
+      "devDependencies": Object {
+        "bar": "4.4.4",
+      },
+      "name": "pinned-satisfy",
+      "version": "987.654.321",
+    },
+    Object {
+      "__describe": "Current requirement is exactly latest version",
+      "dependencies": Object {
+        "foo": "1.2.3",
+      },
+      "devDependencies": Object {
+        "bar": "4.4.4",
+      },
+      "name": "pinned-satisfy",
+      "version": "987.654.321",
+    },
+  ],
+  "root/pinnedUnsatisfy/package.json": Array [
+    Object {
+      "__describe": "Current requirement does not cover latest version",
+      "dependencies": Object {
+        "foo": "1.0.0",
+      },
+      "devDependencies": Object {
+        "bar": "4.0.0",
+      },
+      "name": "pinned-unsatisfy",
+      "version": "987.654.321",
+    },
+    Object {
+      "__describe": "Current requirement does not cover latest version",
+      "dependencies": Object {
+        "foo": "^1.2.3",
+      },
+      "devDependencies": Object {
+        "bar": "^4.4.4",
+      },
+      "name": "pinned-unsatisfy",
+      "version": "987.654.321",
+    },
+  ],
+}
+`;
