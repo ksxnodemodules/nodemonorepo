@@ -1,7 +1,7 @@
 dependencies:
   '@types/fs-extra': 5.0.2
-  '@types/node': 10.0.1
-  '@types/ramda': 0.25.24
+  '@types/node': 10.0.8
+  '@types/ramda': 0.25.28
   fs-extra: 6.0.1
   fs-tree-utils: 'link:../fs-tree-utils'
   ramda: 0.25.0
@@ -9,18 +9,18 @@ dependencies:
 packages:
   /@types/fs-extra/5.0.2:
     dependencies:
-      '@types/node': 10.0.1
+      '@types/node': 10.0.8
     dev: false
     resolution:
       integrity: sha512-Q3FWsbdmkQd1ib11A4XNWQvRD//5KpPoGawA8aB2DR7pWKoW9XQv3+dGxD/Z1eVFze23Okdo27ZQytVFlweKvQ==
-  /@types/node/10.0.1:
+  /@types/node/10.0.8:
     dev: false
     resolution:
-      integrity: sha512-HKTs07TC1RJRBd9z0Kf/cy37j2HCbUfcVKS6Xm9orZVcLqZ1JXWe/JTDLw6AwxmLOxV45fDpOMPXyqXU3TfOPQ==
-  /@types/ramda/0.25.24:
+      integrity: sha512-MFFKFv2X4iZy/NFl1m1E8uwE1CR96SGwJjgHma09PLtqOWoj3nqeJHMG+P/EuJGVLvC2I6MdQRQsr4TcRduIow==
+  /@types/ramda/0.25.28:
     dev: false
     resolution:
-      integrity: sha512-c0TmWA7d4y9KLJJwL/cLPEfSReSgFQK9BtemcCATT48lMeyD7HG8IfGY8bamSuz/Byx1l+13hZV0PCvHsgMB3w==
+      integrity: sha512-H2NDAXtu2NXXBM/GMkASnKX2sVMu3aMlUBP6OHeI22cb+5+Zb74ACQs5ymJo/vaE/iGjLP4UIZdqi67j1nws1A==
   /fs-extra/6.0.1:
     dependencies:
       graceful-fs: 4.1.11
@@ -53,9 +53,9 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 6
 shrinkwrapVersion: 3
 specifiers:
-  '@types/fs-extra': ^5.0.1
-  '@types/node': ^10.0.0
-  '@types/ramda': ^0.25.24
+  '@types/fs-extra': ^5.0.2
+  '@types/node': ^10.0.8
+  '@types/ramda': ^0.25.28
   fs-extra: ^6.0.1
   fs-tree-utils: ^0.0.5
   ramda: ^0.25.0

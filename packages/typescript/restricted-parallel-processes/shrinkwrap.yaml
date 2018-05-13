@@ -1,14 +1,14 @@
 dependencies:
-  '@types/node': 10.0.4
+  '@types/node': 10.0.8
   restricted-concurrent-actions: 'link:../restricted-concurrent-actions'
 packages:
-  /@types/node/10.0.4:
+  /@types/node/10.0.8:
     dev: false
     resolution:
-      integrity: sha512-RisaZmcmCLjRipAY7nVi3fmkIk4Z0JMn8YHdGF6qYMsIDpD0dfzz+3yy2dL5Q5aHWOnqPx51IRxkA44myknJvw==
+      integrity: sha512-MFFKFv2X4iZy/NFl1m1E8uwE1CR96SGwJjgHma09PLtqOWoj3nqeJHMG+P/EuJGVLvC2I6MdQRQsr4TcRduIow==
 registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 6
 shrinkwrapVersion: 3
 specifiers:
-  '@types/node': ^10.0.4
+  '@types/node': ^10.0.8
   restricted-concurrent-actions: ^0.0.6

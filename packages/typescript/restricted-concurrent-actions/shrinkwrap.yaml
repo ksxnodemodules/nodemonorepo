@@ -1,14 +1,14 @@
 dependencies:
-  '@types/node': 10.0.3
+  '@types/node': 10.0.8
   monorepo-shared-assets: 'link:../monorepo-shared-assets'
 packages:
-  /@types/node/10.0.3:
+  /@types/node/10.0.8:
     dev: false
     resolution:
-      integrity: sha512-J7nx6JzxmtT4zyvfLipYL7jNaxvlCWpyG7JhhCQ4fQyG+AGfovAHoYR55TFx+X8akfkUJYpt5JG6GPeFMjZaCQ==
+      integrity: sha512-MFFKFv2X4iZy/NFl1m1E8uwE1CR96SGwJjgHma09PLtqOWoj3nqeJHMG+P/EuJGVLvC2I6MdQRQsr4TcRduIow==
 registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 6
 shrinkwrapVersion: 3
 specifiers:
-  '@types/node': ^10.0.3
+  '@types/node': ^10.0.8
   monorepo-shared-assets: ^0.0.10

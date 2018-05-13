@@ -16,9 +16,9 @@
   "dependencies": {
     "fs-extra": "^6.0.1",
     "ramda": "^0.25.0",
-    "@types/fs-extra": "^5.0.1",
-    "@types/ramda": "^0.25.21",
-    "@types/node": "^10.0.0"
+    "@types/fs-extra": "^5.0.2",
+    "@types/ramda": "^0.25.28",
+    "@types/node": "^10.0.8"
   },
   "devDependencies": {
     "unique-temp-path": "*"

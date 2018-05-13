@@ -1,17 +1,17 @@
 dependencies:
-  '@types/node': 10.0.0
+  '@types/node': 10.0.8
   path-env: 'link:../path-env'
   preloaded-node: 'link:../../javascript/preloaded-node'
   preloaded-node.private: 'link:../../javascript/preloaded-node.private'
 packages:
-  /@types/node/10.0.0:
+  /@types/node/10.0.8:
     dev: false
     resolution:
-      integrity: sha512-kctoM36XiNZT86a7tPsUje+Q/yl+dqELjtYApi0T5eOQ90Elhu0MI10rmYk44yEP4v1jdDvtjQ9DFtpRtHf2Bw==
+      integrity: sha512-MFFKFv2X4iZy/NFl1m1E8uwE1CR96SGwJjgHma09PLtqOWoj3nqeJHMG+P/EuJGVLvC2I6MdQRQsr4TcRduIow==
 registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 6
 shrinkwrapVersion: 3
 specifiers:
-  '@types/node': ^10.0.0
+  '@types/node': ^10.0.8
   path-env: '*'
   preloaded-node.private: '*'

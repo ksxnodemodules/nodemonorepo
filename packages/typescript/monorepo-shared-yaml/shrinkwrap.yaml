@@ -1,7 +1,7 @@
 dependencies:
   '@types/fs-extra': 5.0.2
   '@types/js-yaml': 3.11.1
-  '@types/node': 10.0.3
+  '@types/node': 10.0.8
   fs-extra: 6.0.1
   fs-tree-utils: 'link:../fs-tree-utils'
   js-yaml: 3.11.0
@@ -20,6 +20,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-J7nx6JzxmtT4zyvfLipYL7jNaxvlCWpyG7JhhCQ4fQyG+AGfovAHoYR55TFx+X8akfkUJYpt5JG6GPeFMjZaCQ==
+  /@types/node/10.0.8:
+    dev: false
+    resolution:
+      integrity: sha512-MFFKFv2X4iZy/NFl1m1E8uwE1CR96SGwJjgHma09PLtqOWoj3nqeJHMG+P/EuJGVLvC2I6MdQRQsr4TcRduIow==
   /argparse/1.0.10:
     dependencies:
       sprintf-js: 1.0.3
@@ -73,7 +77,7 @@ shrinkwrapVersion: 3
 specifiers:
   '@types/fs-extra': ^5.0.2
   '@types/js-yaml': ^3.11.1
-  '@types/node': ^10.0.3
+  '@types/node': ^10.0.8
   fs-extra: ^6.0.1
   fs-tree-utils: '*'
   js-yaml: ^3.11.0

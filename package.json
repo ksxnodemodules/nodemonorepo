@@ -12,15 +12,15 @@
     "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
   },
   "devDependencies": {
-    "jest": "^22.1.4",
-    "jest-extended": "^0.7.0",
-    "ts-jest": "^22.4.4",
+    "jest": "^22.4.3",
+    "jest-extended": "^0.7.1",
+    "ts-jest": "^22.4.6",
     "babel-jest": "^22.4.3",
     "yaml-jest": "^1.0.5",
     "js-yaml": "^3.11.0",
-    "standard": "^11.0.0",
+    "standard": "^11.0.1",
     "typescript": "^2.8.3",
-    "coveralls": "^3.0.0",
+    "coveralls": "^3.0.1",
     "glob": "^7.1.2",
     "extra-jest": "*",
     "git-ts": "*",
@@ -30,7 +30,7 @@
     "@types/jest": "^22.2.3",
     "@types/js-yaml": "^3.11.1",
     "@types/glob": "^5.0.35",
-    "@types/node": "^10.0.0"
+    "@types/node": "^10.0.8"
   },
   "workspaces": [
     "packages/*/*"

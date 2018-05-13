@@ -1,17 +1,17 @@
 dependencies:
-  '@types/node': 10.0.0
+  '@types/node': 10.0.8
 devDependencies:
-  '@types/ramda': 0.25.21
+  '@types/ramda': 0.25.28
   ramda: 0.25.0
 packages:
-  /@types/node/10.0.0:
+  /@types/node/10.0.8:
     dev: false
     resolution:
-      integrity: sha512-kctoM36XiNZT86a7tPsUje+Q/yl+dqELjtYApi0T5eOQ90Elhu0MI10rmYk44yEP4v1jdDvtjQ9DFtpRtHf2Bw==
-  /@types/ramda/0.25.21:
+      integrity: sha512-MFFKFv2X4iZy/NFl1m1E8uwE1CR96SGwJjgHma09PLtqOWoj3nqeJHMG+P/EuJGVLvC2I6MdQRQsr4TcRduIow==
+  /@types/ramda/0.25.28:
     dev: true
     resolution:
-      integrity: sha512-y4Dx3t+EA5Y+s87cwUoIzo0Tsj9z7QCu4gaXrdFln4wQRgk9igBskEEe7gZ0PG8dSXtQb29oA3RS//3XquHdiw==
+      integrity: sha512-H2NDAXtu2NXXBM/GMkASnKX2sVMu3aMlUBP6OHeI22cb+5+Zb74ACQs5ymJo/vaE/iGjLP4UIZdqi67j1nws1A==
   /ramda/0.25.0:
     dev: true
     resolution:
@@ -20,6 +20,6 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 6
 shrinkwrapVersion: 3
 specifiers:
-  '@types/node': ^10.0.0
-  '@types/ramda': ^0.25.21
+  '@types/node': ^10.0.8
+  '@types/ramda': ^0.25.28
   ramda: ^0.25.0
