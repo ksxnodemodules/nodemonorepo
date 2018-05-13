@@ -29,14 +29,21 @@ describe('with KeySetProvider=FIRST', () => {
   })
 })
 
-it('with KeySetProvider=INNER_JOIN', () => {
-  const result = zip.object(foo, bar, INNER_JOIN)
-  expect(result).toMatchSnapshot()
-  expect(result).toEqual(zip.object(bar, foo, INNER_JOIN))
+describe('with KeySetProvider=INNER_JOIN', () => {
+  it('with foo as first argument', () => {
+    const result = zip.object(foo, bar, INNER_JOIN)
+    expect(result).toMatchSnapshot()
+  })
+
+  it('with bar as first argument', () => {
+    const result = zip.object(bar, foo, INNER_JOIN)
+    expect(result).toMatchSnapshot()
+  })
 })
 
-it('with KeySetProvider=OUTER_JOIN', () => {
-  const result = zip.object(foo, bar, OUTER_JOIN)
-  expect(result).toMatchSnapshot()
-  expect(result).toEqual(zip.object(bar, foo, OUTER_JOIN))
+describe('with KeySetProvider=OUTER_JOIN', () => {
+  it('with bar as first argument', () => {
+    const result = zip.object(bar, foo, OUTER_JOIN)
+    expect(result).toMatchSnapshot()
+  })
 })

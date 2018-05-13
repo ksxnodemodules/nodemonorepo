@@ -42,7 +42,20 @@ Object {
 }
 `;
 
-exports[`with KeySetProvider=INNER_JOIN 1`] = `
+exports[`with KeySetProvider=INNER_JOIN with bar as first argument 1`] = `
+Object {
+  "sharedA": Array [
+    "barA",
+    "fooA",
+  ],
+  "sharedB": Array [
+    "barB",
+    "fooB",
+  ],
+}
+`;
+
+exports[`with KeySetProvider=INNER_JOIN with foo as first argument 1`] = `
 Object {
   "sharedA": Array [
     "fooA",
@@ -55,31 +68,31 @@ Object {
 }
 `;
 
-exports[`with KeySetProvider=OUTER_JOIN 1`] = `
+exports[`with KeySetProvider=OUTER_JOIN with bar as first argument 1`] = `
 Object {
   "ownBarC": Array [
-    undefined,
     "barC",
+    undefined,
   ],
   "ownBarD": Array [
-    undefined,
     "barD",
+    undefined,
   ],
   "ownFooC": Array [
-    "fooC",
     undefined,
+    "fooC",
   ],
   "ownFooD": Array [
-    "fooD",
     undefined,
+    "fooD",
   ],
   "sharedA": Array [
-    "fooA",
     "barA",
+    "fooA",
   ],
   "sharedB": Array [
-    "fooB",
     "barB",
+    "fooB",
   ],
 }
 `;
