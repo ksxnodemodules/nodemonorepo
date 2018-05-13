@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`listOutdatedDependencies with options with all custom options 1`] = `
+exports[`with options with all custom options 1`] = `
 Array [
   Object {
     "manifestContent": Object {
@@ -121,7 +121,7 @@ Array [
 ]
 `;
 
-exports[`listOutdatedDependencies with options with beOnInstalled=true 1`] = `
+exports[`with options with beOnInstalled=true 1`] = `
 Array [
   Object {
     "manifestContent": Object {
@@ -242,7 +242,7 @@ Array [
 ]
 `;
 
-exports[`listOutdatedDependencies with options with custom generateVersionRequirement 1`] = `
+exports[`with options with custom generateVersionRequirement 1`] = `
 Array [
   Object {
     "manifestContent": Object {
@@ -387,7 +387,7 @@ Array [
 ]
 `;
 
-exports[`listOutdatedDependencies with options with custom transformVersionRequirement 1`] = `
+exports[`with options with custom transformVersionRequirement 1`] = `
 Array [
   Object {
     "manifestContent": Object {
@@ -508,7 +508,7 @@ Array [
 ]
 `;
 
-exports[`listOutdatedDependencies without options 1`] = `
+exports[`without options 1`] = `
 Array [
   Object {
     "manifestContent": Object {
