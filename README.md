@@ -84,7 +84,23 @@ pnpm run mismatched-versions
 pnpx nested-wrkspc.prv verman mismatches -u .
 ```
 
+#### Out-of-date external packages
+
+**Check for outdated packages:**
+
+```sh
+pnpx nested-wrkspc.prv depman outdated .
+```
+
+**Update outdated packages:**
+
+```sh
+pnpx nested-wrkspc.prv depman outdated -u .
+pnpm recursive link --shamefully-flatten # or yarn install
+```
+
 ### Untested Features
 
 1. CLI subcommand `publish` in package [`nested-workspace-helper`](./packages/typescript/nested-workspace-helper): Cannot mock npm registry in CLI environment.
-2. Entire package [`git-ts`](./packages/typescript/git-ts): It's too complicated to create a test friendly git repo.
+2. CLI subcommand `dependency-management outdated` in package [`nested-workspace-helper`](./packages/typescript/nested-workspace-helper): Cannot mock npm registry in CLI environment.
+3. Entire package [`git-ts`](./packages/typescript/git-ts): It's too complicated to create a test friendly git repo.
