@@ -57,6 +57,6 @@ specifiers:
   '@types/node': ^10.0.8
   '@types/ramda': ^0.25.28
   fs-extra: ^6.0.1
-  fs-tree-utils: ^0.0.5
+  fs-tree-utils: ^0.0.6
   ramda: ^0.25.0
-  unique-temp-path: ^0.0.5
+  unique-temp-path: ^0.0.6

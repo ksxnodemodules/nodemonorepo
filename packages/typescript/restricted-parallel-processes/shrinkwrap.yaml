@@ -11,4 +11,4 @@ shrinkwrapMinorVersion: 6
 shrinkwrapVersion: 3
 specifiers:
   '@types/node': ^10.0.8
-  restricted-concurrent-actions: ^0.0.6
+  restricted-concurrent-actions: ^0.0.5

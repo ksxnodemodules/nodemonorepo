@@ -1,6 +1,6 @@
 {
   "name": "nested-workspace-helper",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Some commands to in needs for nodemonorepo",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
@@ -26,8 +26,8 @@
     "node-fetch": "^2.1.2",
     "yargs": "^11.0.0",
     "chalk": "^2.4.1",
-    "monorepo-shared-assets": "^0.0.10",
-    "fs-tree-utils": "^0.0.5",
+    "monorepo-shared-assets": "^0.0.9",
+    "fs-tree-utils": "^0.0.6",
     "@types/ramda": "^0.25.28",
     "@types/semver": "^5.5.0",
     "@types/js-yaml": "^3.11.1",
