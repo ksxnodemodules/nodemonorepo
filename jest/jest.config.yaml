@@ -15,4 +15,4 @@ coveragePathIgnorePatterns:
   - /node_modules/
   - \/check\/
   - \/test\/
-  - \/.fallback\/
+  - \/.polyfill\/
