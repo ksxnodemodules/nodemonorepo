@@ -2,7 +2,7 @@ dependencies:
   nested-workspace-helper: 'link:../../typescript/nested-workspace-helper'
   preloaded-node.private: 'link:../preloaded-node.private'
 registry: 'https://registry.npmjs.org/'
-shrinkwrapMinorVersion: 5
+shrinkwrapMinorVersion: 6
 shrinkwrapVersion: 3
 specifiers:
   nested-workspace-helper: ^0.1.2
