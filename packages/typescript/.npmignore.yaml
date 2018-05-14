@@ -2,3 +2,4 @@ append:
   - '*.map'
   - '*.ts'
   - '!*.d.ts'
+  - '*.test.d.ts'

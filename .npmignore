@@ -5,6 +5,7 @@ test
 /check
 __mocks__
 __snapshots__
+*.test.js
 tmp
 temp
 tmp.*
