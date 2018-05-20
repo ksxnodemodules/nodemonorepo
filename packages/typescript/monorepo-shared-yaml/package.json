@@ -1,6 +1,6 @@
 {
   "name": "monorepo-shared-yaml",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Just js-yaml + some extra methods",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
