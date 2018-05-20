@@ -18,8 +18,8 @@
     "ramda": "^0.25.0",
     "tslib": "^1.9.1",
     "@types/fs-extra": "^5.0.2",
-    "@types/ramda": "^0.25.28",
-    "@types/node": "^10.0.8"
+    "@types/ramda": "^0.25.29",
+    "@types/node": "^10.1.2"
   },
   "devDependencies": {
     "unique-temp-path": "*"

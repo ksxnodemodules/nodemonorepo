@@ -22,6 +22,6 @@
   "dependencies": {
     "tslib": "^1.9.1",
     "restricted-concurrent-actions": "^0.0.7",
-    "@types/node": "^10.0.8"
+    "@types/node": "^10.1.2"
   }
 }
