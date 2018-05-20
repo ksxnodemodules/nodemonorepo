@@ -1,7 +1,7 @@
 dependencies:
   '@types/fs-extra': 5.0.2
-  '@types/node': 10.0.8
-  '@types/ramda': 0.25.28
+  '@types/node': 10.1.2
+  '@types/ramda': 0.25.29
   fs-extra: 6.0.1
   ramda: 0.25.0
   tslib: 1.9.1
@@ -18,10 +18,14 @@ packages:
     dev: false
     resolution:
       integrity: sha512-MFFKFv2X4iZy/NFl1m1E8uwE1CR96SGwJjgHma09PLtqOWoj3nqeJHMG+P/EuJGVLvC2I6MdQRQsr4TcRduIow==
-  /@types/ramda/0.25.28:
+  /@types/node/10.1.2:
     dev: false
     resolution:
-      integrity: sha512-H2NDAXtu2NXXBM/GMkASnKX2sVMu3aMlUBP6OHeI22cb+5+Zb74ACQs5ymJo/vaE/iGjLP4UIZdqi67j1nws1A==
+      integrity: sha512-bjk1RIeZBCe/WukrFToIVegOf91Pebr8cXYBwLBIsfiGWVQ+ifwWsT59H3RxrWzWrzd1l/Amk1/ioY5Fq3/bpA==
+  /@types/ramda/0.25.29:
+    dev: false
+    resolution:
+      integrity: sha512-fWuYGHXie0IfRMh7zh90fsbgEvAfPt+SBmg1eNhTVecnjDQujP4npzJJFZdron9RwxfKmZ2PWmcfa1oKln4yfA==
   /fs-extra/6.0.1:
     dependencies:
       graceful-fs: 4.1.11
@@ -59,8 +63,8 @@ shrinkwrapMinorVersion: 6
 shrinkwrapVersion: 3
 specifiers:
   '@types/fs-extra': ^5.0.2
-  '@types/node': ^10.0.8
-  '@types/ramda': ^0.25.28
+  '@types/node': ^10.1.2
+  '@types/ramda': ^0.25.29
   fs-extra: ^6.0.1
   ramda: ^0.25.0
   tslib: ^1.9.1

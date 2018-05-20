@@ -1,6 +1,6 @@
 dependencies:
   '@types/json5': 0.0.29
-  '@types/node': 10.0.8
+  '@types/node': 10.1.2
   json5: 1.0.1
   ts-node: 6.0.3
   tsconfig.private: 'link:../../typescript/tsconfig.private'
@@ -10,10 +10,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-7ihweulOEdK4J7y+UnC86n8+ce4=
-  /@types/node/10.0.8:
+  /@types/node/10.1.2:
     dev: false
     resolution:
-      integrity: sha512-MFFKFv2X4iZy/NFl1m1E8uwE1CR96SGwJjgHma09PLtqOWoj3nqeJHMG+P/EuJGVLvC2I6MdQRQsr4TcRduIow==
+      integrity: sha512-bjk1RIeZBCe/WukrFToIVegOf91Pebr8cXYBwLBIsfiGWVQ+ifwWsT59H3RxrWzWrzd1l/Amk1/ioY5Fq3/bpA==
   /ansi-styles/3.2.1:
     dependencies:
       color-convert: 1.9.1
@@ -147,7 +147,7 @@ shrinkwrapMinorVersion: 6
 shrinkwrapVersion: 3
 specifiers:
   '@types/json5': ^0.0.29
-  '@types/node': ^10.0.8
+  '@types/node': ^10.1.2
   json5: ^1.0.1
   ts-node: ^6.0.3
   typescript: ^2.8.3
