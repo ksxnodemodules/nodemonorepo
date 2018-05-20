@@ -5,6 +5,7 @@ dependencies:
   fs-extra: 6.0.1
   fs-tree-utils: 'link:../fs-tree-utils'
   ramda: 0.25.0
+  tslib: 1.9.1
   unique-temp-path: 'link:../unique-temp-path'
 packages:
   /@types/fs-extra/5.0.2:
@@ -45,6 +46,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-GXpfrYVPwx3K7RQ6aYT8KPS8XViSXUVJT1ONhoKPE9VAleW42YE+U+8VEyGWt41EnEQW7gwecYJriTI0pKoecQ==
+  /tslib/1.9.1:
+    dev: false
+    resolution:
+      integrity: sha512-avfPS28HmGLLc2o4elcc2EIq2FcH++Yo5YxpBZi9Yw93BCTGFthI4HPE4Rpep6vSYQaK8e69PelM44tPj+RaQg==
   /universalify/0.1.1:
     dev: false
     resolution:
@@ -59,4 +64,5 @@ specifiers:
   fs-extra: ^6.0.1
   fs-tree-utils: ^0.0.6
   ramda: ^0.25.0
-  unique-temp-path: ^0.0.6
+  tslib: ^1.9.1
+  unique-temp-path: ^0.0.7

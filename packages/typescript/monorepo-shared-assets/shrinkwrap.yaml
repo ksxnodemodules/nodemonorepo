@@ -3,6 +3,7 @@ dependencies:
   '@types/ramda': 0.25.28
   immutable: 3.8.2
   ramda: 0.25.0
+  tslib: 1.9.1
 packages:
   /@types/node/10.0.8:
     dev: false
@@ -22,6 +23,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-GXpfrYVPwx3K7RQ6aYT8KPS8XViSXUVJT1ONhoKPE9VAleW42YE+U+8VEyGWt41EnEQW7gwecYJriTI0pKoecQ==
+  /tslib/1.9.1:
+    dev: false
+    resolution:
+      integrity: sha512-avfPS28HmGLLc2o4elcc2EIq2FcH++Yo5YxpBZi9Yw93BCTGFthI4HPE4Rpep6vSYQaK8e69PelM44tPj+RaQg==
 registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 6
 shrinkwrapVersion: 3
@@ -30,3 +35,4 @@ specifiers:
   '@types/ramda': ^0.25.28
   immutable: ^3.8.2
   ramda: ^0.25.0
+  tslib: ^1.9.1

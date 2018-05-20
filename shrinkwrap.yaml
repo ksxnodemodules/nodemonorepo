@@ -19,6 +19,7 @@ devDependencies:
   js-yaml: 3.11.0
   standard: 11.0.1
   ts-jest: 22.4.6
+  tslib: 1.9.1
   typescript: 2.8.3
   yaml-jest: 1.0.5
 packages:
@@ -4352,6 +4353,10 @@ packages:
       typescript: 2.x
     resolution:
       integrity: sha512-kYQ6g1G1AU+bOO9rv+SSQXg4WTcni6Wx3AM48iHni0nP1vIuhdNRjKTE9Cxx36Ix/IOV7L85iKu07dgXJzH2pQ==
+  /tslib/1.9.1:
+    dev: true
+    resolution:
+      integrity: sha512-avfPS28HmGLLc2o4elcc2EIq2FcH++Yo5YxpBZi9Yw93BCTGFthI4HPE4Rpep6vSYQaK8e69PelM44tPj+RaQg==
   /tunnel-agent/0.6.0:
     dependencies:
       safe-buffer: 5.1.2
@@ -4692,5 +4697,6 @@ specifiers:
   preloaded-node.private: '*'
   standard: ^11.0.1
   ts-jest: ^22.4.6
+  tslib: ^1.9.1
   typescript: ^2.8.3
   yaml-jest: ^1.0.5

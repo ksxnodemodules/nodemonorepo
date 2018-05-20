@@ -17,6 +17,7 @@ dependencies:
   preloaded-node.private: 'link:../../javascript/preloaded-node.private'
   ramda: 0.25.0
   semver: 'link:../semver'
+  tslib: 1.9.1
   unique-temp-path: 'link:../unique-temp-path'
   yargs: 'link:../yargs'
 packages:
@@ -109,6 +110,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=
+  /tslib/1.9.1:
+    dev: false
+    resolution:
+      integrity: sha512-avfPS28HmGLLc2o4elcc2EIq2FcH++Yo5YxpBZi9Yw93BCTGFthI4HPE4Rpep6vSYQaK8e69PelM44tPj+RaQg==
   /universalify/0.1.1:
     dev: false
     resolution:
@@ -133,4 +138,5 @@ specifiers:
   preloaded-node.private: '*'
   ramda: ^0.25.0
   semver: ^5.5.0
+  tslib: ^1.9.1
   yargs: ^11.0.0

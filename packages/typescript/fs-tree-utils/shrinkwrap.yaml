@@ -4,6 +4,7 @@ dependencies:
   '@types/ramda': 0.25.28
   fs-extra: 6.0.1
   ramda: 0.25.0
+  tslib: 1.9.1
 devDependencies:
   unique-temp-path: 'link:../unique-temp-path'
 packages:
@@ -45,6 +46,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-GXpfrYVPwx3K7RQ6aYT8KPS8XViSXUVJT1ONhoKPE9VAleW42YE+U+8VEyGWt41EnEQW7gwecYJriTI0pKoecQ==
+  /tslib/1.9.1:
+    dev: false
+    resolution:
+      integrity: sha512-avfPS28HmGLLc2o4elcc2EIq2FcH++Yo5YxpBZi9Yw93BCTGFthI4HPE4Rpep6vSYQaK8e69PelM44tPj+RaQg==
   /universalify/0.1.1:
     dev: false
     resolution:
@@ -58,4 +63,5 @@ specifiers:
   '@types/ramda': ^0.25.28
   fs-extra: ^6.0.1
   ramda: ^0.25.0
+  tslib: ^1.9.1
   unique-temp-path: '*'

@@ -18,6 +18,7 @@
     "wrapper"
   ],
   "dependencies": {
+    "tslib": "^1.9.1",
     "@types/node": "^10.0.8"
   }
 }
