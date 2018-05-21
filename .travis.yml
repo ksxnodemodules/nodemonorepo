@@ -22,7 +22,7 @@ before_install:
 
 install:
   - pnpm recursive link --shamefully-flatten
-  - bash sh/ci/before-script.sh
+  - bash sh/ci/install.sh
 
 script:
   - pnpm test -- --runInBand
