@@ -1,0 +1,25 @@
+{
+  "name": "nested-tasks",
+  "version": "0.0.0",
+  "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksxnodemodules/nodemonorepo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
+  },
+  "keywords": [
+    "task",
+    "script",
+    "nested"
+  ],
+  "dependencies": {
+    "tslib": "^1.9.1",
+    "fs-tree-utils": "^0.0.7",
+    "monorepo-shared-yaml": "^0.0.5",
+    "@types/node": "^10.1.2"
+  }
+}
