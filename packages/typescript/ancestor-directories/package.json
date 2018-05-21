@@ -17,7 +17,9 @@
     "parent",
     "container",
     "dirname",
-    "directory"
+    "directory",
+    "list",
+    "iterate"
   ],
   "dependencies": {
     "tslib": "^1.9.1",
