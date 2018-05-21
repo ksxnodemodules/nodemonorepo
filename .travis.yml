@@ -31,6 +31,5 @@ script:
   - pnpm run build
 
 after_script:
-  - echo COVERAGE
   - bash sh/ci/coveralls.sh
   - bash sh/ci/codecov.sh
