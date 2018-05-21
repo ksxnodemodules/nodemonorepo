@@ -21,7 +21,6 @@
     "standard": "^11.0.1",
     "typescript": "^2.8.3",
     "tslib": "^1.9.1",
-    "coveralls": "^3.0.1",
     "glob": "^7.1.2",
     "extra-jest": "*",
     "git-ts": "*",
