@@ -1,6 +1,6 @@
 {
   "name": "ancestor-directories",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Iterate over all parent directories of a given path",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
