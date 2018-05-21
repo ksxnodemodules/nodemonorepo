@@ -17,9 +17,6 @@ cache:
     - $HOME/.node-gyp
     - $HOME/.node_libraries
 
-before_script:
-  - chmod -R +x sh
-
 before_install:
   - curl -L https://unpkg.com/@pnpm/self-installer | node
 
