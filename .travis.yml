@@ -32,3 +32,4 @@ script:
 
 after_script:
   - bash sh/ci/coveralls.sh
+  - bash sh/ci/codecov.sh
