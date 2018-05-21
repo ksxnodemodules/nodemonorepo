@@ -27,6 +27,7 @@ install:
   - bash sh/ci/install.sh
 
 script:
+  - node -v
   - pnpm test -- --runInBand
   - pnpm run build
 
