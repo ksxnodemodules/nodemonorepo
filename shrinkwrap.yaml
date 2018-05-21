@@ -1,21 +1,21 @@
 dependencies:
-  extra-jest: 'link:packages/typescript/extra-jest'
-  git-ts: 'link:packages/typescript/git-ts'
-  ignore-file.private: 'link:packages/typescript/ignore-file.private'
   nested-workspace-helper: 'link:packages/typescript/nested-workspace-helper'
-  nested-workspace-helper.private: 'link:packages/javascript/nested-workspace-helper.private'
   preloaded-node: 'link:packages/javascript/preloaded-node'
-  preloaded-node.private: 'link:packages/javascript/preloaded-node.private'
 devDependencies:
   '@types/glob': 5.0.35
   '@types/jest': 22.2.3
   '@types/js-yaml': 3.11.1
   '@types/node': 10.1.2
   babel-jest: 22.4.4
+  extra-jest: 'link:packages/typescript/extra-jest'
+  git-ts: 'link:packages/typescript/git-ts'
   glob: 7.1.2
+  ignore-file.private: 'link:packages/typescript/ignore-file.private'
   jest: 22.4.4
   jest-extended: 0.7.1
   js-yaml: 3.11.0
+  nested-workspace-helper.private: 'link:packages/javascript/nested-workspace-helper.private'
+  preloaded-node.private: 'link:packages/javascript/preloaded-node.private'
   standard: 11.0.1
   ts-jest: 22.4.6
   tslib: 1.9.1
@@ -4728,7 +4728,7 @@ packages:
     resolution:
       integrity: sha1-9+572FfdfB0tOMDnTvvWgdFDH9E=
 registry: 'https://registry.npmjs.org/'
-shrinkwrapMinorVersion: 6
+shrinkwrapMinorVersion: 7
 shrinkwrapVersion: 3
 specifiers:
   '@types/glob': ^5.0.35

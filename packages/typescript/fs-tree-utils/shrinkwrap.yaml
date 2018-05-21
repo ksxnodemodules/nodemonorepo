@@ -5,7 +5,6 @@ dependencies:
   fs-extra: 6.0.1
   ramda: 0.25.0
   tslib: 1.9.1
-devDependencies:
   unique-temp-path: 'link:../unique-temp-path'
 packages:
   /@types/fs-extra/5.0.2:
@@ -59,7 +58,7 @@ packages:
     resolution:
       integrity: sha1-+nG63UQ3r0wUiEHjs7Fl+enlkLc=
 registry: 'https://registry.npmjs.org/'
-shrinkwrapMinorVersion: 6
+shrinkwrapMinorVersion: 7
 shrinkwrapVersion: 3
 specifiers:
   '@types/fs-extra': ^5.0.2
