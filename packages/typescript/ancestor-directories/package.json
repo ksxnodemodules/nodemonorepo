@@ -11,6 +11,13 @@
   "bugs": {
     "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
   },
+  "keywords": [
+    "ancestor",
+    "parent",
+    "container",
+    "dirname",
+    "directory"
+  ],
   "dependencies": {
     "tslib": "^1.9.1",
     "monorepo-shared-assets": "^0.0.11",
