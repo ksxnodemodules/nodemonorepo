@@ -1,3 +1,5 @@
+echo 'COVERAGE SERVICE: Coveralls <https://coveralls.io/>'
+
 echo 'Installing coveralls...'
 pnpm i -g coveralls || exit $?
 
