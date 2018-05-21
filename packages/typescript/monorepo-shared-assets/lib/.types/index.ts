@@ -10,3 +10,7 @@ export namespace Dict {
   export type StrKey<X> = StringKeyed<X>
   export type NumKey<X> = NumberKeyed<X>
 }
+
+export namespace Func {
+  export type Comparator<X, Y = X> = (x: X, y: Y) => boolean
+}
