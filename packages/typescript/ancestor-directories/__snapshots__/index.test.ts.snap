@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+Array [
+  Object {
+    "input": "abc/def/ghi",
+    "output": Array [
+      "abc/def/ghi",
+      "abc/def",
+      "abc",
+      ".",
+    ],
+  },
+  Object {
+    "input": "./abc/def/ghi",
+    "output": Array [
+      "./abc/def/ghi",
+      "./abc/def",
+      "./abc",
+      ".",
+    ],
+  },
+  Object {
+    "input": "/abc/def/ghi",
+    "output": Array [
+      "/abc/def/ghi",
+      "/abc/def",
+      "/abc",
+      "/",
+    ],
+  },
+  Object {
+    "input": "abc",
+    "output": Array [
+      "abc",
+      ".",
+    ],
+  },
+  Object {
+    "input": ".",
+    "output": Array [
+      ".",
+    ],
+  },
+  Object {
+    "input": "",
+    "output": Array [
+      "",
+      ".",
+    ],
+  },
+]
+`;

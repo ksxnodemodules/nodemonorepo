@@ -1,0 +1,20 @@
+dependencies:
+  '@types/node': 10.1.2
+  monorepo-shared-assets: 'link:../monorepo-shared-assets'
+  tslib: 1.9.1
+packages:
+  /@types/node/10.1.2:
+    dev: false
+    resolution:
+      integrity: sha512-bjk1RIeZBCe/WukrFToIVegOf91Pebr8cXYBwLBIsfiGWVQ+ifwWsT59H3RxrWzWrzd1l/Amk1/ioY5Fq3/bpA==
+  /tslib/1.9.1:
+    dev: false
+    resolution:
+      integrity: sha512-avfPS28HmGLLc2o4elcc2EIq2FcH++Yo5YxpBZi9Yw93BCTGFthI4HPE4Rpep6vSYQaK8e69PelM44tPj+RaQg==
+registry: 'https://registry.npmjs.org/'
+shrinkwrapMinorVersion: 7
+shrinkwrapVersion: 3
+specifiers:
+  '@types/node': ^10.1.2
+  monorepo-shared-assets: ^0.0.10
+  tslib: ^1.9.1

@@ -1,0 +1,19 @@
+{
+  "name": "ancestor-directories",
+  "version": "0.0.0",
+  "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksxnodemodules/nodemonorepo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
+  },
+  "dependencies": {
+    "tslib": "^1.9.1",
+    "monorepo-shared-assets": "^0.0.10",
+    "@types/node": "^10.1.2"
+  }
+}
