@@ -1,6 +1,6 @@
 echo 'Install additional tools for CI...'
 
 pnpm install --global --shamefully-flatten \
-  coveralls codecov
+  coveralls@latest codecov@latest
 
 exit 0 # Always success
