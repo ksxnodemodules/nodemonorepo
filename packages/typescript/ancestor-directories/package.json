@@ -1,6 +1,7 @@
 {
   "name": "ancestor-directories",
   "version": "0.0.0",
+  "description": "Iterate over all parent directories of a given path",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
