@@ -133,7 +133,7 @@ specifiers:
   fs-extra: ^6.0.1
   fs-tree-utils: ^0.0.7
   js-yaml: ^3.11.0
-  monorepo-shared-assets: ^0.0.10
+  monorepo-shared-assets: ^0.0.11
   node-fetch: ^2.1.2
   preloaded-node.private: '*'
   ramda: ^0.25.0

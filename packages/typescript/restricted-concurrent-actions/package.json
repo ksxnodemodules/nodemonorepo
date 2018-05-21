@@ -1,6 +1,6 @@
 {
   "name": "restricted-concurrent-actions",
-  "version": "0.0.7",
+  "version": "0.0.6",
   "description": "Execute a certain number of promises after promises",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
@@ -17,7 +17,7 @@
   ],
   "dependencies": {
     "tslib": "^1.9.1",
-    "monorepo-shared-assets": "^0.0.10",
+    "monorepo-shared-assets": "^0.0.11",
     "@types/node": "^10.1.2"
   }
 }
