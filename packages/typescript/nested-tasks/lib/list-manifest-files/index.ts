@@ -6,6 +6,10 @@ import {
   TraversalDeepFuncParam
 } from 'fs-tree-utils/lib/traverse'
 
+import {
+  Manifest
+} from '../.types'
+
 /**
  * @param dirname Directory that contains all task manifest descriptors
  * @param options Specify deep function and file chooser
@@ -21,7 +25,7 @@ export async function listManifestFiles (
   } = options
 
   const list = await fsTreeUtils.traverse(dirname, deep)
-  const result = Array<listManifestFiles.ManifestDescriptor>()
+  const result = Array<Manifest.Descriptor>()
 
   for (const item of list) {
     const type = choose(item)
@@ -54,19 +58,13 @@ export namespace listManifestFiles {
     readonly choose?: FileChooser
   }
 
-  export type Result = Promise<ReadonlyArray<ManifestDescriptor>>
+  export type Result = Promise<ReadonlyArray<Manifest.Descriptor>>
   export type DeepFunc = PrvDeepFunc
-  export type FileChooser = (param: FileChooser.Param) => ManifestType | null | void
+  export type FileChooser = (param: FileChooser.Param) => Manifest.Type | null | void
 
   export namespace FileChooser {
     export type Param = TraversalDeepFuncParam
   }
-
-  export interface ManifestDescriptor extends TraversalDeepFuncParam {
-    readonly type: ManifestType
-  }
-
-  export type ManifestType = 'module' | 'yaml'
 }
 
 export default listManifestFiles
