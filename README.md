@@ -5,6 +5,8 @@ This repo hold many of my nodejs packages in one place for ease of management.
 ## CI Build Status
 
 [![Build Status](https://travis-ci.org/ksxnodemodules/nodemonorepo.svg?branch=master)](https://travis-ci.org/ksxnodemodules/nodemonorepo)
+[![Coverage Status](https://coveralls.io/repos/github/ksxnodemodules/nodemonorepo/badge.svg?branch=master)](https://coveralls.io/github/ksxnodemodules/nodemonorepo?branch=master)
+[![codecov](https://codecov.io/gh/ksxnodemodules/nodemonorepo/branch/master/graph/badge.svg)](https://codecov.io/gh/ksxnodemodules/nodemonorepo)
 
 ## Package requirements
 
