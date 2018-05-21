@@ -25,11 +25,11 @@ before_install:
 
 install:
   - pnpm recursive link --shamefully-flatten
+  - bash sh/ci/before-script.sh
 
 script:
   - pnpm test -- --runInBand
   - pnpm run build
 
 after_script:
-  - bash sh/ci/coveralls.sh
-  - bash sh/ci/codecov.sh
+  - bash sh/ci/after-script.sh
