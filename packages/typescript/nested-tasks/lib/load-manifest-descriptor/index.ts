@@ -1,5 +1,6 @@
 import * as childProcess from 'child_process'
 import yaml from 'monorepo-shared-yaml'
+import {DependencyList} from '../../api'
 import {Manifest} from '../.types'
 
 /**
@@ -31,10 +32,10 @@ export namespace loadManifestDescriptor {
     static readonly shell: string = 'sh'
 
     //@ts-ignore
-    readonly before: Task.DependencyList
+    readonly before: DependencyList
 
     //@ts-ignore
-    readonly after: Task.DependencyList
+    readonly after: DependencyList
 
     //@ts-ignore
     readonly command: Task.Command
@@ -66,14 +67,14 @@ export namespace loadManifestDescriptor {
         this.before = createDependencyList('before')
         this.after = createDependencyList('after')
 
-        function createDependencyList (name: string): Task.DependencyList {
+        function createDependencyList (name: string): DependencyList {
           const array = info[name] || []
 
           if (!Array.isArray(array)) {
             throw new TypeError(`Property '${name}' is not an array: ${JSON.stringify(array)}`)
           }
 
-          const result = Array<Task.DependencyList.TaskName>()
+          const result = Array<DependencyList.TaskName>()
 
           for (const item of array) {
             if (Array.isArray(item)) {
@@ -236,12 +237,6 @@ export namespace loadManifestDescriptor {
   }
 
   export namespace Task {
-    export type DependencyList = ReadonlyArray<DependencyList.TaskName>
-
-    export namespace DependencyList {
-      export type TaskName = ReadonlyArray<string>
-    }
-
     export type Command =
       Command.Shell |
       Command.Spawn |
