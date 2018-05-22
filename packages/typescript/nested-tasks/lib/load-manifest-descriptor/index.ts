@@ -31,6 +31,12 @@ export namespace loadManifestDescriptor {
     static readonly shell: string = 'sh'
 
     //@ts-ignore
+    readonly before: Task.DependencyList
+
+    //@ts-ignore
+    readonly after: Task.DependencyList
+
+    //@ts-ignore
     readonly command: Task.Command
 
     //@ts-ignore
@@ -54,6 +60,37 @@ export namespace loadManifestDescriptor {
       if (info instanceof Array) {
         const [program, ...argv] = info
         return new Task({type: 'spawn', program, argv})
+      }
+
+      {
+        this.before = createDependencyList('before')
+        this.after = createDependencyList('after')
+
+        function createDependencyList (name: string): Task.DependencyList {
+          const array = info[name] || []
+
+          if (!Array.isArray(array)) {
+            throw new TypeError(`Property '${name}' is not an array: ${JSON.stringify(array)}`)
+          }
+
+          const result = Array<Task.DependencyList.TaskName>()
+
+          for (const item of array) {
+            if (Array.isArray(item)) {
+              result.push(item)
+              continue
+            }
+
+            if (typeof item === 'string') {
+              result.push(item.split(/\s|\./))
+              continue
+            }
+
+            throw new TypeError(`Invalid type of an item: ${JSON.stringify(item)}`)
+          }
+
+          return result
+        }
       }
 
       if ('type' in info) {
@@ -145,6 +182,30 @@ export namespace loadManifestDescriptor {
         }
 
         throw new TypeError(`Invalid type of info: ${JSON.stringify(info)} (${typeof info})`)
+
+        function createChildProcessExecutor (
+          fn: () => childProcess.ChildProcess,
+          oncreate: Task.Command.utils.ChildProcess.CreationHandler
+        ): Task.Executor {
+          return () => {
+            const cp = fn()
+            oncreate(cp)
+            return createChildProcessPromise(cp)
+          }
+        }
+
+        function createChildProcessPromise (cp: childProcess.ChildProcess): Promise<void> {
+          return new Promise((resolve, reject) => {
+            cp.on('error', error => reject(error))
+
+            cp.on(
+              'close',
+              (status, signal) => status
+                ? reject(new Task.ChildProcessError(status, signal))
+                : resolve()
+            )
+          })
+        }
       }
 
       if ('cmd' in info) {
@@ -167,30 +228,6 @@ export namespace loadManifestDescriptor {
       }
 
       throw new TypeError(`Invalid set of properties: ${JSON.stringify(Object.keys(info))}`)
-
-      function createChildProcessExecutor (
-        fn: () => childProcess.ChildProcess,
-        oncreate: Task.Command.utils.ChildProcess.CreationHandler
-      ): Task.Executor {
-        return () => {
-          const cp = fn()
-          oncreate(cp)
-          return createChildProcessPromise(cp)
-        }
-      }
-
-      function createChildProcessPromise (cp: childProcess.ChildProcess): Promise<void> {
-        return new Promise((resolve, reject) => {
-          cp.on('error', error => reject(error))
-
-          cp.on(
-            'close',
-            (status, signal) => status
-              ? reject(new Task.ChildProcessError(status, signal))
-              : resolve()
-          )
-        })
-      }
     }
 
     get Task () {
@@ -199,6 +236,12 @@ export namespace loadManifestDescriptor {
   }
 
   export namespace Task {
+    export type DependencyList = ReadonlyArray<DependencyList.TaskName>
+
+    export namespace DependencyList {
+      export type TaskName = ReadonlyArray<string>
+    }
+
     export type Command =
       Command.Shell |
       Command.Spawn |
@@ -286,8 +329,8 @@ export namespace loadManifestDescriptor {
 
   export function classifyPropertyName (name: string): classifyPropertyName.Result {
     const {Result} = classifyPropertyName
-    if (/^[a-z.-_]+$/.test(name)) return Result.Task
-    if (/^@[a-z.-_]+$/.test(name)) return Result.Subtask
+    if (/^[a-z-_]+$/i.test(name)) return Result.Task
+    if (/^@[a-z-_]+$/i.test(name)) return Result.Subtask
     return Result.Invalid
   }
 
