@@ -23,7 +23,7 @@ before_install:
   - bash sh/ci/before-install.sh
 
 install:
-  - pnpm recursive link --shamefully-flatten
+  - pnpm recursive link
   - bash sh/ci/install.sh
 
 script:

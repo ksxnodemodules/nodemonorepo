@@ -25,7 +25,7 @@ This repo hold many of my nodejs packages in one place for ease of management.
 #### Using pnpm
 
 ```sh
-pnpm recursive link --shamefully-flatten
+pnpm recursive link
 ```
 
 #### Using yarn
@@ -98,7 +98,7 @@ pnpx nested-wrkspc.prv depman outdated .
 
 ```sh
 pnpx nested-wrkspc.prv depman outdated -u .
-pnpm recursive link --shamefully-flatten # or yarn install
+pnpm recursive link # or yarn install
 ```
 
 ### Untested Features
