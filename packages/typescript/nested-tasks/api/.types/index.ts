@@ -73,8 +73,8 @@ export namespace TaskParam {
 
   export namespace utils {
     export interface Base {
-      readonly before?: DependencyList
-      readonly after?: DependencyList
+      readonly before?: DependencyList.Param
+      readonly after?: DependencyList.Param
     }
   }
 }
@@ -87,4 +87,5 @@ export type DependencyList = ReadonlyArray<DependencyList.TaskName>
 
 export namespace DependencyList {
   export type TaskName = ReadonlyArray<string>
+  export type Param = ReadonlyArray<TaskName | string>
 }
