@@ -1,7 +1,15 @@
 import * as childProcess from 'child_process'
 import yaml from 'monorepo-shared-yaml'
-import {DependencyList} from '../../api'
-import {Manifest} from '../.types'
+
+import {
+  TaskParam,
+  TaskSetManifest,
+  DependencyList
+} from '../../api'
+
+import {
+  Manifest
+} from '../.types'
 
 /**
  * @param descriptor A manifest descriptor
@@ -43,13 +51,16 @@ export namespace loadManifestDescriptor {
     //@ts-ignore
     readonly execute: Task.Executor
 
-    constructor (info: any) {
+    constructor (info: TaskParam) {
+      type TpsShell = TaskParam.Shortcut.Shell
+      type TpsFunction = TaskParam.Shortcut.Function
+
       switch (typeof info) {
         case 'string':
-          return new this.Task({type: 'shell', cmd: info})
+          return new this.Task({type: 'shell', cmd: info as TpsShell})
 
         case 'function':
-          return new this.Task({type: 'function', execute: info})
+          return new this.Task({type: 'function', execute: info as TpsFunction})
 
         case 'object':
           break // main branch: below
@@ -58,7 +69,7 @@ export namespace loadManifestDescriptor {
           throw new TypeError(`Invalid type of info: ${JSON.stringify(info)}`)
       }
 
-      if (info instanceof Array) {
+      if (Array.isArray(info)) {
         const [program, ...argv] = info
         return new Task({type: 'spawn', program, argv})
       }
@@ -67,8 +78,8 @@ export namespace loadManifestDescriptor {
         this.before = createDependencyList('before')
         this.after = createDependencyList('after')
 
-        function createDependencyList (name: string): DependencyList {
-          const array = info[name] || []
+        function createDependencyList (name: keyof TaskParam.utils.Base): DependencyList {
+          const array = (info as TaskParam.utils.Base)[name] || []
 
           if (!Array.isArray(array)) {
             throw new TypeError(`Property '${name}' is not an array: ${JSON.stringify(array)}`)
@@ -94,8 +105,14 @@ export namespace loadManifestDescriptor {
         }
       }
 
-      if ('type' in info) {
-        const {type} = info
+      const infoAsObject = info as TaskParam.Detailed | TaskParam.Keyword
+
+      if ('type' in infoAsObject) {
+        type Shell = TaskParam.Detailed.Shell
+        type Spawn = TaskParam.Detailed.Spawn
+        type Function = TaskParam.Detailed.Function
+
+        const {type} = infoAsObject
 
         if (typeof type !== 'string') {
           throw new TypeError(`Property 'type' is not a string: ${JSON.stringify(type)}`)
@@ -108,7 +125,7 @@ export namespace loadManifestDescriptor {
               cmd,
               options,
               oncreate = () => {}
-            } = info
+            } = infoAsObject as Shell
 
             if (typeof shell !== 'string') {
               throw new TypeError(`Property 'shell' is not a string: ${JSON.stringify(shell)}`)
@@ -122,12 +139,14 @@ export namespace loadManifestDescriptor {
               throw new TypeError(`Property 'oncreate' is not a function: ${JSON.stringify(oncreate)}`)
             }
 
-            const command: Task.Command.Shell = {type, shell, cmd, options, oncreate}
-            this.command = command
+            this.command = {type, shell, cmd, options, oncreate}
 
             this.execute = createChildProcessExecutor(
-              () => childProcess.spawn(shell, {...options}),
-              oncreate
+              () => childProcess.spawn(shell, [], {...options}),
+              x => {
+                x.stdin.end(shell + '\n')
+                oncreate(x)
+              }
             )
 
             return
@@ -139,7 +158,7 @@ export namespace loadManifestDescriptor {
               argv,
               options,
               oncreate = () => {}
-            } = info
+            } = infoAsObject as Spawn
 
             if (typeof program !== 'string') {
               throw new TypeError(`Property 'program' is not a string: ${JSON.stringify(program)}`)
@@ -153,8 +172,7 @@ export namespace loadManifestDescriptor {
               throw new TypeError(`Property 'oncreate' is not a function: ${JSON.stringify(oncreate)}`)
             }
 
-            const command: Task.Command.Spawn = {type, program, argv, options, oncreate}
-            this.command = command
+            this.command = {type, program, argv, options, oncreate}
 
             this.execute = createChildProcessExecutor(
               () => childProcess.spawn(program, argv, {...options}),
@@ -165,7 +183,7 @@ export namespace loadManifestDescriptor {
           }
 
           case 'function': {
-            const {execute} = info
+            const {execute} = infoAsObject as Function
 
             if (typeof execute !== 'function') {
               throw new TypeError(`Property 'execute' is not a function: ${JSON.stringify(execute)}`)
@@ -180,41 +198,42 @@ export namespace loadManifestDescriptor {
 
             return
           }
-        }
 
-        throw new TypeError(`Invalid type of info: ${JSON.stringify(info)} (${typeof info})`)
+          //@ts-ignore Unreachable
+          throw new TypeError(`Invalid type of info: ${JSON.stringify(infoAsObject)} (${typeof infoAsObject})`)
 
-        function createChildProcessExecutor (
-          fn: () => childProcess.ChildProcess,
-          oncreate: Task.Command.utils.ChildProcess.CreationHandler
-        ): Task.Executor {
-          return () => {
-            const cp = fn()
-            oncreate(cp)
-            return createChildProcessPromise(cp)
+          function createChildProcessExecutor (
+            fn: () => childProcess.ChildProcess,
+            oncreate: TaskParam.Detailed.utils.ChildProcess.CreationHandler
+          ): Task.Executor {
+            return () => {
+              const cp = fn()
+              oncreate(cp)
+              return createChildProcessPromise(cp)
+            }
+          }
+
+          function createChildProcessPromise (cp: childProcess.ChildProcess): Promise<void> {
+            return new Promise((resolve, reject) => {
+              cp.on('error', error => reject(error))
+
+              cp.on(
+                'close',
+                (status, signal) => status
+                  ? reject(new Task.ChildProcessError(status, signal))
+                  : resolve()
+              )
+            })
           }
         }
-
-        function createChildProcessPromise (cp: childProcess.ChildProcess): Promise<void> {
-          return new Promise((resolve, reject) => {
-            cp.on('error', error => reject(error))
-
-            cp.on(
-              'close',
-              (status, signal) => status
-                ? reject(new Task.ChildProcessError(status, signal))
-                : resolve()
-            )
-          })
-        }
       }
 
-      if ('cmd' in info) {
-        return new this.Task({type: 'shell', ...info})
+      if ('cmd' in infoAsObject) {
+        return new this.Task({type: 'shell', ...infoAsObject})
       }
 
-      if ('spawn' in info) {
-        const {spawn, ...rest} = info
+      if ('spawn' in infoAsObject) {
+        const {spawn, ...rest} = infoAsObject
 
         if (!Array.isArray(spawn)) {
           throw new TypeError(`Property 'spawn' is not an array: ${JSON.stringify(spawn)}`)
@@ -224,8 +243,22 @@ export namespace loadManifestDescriptor {
         return new this.Task({type: 'spawn', program, argv, ...rest})
       }
 
-      if ('execute' in info) {
-        return new this.Task({type: 'function', ...info})
+      if ('execute' in infoAsObject) {
+        return new this.Task({type: 'function', ...infoAsObject})
+      }
+
+      if ('program' in infoAsObject) {
+        const {program, argv = [], ...rest} = infoAsObject
+
+        if (typeof program !== 'string') {
+          throw new TypeError(`Property 'program' is not a string: ${JSON.stringify(program)}`)
+        }
+
+        if (!Array.isArray(argv)) {
+          throw new TypeError(`Property 'argv' is not an array: ${JSON.stringify(argv)}`)
+        }
+
+        return new this.Task({type: 'spawn', program, argv, ...rest})
       }
 
       throw new TypeError(`Invalid set of properties: ${JSON.stringify(Object.keys(info))}`)
@@ -243,32 +276,23 @@ export namespace loadManifestDescriptor {
       Command.Function
 
     export namespace Command {
-      export interface Shell extends utils.ChildProcess {
+      import api = TaskParam.Detailed
+
+      export interface Shell extends api.Shell {
         readonly type: 'shell'
         readonly shell: string
         readonly cmd: string
       }
 
-      export interface Spawn extends utils.ChildProcess {
+      export interface Spawn extends api.Spawn {
         readonly type: 'spawn'
         readonly program: string
         readonly argv: ReadonlyArray<string>
       }
 
-      export interface Function {
+      export interface Function extends api.Function {
         readonly type: 'function'
         readonly execute: () => void
-      }
-
-      export namespace utils {
-        export interface ChildProcess {
-          readonly options?: childProcess.SpawnOptions
-          readonly oncreate?: ChildProcess.CreationHandler
-        }
-
-        export namespace ChildProcess {
-          export type CreationHandler = (x: childProcess.ChildProcess) => void
-        }
       }
     }
 
@@ -291,7 +315,7 @@ export namespace loadManifestDescriptor {
     readonly tasks: TaskDict
     readonly subtasks: SubtaskDict
 
-    constructor (manifest: object) {
+    constructor (manifest: TaskSetManifest) {
       const tasks: {[_: string]: Task} = {}
       const subtasks: {[_: string]: TaskSet} = {}
 
@@ -304,10 +328,10 @@ export namespace loadManifestDescriptor {
           case classifyPropertyName.Result.Invalid:
             throw new Error(`Invalid name: ${name}`)
           case classifyPropertyName.Result.Task:
-            tasks[name] = new Task(info)
+            tasks[name] = new Task(info as TaskParam)
             break
           case classifyPropertyName.Result.Subtask:
-            subtasks[name] = new TaskSet(info)
+            subtasks[name] = new TaskSet(info as TaskSetManifest)
             break
         }
       }
