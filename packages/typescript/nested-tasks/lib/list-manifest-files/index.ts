@@ -1,9 +1,8 @@
-import * as path from 'path'
 import * as fsTreeUtils from 'fs-tree-utils'
+import createFileChooser from '../.utils/file-chooser'
 
 import {
-  DeepFunc as PrvDeepFunc,
-  TraversalDeepFuncParam
+  DeepFunc as PrvDeepFunc
 } from 'fs-tree-utils/lib/traverse'
 
 import {
@@ -38,20 +37,7 @@ export async function listManifestFiles (
 
 export namespace listManifestFiles {
   export const DEFAULT_DEEP_FUNCTION: DeepFunc = x => x.item !== 'node_modules'
-
-  export const DEFAULT_FILE_CHOOSER: FileChooser = x => {
-    switch (path.extname(x.item)) {
-      case '':
-      case '.js':
-        return 'module'
-      case '.json':
-      case '.yaml':
-      case '.yml':
-        return 'yaml'
-    }
-
-    return null
-  }
+  export const DEFAULT_FILE_CHOOSER = createFileChooser('task')
 
   export interface Options {
     readonly deep?: DeepFunc
@@ -60,11 +46,7 @@ export namespace listManifestFiles {
 
   export type Result = Promise<ReadonlyArray<Manifest.Descriptor>>
   export type DeepFunc = PrvDeepFunc
-  export type FileChooser = (param: FileChooser.Param) => Manifest.Type | null | void
-
-  export namespace FileChooser {
-    export type Param = TraversalDeepFuncParam
-  }
+  export type FileChooser = createFileChooser.FileChooser
 }
 
 export default listManifestFiles
