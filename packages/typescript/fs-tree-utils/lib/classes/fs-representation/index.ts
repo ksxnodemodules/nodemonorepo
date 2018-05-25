@@ -1,6 +1,6 @@
 import * as path from 'path'
 import * as fsx from 'fs-extra'
-import {WriteTreeObject, WriteTree} from '../../types'
+import {WriteFileContent, WriteTreeObject, WriteTree} from '../../types'
 import create from '../../create'
 
 export abstract class FileSystemRepresentation {
@@ -22,7 +22,7 @@ export namespace FileSystemRepresentation {
   }
 
   export namespace File {
-    export type Content = string | Buffer
+    export type Content = WriteFileContent
   }
 
   export class Directory extends FileSystemRepresentation {

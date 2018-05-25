@@ -8,7 +8,7 @@ const {File, Directory} = FileSystemRepresentation
  * @param container Where to place the tree
  */
 export async function create (tree: WriteTree, container: string = ''): Promise<void> {
-  if (typeof tree === 'string') {
+  if (typeof tree === 'string' || tree instanceof Buffer) {
     return create(new File(tree), container)
   }
 

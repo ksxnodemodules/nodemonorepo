@@ -50,7 +50,7 @@ describe('create function', () => {
     const secondBornFiles = {
       newFileA: 'First New File',
       newFileB: 'Second New File',
-      newFileC: 'Third New File'
+      newFileC: new Buffer('Third New File')
     }
 
     const firstBornFolders = {
