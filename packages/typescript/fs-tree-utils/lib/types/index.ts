@@ -61,7 +61,7 @@ export namespace FileSystemRepresentation {
   }
 
   export class Directory extends FileSystemRepresentation {
-    readonly content: Directory.Content
+    private readonly content: Directory.Content
 
     constructor (content?: Directory.Content | null) {
       super()
