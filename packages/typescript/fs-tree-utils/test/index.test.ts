@@ -14,14 +14,14 @@ const createTreeGetter = (container: string) => () => Promise.all([
   subject.read.flat(container)
 ]).then(([nested, flat]) => ({nested, flat}))
 
-beforeAll(async () => {
+beforeEach(async () => {
   await fsx.mkdir(tmpContainer)
   chdir(tmpContainer)
   await fsx.remove(tmp)
   await fsx.mkdir(tmp)
 })
 
-afterAll(async () => {
+afterEach(async () => {
   chdir(oldCwd)
   await fsx.remove(tmpContainer)
 })
@@ -105,7 +105,7 @@ describe('create function', () => {
       }
 
       await subject.create(existingTree, container)
-      expect(subject.create(expectedTree, container)).rejects.toMatchSnapshot()
+      await expect(subject.create(expectedTree, container)).rejects.toMatchSnapshot()
     })
 
     it('in which a folder is requested in place of a file', async () => {
@@ -121,7 +121,7 @@ describe('create function', () => {
       }
 
       await subject.create(existingTree, container)
-      expect(subject.create(expectedTree, container)).rejects.toMatchSnapshot()
+      await expect(subject.create(expectedTree, container)).rejects.toMatchSnapshot()
     })
   })
 })
