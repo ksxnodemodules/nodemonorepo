@@ -2,16 +2,18 @@ import * as path from 'path'
 import ramda from 'ramda'
 import * as fsx from 'fs-extra'
 import traverse, {DeepFunc} from './traverse'
-import {Tree, TreeObject, FileContent, NestedReadOptions} from './types'
+import {ReadTree, ReadTreeObject, ReadFileContent, NestedReadOptions} from './types'
+import {FileSystemRepresentation} from './classes'
+import Symlink = FileSystemRepresentation.Symlink
 
-export type NestedReadResult = Promise<Tree>
+export type NestedReadResult = Promise<ReadTree>
 
 export interface FlatReadResultFileContent {
-  readonly [filename: string]: FileContent
+  readonly [filename: string]: ReadFileContent
 }
 
 interface WritableFlatReadResultFileContent {
-  [filename: string]: FileContent
+  [filename: string]: ReadFileContent
 }
 
 export interface FlatReadResultValue {
@@ -43,12 +45,16 @@ export async function readNested (
   }
 
   if (stats.isDirectory()) {
-    let tree: TreeObject = {}
+    let tree: ReadTreeObject = {}
     for (const item of await fsx.readdir(name)) {
       const subtree = await readNested(path.join(name, item))
       tree[item] = subtree
     }
     return tree
+  }
+
+  if (stats.isSymbolicLink()) {
+    return new Symlink(await fsx.readlink(name))
   }
 
   throw new Error(`Unknown filesystem type of path '${name}'`)

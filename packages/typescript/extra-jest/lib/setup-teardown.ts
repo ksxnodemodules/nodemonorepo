@@ -2,7 +2,7 @@ import * as process from 'process'
 import * as fsx from 'fs-extra'
 import * as fsTreeUtils from 'fs-tree-utils'
 import tempPath from 'unique-temp-path'
-import {TreeObject} from 'fs-tree-utils'
+import {ReadTreeObject} from 'fs-tree-utils'
 
 export type PromiseFunc<X, Y> = (x: X) => Promise<Y>
 export type SyncFunc<X, Y> = (x: X) => Y
@@ -54,12 +54,12 @@ export const createFactory = base.createFactory
 
 export namespace virtualEnvironment {
   export interface Info {
-    readonly tree: TreeObject
+    readonly tree: ReadTreeObject
     readonly container: string
     readonly previousWorkingDirectory: string
   }
 
-  export function createFactory (tree: TreeObject, container = tempPath()) {
+  export function createFactory (tree: ReadTreeObject, container = tempPath()) {
     const previousWorkingDirectory = process.cwd()
     const info: Info = {tree, container, previousWorkingDirectory}
 
