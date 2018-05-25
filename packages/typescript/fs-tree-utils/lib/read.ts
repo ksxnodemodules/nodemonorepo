@@ -2,7 +2,7 @@ import * as path from 'path'
 import ramda from 'ramda'
 import * as fsx from 'fs-extra'
 import traverse, {DeepFunc} from './traverse'
-import {Tree, TreeObject, FileContent} from './types'
+import {Tree, TreeObject, FileContent, NestedReadOptions} from './types'
 
 export type NestedReadResult = Promise<Tree>
 
@@ -25,10 +25,18 @@ export type FlatReadResult = Promise<FlatReadResultValue>
 
 /**
  * @param name Directory name
+ * @param options Specify stat method
  * @returns Nested directory tree representation
  */
-export async function readNested (name: string): NestedReadResult {
-  const stats = await fsx.stat(name)
+export async function readNested (
+  name: string,
+  options: NestedReadOptions = {}
+): NestedReadResult {
+  const {
+    stat = (x: string) => fsx.stat(x)
+  } = options
+
+  const stats = await Promise.resolve(stat(name))
 
   if (stats.isFile()) {
     return await fsx.readFile(name, 'utf8')
