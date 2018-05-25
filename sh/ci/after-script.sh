@@ -13,4 +13,14 @@ echo 'Diffing lock file...'
 echo '  → shrinkwrap.yaml ≏ shrinkwrap.yaml.old.tmp'
 diff --color=always shrinkwrap.yaml shrinkwrap.yaml.old.tmp
 
+echo 'Checking warnings...'
+echo '  → node-warnings.log'
+if [[ -f node-warnings.log
+  then
+    echo 'Warning file exists'
+    cat node-warnings.log
+  else
+    echo 'No warnings.'
+fi
+
 exit $stcode
