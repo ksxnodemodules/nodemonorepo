@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`with error handler when an error is thrown 1`] = `
+Result {
+  "error": [Error: This is an error],
+  "param": 1234,
+}
+`;
+
+exports[`with error handler when no errors are thrown 1`] = `
+Result {
+  "value": 1234,
+}
+`;
+
+exports[`without error handler when an error is thrown 1`] = `"This is an error"`;
+
+exports[`without error handler when no errors are thrown 1`] = `
+Result {
+  "value": 1234,
+}
+`;

@@ -14,3 +14,17 @@ export namespace Dict {
 export namespace Func {
   export type Comparator<X, Y = X> = (x: X, y: Y) => boolean
 }
+
+export namespace PromiseRejectionWrapper {
+  export type Main<Param, Result> = (x: Param) => Result | Promise<Result>
+  export type RejectionHandler<Param, Result> = (reason: any, param: Param) => Result | Promise<Result>
+  export type Result<Param, Success, Failure> = Async<Param, Success> | Async<Param, Success | Failure>
+  export type Async<Param, Result> = (x: Param) => Promise<Result>
+}
+
+export namespace ErrorThrowingWrapper {
+  export type Main<Param, Result> = (x: Param) => Result
+  export type ErrorHandler<Param, Result> = (error: any, param: Param) => Result
+  export type Result<Param, Success, Failure> = Sync<Param, Success> | Sync<Param, Success | Failure>
+  export type Sync<Param, Result> = (x: Param) => Result
+}
