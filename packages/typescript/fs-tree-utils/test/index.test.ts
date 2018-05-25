@@ -8,6 +8,8 @@ const tree = require('./data/tree.yaml')
 const oldCwd = cwd()
 const tmpContainer = tempPath('fs-tree-utils.')
 const tmp = 'tmp'
+const {FileSystemRepresentation} = subject
+const {File, Directory} = FileSystemRepresentation
 
 const createTreeGetter = (container: string) => () => Promise.all([
   subject.read.nested(container),
@@ -43,7 +45,9 @@ describe('create function', () => {
 
     const firstBornFiles = {
       foo: 'foo',
-      bar: 'bar'
+      bar: 'bar',
+      baz: new File('baz'),
+      qux: new File(new Buffer('qux'))
     }
 
     const secondBornFiles = {
@@ -55,6 +59,8 @@ describe('create function', () => {
     const firstBornFolders = {
       emptyFoo: {},
       emptyBar: {},
+      emptyBaz: new Directory(),
+      emptyQux: new Directory({}),
       firstBornFiles
     }
 
@@ -71,7 +77,22 @@ describe('create function', () => {
         nonEmptyFile: {
           file: 'Not empty'
         }
-      }
+      },
+      newTreeD: new Directory({
+        newTreeA: {},
+        newTreeB: new Directory({
+          empty: {}
+        }),
+        newTreeC: {
+          empty: {},
+          emptyFile: new Directory({
+            file: ''
+          }),
+          nonEmptyFile: {
+            file: 'Not empty'
+          }
+        }
+      })
     }
 
     await subject.create({

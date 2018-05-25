@@ -28,9 +28,9 @@ export namespace FileSystemRepresentation {
   export class Directory extends FileSystemRepresentation {
     readonly content: Directory.Content
 
-    constructor (content: Directory.Content) {
+    constructor (content?: Directory.Content | null) {
       super()
-      this.content = content
+      this.content = content || {}
     }
 
     async write (dirname: string) {
