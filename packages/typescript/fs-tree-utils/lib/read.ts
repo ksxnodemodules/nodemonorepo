@@ -35,29 +35,38 @@ export async function readNested (
   options: NestedReadOptions = {}
 ): NestedReadResult {
   const {
+    error: transformError,
     stat = (x: string) => fsx.stat(x)
   } = options
 
-  const stats = await Promise.resolve(stat(name))
-
-  if (stats.isFile()) {
-    return await fsx.readFile(name, 'utf8')
+  if (transformError) {
+    return read().catch(reason => transformError(reason))
+  } else {
+    return read()
   }
 
-  if (stats.isDirectory()) {
-    let tree: Tree.Read = {}
-    for (const item of await fsx.readdir(name)) {
-      const subtree = await readNested(path.join(name, item))
-      tree[item] = subtree
+  async function read () {
+    const stats = await Promise.resolve(stat(name))
+
+    if (stats.isFile()) {
+      return await fsx.readFile(name, 'utf8')
     }
-    return tree
-  }
 
-  if (stats.isSymbolicLink()) {
-    return new Symlink(await fsx.readlink(name))
-  }
+    if (stats.isDirectory()) {
+      let tree: Tree.Read = {}
+      for (const item of await fsx.readdir(name)) {
+        const subtree = await readNested(path.join(name, item), options)
+        tree[item] = subtree
+      }
+      return tree
+    }
 
-  throw new Error(`Unknown filesystem type of path '${name}'`)
+    if (stats.isSymbolicLink()) {
+      return new Symlink(await fsx.readlink(name))
+    }
+
+    throw new Error(`Unknown filesystem type of path '${name}'`)
+  }
 }
 
 /**

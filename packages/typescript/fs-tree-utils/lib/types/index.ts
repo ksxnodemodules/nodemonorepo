@@ -9,7 +9,12 @@ export namespace Tree {
   export type Read = Read.Node
 
   export namespace Read {
-    export type Node = FileContent | FileSystemRepresentation.Symlink | Object
+    export type Node =
+      FileContent |
+      Object |
+      FileSystemRepresentation.Symlink |
+      FileSystemRepresentation.Exception
+
     export type FileContent = string
 
     export interface Object {
@@ -32,10 +37,12 @@ export namespace Tree {
 
 export interface NestedReadOptions {
   readonly stat?: NestedReadOptions.StatFunc
+  readonly error?: NestedReadOptions.ErrorHandler
 }
 
 export namespace NestedReadOptions {
   export type StatFunc = (name: string) => Promise<Stats> | Stats
+  export type ErrorHandler = (error: Error) => FileSystemRepresentation.Exception
 }
 
 export abstract class FileSystemRepresentation {
@@ -113,6 +120,19 @@ export namespace FileSystemRepresentation {
 
     export namespace Options {
       export type Type = 'dir' | 'file' | 'junction'
+    }
+  }
+
+  export class Exception extends FileSystemRepresentation {
+    readonly error: Error
+
+    constructor (error: Error) {
+      super()
+      this.error = error
+    }
+
+    async write () {
+      throw this.error
     }
   }
 }
