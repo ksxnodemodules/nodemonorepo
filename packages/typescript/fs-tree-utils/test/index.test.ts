@@ -53,7 +53,9 @@ describe('create function', () => {
     const secondBornFiles = {
       newFileA: 'First New File',
       newFileB: 'Second New File',
-      newFileC: Buffer.from('Third New File')
+      newFileC: Buffer.from('Third New File'),
+      newFileD: (x: string) => fsx.writeFile(x, 'Forth New File'),
+      newFileE: (x: string) => fsx.writeFileSync(x, 'Fifth New File')
     }
 
     const firstBornFolders = {
