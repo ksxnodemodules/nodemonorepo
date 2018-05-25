@@ -37,7 +37,7 @@ export namespace Tree {
 
 export interface NestedReadOptions {
   readonly stat?: NestedReadOptions.StatFunc
-  readonly error?: NestedReadOptions.ErrorHandler
+  readonly onerror?: NestedReadOptions.ErrorHandler
 }
 
 export namespace NestedReadOptions {

@@ -1,9 +1,10 @@
 import * as path from 'path'
 import ramda from 'ramda'
 import * as fsx from 'fs-extra'
+import * as assets from 'monorepo-shared-assets'
 import traverse, {DeepFunc} from './traverse'
 import {Tree, NestedReadOptions, FileSystemRepresentation} from './types'
-
+import wrapRejection = assets.wrapException.wrapPromiseRejection
 import Symlink = FileSystemRepresentation.Symlink
 
 export type NestedReadResult = Promise<Tree.Read>
@@ -35,17 +36,13 @@ export async function readNested (
   options: NestedReadOptions = {}
 ): NestedReadResult {
   const {
-    error: transformError,
+    onerror: transformError,
     stat = (x: string) => fsx.stat(x)
   } = options
 
-  if (transformError) {
-    return read().catch(reason => transformError(reason))
-  } else {
-    return read()
-  }
+  return wrapRejection(main, transformError)(name)
 
-  async function read () {
+  async function main (name: string): NestedReadResult {
     const stats = await Promise.resolve(stat(name))
 
     if (stats.isFile()) {
@@ -55,7 +52,7 @@ export async function readNested (
     if (stats.isDirectory()) {
       let tree: Tree.Read = {}
       for (const item of await fsx.readdir(name)) {
-        const subtree = await readNested(path.join(name, item), options)
+        const subtree = await main(path.join(name, item))
         tree[item] = subtree
       }
       return tree
