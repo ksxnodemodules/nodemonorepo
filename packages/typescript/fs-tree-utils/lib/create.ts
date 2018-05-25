@@ -1,15 +1,18 @@
-import {WriteTree} from './types'
-import FileSystemRepresentation from './classes/fs-representation'
-const {File, Directory} = FileSystemRepresentation
+import * as types from './types'
 
 /**
  * Create a directory tree
  * @param tree Tree structure that needs to create
  * @param container Where to place the tree
  */
-export async function create (tree: WriteTree, container: string = ''): Promise<void> {
+export async function create (
+  tree: types.WriteTree,
+  container: string = ''
+): Promise<void> {
+  const {FileSystemRepresentation} = types
+
   if (typeof tree === 'string' || tree instanceof Buffer) {
-    return create(new File(tree), container)
+    return create(new FileSystemRepresentation.File(tree), container)
   }
 
   if (typeof tree === 'function') {
@@ -20,7 +23,7 @@ export async function create (tree: WriteTree, container: string = ''): Promise<
     return create(x => tree.write(x), container)
   }
 
-  return create(new Directory(tree), container)
+  return create(new FileSystemRepresentation.Directory(tree), container)
 }
 
 export namespace create {

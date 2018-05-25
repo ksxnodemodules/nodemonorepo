@@ -1,9 +1,17 @@
 import * as path from 'path'
 import ramda from 'ramda'
 import * as fsx from 'fs-extra'
+
 import traverse, {DeepFunc} from './traverse'
-import {ReadTree, ReadTreeObject, ReadFileContent, NestedReadOptions} from './types'
-import {FileSystemRepresentation} from './classes'
+
+import {
+  ReadTree,
+  ReadTreeObject,
+  ReadFileContent,
+  NestedReadOptions,
+  FileSystemRepresentation
+} from './types'
+
 import Symlink = FileSystemRepresentation.Symlink
 
 export type NestedReadResult = Promise<ReadTree>
