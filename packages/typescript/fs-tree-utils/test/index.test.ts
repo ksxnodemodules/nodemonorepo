@@ -1,7 +1,6 @@
 import * as path from 'path'
 import {cwd, chdir} from 'process'
 import * as fsx from 'fs-extra'
-import * as xjest from 'extra-jest'
 import tempPath from 'unique-temp-path'
 import * as subject from '../index'
 import {DeepFunc} from '../lib/traverse'
@@ -106,7 +105,7 @@ describe('create function', () => {
       }
 
       await subject.create(existingTree, container)
-      xjest.promise.snapRejected(subject.create(expectedTree, container))
+      expect(subject.create(expectedTree, container)).rejects.toMatchSnapshot()
     })
 
     it('in which a folder is requested in place of a file', async () => {
@@ -122,7 +121,7 @@ describe('create function', () => {
       }
 
       await subject.create(existingTree, container)
-      xjest.promise.snapRejected(subject.create(expectedTree, container))
+      expect(subject.create(expectedTree, container)).rejects.toMatchSnapshot()
     })
   })
 })
