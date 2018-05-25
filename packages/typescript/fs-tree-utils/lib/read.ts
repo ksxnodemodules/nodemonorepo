@@ -27,7 +27,7 @@ export type FlatReadResult = Promise<FlatReadResultValue>
 
 /**
  * @param name Directory name
- * @param options Specify stat method
+ * @param options Specify stat method and error handler
  * @returns Nested directory tree representation
  */
 export async function readNested (
