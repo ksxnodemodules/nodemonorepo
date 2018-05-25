@@ -47,13 +47,13 @@ describe('create function', () => {
       foo: 'foo',
       bar: 'bar',
       baz: new File('baz'),
-      qux: new File(new Buffer('qux'))
+      qux: new File(Buffer.from('qux'))
     }
 
     const secondBornFiles = {
       newFileA: 'First New File',
       newFileB: 'Second New File',
-      newFileC: new Buffer('Third New File')
+      newFileC: Buffer.from('Third New File')
     }
 
     const firstBornFolders = {
