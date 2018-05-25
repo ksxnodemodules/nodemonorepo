@@ -3,21 +3,32 @@ import {Stats} from 'fs'
 import * as fsx from 'fs-extra'
 import create from '../create'
 
-export type FileContent = string
-export type TreeObject = {[name: string]: TreeNode}
-export type TreeNode = FileContent | TreeObject
-export type Tree = TreeNode
+export type Tree = Tree.Read
 
-export type WriteFileContent = FileContent | Buffer
-export type WriteFunction = (name: string) => Promise<void> | void
-export type WriteTreeObject = {readonly [name: string]: WriteTreeNode}
-export type WriteTreeNode = WriteFileContent | WriteFunction | WriteTreeObject | FileSystemRepresentation
-export type WriteTree = WriteTreeNode
+export namespace Tree {
+  export type Read = Read.Node
 
-export type ReadFileContent = FileContent
-export type ReadTreeObject = {[name: string]: ReadTreeNode}
-export type ReadTreeNode = ReadFileContent | FileSystemRepresentation.Symlink | ReadTreeObject
-export type ReadTree = ReadTreeNode
+  export namespace Read {
+    export type Node = FileContent | FileSystemRepresentation.Symlink | Object
+    export type FileContent = string
+
+    export interface Object {
+      [name: string]: Node
+    }
+  }
+
+  export type Write = Write.Node
+
+  export namespace Write {
+    export type Node = FileContent | Function | FileSystemRepresentation | Object
+    export type FileContent = Read.FileContent | Buffer
+    export type Function = (name: string) => Promise<void> | void
+
+    export interface Object {
+      readonly [name: string]: Node
+    }
+  }
+}
 
 export interface NestedReadOptions {
   readonly stat?: NestedReadOptions.StatFunc
@@ -46,7 +57,7 @@ export namespace FileSystemRepresentation {
   }
 
   export namespace File {
-    export type Content = WriteFileContent
+    export type Content = Tree.Write.FileContent
   }
 
   export class Directory extends FileSystemRepresentation {
@@ -70,14 +81,14 @@ export namespace FileSystemRepresentation {
       await Promise.all(
         Object
           .entries(this.content)
-          .map(([key, val]): [string, WriteTree] => [path.join(dirname, key), val])
+          .map(([key, val]): [string, Tree.Write] => [path.join(dirname, key), val])
           .map(([newContainer, newTree]) => create(newTree, newContainer))
       )
     }
   }
 
   export namespace Directory {
-    export type Content = WriteTreeObject
+    export type Content = Tree.Write.Object
   }
 
   export class Symlink extends FileSystemRepresentation {
