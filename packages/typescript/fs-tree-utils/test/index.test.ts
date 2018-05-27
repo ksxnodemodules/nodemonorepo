@@ -9,7 +9,7 @@ const oldCwd = cwd()
 const tmpContainer = tempPath('fs-tree-utils.')
 const tmp = 'tmp'
 const {FileSystemRepresentation} = subject
-const {File, Directory} = FileSystemRepresentation
+const {File, Directory, Symlink} = FileSystemRepresentation
 
 const createTreeGetter = (container: string) => () => Promise.all([
   subject.read.nested(container),
@@ -146,6 +146,50 @@ describe('create function', () => {
       await subject.create(existingTree, container)
       await expect(subject.create(expectedTree, container)).rejects.toMatchSnapshot()
     })
+  })
+
+  describe('create symlinks', () => {
+    const mkcreate = (container: string) =>
+    (tree: any) => subject.create(tree, container)
+
+    const createTest = (
+      basename: string,
+      stat: subject.NestedReadOptions.StatFunc
+    ) => async () => {
+      const container = await prepare(basename)
+      expect(await subject.read.nested(container, {stat})).toMatchSnapshot()
+    }
+
+    it('with fsx.lstat as options.stat', createTest('create.3.0.0', fsx.lstat))
+    it('with fsx.lstatSync as options.stat', createTest('create.3.0.0', fsx.lstatSync))
+    it('with fsx.stat as options.stat', createTest('create.3.0.0', fsx.stat))
+    it('with fsx.statSync as options.stat', createTest('create.3.0.0', fsx.statSync))
+
+    async function prepare (basename: string) {
+      const container = path.join(tmp, basename)
+      const create = mkcreate(container)
+      await fsx.remove(container)
+      await create(tree)
+
+      await create({
+        topA: {
+          toBBB: new Symlink('../topB/middleB/bottomB'),
+          toCBA: new Symlink('../topC/middleB/bottomA')
+        },
+        topB: {
+          middleA: {
+            toBCA: new Symlink('../../topB/middleC/bottomA')
+          }
+        },
+        topD: {
+          toA: new Symlink('../topA'),
+          toB: new Symlink('../topB'),
+          toC: new Symlink('../topC')
+        }
+      })
+
+      return container
+    }
   })
 })
 

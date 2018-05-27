@@ -1,5 +1,249 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`create function create symlinks with fsx.lstat as options.stat 1`] = `
+Object {
+  "topA": Object {
+    "toBBB": Symlink {
+      "linkTarget": "../topB/middleB/bottomB",
+    },
+    "toCBA": Symlink {
+      "linkTarget": "../topC/middleB/bottomA",
+    },
+  },
+  "topB": Object {
+    "middleA": Object {
+      "toBCA": Symlink {
+        "linkTarget": "../../topB/middleC/bottomA",
+      },
+    },
+    "middleB": Object {
+      "bottomA": Object {},
+      "bottomB": "B.B.B",
+    },
+    "middleC": Object {
+      "bottomA": "B.C.A",
+      "bottomB": "B.C.B",
+    },
+  },
+  "topC": Object {
+    "middleA": Object {
+      "bottomA": "C.A.A",
+      "bottomB": "C.A.B",
+    },
+    "middleB": Object {
+      "bottomA": "C.B.A",
+      "bottomB": "C.B.B",
+    },
+    "middleC": Object {
+      "bottomA": "C.C.A",
+      "bottomB": "C.C.B",
+    },
+  },
+  "topD": Object {
+    "toA": Symlink {
+      "linkTarget": "../topA",
+    },
+    "toB": Symlink {
+      "linkTarget": "../topB",
+    },
+    "toC": Symlink {
+      "linkTarget": "../topC",
+    },
+  },
+}
+`;
+
+exports[`create function create symlinks with fsx.lstatSync as options.stat 1`] = `
+Object {
+  "topA": Object {
+    "toBBB": Symlink {
+      "linkTarget": "../topB/middleB/bottomB",
+    },
+    "toCBA": Symlink {
+      "linkTarget": "../topC/middleB/bottomA",
+    },
+  },
+  "topB": Object {
+    "middleA": Object {
+      "toBCA": Symlink {
+        "linkTarget": "../../topB/middleC/bottomA",
+      },
+    },
+    "middleB": Object {
+      "bottomA": Object {},
+      "bottomB": "B.B.B",
+    },
+    "middleC": Object {
+      "bottomA": "B.C.A",
+      "bottomB": "B.C.B",
+    },
+  },
+  "topC": Object {
+    "middleA": Object {
+      "bottomA": "C.A.A",
+      "bottomB": "C.A.B",
+    },
+    "middleB": Object {
+      "bottomA": "C.B.A",
+      "bottomB": "C.B.B",
+    },
+    "middleC": Object {
+      "bottomA": "C.C.A",
+      "bottomB": "C.C.B",
+    },
+  },
+  "topD": Object {
+    "toA": Symlink {
+      "linkTarget": "../topA",
+    },
+    "toB": Symlink {
+      "linkTarget": "../topB",
+    },
+    "toC": Symlink {
+      "linkTarget": "../topC",
+    },
+  },
+}
+`;
+
+exports[`create function create symlinks with fsx.stat as options.stat 1`] = `
+Object {
+  "topA": Object {
+    "toBBB": "B.B.B",
+    "toCBA": "C.B.A",
+  },
+  "topB": Object {
+    "middleA": Object {
+      "toBCA": "B.C.A",
+    },
+    "middleB": Object {
+      "bottomA": Object {},
+      "bottomB": "B.B.B",
+    },
+    "middleC": Object {
+      "bottomA": "B.C.A",
+      "bottomB": "B.C.B",
+    },
+  },
+  "topC": Object {
+    "middleA": Object {
+      "bottomA": "C.A.A",
+      "bottomB": "C.A.B",
+    },
+    "middleB": Object {
+      "bottomA": "C.B.A",
+      "bottomB": "C.B.B",
+    },
+    "middleC": Object {
+      "bottomA": "C.C.A",
+      "bottomB": "C.C.B",
+    },
+  },
+  "topD": Object {
+    "toA": Object {
+      "toBBB": "B.B.B",
+      "toCBA": "C.B.A",
+    },
+    "toB": Object {
+      "middleA": Object {
+        "toBCA": "B.C.A",
+      },
+      "middleB": Object {
+        "bottomA": Object {},
+        "bottomB": "B.B.B",
+      },
+      "middleC": Object {
+        "bottomA": "B.C.A",
+        "bottomB": "B.C.B",
+      },
+    },
+    "toC": Object {
+      "middleA": Object {
+        "bottomA": "C.A.A",
+        "bottomB": "C.A.B",
+      },
+      "middleB": Object {
+        "bottomA": "C.B.A",
+        "bottomB": "C.B.B",
+      },
+      "middleC": Object {
+        "bottomA": "C.C.A",
+        "bottomB": "C.C.B",
+      },
+    },
+  },
+}
+`;
+
+exports[`create function create symlinks with fsx.statSync as options.stat 1`] = `
+Object {
+  "topA": Object {
+    "toBBB": "B.B.B",
+    "toCBA": "C.B.A",
+  },
+  "topB": Object {
+    "middleA": Object {
+      "toBCA": "B.C.A",
+    },
+    "middleB": Object {
+      "bottomA": Object {},
+      "bottomB": "B.B.B",
+    },
+    "middleC": Object {
+      "bottomA": "B.C.A",
+      "bottomB": "B.C.B",
+    },
+  },
+  "topC": Object {
+    "middleA": Object {
+      "bottomA": "C.A.A",
+      "bottomB": "C.A.B",
+    },
+    "middleB": Object {
+      "bottomA": "C.B.A",
+      "bottomB": "C.B.B",
+    },
+    "middleC": Object {
+      "bottomA": "C.C.A",
+      "bottomB": "C.C.B",
+    },
+  },
+  "topD": Object {
+    "toA": Object {
+      "toBBB": "B.B.B",
+      "toCBA": "C.B.A",
+    },
+    "toB": Object {
+      "middleA": Object {
+        "toBCA": "B.C.A",
+      },
+      "middleB": Object {
+        "bottomA": Object {},
+        "bottomB": "B.B.B",
+      },
+      "middleC": Object {
+        "bottomA": "B.C.A",
+        "bottomB": "B.C.B",
+      },
+    },
+    "toC": Object {
+      "middleA": Object {
+        "bottomA": "C.A.A",
+        "bottomB": "C.A.B",
+      },
+      "middleB": Object {
+        "bottomA": "C.B.A",
+        "bottomB": "C.B.B",
+      },
+      "middleC": Object {
+        "bottomA": "C.C.A",
+        "bottomB": "C.C.B",
+      },
+    },
+  },
+}
+`;
+
 exports[`create function creates files/directories that yet to exist 1`] = `
 Object {
   "flat": Object {
