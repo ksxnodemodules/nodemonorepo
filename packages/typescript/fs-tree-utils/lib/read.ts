@@ -36,6 +36,7 @@ export async function readNested (
   options: NestedReadOptions = {}
 ): NestedReadResult {
   const {
+    onunknown,
     onerror: transformError,
     stat = (x: string) => fsx.stat(x)
   } = options
@@ -60,6 +61,10 @@ export async function readNested (
 
     if (stats.isSymbolicLink()) {
       return new Symlink(await fsx.readlink(name))
+    }
+
+    if (onunknown) {
+      return onunknown({name, stats})
     }
 
     throw new Error(`Unknown filesystem type of path '${name}'`)

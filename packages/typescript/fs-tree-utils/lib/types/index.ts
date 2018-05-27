@@ -38,11 +38,20 @@ export namespace Tree {
 export interface NestedReadOptions {
   readonly stat?: NestedReadOptions.StatFunc
   readonly onerror?: NestedReadOptions.ErrorHandler
+  readonly onunknown?: NestedReadOptions.Unknown
 }
 
 export namespace NestedReadOptions {
   export type StatFunc = (name: string) => Promise<Stats> | Stats
-  export type ErrorHandler = (error: Error) => FileSystemRepresentation.Exception
+  export type ErrorHandler = (error: Error) => FileSystemRepresentation.Exception.ErrorCarrier
+  export type Unknown = (x: Unknown.Param) => FileSystemRepresentation.Exception.Other
+
+  export namespace Unknown {
+    export interface Param {
+      readonly name: string
+      readonly stats: Stats
+    }
+  }
 }
 
 export abstract class FileSystemRepresentation {
@@ -123,17 +132,23 @@ export namespace FileSystemRepresentation {
     }
   }
 
-  export class Exception extends FileSystemRepresentation {
-    readonly error: Error
+  export abstract class Exception extends FileSystemRepresentation {}
 
-    constructor (error: Error) {
-      super()
-      this.error = error
+  export namespace Exception {
+    export class ErrorCarrier extends Exception {
+      readonly error: Error
+
+      constructor (error: Error) {
+        super()
+        this.error = error
+      }
+
+      async write () {
+        throw this.error
+      }
     }
 
-    async write () {
-      throw this.error
-    }
+    export abstract class Other extends Exception {}
   }
 }
 
