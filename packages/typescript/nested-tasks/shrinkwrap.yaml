@@ -17,6 +17,6 @@ shrinkwrapMinorVersion: 7
 shrinkwrapVersion: 3
 specifiers:
   '@types/node': ^10.1.2
-  fs-tree-utils: ^0.0.7
+  fs-tree-utils: ^0.0.8
   monorepo-shared-yaml: ^0.0.5
   tslib: ^1.9.1
