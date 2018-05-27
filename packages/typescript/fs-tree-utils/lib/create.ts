@@ -1,33 +1,29 @@
-import * as path from 'path'
-import * as fsx from 'fs-extra'
-import {Tree} from './types'
+import * as types from './types'
 
 /**
  * Create a directory tree
  * @param tree Tree structure that needs to create
  * @param container Where to place the tree
  */
-export async function create (tree: Tree, container: string = '') {
-  if (typeof tree === 'string') {
-    await fsx.writeFile(container, tree)
-    return
+export async function create (
+  tree: types.Tree.Write,
+  container: string = ''
+): Promise<void> {
+  const {FileSystemRepresentation} = types
+
+  if (typeof tree === 'string' || tree instanceof Buffer) {
+    return create(new FileSystemRepresentation.File(tree), container)
   }
 
-  if (fsx.existsSync(container)) {
-    const stats = await fsx.stat(container)
-    if (!stats.isDirectory()) {
-      throw new Error(`Entity ${container} exists but is not directory`)
-    }
-  } else {
-    await fsx.mkdir(container)
+  if (typeof tree === 'function') {
+    return tree(container)
   }
 
-  await Promise.all(
-    Object
-      .entries(tree)
-      .map(([key, val]): [string, Tree] => [path.join(container, key), val])
-      .map(([newContainer, newTree]) => create(newTree, newContainer))
-  )
+  if (tree instanceof FileSystemRepresentation) {
+    return create(x => tree.write(x), container)
+  }
+
+  return create(new FileSystemRepresentation.Directory(tree), container)
 }
 
 export namespace create {

@@ -1,17 +1,20 @@
 import * as path from 'path'
 import ramda from 'ramda'
 import * as fsx from 'fs-extra'
+import * as assets from 'monorepo-shared-assets'
 import traverse, {DeepFunc} from './traverse'
-import {Tree, TreeObject, FileContent} from './types'
+import {Tree, NestedReadOptions, FileSystemRepresentation} from './types'
+import wrapRejection = assets.wrapException.wrapPromiseRejection
+import Symlink = FileSystemRepresentation.Symlink
 
-export type NestedReadResult = Promise<Tree>
+export type NestedReadResult = Promise<Tree.Read>
 
 export interface FlatReadResultFileContent {
-  readonly [filename: string]: FileContent
+  readonly [filename: string]: Tree.Read.FileContent
 }
 
 interface WritableFlatReadResultFileContent {
-  [filename: string]: FileContent
+  [filename: string]: Tree.Read.FileContent
 }
 
 export interface FlatReadResultValue {
@@ -25,25 +28,47 @@ export type FlatReadResult = Promise<FlatReadResultValue>
 
 /**
  * @param name Directory name
+ * @param options Specify stat method and error handler
  * @returns Nested directory tree representation
  */
-export async function readNested (name: string): NestedReadResult {
-  const stats = await fsx.stat(name)
+export async function readNested (
+  name: string,
+  options: NestedReadOptions = {}
+): NestedReadResult {
+  const {
+    onunknown,
+    onerror: transformError,
+    stat = (x: string) => fsx.stat(x)
+  } = options
 
-  if (stats.isFile()) {
-    return await fsx.readFile(name, 'utf8')
-  }
+  return wrapRejection(main, transformError)(name)
 
-  if (stats.isDirectory()) {
-    let tree: TreeObject = {}
-    for (const item of await fsx.readdir(name)) {
-      const subtree = await readNested(path.join(name, item))
-      tree[item] = subtree
+  async function main (name: string): NestedReadResult {
+    const stats = await Promise.resolve(stat(name))
+
+    if (stats.isFile()) {
+      return await fsx.readFile(name, 'utf8')
     }
-    return tree
-  }
 
-  throw new Error(`Unknown filesystem type of path '${name}'`)
+    if (stats.isDirectory()) {
+      let tree: Tree.Read = {}
+      for (const item of await fsx.readdir(name)) {
+        const subtree = await main(path.join(name, item))
+        tree[item] = subtree
+      }
+      return tree
+    }
+
+    if (stats.isSymbolicLink()) {
+      return new Symlink(await fsx.readlink(name))
+    }
+
+    if (onunknown) {
+      return onunknown({name, stats})
+    }
+
+    throw new Error(`Unknown filesystem type of path '${name}'`)
+  }
 }
 
 /**

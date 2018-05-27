@@ -1,7 +1,6 @@
 import * as path from 'path'
 import {cwd, chdir} from 'process'
 import * as fsx from 'fs-extra'
-import * as xjest from 'extra-jest'
 import tempPath from 'unique-temp-path'
 import * as subject from '../index'
 import {DeepFunc} from '../lib/traverse'
@@ -9,20 +8,22 @@ const tree = require('./data/tree.yaml')
 const oldCwd = cwd()
 const tmpContainer = tempPath('fs-tree-utils.')
 const tmp = 'tmp'
+const {FileSystemRepresentation} = subject
+const {File, Directory, Symlink} = FileSystemRepresentation
 
 const createTreeGetter = (container: string) => () => Promise.all([
   subject.read.nested(container),
   subject.read.flat(container)
 ]).then(([nested, flat]) => ({nested, flat}))
 
-beforeAll(async () => {
+beforeEach(async () => {
   await fsx.mkdir(tmpContainer)
   chdir(tmpContainer)
   await fsx.remove(tmp)
   await fsx.mkdir(tmp)
 })
 
-afterAll(async () => {
+afterEach(async () => {
   chdir(oldCwd)
   await fsx.remove(tmpContainer)
 })
@@ -44,18 +45,24 @@ describe('create function', () => {
 
     const firstBornFiles = {
       foo: 'foo',
-      bar: 'bar'
+      bar: 'bar',
+      baz: new File('baz'),
+      qux: new File(Buffer.from('qux'))
     }
 
     const secondBornFiles = {
       newFileA: 'First New File',
       newFileB: 'Second New File',
-      newFileC: 'Third New File'
+      newFileC: Buffer.from('Third New File'),
+      newFileD: (x: string) => fsx.writeFile(x, 'Forth New File'),
+      newFileE: (x: string) => fsx.writeFileSync(x, 'Fifth New File')
     }
 
     const firstBornFolders = {
       emptyFoo: {},
       emptyBar: {},
+      emptyBaz: new Directory(),
+      emptyQux: new Directory({}),
       firstBornFiles
     }
 
@@ -72,7 +79,22 @@ describe('create function', () => {
         nonEmptyFile: {
           file: 'Not empty'
         }
-      }
+      },
+      newTreeD: new Directory({
+        newTreeA: {},
+        newTreeB: new Directory({
+          empty: {}
+        }),
+        newTreeC: {
+          empty: {},
+          emptyFile: new Directory({
+            file: ''
+          }),
+          nonEmptyFile: {
+            file: 'Not empty'
+          }
+        }
+      })
     }
 
     await subject.create({
@@ -106,7 +128,7 @@ describe('create function', () => {
       }
 
       await subject.create(existingTree, container)
-      xjest.promise.snapRejected(subject.create(expectedTree, container))
+      await expect(subject.create(expectedTree, container)).rejects.toMatchSnapshot()
     })
 
     it('in which a folder is requested in place of a file', async () => {
@@ -122,8 +144,52 @@ describe('create function', () => {
       }
 
       await subject.create(existingTree, container)
-      xjest.promise.snapRejected(subject.create(expectedTree, container))
+      await expect(subject.create(expectedTree, container)).rejects.toMatchSnapshot()
     })
+  })
+
+  describe('create symlinks', () => {
+    const mkcreate = (container: string) =>
+    (tree: any) => subject.create(tree, container)
+
+    const createTest = (
+      basename: string,
+      stat: subject.NestedReadOptions.StatFunc
+    ) => async () => {
+      const container = await prepare(basename)
+      expect(await subject.read.nested(container, {stat})).toMatchSnapshot()
+    }
+
+    it('with fsx.lstat as options.stat', createTest('create.3.0.0', fsx.lstat))
+    it('with fsx.lstatSync as options.stat', createTest('create.3.0.0', fsx.lstatSync))
+    it('with fsx.stat as options.stat', createTest('create.3.0.0', fsx.stat))
+    it('with fsx.statSync as options.stat', createTest('create.3.0.0', fsx.statSync))
+
+    async function prepare (basename: string) {
+      const container = path.join(tmp, basename)
+      const create = mkcreate(container)
+      await fsx.remove(container)
+      await create(tree)
+
+      await create({
+        topA: {
+          toBBB: new Symlink('../topB/middleB/bottomB'),
+          toCBA: new Symlink('../topC/middleB/bottomA')
+        },
+        topB: {
+          middleA: {
+            toBCA: new Symlink('../../topB/middleC/bottomA')
+          }
+        },
+        topD: {
+          toA: new Symlink('../topA'),
+          toB: new Symlink('../topB'),
+          toC: new Symlink('../topC')
+        }
+      })
+
+      return container
+    }
   })
 })
 
