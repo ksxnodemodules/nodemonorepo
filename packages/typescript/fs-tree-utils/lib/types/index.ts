@@ -118,7 +118,7 @@ export namespace FileSystemRepresentation {
     }
 
     async write (linkName: string) {
-      await fsx.symlink(linkName, this.linkTarget, this.type)
+      await fsx.symlink(this.linkTarget, linkName, this.type)
     }
   }
 
