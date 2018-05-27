@@ -1,6 +1,11 @@
 branches:
   except:
     - draft
+    - tmp
+    - draft.*
+    - '*.draft'
+    - tmp.*
+    - '*.tmp'
 
 language: node_js
 
