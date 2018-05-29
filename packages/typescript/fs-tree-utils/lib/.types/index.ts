@@ -132,6 +132,25 @@ export namespace FileSystemRepresentation {
     }
   }
 
+  export class Clone extends FileSystemRepresentation {
+    private readonly source: string
+    private readonly options?: Clone.Options
+
+    constructor (source: string, options?: Clone.Options) {
+      super()
+      this.source = source
+      this.options = options
+    }
+
+    async write (destination: string) {
+      await fsx.copy(this.source, destination, this.options)
+    }
+  }
+
+  export namespace Clone {
+    export type Options = fsx.CopyOptions
+  }
+
   export abstract class Exception extends FileSystemRepresentation {}
 
   export namespace Exception {

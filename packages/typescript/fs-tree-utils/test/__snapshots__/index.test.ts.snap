@@ -1,5 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`create function create clone 1`] = `
+Object {
+  "flat": Object {
+    "all": Array [
+      "tmp/create.4/source",
+      "tmp/create.4/source/directory",
+      "tmp/create.4/source/directory/file",
+      "tmp/create.4/target",
+      "tmp/create.4/target/directory",
+      "tmp/create.4/target/directory/file",
+      "tmp/create.4/target/file",
+    ],
+    "directories": Array [
+      "tmp/create.4/source",
+      "tmp/create.4/source/directory",
+      "tmp/create.4/target",
+      "tmp/create.4/target/directory",
+    ],
+    "fileContents": Object {
+      "tmp/create.4/source/directory/file": "This file is meant to be cloned",
+      "tmp/create.4/target/directory/file": "This file is meant to be cloned",
+      "tmp/create.4/target/file": "This file is meant to be cloned",
+    },
+    "files": Array [
+      "tmp/create.4/source/directory/file",
+      "tmp/create.4/target/directory/file",
+      "tmp/create.4/target/file",
+    ],
+  },
+  "nested": Object {
+    "source": Object {
+      "directory": Object {
+        "file": "This file is meant to be cloned",
+      },
+    },
+    "target": Object {
+      "directory": Object {
+        "file": "This file is meant to be cloned",
+      },
+      "file": "This file is meant to be cloned",
+    },
+  },
+}
+`;
+
 exports[`create function create symlinks with fsx.lstat as options.stat 1`] = `
 Object {
   "topA": Object {
