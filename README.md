@@ -18,7 +18,7 @@ This repo hold many of my nodejs packages in one place for ease of management.
 
 * Satisfies [package requirements](#package-requirements)
 * UNIX-like environment (Linux, macOS, FreeBSD, etc.)
-* Package manager that supports monorepo: [pnpm](https://pnpm.js.org/), [yarn](https://yarnpkg.com/)
+* Package manager that supports monorepo: [pnpm](https://pnpm.js.org/) (Recommened), [yarn](https://yarnpkg.com/)
 
 ### Install dependencies
 
