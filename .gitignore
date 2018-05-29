@@ -22,6 +22,12 @@ temp.*
 /packages/*/*/.npmignore
 !*.inrepo*
 
+# Lockfiles
+#   * Yarn's and NPM's are ignored for I use PNPM
+yarn.lock
+package-lock.json
+!shrinkwrap.yaml
+
 # Logs
 logs
 *.log
