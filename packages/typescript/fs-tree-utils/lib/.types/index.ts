@@ -54,14 +54,31 @@ export namespace NestedReadOptions {
   }
 }
 
+/**
+ * This class allows to extends `fsTreeUtils.create`'s functionality.
+ *
+ * This class is an abstract class that is meant to be extended upon,
+ * don't instantiated this class directly!
+ */
 export abstract class FileSystemRepresentation {
+  /**
+   * Turn `FileSystemRepresentation` object into a real filesystem entity.
+   * @param target Name of filesystem entity that needs to be created or written upon.
+   * @returns A promise.
+   */
   abstract async write (target: string): Promise<void>
 }
 
 export namespace FileSystemRepresentation {
+  /**
+   * Represents a file.
+   */
   export class File extends FileSystemRepresentation {
     private readonly content: File.Content
 
+    /**
+     * @param content A string of Buffer which is content of represented file.
+     */
     constructor (content: File.Content) {
       super()
       this.content = content
@@ -76,9 +93,15 @@ export namespace FileSystemRepresentation {
     export type Content = Tree.Write.FileContent
   }
 
+  /**
+   * Represent a directory.
+   */
   export class Directory extends FileSystemRepresentation {
     private readonly content: Directory.Content
 
+    /**
+     * @param content An object whose every property represent a child item of represented directory.
+     */
     constructor (content?: Directory.Content | null) {
       super()
       this.content = content || {}
@@ -107,10 +130,20 @@ export namespace FileSystemRepresentation {
     export type Content = Tree.Write.Object
   }
 
+  /**
+   * Represents a symbolic link
+   */
   export class Symlink extends FileSystemRepresentation {
     private readonly linkTarget: string
     private readonly type?: Symlink.Options.Type
 
+    /**
+     * @param linkTarget Where symlink points to.
+     *   * 🗈 Relative to the represented symlink.
+     * @param options Optional.
+     *   * Property `type`: Optional. Either 'file', 'dir' or 'junction'. Only matters in Windows.
+     * @see https://nodejs.org/api/fs.html#fs_fs_symlink_target_path_type_callback
+     */
     constructor (linkTarget: string, options: Symlink.Options = {}) {
       super()
       this.linkTarget = linkTarget
@@ -132,10 +165,17 @@ export namespace FileSystemRepresentation {
     }
   }
 
+  /**
+   * Use this to copy files and/or clone directories
+   */
   export class Clone extends FileSystemRepresentation {
     private readonly source: string
     private readonly options?: Clone.Options
 
+    /**
+     * @param source Path to source
+     * @param options Options to pass to [`fsExtra.copy`](https://git.io/vh3WC)
+     */
     constructor (source: string, options?: Clone.Options) {
       super()
       this.source = source
@@ -151,9 +191,17 @@ export namespace FileSystemRepresentation {
     export type Options = fsx.CopyOptions
   }
 
+  /**
+   * Represent exceptional/impossible filesystem entities.
+   *
+   * Objects of this class are created by function `read`.
+   */
   export abstract class Exception extends FileSystemRepresentation {}
 
   export namespace Exception {
+    /**
+     * Represent a caught `Error` when try to read a filesystem entity.
+     */
     export class ErrorCarrier extends Exception {
       readonly error: Error
 
@@ -163,7 +211,7 @@ export namespace FileSystemRepresentation {
       }
 
       async write () {
-        throw this.error
+        throw this.error // cannot be used in function `create`.
       }
     }
 
