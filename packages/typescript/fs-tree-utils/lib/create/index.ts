@@ -7,7 +7,7 @@ import * as types from '../.types'
  */
 export async function create (
   tree: types.Tree.Write,
-  container: string = ''
+  container: string
 ): Promise<void> {
   const {FileSystemRepresentation} = types
 
