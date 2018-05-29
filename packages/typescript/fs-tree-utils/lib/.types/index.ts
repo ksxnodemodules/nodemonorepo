@@ -166,15 +166,15 @@ export namespace FileSystemRepresentation {
   }
 
   /**
-   * Use this to copy files and/or clone directories
+   * Use this to copy files and/or clone directories.
    */
   export class Clone extends FileSystemRepresentation {
     private readonly source: string
     private readonly options?: Clone.Options
 
     /**
-     * @param source Path to source
-     * @param options Options to pass to [`fsExtra.copy`](https://git.io/vh3WC)
+     * @param source Path to source.
+     * @param options Options to pass to [`fsExtra.copy`](https://git.io/vh3WC).
      */
     constructor (source: string, options?: Clone.Options) {
       super()
@@ -192,15 +192,20 @@ export namespace FileSystemRepresentation {
   }
 
   /**
-   * Represent exceptional/impossible filesystem entities.
+   * Represents exceptional/impossible filesystem entities.
    *
-   * Objects of this class are created by function `read`.
+   * This class is used by function `read`.
+   *
+   * Users are not meant to create objects of this class
+   * except when the objects are of `FileSystemRepresentation.Exception.Other`.
    */
   export abstract class Exception extends FileSystemRepresentation {}
 
   export namespace Exception {
     /**
-     * Represent a caught `Error` when try to read a filesystem entity.
+     * Represents a caught `Error` when try to read a filesystem entity.
+     *
+     * Users are not meant to create objects of this class.
      */
     export class ErrorCarrier extends Exception {
       readonly error: Error
@@ -215,6 +220,13 @@ export namespace FileSystemRepresentation {
       }
     }
 
+    /**
+     * Unlike other subclasses of `FileSystemRepresentation.Exception`,
+     * subclasses of this class are meant to instantiated by users.
+     *
+     * This is an abstract class, don't instantiate it directly,
+     * instead, create a subclass that extends it.
+     */
     export abstract class Other extends Exception {}
   }
 }
