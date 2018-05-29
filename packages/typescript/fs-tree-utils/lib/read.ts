@@ -3,7 +3,7 @@ import ramda from 'ramda'
 import * as fsx from 'fs-extra'
 import * as assets from 'monorepo-shared-assets'
 import traverse, {DeepFunc} from './traverse'
-import {Tree, NestedReadOptions, FileSystemRepresentation} from './types'
+import {Tree, NestedReadOptions, FileSystemRepresentation} from './.types'
 import wrapRejection = assets.wrapException.wrapPromiseRejection
 import Symlink = FileSystemRepresentation.Symlink
 
