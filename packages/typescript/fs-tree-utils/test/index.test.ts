@@ -9,7 +9,7 @@ const oldCwd = cwd()
 const tmpContainer = tempPath('fs-tree-utils.')
 const tmp = 'tmp'
 const {FileSystemRepresentation} = subject
-const {File, Directory, Symlink} = FileSystemRepresentation
+const {File, Directory, Symlink, Clone} = FileSystemRepresentation
 
 const createTreeGetter = (container: string) => () => Promise.all([
   subject.read.nested(container),
@@ -190,6 +190,27 @@ describe('create function', () => {
 
       return container
     }
+  })
+
+  it('create clone', async () => {
+    const container = path.join(tmp, 'create.4')
+    const getTree = createTreeGetter(container)
+    await fsx.remove(container)
+
+    const source = {
+      directory: {
+        file: 'This file is meant to be cloned'
+      }
+    }
+
+    const target = {
+      directory: new Clone(path.resolve(container, 'source/directory')),
+      file: new Clone(path.resolve(container, 'source/directory/file'))
+    }
+
+    await subject.create({source}, container)
+    await subject.create({target}, container)
+    expect(await getTree()).toMatchSnapshot()
   })
 })
 
