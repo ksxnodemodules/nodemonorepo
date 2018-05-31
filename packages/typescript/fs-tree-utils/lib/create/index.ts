@@ -16,11 +16,11 @@ export async function create (
   }
 
   if (typeof tree === 'function') {
-    return tree(container)
+    return tree(container, {create})
   }
 
   if (tree instanceof FileSystemRepresentation) {
-    return create(x => tree.write(x), container)
+    return create(x => tree.write(x, {create}), container)
   }
 
   return create(new FileSystemRepresentation.Directory(tree), container)

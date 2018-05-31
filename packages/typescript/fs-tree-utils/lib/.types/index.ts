@@ -1,7 +1,6 @@
 import * as path from 'path'
 import {Stats} from 'fs'
 import * as fsx from 'fs-extra'
-import create from '../create'
 
 export type Tree = Tree.Read
 
@@ -27,12 +26,20 @@ export namespace Tree {
   export namespace Write {
     export type Node = FileContent | Function | FileSystemRepresentation | Object
     export type FileContent = Read.FileContent | Buffer
-    export type Function = (name: string) => Promise<void> | void
+    export type Function = (name: string, param: CreateSecondParam) => Promise<void> | void
 
     export interface Object {
       readonly [name: string]: Node
     }
   }
+}
+
+export interface CreateSecondParam {
+  readonly create: CreateSecondParam.CreateFunc
+}
+
+export namespace CreateSecondParam {
+  export type CreateFunc = (tree: Tree.Write, container: string) => Promise<void>
 }
 
 export interface NestedReadOptions {
@@ -66,7 +73,7 @@ export abstract class FileSystemRepresentation {
    * @param target Name of filesystem entity that needs to be created or written upon.
    * @returns Undefined or promise of undefined.
    */
-  abstract write (target: string): Promise<void> | void
+  abstract write (target: string, param: CreateSecondParam): Promise<void> | void
 }
 
 export namespace FileSystemRepresentation {
@@ -107,7 +114,7 @@ export namespace FileSystemRepresentation {
       this.content = content || {}
     }
 
-    async write (dirname: string) {
+    async write (dirname: string, {create}: CreateSecondParam) {
       if (fsx.existsSync(dirname)) {
         const stats = await fsx.stat(dirname)
         if (!stats.isDirectory()) {
