@@ -66,7 +66,7 @@ export abstract class FileSystemRepresentation {
    * @param target Name of filesystem entity that needs to be created or written upon.
    * @returns A promise.
    */
-  abstract async write (target: string): Promise<void>
+  abstract write (target: string): Promise<void>
 }
 
 export namespace FileSystemRepresentation {
