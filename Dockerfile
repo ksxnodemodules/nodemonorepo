@@ -10,4 +10,4 @@ RUN pnpm recursive link
 
 COPY . .
 
-CMD ['pnpm', 'test', '--', '--ci']
+CMD ["pnpm", "test", "--", "--ci"]
