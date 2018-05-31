@@ -64,9 +64,9 @@ export abstract class FileSystemRepresentation {
   /**
    * Turn `FileSystemRepresentation` object into a real filesystem entity.
    * @param target Name of filesystem entity that needs to be created or written upon.
-   * @returns A promise.
+   * @returns Undefined or promise of undefined.
    */
-  abstract write (target: string): Promise<void>
+  abstract write (target: string): Promise<void> | void
 }
 
 export namespace FileSystemRepresentation {
