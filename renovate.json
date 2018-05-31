@@ -1,6 +1,7 @@
 {
   "pinVersions": false,
   "extends": [
-    "config:base"
+    "config:base",
+    "docker:disable"
   ]
 }
