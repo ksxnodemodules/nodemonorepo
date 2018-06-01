@@ -20,13 +20,13 @@
     "fs-extra": "^6.0.1",
     "yargs": "^11.0.0",
     "chalk": "^2.4.1",
-    "tslib": "^1.9.1",
+    "tslib": "^1.9.2",
     "fs-tree-utils": "^0.0.11",
     "preloaded-node.private": "^0.0.0",
     "@types/minimatch": "^3.0.3",
     "@types/fs-extra": "^5.0.2",
     "@types/yargs": "^11.0.0",
-    "@types/node": "^10.1.2"
+    "@types/node": "^10.3.0"
   },
   "engines": {
     "node": ">= 8.9.0"

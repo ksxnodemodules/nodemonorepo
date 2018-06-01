@@ -22,8 +22,8 @@
     "iterate"
   ],
   "dependencies": {
-    "tslib": "^1.9.1",
+    "tslib": "^1.9.2",
     "monorepo-shared-assets": "^0.0.12",
-    "@types/node": "^10.1.2"
+    "@types/node": "^10.3.0"
   }
 }

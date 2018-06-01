@@ -1,23 +1,23 @@
 dependencies:
-  '@types/node': 10.1.2
+  '@types/node': 10.3.0
   path-env: 'link:../path-env'
   preloaded-node: 'link:../../javascript/preloaded-node'
   preloaded-node.private: 'link:../../javascript/preloaded-node.private'
-  tslib: 1.9.1
+  tslib: 1.9.2
 packages:
-  /@types/node/10.1.2:
+  /@types/node/10.3.0:
     dev: false
     resolution:
-      integrity: sha512-bjk1RIeZBCe/WukrFToIVegOf91Pebr8cXYBwLBIsfiGWVQ+ifwWsT59H3RxrWzWrzd1l/Amk1/ioY5Fq3/bpA==
-  /tslib/1.9.1:
+      integrity: sha512-hWzNviaVFIr1TqcRA8ou49JaSHp+Rfabmnqg2kNvusKqLhPU0rIsGPUj5WJJ7ld4Bb7qdgLmIhLfCD1qS08IVA==
+  /tslib/1.9.2:
     dev: false
     resolution:
-      integrity: sha512-avfPS28HmGLLc2o4elcc2EIq2FcH++Yo5YxpBZi9Yw93BCTGFthI4HPE4Rpep6vSYQaK8e69PelM44tPj+RaQg==
+      integrity: sha512-AVP5Xol3WivEr7hnssHDsaM+lVrVXWUvd1cfXTRkTj80b//6g2wIFEH6hZG0muGZRnHGrfttpdzRk3YlBkWjKw==
 registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 7
 shrinkwrapVersion: 3
 specifiers:
-  '@types/node': ^10.1.2
+  '@types/node': ^10.3.0
   path-env: '*'
   preloaded-node.private: '*'
-  tslib: ^1.9.1
+  tslib: ^1.9.2
