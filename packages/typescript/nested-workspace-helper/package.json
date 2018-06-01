@@ -26,16 +26,16 @@
     "node-fetch": "^2.1.2",
     "yargs": "^11.0.0",
     "chalk": "^2.4.1",
-    "tslib": "^1.9.1",
+    "tslib": "^1.9.2",
     "monorepo-shared-assets": "^0.0.12",
     "fs-tree-utils": "^0.0.11",
-    "@types/ramda": "^0.25.29",
+    "@types/ramda": "^0.25.32",
     "@types/semver": "^5.5.0",
     "@types/js-yaml": "^3.11.1",
     "@types/fs-extra": "^5.0.2",
-    "@types/node-fetch": "^1.6.9",
+    "@types/node-fetch": "^2.1.1",
     "@types/yargs": "^11.0.0",
-    "@types/node": "^10.1.2"
+    "@types/node": "^10.3.0"
   },
   "devDependencies": {
     "preloaded-node.private": "*"
