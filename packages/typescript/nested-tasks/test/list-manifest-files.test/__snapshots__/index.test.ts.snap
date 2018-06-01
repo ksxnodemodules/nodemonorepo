@@ -1,3 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`without options 1`] = `Array []`;
+exports[`without options 1`] = `
+Array [
+  Object {
+    "path": "root/task.yaml",
+    "type": "yaml",
+  },
+  Object {
+    "path": "root/yaml-only/task.yaml",
+    "type": "yaml",
+  },
+]
+`;

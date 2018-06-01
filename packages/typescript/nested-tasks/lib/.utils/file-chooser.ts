@@ -13,8 +13,8 @@ export function createFileChooser (
   prefix: string
 ): createFileChooser.FileChooser {
   return x => {
-    const {base, ext} = path.parse(x.item)
-    return base === prefix ? getManifestType(ext) : null
+    const {name, ext} = path.parse(x.item)
+    return name === prefix ? getManifestType(ext) : null
   }
 }
 
