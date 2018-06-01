@@ -1,1 +1,1 @@
-it('ok')
+import * as subject from '../../index'
