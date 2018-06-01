@@ -54,12 +54,12 @@ export const createFactory = base.createFactory
 
 export namespace virtualEnvironment {
   export interface Info {
-    readonly tree: Tree.Read.Object
+    readonly tree: Tree.Write.Node
     readonly container: string
     readonly previousWorkingDirectory: string
   }
 
-  export function createFactory (tree: Tree.Read.Object, container = tempPath()) {
+  export function createFactory (tree: Tree.Write.Node, container = tempPath()) {
     const previousWorkingDirectory = process.cwd()
     const info: Info = {tree, container, previousWorkingDirectory}
 
