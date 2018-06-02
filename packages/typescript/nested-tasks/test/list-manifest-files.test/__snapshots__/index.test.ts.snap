@@ -3,6 +3,10 @@
 exports[`without options 1`] = `
 Array [
   Object {
+    "path": "root/script-only/task.js",
+    "type": "module",
+  },
+  Object {
     "path": "root/task.js",
     "type": "module",
   },
