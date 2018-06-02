@@ -2,6 +2,7 @@ dependencies:
   '@types/node': 10.1.2
   fs-tree-utils: 'link:../fs-tree-utils'
   monorepo-shared-yaml: 'link:../monorepo-shared-yaml'
+  path-env: 'link:../path-env'
   tslib: 1.9.1
 packages:
   /@types/node/10.1.2:
@@ -19,4 +20,5 @@ specifiers:
   '@types/node': ^10.1.2
   fs-tree-utils: ^0.0.8
   monorepo-shared-yaml: ^0.0.5
+  path-env: '*'
   tslib: ^1.9.1
