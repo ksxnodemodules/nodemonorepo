@@ -1,7 +1,7 @@
 import {listManifestFiles} from '../../index'
 import createVirtualEnvironment from '../.lib/virtual-env'
 
-const {apply} = createVirtualEnvironment()
+const {apply} = createVirtualEnvironment(true)
 
 it('without options', apply(async () => {
   const sample = await getSample('root')
