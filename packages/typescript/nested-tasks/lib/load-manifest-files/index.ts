@@ -10,19 +10,24 @@ import TaskSet = loadManifestDescriptor.TaskSet
  */
 export async function loadManifestFiles (
   dirname: string,
-  options: loadManifestFiles.Options
+  options?: loadManifestFiles.Options
 ): loadManifestFiles.Result {
   const list = await listManifestFiles(dirname, options)
-
-  return Promise.all(
-    list.map(async descriptor => ({
-      descriptor,
-      tasks: await loadManifestDescriptor(descriptor)
-    }))
-  )
+  return loadManifestFiles.fromList(list)
 }
 
 export namespace loadManifestFiles {
+  export async function fromList (list: List): Result {
+    return Promise.all(
+      list.map(async descriptor => ({
+        descriptor,
+        tasks: await loadManifestDescriptor(descriptor)
+      }))
+    )
+  }
+
+  export type List = ReadonlyArray<Manifest.Descriptor>
+
   export type Options = listManifestFiles.Options
 
   export type Result = Promise<ReadonlyArray<Result.Item>>
