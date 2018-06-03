@@ -17,6 +17,10 @@ export async function loadManifestFiles (
 }
 
 export namespace loadManifestFiles {
+  /**
+   * @param list A list of task manifests
+   * @returns A list of task collections
+   */
   export async function fromList (list: List): Result {
     return Promise.all(
       list.map(async descriptor => ({
