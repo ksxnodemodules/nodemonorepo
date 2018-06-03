@@ -1,6 +1,88 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`without options 1`] = `
+exports[`with javascript files with custom chooser 1`] = `
+Array [
+  Object {
+    "path": "root/custom-deep-func/script-only/task.js",
+    "type": "module",
+  },
+  Object {
+    "path": "root/custom-deep-func/script-only/task.ts",
+    "type": "module",
+  },
+  Object {
+    "path": "root/custom-deep-func/task.js",
+    "type": "module",
+  },
+  Object {
+    "path": "root/custom-deep-func/task.ts",
+    "type": "module",
+  },
+  Object {
+    "path": "root/custom-deep-func/task.yaml",
+    "type": "yaml",
+  },
+  Object {
+    "path": "root/custom-deep-func/yaml-only/task.yaml",
+    "type": "yaml",
+  },
+  Object {
+    "path": "root/script-only/task.js",
+    "type": "module",
+  },
+  Object {
+    "path": "root/script-only/task.ts",
+    "type": "module",
+  },
+  Object {
+    "path": "root/task.js",
+    "type": "module",
+  },
+  Object {
+    "path": "root/task.ts",
+    "type": "module",
+  },
+  Object {
+    "path": "root/task.yaml",
+    "type": "yaml",
+  },
+  Object {
+    "path": "root/yaml-only/task.yaml",
+    "type": "yaml",
+  },
+]
+`;
+
+exports[`with javascript files with custom chooser and deep function 1`] = `
+Array [
+  Object {
+    "path": "root/script-only/task.js",
+    "type": "module",
+  },
+  Object {
+    "path": "root/script-only/task.ts",
+    "type": "module",
+  },
+  Object {
+    "path": "root/task.js",
+    "type": "module",
+  },
+  Object {
+    "path": "root/task.ts",
+    "type": "module",
+  },
+  Object {
+    "path": "root/task.yaml",
+    "type": "yaml",
+  },
+  Object {
+    "path": "root/yaml-only/task.yaml",
+    "type": "yaml",
+  },
+]
+`;
+
+exports[`with javascript files with custom deep function 1`] = `
 Array [
   Object {
     "path": "root/script-only/task.js",
@@ -9,6 +91,135 @@ Array [
   Object {
     "path": "root/task.js",
     "type": "module",
+  },
+  Object {
+    "path": "root/task.yaml",
+    "type": "yaml",
+  },
+  Object {
+    "path": "root/yaml-only/task.yaml",
+    "type": "yaml",
+  },
+]
+`;
+
+exports[`with javascript files without options 1`] = `
+Array [
+  Object {
+    "path": "root/custom-deep-func/script-only/task.js",
+    "type": "module",
+  },
+  Object {
+    "path": "root/custom-deep-func/task.js",
+    "type": "module",
+  },
+  Object {
+    "path": "root/custom-deep-func/task.yaml",
+    "type": "yaml",
+  },
+  Object {
+    "path": "root/custom-deep-func/yaml-only/task.yaml",
+    "type": "yaml",
+  },
+  Object {
+    "path": "root/script-only/task.js",
+    "type": "module",
+  },
+  Object {
+    "path": "root/task.js",
+    "type": "module",
+  },
+  Object {
+    "path": "root/task.yaml",
+    "type": "yaml",
+  },
+  Object {
+    "path": "root/yaml-only/task.yaml",
+    "type": "yaml",
+  },
+]
+`;
+
+exports[`without javascript files with custom chooser 1`] = `
+Array [
+  Object {
+    "path": "root/custom-deep-func/script-only/task.ts",
+    "type": "module",
+  },
+  Object {
+    "path": "root/custom-deep-func/task.ts",
+    "type": "module",
+  },
+  Object {
+    "path": "root/custom-deep-func/task.yaml",
+    "type": "yaml",
+  },
+  Object {
+    "path": "root/custom-deep-func/yaml-only/task.yaml",
+    "type": "yaml",
+  },
+  Object {
+    "path": "root/script-only/task.ts",
+    "type": "module",
+  },
+  Object {
+    "path": "root/task.ts",
+    "type": "module",
+  },
+  Object {
+    "path": "root/task.yaml",
+    "type": "yaml",
+  },
+  Object {
+    "path": "root/yaml-only/task.yaml",
+    "type": "yaml",
+  },
+]
+`;
+
+exports[`without javascript files with custom chooser and deep function 1`] = `
+Array [
+  Object {
+    "path": "root/script-only/task.ts",
+    "type": "module",
+  },
+  Object {
+    "path": "root/task.ts",
+    "type": "module",
+  },
+  Object {
+    "path": "root/task.yaml",
+    "type": "yaml",
+  },
+  Object {
+    "path": "root/yaml-only/task.yaml",
+    "type": "yaml",
+  },
+]
+`;
+
+exports[`without javascript files with custom deep function 1`] = `
+Array [
+  Object {
+    "path": "root/task.yaml",
+    "type": "yaml",
+  },
+  Object {
+    "path": "root/yaml-only/task.yaml",
+    "type": "yaml",
+  },
+]
+`;
+
+exports[`without javascript files without options 1`] = `
+Array [
+  Object {
+    "path": "root/custom-deep-func/task.yaml",
+    "type": "yaml",
+  },
+  Object {
+    "path": "root/custom-deep-func/yaml-only/task.yaml",
+    "type": "yaml",
   },
   Object {
     "path": "root/task.yaml",
