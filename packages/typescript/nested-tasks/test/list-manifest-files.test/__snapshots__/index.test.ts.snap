@@ -3,6 +3,10 @@
 exports[`with javascript files with custom chooser 1`] = `
 Array [
   Object {
+    "path": "root/custom-deep-func/json-only/task.json",
+    "type": "yaml",
+  },
+  Object {
     "path": "root/custom-deep-func/script-only/task.js",
     "type": "module",
   },
@@ -24,6 +28,10 @@ Array [
   },
   Object {
     "path": "root/custom-deep-func/yaml-only/task.yaml",
+    "type": "yaml",
+  },
+  Object {
+    "path": "root/json-only/task.json",
     "type": "yaml",
   },
   Object {
@@ -56,6 +64,10 @@ Array [
 exports[`with javascript files with custom chooser and deep function 1`] = `
 Array [
   Object {
+    "path": "root/json-only/task.json",
+    "type": "yaml",
+  },
+  Object {
     "path": "root/script-only/task.js",
     "type": "module",
   },
@@ -85,6 +97,10 @@ Array [
 exports[`with javascript files with custom deep function 1`] = `
 Array [
   Object {
+    "path": "root/json-only/task.json",
+    "type": "yaml",
+  },
+  Object {
     "path": "root/script-only/task.js",
     "type": "module",
   },
@@ -106,6 +122,10 @@ Array [
 exports[`with javascript files without options 1`] = `
 Array [
   Object {
+    "path": "root/custom-deep-func/json-only/task.json",
+    "type": "yaml",
+  },
+  Object {
     "path": "root/custom-deep-func/script-only/task.js",
     "type": "module",
   },
@@ -119,6 +139,10 @@ Array [
   },
   Object {
     "path": "root/custom-deep-func/yaml-only/task.yaml",
+    "type": "yaml",
+  },
+  Object {
+    "path": "root/json-only/task.json",
     "type": "yaml",
   },
   Object {
@@ -143,6 +167,10 @@ Array [
 exports[`without javascript files with custom chooser 1`] = `
 Array [
   Object {
+    "path": "root/custom-deep-func/json-only/task.json",
+    "type": "yaml",
+  },
+  Object {
     "path": "root/custom-deep-func/script-only/task.ts",
     "type": "module",
   },
@@ -156,6 +184,10 @@ Array [
   },
   Object {
     "path": "root/custom-deep-func/yaml-only/task.yaml",
+    "type": "yaml",
+  },
+  Object {
+    "path": "root/json-only/task.json",
     "type": "yaml",
   },
   Object {
@@ -180,6 +212,10 @@ Array [
 exports[`without javascript files with custom chooser and deep function 1`] = `
 Array [
   Object {
+    "path": "root/json-only/task.json",
+    "type": "yaml",
+  },
+  Object {
     "path": "root/script-only/task.ts",
     "type": "module",
   },
@@ -201,6 +237,10 @@ Array [
 exports[`without javascript files with custom deep function 1`] = `
 Array [
   Object {
+    "path": "root/json-only/task.json",
+    "type": "yaml",
+  },
+  Object {
     "path": "root/task.yaml",
     "type": "yaml",
   },
@@ -214,11 +254,19 @@ Array [
 exports[`without javascript files without options 1`] = `
 Array [
   Object {
+    "path": "root/custom-deep-func/json-only/task.json",
+    "type": "yaml",
+  },
+  Object {
     "path": "root/custom-deep-func/task.yaml",
     "type": "yaml",
   },
   Object {
     "path": "root/custom-deep-func/yaml-only/task.yaml",
+    "type": "yaml",
+  },
+  Object {
+    "path": "root/json-only/task.json",
     "type": "yaml",
   },
   Object {
