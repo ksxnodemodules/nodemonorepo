@@ -1,4 +1,3 @@
-import * as assert from 'assert'
 import * as childProcess from 'child_process'
 
 export type TaskParam =
@@ -82,7 +81,7 @@ export namespace TaskParam {
 }
 
 export interface TaskSetManifest {
-  readonly [name: string]: TaskParam | TaskSetManifest | Representation
+  readonly [name: string]: TaskParam | TaskSetManifest
 }
 
 export type DependencyList = ReadonlyArray<DependencyList.TaskName>
@@ -90,20 +89,4 @@ export type DependencyList = ReadonlyArray<DependencyList.TaskName>
 export namespace DependencyList {
   export type TaskName = ReadonlyArray<string>
   export type Param = ReadonlyArray<TaskName | string>
-}
-
-export type Representation = Representation.Task | Representation.TaskSet
-
-export namespace Representation {
-  export abstract class Base<X extends TaskParam | TaskSetManifest> {
-    readonly get: () => X
-
-    constructor (x: X) {
-      assert.notStrictEqual(this.constructor, Base, 'Cannot create instant of an abstract class')
-      this.get = () => x
-    }
-  }
-
-  export class Task extends Base<TaskParam> {}
-  export class TaskSet extends Base<TaskSetManifest> {}
 }
