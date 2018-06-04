@@ -7,7 +7,8 @@ import {
 import {
   TaskParam,
   TaskSetManifest,
-  DependencyList
+  DependencyList,
+  Representation
 } from '../../api'
 
 export namespace Manifest {
@@ -310,6 +311,16 @@ export class TaskSet {
     this.subtasks = subtasks
 
     for (const [name, info] of Object.entries(manifest)) {
+      if (info instanceof Representation.Task) {
+        tasks[name] = new Task(info.get())
+        continue
+      }
+
+      if (info instanceof Representation.TaskSet) {
+        subtasks[name] = new TaskSet(info.get())
+        continue
+      }
+
       switch (classifyPropertyName(name)) {
         case classifyPropertyName.Result.Invalid:
           throw new Error(`Invalid name: ${name}`)
