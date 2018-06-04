@@ -270,5 +270,3 @@ export namespace FileSystemRepresentation {
     export abstract class Other extends Exception {}
   }
 }
-
-export default FileSystemRepresentation
