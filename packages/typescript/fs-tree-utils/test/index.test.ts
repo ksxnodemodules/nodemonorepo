@@ -219,7 +219,15 @@ describe('traverse function', () => {
 
   const init = async () => {
     await fsx.remove(container)
-    await subject.create(tree, container)
+
+    await subject.create({
+      ...tree,
+      link: {
+        toA: new Symlink('../topA'),
+        toB: new Symlink('../topB'),
+        toC: new Symlink('../topC')
+      }
+    }, container)
   }
 
   const createFunc = (options?: TraversalOptions) => async () =>
@@ -259,7 +267,7 @@ describe('traverse function', () => {
     stat: x => fsx.statSync(x)
   }))
 
-  it('works with `fs.lstat` as `stat`', createTester({
+  it('works with `fs.lstatSync` as `stat`', createTester({
     stat: x => fsx.lstatSync(x)
   }))
 })
