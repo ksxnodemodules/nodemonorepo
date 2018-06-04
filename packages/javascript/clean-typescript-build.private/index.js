@@ -9,9 +9,8 @@ async function main () {
   const list = await fsTreeUtils.traverse(
     tsDir,
     {
-      deep: x =>
-        x.item !== 'node_modules' &&
-        fsx.lstatSync(x.path).isDirectory()
+      deep: x => x.item !== 'node_modules',
+      stat: x => fsx.lstat(x)
     }
   )
 
