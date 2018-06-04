@@ -74,6 +74,7 @@ export namespace TaskParam {
   export namespace utils {
     export interface Base {
       readonly before?: DependencyList.Param
+      readonly parallel?: DependencyList.Param
       readonly after?: DependencyList.Param
     }
   }

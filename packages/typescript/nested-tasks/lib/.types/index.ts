@@ -25,6 +25,9 @@ export class Task {
   readonly before: DependencyList
 
   //@ts-ignore
+  readonly parallel: DependencyList
+
+  //@ts-ignore
   readonly after: DependencyList
 
   //@ts-ignore
@@ -58,6 +61,7 @@ export class Task {
 
     {
       this.before = createDependencyList('before')
+      this.parallel = createDependencyList('parallel')
       this.after = createDependencyList('after')
 
       function createDependencyList (name: keyof TaskParam.utils.Base): DependencyList {
