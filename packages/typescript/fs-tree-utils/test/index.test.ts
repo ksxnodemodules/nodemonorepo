@@ -246,4 +246,20 @@ describe('traverse function', () => {
     deep: () => true,
     level: 3
   }))
+
+  it('works with `fs.stat` as `stat`', createTester({
+    stat: x => fsx.stat(x)
+  }))
+
+  it('works with `fs.lstat` as `stat`', createTester({
+    stat: x => fsx.lstat(x)
+  }))
+
+  it('works with `fs.statSync` as `stat`', createTester({
+    stat: x => fsx.statSync(x)
+  }))
+
+  it('works with `fs.lstat` as `stat`', createTester({
+    stat: x => fsx.lstatSync(x)
+  }))
 })
