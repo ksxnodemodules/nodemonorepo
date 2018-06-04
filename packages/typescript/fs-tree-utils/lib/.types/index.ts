@@ -49,7 +49,7 @@ export interface NestedReadOptions {
 }
 
 export namespace NestedReadOptions {
-  export type StatFunc = (name: string) => Promise<Stats> | Stats
+  export type StatFunc = utils.StatFunc
   export type ErrorHandler = (error: Error) => FileSystemRepresentation.Exception.ErrorCarrier
   export type Unknown = (x: Unknown.Param) => FileSystemRepresentation.Exception.Other
 
@@ -65,6 +65,7 @@ export namespace Traverse {
   export interface Options {
     readonly deep?: Options.DeepFunc
     readonly level?: Options.Level
+    readonly stat?: Options.StatFunc
   }
 
   export namespace Options {
@@ -83,6 +84,8 @@ export namespace Traverse {
     }
 
     export type Level = number
+
+    export type StatFunc = utils.StatFunc
   }
 
   export type Result = Promise<Result.Value>
@@ -269,4 +272,8 @@ export namespace FileSystemRepresentation {
      */
     export abstract class Other extends Exception {}
   }
+}
+
+export namespace utils {
+  export type StatFunc = (name: string) => Promise<Stats> | Stats
 }
