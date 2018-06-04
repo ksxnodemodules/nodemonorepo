@@ -317,7 +317,7 @@ export class TaskSet {
           tasks[name] = new Task(info as TaskParam)
           break
         case classifyPropertyName.Result.Subtask:
-          subtasks[name] = new TaskSet(info as TaskSetManifest)
+          subtasks[name.slice(1)] = new TaskSet(info as TaskSetManifest)
           break
       }
     }
