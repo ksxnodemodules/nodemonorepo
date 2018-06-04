@@ -29,6 +29,8 @@ export type FlatReadResult = Promise<FlatReadResultValue>
 /**
  * @param name Directory name
  * @param options Specify stat method and error handler
+ * @param options.onerror Specify error transformer
+ * @param options.stat Specify stat function
  * @returns Nested directory tree representation
  */
 export async function readNested (
@@ -73,7 +75,7 @@ export async function readNested (
 
 /**
  * @param name Directory name
- * @param deep When to dive deeper
+ * @param options Options to pass to `traverse`
  * @returns List of files, directories and file contents
  */
 export async function readFlat (name: string, options?: Traverse.Options): FlatReadResult {
