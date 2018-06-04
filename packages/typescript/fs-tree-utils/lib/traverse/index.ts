@@ -6,6 +6,7 @@ import {Traverse} from '../.types'
  * @param dirname Top directory
  * @param options
  * @param options.deep When to dive deeper
+ * @param options.stat Stat function to use
  * @param options.level Initial level of depth
  * @returns Array of traversed files/directories
  */
@@ -15,41 +16,39 @@ export function traverse (
 ): Traverse.Result {
   const {
     deep = () => true,
-    level = 0,
-    stat = (x: string) => fsx.stat(x)
+    stat = (x: string) => fsx.stat(x),
+    level = 0
   } = options
 
-  return main(dirname, deep, stat, level)
-}
+  return main(dirname, level)
 
-async function main (
-  dirname: string,
-  deep: Traverse.Options.DeepFunc,
-  stat: Traverse.Options.StatFunc,
-  level: Traverse.Options.Level
-): Traverse.Result {
-  const dirChildren = await fsx.readdir(dirname)
-  const result = Array<Traverse.Result.Item>()
+  async function main (
+    dirname: string,
+    level: Traverse.Options.Level
+  ): Traverse.Result {
+    const dirChildren = await fsx.readdir(dirname)
+    const result = Array<Traverse.Result.Item>()
 
-  for (const item of dirChildren) {
-    const itemPath = path.join(dirname, item)
-    const stats = await Promise.resolve(stat(itemPath))
-    const itemResult = {
-      item,
-      stats,
-      level,
-      container: dirname,
-      path: itemPath
+    for (const item of dirChildren) {
+      const itemPath = path.join(dirname, item)
+      const stats = await Promise.resolve(stat(itemPath))
+      const itemResult = {
+        item,
+        stats,
+        level,
+        container: dirname,
+        path: itemPath
+      }
+      result.push(itemResult)
+
+      const shouldGoDeeper = stats.isDirectory() && deep(itemResult)
+      if (shouldGoDeeper) {
+        result.push(...await main(itemPath, level + 1))
+      }
     }
-    result.push(itemResult)
 
-    const shouldGoDeeper = stats.isDirectory() && deep(itemResult)
-    if (shouldGoDeeper) {
-      result.push(...await main(dirname, deep, stat, level))
-    }
+    return result
   }
-
-  return result
 }
 
 export default traverse
