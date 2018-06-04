@@ -1,8 +1,6 @@
 import * as childProcess from 'child_process'
-
-import {
-  TraversalDeepFuncParam
-} from 'fs-tree-utils/lib/traverse'
+import {Traverse} from 'fs-tree-utils'
+import TraversalDeepFuncParam = Traverse.Options.DeepFunc.Param
 
 import {
   TaskParam,
