@@ -10,14 +10,10 @@ dependencies:
 packages:
   /@types/fs-extra/5.0.2:
     dependencies:
-      '@types/node': 10.0.8
+      '@types/node': 10.3.0
     dev: false
     resolution:
       integrity: sha512-Q3FWsbdmkQd1ib11A4XNWQvRD//5KpPoGawA8aB2DR7pWKoW9XQv3+dGxD/Z1eVFze23Okdo27ZQytVFlweKvQ==
-  /@types/node/10.0.8:
-    dev: false
-    resolution:
-      integrity: sha512-MFFKFv2X4iZy/NFl1m1E8uwE1CR96SGwJjgHma09PLtqOWoj3nqeJHMG+P/EuJGVLvC2I6MdQRQsr4TcRduIow==
   /@types/node/10.3.0:
     dev: false
     resolution:
@@ -66,7 +62,7 @@ specifiers:
   '@types/node': ^10.3.0
   '@types/ramda': ^0.25.32
   fs-extra: ^6.0.1
-  fs-tree-utils: ^0.0.11
+  fs-tree-utils: ^0.0.12
   ramda: ^0.25.0
   tslib: ^1.9.2
   unique-temp-path: ^0.0.8

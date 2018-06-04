@@ -25,7 +25,9 @@ function runTest (
   async function readFileTree () {
     const {fileContents} = await fsTreeUtils.read.flat(
       'root',
-      x => x.item !== 'node_modules'
+      {
+        deep: x => x.item !== 'node_modules'
+      }
     )
 
     let result: {[_: string]: any} = {}

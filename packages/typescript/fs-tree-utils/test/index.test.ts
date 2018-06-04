@@ -3,7 +3,7 @@ import {cwd, chdir} from 'process'
 import * as fsx from 'fs-extra'
 import tempPath from 'unique-temp-path'
 import * as subject from '../index'
-import {DeepFunc} from '../lib/traverse'
+import TraversalOptions = subject.Traverse.Options
 const tree = require('./data/tree.yaml')
 const oldCwd = cwd()
 const tmpContainer = tempPath('fs-tree-utils.')
@@ -219,21 +219,55 @@ describe('traverse function', () => {
 
   const init = async () => {
     await fsx.remove(container)
-    await subject.create(tree, container)
+
+    await subject.create({
+      ...tree,
+      link: {
+        toA: new Symlink('../topA'),
+        toB: new Symlink('../topB'),
+        toC: new Symlink('../topC')
+      }
+    }, container)
   }
 
-  const createFunc = (deep?: DeepFunc, level?: number) => async () =>
-    (await subject.traverse(container, deep, level))
+  const createFunc = (options?: TraversalOptions) => async () =>
+    (await subject.traverse(container, options))
       .map(({item, path, container, level}) => ({item, path, container, level}))
 
-  const createTester = (deep?: DeepFunc, level?: number) => async () => {
-    const fn = createFunc(deep, level)
+  const createTester = (options?: TraversalOptions) => async () => {
+    const fn = createFunc(options)
     await init()
     expect(await fn()).toMatchSnapshot()
   }
 
   it('works with default `deep` and `level`', createTester())
-  it('only dig names end with "B"', createTester(x => /B$/.test(x.item)))
-  it('does not dig names end with "B"', createTester(x => !/B$/.test(x.item)))
-  it('works with provided `deep` and `level`', createTester(() => true, 3))
+
+  it('only dig names end with "B"', createTester({
+    deep: x => /B$/.test(x.item)
+  }))
+
+  it('does not dig names end with "B"', createTester({
+    deep: x => !/B$/.test(x.item)
+  }))
+
+  it('works with provided `deep` and `level`', createTester({
+    deep: () => true,
+    level: 3
+  }))
+
+  it('works with `fs.stat` as `stat`', createTester({
+    stat: x => fsx.stat(x)
+  }))
+
+  it('works with `fs.lstat` as `stat`', createTester({
+    stat: x => fsx.lstat(x)
+  }))
+
+  it('works with `fs.statSync` as `stat`', createTester({
+    stat: x => fsx.statSync(x)
+  }))
+
+  it('works with `fs.lstatSync` as `stat`', createTester({
+    stat: x => fsx.lstatSync(x)
+  }))
 })

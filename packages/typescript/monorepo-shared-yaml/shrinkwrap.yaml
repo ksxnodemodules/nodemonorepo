@@ -4,12 +4,12 @@ dependencies:
   '@types/node': 10.3.0
   fs-extra: 6.0.1
   fs-tree-utils: 'link:../fs-tree-utils'
-  js-yaml: 3.11.0
+  js-yaml: 3.12.0
   tslib: 1.9.2
 packages:
   /@types/fs-extra/5.0.2:
     dependencies:
-      '@types/node': 10.0.3
+      '@types/node': 10.3.0
     dev: false
     resolution:
       integrity: sha512-Q3FWsbdmkQd1ib11A4XNWQvRD//5KpPoGawA8aB2DR7pWKoW9XQv3+dGxD/Z1eVFze23Okdo27ZQytVFlweKvQ==
@@ -17,10 +17,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-M5qhhfuTt4fwHGqqANNQilp3Htb5cHwBxlMHDUw/TYRVkEp3s3IIFSH3Fe9HIAeEtnO4p3SSowLmCVavdRYfpw==
-  /@types/node/10.0.3:
-    dev: false
-    resolution:
-      integrity: sha512-J7nx6JzxmtT4zyvfLipYL7jNaxvlCWpyG7JhhCQ4fQyG+AGfovAHoYR55TFx+X8akfkUJYpt5JG6GPeFMjZaCQ==
   /@types/node/10.3.0:
     dev: false
     resolution:
@@ -51,13 +47,13 @@ packages:
       node: '>=0.4.0'
     resolution:
       integrity: sha1-Dovf5NHduIVNZOBOp8AOKgJuVlg=
-  /js-yaml/3.11.0:
+  /js-yaml/3.12.0:
     dependencies:
       argparse: 1.0.10
       esprima: 4.0.0
     dev: false
     resolution:
-      integrity: sha512-saJstZWv7oNeOyBh3+Dx1qWzhW0+e6/8eDzo7p5rDFqxntSztloLtuKu+Ejhtq82jsilwOIZYsCz+lIjthg1Hw==
+      integrity: sha512-PIt2cnwmPfL4hKNwqeiuz4bKfnzHTBv6HyVgjahA6mPLwPDzjDWrplJBMjHUFxku/N3FlmrbyPclad+I+4mJ3A==
   /jsonfile/4.0.0:
     dev: false
     optionalDependencies:

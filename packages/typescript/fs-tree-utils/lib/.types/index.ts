@@ -49,7 +49,7 @@ export interface NestedReadOptions {
 }
 
 export namespace NestedReadOptions {
-  export type StatFunc = (name: string) => Promise<Stats> | Stats
+  export type StatFunc = utils.StatFunc
   export type ErrorHandler = (error: Error) => FileSystemRepresentation.Exception.ErrorCarrier
   export type Unknown = (x: Unknown.Param) => FileSystemRepresentation.Exception.Other
 
@@ -58,6 +58,41 @@ export namespace NestedReadOptions {
       readonly name: string
       readonly stats: Stats
     }
+  }
+}
+
+export namespace Traverse {
+  export interface Options {
+    readonly deep?: Options.DeepFunc
+    readonly level?: Options.Level
+    readonly stat?: Options.StatFunc
+  }
+
+  export namespace Options {
+    export type DeepFunc = (x: DeepFunc.Param) => DeepFunc.Result
+
+    export namespace DeepFunc {
+      export interface Param {
+        readonly container: string
+        readonly item: string
+        readonly path: string
+        readonly stats: fsx.Stats
+        readonly level: Level
+      }
+
+      export type Result = boolean
+    }
+
+    export type Level = number
+
+    export type StatFunc = utils.StatFunc
+  }
+
+  export type Result = Promise<Result.Value>
+
+  export namespace Result {
+    export type Item = Options.DeepFunc.Param
+    export type Value = ReadonlyArray<Result.Item>
   }
 }
 
@@ -239,4 +274,6 @@ export namespace FileSystemRepresentation {
   }
 }
 
-export default FileSystemRepresentation
+export namespace utils {
+  export type StatFunc = (name: string) => Promise<Stats> | Stats
+}
