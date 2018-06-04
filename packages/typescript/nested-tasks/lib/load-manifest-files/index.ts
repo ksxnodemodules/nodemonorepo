@@ -1,7 +1,6 @@
 import listManifestFiles from '../list-manifest-files'
 import loadManifestDescriptor from '../load-manifest-descriptor'
-import {Manifest} from '../.types'
-import TaskSet = loadManifestDescriptor.TaskSet
+import {Manifest, TaskSet} from '../.types'
 
 /**
  * @param dirname Directory that contains all task manifest descriptors
