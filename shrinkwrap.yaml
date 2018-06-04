@@ -7,6 +7,7 @@ devDependencies:
   '@types/js-yaml': 3.11.1
   '@types/node': 10.3.0
   babel-jest: 23.0.1
+  clean-typescript-build.private: 'link:packages/javascript/clean-typescript-build.private'
   extra-jest: 'link:packages/typescript/extra-jest'
   git-ts: 'link:packages/typescript/git-ts'
   glob: 7.1.2
@@ -4952,6 +4953,7 @@ specifiers:
   '@types/js-yaml': ^3.11.1
   '@types/node': ^10.3.0
   babel-jest: ^23.0.1
+  clean-typescript-build.private: '*'
   extra-jest: '*'
   git-ts: '*'
   glob: ^7.1.2
