@@ -1,36 +1,33 @@
 import * as path from 'path'
 import * as fsx from 'fs-extra'
-
-export interface TraversalDeepFuncParam {
-  readonly container: string
-  readonly item: string
-  readonly path: string
-  readonly stats: fsx.Stats
-  readonly level: number
-}
-
-export interface DepsDict {
-  readonly [packageName: string]: string
-}
-
-export type DeepFunc = (x: TraversalDeepFuncParam) => boolean
-export type TraversalResultItem = TraversalDeepFuncParam
-export type TraversalResult = ReadonlyArray<TraversalResultItem>
-export type AsyncTraversalResult = Promise<TraversalResult>
+import {Traverse} from '../.types'
 
 /**
  * @param dirname Top directory
- * @param deep When to dive deeper
- * @param level Initial level of dept
+ * @param options
+ * @param options.deep When to dive deeper
+ * @param options.level Initial level of depth
  * @returns Array of traversed files/directories
  */
-export async function traverse (
+export function traverse (
   dirname: string,
-  deep: DeepFunc = () => true,
-  level = 0
-): AsyncTraversalResult {
+  options: Traverse.Options = {}
+): Traverse.Result {
+  const {
+    deep = () => true,
+    level = 0
+  } = options
+
+  return main(dirname, deep, level)
+}
+
+async function main (
+  dirname: string,
+  deep: Traverse.Options.DeepFunc,
+  level: Traverse.Options.Level
+): Traverse.Result {
   const dirChildren = await fsx.readdir(dirname)
-  const result: TraversalResultItem[] = []
+  const result = Array<Traverse.Result.Item>()
 
   for (const item of dirChildren) {
     const itemPath = path.join(dirname, item)
@@ -46,15 +43,11 @@ export async function traverse (
 
     const shouldGoDeeper = stats.isDirectory() && deep(itemResult)
     if (shouldGoDeeper) {
-      result.push(...await traverse(itemPath, deep, level + 1))
+      result.push(...await main(dirname, deep, level))
     }
   }
 
   return result
-}
-
-export namespace traverse {
-  export const async = traverse
 }
 
 export default traverse

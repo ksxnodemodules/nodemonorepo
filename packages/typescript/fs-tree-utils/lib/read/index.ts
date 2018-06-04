@@ -2,8 +2,8 @@ import * as path from 'path'
 import ramda from 'ramda'
 import * as fsx from 'fs-extra'
 import * as assets from 'monorepo-shared-assets'
-import traverse, {DeepFunc} from '../traverse'
-import {Tree, NestedReadOptions, FileSystemRepresentation} from '../.types'
+import traverse from '../traverse'
+import {Tree, NestedReadOptions, Traverse, FileSystemRepresentation} from '../.types'
 import wrapRejection = assets.wrapException.wrapPromiseRejection
 import Symlink = FileSystemRepresentation.Symlink
 
@@ -76,8 +76,8 @@ export async function readNested (
  * @param deep When to dive deeper
  * @returns List of files, directories and file contents
  */
-export async function readFlat (name: string, deep?: DeepFunc): FlatReadResult {
-  const array = await traverse(name, deep)
+export async function readFlat (name: string, options?: Traverse.Options): FlatReadResult {
+  const array = await traverse(name, options)
   const [fileList, dirList] = ramda.partition(x => x.stats.isFile(), array)
 
   const map = await Promise.all(

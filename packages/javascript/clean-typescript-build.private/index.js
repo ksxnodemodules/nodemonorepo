@@ -8,9 +8,11 @@ const tsDir = path.resolve(__dirname, '../../typescript')
 async function main () {
   const list = await fsTreeUtils.traverse(
     tsDir,
-    x =>
-      x.item !== 'node_modules' &&
-      fsx.lstatSync(x.path).isDirectory()
+    {
+      deep: x =>
+        x.item !== 'node_modules' &&
+        fsx.lstatSync(x.path).isDirectory()
+    }
   )
 
   await Promise.all(

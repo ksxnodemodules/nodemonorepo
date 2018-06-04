@@ -3,7 +3,7 @@ import {cwd, chdir} from 'process'
 import * as fsx from 'fs-extra'
 import tempPath from 'unique-temp-path'
 import * as subject from '../index'
-import {DeepFunc} from '../lib/traverse'
+import DeepFunc = subject.Traverse.Options.DeepFunc
 const tree = require('./data/tree.yaml')
 const oldCwd = cwd()
 const tmpContainer = tempPath('fs-tree-utils.')
@@ -223,7 +223,7 @@ describe('traverse function', () => {
   }
 
   const createFunc = (deep?: DeepFunc, level?: number) => async () =>
-    (await subject.traverse(container, deep, level))
+    (await subject.traverse(container, {deep, level}))
       .map(({item, path, container, level}) => ({item, path, container, level}))
 
   const createTester = (deep?: DeepFunc, level?: number) => async () => {

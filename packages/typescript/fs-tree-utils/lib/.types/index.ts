@@ -61,6 +61,38 @@ export namespace NestedReadOptions {
   }
 }
 
+export namespace Traverse {
+  export interface Options {
+    readonly deep?: Options.DeepFunc
+    readonly level?: Options.Level
+  }
+
+  export namespace Options {
+    export type DeepFunc = (x: DeepFunc.Param) => DeepFunc.Result
+
+    export namespace DeepFunc {
+      export interface Param {
+        readonly container: string
+        readonly item: string
+        readonly path: string
+        readonly stats: fsx.Stats
+        readonly level: Level
+      }
+
+      export type Result = boolean
+    }
+
+    export type Level = number
+  }
+
+  export type Result = Promise<Result.Value>
+
+  export namespace Result {
+    export type Item = Options.DeepFunc.Param
+    export type Value = ReadonlyArray<Result.Item>
+  }
+}
+
 /**
  * This class allows to extends `fsTreeUtils.create`'s functionality.
  *
