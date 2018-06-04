@@ -3,7 +3,7 @@ import {cwd, chdir} from 'process'
 import * as fsx from 'fs-extra'
 import tempPath from 'unique-temp-path'
 import * as subject from '../index'
-import DeepFunc = subject.Traverse.Options.DeepFunc
+import TraversalOptions = subject.Traverse.Options
 const tree = require('./data/tree.yaml')
 const oldCwd = cwd()
 const tmpContainer = tempPath('fs-tree-utils.')
@@ -222,18 +222,28 @@ describe('traverse function', () => {
     await subject.create(tree, container)
   }
 
-  const createFunc = (deep?: DeepFunc, level?: number) => async () =>
-    (await subject.traverse(container, {deep, level}))
+  const createFunc = (options?: TraversalOptions) => async () =>
+    (await subject.traverse(container, options))
       .map(({item, path, container, level}) => ({item, path, container, level}))
 
-  const createTester = (deep?: DeepFunc, level?: number) => async () => {
-    const fn = createFunc(deep, level)
+  const createTester = (options?: TraversalOptions) => async () => {
+    const fn = createFunc(options)
     await init()
     expect(await fn()).toMatchSnapshot()
   }
 
   it('works with default `deep` and `level`', createTester())
-  it('only dig names end with "B"', createTester(x => /B$/.test(x.item)))
-  it('does not dig names end with "B"', createTester(x => !/B$/.test(x.item)))
-  it('works with provided `deep` and `level`', createTester(() => true, 3))
+
+  it('only dig names end with "B"', createTester({
+    deep: x => /B$/.test(x.item)
+  }))
+
+  it('does not dig names end with "B"', createTester({
+    deep: x => !/B$/.test(x.item)
+  }))
+
+  it('works with provided `deep` and `level`', createTester({
+    deep: () => true,
+    level: 3
+  }))
 })
