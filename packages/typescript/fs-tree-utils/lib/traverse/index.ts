@@ -29,9 +29,15 @@ export function traverse (
     const dirChildren = await fsx.readdir(dirname)
     const result = Array<Traverse.Result.Item>()
 
-    for (const item of dirChildren) {
-      const itemPath = path.join(dirname, item)
-      const stats = await Promise.resolve(stat(itemPath))
+    const statList = await Promise.all(
+      dirChildren.map(async item => {
+        const itemPath = path.join(dirname, item)
+        const stats = await Promise.resolve(stat(itemPath))
+        return {item, itemPath, stats}
+      })
+    )
+
+    for (const {item, itemPath, stats} of statList) {
       const itemResult = {
         item,
         stats,
