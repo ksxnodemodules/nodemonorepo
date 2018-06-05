@@ -1,9 +1,6 @@
 import * as path from 'path'
+import {Traverse} from 'fs-tree-utils'
 import getManifestType from './manifest-type'
-
-import {
-  TraversalDeepFuncParam
-} from 'fs-tree-utils/lib/traverse'
 
 import {
   Manifest
@@ -24,7 +21,7 @@ export namespace createFileChooser {
   }
 
   export namespace FileChooser {
-    export type Param = TraversalDeepFuncParam
+    export type Param = Traverse.Options.DeepFunc.Param
     export type Result = Manifest.Type | null
   }
 }
