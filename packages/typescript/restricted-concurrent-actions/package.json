@@ -1,6 +1,6 @@
 {
   "name": "restricted-concurrent-actions",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Execute a certain number of promises after promises",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
