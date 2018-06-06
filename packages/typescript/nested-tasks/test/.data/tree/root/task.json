@@ -1,1 +1,6 @@
-{}
+{
+  "test-json": "echo This is from task.json/test-json",
+  "@group": {
+    "test-json": "echo This is from task.json/@group/test-json"
+  }
+}
