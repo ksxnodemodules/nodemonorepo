@@ -1,0 +1,28 @@
+{
+  "name": "remote-controlled-promise",
+  "version": "0.0.0",
+  "description": "Create a Promise object that is controllable from outside",
+  "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksxnodemodules/nodemonorepo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
+  },
+  "keywords": [
+    "promise",
+    "remote",
+    "control",
+    "external"
+  ],
+  "dependencies": {
+    "tslib": "^1.9.2",
+    "@types/node": "^10.3.0"
+  },
+  "engines": {
+    "node": ">= 8.9.0"
+  }
+}
