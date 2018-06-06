@@ -1,29 +1,26 @@
 {
-  "name": "fs-tree-utils",
-  "version": "0.0.13",
-  "description": "Work with filesystem tree with ease",
+  "name": "remote-controlled-promise",
+  "version": "0.0.0",
+  "description": "Create a Promise object that is controllable from outside",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksxnodemodules/nodemonorepo.git"
+  },
   "bugs": {
     "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
   },
   "keywords": [
-    "filesystem",
-    "tree"
+    "promise",
+    "remote",
+    "control",
+    "external"
   ],
-  "main": "index.js",
   "dependencies": {
-    "fs-extra": "^6.0.1",
-    "ramda": "^0.25.0",
     "tslib": "^1.9.2",
-    "monorepo-shared-assets": "^0.0.12",
-    "@types/fs-extra": "^5.0.2",
-    "@types/ramda": "^0.25.32",
     "@types/node": "^10.3.0"
-  },
-  "devDependencies": {
-    "unique-temp-path": "*"
   },
   "engines": {
     "node": ">= 8.9.0"
