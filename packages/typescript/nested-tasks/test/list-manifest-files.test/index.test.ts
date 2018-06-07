@@ -1,17 +1,6 @@
 import {listManifestFiles} from '../../index'
 import createVirtualEnvironment from '../.lib/virtual-env'
-import createFileChooser from '../../lib/.utils/file-chooser'
-import FileChooser = createFileChooser.FileChooser
-import DeepFunc = listManifestFiles.DeepFunc
-import DEFAULT_FILE_CHOOSER = listManifestFiles.DEFAULT_FILE_CHOOSER
-import DEFAULT_DEEP_FUNCTION = listManifestFiles.DEFAULT_DEEP_FUNCTION
-
-const chooseTypeScript =
-  (param: FileChooser.Param): FileChooser.Result =>
-    param.item === 'task.ts' ? 'module' : DEFAULT_FILE_CHOOSER(param)
-
-const ignoreCustomDeepFunc: DeepFunc = param =>
-  param.item !== 'custom-deep-func' && DEFAULT_DEEP_FUNCTION(param)
+import {chooseTypeScript, ignoreCustomDeepFunc} from '../.lib/utils'
 
 describe('without javascript files', () => {
   const {apply} = createVirtualEnvironment()
