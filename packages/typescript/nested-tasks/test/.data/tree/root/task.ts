@@ -11,7 +11,7 @@ namespace shortcut {
   ]
 
   export const func: api.TaskParam.Shortcut.Function = () => {
-    console.log('This is a function call (script/@shortcut/func)')
+    console.info('This is a function call (script/@shortcut/func)')
   }
 }
 
@@ -30,7 +30,7 @@ namespace keyword {
 
   export const func: api.TaskParam.Keyword.Function = {
     execute () {
-      console.log('This is a function call (script/@keyword/func)')
+      console.info('This is a function call (script/@keyword/func)')
     }
   }
 }
@@ -51,7 +51,7 @@ namespace partialDetailed {
 
   export const func: api.TaskParam.Detailed.Function = {
     execute () {
-      console.log('This is a function call (script/@partial-detailed/func)')
+      console.info('This is a function call (script/@partial-detailed/func)')
     }
   }
 }
@@ -75,7 +75,7 @@ namespace fullDetailed {
   export const func: api.TaskParam.Detailed.Function = {
     type: 'function',
     execute () {
-      console.log('This is a function call (script/@full-detailed/func)')
+      console.info('This is a function call (script/@full-detailed/func)')
     }
   }
 }
@@ -91,7 +91,7 @@ namespace group {
   ]
 
   export const func: api.TaskParam = () => {
-    console.log('Function within a group (script/@group/spawn)')
+    console.info('Function within a group (script/@group/spawn)')
   }
 }
 
