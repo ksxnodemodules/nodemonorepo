@@ -2,7 +2,6 @@
   "name": "sh-or-cmd",
   "version": "0.0.0",
   "description": "Returns 'sh' or 'cmd' based on platform",
-  "main": "index.js",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
