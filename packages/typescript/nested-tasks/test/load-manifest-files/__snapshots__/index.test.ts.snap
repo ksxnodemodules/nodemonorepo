@@ -1,0 +1,6305 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`with javascript files with custom chooser 1`] = `
+Array [
+  Object {
+    "path": "root/custom-deep-func/json-only/task.json",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "custom-deep-func": "echo This should not appear (custom-deep-func/json)",
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "custom-deep-func": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This should not appear (custom-deep-func/json)",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/custom-deep-func/script-only/task.js",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "custom-deep-func": [Function],
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "custom-deep-func": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "execute": [Function],
+            "type": "function",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/custom-deep-func/script-only/task.ts",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "custom-deep-func": [Function],
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "custom-deep-func": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "execute": [Function],
+            "type": "function",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/custom-deep-func/task.js",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "custom-deep-func": [Function],
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "custom-deep-func": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "execute": [Function],
+            "type": "function",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/custom-deep-func/task.json",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "custom-deep-func": "echo This should not appear (custom-deep-func/json)",
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "custom-deep-func": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This should not appear (custom-deep-func/json)",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/custom-deep-func/task.ts",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "custom-deep-func": [Function],
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "custom-deep-func": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "execute": [Function],
+            "type": "function",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/custom-deep-func/task.yaml",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "custom-deep-func": "echo This should not appear (custom-deep-func/yaml)",
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "custom-deep-func": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This should not appear (custom-deep-func/yaml)",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/custom-deep-func/yaml-only/task.yaml",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "custom-deep-func": "echo This should not appear (custom-deep-func/yaml)",
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "custom-deep-func": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This should not appear (custom-deep-func/yaml)",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/json-only/task.json",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "exclusive": "echo From json-only/exclusive",
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "exclusive": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo From json-only/exclusive",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/script-only/task.js",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "exclusive": [Function],
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "exclusive": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "execute": [Function],
+            "type": "function",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/script-only/task.ts",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "exclusive": [Function],
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "exclusive": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "execute": [Function],
+            "type": "function",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/task.js",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "@full-detailed": Object {
+          "func": Object {
+            "execute": [Function],
+            "type": "function",
+          },
+          "shell": Object {
+            "cmd": "echo This is a shell command (script/@full-detailed/shell)",
+            "shell": "sh",
+            "type": "shell",
+          },
+          "spawn": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(script/@full-detailed/spawn)",
+            ],
+            "program": "echo",
+            "type": "spawn",
+          },
+        },
+        "@group": Object {
+          "func": [Function],
+          "shell": "echo Shell within a group (script/@group/shell)",
+          "spawn": Array [
+            "echo",
+            "Spawn within a group",
+            "(script/@group/spawn)",
+          ],
+        },
+        "@keyword": Object {
+          "func": Object {
+            "execute": [Function],
+          },
+          "shell": Object {
+            "cmd": "echo This is a shell command (script/@keyword/shell)",
+          },
+          "spawn": Object {
+            "spawn": Array [
+              "echo",
+              "This is a spawned command",
+              "(script/@keyword/spawn)",
+            ],
+          },
+        },
+        "@partial-detailed": Object {
+          "func": Object {
+            "execute": [Function],
+          },
+          "shell": Object {
+            "cmd": "echo This is a shell command (script/@partial-detailed/shell)",
+            "shell": "sh",
+          },
+          "spawn": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(script/@partial-detailed/spawn)",
+            ],
+            "program": "echo",
+          },
+        },
+        "@shortcut": Object {
+          "func": [Function],
+          "shell": "echo This is a shell command (script/@shortcut/shell)",
+          "spawn": Array [
+            "echo",
+            "This is a spawned command",
+            "(script/@shortcut/spawm)",
+          ],
+        },
+      },
+      "subtasks": Object {
+        "full-detailed": TaskSet {
+          "manifest": Object {
+            "func": Object {
+              "execute": [Function],
+              "type": "function",
+            },
+            "shell": Object {
+              "cmd": "echo This is a shell command (script/@full-detailed/shell)",
+              "shell": "sh",
+              "type": "shell",
+            },
+            "spawn": Object {
+              "argv": Array [
+                "This is a spawned command",
+                "(script/@full-detailed/spawn)",
+              ],
+              "program": "echo",
+              "type": "spawn",
+            },
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "func": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "execute": [Function],
+                "type": "function",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo This is a shell command (script/@full-detailed/shell)",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "This is a spawned command",
+                  "(script/@full-detailed/spawn)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+        "group": TaskSet {
+          "manifest": Object {
+            "func": [Function],
+            "shell": "echo Shell within a group (script/@group/shell)",
+            "spawn": Array [
+              "echo",
+              "Spawn within a group",
+              "(script/@group/spawn)",
+            ],
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "func": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "execute": [Function],
+                "type": "function",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo Shell within a group (script/@group/shell)",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "Spawn within a group",
+                  "(script/@group/spawn)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+        "keyword": TaskSet {
+          "manifest": Object {
+            "func": Object {
+              "execute": [Function],
+            },
+            "shell": Object {
+              "cmd": "echo This is a shell command (script/@keyword/shell)",
+            },
+            "spawn": Object {
+              "spawn": Array [
+                "echo",
+                "This is a spawned command",
+                "(script/@keyword/spawn)",
+              ],
+            },
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "func": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "execute": [Function],
+                "type": "function",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo This is a shell command (script/@keyword/shell)",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "This is a spawned command",
+                  "(script/@keyword/spawn)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+        "partial-detailed": TaskSet {
+          "manifest": Object {
+            "func": Object {
+              "execute": [Function],
+            },
+            "shell": Object {
+              "cmd": "echo This is a shell command (script/@partial-detailed/shell)",
+              "shell": "sh",
+            },
+            "spawn": Object {
+              "argv": Array [
+                "This is a spawned command",
+                "(script/@partial-detailed/spawn)",
+              ],
+              "program": "echo",
+            },
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "func": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "execute": [Function],
+                "type": "function",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo This is a shell command (script/@partial-detailed/shell)",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "This is a spawned command",
+                  "(script/@partial-detailed/spawn)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+        "shortcut": TaskSet {
+          "manifest": Object {
+            "func": [Function],
+            "shell": "echo This is a shell command (script/@shortcut/shell)",
+            "spawn": Array [
+              "echo",
+              "This is a spawned command",
+              "(script/@shortcut/spawm)",
+            ],
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "func": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "execute": [Function],
+                "type": "function",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo This is a shell command (script/@shortcut/shell)",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "This is a spawned command",
+                  "(script/@shortcut/spawm)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+      },
+      "tasks": Object {},
+    },
+  },
+  Object {
+    "path": "root/task.json",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "@group": Object {
+          "test-json": "echo This is from task.json/@group/test-json",
+        },
+        "test-json": "echo This is from task.json/test-json",
+      },
+      "subtasks": Object {
+        "group": TaskSet {
+          "manifest": Object {
+            "test-json": "echo This is from task.json/@group/test-json",
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "test-json": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo This is from task.json/@group/test-json",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+      },
+      "tasks": Object {
+        "test-json": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This is from task.json/test-json",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/task.ts",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "@full-detailed": Object {
+          "func": Object {
+            "execute": [Function],
+            "type": "function",
+          },
+          "shell": Object {
+            "cmd": "echo This is a shell command (script/@full-detailed/shell)",
+            "shell": "sh",
+            "type": "shell",
+          },
+          "spawn": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(script/@full-detailed/spawn)",
+            ],
+            "program": "echo",
+            "type": "spawn",
+          },
+        },
+        "@group": Object {
+          "func": [Function],
+          "shell": "echo Shell within a group (script/@group/shell)",
+          "spawn": Array [
+            "echo",
+            "Spawn within a group",
+            "(script/@group/spawn)",
+          ],
+        },
+        "@keyword": Object {
+          "func": Object {
+            "execute": [Function],
+          },
+          "shell": Object {
+            "cmd": "echo This is a shell command (script/@keyword/shell)",
+          },
+          "spawn": Object {
+            "spawn": Array [
+              "echo",
+              "This is a spawned command",
+              "(script/@keyword/spawn)",
+            ],
+          },
+        },
+        "@partial-detailed": Object {
+          "func": Object {
+            "execute": [Function],
+          },
+          "shell": Object {
+            "cmd": "echo This is a shell command (script/@partial-detailed/shell)",
+            "shell": "sh",
+          },
+          "spawn": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(script/@partial-detailed/spawn)",
+            ],
+            "program": "echo",
+          },
+        },
+        "@shortcut": Object {
+          "func": [Function],
+          "shell": "echo This is a shell command (script/@shortcut/shell)",
+          "spawn": Array [
+            "echo",
+            "This is a spawned command",
+            "(script/@shortcut/spawm)",
+          ],
+        },
+      },
+      "subtasks": Object {
+        "full-detailed": TaskSet {
+          "manifest": Object {
+            "func": Object {
+              "execute": [Function],
+              "type": "function",
+            },
+            "shell": Object {
+              "cmd": "echo This is a shell command (script/@full-detailed/shell)",
+              "shell": "sh",
+              "type": "shell",
+            },
+            "spawn": Object {
+              "argv": Array [
+                "This is a spawned command",
+                "(script/@full-detailed/spawn)",
+              ],
+              "program": "echo",
+              "type": "spawn",
+            },
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "func": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "execute": [Function],
+                "type": "function",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo This is a shell command (script/@full-detailed/shell)",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "This is a spawned command",
+                  "(script/@full-detailed/spawn)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+        "group": TaskSet {
+          "manifest": Object {
+            "func": [Function],
+            "shell": "echo Shell within a group (script/@group/shell)",
+            "spawn": Array [
+              "echo",
+              "Spawn within a group",
+              "(script/@group/spawn)",
+            ],
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "func": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "execute": [Function],
+                "type": "function",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo Shell within a group (script/@group/shell)",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "Spawn within a group",
+                  "(script/@group/spawn)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+        "keyword": TaskSet {
+          "manifest": Object {
+            "func": Object {
+              "execute": [Function],
+            },
+            "shell": Object {
+              "cmd": "echo This is a shell command (script/@keyword/shell)",
+            },
+            "spawn": Object {
+              "spawn": Array [
+                "echo",
+                "This is a spawned command",
+                "(script/@keyword/spawn)",
+              ],
+            },
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "func": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "execute": [Function],
+                "type": "function",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo This is a shell command (script/@keyword/shell)",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "This is a spawned command",
+                  "(script/@keyword/spawn)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+        "partial-detailed": TaskSet {
+          "manifest": Object {
+            "func": Object {
+              "execute": [Function],
+            },
+            "shell": Object {
+              "cmd": "echo This is a shell command (script/@partial-detailed/shell)",
+              "shell": "sh",
+            },
+            "spawn": Object {
+              "argv": Array [
+                "This is a spawned command",
+                "(script/@partial-detailed/spawn)",
+              ],
+              "program": "echo",
+            },
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "func": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "execute": [Function],
+                "type": "function",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo This is a shell command (script/@partial-detailed/shell)",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "This is a spawned command",
+                  "(script/@partial-detailed/spawn)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+        "shortcut": TaskSet {
+          "manifest": Object {
+            "func": [Function],
+            "shell": "echo This is a shell command (script/@shortcut/shell)",
+            "spawn": Array [
+              "echo",
+              "This is a spawned command",
+              "(script/@shortcut/spawm)",
+            ],
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "func": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "execute": [Function],
+                "type": "function",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo This is a shell command (script/@shortcut/shell)",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "This is a spawned command",
+                  "(script/@shortcut/spawm)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+      },
+      "tasks": Object {},
+    },
+  },
+  Object {
+    "path": "root/task.yaml",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "@group": Object {
+          "shell": "echo Shell within a group (yaml/@group/shell)
+",
+          "spawn": Array [
+            "echo",
+            "Spawn within a group",
+            "(yaml/@group/spawn)",
+          ],
+        },
+        "full-detailed-shell": Object {
+          "cmd": "echo This is a shell command (yaml/full-detailed-shell)
+",
+          "shell": "sh",
+          "type": "shell",
+        },
+        "full-detailed-spawn": Object {
+          "argv": Array [
+            "This is a spawned command",
+            "(yaml/full-detailed-spawn)",
+          ],
+          "program": "echo",
+          "type": "spawn",
+        },
+        "keyword-shell": Object {
+          "cmd": "echo This is a shell command (yaml/keyword-shell)
+",
+        },
+        "keyword-spawn": Object {
+          "spawn": Array [
+            "echo",
+            "This is a spawned command",
+            "(yaml/keyword-spawn)",
+          ],
+        },
+        "partial-detailed-shell": Object {
+          "cmd": "echo This is a shell command (yaml/partial-detailed-shell)
+",
+          "shell": "sh",
+        },
+        "partial-detailed-spawn": Object {
+          "argv": Array [
+            "This is a spawned command",
+            "(yaml/partial-detailed-spawn)",
+          ],
+          "program": "echo",
+        },
+        "shortcut-shell": "echo This is a shell command (yaml/shortcut-shell)
+",
+        "shortcut-spawn": Array [
+          "echo",
+          "This is a spawned command",
+          "(yaml/shortcut-spawn)",
+        ],
+      },
+      "subtasks": Object {
+        "group": TaskSet {
+          "manifest": Object {
+            "shell": "echo Shell within a group (yaml/@group/shell)
+",
+            "spawn": Array [
+              "echo",
+              "Spawn within a group",
+              "(yaml/@group/spawn)",
+            ],
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo Shell within a group (yaml/@group/shell)
+",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "Spawn within a group",
+                  "(yaml/@group/spawn)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+      },
+      "tasks": Object {
+        "full-detailed-shell": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This is a shell command (yaml/full-detailed-shell)
+",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "full-detailed-spawn": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(yaml/full-detailed-spawn)",
+            ],
+            "oncreate": [Function],
+            "options": undefined,
+            "program": "echo",
+            "type": "spawn",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "keyword-shell": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This is a shell command (yaml/keyword-shell)
+",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "keyword-spawn": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(yaml/keyword-spawn)",
+            ],
+            "oncreate": [Function],
+            "options": undefined,
+            "program": "echo",
+            "type": "spawn",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "partial-detailed-shell": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This is a shell command (yaml/partial-detailed-shell)
+",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "partial-detailed-spawn": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(yaml/partial-detailed-spawn)",
+            ],
+            "oncreate": [Function],
+            "options": undefined,
+            "program": "echo",
+            "type": "spawn",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "shortcut-shell": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This is a shell command (yaml/shortcut-shell)
+",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "shortcut-spawn": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(yaml/shortcut-spawn)",
+            ],
+            "oncreate": [Function],
+            "options": undefined,
+            "program": "echo",
+            "type": "spawn",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/yaml-only/task.yaml",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "exclusive": "echo From yaml-only/exclusive
+",
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "exclusive": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo From yaml-only/exclusive
+",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+]
+`;
+
+exports[`with javascript files with custom chooser and deep function 1`] = `
+Array [
+  Object {
+    "path": "root/json-only/task.json",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "exclusive": "echo From json-only/exclusive",
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "exclusive": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo From json-only/exclusive",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/script-only/task.js",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "exclusive": [Function],
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "exclusive": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "execute": [Function],
+            "type": "function",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/script-only/task.ts",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "exclusive": [Function],
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "exclusive": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "execute": [Function],
+            "type": "function",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/task.js",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "@full-detailed": Object {
+          "func": Object {
+            "execute": [Function],
+            "type": "function",
+          },
+          "shell": Object {
+            "cmd": "echo This is a shell command (script/@full-detailed/shell)",
+            "shell": "sh",
+            "type": "shell",
+          },
+          "spawn": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(script/@full-detailed/spawn)",
+            ],
+            "program": "echo",
+            "type": "spawn",
+          },
+        },
+        "@group": Object {
+          "func": [Function],
+          "shell": "echo Shell within a group (script/@group/shell)",
+          "spawn": Array [
+            "echo",
+            "Spawn within a group",
+            "(script/@group/spawn)",
+          ],
+        },
+        "@keyword": Object {
+          "func": Object {
+            "execute": [Function],
+          },
+          "shell": Object {
+            "cmd": "echo This is a shell command (script/@keyword/shell)",
+          },
+          "spawn": Object {
+            "spawn": Array [
+              "echo",
+              "This is a spawned command",
+              "(script/@keyword/spawn)",
+            ],
+          },
+        },
+        "@partial-detailed": Object {
+          "func": Object {
+            "execute": [Function],
+          },
+          "shell": Object {
+            "cmd": "echo This is a shell command (script/@partial-detailed/shell)",
+            "shell": "sh",
+          },
+          "spawn": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(script/@partial-detailed/spawn)",
+            ],
+            "program": "echo",
+          },
+        },
+        "@shortcut": Object {
+          "func": [Function],
+          "shell": "echo This is a shell command (script/@shortcut/shell)",
+          "spawn": Array [
+            "echo",
+            "This is a spawned command",
+            "(script/@shortcut/spawm)",
+          ],
+        },
+      },
+      "subtasks": Object {
+        "full-detailed": TaskSet {
+          "manifest": Object {
+            "func": Object {
+              "execute": [Function],
+              "type": "function",
+            },
+            "shell": Object {
+              "cmd": "echo This is a shell command (script/@full-detailed/shell)",
+              "shell": "sh",
+              "type": "shell",
+            },
+            "spawn": Object {
+              "argv": Array [
+                "This is a spawned command",
+                "(script/@full-detailed/spawn)",
+              ],
+              "program": "echo",
+              "type": "spawn",
+            },
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "func": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "execute": [Function],
+                "type": "function",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo This is a shell command (script/@full-detailed/shell)",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "This is a spawned command",
+                  "(script/@full-detailed/spawn)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+        "group": TaskSet {
+          "manifest": Object {
+            "func": [Function],
+            "shell": "echo Shell within a group (script/@group/shell)",
+            "spawn": Array [
+              "echo",
+              "Spawn within a group",
+              "(script/@group/spawn)",
+            ],
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "func": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "execute": [Function],
+                "type": "function",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo Shell within a group (script/@group/shell)",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "Spawn within a group",
+                  "(script/@group/spawn)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+        "keyword": TaskSet {
+          "manifest": Object {
+            "func": Object {
+              "execute": [Function],
+            },
+            "shell": Object {
+              "cmd": "echo This is a shell command (script/@keyword/shell)",
+            },
+            "spawn": Object {
+              "spawn": Array [
+                "echo",
+                "This is a spawned command",
+                "(script/@keyword/spawn)",
+              ],
+            },
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "func": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "execute": [Function],
+                "type": "function",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo This is a shell command (script/@keyword/shell)",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "This is a spawned command",
+                  "(script/@keyword/spawn)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+        "partial-detailed": TaskSet {
+          "manifest": Object {
+            "func": Object {
+              "execute": [Function],
+            },
+            "shell": Object {
+              "cmd": "echo This is a shell command (script/@partial-detailed/shell)",
+              "shell": "sh",
+            },
+            "spawn": Object {
+              "argv": Array [
+                "This is a spawned command",
+                "(script/@partial-detailed/spawn)",
+              ],
+              "program": "echo",
+            },
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "func": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "execute": [Function],
+                "type": "function",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo This is a shell command (script/@partial-detailed/shell)",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "This is a spawned command",
+                  "(script/@partial-detailed/spawn)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+        "shortcut": TaskSet {
+          "manifest": Object {
+            "func": [Function],
+            "shell": "echo This is a shell command (script/@shortcut/shell)",
+            "spawn": Array [
+              "echo",
+              "This is a spawned command",
+              "(script/@shortcut/spawm)",
+            ],
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "func": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "execute": [Function],
+                "type": "function",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo This is a shell command (script/@shortcut/shell)",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "This is a spawned command",
+                  "(script/@shortcut/spawm)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+      },
+      "tasks": Object {},
+    },
+  },
+  Object {
+    "path": "root/task.json",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "@group": Object {
+          "test-json": "echo This is from task.json/@group/test-json",
+        },
+        "test-json": "echo This is from task.json/test-json",
+      },
+      "subtasks": Object {
+        "group": TaskSet {
+          "manifest": Object {
+            "test-json": "echo This is from task.json/@group/test-json",
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "test-json": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo This is from task.json/@group/test-json",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+      },
+      "tasks": Object {
+        "test-json": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This is from task.json/test-json",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/task.ts",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "@full-detailed": Object {
+          "func": Object {
+            "execute": [Function],
+            "type": "function",
+          },
+          "shell": Object {
+            "cmd": "echo This is a shell command (script/@full-detailed/shell)",
+            "shell": "sh",
+            "type": "shell",
+          },
+          "spawn": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(script/@full-detailed/spawn)",
+            ],
+            "program": "echo",
+            "type": "spawn",
+          },
+        },
+        "@group": Object {
+          "func": [Function],
+          "shell": "echo Shell within a group (script/@group/shell)",
+          "spawn": Array [
+            "echo",
+            "Spawn within a group",
+            "(script/@group/spawn)",
+          ],
+        },
+        "@keyword": Object {
+          "func": Object {
+            "execute": [Function],
+          },
+          "shell": Object {
+            "cmd": "echo This is a shell command (script/@keyword/shell)",
+          },
+          "spawn": Object {
+            "spawn": Array [
+              "echo",
+              "This is a spawned command",
+              "(script/@keyword/spawn)",
+            ],
+          },
+        },
+        "@partial-detailed": Object {
+          "func": Object {
+            "execute": [Function],
+          },
+          "shell": Object {
+            "cmd": "echo This is a shell command (script/@partial-detailed/shell)",
+            "shell": "sh",
+          },
+          "spawn": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(script/@partial-detailed/spawn)",
+            ],
+            "program": "echo",
+          },
+        },
+        "@shortcut": Object {
+          "func": [Function],
+          "shell": "echo This is a shell command (script/@shortcut/shell)",
+          "spawn": Array [
+            "echo",
+            "This is a spawned command",
+            "(script/@shortcut/spawm)",
+          ],
+        },
+      },
+      "subtasks": Object {
+        "full-detailed": TaskSet {
+          "manifest": Object {
+            "func": Object {
+              "execute": [Function],
+              "type": "function",
+            },
+            "shell": Object {
+              "cmd": "echo This is a shell command (script/@full-detailed/shell)",
+              "shell": "sh",
+              "type": "shell",
+            },
+            "spawn": Object {
+              "argv": Array [
+                "This is a spawned command",
+                "(script/@full-detailed/spawn)",
+              ],
+              "program": "echo",
+              "type": "spawn",
+            },
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "func": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "execute": [Function],
+                "type": "function",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo This is a shell command (script/@full-detailed/shell)",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "This is a spawned command",
+                  "(script/@full-detailed/spawn)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+        "group": TaskSet {
+          "manifest": Object {
+            "func": [Function],
+            "shell": "echo Shell within a group (script/@group/shell)",
+            "spawn": Array [
+              "echo",
+              "Spawn within a group",
+              "(script/@group/spawn)",
+            ],
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "func": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "execute": [Function],
+                "type": "function",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo Shell within a group (script/@group/shell)",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "Spawn within a group",
+                  "(script/@group/spawn)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+        "keyword": TaskSet {
+          "manifest": Object {
+            "func": Object {
+              "execute": [Function],
+            },
+            "shell": Object {
+              "cmd": "echo This is a shell command (script/@keyword/shell)",
+            },
+            "spawn": Object {
+              "spawn": Array [
+                "echo",
+                "This is a spawned command",
+                "(script/@keyword/spawn)",
+              ],
+            },
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "func": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "execute": [Function],
+                "type": "function",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo This is a shell command (script/@keyword/shell)",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "This is a spawned command",
+                  "(script/@keyword/spawn)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+        "partial-detailed": TaskSet {
+          "manifest": Object {
+            "func": Object {
+              "execute": [Function],
+            },
+            "shell": Object {
+              "cmd": "echo This is a shell command (script/@partial-detailed/shell)",
+              "shell": "sh",
+            },
+            "spawn": Object {
+              "argv": Array [
+                "This is a spawned command",
+                "(script/@partial-detailed/spawn)",
+              ],
+              "program": "echo",
+            },
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "func": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "execute": [Function],
+                "type": "function",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo This is a shell command (script/@partial-detailed/shell)",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "This is a spawned command",
+                  "(script/@partial-detailed/spawn)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+        "shortcut": TaskSet {
+          "manifest": Object {
+            "func": [Function],
+            "shell": "echo This is a shell command (script/@shortcut/shell)",
+            "spawn": Array [
+              "echo",
+              "This is a spawned command",
+              "(script/@shortcut/spawm)",
+            ],
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "func": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "execute": [Function],
+                "type": "function",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo This is a shell command (script/@shortcut/shell)",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "This is a spawned command",
+                  "(script/@shortcut/spawm)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+      },
+      "tasks": Object {},
+    },
+  },
+  Object {
+    "path": "root/task.yaml",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "@group": Object {
+          "shell": "echo Shell within a group (yaml/@group/shell)
+",
+          "spawn": Array [
+            "echo",
+            "Spawn within a group",
+            "(yaml/@group/spawn)",
+          ],
+        },
+        "full-detailed-shell": Object {
+          "cmd": "echo This is a shell command (yaml/full-detailed-shell)
+",
+          "shell": "sh",
+          "type": "shell",
+        },
+        "full-detailed-spawn": Object {
+          "argv": Array [
+            "This is a spawned command",
+            "(yaml/full-detailed-spawn)",
+          ],
+          "program": "echo",
+          "type": "spawn",
+        },
+        "keyword-shell": Object {
+          "cmd": "echo This is a shell command (yaml/keyword-shell)
+",
+        },
+        "keyword-spawn": Object {
+          "spawn": Array [
+            "echo",
+            "This is a spawned command",
+            "(yaml/keyword-spawn)",
+          ],
+        },
+        "partial-detailed-shell": Object {
+          "cmd": "echo This is a shell command (yaml/partial-detailed-shell)
+",
+          "shell": "sh",
+        },
+        "partial-detailed-spawn": Object {
+          "argv": Array [
+            "This is a spawned command",
+            "(yaml/partial-detailed-spawn)",
+          ],
+          "program": "echo",
+        },
+        "shortcut-shell": "echo This is a shell command (yaml/shortcut-shell)
+",
+        "shortcut-spawn": Array [
+          "echo",
+          "This is a spawned command",
+          "(yaml/shortcut-spawn)",
+        ],
+      },
+      "subtasks": Object {
+        "group": TaskSet {
+          "manifest": Object {
+            "shell": "echo Shell within a group (yaml/@group/shell)
+",
+            "spawn": Array [
+              "echo",
+              "Spawn within a group",
+              "(yaml/@group/spawn)",
+            ],
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo Shell within a group (yaml/@group/shell)
+",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "Spawn within a group",
+                  "(yaml/@group/spawn)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+      },
+      "tasks": Object {
+        "full-detailed-shell": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This is a shell command (yaml/full-detailed-shell)
+",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "full-detailed-spawn": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(yaml/full-detailed-spawn)",
+            ],
+            "oncreate": [Function],
+            "options": undefined,
+            "program": "echo",
+            "type": "spawn",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "keyword-shell": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This is a shell command (yaml/keyword-shell)
+",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "keyword-spawn": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(yaml/keyword-spawn)",
+            ],
+            "oncreate": [Function],
+            "options": undefined,
+            "program": "echo",
+            "type": "spawn",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "partial-detailed-shell": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This is a shell command (yaml/partial-detailed-shell)
+",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "partial-detailed-spawn": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(yaml/partial-detailed-spawn)",
+            ],
+            "oncreate": [Function],
+            "options": undefined,
+            "program": "echo",
+            "type": "spawn",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "shortcut-shell": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This is a shell command (yaml/shortcut-shell)
+",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "shortcut-spawn": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(yaml/shortcut-spawn)",
+            ],
+            "oncreate": [Function],
+            "options": undefined,
+            "program": "echo",
+            "type": "spawn",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/yaml-only/task.yaml",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "exclusive": "echo From yaml-only/exclusive
+",
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "exclusive": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo From yaml-only/exclusive
+",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+]
+`;
+
+exports[`with javascript files with custom deep function 1`] = `
+Array [
+  Object {
+    "path": "root/json-only/task.json",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "exclusive": "echo From json-only/exclusive",
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "exclusive": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo From json-only/exclusive",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/script-only/task.js",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "exclusive": [Function],
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "exclusive": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "execute": [Function],
+            "type": "function",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/task.js",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "@full-detailed": Object {
+          "func": Object {
+            "execute": [Function],
+            "type": "function",
+          },
+          "shell": Object {
+            "cmd": "echo This is a shell command (script/@full-detailed/shell)",
+            "shell": "sh",
+            "type": "shell",
+          },
+          "spawn": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(script/@full-detailed/spawn)",
+            ],
+            "program": "echo",
+            "type": "spawn",
+          },
+        },
+        "@group": Object {
+          "func": [Function],
+          "shell": "echo Shell within a group (script/@group/shell)",
+          "spawn": Array [
+            "echo",
+            "Spawn within a group",
+            "(script/@group/spawn)",
+          ],
+        },
+        "@keyword": Object {
+          "func": Object {
+            "execute": [Function],
+          },
+          "shell": Object {
+            "cmd": "echo This is a shell command (script/@keyword/shell)",
+          },
+          "spawn": Object {
+            "spawn": Array [
+              "echo",
+              "This is a spawned command",
+              "(script/@keyword/spawn)",
+            ],
+          },
+        },
+        "@partial-detailed": Object {
+          "func": Object {
+            "execute": [Function],
+          },
+          "shell": Object {
+            "cmd": "echo This is a shell command (script/@partial-detailed/shell)",
+            "shell": "sh",
+          },
+          "spawn": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(script/@partial-detailed/spawn)",
+            ],
+            "program": "echo",
+          },
+        },
+        "@shortcut": Object {
+          "func": [Function],
+          "shell": "echo This is a shell command (script/@shortcut/shell)",
+          "spawn": Array [
+            "echo",
+            "This is a spawned command",
+            "(script/@shortcut/spawm)",
+          ],
+        },
+      },
+      "subtasks": Object {
+        "full-detailed": TaskSet {
+          "manifest": Object {
+            "func": Object {
+              "execute": [Function],
+              "type": "function",
+            },
+            "shell": Object {
+              "cmd": "echo This is a shell command (script/@full-detailed/shell)",
+              "shell": "sh",
+              "type": "shell",
+            },
+            "spawn": Object {
+              "argv": Array [
+                "This is a spawned command",
+                "(script/@full-detailed/spawn)",
+              ],
+              "program": "echo",
+              "type": "spawn",
+            },
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "func": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "execute": [Function],
+                "type": "function",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo This is a shell command (script/@full-detailed/shell)",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "This is a spawned command",
+                  "(script/@full-detailed/spawn)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+        "group": TaskSet {
+          "manifest": Object {
+            "func": [Function],
+            "shell": "echo Shell within a group (script/@group/shell)",
+            "spawn": Array [
+              "echo",
+              "Spawn within a group",
+              "(script/@group/spawn)",
+            ],
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "func": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "execute": [Function],
+                "type": "function",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo Shell within a group (script/@group/shell)",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "Spawn within a group",
+                  "(script/@group/spawn)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+        "keyword": TaskSet {
+          "manifest": Object {
+            "func": Object {
+              "execute": [Function],
+            },
+            "shell": Object {
+              "cmd": "echo This is a shell command (script/@keyword/shell)",
+            },
+            "spawn": Object {
+              "spawn": Array [
+                "echo",
+                "This is a spawned command",
+                "(script/@keyword/spawn)",
+              ],
+            },
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "func": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "execute": [Function],
+                "type": "function",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo This is a shell command (script/@keyword/shell)",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "This is a spawned command",
+                  "(script/@keyword/spawn)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+        "partial-detailed": TaskSet {
+          "manifest": Object {
+            "func": Object {
+              "execute": [Function],
+            },
+            "shell": Object {
+              "cmd": "echo This is a shell command (script/@partial-detailed/shell)",
+              "shell": "sh",
+            },
+            "spawn": Object {
+              "argv": Array [
+                "This is a spawned command",
+                "(script/@partial-detailed/spawn)",
+              ],
+              "program": "echo",
+            },
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "func": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "execute": [Function],
+                "type": "function",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo This is a shell command (script/@partial-detailed/shell)",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "This is a spawned command",
+                  "(script/@partial-detailed/spawn)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+        "shortcut": TaskSet {
+          "manifest": Object {
+            "func": [Function],
+            "shell": "echo This is a shell command (script/@shortcut/shell)",
+            "spawn": Array [
+              "echo",
+              "This is a spawned command",
+              "(script/@shortcut/spawm)",
+            ],
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "func": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "execute": [Function],
+                "type": "function",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo This is a shell command (script/@shortcut/shell)",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "This is a spawned command",
+                  "(script/@shortcut/spawm)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+      },
+      "tasks": Object {},
+    },
+  },
+  Object {
+    "path": "root/task.json",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "@group": Object {
+          "test-json": "echo This is from task.json/@group/test-json",
+        },
+        "test-json": "echo This is from task.json/test-json",
+      },
+      "subtasks": Object {
+        "group": TaskSet {
+          "manifest": Object {
+            "test-json": "echo This is from task.json/@group/test-json",
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "test-json": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo This is from task.json/@group/test-json",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+      },
+      "tasks": Object {
+        "test-json": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This is from task.json/test-json",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/task.yaml",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "@group": Object {
+          "shell": "echo Shell within a group (yaml/@group/shell)
+",
+          "spawn": Array [
+            "echo",
+            "Spawn within a group",
+            "(yaml/@group/spawn)",
+          ],
+        },
+        "full-detailed-shell": Object {
+          "cmd": "echo This is a shell command (yaml/full-detailed-shell)
+",
+          "shell": "sh",
+          "type": "shell",
+        },
+        "full-detailed-spawn": Object {
+          "argv": Array [
+            "This is a spawned command",
+            "(yaml/full-detailed-spawn)",
+          ],
+          "program": "echo",
+          "type": "spawn",
+        },
+        "keyword-shell": Object {
+          "cmd": "echo This is a shell command (yaml/keyword-shell)
+",
+        },
+        "keyword-spawn": Object {
+          "spawn": Array [
+            "echo",
+            "This is a spawned command",
+            "(yaml/keyword-spawn)",
+          ],
+        },
+        "partial-detailed-shell": Object {
+          "cmd": "echo This is a shell command (yaml/partial-detailed-shell)
+",
+          "shell": "sh",
+        },
+        "partial-detailed-spawn": Object {
+          "argv": Array [
+            "This is a spawned command",
+            "(yaml/partial-detailed-spawn)",
+          ],
+          "program": "echo",
+        },
+        "shortcut-shell": "echo This is a shell command (yaml/shortcut-shell)
+",
+        "shortcut-spawn": Array [
+          "echo",
+          "This is a spawned command",
+          "(yaml/shortcut-spawn)",
+        ],
+      },
+      "subtasks": Object {
+        "group": TaskSet {
+          "manifest": Object {
+            "shell": "echo Shell within a group (yaml/@group/shell)
+",
+            "spawn": Array [
+              "echo",
+              "Spawn within a group",
+              "(yaml/@group/spawn)",
+            ],
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo Shell within a group (yaml/@group/shell)
+",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "Spawn within a group",
+                  "(yaml/@group/spawn)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+      },
+      "tasks": Object {
+        "full-detailed-shell": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This is a shell command (yaml/full-detailed-shell)
+",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "full-detailed-spawn": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(yaml/full-detailed-spawn)",
+            ],
+            "oncreate": [Function],
+            "options": undefined,
+            "program": "echo",
+            "type": "spawn",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "keyword-shell": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This is a shell command (yaml/keyword-shell)
+",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "keyword-spawn": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(yaml/keyword-spawn)",
+            ],
+            "oncreate": [Function],
+            "options": undefined,
+            "program": "echo",
+            "type": "spawn",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "partial-detailed-shell": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This is a shell command (yaml/partial-detailed-shell)
+",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "partial-detailed-spawn": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(yaml/partial-detailed-spawn)",
+            ],
+            "oncreate": [Function],
+            "options": undefined,
+            "program": "echo",
+            "type": "spawn",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "shortcut-shell": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This is a shell command (yaml/shortcut-shell)
+",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "shortcut-spawn": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(yaml/shortcut-spawn)",
+            ],
+            "oncreate": [Function],
+            "options": undefined,
+            "program": "echo",
+            "type": "spawn",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/yaml-only/task.yaml",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "exclusive": "echo From yaml-only/exclusive
+",
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "exclusive": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo From yaml-only/exclusive
+",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+]
+`;
+
+exports[`with javascript files without options 1`] = `
+Array [
+  Object {
+    "path": "root/custom-deep-func/json-only/task.json",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "custom-deep-func": "echo This should not appear (custom-deep-func/json)",
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "custom-deep-func": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This should not appear (custom-deep-func/json)",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/custom-deep-func/script-only/task.js",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "custom-deep-func": [Function],
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "custom-deep-func": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "execute": [Function],
+            "type": "function",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/custom-deep-func/task.js",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "custom-deep-func": [Function],
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "custom-deep-func": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "execute": [Function],
+            "type": "function",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/custom-deep-func/task.json",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "custom-deep-func": "echo This should not appear (custom-deep-func/json)",
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "custom-deep-func": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This should not appear (custom-deep-func/json)",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/custom-deep-func/task.yaml",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "custom-deep-func": "echo This should not appear (custom-deep-func/yaml)",
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "custom-deep-func": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This should not appear (custom-deep-func/yaml)",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/custom-deep-func/yaml-only/task.yaml",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "custom-deep-func": "echo This should not appear (custom-deep-func/yaml)",
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "custom-deep-func": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This should not appear (custom-deep-func/yaml)",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/json-only/task.json",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "exclusive": "echo From json-only/exclusive",
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "exclusive": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo From json-only/exclusive",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/script-only/task.js",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "exclusive": [Function],
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "exclusive": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "execute": [Function],
+            "type": "function",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/task.js",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "@full-detailed": Object {
+          "func": Object {
+            "execute": [Function],
+            "type": "function",
+          },
+          "shell": Object {
+            "cmd": "echo This is a shell command (script/@full-detailed/shell)",
+            "shell": "sh",
+            "type": "shell",
+          },
+          "spawn": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(script/@full-detailed/spawn)",
+            ],
+            "program": "echo",
+            "type": "spawn",
+          },
+        },
+        "@group": Object {
+          "func": [Function],
+          "shell": "echo Shell within a group (script/@group/shell)",
+          "spawn": Array [
+            "echo",
+            "Spawn within a group",
+            "(script/@group/spawn)",
+          ],
+        },
+        "@keyword": Object {
+          "func": Object {
+            "execute": [Function],
+          },
+          "shell": Object {
+            "cmd": "echo This is a shell command (script/@keyword/shell)",
+          },
+          "spawn": Object {
+            "spawn": Array [
+              "echo",
+              "This is a spawned command",
+              "(script/@keyword/spawn)",
+            ],
+          },
+        },
+        "@partial-detailed": Object {
+          "func": Object {
+            "execute": [Function],
+          },
+          "shell": Object {
+            "cmd": "echo This is a shell command (script/@partial-detailed/shell)",
+            "shell": "sh",
+          },
+          "spawn": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(script/@partial-detailed/spawn)",
+            ],
+            "program": "echo",
+          },
+        },
+        "@shortcut": Object {
+          "func": [Function],
+          "shell": "echo This is a shell command (script/@shortcut/shell)",
+          "spawn": Array [
+            "echo",
+            "This is a spawned command",
+            "(script/@shortcut/spawm)",
+          ],
+        },
+      },
+      "subtasks": Object {
+        "full-detailed": TaskSet {
+          "manifest": Object {
+            "func": Object {
+              "execute": [Function],
+              "type": "function",
+            },
+            "shell": Object {
+              "cmd": "echo This is a shell command (script/@full-detailed/shell)",
+              "shell": "sh",
+              "type": "shell",
+            },
+            "spawn": Object {
+              "argv": Array [
+                "This is a spawned command",
+                "(script/@full-detailed/spawn)",
+              ],
+              "program": "echo",
+              "type": "spawn",
+            },
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "func": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "execute": [Function],
+                "type": "function",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo This is a shell command (script/@full-detailed/shell)",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "This is a spawned command",
+                  "(script/@full-detailed/spawn)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+        "group": TaskSet {
+          "manifest": Object {
+            "func": [Function],
+            "shell": "echo Shell within a group (script/@group/shell)",
+            "spawn": Array [
+              "echo",
+              "Spawn within a group",
+              "(script/@group/spawn)",
+            ],
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "func": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "execute": [Function],
+                "type": "function",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo Shell within a group (script/@group/shell)",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "Spawn within a group",
+                  "(script/@group/spawn)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+        "keyword": TaskSet {
+          "manifest": Object {
+            "func": Object {
+              "execute": [Function],
+            },
+            "shell": Object {
+              "cmd": "echo This is a shell command (script/@keyword/shell)",
+            },
+            "spawn": Object {
+              "spawn": Array [
+                "echo",
+                "This is a spawned command",
+                "(script/@keyword/spawn)",
+              ],
+            },
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "func": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "execute": [Function],
+                "type": "function",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo This is a shell command (script/@keyword/shell)",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "This is a spawned command",
+                  "(script/@keyword/spawn)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+        "partial-detailed": TaskSet {
+          "manifest": Object {
+            "func": Object {
+              "execute": [Function],
+            },
+            "shell": Object {
+              "cmd": "echo This is a shell command (script/@partial-detailed/shell)",
+              "shell": "sh",
+            },
+            "spawn": Object {
+              "argv": Array [
+                "This is a spawned command",
+                "(script/@partial-detailed/spawn)",
+              ],
+              "program": "echo",
+            },
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "func": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "execute": [Function],
+                "type": "function",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo This is a shell command (script/@partial-detailed/shell)",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "This is a spawned command",
+                  "(script/@partial-detailed/spawn)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+        "shortcut": TaskSet {
+          "manifest": Object {
+            "func": [Function],
+            "shell": "echo This is a shell command (script/@shortcut/shell)",
+            "spawn": Array [
+              "echo",
+              "This is a spawned command",
+              "(script/@shortcut/spawm)",
+            ],
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "func": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "execute": [Function],
+                "type": "function",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo This is a shell command (script/@shortcut/shell)",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "This is a spawned command",
+                  "(script/@shortcut/spawm)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+      },
+      "tasks": Object {},
+    },
+  },
+  Object {
+    "path": "root/task.json",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "@group": Object {
+          "test-json": "echo This is from task.json/@group/test-json",
+        },
+        "test-json": "echo This is from task.json/test-json",
+      },
+      "subtasks": Object {
+        "group": TaskSet {
+          "manifest": Object {
+            "test-json": "echo This is from task.json/@group/test-json",
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "test-json": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo This is from task.json/@group/test-json",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+      },
+      "tasks": Object {
+        "test-json": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This is from task.json/test-json",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/task.yaml",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "@group": Object {
+          "shell": "echo Shell within a group (yaml/@group/shell)
+",
+          "spawn": Array [
+            "echo",
+            "Spawn within a group",
+            "(yaml/@group/spawn)",
+          ],
+        },
+        "full-detailed-shell": Object {
+          "cmd": "echo This is a shell command (yaml/full-detailed-shell)
+",
+          "shell": "sh",
+          "type": "shell",
+        },
+        "full-detailed-spawn": Object {
+          "argv": Array [
+            "This is a spawned command",
+            "(yaml/full-detailed-spawn)",
+          ],
+          "program": "echo",
+          "type": "spawn",
+        },
+        "keyword-shell": Object {
+          "cmd": "echo This is a shell command (yaml/keyword-shell)
+",
+        },
+        "keyword-spawn": Object {
+          "spawn": Array [
+            "echo",
+            "This is a spawned command",
+            "(yaml/keyword-spawn)",
+          ],
+        },
+        "partial-detailed-shell": Object {
+          "cmd": "echo This is a shell command (yaml/partial-detailed-shell)
+",
+          "shell": "sh",
+        },
+        "partial-detailed-spawn": Object {
+          "argv": Array [
+            "This is a spawned command",
+            "(yaml/partial-detailed-spawn)",
+          ],
+          "program": "echo",
+        },
+        "shortcut-shell": "echo This is a shell command (yaml/shortcut-shell)
+",
+        "shortcut-spawn": Array [
+          "echo",
+          "This is a spawned command",
+          "(yaml/shortcut-spawn)",
+        ],
+      },
+      "subtasks": Object {
+        "group": TaskSet {
+          "manifest": Object {
+            "shell": "echo Shell within a group (yaml/@group/shell)
+",
+            "spawn": Array [
+              "echo",
+              "Spawn within a group",
+              "(yaml/@group/spawn)",
+            ],
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo Shell within a group (yaml/@group/shell)
+",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "Spawn within a group",
+                  "(yaml/@group/spawn)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+      },
+      "tasks": Object {
+        "full-detailed-shell": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This is a shell command (yaml/full-detailed-shell)
+",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "full-detailed-spawn": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(yaml/full-detailed-spawn)",
+            ],
+            "oncreate": [Function],
+            "options": undefined,
+            "program": "echo",
+            "type": "spawn",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "keyword-shell": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This is a shell command (yaml/keyword-shell)
+",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "keyword-spawn": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(yaml/keyword-spawn)",
+            ],
+            "oncreate": [Function],
+            "options": undefined,
+            "program": "echo",
+            "type": "spawn",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "partial-detailed-shell": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This is a shell command (yaml/partial-detailed-shell)
+",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "partial-detailed-spawn": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(yaml/partial-detailed-spawn)",
+            ],
+            "oncreate": [Function],
+            "options": undefined,
+            "program": "echo",
+            "type": "spawn",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "shortcut-shell": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This is a shell command (yaml/shortcut-shell)
+",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "shortcut-spawn": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(yaml/shortcut-spawn)",
+            ],
+            "oncreate": [Function],
+            "options": undefined,
+            "program": "echo",
+            "type": "spawn",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/yaml-only/task.yaml",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "exclusive": "echo From yaml-only/exclusive
+",
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "exclusive": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo From yaml-only/exclusive
+",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+]
+`;
+
+exports[`without javascript files with custom chooser 1`] = `
+Array [
+  Object {
+    "path": "root/custom-deep-func/json-only/task.json",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "custom-deep-func": "echo This should not appear (custom-deep-func/json)",
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "custom-deep-func": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This should not appear (custom-deep-func/json)",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/custom-deep-func/script-only/task.ts",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "custom-deep-func": [Function],
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "custom-deep-func": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "execute": [Function],
+            "type": "function",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/custom-deep-func/task.json",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "custom-deep-func": "echo This should not appear (custom-deep-func/json)",
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "custom-deep-func": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This should not appear (custom-deep-func/json)",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/custom-deep-func/task.ts",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "custom-deep-func": [Function],
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "custom-deep-func": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "execute": [Function],
+            "type": "function",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/custom-deep-func/task.yaml",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "custom-deep-func": "echo This should not appear (custom-deep-func/yaml)",
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "custom-deep-func": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This should not appear (custom-deep-func/yaml)",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/custom-deep-func/yaml-only/task.yaml",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "custom-deep-func": "echo This should not appear (custom-deep-func/yaml)",
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "custom-deep-func": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This should not appear (custom-deep-func/yaml)",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/json-only/task.json",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "exclusive": "echo From json-only/exclusive",
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "exclusive": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo From json-only/exclusive",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/script-only/task.ts",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "exclusive": [Function],
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "exclusive": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "execute": [Function],
+            "type": "function",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/task.json",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "@group": Object {
+          "test-json": "echo This is from task.json/@group/test-json",
+        },
+        "test-json": "echo This is from task.json/test-json",
+      },
+      "subtasks": Object {
+        "group": TaskSet {
+          "manifest": Object {
+            "test-json": "echo This is from task.json/@group/test-json",
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "test-json": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo This is from task.json/@group/test-json",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+      },
+      "tasks": Object {
+        "test-json": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This is from task.json/test-json",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/task.ts",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "@full-detailed": Object {
+          "func": Object {
+            "execute": [Function],
+            "type": "function",
+          },
+          "shell": Object {
+            "cmd": "echo This is a shell command (script/@full-detailed/shell)",
+            "shell": "sh",
+            "type": "shell",
+          },
+          "spawn": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(script/@full-detailed/spawn)",
+            ],
+            "program": "echo",
+            "type": "spawn",
+          },
+        },
+        "@group": Object {
+          "func": [Function],
+          "shell": "echo Shell within a group (script/@group/shell)",
+          "spawn": Array [
+            "echo",
+            "Spawn within a group",
+            "(script/@group/spawn)",
+          ],
+        },
+        "@keyword": Object {
+          "func": Object {
+            "execute": [Function],
+          },
+          "shell": Object {
+            "cmd": "echo This is a shell command (script/@keyword/shell)",
+          },
+          "spawn": Object {
+            "spawn": Array [
+              "echo",
+              "This is a spawned command",
+              "(script/@keyword/spawn)",
+            ],
+          },
+        },
+        "@partial-detailed": Object {
+          "func": Object {
+            "execute": [Function],
+          },
+          "shell": Object {
+            "cmd": "echo This is a shell command (script/@partial-detailed/shell)",
+            "shell": "sh",
+          },
+          "spawn": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(script/@partial-detailed/spawn)",
+            ],
+            "program": "echo",
+          },
+        },
+        "@shortcut": Object {
+          "func": [Function],
+          "shell": "echo This is a shell command (script/@shortcut/shell)",
+          "spawn": Array [
+            "echo",
+            "This is a spawned command",
+            "(script/@shortcut/spawm)",
+          ],
+        },
+      },
+      "subtasks": Object {
+        "full-detailed": TaskSet {
+          "manifest": Object {
+            "func": Object {
+              "execute": [Function],
+              "type": "function",
+            },
+            "shell": Object {
+              "cmd": "echo This is a shell command (script/@full-detailed/shell)",
+              "shell": "sh",
+              "type": "shell",
+            },
+            "spawn": Object {
+              "argv": Array [
+                "This is a spawned command",
+                "(script/@full-detailed/spawn)",
+              ],
+              "program": "echo",
+              "type": "spawn",
+            },
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "func": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "execute": [Function],
+                "type": "function",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo This is a shell command (script/@full-detailed/shell)",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "This is a spawned command",
+                  "(script/@full-detailed/spawn)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+        "group": TaskSet {
+          "manifest": Object {
+            "func": [Function],
+            "shell": "echo Shell within a group (script/@group/shell)",
+            "spawn": Array [
+              "echo",
+              "Spawn within a group",
+              "(script/@group/spawn)",
+            ],
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "func": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "execute": [Function],
+                "type": "function",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo Shell within a group (script/@group/shell)",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "Spawn within a group",
+                  "(script/@group/spawn)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+        "keyword": TaskSet {
+          "manifest": Object {
+            "func": Object {
+              "execute": [Function],
+            },
+            "shell": Object {
+              "cmd": "echo This is a shell command (script/@keyword/shell)",
+            },
+            "spawn": Object {
+              "spawn": Array [
+                "echo",
+                "This is a spawned command",
+                "(script/@keyword/spawn)",
+              ],
+            },
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "func": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "execute": [Function],
+                "type": "function",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo This is a shell command (script/@keyword/shell)",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "This is a spawned command",
+                  "(script/@keyword/spawn)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+        "partial-detailed": TaskSet {
+          "manifest": Object {
+            "func": Object {
+              "execute": [Function],
+            },
+            "shell": Object {
+              "cmd": "echo This is a shell command (script/@partial-detailed/shell)",
+              "shell": "sh",
+            },
+            "spawn": Object {
+              "argv": Array [
+                "This is a spawned command",
+                "(script/@partial-detailed/spawn)",
+              ],
+              "program": "echo",
+            },
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "func": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "execute": [Function],
+                "type": "function",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo This is a shell command (script/@partial-detailed/shell)",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "This is a spawned command",
+                  "(script/@partial-detailed/spawn)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+        "shortcut": TaskSet {
+          "manifest": Object {
+            "func": [Function],
+            "shell": "echo This is a shell command (script/@shortcut/shell)",
+            "spawn": Array [
+              "echo",
+              "This is a spawned command",
+              "(script/@shortcut/spawm)",
+            ],
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "func": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "execute": [Function],
+                "type": "function",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo This is a shell command (script/@shortcut/shell)",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "This is a spawned command",
+                  "(script/@shortcut/spawm)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+      },
+      "tasks": Object {},
+    },
+  },
+  Object {
+    "path": "root/task.yaml",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "@group": Object {
+          "shell": "echo Shell within a group (yaml/@group/shell)
+",
+          "spawn": Array [
+            "echo",
+            "Spawn within a group",
+            "(yaml/@group/spawn)",
+          ],
+        },
+        "full-detailed-shell": Object {
+          "cmd": "echo This is a shell command (yaml/full-detailed-shell)
+",
+          "shell": "sh",
+          "type": "shell",
+        },
+        "full-detailed-spawn": Object {
+          "argv": Array [
+            "This is a spawned command",
+            "(yaml/full-detailed-spawn)",
+          ],
+          "program": "echo",
+          "type": "spawn",
+        },
+        "keyword-shell": Object {
+          "cmd": "echo This is a shell command (yaml/keyword-shell)
+",
+        },
+        "keyword-spawn": Object {
+          "spawn": Array [
+            "echo",
+            "This is a spawned command",
+            "(yaml/keyword-spawn)",
+          ],
+        },
+        "partial-detailed-shell": Object {
+          "cmd": "echo This is a shell command (yaml/partial-detailed-shell)
+",
+          "shell": "sh",
+        },
+        "partial-detailed-spawn": Object {
+          "argv": Array [
+            "This is a spawned command",
+            "(yaml/partial-detailed-spawn)",
+          ],
+          "program": "echo",
+        },
+        "shortcut-shell": "echo This is a shell command (yaml/shortcut-shell)
+",
+        "shortcut-spawn": Array [
+          "echo",
+          "This is a spawned command",
+          "(yaml/shortcut-spawn)",
+        ],
+      },
+      "subtasks": Object {
+        "group": TaskSet {
+          "manifest": Object {
+            "shell": "echo Shell within a group (yaml/@group/shell)
+",
+            "spawn": Array [
+              "echo",
+              "Spawn within a group",
+              "(yaml/@group/spawn)",
+            ],
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo Shell within a group (yaml/@group/shell)
+",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "Spawn within a group",
+                  "(yaml/@group/spawn)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+      },
+      "tasks": Object {
+        "full-detailed-shell": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This is a shell command (yaml/full-detailed-shell)
+",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "full-detailed-spawn": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(yaml/full-detailed-spawn)",
+            ],
+            "oncreate": [Function],
+            "options": undefined,
+            "program": "echo",
+            "type": "spawn",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "keyword-shell": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This is a shell command (yaml/keyword-shell)
+",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "keyword-spawn": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(yaml/keyword-spawn)",
+            ],
+            "oncreate": [Function],
+            "options": undefined,
+            "program": "echo",
+            "type": "spawn",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "partial-detailed-shell": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This is a shell command (yaml/partial-detailed-shell)
+",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "partial-detailed-spawn": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(yaml/partial-detailed-spawn)",
+            ],
+            "oncreate": [Function],
+            "options": undefined,
+            "program": "echo",
+            "type": "spawn",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "shortcut-shell": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This is a shell command (yaml/shortcut-shell)
+",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "shortcut-spawn": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(yaml/shortcut-spawn)",
+            ],
+            "oncreate": [Function],
+            "options": undefined,
+            "program": "echo",
+            "type": "spawn",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/yaml-only/task.yaml",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "exclusive": "echo From yaml-only/exclusive
+",
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "exclusive": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo From yaml-only/exclusive
+",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+]
+`;
+
+exports[`without javascript files with custom chooser and deep function 1`] = `
+Array [
+  Object {
+    "path": "root/json-only/task.json",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "exclusive": "echo From json-only/exclusive",
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "exclusive": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo From json-only/exclusive",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/script-only/task.ts",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "exclusive": [Function],
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "exclusive": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "execute": [Function],
+            "type": "function",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/task.json",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "@group": Object {
+          "test-json": "echo This is from task.json/@group/test-json",
+        },
+        "test-json": "echo This is from task.json/test-json",
+      },
+      "subtasks": Object {
+        "group": TaskSet {
+          "manifest": Object {
+            "test-json": "echo This is from task.json/@group/test-json",
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "test-json": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo This is from task.json/@group/test-json",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+      },
+      "tasks": Object {
+        "test-json": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This is from task.json/test-json",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/task.ts",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "@full-detailed": Object {
+          "func": Object {
+            "execute": [Function],
+            "type": "function",
+          },
+          "shell": Object {
+            "cmd": "echo This is a shell command (script/@full-detailed/shell)",
+            "shell": "sh",
+            "type": "shell",
+          },
+          "spawn": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(script/@full-detailed/spawn)",
+            ],
+            "program": "echo",
+            "type": "spawn",
+          },
+        },
+        "@group": Object {
+          "func": [Function],
+          "shell": "echo Shell within a group (script/@group/shell)",
+          "spawn": Array [
+            "echo",
+            "Spawn within a group",
+            "(script/@group/spawn)",
+          ],
+        },
+        "@keyword": Object {
+          "func": Object {
+            "execute": [Function],
+          },
+          "shell": Object {
+            "cmd": "echo This is a shell command (script/@keyword/shell)",
+          },
+          "spawn": Object {
+            "spawn": Array [
+              "echo",
+              "This is a spawned command",
+              "(script/@keyword/spawn)",
+            ],
+          },
+        },
+        "@partial-detailed": Object {
+          "func": Object {
+            "execute": [Function],
+          },
+          "shell": Object {
+            "cmd": "echo This is a shell command (script/@partial-detailed/shell)",
+            "shell": "sh",
+          },
+          "spawn": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(script/@partial-detailed/spawn)",
+            ],
+            "program": "echo",
+          },
+        },
+        "@shortcut": Object {
+          "func": [Function],
+          "shell": "echo This is a shell command (script/@shortcut/shell)",
+          "spawn": Array [
+            "echo",
+            "This is a spawned command",
+            "(script/@shortcut/spawm)",
+          ],
+        },
+      },
+      "subtasks": Object {
+        "full-detailed": TaskSet {
+          "manifest": Object {
+            "func": Object {
+              "execute": [Function],
+              "type": "function",
+            },
+            "shell": Object {
+              "cmd": "echo This is a shell command (script/@full-detailed/shell)",
+              "shell": "sh",
+              "type": "shell",
+            },
+            "spawn": Object {
+              "argv": Array [
+                "This is a spawned command",
+                "(script/@full-detailed/spawn)",
+              ],
+              "program": "echo",
+              "type": "spawn",
+            },
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "func": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "execute": [Function],
+                "type": "function",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo This is a shell command (script/@full-detailed/shell)",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "This is a spawned command",
+                  "(script/@full-detailed/spawn)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+        "group": TaskSet {
+          "manifest": Object {
+            "func": [Function],
+            "shell": "echo Shell within a group (script/@group/shell)",
+            "spawn": Array [
+              "echo",
+              "Spawn within a group",
+              "(script/@group/spawn)",
+            ],
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "func": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "execute": [Function],
+                "type": "function",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo Shell within a group (script/@group/shell)",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "Spawn within a group",
+                  "(script/@group/spawn)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+        "keyword": TaskSet {
+          "manifest": Object {
+            "func": Object {
+              "execute": [Function],
+            },
+            "shell": Object {
+              "cmd": "echo This is a shell command (script/@keyword/shell)",
+            },
+            "spawn": Object {
+              "spawn": Array [
+                "echo",
+                "This is a spawned command",
+                "(script/@keyword/spawn)",
+              ],
+            },
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "func": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "execute": [Function],
+                "type": "function",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo This is a shell command (script/@keyword/shell)",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "This is a spawned command",
+                  "(script/@keyword/spawn)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+        "partial-detailed": TaskSet {
+          "manifest": Object {
+            "func": Object {
+              "execute": [Function],
+            },
+            "shell": Object {
+              "cmd": "echo This is a shell command (script/@partial-detailed/shell)",
+              "shell": "sh",
+            },
+            "spawn": Object {
+              "argv": Array [
+                "This is a spawned command",
+                "(script/@partial-detailed/spawn)",
+              ],
+              "program": "echo",
+            },
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "func": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "execute": [Function],
+                "type": "function",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo This is a shell command (script/@partial-detailed/shell)",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "This is a spawned command",
+                  "(script/@partial-detailed/spawn)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+        "shortcut": TaskSet {
+          "manifest": Object {
+            "func": [Function],
+            "shell": "echo This is a shell command (script/@shortcut/shell)",
+            "spawn": Array [
+              "echo",
+              "This is a spawned command",
+              "(script/@shortcut/spawm)",
+            ],
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "func": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "execute": [Function],
+                "type": "function",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo This is a shell command (script/@shortcut/shell)",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "This is a spawned command",
+                  "(script/@shortcut/spawm)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+      },
+      "tasks": Object {},
+    },
+  },
+  Object {
+    "path": "root/task.yaml",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "@group": Object {
+          "shell": "echo Shell within a group (yaml/@group/shell)
+",
+          "spawn": Array [
+            "echo",
+            "Spawn within a group",
+            "(yaml/@group/spawn)",
+          ],
+        },
+        "full-detailed-shell": Object {
+          "cmd": "echo This is a shell command (yaml/full-detailed-shell)
+",
+          "shell": "sh",
+          "type": "shell",
+        },
+        "full-detailed-spawn": Object {
+          "argv": Array [
+            "This is a spawned command",
+            "(yaml/full-detailed-spawn)",
+          ],
+          "program": "echo",
+          "type": "spawn",
+        },
+        "keyword-shell": Object {
+          "cmd": "echo This is a shell command (yaml/keyword-shell)
+",
+        },
+        "keyword-spawn": Object {
+          "spawn": Array [
+            "echo",
+            "This is a spawned command",
+            "(yaml/keyword-spawn)",
+          ],
+        },
+        "partial-detailed-shell": Object {
+          "cmd": "echo This is a shell command (yaml/partial-detailed-shell)
+",
+          "shell": "sh",
+        },
+        "partial-detailed-spawn": Object {
+          "argv": Array [
+            "This is a spawned command",
+            "(yaml/partial-detailed-spawn)",
+          ],
+          "program": "echo",
+        },
+        "shortcut-shell": "echo This is a shell command (yaml/shortcut-shell)
+",
+        "shortcut-spawn": Array [
+          "echo",
+          "This is a spawned command",
+          "(yaml/shortcut-spawn)",
+        ],
+      },
+      "subtasks": Object {
+        "group": TaskSet {
+          "manifest": Object {
+            "shell": "echo Shell within a group (yaml/@group/shell)
+",
+            "spawn": Array [
+              "echo",
+              "Spawn within a group",
+              "(yaml/@group/spawn)",
+            ],
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo Shell within a group (yaml/@group/shell)
+",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "Spawn within a group",
+                  "(yaml/@group/spawn)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+      },
+      "tasks": Object {
+        "full-detailed-shell": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This is a shell command (yaml/full-detailed-shell)
+",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "full-detailed-spawn": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(yaml/full-detailed-spawn)",
+            ],
+            "oncreate": [Function],
+            "options": undefined,
+            "program": "echo",
+            "type": "spawn",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "keyword-shell": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This is a shell command (yaml/keyword-shell)
+",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "keyword-spawn": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(yaml/keyword-spawn)",
+            ],
+            "oncreate": [Function],
+            "options": undefined,
+            "program": "echo",
+            "type": "spawn",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "partial-detailed-shell": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This is a shell command (yaml/partial-detailed-shell)
+",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "partial-detailed-spawn": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(yaml/partial-detailed-spawn)",
+            ],
+            "oncreate": [Function],
+            "options": undefined,
+            "program": "echo",
+            "type": "spawn",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "shortcut-shell": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This is a shell command (yaml/shortcut-shell)
+",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "shortcut-spawn": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(yaml/shortcut-spawn)",
+            ],
+            "oncreate": [Function],
+            "options": undefined,
+            "program": "echo",
+            "type": "spawn",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/yaml-only/task.yaml",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "exclusive": "echo From yaml-only/exclusive
+",
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "exclusive": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo From yaml-only/exclusive
+",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+]
+`;
+
+exports[`without javascript files with custom deep function 1`] = `
+Array [
+  Object {
+    "path": "root/json-only/task.json",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "exclusive": "echo From json-only/exclusive",
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "exclusive": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo From json-only/exclusive",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/task.json",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "@group": Object {
+          "test-json": "echo This is from task.json/@group/test-json",
+        },
+        "test-json": "echo This is from task.json/test-json",
+      },
+      "subtasks": Object {
+        "group": TaskSet {
+          "manifest": Object {
+            "test-json": "echo This is from task.json/@group/test-json",
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "test-json": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo This is from task.json/@group/test-json",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+      },
+      "tasks": Object {
+        "test-json": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This is from task.json/test-json",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/task.yaml",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "@group": Object {
+          "shell": "echo Shell within a group (yaml/@group/shell)
+",
+          "spawn": Array [
+            "echo",
+            "Spawn within a group",
+            "(yaml/@group/spawn)",
+          ],
+        },
+        "full-detailed-shell": Object {
+          "cmd": "echo This is a shell command (yaml/full-detailed-shell)
+",
+          "shell": "sh",
+          "type": "shell",
+        },
+        "full-detailed-spawn": Object {
+          "argv": Array [
+            "This is a spawned command",
+            "(yaml/full-detailed-spawn)",
+          ],
+          "program": "echo",
+          "type": "spawn",
+        },
+        "keyword-shell": Object {
+          "cmd": "echo This is a shell command (yaml/keyword-shell)
+",
+        },
+        "keyword-spawn": Object {
+          "spawn": Array [
+            "echo",
+            "This is a spawned command",
+            "(yaml/keyword-spawn)",
+          ],
+        },
+        "partial-detailed-shell": Object {
+          "cmd": "echo This is a shell command (yaml/partial-detailed-shell)
+",
+          "shell": "sh",
+        },
+        "partial-detailed-spawn": Object {
+          "argv": Array [
+            "This is a spawned command",
+            "(yaml/partial-detailed-spawn)",
+          ],
+          "program": "echo",
+        },
+        "shortcut-shell": "echo This is a shell command (yaml/shortcut-shell)
+",
+        "shortcut-spawn": Array [
+          "echo",
+          "This is a spawned command",
+          "(yaml/shortcut-spawn)",
+        ],
+      },
+      "subtasks": Object {
+        "group": TaskSet {
+          "manifest": Object {
+            "shell": "echo Shell within a group (yaml/@group/shell)
+",
+            "spawn": Array [
+              "echo",
+              "Spawn within a group",
+              "(yaml/@group/spawn)",
+            ],
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo Shell within a group (yaml/@group/shell)
+",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "Spawn within a group",
+                  "(yaml/@group/spawn)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+      },
+      "tasks": Object {
+        "full-detailed-shell": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This is a shell command (yaml/full-detailed-shell)
+",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "full-detailed-spawn": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(yaml/full-detailed-spawn)",
+            ],
+            "oncreate": [Function],
+            "options": undefined,
+            "program": "echo",
+            "type": "spawn",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "keyword-shell": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This is a shell command (yaml/keyword-shell)
+",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "keyword-spawn": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(yaml/keyword-spawn)",
+            ],
+            "oncreate": [Function],
+            "options": undefined,
+            "program": "echo",
+            "type": "spawn",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "partial-detailed-shell": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This is a shell command (yaml/partial-detailed-shell)
+",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "partial-detailed-spawn": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(yaml/partial-detailed-spawn)",
+            ],
+            "oncreate": [Function],
+            "options": undefined,
+            "program": "echo",
+            "type": "spawn",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "shortcut-shell": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This is a shell command (yaml/shortcut-shell)
+",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "shortcut-spawn": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(yaml/shortcut-spawn)",
+            ],
+            "oncreate": [Function],
+            "options": undefined,
+            "program": "echo",
+            "type": "spawn",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/yaml-only/task.yaml",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "exclusive": "echo From yaml-only/exclusive
+",
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "exclusive": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo From yaml-only/exclusive
+",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+]
+`;
+
+exports[`without javascript files without options 1`] = `
+Array [
+  Object {
+    "path": "root/custom-deep-func/json-only/task.json",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "custom-deep-func": "echo This should not appear (custom-deep-func/json)",
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "custom-deep-func": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This should not appear (custom-deep-func/json)",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/custom-deep-func/task.json",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "custom-deep-func": "echo This should not appear (custom-deep-func/json)",
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "custom-deep-func": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This should not appear (custom-deep-func/json)",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/custom-deep-func/task.yaml",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "custom-deep-func": "echo This should not appear (custom-deep-func/yaml)",
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "custom-deep-func": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This should not appear (custom-deep-func/yaml)",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/custom-deep-func/yaml-only/task.yaml",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "custom-deep-func": "echo This should not appear (custom-deep-func/yaml)",
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "custom-deep-func": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This should not appear (custom-deep-func/yaml)",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/json-only/task.json",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "exclusive": "echo From json-only/exclusive",
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "exclusive": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo From json-only/exclusive",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/task.json",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "@group": Object {
+          "test-json": "echo This is from task.json/@group/test-json",
+        },
+        "test-json": "echo This is from task.json/test-json",
+      },
+      "subtasks": Object {
+        "group": TaskSet {
+          "manifest": Object {
+            "test-json": "echo This is from task.json/@group/test-json",
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "test-json": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo This is from task.json/@group/test-json",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+      },
+      "tasks": Object {
+        "test-json": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This is from task.json/test-json",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/task.yaml",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "@group": Object {
+          "shell": "echo Shell within a group (yaml/@group/shell)
+",
+          "spawn": Array [
+            "echo",
+            "Spawn within a group",
+            "(yaml/@group/spawn)",
+          ],
+        },
+        "full-detailed-shell": Object {
+          "cmd": "echo This is a shell command (yaml/full-detailed-shell)
+",
+          "shell": "sh",
+          "type": "shell",
+        },
+        "full-detailed-spawn": Object {
+          "argv": Array [
+            "This is a spawned command",
+            "(yaml/full-detailed-spawn)",
+          ],
+          "program": "echo",
+          "type": "spawn",
+        },
+        "keyword-shell": Object {
+          "cmd": "echo This is a shell command (yaml/keyword-shell)
+",
+        },
+        "keyword-spawn": Object {
+          "spawn": Array [
+            "echo",
+            "This is a spawned command",
+            "(yaml/keyword-spawn)",
+          ],
+        },
+        "partial-detailed-shell": Object {
+          "cmd": "echo This is a shell command (yaml/partial-detailed-shell)
+",
+          "shell": "sh",
+        },
+        "partial-detailed-spawn": Object {
+          "argv": Array [
+            "This is a spawned command",
+            "(yaml/partial-detailed-spawn)",
+          ],
+          "program": "echo",
+        },
+        "shortcut-shell": "echo This is a shell command (yaml/shortcut-shell)
+",
+        "shortcut-spawn": Array [
+          "echo",
+          "This is a spawned command",
+          "(yaml/shortcut-spawn)",
+        ],
+      },
+      "subtasks": Object {
+        "group": TaskSet {
+          "manifest": Object {
+            "shell": "echo Shell within a group (yaml/@group/shell)
+",
+            "spawn": Array [
+              "echo",
+              "Spawn within a group",
+              "(yaml/@group/spawn)",
+            ],
+          },
+          "subtasks": Object {},
+          "tasks": Object {
+            "shell": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "cmd": "echo Shell within a group (yaml/@group/shell)
+",
+                "oncreate": [Function],
+                "options": undefined,
+                "shell": "sh",
+                "type": "shell",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+            "spawn": Task {
+              "after": Array [],
+              "before": Array [],
+              "command": Object {
+                "argv": Array [
+                  "Spawn within a group",
+                  "(yaml/@group/spawn)",
+                ],
+                "oncreate": [Function],
+                "options": undefined,
+                "program": "echo",
+                "type": "spawn",
+              },
+              "execute": [Function],
+              "parallel": Array [],
+            },
+          },
+        },
+      },
+      "tasks": Object {
+        "full-detailed-shell": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This is a shell command (yaml/full-detailed-shell)
+",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "full-detailed-spawn": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(yaml/full-detailed-spawn)",
+            ],
+            "oncreate": [Function],
+            "options": undefined,
+            "program": "echo",
+            "type": "spawn",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "keyword-shell": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This is a shell command (yaml/keyword-shell)
+",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "keyword-spawn": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(yaml/keyword-spawn)",
+            ],
+            "oncreate": [Function],
+            "options": undefined,
+            "program": "echo",
+            "type": "spawn",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "partial-detailed-shell": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This is a shell command (yaml/partial-detailed-shell)
+",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "partial-detailed-spawn": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(yaml/partial-detailed-spawn)",
+            ],
+            "oncreate": [Function],
+            "options": undefined,
+            "program": "echo",
+            "type": "spawn",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "shortcut-shell": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo This is a shell command (yaml/shortcut-shell)
+",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+        "shortcut-spawn": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "argv": Array [
+              "This is a spawned command",
+              "(yaml/shortcut-spawn)",
+            ],
+            "oncreate": [Function],
+            "options": undefined,
+            "program": "echo",
+            "type": "spawn",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+  Object {
+    "path": "root/yaml-only/task.yaml",
+    "tasks": TaskSet {
+      "manifest": Object {
+        "exclusive": "echo From yaml-only/exclusive
+",
+      },
+      "subtasks": Object {},
+      "tasks": Object {
+        "exclusive": Task {
+          "after": Array [],
+          "before": Array [],
+          "command": Object {
+            "cmd": "echo From yaml-only/exclusive
+",
+            "oncreate": [Function],
+            "options": undefined,
+            "shell": "sh",
+            "type": "shell",
+          },
+          "execute": [Function],
+          "parallel": Array [],
+        },
+      },
+    },
+  },
+]
+`;
