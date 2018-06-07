@@ -1,6 +1,7 @@
 import {Traverse} from 'fs-tree-utils'
 import {listManifestFiles} from '../../index'
 import createFileChooser from '../../lib/.utils/file-chooser'
+import createVirtualEnvironment from './virtual-env'
 import FileChooser = createFileChooser.FileChooser
 import DeepFunc = listManifestFiles.DeepFunc
 import DEFAULT_FILE_CHOOSER = listManifestFiles.DEFAULT_FILE_CHOOSER
@@ -13,4 +14,7 @@ export const chooseTypeScript =
 export const ignoreCustomDeepFunc: DeepFunc = param =>
   param.item !== 'custom-deep-func' && DEFAULT_DEEP_FUNCTION(param)
 
-export {Traverse}
+export {
+  Traverse,
+  createVirtualEnvironment
+}

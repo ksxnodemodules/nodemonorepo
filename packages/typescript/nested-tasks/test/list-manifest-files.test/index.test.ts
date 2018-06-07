@@ -1,6 +1,12 @@
-import {listManifestFiles} from '../../index'
-import createVirtualEnvironment from '../.lib/virtual-env'
-import {chooseTypeScript, ignoreCustomDeepFunc} from '../.lib/utils'
+import {
+  listManifestFiles
+} from '../../index'
+
+import {
+  createVirtualEnvironment,
+  chooseTypeScript,
+  ignoreCustomDeepFunc
+} from '../.lib/utils'
 
 describe('without javascript files', () => {
   const {apply} = createVirtualEnvironment()

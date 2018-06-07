@@ -1,3 +1,9 @@
-import {loadManifestFiles} from '../../index'
-import createVirtualEnvironment from '../.lib/virtual-env'
-import {chooseTypeScript, ignoreCustomDeepFunc} from '../.lib/utils'
+import {
+  loadManifestFiles
+} from '../../index'
+
+import {
+  createVirtualEnvironment,
+  chooseTypeScript,
+  ignoreCustomDeepFunc
+} from '../.lib/utils'
