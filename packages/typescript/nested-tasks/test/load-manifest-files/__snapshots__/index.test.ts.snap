@@ -322,7 +322,7 @@ Array [
         },
       },
       "subtasks": Object {
-        "full-detailed": TaskSet {
+        "@full-detailed": TaskSet {
           "manifest": Object {
             "func": Object {
               "execute": [Function],
@@ -385,7 +385,7 @@ Array [
             },
           },
         },
-        "group": TaskSet {
+        "@group": TaskSet {
           "manifest": Object {
             "func": [Function],
             "shell": "echo Shell within a group (script/@group/shell)",
@@ -438,7 +438,7 @@ Array [
             },
           },
         },
-        "keyword": TaskSet {
+        "@keyword": TaskSet {
           "manifest": Object {
             "func": Object {
               "execute": [Function],
@@ -497,7 +497,7 @@ Array [
             },
           },
         },
-        "partial-detailed": TaskSet {
+        "@partial-detailed": TaskSet {
           "manifest": Object {
             "func": Object {
               "execute": [Function],
@@ -557,7 +557,7 @@ Array [
             },
           },
         },
-        "shortcut": TaskSet {
+        "@shortcut": TaskSet {
           "manifest": Object {
             "func": [Function],
             "shell": "echo This is a shell command (script/@shortcut/shell)",
@@ -624,7 +624,7 @@ Array [
         "test-json": "echo This is from task.json/test-json",
       },
       "subtasks": Object {
-        "group": TaskSet {
+        "@group": TaskSet {
           "manifest": Object {
             "test-json": "echo This is from task.json/@group/test-json",
           },
@@ -737,7 +737,7 @@ Array [
         },
       },
       "subtasks": Object {
-        "full-detailed": TaskSet {
+        "@full-detailed": TaskSet {
           "manifest": Object {
             "func": Object {
               "execute": [Function],
@@ -800,7 +800,7 @@ Array [
             },
           },
         },
-        "group": TaskSet {
+        "@group": TaskSet {
           "manifest": Object {
             "func": [Function],
             "shell": "echo Shell within a group (script/@group/shell)",
@@ -853,7 +853,7 @@ Array [
             },
           },
         },
-        "keyword": TaskSet {
+        "@keyword": TaskSet {
           "manifest": Object {
             "func": Object {
               "execute": [Function],
@@ -912,7 +912,7 @@ Array [
             },
           },
         },
-        "partial-detailed": TaskSet {
+        "@partial-detailed": TaskSet {
           "manifest": Object {
             "func": Object {
               "execute": [Function],
@@ -972,7 +972,7 @@ Array [
             },
           },
         },
-        "shortcut": TaskSet {
+        "@shortcut": TaskSet {
           "manifest": Object {
             "func": [Function],
             "shell": "echo This is a shell command (script/@shortcut/shell)",
@@ -1083,7 +1083,7 @@ Array [
         ],
       },
       "subtasks": Object {
-        "group": TaskSet {
+        "@group": TaskSet {
           "manifest": Object {
             "shell": "echo Shell within a group (yaml/@group/shell)",
             "spawn": Array [
@@ -1415,7 +1415,7 @@ Array [
         },
       },
       "subtasks": Object {
-        "full-detailed": TaskSet {
+        "@full-detailed": TaskSet {
           "manifest": Object {
             "func": Object {
               "execute": [Function],
@@ -1478,7 +1478,7 @@ Array [
             },
           },
         },
-        "group": TaskSet {
+        "@group": TaskSet {
           "manifest": Object {
             "func": [Function],
             "shell": "echo Shell within a group (script/@group/shell)",
@@ -1531,7 +1531,7 @@ Array [
             },
           },
         },
-        "keyword": TaskSet {
+        "@keyword": TaskSet {
           "manifest": Object {
             "func": Object {
               "execute": [Function],
@@ -1590,7 +1590,7 @@ Array [
             },
           },
         },
-        "partial-detailed": TaskSet {
+        "@partial-detailed": TaskSet {
           "manifest": Object {
             "func": Object {
               "execute": [Function],
@@ -1650,7 +1650,7 @@ Array [
             },
           },
         },
-        "shortcut": TaskSet {
+        "@shortcut": TaskSet {
           "manifest": Object {
             "func": [Function],
             "shell": "echo This is a shell command (script/@shortcut/shell)",
@@ -1717,7 +1717,7 @@ Array [
         "test-json": "echo This is from task.json/test-json",
       },
       "subtasks": Object {
-        "group": TaskSet {
+        "@group": TaskSet {
           "manifest": Object {
             "test-json": "echo This is from task.json/@group/test-json",
           },
@@ -1830,7 +1830,7 @@ Array [
         },
       },
       "subtasks": Object {
-        "full-detailed": TaskSet {
+        "@full-detailed": TaskSet {
           "manifest": Object {
             "func": Object {
               "execute": [Function],
@@ -1893,7 +1893,7 @@ Array [
             },
           },
         },
-        "group": TaskSet {
+        "@group": TaskSet {
           "manifest": Object {
             "func": [Function],
             "shell": "echo Shell within a group (script/@group/shell)",
@@ -1946,7 +1946,7 @@ Array [
             },
           },
         },
-        "keyword": TaskSet {
+        "@keyword": TaskSet {
           "manifest": Object {
             "func": Object {
               "execute": [Function],
@@ -2005,7 +2005,7 @@ Array [
             },
           },
         },
-        "partial-detailed": TaskSet {
+        "@partial-detailed": TaskSet {
           "manifest": Object {
             "func": Object {
               "execute": [Function],
@@ -2065,7 +2065,7 @@ Array [
             },
           },
         },
-        "shortcut": TaskSet {
+        "@shortcut": TaskSet {
           "manifest": Object {
             "func": [Function],
             "shell": "echo This is a shell command (script/@shortcut/shell)",
@@ -2176,7 +2176,7 @@ Array [
         ],
       },
       "subtasks": Object {
-        "group": TaskSet {
+        "@group": TaskSet {
           "manifest": Object {
             "shell": "echo Shell within a group (yaml/@group/shell)",
             "spawn": Array [
@@ -2487,7 +2487,7 @@ Array [
         },
       },
       "subtasks": Object {
-        "full-detailed": TaskSet {
+        "@full-detailed": TaskSet {
           "manifest": Object {
             "func": Object {
               "execute": [Function],
@@ -2550,7 +2550,7 @@ Array [
             },
           },
         },
-        "group": TaskSet {
+        "@group": TaskSet {
           "manifest": Object {
             "func": [Function],
             "shell": "echo Shell within a group (script/@group/shell)",
@@ -2603,7 +2603,7 @@ Array [
             },
           },
         },
-        "keyword": TaskSet {
+        "@keyword": TaskSet {
           "manifest": Object {
             "func": Object {
               "execute": [Function],
@@ -2662,7 +2662,7 @@ Array [
             },
           },
         },
-        "partial-detailed": TaskSet {
+        "@partial-detailed": TaskSet {
           "manifest": Object {
             "func": Object {
               "execute": [Function],
@@ -2722,7 +2722,7 @@ Array [
             },
           },
         },
-        "shortcut": TaskSet {
+        "@shortcut": TaskSet {
           "manifest": Object {
             "func": [Function],
             "shell": "echo This is a shell command (script/@shortcut/shell)",
@@ -2789,7 +2789,7 @@ Array [
         "test-json": "echo This is from task.json/test-json",
       },
       "subtasks": Object {
-        "group": TaskSet {
+        "@group": TaskSet {
           "manifest": Object {
             "test-json": "echo This is from task.json/@group/test-json",
           },
@@ -2882,7 +2882,7 @@ Array [
         ],
       },
       "subtasks": Object {
-        "group": TaskSet {
+        "@group": TaskSet {
           "manifest": Object {
             "shell": "echo Shell within a group (yaml/@group/shell)",
             "spawn": Array [
@@ -3331,7 +3331,7 @@ Array [
         },
       },
       "subtasks": Object {
-        "full-detailed": TaskSet {
+        "@full-detailed": TaskSet {
           "manifest": Object {
             "func": Object {
               "execute": [Function],
@@ -3394,7 +3394,7 @@ Array [
             },
           },
         },
-        "group": TaskSet {
+        "@group": TaskSet {
           "manifest": Object {
             "func": [Function],
             "shell": "echo Shell within a group (script/@group/shell)",
@@ -3447,7 +3447,7 @@ Array [
             },
           },
         },
-        "keyword": TaskSet {
+        "@keyword": TaskSet {
           "manifest": Object {
             "func": Object {
               "execute": [Function],
@@ -3506,7 +3506,7 @@ Array [
             },
           },
         },
-        "partial-detailed": TaskSet {
+        "@partial-detailed": TaskSet {
           "manifest": Object {
             "func": Object {
               "execute": [Function],
@@ -3566,7 +3566,7 @@ Array [
             },
           },
         },
-        "shortcut": TaskSet {
+        "@shortcut": TaskSet {
           "manifest": Object {
             "func": [Function],
             "shell": "echo This is a shell command (script/@shortcut/shell)",
@@ -3633,7 +3633,7 @@ Array [
         "test-json": "echo This is from task.json/test-json",
       },
       "subtasks": Object {
-        "group": TaskSet {
+        "@group": TaskSet {
           "manifest": Object {
             "test-json": "echo This is from task.json/@group/test-json",
           },
@@ -3726,7 +3726,7 @@ Array [
         ],
       },
       "subtasks": Object {
-        "group": TaskSet {
+        "@group": TaskSet {
           "manifest": Object {
             "shell": "echo Shell within a group (yaml/@group/shell)",
             "spawn": Array [
@@ -4111,7 +4111,7 @@ Array [
         "test-json": "echo This is from task.json/test-json",
       },
       "subtasks": Object {
-        "group": TaskSet {
+        "@group": TaskSet {
           "manifest": Object {
             "test-json": "echo This is from task.json/@group/test-json",
           },
@@ -4224,7 +4224,7 @@ Array [
         },
       },
       "subtasks": Object {
-        "full-detailed": TaskSet {
+        "@full-detailed": TaskSet {
           "manifest": Object {
             "func": Object {
               "execute": [Function],
@@ -4287,7 +4287,7 @@ Array [
             },
           },
         },
-        "group": TaskSet {
+        "@group": TaskSet {
           "manifest": Object {
             "func": [Function],
             "shell": "echo Shell within a group (script/@group/shell)",
@@ -4340,7 +4340,7 @@ Array [
             },
           },
         },
-        "keyword": TaskSet {
+        "@keyword": TaskSet {
           "manifest": Object {
             "func": Object {
               "execute": [Function],
@@ -4399,7 +4399,7 @@ Array [
             },
           },
         },
-        "partial-detailed": TaskSet {
+        "@partial-detailed": TaskSet {
           "manifest": Object {
             "func": Object {
               "execute": [Function],
@@ -4459,7 +4459,7 @@ Array [
             },
           },
         },
-        "shortcut": TaskSet {
+        "@shortcut": TaskSet {
           "manifest": Object {
             "func": [Function],
             "shell": "echo This is a shell command (script/@shortcut/shell)",
@@ -4570,7 +4570,7 @@ Array [
         ],
       },
       "subtasks": Object {
-        "group": TaskSet {
+        "@group": TaskSet {
           "manifest": Object {
             "shell": "echo Shell within a group (yaml/@group/shell)",
             "spawn": Array [
@@ -4817,7 +4817,7 @@ Array [
         "test-json": "echo This is from task.json/test-json",
       },
       "subtasks": Object {
-        "group": TaskSet {
+        "@group": TaskSet {
           "manifest": Object {
             "test-json": "echo This is from task.json/@group/test-json",
           },
@@ -4930,7 +4930,7 @@ Array [
         },
       },
       "subtasks": Object {
-        "full-detailed": TaskSet {
+        "@full-detailed": TaskSet {
           "manifest": Object {
             "func": Object {
               "execute": [Function],
@@ -4993,7 +4993,7 @@ Array [
             },
           },
         },
-        "group": TaskSet {
+        "@group": TaskSet {
           "manifest": Object {
             "func": [Function],
             "shell": "echo Shell within a group (script/@group/shell)",
@@ -5046,7 +5046,7 @@ Array [
             },
           },
         },
-        "keyword": TaskSet {
+        "@keyword": TaskSet {
           "manifest": Object {
             "func": Object {
               "execute": [Function],
@@ -5105,7 +5105,7 @@ Array [
             },
           },
         },
-        "partial-detailed": TaskSet {
+        "@partial-detailed": TaskSet {
           "manifest": Object {
             "func": Object {
               "execute": [Function],
@@ -5165,7 +5165,7 @@ Array [
             },
           },
         },
-        "shortcut": TaskSet {
+        "@shortcut": TaskSet {
           "manifest": Object {
             "func": [Function],
             "shell": "echo This is a shell command (script/@shortcut/shell)",
@@ -5276,7 +5276,7 @@ Array [
         ],
       },
       "subtasks": Object {
-        "group": TaskSet {
+        "@group": TaskSet {
           "manifest": Object {
             "shell": "echo Shell within a group (yaml/@group/shell)",
             "spawn": Array [
@@ -5502,7 +5502,7 @@ Array [
         "test-json": "echo This is from task.json/test-json",
       },
       "subtasks": Object {
-        "group": TaskSet {
+        "@group": TaskSet {
           "manifest": Object {
             "test-json": "echo This is from task.json/@group/test-json",
           },
@@ -5595,7 +5595,7 @@ Array [
         ],
       },
       "subtasks": Object {
-        "group": TaskSet {
+        "@group": TaskSet {
           "manifest": Object {
             "shell": "echo Shell within a group (yaml/@group/shell)",
             "spawn": Array [
@@ -5917,7 +5917,7 @@ Array [
         "test-json": "echo This is from task.json/test-json",
       },
       "subtasks": Object {
-        "group": TaskSet {
+        "@group": TaskSet {
           "manifest": Object {
             "test-json": "echo This is from task.json/@group/test-json",
           },
@@ -6010,7 +6010,7 @@ Array [
         ],
       },
       "subtasks": Object {
-        "group": TaskSet {
+        "@group": TaskSet {
           "manifest": Object {
             "shell": "echo Shell within a group (yaml/@group/shell)",
             "spawn": Array [
