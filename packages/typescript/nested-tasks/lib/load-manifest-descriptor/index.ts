@@ -1,3 +1,4 @@
+import {resolve} from 'path'
 import yaml from 'monorepo-shared-yaml'
 
 import {
@@ -34,7 +35,7 @@ async function loadObject (descriptor: Manifest.Descriptor): Promise<any> {
 
   switch (type) {
     case 'module':
-      return require(path)
+      return require(resolve(path))
     case 'yaml':
       return await yaml.loadFile(path)
   }
