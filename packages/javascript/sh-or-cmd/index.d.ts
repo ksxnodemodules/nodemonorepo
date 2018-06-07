@@ -13,7 +13,14 @@ export declare namespace get {
   }
 
   type Result<Win32 extends string, POSIX extends string> = Win32 | POSIX
+
+  declare namespace Default {
+    type Win32 = 'cmd'
+    type POSIX = 'sh'
+    type Options = get.Options<Win32, POSIX>
+    type Result = get.Result<Win32, POSIX>
+  }
 }
 
-declare const _default: get.Result<'cmd', 'sh'>
+declare const _default: get.Default.Result
 export default _default
