@@ -15,6 +15,7 @@
     "command-prompt"
   ],
   "dependencies": {
+    "tslib": "^1.9.2",
     "@types/node": "^10.3.0"
   },
   "engines": {
