@@ -1,1 +1,3 @@
-{}
+{
+  "exclusive": "echo From json-only/exclusive"
+}

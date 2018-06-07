@@ -1,1 +1,8 @@
-export * from '../../../api' // must have something to not cause error
+import * as api from '../../../api'
+
+const fn: api.TaskParam =
+  () => console.info('This should not appear (custom-deep-func/script)')
+
+export = {
+  ['custom-deep-func']: fn
+}

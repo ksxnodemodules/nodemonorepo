@@ -1,0 +1,2 @@
+custom-deep-func:
+  echo This should not appear (custom-deep-func/yaml)

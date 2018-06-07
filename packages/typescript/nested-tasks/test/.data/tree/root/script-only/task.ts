@@ -1,1 +1,4 @@
-export * from '../../api' // must have something to not cause error
+import * as api from '../../api'
+
+export const exclusive: api.TaskParam =
+  () => console.info('From script-only/exclusive')
