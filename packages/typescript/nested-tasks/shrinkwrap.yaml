@@ -3,6 +3,7 @@ dependencies:
   fs-tree-utils: 'link:../fs-tree-utils'
   monorepo-shared-yaml: 'link:../monorepo-shared-yaml'
   path-env: 'link:../path-env'
+  sh-or-cmd: 'link:../../javascript/sh-or-cmd'
   tslib: 1.9.1
 packages:
   /@types/node/10.1.2:
@@ -21,4 +22,5 @@ specifiers:
   fs-tree-utils: ^0.0.12
   monorepo-shared-yaml: ^0.0.5
   path-env: '*'
+  sh-or-cmd: ^0.0.0
   tslib: ^1.9.1

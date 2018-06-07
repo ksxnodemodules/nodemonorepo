@@ -1,4 +1,5 @@
 import * as childProcess from 'child_process'
+import shCmd from 'sh-or-cmd'
 import {Traverse} from 'fs-tree-utils'
 import TraversalDeepFuncParam = Traverse.Options.DeepFunc.Param
 
@@ -17,7 +18,7 @@ export namespace Manifest {
 }
 
 export class Task {
-  static readonly shell: string = 'sh'
+  static readonly shell: string = shCmd
 
   //@ts-ignore
   readonly before: DependencyList

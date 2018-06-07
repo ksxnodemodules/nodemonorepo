@@ -20,6 +20,7 @@
     "tslib": "^1.9.1",
     "fs-tree-utils": "^0.0.12",
     "monorepo-shared-yaml": "^0.0.5",
+    "sh-or-cmd": "^0.0.0",
     "@types/node": "^10.1.2"
   },
   "devDependencies": {
