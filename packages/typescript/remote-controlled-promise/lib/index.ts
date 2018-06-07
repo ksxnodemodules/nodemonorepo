@@ -1,8 +1,8 @@
-export function create<Value, Reason = Error> () {
+export function create<Value> () {
   let resolve: Controller.Resolver<Value>
-  let reject: Controller.Rejecter<Reason>
+  let reject: Controller.Rejecter
 
-  const controller = new Controller<Value, Reason>(
+  const controller = new Controller<Value>(
     x => resolve(x),
     x => reject(x)
   )
@@ -15,12 +15,12 @@ export function create<Value, Reason = Error> () {
   return new ControlledPromise(controller, promise)
 }
 
-export class ControlledPromise<Value, Reason> {
-  readonly controller: Controller<Value, Reason>
+export class ControlledPromise<Value> {
+  readonly controller: Controller<Value>
   readonly promise: Promise<Value>
 
   constructor (
-    controller: Controller<Value, Reason>,
+    controller: Controller<Value>,
     promise: Promise<Value>
   ) {
     this.controller = controller
@@ -32,19 +32,19 @@ export class ControlledPromise<Value, Reason> {
     return this.promise
   }
 
-  reject (reason: Reason) {
+  reject (reason?: any) {
     this.controller.reject(reason)
     return this.promise
   }
 }
 
-export class Controller<Value, Reason> {
+export class Controller<Value> {
   readonly resolve: Controller.Resolver<Value>
-  readonly reject: Controller.Rejecter<Reason>
+  readonly reject: Controller.Rejecter
 
   constructor (
     resolve: Controller.Resolver<Value>,
-    reject: Controller.Rejecter<Reason>
+    reject: Controller.Rejecter
   ) {
     this.resolve = resolve
     this.reject = reject
@@ -53,7 +53,7 @@ export class Controller<Value, Reason> {
 
 export namespace Controller {
   export type Resolver<X> = (x: Promise<X> | X) => void
-  export type Rejecter<X> = (x: X) => void
+  export type Rejecter = (x?: any) => void
 }
 
 export default create

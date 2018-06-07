@@ -1,6 +1,6 @@
 {
   "name": "remote-controlled-promise",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Create a Promise object that is controllable from outside",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",

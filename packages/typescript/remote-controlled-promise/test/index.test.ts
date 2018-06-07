@@ -32,7 +32,7 @@ describe('resolves', () => {
 
 describe('rejects', () => {
   const reason = 'Rejected Reason'
-  const sample = create<never, typeof reason>()
+  const sample = create()
   const result = sample.reject(reason)
 
   it('sample.promise rejects', () => {
