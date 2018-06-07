@@ -1,2 +1,2 @@
-exclusive: |
+exclusive: |-
   echo From yaml-only/exclusive

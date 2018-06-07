@@ -1,11 +1,11 @@
-shortcut-shell: |
+shortcut-shell: |-
   echo This is a shell command (yaml/shortcut-shell)
 shortcut-spawn:
   - echo
   - This is a spawned command
   - (yaml/shortcut-spawn)
 keyword-shell:
-  cmd: |
+  cmd: |-
     echo This is a shell command (yaml/keyword-shell)
 keyword-spawn:
   spawn:
@@ -14,7 +14,7 @@ keyword-spawn:
     - (yaml/keyword-spawn)
 partial-detailed-shell:
   shell: sh
-  cmd: |
+  cmd: |-
     echo This is a shell command (yaml/partial-detailed-shell)
 partial-detailed-spawn:
   program: echo
@@ -24,7 +24,7 @@ partial-detailed-spawn:
 full-detailed-shell:
   type: shell
   shell: sh
-  cmd: |
+  cmd: |-
     echo This is a shell command (yaml/full-detailed-shell)
 full-detailed-spawn:
   type: spawn
@@ -33,7 +33,7 @@ full-detailed-spawn:
     - This is a spawned command
     - (yaml/full-detailed-spawn)
 '@group':
-  shell: |
+  shell: |-
     echo Shell within a group (yaml/@group/shell)
   spawn:
     - echo

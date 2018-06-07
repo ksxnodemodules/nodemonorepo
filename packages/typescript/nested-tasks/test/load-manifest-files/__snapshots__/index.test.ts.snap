@@ -1034,8 +1034,7 @@ Array [
     "tasks": TaskSet {
       "manifest": Object {
         "@group": Object {
-          "shell": "echo Shell within a group (yaml/@group/shell)
-",
+          "shell": "echo Shell within a group (yaml/@group/shell)",
           "spawn": Array [
             "echo",
             "Spawn within a group",
@@ -1043,8 +1042,7 @@ Array [
           ],
         },
         "full-detailed-shell": Object {
-          "cmd": "echo This is a shell command (yaml/full-detailed-shell)
-",
+          "cmd": "echo This is a shell command (yaml/full-detailed-shell)",
           "shell": "sh",
           "type": "shell",
         },
@@ -1057,8 +1055,7 @@ Array [
           "type": "spawn",
         },
         "keyword-shell": Object {
-          "cmd": "echo This is a shell command (yaml/keyword-shell)
-",
+          "cmd": "echo This is a shell command (yaml/keyword-shell)",
         },
         "keyword-spawn": Object {
           "spawn": Array [
@@ -1068,8 +1065,7 @@ Array [
           ],
         },
         "partial-detailed-shell": Object {
-          "cmd": "echo This is a shell command (yaml/partial-detailed-shell)
-",
+          "cmd": "echo This is a shell command (yaml/partial-detailed-shell)",
           "shell": "sh",
         },
         "partial-detailed-spawn": Object {
@@ -1079,8 +1075,7 @@ Array [
           ],
           "program": "echo",
         },
-        "shortcut-shell": "echo This is a shell command (yaml/shortcut-shell)
-",
+        "shortcut-shell": "echo This is a shell command (yaml/shortcut-shell)",
         "shortcut-spawn": Array [
           "echo",
           "This is a spawned command",
@@ -1090,8 +1085,7 @@ Array [
       "subtasks": Object {
         "group": TaskSet {
           "manifest": Object {
-            "shell": "echo Shell within a group (yaml/@group/shell)
-",
+            "shell": "echo Shell within a group (yaml/@group/shell)",
             "spawn": Array [
               "echo",
               "Spawn within a group",
@@ -1104,8 +1098,7 @@ Array [
               "after": Array [],
               "before": Array [],
               "command": Object {
-                "cmd": "echo Shell within a group (yaml/@group/shell)
-",
+                "cmd": "echo Shell within a group (yaml/@group/shell)",
                 "oncreate": [Function],
                 "options": undefined,
                 "shell": "sh",
@@ -1138,8 +1131,7 @@ Array [
           "after": Array [],
           "before": Array [],
           "command": Object {
-            "cmd": "echo This is a shell command (yaml/full-detailed-shell)
-",
+            "cmd": "echo This is a shell command (yaml/full-detailed-shell)",
             "oncreate": [Function],
             "options": undefined,
             "shell": "sh",
@@ -1168,8 +1160,7 @@ Array [
           "after": Array [],
           "before": Array [],
           "command": Object {
-            "cmd": "echo This is a shell command (yaml/keyword-shell)
-",
+            "cmd": "echo This is a shell command (yaml/keyword-shell)",
             "oncreate": [Function],
             "options": undefined,
             "shell": "sh",
@@ -1198,8 +1189,7 @@ Array [
           "after": Array [],
           "before": Array [],
           "command": Object {
-            "cmd": "echo This is a shell command (yaml/partial-detailed-shell)
-",
+            "cmd": "echo This is a shell command (yaml/partial-detailed-shell)",
             "oncreate": [Function],
             "options": undefined,
             "shell": "sh",
@@ -1228,8 +1218,7 @@ Array [
           "after": Array [],
           "before": Array [],
           "command": Object {
-            "cmd": "echo This is a shell command (yaml/shortcut-shell)
-",
+            "cmd": "echo This is a shell command (yaml/shortcut-shell)",
             "oncreate": [Function],
             "options": undefined,
             "shell": "sh",
@@ -1261,8 +1250,7 @@ Array [
     "path": "root/yaml-only/task.yaml",
     "tasks": TaskSet {
       "manifest": Object {
-        "exclusive": "echo From yaml-only/exclusive
-",
+        "exclusive": "echo From yaml-only/exclusive",
       },
       "subtasks": Object {},
       "tasks": Object {
@@ -1270,8 +1258,7 @@ Array [
           "after": Array [],
           "before": Array [],
           "command": Object {
-            "cmd": "echo From yaml-only/exclusive
-",
+            "cmd": "echo From yaml-only/exclusive",
             "oncreate": [Function],
             "options": undefined,
             "shell": "sh",
@@ -2140,8 +2127,7 @@ Array [
     "tasks": TaskSet {
       "manifest": Object {
         "@group": Object {
-          "shell": "echo Shell within a group (yaml/@group/shell)
-",
+          "shell": "echo Shell within a group (yaml/@group/shell)",
           "spawn": Array [
             "echo",
             "Spawn within a group",
@@ -2149,8 +2135,7 @@ Array [
           ],
         },
         "full-detailed-shell": Object {
-          "cmd": "echo This is a shell command (yaml/full-detailed-shell)
-",
+          "cmd": "echo This is a shell command (yaml/full-detailed-shell)",
           "shell": "sh",
           "type": "shell",
         },
@@ -2163,8 +2148,7 @@ Array [
           "type": "spawn",
         },
         "keyword-shell": Object {
-          "cmd": "echo This is a shell command (yaml/keyword-shell)
-",
+          "cmd": "echo This is a shell command (yaml/keyword-shell)",
         },
         "keyword-spawn": Object {
           "spawn": Array [
@@ -2174,8 +2158,7 @@ Array [
           ],
         },
         "partial-detailed-shell": Object {
-          "cmd": "echo This is a shell command (yaml/partial-detailed-shell)
-",
+          "cmd": "echo This is a shell command (yaml/partial-detailed-shell)",
           "shell": "sh",
         },
         "partial-detailed-spawn": Object {
@@ -2185,8 +2168,7 @@ Array [
           ],
           "program": "echo",
         },
-        "shortcut-shell": "echo This is a shell command (yaml/shortcut-shell)
-",
+        "shortcut-shell": "echo This is a shell command (yaml/shortcut-shell)",
         "shortcut-spawn": Array [
           "echo",
           "This is a spawned command",
@@ -2196,8 +2178,7 @@ Array [
       "subtasks": Object {
         "group": TaskSet {
           "manifest": Object {
-            "shell": "echo Shell within a group (yaml/@group/shell)
-",
+            "shell": "echo Shell within a group (yaml/@group/shell)",
             "spawn": Array [
               "echo",
               "Spawn within a group",
@@ -2210,8 +2191,7 @@ Array [
               "after": Array [],
               "before": Array [],
               "command": Object {
-                "cmd": "echo Shell within a group (yaml/@group/shell)
-",
+                "cmd": "echo Shell within a group (yaml/@group/shell)",
                 "oncreate": [Function],
                 "options": undefined,
                 "shell": "sh",
@@ -2244,8 +2224,7 @@ Array [
           "after": Array [],
           "before": Array [],
           "command": Object {
-            "cmd": "echo This is a shell command (yaml/full-detailed-shell)
-",
+            "cmd": "echo This is a shell command (yaml/full-detailed-shell)",
             "oncreate": [Function],
             "options": undefined,
             "shell": "sh",
@@ -2274,8 +2253,7 @@ Array [
           "after": Array [],
           "before": Array [],
           "command": Object {
-            "cmd": "echo This is a shell command (yaml/keyword-shell)
-",
+            "cmd": "echo This is a shell command (yaml/keyword-shell)",
             "oncreate": [Function],
             "options": undefined,
             "shell": "sh",
@@ -2304,8 +2282,7 @@ Array [
           "after": Array [],
           "before": Array [],
           "command": Object {
-            "cmd": "echo This is a shell command (yaml/partial-detailed-shell)
-",
+            "cmd": "echo This is a shell command (yaml/partial-detailed-shell)",
             "oncreate": [Function],
             "options": undefined,
             "shell": "sh",
@@ -2334,8 +2311,7 @@ Array [
           "after": Array [],
           "before": Array [],
           "command": Object {
-            "cmd": "echo This is a shell command (yaml/shortcut-shell)
-",
+            "cmd": "echo This is a shell command (yaml/shortcut-shell)",
             "oncreate": [Function],
             "options": undefined,
             "shell": "sh",
@@ -2367,8 +2343,7 @@ Array [
     "path": "root/yaml-only/task.yaml",
     "tasks": TaskSet {
       "manifest": Object {
-        "exclusive": "echo From yaml-only/exclusive
-",
+        "exclusive": "echo From yaml-only/exclusive",
       },
       "subtasks": Object {},
       "tasks": Object {
@@ -2376,8 +2351,7 @@ Array [
           "after": Array [],
           "before": Array [],
           "command": Object {
-            "cmd": "echo From yaml-only/exclusive
-",
+            "cmd": "echo From yaml-only/exclusive",
             "oncreate": [Function],
             "options": undefined,
             "shell": "sh",
@@ -2859,8 +2833,7 @@ Array [
     "tasks": TaskSet {
       "manifest": Object {
         "@group": Object {
-          "shell": "echo Shell within a group (yaml/@group/shell)
-",
+          "shell": "echo Shell within a group (yaml/@group/shell)",
           "spawn": Array [
             "echo",
             "Spawn within a group",
@@ -2868,8 +2841,7 @@ Array [
           ],
         },
         "full-detailed-shell": Object {
-          "cmd": "echo This is a shell command (yaml/full-detailed-shell)
-",
+          "cmd": "echo This is a shell command (yaml/full-detailed-shell)",
           "shell": "sh",
           "type": "shell",
         },
@@ -2882,8 +2854,7 @@ Array [
           "type": "spawn",
         },
         "keyword-shell": Object {
-          "cmd": "echo This is a shell command (yaml/keyword-shell)
-",
+          "cmd": "echo This is a shell command (yaml/keyword-shell)",
         },
         "keyword-spawn": Object {
           "spawn": Array [
@@ -2893,8 +2864,7 @@ Array [
           ],
         },
         "partial-detailed-shell": Object {
-          "cmd": "echo This is a shell command (yaml/partial-detailed-shell)
-",
+          "cmd": "echo This is a shell command (yaml/partial-detailed-shell)",
           "shell": "sh",
         },
         "partial-detailed-spawn": Object {
@@ -2904,8 +2874,7 @@ Array [
           ],
           "program": "echo",
         },
-        "shortcut-shell": "echo This is a shell command (yaml/shortcut-shell)
-",
+        "shortcut-shell": "echo This is a shell command (yaml/shortcut-shell)",
         "shortcut-spawn": Array [
           "echo",
           "This is a spawned command",
@@ -2915,8 +2884,7 @@ Array [
       "subtasks": Object {
         "group": TaskSet {
           "manifest": Object {
-            "shell": "echo Shell within a group (yaml/@group/shell)
-",
+            "shell": "echo Shell within a group (yaml/@group/shell)",
             "spawn": Array [
               "echo",
               "Spawn within a group",
@@ -2929,8 +2897,7 @@ Array [
               "after": Array [],
               "before": Array [],
               "command": Object {
-                "cmd": "echo Shell within a group (yaml/@group/shell)
-",
+                "cmd": "echo Shell within a group (yaml/@group/shell)",
                 "oncreate": [Function],
                 "options": undefined,
                 "shell": "sh",
@@ -2963,8 +2930,7 @@ Array [
           "after": Array [],
           "before": Array [],
           "command": Object {
-            "cmd": "echo This is a shell command (yaml/full-detailed-shell)
-",
+            "cmd": "echo This is a shell command (yaml/full-detailed-shell)",
             "oncreate": [Function],
             "options": undefined,
             "shell": "sh",
@@ -2993,8 +2959,7 @@ Array [
           "after": Array [],
           "before": Array [],
           "command": Object {
-            "cmd": "echo This is a shell command (yaml/keyword-shell)
-",
+            "cmd": "echo This is a shell command (yaml/keyword-shell)",
             "oncreate": [Function],
             "options": undefined,
             "shell": "sh",
@@ -3023,8 +2988,7 @@ Array [
           "after": Array [],
           "before": Array [],
           "command": Object {
-            "cmd": "echo This is a shell command (yaml/partial-detailed-shell)
-",
+            "cmd": "echo This is a shell command (yaml/partial-detailed-shell)",
             "oncreate": [Function],
             "options": undefined,
             "shell": "sh",
@@ -3053,8 +3017,7 @@ Array [
           "after": Array [],
           "before": Array [],
           "command": Object {
-            "cmd": "echo This is a shell command (yaml/shortcut-shell)
-",
+            "cmd": "echo This is a shell command (yaml/shortcut-shell)",
             "oncreate": [Function],
             "options": undefined,
             "shell": "sh",
@@ -3086,8 +3049,7 @@ Array [
     "path": "root/yaml-only/task.yaml",
     "tasks": TaskSet {
       "manifest": Object {
-        "exclusive": "echo From yaml-only/exclusive
-",
+        "exclusive": "echo From yaml-only/exclusive",
       },
       "subtasks": Object {},
       "tasks": Object {
@@ -3095,8 +3057,7 @@ Array [
           "after": Array [],
           "before": Array [],
           "command": Object {
-            "cmd": "echo From yaml-only/exclusive
-",
+            "cmd": "echo From yaml-only/exclusive",
             "oncreate": [Function],
             "options": undefined,
             "shell": "sh",
@@ -3716,8 +3677,7 @@ Array [
     "tasks": TaskSet {
       "manifest": Object {
         "@group": Object {
-          "shell": "echo Shell within a group (yaml/@group/shell)
-",
+          "shell": "echo Shell within a group (yaml/@group/shell)",
           "spawn": Array [
             "echo",
             "Spawn within a group",
@@ -3725,8 +3685,7 @@ Array [
           ],
         },
         "full-detailed-shell": Object {
-          "cmd": "echo This is a shell command (yaml/full-detailed-shell)
-",
+          "cmd": "echo This is a shell command (yaml/full-detailed-shell)",
           "shell": "sh",
           "type": "shell",
         },
@@ -3739,8 +3698,7 @@ Array [
           "type": "spawn",
         },
         "keyword-shell": Object {
-          "cmd": "echo This is a shell command (yaml/keyword-shell)
-",
+          "cmd": "echo This is a shell command (yaml/keyword-shell)",
         },
         "keyword-spawn": Object {
           "spawn": Array [
@@ -3750,8 +3708,7 @@ Array [
           ],
         },
         "partial-detailed-shell": Object {
-          "cmd": "echo This is a shell command (yaml/partial-detailed-shell)
-",
+          "cmd": "echo This is a shell command (yaml/partial-detailed-shell)",
           "shell": "sh",
         },
         "partial-detailed-spawn": Object {
@@ -3761,8 +3718,7 @@ Array [
           ],
           "program": "echo",
         },
-        "shortcut-shell": "echo This is a shell command (yaml/shortcut-shell)
-",
+        "shortcut-shell": "echo This is a shell command (yaml/shortcut-shell)",
         "shortcut-spawn": Array [
           "echo",
           "This is a spawned command",
@@ -3772,8 +3728,7 @@ Array [
       "subtasks": Object {
         "group": TaskSet {
           "manifest": Object {
-            "shell": "echo Shell within a group (yaml/@group/shell)
-",
+            "shell": "echo Shell within a group (yaml/@group/shell)",
             "spawn": Array [
               "echo",
               "Spawn within a group",
@@ -3786,8 +3741,7 @@ Array [
               "after": Array [],
               "before": Array [],
               "command": Object {
-                "cmd": "echo Shell within a group (yaml/@group/shell)
-",
+                "cmd": "echo Shell within a group (yaml/@group/shell)",
                 "oncreate": [Function],
                 "options": undefined,
                 "shell": "sh",
@@ -3820,8 +3774,7 @@ Array [
           "after": Array [],
           "before": Array [],
           "command": Object {
-            "cmd": "echo This is a shell command (yaml/full-detailed-shell)
-",
+            "cmd": "echo This is a shell command (yaml/full-detailed-shell)",
             "oncreate": [Function],
             "options": undefined,
             "shell": "sh",
@@ -3850,8 +3803,7 @@ Array [
           "after": Array [],
           "before": Array [],
           "command": Object {
-            "cmd": "echo This is a shell command (yaml/keyword-shell)
-",
+            "cmd": "echo This is a shell command (yaml/keyword-shell)",
             "oncreate": [Function],
             "options": undefined,
             "shell": "sh",
@@ -3880,8 +3832,7 @@ Array [
           "after": Array [],
           "before": Array [],
           "command": Object {
-            "cmd": "echo This is a shell command (yaml/partial-detailed-shell)
-",
+            "cmd": "echo This is a shell command (yaml/partial-detailed-shell)",
             "oncreate": [Function],
             "options": undefined,
             "shell": "sh",
@@ -3910,8 +3861,7 @@ Array [
           "after": Array [],
           "before": Array [],
           "command": Object {
-            "cmd": "echo This is a shell command (yaml/shortcut-shell)
-",
+            "cmd": "echo This is a shell command (yaml/shortcut-shell)",
             "oncreate": [Function],
             "options": undefined,
             "shell": "sh",
@@ -3943,8 +3893,7 @@ Array [
     "path": "root/yaml-only/task.yaml",
     "tasks": TaskSet {
       "manifest": Object {
-        "exclusive": "echo From yaml-only/exclusive
-",
+        "exclusive": "echo From yaml-only/exclusive",
       },
       "subtasks": Object {},
       "tasks": Object {
@@ -3952,8 +3901,7 @@ Array [
           "after": Array [],
           "before": Array [],
           "command": Object {
-            "cmd": "echo From yaml-only/exclusive
-",
+            "cmd": "echo From yaml-only/exclusive",
             "oncreate": [Function],
             "options": undefined,
             "shell": "sh",
@@ -4573,8 +4521,7 @@ Array [
     "tasks": TaskSet {
       "manifest": Object {
         "@group": Object {
-          "shell": "echo Shell within a group (yaml/@group/shell)
-",
+          "shell": "echo Shell within a group (yaml/@group/shell)",
           "spawn": Array [
             "echo",
             "Spawn within a group",
@@ -4582,8 +4529,7 @@ Array [
           ],
         },
         "full-detailed-shell": Object {
-          "cmd": "echo This is a shell command (yaml/full-detailed-shell)
-",
+          "cmd": "echo This is a shell command (yaml/full-detailed-shell)",
           "shell": "sh",
           "type": "shell",
         },
@@ -4596,8 +4542,7 @@ Array [
           "type": "spawn",
         },
         "keyword-shell": Object {
-          "cmd": "echo This is a shell command (yaml/keyword-shell)
-",
+          "cmd": "echo This is a shell command (yaml/keyword-shell)",
         },
         "keyword-spawn": Object {
           "spawn": Array [
@@ -4607,8 +4552,7 @@ Array [
           ],
         },
         "partial-detailed-shell": Object {
-          "cmd": "echo This is a shell command (yaml/partial-detailed-shell)
-",
+          "cmd": "echo This is a shell command (yaml/partial-detailed-shell)",
           "shell": "sh",
         },
         "partial-detailed-spawn": Object {
@@ -4618,8 +4562,7 @@ Array [
           ],
           "program": "echo",
         },
-        "shortcut-shell": "echo This is a shell command (yaml/shortcut-shell)
-",
+        "shortcut-shell": "echo This is a shell command (yaml/shortcut-shell)",
         "shortcut-spawn": Array [
           "echo",
           "This is a spawned command",
@@ -4629,8 +4572,7 @@ Array [
       "subtasks": Object {
         "group": TaskSet {
           "manifest": Object {
-            "shell": "echo Shell within a group (yaml/@group/shell)
-",
+            "shell": "echo Shell within a group (yaml/@group/shell)",
             "spawn": Array [
               "echo",
               "Spawn within a group",
@@ -4643,8 +4585,7 @@ Array [
               "after": Array [],
               "before": Array [],
               "command": Object {
-                "cmd": "echo Shell within a group (yaml/@group/shell)
-",
+                "cmd": "echo Shell within a group (yaml/@group/shell)",
                 "oncreate": [Function],
                 "options": undefined,
                 "shell": "sh",
@@ -4677,8 +4618,7 @@ Array [
           "after": Array [],
           "before": Array [],
           "command": Object {
-            "cmd": "echo This is a shell command (yaml/full-detailed-shell)
-",
+            "cmd": "echo This is a shell command (yaml/full-detailed-shell)",
             "oncreate": [Function],
             "options": undefined,
             "shell": "sh",
@@ -4707,8 +4647,7 @@ Array [
           "after": Array [],
           "before": Array [],
           "command": Object {
-            "cmd": "echo This is a shell command (yaml/keyword-shell)
-",
+            "cmd": "echo This is a shell command (yaml/keyword-shell)",
             "oncreate": [Function],
             "options": undefined,
             "shell": "sh",
@@ -4737,8 +4676,7 @@ Array [
           "after": Array [],
           "before": Array [],
           "command": Object {
-            "cmd": "echo This is a shell command (yaml/partial-detailed-shell)
-",
+            "cmd": "echo This is a shell command (yaml/partial-detailed-shell)",
             "oncreate": [Function],
             "options": undefined,
             "shell": "sh",
@@ -4767,8 +4705,7 @@ Array [
           "after": Array [],
           "before": Array [],
           "command": Object {
-            "cmd": "echo This is a shell command (yaml/shortcut-shell)
-",
+            "cmd": "echo This is a shell command (yaml/shortcut-shell)",
             "oncreate": [Function],
             "options": undefined,
             "shell": "sh",
@@ -4800,8 +4737,7 @@ Array [
     "path": "root/yaml-only/task.yaml",
     "tasks": TaskSet {
       "manifest": Object {
-        "exclusive": "echo From yaml-only/exclusive
-",
+        "exclusive": "echo From yaml-only/exclusive",
       },
       "subtasks": Object {},
       "tasks": Object {
@@ -4809,8 +4745,7 @@ Array [
           "after": Array [],
           "before": Array [],
           "command": Object {
-            "cmd": "echo From yaml-only/exclusive
-",
+            "cmd": "echo From yaml-only/exclusive",
             "oncreate": [Function],
             "options": undefined,
             "shell": "sh",
@@ -5292,8 +5227,7 @@ Array [
     "tasks": TaskSet {
       "manifest": Object {
         "@group": Object {
-          "shell": "echo Shell within a group (yaml/@group/shell)
-",
+          "shell": "echo Shell within a group (yaml/@group/shell)",
           "spawn": Array [
             "echo",
             "Spawn within a group",
@@ -5301,8 +5235,7 @@ Array [
           ],
         },
         "full-detailed-shell": Object {
-          "cmd": "echo This is a shell command (yaml/full-detailed-shell)
-",
+          "cmd": "echo This is a shell command (yaml/full-detailed-shell)",
           "shell": "sh",
           "type": "shell",
         },
@@ -5315,8 +5248,7 @@ Array [
           "type": "spawn",
         },
         "keyword-shell": Object {
-          "cmd": "echo This is a shell command (yaml/keyword-shell)
-",
+          "cmd": "echo This is a shell command (yaml/keyword-shell)",
         },
         "keyword-spawn": Object {
           "spawn": Array [
@@ -5326,8 +5258,7 @@ Array [
           ],
         },
         "partial-detailed-shell": Object {
-          "cmd": "echo This is a shell command (yaml/partial-detailed-shell)
-",
+          "cmd": "echo This is a shell command (yaml/partial-detailed-shell)",
           "shell": "sh",
         },
         "partial-detailed-spawn": Object {
@@ -5337,8 +5268,7 @@ Array [
           ],
           "program": "echo",
         },
-        "shortcut-shell": "echo This is a shell command (yaml/shortcut-shell)
-",
+        "shortcut-shell": "echo This is a shell command (yaml/shortcut-shell)",
         "shortcut-spawn": Array [
           "echo",
           "This is a spawned command",
@@ -5348,8 +5278,7 @@ Array [
       "subtasks": Object {
         "group": TaskSet {
           "manifest": Object {
-            "shell": "echo Shell within a group (yaml/@group/shell)
-",
+            "shell": "echo Shell within a group (yaml/@group/shell)",
             "spawn": Array [
               "echo",
               "Spawn within a group",
@@ -5362,8 +5291,7 @@ Array [
               "after": Array [],
               "before": Array [],
               "command": Object {
-                "cmd": "echo Shell within a group (yaml/@group/shell)
-",
+                "cmd": "echo Shell within a group (yaml/@group/shell)",
                 "oncreate": [Function],
                 "options": undefined,
                 "shell": "sh",
@@ -5396,8 +5324,7 @@ Array [
           "after": Array [],
           "before": Array [],
           "command": Object {
-            "cmd": "echo This is a shell command (yaml/full-detailed-shell)
-",
+            "cmd": "echo This is a shell command (yaml/full-detailed-shell)",
             "oncreate": [Function],
             "options": undefined,
             "shell": "sh",
@@ -5426,8 +5353,7 @@ Array [
           "after": Array [],
           "before": Array [],
           "command": Object {
-            "cmd": "echo This is a shell command (yaml/keyword-shell)
-",
+            "cmd": "echo This is a shell command (yaml/keyword-shell)",
             "oncreate": [Function],
             "options": undefined,
             "shell": "sh",
@@ -5456,8 +5382,7 @@ Array [
           "after": Array [],
           "before": Array [],
           "command": Object {
-            "cmd": "echo This is a shell command (yaml/partial-detailed-shell)
-",
+            "cmd": "echo This is a shell command (yaml/partial-detailed-shell)",
             "oncreate": [Function],
             "options": undefined,
             "shell": "sh",
@@ -5486,8 +5411,7 @@ Array [
           "after": Array [],
           "before": Array [],
           "command": Object {
-            "cmd": "echo This is a shell command (yaml/shortcut-shell)
-",
+            "cmd": "echo This is a shell command (yaml/shortcut-shell)",
             "oncreate": [Function],
             "options": undefined,
             "shell": "sh",
@@ -5519,8 +5443,7 @@ Array [
     "path": "root/yaml-only/task.yaml",
     "tasks": TaskSet {
       "manifest": Object {
-        "exclusive": "echo From yaml-only/exclusive
-",
+        "exclusive": "echo From yaml-only/exclusive",
       },
       "subtasks": Object {},
       "tasks": Object {
@@ -5528,8 +5451,7 @@ Array [
           "after": Array [],
           "before": Array [],
           "command": Object {
-            "cmd": "echo From yaml-only/exclusive
-",
+            "cmd": "echo From yaml-only/exclusive",
             "oncreate": [Function],
             "options": undefined,
             "shell": "sh",
@@ -5624,8 +5546,7 @@ Array [
     "tasks": TaskSet {
       "manifest": Object {
         "@group": Object {
-          "shell": "echo Shell within a group (yaml/@group/shell)
-",
+          "shell": "echo Shell within a group (yaml/@group/shell)",
           "spawn": Array [
             "echo",
             "Spawn within a group",
@@ -5633,8 +5554,7 @@ Array [
           ],
         },
         "full-detailed-shell": Object {
-          "cmd": "echo This is a shell command (yaml/full-detailed-shell)
-",
+          "cmd": "echo This is a shell command (yaml/full-detailed-shell)",
           "shell": "sh",
           "type": "shell",
         },
@@ -5647,8 +5567,7 @@ Array [
           "type": "spawn",
         },
         "keyword-shell": Object {
-          "cmd": "echo This is a shell command (yaml/keyword-shell)
-",
+          "cmd": "echo This is a shell command (yaml/keyword-shell)",
         },
         "keyword-spawn": Object {
           "spawn": Array [
@@ -5658,8 +5577,7 @@ Array [
           ],
         },
         "partial-detailed-shell": Object {
-          "cmd": "echo This is a shell command (yaml/partial-detailed-shell)
-",
+          "cmd": "echo This is a shell command (yaml/partial-detailed-shell)",
           "shell": "sh",
         },
         "partial-detailed-spawn": Object {
@@ -5669,8 +5587,7 @@ Array [
           ],
           "program": "echo",
         },
-        "shortcut-shell": "echo This is a shell command (yaml/shortcut-shell)
-",
+        "shortcut-shell": "echo This is a shell command (yaml/shortcut-shell)",
         "shortcut-spawn": Array [
           "echo",
           "This is a spawned command",
@@ -5680,8 +5597,7 @@ Array [
       "subtasks": Object {
         "group": TaskSet {
           "manifest": Object {
-            "shell": "echo Shell within a group (yaml/@group/shell)
-",
+            "shell": "echo Shell within a group (yaml/@group/shell)",
             "spawn": Array [
               "echo",
               "Spawn within a group",
@@ -5694,8 +5610,7 @@ Array [
               "after": Array [],
               "before": Array [],
               "command": Object {
-                "cmd": "echo Shell within a group (yaml/@group/shell)
-",
+                "cmd": "echo Shell within a group (yaml/@group/shell)",
                 "oncreate": [Function],
                 "options": undefined,
                 "shell": "sh",
@@ -5728,8 +5643,7 @@ Array [
           "after": Array [],
           "before": Array [],
           "command": Object {
-            "cmd": "echo This is a shell command (yaml/full-detailed-shell)
-",
+            "cmd": "echo This is a shell command (yaml/full-detailed-shell)",
             "oncreate": [Function],
             "options": undefined,
             "shell": "sh",
@@ -5758,8 +5672,7 @@ Array [
           "after": Array [],
           "before": Array [],
           "command": Object {
-            "cmd": "echo This is a shell command (yaml/keyword-shell)
-",
+            "cmd": "echo This is a shell command (yaml/keyword-shell)",
             "oncreate": [Function],
             "options": undefined,
             "shell": "sh",
@@ -5788,8 +5701,7 @@ Array [
           "after": Array [],
           "before": Array [],
           "command": Object {
-            "cmd": "echo This is a shell command (yaml/partial-detailed-shell)
-",
+            "cmd": "echo This is a shell command (yaml/partial-detailed-shell)",
             "oncreate": [Function],
             "options": undefined,
             "shell": "sh",
@@ -5818,8 +5730,7 @@ Array [
           "after": Array [],
           "before": Array [],
           "command": Object {
-            "cmd": "echo This is a shell command (yaml/shortcut-shell)
-",
+            "cmd": "echo This is a shell command (yaml/shortcut-shell)",
             "oncreate": [Function],
             "options": undefined,
             "shell": "sh",
@@ -5851,8 +5762,7 @@ Array [
     "path": "root/yaml-only/task.yaml",
     "tasks": TaskSet {
       "manifest": Object {
-        "exclusive": "echo From yaml-only/exclusive
-",
+        "exclusive": "echo From yaml-only/exclusive",
       },
       "subtasks": Object {},
       "tasks": Object {
@@ -5860,8 +5770,7 @@ Array [
           "after": Array [],
           "before": Array [],
           "command": Object {
-            "cmd": "echo From yaml-only/exclusive
-",
+            "cmd": "echo From yaml-only/exclusive",
             "oncreate": [Function],
             "options": undefined,
             "shell": "sh",
@@ -6052,8 +5961,7 @@ Array [
     "tasks": TaskSet {
       "manifest": Object {
         "@group": Object {
-          "shell": "echo Shell within a group (yaml/@group/shell)
-",
+          "shell": "echo Shell within a group (yaml/@group/shell)",
           "spawn": Array [
             "echo",
             "Spawn within a group",
@@ -6061,8 +5969,7 @@ Array [
           ],
         },
         "full-detailed-shell": Object {
-          "cmd": "echo This is a shell command (yaml/full-detailed-shell)
-",
+          "cmd": "echo This is a shell command (yaml/full-detailed-shell)",
           "shell": "sh",
           "type": "shell",
         },
@@ -6075,8 +5982,7 @@ Array [
           "type": "spawn",
         },
         "keyword-shell": Object {
-          "cmd": "echo This is a shell command (yaml/keyword-shell)
-",
+          "cmd": "echo This is a shell command (yaml/keyword-shell)",
         },
         "keyword-spawn": Object {
           "spawn": Array [
@@ -6086,8 +5992,7 @@ Array [
           ],
         },
         "partial-detailed-shell": Object {
-          "cmd": "echo This is a shell command (yaml/partial-detailed-shell)
-",
+          "cmd": "echo This is a shell command (yaml/partial-detailed-shell)",
           "shell": "sh",
         },
         "partial-detailed-spawn": Object {
@@ -6097,8 +6002,7 @@ Array [
           ],
           "program": "echo",
         },
-        "shortcut-shell": "echo This is a shell command (yaml/shortcut-shell)
-",
+        "shortcut-shell": "echo This is a shell command (yaml/shortcut-shell)",
         "shortcut-spawn": Array [
           "echo",
           "This is a spawned command",
@@ -6108,8 +6012,7 @@ Array [
       "subtasks": Object {
         "group": TaskSet {
           "manifest": Object {
-            "shell": "echo Shell within a group (yaml/@group/shell)
-",
+            "shell": "echo Shell within a group (yaml/@group/shell)",
             "spawn": Array [
               "echo",
               "Spawn within a group",
@@ -6122,8 +6025,7 @@ Array [
               "after": Array [],
               "before": Array [],
               "command": Object {
-                "cmd": "echo Shell within a group (yaml/@group/shell)
-",
+                "cmd": "echo Shell within a group (yaml/@group/shell)",
                 "oncreate": [Function],
                 "options": undefined,
                 "shell": "sh",
@@ -6156,8 +6058,7 @@ Array [
           "after": Array [],
           "before": Array [],
           "command": Object {
-            "cmd": "echo This is a shell command (yaml/full-detailed-shell)
-",
+            "cmd": "echo This is a shell command (yaml/full-detailed-shell)",
             "oncreate": [Function],
             "options": undefined,
             "shell": "sh",
@@ -6186,8 +6087,7 @@ Array [
           "after": Array [],
           "before": Array [],
           "command": Object {
-            "cmd": "echo This is a shell command (yaml/keyword-shell)
-",
+            "cmd": "echo This is a shell command (yaml/keyword-shell)",
             "oncreate": [Function],
             "options": undefined,
             "shell": "sh",
@@ -6216,8 +6116,7 @@ Array [
           "after": Array [],
           "before": Array [],
           "command": Object {
-            "cmd": "echo This is a shell command (yaml/partial-detailed-shell)
-",
+            "cmd": "echo This is a shell command (yaml/partial-detailed-shell)",
             "oncreate": [Function],
             "options": undefined,
             "shell": "sh",
@@ -6246,8 +6145,7 @@ Array [
           "after": Array [],
           "before": Array [],
           "command": Object {
-            "cmd": "echo This is a shell command (yaml/shortcut-shell)
-",
+            "cmd": "echo This is a shell command (yaml/shortcut-shell)",
             "oncreate": [Function],
             "options": undefined,
             "shell": "sh",
@@ -6279,8 +6177,7 @@ Array [
     "path": "root/yaml-only/task.yaml",
     "tasks": TaskSet {
       "manifest": Object {
-        "exclusive": "echo From yaml-only/exclusive
-",
+        "exclusive": "echo From yaml-only/exclusive",
       },
       "subtasks": Object {},
       "tasks": Object {
@@ -6288,8 +6185,7 @@ Array [
           "after": Array [],
           "before": Array [],
           "command": Object {
-            "cmd": "echo From yaml-only/exclusive
-",
+            "cmd": "echo From yaml-only/exclusive",
             "oncreate": [Function],
             "options": undefined,
             "shell": "sh",
