@@ -4,7 +4,13 @@ const out: typeof proto = {
   default: 'sh',
   get: Object.assign(
     (_: any, posix: string) => posix,
-    proto.get
+    {
+      ...proto.get,
+      Default: {
+        ...proto.get.Default,
+        result: 'sh'
+      }
+    } as typeof proto.get
   ),
   platform: 'linux'
 }
