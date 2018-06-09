@@ -9,6 +9,8 @@ import {
 /**
  * @param dirname Directory that contains all task manifest descriptors
  * @param options Specify deep function and file chooser
+ * @param options.choose File chooser
+ * @param options.deep Deep function
  * @returns A list of task manifests
  */
 export async function listManifestFiles (
