@@ -19,6 +19,11 @@ export async function execute (
 }
 
 export namespace execute {
+  /**
+   *
+   * @param tasklist Returning value of `loadManifestFiles`
+   * @param taskpath Array of task's/taskset's names
+   */
   export async function fromList (
     tasklist: ReadonlyArray<loadManifestFiles.Result.Item>,
     taskpath: ReadonlyArray<string>
