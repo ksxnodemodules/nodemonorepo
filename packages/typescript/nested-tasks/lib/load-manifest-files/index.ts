@@ -4,7 +4,7 @@ import {Manifest, TaskSet} from '../.types'
 
 /**
  * @param dirname Directory that contains all task manifest descriptors
- * @param options Specify deep function and file chooser
+ * @param options Options to pass to `listManifestFiles`
  * @returns A list of task collections
  */
 export async function loadManifestFiles (
