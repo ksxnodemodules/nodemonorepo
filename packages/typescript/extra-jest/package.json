@@ -1,6 +1,6 @@
 {
   "name": "extra-jest",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "Some extra functions to work with jest testing framework",
   "main": "index.js",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
