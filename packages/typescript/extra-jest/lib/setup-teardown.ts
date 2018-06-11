@@ -14,8 +14,9 @@ export type Tester = () => Promise<void>
 export type AsyncTesterFactory<SM, MT> = (fn: CalledFunc<SM, MT>) => Tester
 export type SyncTesterFactory<SM, MT> = (fn: SyncCalledFunc<SM, MT>) => Tester
 
-export type Config<SY, TX> = {
-  setup: SetupFunc<SY>, teardown: TeardownFunc<TX>
+export interface Config<SY, TX> {
+  readonly setup: SetupFunc<SY>
+  readonly teardown: TeardownFunc<TX>
 }
 
 export type TesterFactory<SM, MT> = AsyncTesterFactory<SM, MT> & {
