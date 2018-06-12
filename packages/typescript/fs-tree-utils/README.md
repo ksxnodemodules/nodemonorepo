@@ -208,6 +208,8 @@ const tree = { // top-level `tree` object corresponds to top-level directory of 
     'my-copy': new FileSystemRepresentation.Clone('/source/for/copying') // uses `fsExtra.copy` under the hook
   }
 }
+
+await create(tree, '/path/to/container')
 ```
 
 ### `fsTreeUtils.FileSystemRepresentation`
@@ -220,6 +222,8 @@ abstract class FileSystemRepresentation {
 interface CreateSecondParam {
   create (tree: Tree.Write, container: string): Promise<void>
 }
+
+// See https://git.io/vhar7 for more types
 ```
 
 This is an abstract class upon which `fsTreeUtils.FileSystemRepresentation.*` was built.
@@ -241,9 +245,9 @@ This method is used by `fsTreeUtils.create`.
 ### `fsTreeUtils.FileSystemRepresentation.File`
 
 ```typescript
-class File extends FileSystemRepresentation {
-  public constructor (content: string | Buffer)
-  public write (filename: string): Promise<void>
+declare class File extends FileSystemRepresentation {
+  constructor (content: string | Buffer)
+  write (filename: string): Promise<void>
 }
 ```
 
@@ -262,6 +266,123 @@ class File extends FileSystemRepresentation {
 
 **Effects:**
   * Write `content` into file with name `filename`.
+
+##### Examples
+
+```javascript
+import {
+  create,
+  FileSystemRepresentation
+} from 'fs-tree-utils'
+
+const {File} = FileSystemRepresentation
+
+await Promise.all([
+  create(new File('From String'), 'from-string.txt'),
+  create(new File(Buffer.from('From Buffer'), 'from-buffer.txt'))
+])
+```
+
+### `fsTreeUtils.FileSystemRepresentation.Directory`
+
+```typescript
+declare class Directory extends FileSystemRepresentation {
+  constructor (content?: Tree.Writable.Object)
+  write (dirname: string, param: CreateSecondParam): Promise<void>
+}
+
+// See https://git.io/vhar7 for more types
+```
+
+#### `fsTreeUtils.FileSystemRepresentation.Directory::constructor`
+
+**Parameters:**
+  * `content` (optional): A dictionary of tree representation (`Tree.Writable.Object`).
+
+#### `fsTreeUtils.FileSystemRepresentation.Directory::write`
+
+**Parameters:**
+  * `dirname`: Intended directory's name.
+  * `param.create`: It is `fsTreeUtils.create`.
+
+**Returns:**
+  * A promise that resolves when tree creation inside directory is completed.
+
+**Effects:**
+  * Create a filesystem tree inside directory.
+
+### `fsTreeUtils.FileSystemRepresentation.Symlink`
+
+```typescript
+declare class Symlink extends FileSystemRepresentation {
+  constructor (linkTarget: string, options?: Options)
+  write (linkName: string): Promise<void>
+}
+
+interface Options {
+  readonly type?: 'dir' | 'file' | 'junction'
+}
+
+// See https://git.io/vhar7 for more types
+```
+
+#### `fsTreeUtils.FileSystemRepresentation.Symlink::constructor`
+
+**Parameters:**
+  * `linkTarget`: Intended symlink's target (`string`).
+  * `options.type` (optional): Either `"dir"`, `"file"` or `"junction"`. Windows only.
+
+#### `fsTreeUtils.FileSystemRepresentation.Symlink::write`
+
+**Parameters:**
+  * `linkName`: Path to intended symlink (`string`).
+
+**Returns:**
+  * A promise that resolves when symlink creation succeeds.
+
+**Effects:**
+  * Create a symlink at `linkName` that points to `linkTarget`.
+
+#### Examples
+
+```javascript
+import {
+  create,
+  FileSystemRepresentation
+} from 'fs-tree-utils'
+
+const {Symlink} = FileSystemRepresentation
+
+await create(new Symlink('/path/to/link/target'), '/path/to/intended/symlink')
+```
+
+### `fsTreeUtils.FileSystemRepresentation.Clone`
+
+```typescript
+declare class Clone extends FileSystemRepresentation {
+  constructor (source: string, options?: fsExtra.CopyOptions)
+  write (destination: string): Promise<void>
+}
+```
+
+#### `fsTreeUtils.FileSystemRepresentation.Clone::constructor`
+
+**Parameters:**
+  * `source`: Path to existing source (`string`).
+  * `options` (optional): Options to pass to `fsExtra.copy` (`fsExtra.CopyOptions`).
+
+#### `fsTreeUtils.FileSystemRepresentation.Clone::write`
+
+This method uses `fsExtra.copy` under the hook.
+
+**Parameters:**
+  * `destination`: Path to destination (`string`).
+
+**Returns:**
+  * A promise that resolves when cloning is completed.
+
+**Effects:**
+  * Create a copy of `source` at `destination`.
 
 ### Other types and classes
 
