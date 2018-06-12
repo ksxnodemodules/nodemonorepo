@@ -387,3 +387,7 @@ This method uses `fsExtra.copy` under the hook.
 ### Other types and classes
 
 See [module `fs-tree-utils/lib/.types`](https://git.io/vhar7).
+
+## License
+
+[MIT](https://git.io/vhaEz) © [Hoàng Văn Khải](https://github.com/KSXGitHub)
