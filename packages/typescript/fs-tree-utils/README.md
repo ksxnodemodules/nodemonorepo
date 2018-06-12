@@ -224,8 +224,44 @@ interface CreateSecondParam {
 
 This is an abstract class upon which `fsTreeUtils.FileSystemRepresentation.*` was built.
 
-**Methods:**
-  * `write` (abstract): This method is used by `fsTreeUtils.create`.
+#### `fsTreeUtils.FileSystemRepresentation::write`
+
+This is an abstract method.
+
+This method is used by `fsTreeUtils.create`.
+
+**Parameters:**
+  * `target`: Name of represented entity.
+  * `param.create`: It is `fsTreeUtils.create`.
+
+**Returns:**
+  * Synchronous version returns nothing (i.e. `void` a.k.a. `undefined`).
+  * Asynchronous version returns a promise that resolves `undefined`.
+
+### `fsTreeUtils.FileSystemRepresentation.File`
+
+```typescript
+class File extends FileSystemRepresentation {
+  public constructor (content: string | Buffer)
+  public write (filename: string): Promise<void>
+}
+```
+
+#### `fsTreeUtils.FileSystemRepresentation.File::constructor`
+
+**Parameters:**
+  * `content`: Intended file's content (`string | Buffer`).
+
+#### `fsTreeUtils.FileSystemRepresentation.File::write`
+
+**Parameters:**
+  * `filename`: Intended file's name (`string`).
+
+**Returns:**
+  * A promise that resolves when content is written into file successfully.
+
+**Effects:**
+  * Write `content` into file with name `filename`.
 
 ### Other types and classes
 
