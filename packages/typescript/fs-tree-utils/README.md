@@ -102,7 +102,7 @@ interface NestedReadOptions {
 
 **Parameters:**
   * `name`: Path to the top directory of a tree.
-  * `options.stat` (optional): Stat function to use (returns either `fs.Stats` or `Promise<fs.Stats>`), default to `fs.stat`.
+  * `options.stat` (optional): Stat function to use (returns either `fs.Stats` or `Promise<fs.Stats>`), default to `fsExtra.stat`.
   * `options.onerror` (optional): Function that transforms an error into an instance of `fsTreeUtils.Exception.ErrorCarrier`, these errors will be thrown instead if the function is not provided.
   * `options.onunknown` (optional): Function that creates an instance of `fsTreeUtils.Exception.Other` when encounter unknown filesystem entity, errors would be thrown instead if the function is not provided.
 
