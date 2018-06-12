@@ -210,6 +210,23 @@ const tree = { // top-level `tree` object corresponds to top-level directory of 
 }
 ```
 
-### Shared types and classes
+### `fsTreeUtils.FileSystemRepresentation`
+
+```typescript
+abstract class FileSystemRepresentation {
+  abstract public write (target: string, param: CreateSecondParam): Promise<void> | void
+}
+
+interface CreateSecondParam {
+  create (tree: Tree.Write, container: string): Promise<void>
+}
+```
+
+This is an abstract class upon which `fsTreeUtils.FileSystemRepresentation.*` was built.
+
+**Methods:**
+  * `write` (abstract): This method is used by `fsTreeUtils.create`.
+
+### Other types and classes
 
 See [module `fs-tree-utils/lib/.types`](https://git.io/vhar7).
