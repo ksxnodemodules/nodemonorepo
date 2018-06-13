@@ -2,6 +2,10 @@
 
 Create temporary directory/file names that are unique
 
+## Requirements
+
+* Node.js ≥ 8.9.0
+
 ## Why?
 
 There're always files/directories being added to temporary directory. There's a chance, albeit rather small, that a random string would collapse with them. For this reason, it is necessary to check whether that random name exists.

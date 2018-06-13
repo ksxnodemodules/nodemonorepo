@@ -2,6 +2,10 @@
 
 Returns `'sh'` in UNIX/Linux and `'cmd'` in Windows.
 
+## Requirements
+
+* Node.js ≥ 8.9.0
+
 ## Usage
 
 ```javascript

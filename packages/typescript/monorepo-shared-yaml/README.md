@@ -2,6 +2,10 @@
 
 Just [js-yaml](https://git.io/5UpxBw) + [some extra methods](additional-apis)
 
+## Requirements
+
+* Node.js ≥ 8.9.0
+
 ## Additional APIs
 
 * `yaml.yaml`: exported object of `js-yaml`.

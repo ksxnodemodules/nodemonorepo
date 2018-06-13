@@ -2,6 +2,10 @@
 
 Some commands in needs for nodemonorepo
 
+## Requirements
+
+* Node.js ≥ 8.9.0
+
 ## CLIs
 
 This program is divided into multiple subcommands which print usage messages when issued without arguments.

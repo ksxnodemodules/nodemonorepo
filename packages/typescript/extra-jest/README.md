@@ -2,6 +2,10 @@
 
 Some extra functions to work with jest testing framework
 
+## Requirements
+
+* Node.js ≥ 8.9.0
+
 ## APIs
 
 **NOTE:**

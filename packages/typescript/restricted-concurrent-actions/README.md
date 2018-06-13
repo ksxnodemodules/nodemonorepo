@@ -2,6 +2,10 @@
 
 Like `Promise.all`, but limit number of concurrent promises
 
+## Requirements
+
+* Node.js ≥ 8.9.0
+
 ## Usage
 
 ### Function Signature

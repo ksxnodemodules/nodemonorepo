@@ -2,6 +2,10 @@
 
 Iterate over all parent directories of a given path
 
+## Requirements
+
+* Node.js ≥ 8.9.0
+
 ## APIs
 
 ### Function Signature

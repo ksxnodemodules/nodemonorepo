@@ -2,6 +2,10 @@
 
 Work with filesystem tree with ease
 
+## Requirements
+
+* Node.js ≥ 8.9.0
+
 ## APIs
 
 **NOTE:**

@@ -2,6 +2,10 @@
 
 Spawn all processes, but limit number of parallel processes
 
+## Requirements
+
+* Node.js ≥ 8.9.0
+
 ## Usage Example
 
 Spawn 4 commands at a time.
