@@ -13,7 +13,8 @@
     "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
   },
   "keywords": [
-    "promise"
+    "promise",
+    "throttled"
   ],
   "dependencies": {
     "tslib": "^1.9.2",
