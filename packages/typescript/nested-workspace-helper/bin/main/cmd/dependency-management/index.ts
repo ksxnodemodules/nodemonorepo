@@ -14,6 +14,6 @@ function builder (yargs: Argv): Argv {
 export default {
   command: 'dependency-management <cmd> [args]',
   aliases: 'depman',
-  describe: 'Manage internal package versions',
+  describe: 'Manage external dependency versions',
   builder
 } as CommandModule
