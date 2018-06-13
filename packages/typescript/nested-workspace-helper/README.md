@@ -16,3 +16,7 @@ nested-workspace-helper publish # --> Publish are packages that satisfy certain 
 ```
 
 Instead of writing long `nested-workspace-helper` command, you can use shorter `nested-wrkspc` alias.
+
+## License
+
+[MIT](https://git.io/vhaEz) © [Hoàng Văn Khải](https://github.com/KSXGitHub)
