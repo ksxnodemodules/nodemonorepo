@@ -1,6 +1,6 @@
 {
   "name": "fs-tree-utils",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "Work with filesystem tree with ease",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
@@ -17,7 +17,7 @@
     "fs-extra": "^6.0.1",
     "ramda": "^0.25.0",
     "tslib": "^1.9.2",
-    "monorepo-shared-assets": "^0.0.12",
+    "monorepo-shared-assets": "^0.0.13",
     "@types/fs-extra": "^5.0.2",
     "@types/ramda": "^0.25.32",
     "@types/node": "^10.3.0"
