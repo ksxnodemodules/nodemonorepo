@@ -1,7 +1,7 @@
 {
   "name": "nested-workspace-helper",
   "version": "0.1.11",
-  "description": "Some commands to in needs for nodemonorepo",
+  "description": "Some commands in needs for nodemonorepo",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
