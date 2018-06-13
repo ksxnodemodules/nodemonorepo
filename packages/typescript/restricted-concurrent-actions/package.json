@@ -1,7 +1,7 @@
 {
   "name": "restricted-concurrent-actions",
   "version": "0.0.8",
-  "description": "Execute a certain number of promises after promises",
+  "description": "Like Promise.all, but limit number of concurrent promises",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
