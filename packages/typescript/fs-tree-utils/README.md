@@ -93,12 +93,12 @@ console.log('result', res)
 ### `fsTreeUtils.read.nested`
 
 ```typescript
-declare function readNested (name: string, options?: NestedReadOptions): Promise<Tree.Read.Node>
+declare function readNested<Exception, Unknown> (name: string, options?: NestedReadOptions<Exception, Unknown>): Promise<Tree.Read.Node<Exception | Unknown>>
 
-interface NestedReadOptions {
+interface NestedReadOptions<Exception, Unknown> {
   readonly stat?: NestedReadOptions.StatFunc
-  readonly onerror?: NestedReadOptions.ErrorHandler
-  readonly onunknown?: NestedReadOptions.UnknownHandler
+  readonly onerror?: (error: Error) => Exception
+  readonly onunknown?: (param: UnknownParam) => Unknown
 }
 
 // See https://git.io/vhar7 for more types
@@ -107,8 +107,8 @@ interface NestedReadOptions {
 **Parameters:**
   * `name`: Path to the top directory of a tree.
   * `options.stat` (optional): Stat function to use (returns either `fs.Stats` or `Promise<fs.Stats>`), default to `fsExtra.stat`.
-  * `options.onerror` (optional): Function that transforms an error into an instance of `fsTreeUtils.Exception.ErrorCarrier`, these errors will be thrown instead if the function is not provided.
-  * `options.onunknown` (optional): Function that creates an instance of `fsTreeUtils.Exception.Other` when encounter unknown filesystem entity, errors would be thrown instead if the function is not provided.
+  * `options.onerror` (optional): Function that transforms an error into a value, these errors will be thrown instead if the function is not provided.
+  * `options.onunknown` (optional): Function that creates a value when encounter unknown filesystem entity, errors would be thrown instead if the function is not provided.
 
 #### Examples
 
