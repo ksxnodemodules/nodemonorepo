@@ -50,8 +50,8 @@ export interface NestedReadOptions<Error, Unknown> {
 
 export namespace NestedReadOptions {
   export type StatFunc = utils.StatFunc
-  export type ErrorHandler<Y> = OptionalFunction<Error, Y>
-  export type Unknown<Y> = OptionalFunction<Unknown.Param, Y>
+  export type ErrorHandler<Y> = (error: Error) => Y
+  export type Unknown<Y> = (param: Unknown.Param) => Y
 
   export namespace Unknown {
     export interface Param {
@@ -59,8 +59,6 @@ export namespace NestedReadOptions {
       readonly stats: Stats
     }
   }
-
-  export type OptionalFunction<X, Y> = Y extends never ? never : (x: X) => Y
 }
 
 export namespace Traverse {
