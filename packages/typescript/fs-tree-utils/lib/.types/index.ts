@@ -2,23 +2,22 @@ import * as path from 'path'
 import {Stats} from 'fs'
 import * as fsx from 'fs-extra'
 
-export type Tree<Error, Unknown> = Tree.Read<Error, Unknown>
+export type Tree<Other> = Tree.Read<Other>
 
 export namespace Tree {
-  export type Read<Error, Unknown> = Read.Node<Error, Unknown>
+  export type Read<Other> = Read.Node<Other>
 
   export namespace Read {
-    export type Node<Error, Unknown> =
+    export type Node<Other> =
       FileContent |
-      Object<Error, Unknown> |
+      Object<Other> |
       FileSystemRepresentation.Symlink |
-      Error |
-      Unknown
+      Other
 
     export type FileContent = string
 
-    export interface Object<Error, Unknown> {
-      [name: string]: Node<Error, Unknown>
+    export interface Object<Other> {
+      [name: string]: Node<Other>
     }
   }
 
