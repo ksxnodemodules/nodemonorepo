@@ -2,22 +2,23 @@ import * as path from 'path'
 import {Stats} from 'fs'
 import * as fsx from 'fs-extra'
 
-export type Tree = Tree.Read
+export type Tree<Error, Unknown> = Tree.Read<Error, Unknown>
 
 export namespace Tree {
-  export type Read = Read.Node
+  export type Read<Error, Unknown> = Read.Node<Error, Unknown>
 
   export namespace Read {
-    export type Node =
+    export type Node<Error, Unknown> =
       FileContent |
-      Object |
+      Object<Error, Unknown> |
       FileSystemRepresentation.Symlink |
-      FileSystemRepresentation.Exception
+      Error |
+      Unknown
 
     export type FileContent = string
 
-    export interface Object {
-      [name: string]: Node
+    export interface Object<Error, Unknown> {
+      [name: string]: Node<Error, Unknown>
     }
   }
 
@@ -29,7 +30,7 @@ export namespace Tree {
     export type Function = (name: string, param: CreateSecondParam) => Promise<void> | void
 
     export interface Object {
-      readonly [name: string]: Node
+      [name: string]: Node
     }
   }
 }
@@ -42,16 +43,16 @@ export namespace CreateSecondParam {
   export type CreateFunc = (tree: Tree.Write, container: string) => Promise<void>
 }
 
-export interface NestedReadOptions {
+export interface NestedReadOptions<Error, Unknown> {
   readonly stat?: NestedReadOptions.StatFunc
-  readonly onerror?: NestedReadOptions.ErrorHandler
-  readonly onunknown?: NestedReadOptions.Unknown
+  readonly onerror?: NestedReadOptions.ErrorHandler<Error>
+  readonly onunknown?: NestedReadOptions.Unknown<Unknown>
 }
 
 export namespace NestedReadOptions {
   export type StatFunc = utils.StatFunc
-  export type ErrorHandler = (error: Error) => FileSystemRepresentation.Exception.ErrorCarrier
-  export type Unknown = (x: Unknown.Param) => FileSystemRepresentation.Exception.Other
+  export type ErrorHandler<Y> = OptionalFunction<Error, Y>
+  export type Unknown<Y> = OptionalFunction<Unknown.Param, Y>
 
   export namespace Unknown {
     export interface Param {
@@ -59,6 +60,8 @@ export namespace NestedReadOptions {
       readonly stats: Stats
     }
   }
+
+  export type OptionalFunction<X, Y> = Y extends never ? never : (x: X) => Y
 }
 
 export namespace Traverse {
@@ -232,45 +235,6 @@ export namespace FileSystemRepresentation {
 
   export namespace Clone {
     export type Options = fsx.CopyOptions
-  }
-
-  /**
-   * Represents exceptional/impossible filesystem entities.
-   *
-   * This class is used by function `read`.
-   *
-   * Users are not meant to create objects of this class
-   * except when the objects are of `FileSystemRepresentation.Exception.Other`.
-   */
-  export abstract class Exception extends FileSystemRepresentation {}
-
-  export namespace Exception {
-    /**
-     * Represents a caught `Error` when try to read a filesystem entity.
-     *
-     * Users are not meant to create objects of this class.
-     */
-    export class ErrorCarrier extends Exception {
-      readonly error: Error
-
-      constructor (error: Error) {
-        super()
-        this.error = error
-      }
-
-      async write () {
-        throw this.error // cannot be used in function `create`.
-      }
-    }
-
-    /**
-     * Unlike other subclasses of `FileSystemRepresentation.Exception`,
-     * subclasses of this class are meant to instantiated by users.
-     *
-     * This is an abstract class, don't instantiate it directly,
-     * instead, create a subclass that extends it.
-     */
-    export abstract class Other extends Exception {}
   }
 }
 
