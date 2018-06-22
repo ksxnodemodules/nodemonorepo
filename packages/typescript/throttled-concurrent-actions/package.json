@@ -1,0 +1,28 @@
+{
+  "name": "throttled-concurrent-actions",
+  "version": "0.0.0",
+  "description": "Like Promise.all, but throttled",
+  "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksxnodemodules/nodemonorepo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
+  },
+  "keywords": [
+    "promise",
+    "throttled"
+  ],
+  "dependencies": {
+    "tslib": "^1.9.2",
+    "ramda": "^0.25.0",
+    "@types/node": "^10.3.0",
+    "@types/ramda": "^0.25.32"
+  },
+  "engines": {
+    "node": ">= 8.9.0"
+  }
+}
