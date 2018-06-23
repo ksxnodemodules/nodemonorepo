@@ -1,0 +1,146 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+Array [
+  Object {
+    "prev": undefined,
+    "value": 0,
+  },
+  Object {
+    "prev": undefined,
+    "value": 1,
+  },
+  Object {
+    "prev": undefined,
+    "value": 2,
+  },
+  Object {
+    "prev": undefined,
+    "value": 3,
+  },
+  Object {
+    "prev": undefined,
+    "value": 4,
+  },
+  Object {
+    "prev": 0,
+    "value": 5,
+  },
+  Object {
+    "prev": 1,
+    "value": 6,
+  },
+  Object {
+    "prev": 2,
+    "value": 7,
+  },
+  Object {
+    "prev": 3,
+    "value": 8,
+  },
+  Object {
+    "prev": 4,
+    "value": 9,
+  },
+  Object {
+    "prev": 5,
+    "value": 10,
+  },
+  Object {
+    "prev": 6,
+    "value": 11,
+  },
+  Object {
+    "prev": 7,
+    "value": 12,
+  },
+  Object {
+    "prev": 8,
+    "value": 13,
+  },
+  Object {
+    "prev": 9,
+    "value": 14,
+  },
+  Object {
+    "prev": 10,
+    "value": 15,
+  },
+  Object {
+    "prev": 11,
+    "value": 16,
+  },
+  Object {
+    "prev": 12,
+    "value": 17,
+  },
+  Object {
+    "prev": 13,
+    "value": 18,
+  },
+  Object {
+    "prev": 14,
+    "value": 19,
+  },
+  Object {
+    "prev": 15,
+    "value": 20,
+  },
+  Object {
+    "prev": 16,
+    "value": 21,
+  },
+  Object {
+    "prev": 17,
+    "value": 22,
+  },
+  Object {
+    "prev": 18,
+    "value": 23,
+  },
+  Object {
+    "prev": 19,
+    "value": 24,
+  },
+  Object {
+    "prev": 20,
+    "value": 25,
+  },
+  Object {
+    "prev": 21,
+    "value": 26,
+  },
+  Object {
+    "prev": 22,
+    "value": 27,
+  },
+  Object {
+    "prev": 23,
+    "value": 28,
+  },
+  Object {
+    "prev": 24,
+    "value": 29,
+  },
+  Object {
+    "prev": 25,
+    "value": 30,
+  },
+  Object {
+    "prev": 26,
+    "value": 31,
+  },
+  Object {
+    "prev": 22,
+    "value": 27,
+  },
+  Object {
+    "prev": 23,
+    "value": 28,
+  },
+  Object {
+    "prev": 24,
+    "value": 29,
+  },
+]
+`;
