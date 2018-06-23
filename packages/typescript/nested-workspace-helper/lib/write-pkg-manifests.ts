@@ -7,6 +7,13 @@ import {
   Transformer as Trsfmr
 } from './types'
 
+/**
+ * Re-format `package.json` files
+ * @param dirname Path to directory that contains all packages
+ * @param transformer Function takes a `Package.ListItem` and returns a `Package.Manifest`
+ * @param options.indentation Intended JSON indent
+ * @param options.finalNewLine How many final new lines
+ */
 export async function writePackageManifests (
   dirname: string,
   transformer: writePackageManifests.Transformer,
@@ -20,6 +27,12 @@ export async function writePackageManifests (
 export namespace writePackageManifests {
   export const read = listAllPackages
 
+  /**
+   * Write information from `list` into various `package.json` files
+   * @param list List of packages
+   * @param options.indentation Intended JSON indent
+   * @param options.finalNewLine How many final new lines
+   */
   export async function write (
     list: Package.List,
     options: Package.Manifest.Writer.Options = {}

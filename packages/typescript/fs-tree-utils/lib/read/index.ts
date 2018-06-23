@@ -7,7 +7,7 @@ import {Tree, NestedReadOptions, Traverse, FileSystemRepresentation} from '../.t
 import wrapRejection = assets.wrapException.wrapPromiseRejection
 import Symlink = FileSystemRepresentation.Symlink
 
-export type NestedReadResult = Promise<Tree.Read>
+export type NestedReadResult<Other> = Promise<Tree.Read<Other>>
 
 export interface FlatReadResultFileContent {
   readonly [filename: string]: Tree.Read.FileContent
@@ -33,10 +33,10 @@ export type FlatReadResult = Promise<FlatReadResultValue>
  * @param options.stat Specify stat function
  * @returns Nested directory tree representation
  */
-export async function readNested (
+export async function readNested<Error = never, Unknown = never> (
   name: string,
-  options: NestedReadOptions = {}
-): NestedReadResult {
+  options: NestedReadOptions<Error, Unknown> = {}
+): NestedReadResult<Error | Unknown> {
   const {
     onunknown,
     onerror: transformError,
@@ -45,7 +45,7 @@ export async function readNested (
 
   return wrapRejection(main, transformError)(name)
 
-  async function main (name: string): NestedReadResult {
+  async function main (name: string): NestedReadResult<Error | Unknown> {
     const stats = await Promise.resolve(stat(name))
 
     if (stats.isFile()) {
@@ -53,7 +53,7 @@ export async function readNested (
     }
 
     if (stats.isDirectory()) {
-      let tree: Tree.Read = {}
+      let tree: Tree.Read<Error | Unknown> = {}
       for (const item of await fsx.readdir(name)) {
         const subtree = await main(path.join(name, item))
         tree[item] = subtree

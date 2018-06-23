@@ -1,29 +1,26 @@
 {
-  "name": "extra-jest",
-  "version": "0.0.18",
-  "description": "Some extra functions to work with jest testing framework",
-  "main": "index.js",
+  "name": "throttled-concurrent-actions",
+  "version": "0.0.0",
+  "description": "Like Promise.all, but throttled",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksxnodemodules/nodemonorepo.git"
+  },
   "bugs": {
     "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
   },
   "keywords": [
-    "jest"
+    "promise",
+    "throttled"
   ],
   "dependencies": {
     "ramda": "^0.25.0",
-    "fs-extra": "^6.0.1",
     "tslib": "^1.9.2",
-    "fs-tree-utils": "^0.1.0",
-    "unique-temp-path": "^0.0.9",
     "@types/ramda": "^0.25.32",
-    "@types/fs-extra": "^5.0.2",
     "@types/node": "^10.3.0"
-  },
-  "peerDependencies": {
-    "jest": "^23.1.0"
   },
   "engines": {
     "node": ">= 8.9.0"

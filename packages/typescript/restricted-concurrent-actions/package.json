@@ -1,7 +1,7 @@
 {
   "name": "restricted-concurrent-actions",
-  "version": "0.0.8",
-  "description": "Execute a certain number of promises after promises",
+  "version": "0.0.9",
+  "description": "Like Promise.all, but limit number of concurrent promises",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
@@ -13,11 +13,12 @@
     "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
   },
   "keywords": [
-    "promise"
+    "promise",
+    "throttled"
   ],
   "dependencies": {
     "tslib": "^1.9.2",
-    "monorepo-shared-assets": "^0.0.12",
+    "monorepo-shared-assets": "^0.0.13",
     "@types/node": "^10.3.0"
   },
   "engines": {
