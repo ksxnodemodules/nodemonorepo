@@ -1,0 +1,34 @@
+dependencies:
+  fs-extra: 6.0.1
+  fs-tree-utils: 'link:../../typescript/fs-tree-utils'
+packages:
+  /fs-extra/6.0.1:
+    dependencies:
+      graceful-fs: 4.1.11
+      jsonfile: 4.0.0
+      universalify: 0.1.1
+    dev: false
+    resolution:
+      integrity: sha512-GnyIkKhhzXZUWFCaJzvyDLEEgDkPfb4/TPvJCJVuS8MWZgoSsErf++QpiAlDnKFcqhRlm+tIOcencCjyJE6ZCA==
+  /graceful-fs/4.1.11:
+    dev: false
+    engines:
+      node: '>=0.4.0'
+    resolution:
+      integrity: sha1-Dovf5NHduIVNZOBOp8AOKgJuVlg=
+  /jsonfile/4.0.0:
+    dev: false
+    optionalDependencies:
+      graceful-fs: 4.1.11
+    resolution:
+      integrity: sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss=
+  /universalify/0.1.1:
+    dev: false
+    resolution:
+      integrity: sha1-+nG63UQ3r0wUiEHjs7Fl+enlkLc=
+registry: 'https://registry.npmjs.org/'
+shrinkwrapMinorVersion: 7
+shrinkwrapVersion: 3
+specifiers:
+  fs-extra: ^6.0.1
+  fs-tree-utils: ^0.1.0

@@ -1,6 +1,6 @@
 {
   "name": "ancestor-directories",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "Iterate over all parent directories of a given path",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
@@ -22,8 +22,11 @@
     "iterate"
   ],
   "dependencies": {
-    "tslib": "^1.9.1",
-    "monorepo-shared-assets": "^0.0.11",
-    "@types/node": "^10.1.2"
+    "tslib": "^1.9.2",
+    "monorepo-shared-assets": "^0.0.13",
+    "@types/node": "^10.3.0"
+  },
+  "engines": {
+    "node": ">= 8.9.0"
   }
 }

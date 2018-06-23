@@ -1,6 +1,6 @@
 {
   "name": "unique-temp-path",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Create temporary directory/file names that are unique",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
@@ -15,8 +15,8 @@
   "main": "index.js",
   "bin": "bin.inrepo.js",
   "dependencies": {
-    "tslib": "^1.9.1",
-    "@types/node": "^10.1.2"
+    "tslib": "^1.9.2",
+    "@types/node": "^10.3.0"
   },
   "devDependencies": {
     "preloaded-node.private": "*",

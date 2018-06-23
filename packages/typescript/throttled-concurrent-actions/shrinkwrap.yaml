@@ -1,0 +1,30 @@
+dependencies:
+  '@types/node': 10.3.4
+  '@types/ramda': 0.25.34
+  ramda: 0.25.0
+  tslib: 1.9.3
+packages:
+  /@types/node/10.3.4:
+    dev: false
+    resolution:
+      integrity: sha512-YMLlzdeNnAyLrQew39IFRkMacAR5BqKGIEei9ZjdHsIZtv+ZWKYTu1i7QJhetxQ9ReXx8w5f+cixdHZG3zgMQA==
+  /@types/ramda/0.25.34:
+    dev: false
+    resolution:
+      integrity: sha512-KWyRl3qPe2NILs0s5sNHaHVB8zzSvw57JMKF1AzWTMuPZ7MM7MdVNr10UBCRzFWf7wvq7H9tygmjdSzymaq1jA==
+  /ramda/0.25.0:
+    dev: false
+    resolution:
+      integrity: sha512-GXpfrYVPwx3K7RQ6aYT8KPS8XViSXUVJT1ONhoKPE9VAleW42YE+U+8VEyGWt41EnEQW7gwecYJriTI0pKoecQ==
+  /tslib/1.9.3:
+    dev: false
+    resolution:
+      integrity: sha512-4krF8scpejhaOgqzBEcGM7yDIEfi0/8+8zDRZhNZZ2kjmHJ4hv3zCbQWxoJGz1iw5U0Jl0nma13xzHXcncMavQ==
+registry: 'https://registry.npmjs.org/'
+shrinkwrapMinorVersion: 7
+shrinkwrapVersion: 3
+specifiers:
+  '@types/node': ^10.3.0
+  '@types/ramda': ^0.25.32
+  ramda: ^0.25.0
+  tslib: ^1.9.2

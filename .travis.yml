@@ -1,6 +1,9 @@
 branches:
   except:
     - draft
+    - tmp
+    - /.*\.(draft|tmp)$/
+    - /^(draft|tmp)\..*/
 
 language: node_js
 

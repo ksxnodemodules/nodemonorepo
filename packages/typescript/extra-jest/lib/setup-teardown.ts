@@ -2,7 +2,7 @@ import * as process from 'process'
 import * as fsx from 'fs-extra'
 import * as fsTreeUtils from 'fs-tree-utils'
 import tempPath from 'unique-temp-path'
-import {TreeObject} from 'fs-tree-utils'
+import {Tree} from 'fs-tree-utils'
 
 export type PromiseFunc<X, Y> = (x: X) => Promise<Y>
 export type SyncFunc<X, Y> = (x: X) => Y
@@ -14,8 +14,9 @@ export type Tester = () => Promise<void>
 export type AsyncTesterFactory<SM, MT> = (fn: CalledFunc<SM, MT>) => Tester
 export type SyncTesterFactory<SM, MT> = (fn: SyncCalledFunc<SM, MT>) => Tester
 
-export type Config<SY, TX> = {
-  setup: SetupFunc<SY>, teardown: TeardownFunc<TX>
+export interface Config<SY, TX> {
+  readonly setup: SetupFunc<SY>
+  readonly teardown: TeardownFunc<TX>
 }
 
 export type TesterFactory<SM, MT> = AsyncTesterFactory<SM, MT> & {
@@ -54,12 +55,12 @@ export const createFactory = base.createFactory
 
 export namespace virtualEnvironment {
   export interface Info {
-    readonly tree: TreeObject
+    readonly tree: Tree.Write.Node
     readonly container: string
     readonly previousWorkingDirectory: string
   }
 
-  export function createFactory (tree: TreeObject, container = tempPath()) {
+  export function createFactory (tree: Tree.Write.Node, container = tempPath()) {
     const previousWorkingDirectory = process.cwd()
     const info: Info = {tree, container, previousWorkingDirectory}
 

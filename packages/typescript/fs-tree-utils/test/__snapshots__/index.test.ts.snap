@@ -1,5 +1,294 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`create function create clone 1`] = `
+Object {
+  "flat": Object {
+    "all": Array [
+      "tmp/create.4/source",
+      "tmp/create.4/source/directory",
+      "tmp/create.4/source/directory/file",
+      "tmp/create.4/target",
+      "tmp/create.4/target/directory",
+      "tmp/create.4/target/directory/file",
+      "tmp/create.4/target/file",
+    ],
+    "directories": Array [
+      "tmp/create.4/source",
+      "tmp/create.4/source/directory",
+      "tmp/create.4/target",
+      "tmp/create.4/target/directory",
+    ],
+    "fileContents": Object {
+      "tmp/create.4/source/directory/file": "This file is meant to be cloned",
+      "tmp/create.4/target/directory/file": "This file is meant to be cloned",
+      "tmp/create.4/target/file": "This file is meant to be cloned",
+    },
+    "files": Array [
+      "tmp/create.4/source/directory/file",
+      "tmp/create.4/target/directory/file",
+      "tmp/create.4/target/file",
+    ],
+  },
+  "nested": Object {
+    "source": Object {
+      "directory": Object {
+        "file": "This file is meant to be cloned",
+      },
+    },
+    "target": Object {
+      "directory": Object {
+        "file": "This file is meant to be cloned",
+      },
+      "file": "This file is meant to be cloned",
+    },
+  },
+}
+`;
+
+exports[`create function create symlinks with fsx.lstat as options.stat 1`] = `
+Object {
+  "topA": Object {
+    "toBBB": Symlink {
+      "linkTarget": "../topB/middleB/bottomB",
+    },
+    "toCBA": Symlink {
+      "linkTarget": "../topC/middleB/bottomA",
+    },
+  },
+  "topB": Object {
+    "middleA": Object {
+      "toBCA": Symlink {
+        "linkTarget": "../../topB/middleC/bottomA",
+      },
+    },
+    "middleB": Object {
+      "bottomA": Object {},
+      "bottomB": "B.B.B",
+    },
+    "middleC": Object {
+      "bottomA": "B.C.A",
+      "bottomB": "B.C.B",
+    },
+  },
+  "topC": Object {
+    "middleA": Object {
+      "bottomA": "C.A.A",
+      "bottomB": "C.A.B",
+    },
+    "middleB": Object {
+      "bottomA": "C.B.A",
+      "bottomB": "C.B.B",
+    },
+    "middleC": Object {
+      "bottomA": "C.C.A",
+      "bottomB": "C.C.B",
+    },
+  },
+  "topD": Object {
+    "toA": Symlink {
+      "linkTarget": "../topA",
+    },
+    "toB": Symlink {
+      "linkTarget": "../topB",
+    },
+    "toC": Symlink {
+      "linkTarget": "../topC",
+    },
+  },
+}
+`;
+
+exports[`create function create symlinks with fsx.lstatSync as options.stat 1`] = `
+Object {
+  "topA": Object {
+    "toBBB": Symlink {
+      "linkTarget": "../topB/middleB/bottomB",
+    },
+    "toCBA": Symlink {
+      "linkTarget": "../topC/middleB/bottomA",
+    },
+  },
+  "topB": Object {
+    "middleA": Object {
+      "toBCA": Symlink {
+        "linkTarget": "../../topB/middleC/bottomA",
+      },
+    },
+    "middleB": Object {
+      "bottomA": Object {},
+      "bottomB": "B.B.B",
+    },
+    "middleC": Object {
+      "bottomA": "B.C.A",
+      "bottomB": "B.C.B",
+    },
+  },
+  "topC": Object {
+    "middleA": Object {
+      "bottomA": "C.A.A",
+      "bottomB": "C.A.B",
+    },
+    "middleB": Object {
+      "bottomA": "C.B.A",
+      "bottomB": "C.B.B",
+    },
+    "middleC": Object {
+      "bottomA": "C.C.A",
+      "bottomB": "C.C.B",
+    },
+  },
+  "topD": Object {
+    "toA": Symlink {
+      "linkTarget": "../topA",
+    },
+    "toB": Symlink {
+      "linkTarget": "../topB",
+    },
+    "toC": Symlink {
+      "linkTarget": "../topC",
+    },
+  },
+}
+`;
+
+exports[`create function create symlinks with fsx.stat as options.stat 1`] = `
+Object {
+  "topA": Object {
+    "toBBB": "B.B.B",
+    "toCBA": "C.B.A",
+  },
+  "topB": Object {
+    "middleA": Object {
+      "toBCA": "B.C.A",
+    },
+    "middleB": Object {
+      "bottomA": Object {},
+      "bottomB": "B.B.B",
+    },
+    "middleC": Object {
+      "bottomA": "B.C.A",
+      "bottomB": "B.C.B",
+    },
+  },
+  "topC": Object {
+    "middleA": Object {
+      "bottomA": "C.A.A",
+      "bottomB": "C.A.B",
+    },
+    "middleB": Object {
+      "bottomA": "C.B.A",
+      "bottomB": "C.B.B",
+    },
+    "middleC": Object {
+      "bottomA": "C.C.A",
+      "bottomB": "C.C.B",
+    },
+  },
+  "topD": Object {
+    "toA": Object {
+      "toBBB": "B.B.B",
+      "toCBA": "C.B.A",
+    },
+    "toB": Object {
+      "middleA": Object {
+        "toBCA": "B.C.A",
+      },
+      "middleB": Object {
+        "bottomA": Object {},
+        "bottomB": "B.B.B",
+      },
+      "middleC": Object {
+        "bottomA": "B.C.A",
+        "bottomB": "B.C.B",
+      },
+    },
+    "toC": Object {
+      "middleA": Object {
+        "bottomA": "C.A.A",
+        "bottomB": "C.A.B",
+      },
+      "middleB": Object {
+        "bottomA": "C.B.A",
+        "bottomB": "C.B.B",
+      },
+      "middleC": Object {
+        "bottomA": "C.C.A",
+        "bottomB": "C.C.B",
+      },
+    },
+  },
+}
+`;
+
+exports[`create function create symlinks with fsx.statSync as options.stat 1`] = `
+Object {
+  "topA": Object {
+    "toBBB": "B.B.B",
+    "toCBA": "C.B.A",
+  },
+  "topB": Object {
+    "middleA": Object {
+      "toBCA": "B.C.A",
+    },
+    "middleB": Object {
+      "bottomA": Object {},
+      "bottomB": "B.B.B",
+    },
+    "middleC": Object {
+      "bottomA": "B.C.A",
+      "bottomB": "B.C.B",
+    },
+  },
+  "topC": Object {
+    "middleA": Object {
+      "bottomA": "C.A.A",
+      "bottomB": "C.A.B",
+    },
+    "middleB": Object {
+      "bottomA": "C.B.A",
+      "bottomB": "C.B.B",
+    },
+    "middleC": Object {
+      "bottomA": "C.C.A",
+      "bottomB": "C.C.B",
+    },
+  },
+  "topD": Object {
+    "toA": Object {
+      "toBBB": "B.B.B",
+      "toCBA": "C.B.A",
+    },
+    "toB": Object {
+      "middleA": Object {
+        "toBCA": "B.C.A",
+      },
+      "middleB": Object {
+        "bottomA": Object {},
+        "bottomB": "B.B.B",
+      },
+      "middleC": Object {
+        "bottomA": "B.C.A",
+        "bottomB": "B.C.B",
+      },
+    },
+    "toC": Object {
+      "middleA": Object {
+        "bottomA": "C.A.A",
+        "bottomB": "C.A.B",
+      },
+      "middleB": Object {
+        "bottomA": "C.B.A",
+        "bottomB": "C.B.B",
+      },
+      "middleC": Object {
+        "bottomA": "C.C.A",
+        "bottomB": "C.C.B",
+      },
+    },
+  },
+}
+`;
+
 exports[`create function creates files/directories that yet to exist 1`] = `
 Object {
   "flat": Object {
@@ -96,55 +385,84 @@ Object {
     "flat": Object {
       "all": Array [
         "tmp/create.1/bar",
+        "tmp/create.1/baz",
         "tmp/create.1/emptyBar",
+        "tmp/create.1/emptyBaz",
         "tmp/create.1/emptyFoo",
+        "tmp/create.1/emptyQux",
         "tmp/create.1/firstBornFiles",
         "tmp/create.1/firstBornFiles/bar",
+        "tmp/create.1/firstBornFiles/baz",
         "tmp/create.1/firstBornFiles/foo",
+        "tmp/create.1/firstBornFiles/qux",
         "tmp/create.1/foo",
+        "tmp/create.1/qux",
       ],
       "directories": Array [
         "tmp/create.1/emptyBar",
+        "tmp/create.1/emptyBaz",
         "tmp/create.1/emptyFoo",
+        "tmp/create.1/emptyQux",
         "tmp/create.1/firstBornFiles",
       ],
       "fileContents": Object {
         "tmp/create.1/bar": "bar",
+        "tmp/create.1/baz": "baz",
         "tmp/create.1/firstBornFiles/bar": "bar",
+        "tmp/create.1/firstBornFiles/baz": "baz",
         "tmp/create.1/firstBornFiles/foo": "foo",
+        "tmp/create.1/firstBornFiles/qux": "qux",
         "tmp/create.1/foo": "foo",
+        "tmp/create.1/qux": "qux",
       },
       "files": Array [
         "tmp/create.1/bar",
+        "tmp/create.1/baz",
         "tmp/create.1/firstBornFiles/bar",
+        "tmp/create.1/firstBornFiles/baz",
         "tmp/create.1/firstBornFiles/foo",
+        "tmp/create.1/firstBornFiles/qux",
         "tmp/create.1/foo",
+        "tmp/create.1/qux",
       ],
     },
     "nested": Object {
       "bar": "bar",
+      "baz": "baz",
       "emptyBar": Object {},
+      "emptyBaz": Object {},
       "emptyFoo": Object {},
+      "emptyQux": Object {},
       "firstBornFiles": Object {
         "bar": "bar",
+        "baz": "baz",
         "foo": "foo",
+        "qux": "qux",
       },
       "foo": "foo",
+      "qux": "qux",
     },
   },
   "secondBorn": Object {
     "flat": Object {
       "all": Array [
         "tmp/create.1/bar",
+        "tmp/create.1/baz",
         "tmp/create.1/emptyBar",
+        "tmp/create.1/emptyBaz",
         "tmp/create.1/emptyFoo",
+        "tmp/create.1/emptyQux",
         "tmp/create.1/firstBornFiles",
         "tmp/create.1/firstBornFiles/bar",
+        "tmp/create.1/firstBornFiles/baz",
         "tmp/create.1/firstBornFiles/foo",
+        "tmp/create.1/firstBornFiles/qux",
         "tmp/create.1/foo",
         "tmp/create.1/newFileA",
         "tmp/create.1/newFileB",
         "tmp/create.1/newFileC",
+        "tmp/create.1/newFileD",
+        "tmp/create.1/newFileE",
         "tmp/create.1/newTreeA",
         "tmp/create.1/newTreeB",
         "tmp/create.1/newTreeB/empty",
@@ -154,10 +472,23 @@ Object {
         "tmp/create.1/newTreeC/emptyFile/file",
         "tmp/create.1/newTreeC/nonEmptyFile",
         "tmp/create.1/newTreeC/nonEmptyFile/file",
+        "tmp/create.1/newTreeD",
+        "tmp/create.1/newTreeD/newTreeA",
+        "tmp/create.1/newTreeD/newTreeB",
+        "tmp/create.1/newTreeD/newTreeB/empty",
+        "tmp/create.1/newTreeD/newTreeC",
+        "tmp/create.1/newTreeD/newTreeC/empty",
+        "tmp/create.1/newTreeD/newTreeC/emptyFile",
+        "tmp/create.1/newTreeD/newTreeC/emptyFile/file",
+        "tmp/create.1/newTreeD/newTreeC/nonEmptyFile",
+        "tmp/create.1/newTreeD/newTreeC/nonEmptyFile/file",
+        "tmp/create.1/qux",
       ],
       "directories": Array [
         "tmp/create.1/emptyBar",
+        "tmp/create.1/emptyBaz",
         "tmp/create.1/emptyFoo",
+        "tmp/create.1/emptyQux",
         "tmp/create.1/firstBornFiles",
         "tmp/create.1/newTreeA",
         "tmp/create.1/newTreeB",
@@ -166,42 +497,73 @@ Object {
         "tmp/create.1/newTreeC/empty",
         "tmp/create.1/newTreeC/emptyFile",
         "tmp/create.1/newTreeC/nonEmptyFile",
+        "tmp/create.1/newTreeD",
+        "tmp/create.1/newTreeD/newTreeA",
+        "tmp/create.1/newTreeD/newTreeB",
+        "tmp/create.1/newTreeD/newTreeB/empty",
+        "tmp/create.1/newTreeD/newTreeC",
+        "tmp/create.1/newTreeD/newTreeC/empty",
+        "tmp/create.1/newTreeD/newTreeC/emptyFile",
+        "tmp/create.1/newTreeD/newTreeC/nonEmptyFile",
       ],
       "fileContents": Object {
         "tmp/create.1/bar": "bar",
+        "tmp/create.1/baz": "baz",
         "tmp/create.1/firstBornFiles/bar": "bar",
+        "tmp/create.1/firstBornFiles/baz": "baz",
         "tmp/create.1/firstBornFiles/foo": "foo",
+        "tmp/create.1/firstBornFiles/qux": "qux",
         "tmp/create.1/foo": "foo",
         "tmp/create.1/newFileA": "First New File",
         "tmp/create.1/newFileB": "Second New File",
         "tmp/create.1/newFileC": "Third New File",
+        "tmp/create.1/newFileD": "Forth New File",
+        "tmp/create.1/newFileE": "Fifth New File",
         "tmp/create.1/newTreeC/emptyFile/file": "",
         "tmp/create.1/newTreeC/nonEmptyFile/file": "Not empty",
+        "tmp/create.1/newTreeD/newTreeC/emptyFile/file": "",
+        "tmp/create.1/newTreeD/newTreeC/nonEmptyFile/file": "Not empty",
+        "tmp/create.1/qux": "qux",
       },
       "files": Array [
         "tmp/create.1/bar",
+        "tmp/create.1/baz",
         "tmp/create.1/firstBornFiles/bar",
+        "tmp/create.1/firstBornFiles/baz",
         "tmp/create.1/firstBornFiles/foo",
+        "tmp/create.1/firstBornFiles/qux",
         "tmp/create.1/foo",
         "tmp/create.1/newFileA",
         "tmp/create.1/newFileB",
         "tmp/create.1/newFileC",
+        "tmp/create.1/newFileD",
+        "tmp/create.1/newFileE",
         "tmp/create.1/newTreeC/emptyFile/file",
         "tmp/create.1/newTreeC/nonEmptyFile/file",
+        "tmp/create.1/newTreeD/newTreeC/emptyFile/file",
+        "tmp/create.1/newTreeD/newTreeC/nonEmptyFile/file",
+        "tmp/create.1/qux",
       ],
     },
     "nested": Object {
       "bar": "bar",
+      "baz": "baz",
       "emptyBar": Object {},
+      "emptyBaz": Object {},
       "emptyFoo": Object {},
+      "emptyQux": Object {},
       "firstBornFiles": Object {
         "bar": "bar",
+        "baz": "baz",
         "foo": "foo",
+        "qux": "qux",
       },
       "foo": "foo",
       "newFileA": "First New File",
       "newFileB": "Second New File",
       "newFileC": "Third New File",
+      "newFileD": "Forth New File",
+      "newFileE": "Fifth New File",
       "newTreeA": Object {},
       "newTreeB": Object {
         "empty": Object {},
@@ -215,15 +577,99 @@ Object {
           "file": "Not empty",
         },
       },
+      "newTreeD": Object {
+        "newTreeA": Object {},
+        "newTreeB": Object {
+          "empty": Object {},
+        },
+        "newTreeC": Object {
+          "empty": Object {},
+          "emptyFile": Object {
+            "file": "",
+          },
+          "nonEmptyFile": Object {
+            "file": "Not empty",
+          },
+        },
+      },
+      "qux": "qux",
     },
   },
 }
 `;
 
-exports[`create function throws error when encounter mismatched entities in which a folder is requested in place of a file 1`] = `[Error: EISDIR: illegal operation on a directory, open 'tmp/create.2.0/mismatched']`;
+exports[`create function throws error when encounter mismatched entities in which a file is requested in place of a folder 1`] = `[Error: EISDIR: illegal operation on a directory, open 'tmp/create.2.0/mismatched']`;
+
+exports[`create function throws error when encounter mismatched entities in which a folder is requested in place of a file 1`] = `[Error: Entity tmp/create.2.1/mismatched exists but is not directory]`;
 
 exports[`traverse function does not dig names end with "B" 1`] = `
 Array [
+  Object {
+    "container": "tmp/traverse.0",
+    "item": "link",
+    "level": 0,
+    "path": "tmp/traverse.0/link",
+  },
+  Object {
+    "container": "tmp/traverse.0/link",
+    "item": "toA",
+    "level": 1,
+    "path": "tmp/traverse.0/link/toA",
+  },
+  Object {
+    "container": "tmp/traverse.0/link",
+    "item": "toB",
+    "level": 1,
+    "path": "tmp/traverse.0/link/toB",
+  },
+  Object {
+    "container": "tmp/traverse.0/link",
+    "item": "toC",
+    "level": 1,
+    "path": "tmp/traverse.0/link/toC",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC",
+    "item": "middleA",
+    "level": 2,
+    "path": "tmp/traverse.0/link/toC/middleA",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC/middleA",
+    "item": "bottomA",
+    "level": 3,
+    "path": "tmp/traverse.0/link/toC/middleA/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC/middleA",
+    "item": "bottomB",
+    "level": 3,
+    "path": "tmp/traverse.0/link/toC/middleA/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC",
+    "item": "middleB",
+    "level": 2,
+    "path": "tmp/traverse.0/link/toC/middleB",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC",
+    "item": "middleC",
+    "level": 2,
+    "path": "tmp/traverse.0/link/toC/middleC",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC/middleC",
+    "item": "bottomA",
+    "level": 3,
+    "path": "tmp/traverse.0/link/toC/middleC/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC/middleC",
+    "item": "bottomB",
+    "level": 3,
+    "path": "tmp/traverse.0/link/toC/middleC/bottomB",
+  },
   Object {
     "container": "tmp/traverse.0",
     "item": "topA",
@@ -291,6 +737,12 @@ exports[`traverse function only dig names end with "B" 1`] = `
 Array [
   Object {
     "container": "tmp/traverse.0",
+    "item": "link",
+    "level": 0,
+    "path": "tmp/traverse.0/link",
+  },
+  Object {
+    "container": "tmp/traverse.0",
     "item": "topA",
     "level": 0,
     "path": "tmp/traverse.0/topA",
@@ -340,10 +792,892 @@ Array [
 ]
 `;
 
-exports[`traverse function works with default \`deep\` and \`level\` 1`] = `[Error: Entity tmp/create.2.1/mismatched exists but is not directory]`;
-
-exports[`traverse function works with default \`deep\` and \`level\` 2`] = `
+exports[`traverse function works with \`fs.lstat\` as \`stat\` 1`] = `
 Array [
+  Object {
+    "container": "tmp/traverse.0",
+    "item": "link",
+    "level": 0,
+    "path": "tmp/traverse.0/link",
+  },
+  Object {
+    "container": "tmp/traverse.0/link",
+    "item": "toA",
+    "level": 1,
+    "path": "tmp/traverse.0/link/toA",
+  },
+  Object {
+    "container": "tmp/traverse.0/link",
+    "item": "toB",
+    "level": 1,
+    "path": "tmp/traverse.0/link/toB",
+  },
+  Object {
+    "container": "tmp/traverse.0/link",
+    "item": "toC",
+    "level": 1,
+    "path": "tmp/traverse.0/link/toC",
+  },
+  Object {
+    "container": "tmp/traverse.0",
+    "item": "topA",
+    "level": 0,
+    "path": "tmp/traverse.0/topA",
+  },
+  Object {
+    "container": "tmp/traverse.0",
+    "item": "topB",
+    "level": 0,
+    "path": "tmp/traverse.0/topB",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB",
+    "item": "middleA",
+    "level": 1,
+    "path": "tmp/traverse.0/topB/middleA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB",
+    "item": "middleB",
+    "level": 1,
+    "path": "tmp/traverse.0/topB/middleB",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB/middleB",
+    "item": "bottomA",
+    "level": 2,
+    "path": "tmp/traverse.0/topB/middleB/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB/middleB",
+    "item": "bottomB",
+    "level": 2,
+    "path": "tmp/traverse.0/topB/middleB/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB",
+    "item": "middleC",
+    "level": 1,
+    "path": "tmp/traverse.0/topB/middleC",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB/middleC",
+    "item": "bottomA",
+    "level": 2,
+    "path": "tmp/traverse.0/topB/middleC/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB/middleC",
+    "item": "bottomB",
+    "level": 2,
+    "path": "tmp/traverse.0/topB/middleC/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0",
+    "item": "topC",
+    "level": 0,
+    "path": "tmp/traverse.0/topC",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC",
+    "item": "middleA",
+    "level": 1,
+    "path": "tmp/traverse.0/topC/middleA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC/middleA",
+    "item": "bottomA",
+    "level": 2,
+    "path": "tmp/traverse.0/topC/middleA/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC/middleA",
+    "item": "bottomB",
+    "level": 2,
+    "path": "tmp/traverse.0/topC/middleA/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC",
+    "item": "middleB",
+    "level": 1,
+    "path": "tmp/traverse.0/topC/middleB",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC/middleB",
+    "item": "bottomA",
+    "level": 2,
+    "path": "tmp/traverse.0/topC/middleB/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC/middleB",
+    "item": "bottomB",
+    "level": 2,
+    "path": "tmp/traverse.0/topC/middleB/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC",
+    "item": "middleC",
+    "level": 1,
+    "path": "tmp/traverse.0/topC/middleC",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC/middleC",
+    "item": "bottomA",
+    "level": 2,
+    "path": "tmp/traverse.0/topC/middleC/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC/middleC",
+    "item": "bottomB",
+    "level": 2,
+    "path": "tmp/traverse.0/topC/middleC/bottomB",
+  },
+]
+`;
+
+exports[`traverse function works with \`fs.lstatSync\` as \`stat\` 1`] = `
+Array [
+  Object {
+    "container": "tmp/traverse.0",
+    "item": "link",
+    "level": 0,
+    "path": "tmp/traverse.0/link",
+  },
+  Object {
+    "container": "tmp/traverse.0/link",
+    "item": "toA",
+    "level": 1,
+    "path": "tmp/traverse.0/link/toA",
+  },
+  Object {
+    "container": "tmp/traverse.0/link",
+    "item": "toB",
+    "level": 1,
+    "path": "tmp/traverse.0/link/toB",
+  },
+  Object {
+    "container": "tmp/traverse.0/link",
+    "item": "toC",
+    "level": 1,
+    "path": "tmp/traverse.0/link/toC",
+  },
+  Object {
+    "container": "tmp/traverse.0",
+    "item": "topA",
+    "level": 0,
+    "path": "tmp/traverse.0/topA",
+  },
+  Object {
+    "container": "tmp/traverse.0",
+    "item": "topB",
+    "level": 0,
+    "path": "tmp/traverse.0/topB",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB",
+    "item": "middleA",
+    "level": 1,
+    "path": "tmp/traverse.0/topB/middleA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB",
+    "item": "middleB",
+    "level": 1,
+    "path": "tmp/traverse.0/topB/middleB",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB/middleB",
+    "item": "bottomA",
+    "level": 2,
+    "path": "tmp/traverse.0/topB/middleB/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB/middleB",
+    "item": "bottomB",
+    "level": 2,
+    "path": "tmp/traverse.0/topB/middleB/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB",
+    "item": "middleC",
+    "level": 1,
+    "path": "tmp/traverse.0/topB/middleC",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB/middleC",
+    "item": "bottomA",
+    "level": 2,
+    "path": "tmp/traverse.0/topB/middleC/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB/middleC",
+    "item": "bottomB",
+    "level": 2,
+    "path": "tmp/traverse.0/topB/middleC/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0",
+    "item": "topC",
+    "level": 0,
+    "path": "tmp/traverse.0/topC",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC",
+    "item": "middleA",
+    "level": 1,
+    "path": "tmp/traverse.0/topC/middleA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC/middleA",
+    "item": "bottomA",
+    "level": 2,
+    "path": "tmp/traverse.0/topC/middleA/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC/middleA",
+    "item": "bottomB",
+    "level": 2,
+    "path": "tmp/traverse.0/topC/middleA/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC",
+    "item": "middleB",
+    "level": 1,
+    "path": "tmp/traverse.0/topC/middleB",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC/middleB",
+    "item": "bottomA",
+    "level": 2,
+    "path": "tmp/traverse.0/topC/middleB/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC/middleB",
+    "item": "bottomB",
+    "level": 2,
+    "path": "tmp/traverse.0/topC/middleB/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC",
+    "item": "middleC",
+    "level": 1,
+    "path": "tmp/traverse.0/topC/middleC",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC/middleC",
+    "item": "bottomA",
+    "level": 2,
+    "path": "tmp/traverse.0/topC/middleC/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC/middleC",
+    "item": "bottomB",
+    "level": 2,
+    "path": "tmp/traverse.0/topC/middleC/bottomB",
+  },
+]
+`;
+
+exports[`traverse function works with \`fs.stat\` as \`stat\` 1`] = `
+Array [
+  Object {
+    "container": "tmp/traverse.0",
+    "item": "link",
+    "level": 0,
+    "path": "tmp/traverse.0/link",
+  },
+  Object {
+    "container": "tmp/traverse.0/link",
+    "item": "toA",
+    "level": 1,
+    "path": "tmp/traverse.0/link/toA",
+  },
+  Object {
+    "container": "tmp/traverse.0/link",
+    "item": "toB",
+    "level": 1,
+    "path": "tmp/traverse.0/link/toB",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toB",
+    "item": "middleA",
+    "level": 2,
+    "path": "tmp/traverse.0/link/toB/middleA",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toB",
+    "item": "middleB",
+    "level": 2,
+    "path": "tmp/traverse.0/link/toB/middleB",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toB/middleB",
+    "item": "bottomA",
+    "level": 3,
+    "path": "tmp/traverse.0/link/toB/middleB/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toB/middleB",
+    "item": "bottomB",
+    "level": 3,
+    "path": "tmp/traverse.0/link/toB/middleB/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toB",
+    "item": "middleC",
+    "level": 2,
+    "path": "tmp/traverse.0/link/toB/middleC",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toB/middleC",
+    "item": "bottomA",
+    "level": 3,
+    "path": "tmp/traverse.0/link/toB/middleC/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toB/middleC",
+    "item": "bottomB",
+    "level": 3,
+    "path": "tmp/traverse.0/link/toB/middleC/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0/link",
+    "item": "toC",
+    "level": 1,
+    "path": "tmp/traverse.0/link/toC",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC",
+    "item": "middleA",
+    "level": 2,
+    "path": "tmp/traverse.0/link/toC/middleA",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC/middleA",
+    "item": "bottomA",
+    "level": 3,
+    "path": "tmp/traverse.0/link/toC/middleA/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC/middleA",
+    "item": "bottomB",
+    "level": 3,
+    "path": "tmp/traverse.0/link/toC/middleA/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC",
+    "item": "middleB",
+    "level": 2,
+    "path": "tmp/traverse.0/link/toC/middleB",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC/middleB",
+    "item": "bottomA",
+    "level": 3,
+    "path": "tmp/traverse.0/link/toC/middleB/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC/middleB",
+    "item": "bottomB",
+    "level": 3,
+    "path": "tmp/traverse.0/link/toC/middleB/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC",
+    "item": "middleC",
+    "level": 2,
+    "path": "tmp/traverse.0/link/toC/middleC",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC/middleC",
+    "item": "bottomA",
+    "level": 3,
+    "path": "tmp/traverse.0/link/toC/middleC/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC/middleC",
+    "item": "bottomB",
+    "level": 3,
+    "path": "tmp/traverse.0/link/toC/middleC/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0",
+    "item": "topA",
+    "level": 0,
+    "path": "tmp/traverse.0/topA",
+  },
+  Object {
+    "container": "tmp/traverse.0",
+    "item": "topB",
+    "level": 0,
+    "path": "tmp/traverse.0/topB",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB",
+    "item": "middleA",
+    "level": 1,
+    "path": "tmp/traverse.0/topB/middleA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB",
+    "item": "middleB",
+    "level": 1,
+    "path": "tmp/traverse.0/topB/middleB",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB/middleB",
+    "item": "bottomA",
+    "level": 2,
+    "path": "tmp/traverse.0/topB/middleB/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB/middleB",
+    "item": "bottomB",
+    "level": 2,
+    "path": "tmp/traverse.0/topB/middleB/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB",
+    "item": "middleC",
+    "level": 1,
+    "path": "tmp/traverse.0/topB/middleC",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB/middleC",
+    "item": "bottomA",
+    "level": 2,
+    "path": "tmp/traverse.0/topB/middleC/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB/middleC",
+    "item": "bottomB",
+    "level": 2,
+    "path": "tmp/traverse.0/topB/middleC/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0",
+    "item": "topC",
+    "level": 0,
+    "path": "tmp/traverse.0/topC",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC",
+    "item": "middleA",
+    "level": 1,
+    "path": "tmp/traverse.0/topC/middleA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC/middleA",
+    "item": "bottomA",
+    "level": 2,
+    "path": "tmp/traverse.0/topC/middleA/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC/middleA",
+    "item": "bottomB",
+    "level": 2,
+    "path": "tmp/traverse.0/topC/middleA/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC",
+    "item": "middleB",
+    "level": 1,
+    "path": "tmp/traverse.0/topC/middleB",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC/middleB",
+    "item": "bottomA",
+    "level": 2,
+    "path": "tmp/traverse.0/topC/middleB/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC/middleB",
+    "item": "bottomB",
+    "level": 2,
+    "path": "tmp/traverse.0/topC/middleB/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC",
+    "item": "middleC",
+    "level": 1,
+    "path": "tmp/traverse.0/topC/middleC",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC/middleC",
+    "item": "bottomA",
+    "level": 2,
+    "path": "tmp/traverse.0/topC/middleC/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC/middleC",
+    "item": "bottomB",
+    "level": 2,
+    "path": "tmp/traverse.0/topC/middleC/bottomB",
+  },
+]
+`;
+
+exports[`traverse function works with \`fs.statSync\` as \`stat\` 1`] = `
+Array [
+  Object {
+    "container": "tmp/traverse.0",
+    "item": "link",
+    "level": 0,
+    "path": "tmp/traverse.0/link",
+  },
+  Object {
+    "container": "tmp/traverse.0/link",
+    "item": "toA",
+    "level": 1,
+    "path": "tmp/traverse.0/link/toA",
+  },
+  Object {
+    "container": "tmp/traverse.0/link",
+    "item": "toB",
+    "level": 1,
+    "path": "tmp/traverse.0/link/toB",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toB",
+    "item": "middleA",
+    "level": 2,
+    "path": "tmp/traverse.0/link/toB/middleA",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toB",
+    "item": "middleB",
+    "level": 2,
+    "path": "tmp/traverse.0/link/toB/middleB",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toB/middleB",
+    "item": "bottomA",
+    "level": 3,
+    "path": "tmp/traverse.0/link/toB/middleB/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toB/middleB",
+    "item": "bottomB",
+    "level": 3,
+    "path": "tmp/traverse.0/link/toB/middleB/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toB",
+    "item": "middleC",
+    "level": 2,
+    "path": "tmp/traverse.0/link/toB/middleC",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toB/middleC",
+    "item": "bottomA",
+    "level": 3,
+    "path": "tmp/traverse.0/link/toB/middleC/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toB/middleC",
+    "item": "bottomB",
+    "level": 3,
+    "path": "tmp/traverse.0/link/toB/middleC/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0/link",
+    "item": "toC",
+    "level": 1,
+    "path": "tmp/traverse.0/link/toC",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC",
+    "item": "middleA",
+    "level": 2,
+    "path": "tmp/traverse.0/link/toC/middleA",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC/middleA",
+    "item": "bottomA",
+    "level": 3,
+    "path": "tmp/traverse.0/link/toC/middleA/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC/middleA",
+    "item": "bottomB",
+    "level": 3,
+    "path": "tmp/traverse.0/link/toC/middleA/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC",
+    "item": "middleB",
+    "level": 2,
+    "path": "tmp/traverse.0/link/toC/middleB",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC/middleB",
+    "item": "bottomA",
+    "level": 3,
+    "path": "tmp/traverse.0/link/toC/middleB/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC/middleB",
+    "item": "bottomB",
+    "level": 3,
+    "path": "tmp/traverse.0/link/toC/middleB/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC",
+    "item": "middleC",
+    "level": 2,
+    "path": "tmp/traverse.0/link/toC/middleC",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC/middleC",
+    "item": "bottomA",
+    "level": 3,
+    "path": "tmp/traverse.0/link/toC/middleC/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC/middleC",
+    "item": "bottomB",
+    "level": 3,
+    "path": "tmp/traverse.0/link/toC/middleC/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0",
+    "item": "topA",
+    "level": 0,
+    "path": "tmp/traverse.0/topA",
+  },
+  Object {
+    "container": "tmp/traverse.0",
+    "item": "topB",
+    "level": 0,
+    "path": "tmp/traverse.0/topB",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB",
+    "item": "middleA",
+    "level": 1,
+    "path": "tmp/traverse.0/topB/middleA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB",
+    "item": "middleB",
+    "level": 1,
+    "path": "tmp/traverse.0/topB/middleB",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB/middleB",
+    "item": "bottomA",
+    "level": 2,
+    "path": "tmp/traverse.0/topB/middleB/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB/middleB",
+    "item": "bottomB",
+    "level": 2,
+    "path": "tmp/traverse.0/topB/middleB/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB",
+    "item": "middleC",
+    "level": 1,
+    "path": "tmp/traverse.0/topB/middleC",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB/middleC",
+    "item": "bottomA",
+    "level": 2,
+    "path": "tmp/traverse.0/topB/middleC/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topB/middleC",
+    "item": "bottomB",
+    "level": 2,
+    "path": "tmp/traverse.0/topB/middleC/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0",
+    "item": "topC",
+    "level": 0,
+    "path": "tmp/traverse.0/topC",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC",
+    "item": "middleA",
+    "level": 1,
+    "path": "tmp/traverse.0/topC/middleA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC/middleA",
+    "item": "bottomA",
+    "level": 2,
+    "path": "tmp/traverse.0/topC/middleA/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC/middleA",
+    "item": "bottomB",
+    "level": 2,
+    "path": "tmp/traverse.0/topC/middleA/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC",
+    "item": "middleB",
+    "level": 1,
+    "path": "tmp/traverse.0/topC/middleB",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC/middleB",
+    "item": "bottomA",
+    "level": 2,
+    "path": "tmp/traverse.0/topC/middleB/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC/middleB",
+    "item": "bottomB",
+    "level": 2,
+    "path": "tmp/traverse.0/topC/middleB/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC",
+    "item": "middleC",
+    "level": 1,
+    "path": "tmp/traverse.0/topC/middleC",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC/middleC",
+    "item": "bottomA",
+    "level": 2,
+    "path": "tmp/traverse.0/topC/middleC/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/topC/middleC",
+    "item": "bottomB",
+    "level": 2,
+    "path": "tmp/traverse.0/topC/middleC/bottomB",
+  },
+]
+`;
+
+exports[`traverse function works with default \`deep\` and \`level\` 1`] = `
+Array [
+  Object {
+    "container": "tmp/traverse.0",
+    "item": "link",
+    "level": 0,
+    "path": "tmp/traverse.0/link",
+  },
+  Object {
+    "container": "tmp/traverse.0/link",
+    "item": "toA",
+    "level": 1,
+    "path": "tmp/traverse.0/link/toA",
+  },
+  Object {
+    "container": "tmp/traverse.0/link",
+    "item": "toB",
+    "level": 1,
+    "path": "tmp/traverse.0/link/toB",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toB",
+    "item": "middleA",
+    "level": 2,
+    "path": "tmp/traverse.0/link/toB/middleA",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toB",
+    "item": "middleB",
+    "level": 2,
+    "path": "tmp/traverse.0/link/toB/middleB",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toB/middleB",
+    "item": "bottomA",
+    "level": 3,
+    "path": "tmp/traverse.0/link/toB/middleB/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toB/middleB",
+    "item": "bottomB",
+    "level": 3,
+    "path": "tmp/traverse.0/link/toB/middleB/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toB",
+    "item": "middleC",
+    "level": 2,
+    "path": "tmp/traverse.0/link/toB/middleC",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toB/middleC",
+    "item": "bottomA",
+    "level": 3,
+    "path": "tmp/traverse.0/link/toB/middleC/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toB/middleC",
+    "item": "bottomB",
+    "level": 3,
+    "path": "tmp/traverse.0/link/toB/middleC/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0/link",
+    "item": "toC",
+    "level": 1,
+    "path": "tmp/traverse.0/link/toC",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC",
+    "item": "middleA",
+    "level": 2,
+    "path": "tmp/traverse.0/link/toC/middleA",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC/middleA",
+    "item": "bottomA",
+    "level": 3,
+    "path": "tmp/traverse.0/link/toC/middleA/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC/middleA",
+    "item": "bottomB",
+    "level": 3,
+    "path": "tmp/traverse.0/link/toC/middleA/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC",
+    "item": "middleB",
+    "level": 2,
+    "path": "tmp/traverse.0/link/toC/middleB",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC/middleB",
+    "item": "bottomA",
+    "level": 3,
+    "path": "tmp/traverse.0/link/toC/middleB/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC/middleB",
+    "item": "bottomB",
+    "level": 3,
+    "path": "tmp/traverse.0/link/toC/middleB/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC",
+    "item": "middleC",
+    "level": 2,
+    "path": "tmp/traverse.0/link/toC/middleC",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC/middleC",
+    "item": "bottomA",
+    "level": 3,
+    "path": "tmp/traverse.0/link/toC/middleC/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC/middleC",
+    "item": "bottomB",
+    "level": 3,
+    "path": "tmp/traverse.0/link/toC/middleC/bottomB",
+  },
   Object {
     "container": "tmp/traverse.0",
     "item": "topA",
@@ -463,6 +1797,126 @@ Array [
 
 exports[`traverse function works with provided \`deep\` and \`level\` 1`] = `
 Array [
+  Object {
+    "container": "tmp/traverse.0",
+    "item": "link",
+    "level": 3,
+    "path": "tmp/traverse.0/link",
+  },
+  Object {
+    "container": "tmp/traverse.0/link",
+    "item": "toA",
+    "level": 4,
+    "path": "tmp/traverse.0/link/toA",
+  },
+  Object {
+    "container": "tmp/traverse.0/link",
+    "item": "toB",
+    "level": 4,
+    "path": "tmp/traverse.0/link/toB",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toB",
+    "item": "middleA",
+    "level": 5,
+    "path": "tmp/traverse.0/link/toB/middleA",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toB",
+    "item": "middleB",
+    "level": 5,
+    "path": "tmp/traverse.0/link/toB/middleB",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toB/middleB",
+    "item": "bottomA",
+    "level": 6,
+    "path": "tmp/traverse.0/link/toB/middleB/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toB/middleB",
+    "item": "bottomB",
+    "level": 6,
+    "path": "tmp/traverse.0/link/toB/middleB/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toB",
+    "item": "middleC",
+    "level": 5,
+    "path": "tmp/traverse.0/link/toB/middleC",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toB/middleC",
+    "item": "bottomA",
+    "level": 6,
+    "path": "tmp/traverse.0/link/toB/middleC/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toB/middleC",
+    "item": "bottomB",
+    "level": 6,
+    "path": "tmp/traverse.0/link/toB/middleC/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0/link",
+    "item": "toC",
+    "level": 4,
+    "path": "tmp/traverse.0/link/toC",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC",
+    "item": "middleA",
+    "level": 5,
+    "path": "tmp/traverse.0/link/toC/middleA",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC/middleA",
+    "item": "bottomA",
+    "level": 6,
+    "path": "tmp/traverse.0/link/toC/middleA/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC/middleA",
+    "item": "bottomB",
+    "level": 6,
+    "path": "tmp/traverse.0/link/toC/middleA/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC",
+    "item": "middleB",
+    "level": 5,
+    "path": "tmp/traverse.0/link/toC/middleB",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC/middleB",
+    "item": "bottomA",
+    "level": 6,
+    "path": "tmp/traverse.0/link/toC/middleB/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC/middleB",
+    "item": "bottomB",
+    "level": 6,
+    "path": "tmp/traverse.0/link/toC/middleB/bottomB",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC",
+    "item": "middleC",
+    "level": 5,
+    "path": "tmp/traverse.0/link/toC/middleC",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC/middleC",
+    "item": "bottomA",
+    "level": 6,
+    "path": "tmp/traverse.0/link/toC/middleC/bottomA",
+  },
+  Object {
+    "container": "tmp/traverse.0/link/toC/middleC",
+    "item": "bottomB",
+    "level": 6,
+    "path": "tmp/traverse.0/link/toC/middleC/bottomB",
+  },
   Object {
     "container": "tmp/traverse.0",
     "item": "topA",

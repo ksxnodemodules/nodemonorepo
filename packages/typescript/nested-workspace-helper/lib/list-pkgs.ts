@@ -1,6 +1,5 @@
 import * as fsx from 'fs-extra'
 import * as fsTreeUtils from 'fs-tree-utils'
-import {TraversalResultItem} from 'fs-tree-utils/lib/traverse'
 import {Package} from './types'
 
 export type ListPackageResult = Promise<Package.List>
@@ -10,12 +9,16 @@ export type ListPackageResult = Promise<Package.List>
  * @param dirname Directory of the monorepo
  */
 export async function listAllPackages (dirname: string): ListPackageResult {
+  type TraversalResultItem = fsTreeUtils.Traverse.Result.Item
+
   const createItem = async (x: TraversalResultItem): Promise<Package.ListItem> =>
     ({path: x.container, manifestFile: x.path, manifestContent: await fsx.readJSON(x.path)})
 
   return await Promise.all(
     (
-      await fsTreeUtils.traverse(dirname, x => !/node_modules/.test(x.item))
+      await fsTreeUtils.traverse(dirname, {
+        deep: x => !/node_modules/.test(x.item)
+      })
     )
       .filter(x => x.item === 'package.json')
       .filter(x => x.stats.isFile())

@@ -3,7 +3,8 @@ import minimatch from 'minimatch'
 import * as yaml from 'js-yaml'
 import * as fsx from 'fs-extra'
 import * as fsTreeUtils from 'fs-tree-utils'
-import {DeepFunc} from 'fs-tree-utils/lib/traverse'
+import {Traverse} from 'fs-tree-utils'
+import DeepFunc = Traverse.Options.DeepFunc
 
 export type IgnoreArray = ReadonlyArray<string>
 export type StringTester = string
@@ -109,10 +110,7 @@ export async function getIgnoreFiles (
   deep = DEFAULT_TRAVERSE_DEEP
 ): Promise<IgnoreArray> {
   return (
-    await fsTreeUtils.traverse(
-      dirname,
-      deep
-    )
+    await fsTreeUtils.traverse(dirname, {deep})
   )
     .filter(x => x.stats.isDirectory() && minimatch(x.path, containerPattern, {dot: true}))
     .map(x => path.join(x.path, basename))

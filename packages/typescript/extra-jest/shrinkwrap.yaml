@@ -1,31 +1,27 @@
 dependencies:
   '@types/fs-extra': 5.0.2
-  '@types/node': 10.1.2
-  '@types/ramda': 0.25.29
+  '@types/node': 10.3.0
+  '@types/ramda': 0.25.32
   fs-extra: 6.0.1
   fs-tree-utils: 'link:../fs-tree-utils'
   ramda: 0.25.0
-  tslib: 1.9.1
+  tslib: 1.9.2
   unique-temp-path: 'link:../unique-temp-path'
 packages:
   /@types/fs-extra/5.0.2:
     dependencies:
-      '@types/node': 10.0.8
+      '@types/node': 10.3.0
     dev: false
     resolution:
       integrity: sha512-Q3FWsbdmkQd1ib11A4XNWQvRD//5KpPoGawA8aB2DR7pWKoW9XQv3+dGxD/Z1eVFze23Okdo27ZQytVFlweKvQ==
-  /@types/node/10.0.8:
+  /@types/node/10.3.0:
     dev: false
     resolution:
-      integrity: sha512-MFFKFv2X4iZy/NFl1m1E8uwE1CR96SGwJjgHma09PLtqOWoj3nqeJHMG+P/EuJGVLvC2I6MdQRQsr4TcRduIow==
-  /@types/node/10.1.2:
+      integrity: sha512-hWzNviaVFIr1TqcRA8ou49JaSHp+Rfabmnqg2kNvusKqLhPU0rIsGPUj5WJJ7ld4Bb7qdgLmIhLfCD1qS08IVA==
+  /@types/ramda/0.25.32:
     dev: false
     resolution:
-      integrity: sha512-bjk1RIeZBCe/WukrFToIVegOf91Pebr8cXYBwLBIsfiGWVQ+ifwWsT59H3RxrWzWrzd1l/Amk1/ioY5Fq3/bpA==
-  /@types/ramda/0.25.29:
-    dev: false
-    resolution:
-      integrity: sha512-fWuYGHXie0IfRMh7zh90fsbgEvAfPt+SBmg1eNhTVecnjDQujP4npzJJFZdron9RwxfKmZ2PWmcfa1oKln4yfA==
+      integrity: sha512-KvkOhOprW8ln1XtlBoUPxrObnrZ1SQZezF9UlkWMYF0ZKpzlbwZDEcMZo6XcMsg/9M9Vl1lstCnCE8J7qxFAvQ==
   /fs-extra/6.0.1:
     dependencies:
       graceful-fs: 4.1.11
@@ -50,10 +46,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-GXpfrYVPwx3K7RQ6aYT8KPS8XViSXUVJT1ONhoKPE9VAleW42YE+U+8VEyGWt41EnEQW7gwecYJriTI0pKoecQ==
-  /tslib/1.9.1:
+  /tslib/1.9.2:
     dev: false
     resolution:
-      integrity: sha512-avfPS28HmGLLc2o4elcc2EIq2FcH++Yo5YxpBZi9Yw93BCTGFthI4HPE4Rpep6vSYQaK8e69PelM44tPj+RaQg==
+      integrity: sha512-AVP5Xol3WivEr7hnssHDsaM+lVrVXWUvd1cfXTRkTj80b//6g2wIFEH6hZG0muGZRnHGrfttpdzRk3YlBkWjKw==
   /universalify/0.1.1:
     dev: false
     resolution:
@@ -63,10 +59,10 @@ shrinkwrapMinorVersion: 7
 shrinkwrapVersion: 3
 specifiers:
   '@types/fs-extra': ^5.0.2
-  '@types/node': ^10.1.2
-  '@types/ramda': ^0.25.29
+  '@types/node': ^10.3.0
+  '@types/ramda': ^0.25.32
   fs-extra: ^6.0.1
-  fs-tree-utils: ^0.0.7
+  fs-tree-utils: ^0.1.0
   ramda: ^0.25.0
-  tslib: ^1.9.1
-  unique-temp-path: ^0.0.8
+  tslib: ^1.9.2
+  unique-temp-path: ^0.0.9

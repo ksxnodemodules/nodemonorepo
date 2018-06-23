@@ -6,11 +6,26 @@ import {
   InvalidPackage
 } from './types'
 
+/**
+ * @param dirname Path to directory that contains all local packages
+ * @returns A promise that resolves an array of invalid packages' information
+ *
+ * ### Invalid Package
+ *   * Public package depends on private dependency for production.
+ *   * Packages have the same name.
+ *   * Package depends on itself.
+ *   * Package depends on invalid packages.
+ */
 export async function listAllInvalidPackages (dirname: string): Promise<InvalidPackage.List> {
   return listAllInvalidPackages.fromDependencyMap(await getDependencyMap(dirname))
 }
 
 export namespace listAllInvalidPackages {
+  /**
+   * Get invalid packages from dependency map
+   * @param map Dependency map
+   * @returns List of invalid packages
+   */
   export function fromDependencyMap (map: Dependency.Map): InvalidPackage.List {
     const prvs = fromDependencyMap.getPrivateDependencyVictims(map)
     const dups = fromDependencyMap.getNameDuplicationVictims(map)

@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`with asynchronous main with asynchronous rejection handler when promise rejects 1`] = `
+Result {
+  "param": 1234,
+  "reason": [Error: This is a rejection reason],
+}
+`;
+
+exports[`with asynchronous main with asynchronous rejection handler when promise resolves 1`] = `
+Result {
+  "value": 1234,
+}
+`;
+
+exports[`with asynchronous main with synchronous rejection handler when promise rejects 1`] = `
+Result {
+  "param": 1234,
+  "reason": [Error: This is a rejection reason],
+}
+`;
+
+exports[`with asynchronous main with synchronous rejection handler when promise resolves 1`] = `
+Result {
+  "value": 1234,
+}
+`;
+
+exports[`with asynchronous main without rejection handler when promise rejects 1`] = `[Error: This is a rejection reason]`;
+
+exports[`with asynchronous main without rejection handler when promise resolves 1`] = `
+Result {
+  "value": 1234,
+}
+`;
+
+exports[`with synchronous main with asynchronous rejection handler when promise rejects 1`] = `
+Result {
+  "param": 1234,
+  "reason": [Error: This is a rejection reason],
+}
+`;
+
+exports[`with synchronous main with asynchronous rejection handler when promise resolves 1`] = `
+Result {
+  "value": 1234,
+}
+`;
+
+exports[`with synchronous main with synchronous rejection handler when promise rejects 1`] = `
+Result {
+  "param": 1234,
+  "reason": [Error: This is a rejection reason],
+}
+`;
+
+exports[`with synchronous main with synchronous rejection handler when promise resolves 1`] = `
+Result {
+  "value": 1234,
+}
+`;
+
+exports[`with synchronous main without rejection handler when promise rejects 1`] = `[Error: This is a rejection reason]`;
+
+exports[`with synchronous main without rejection handler when promise resolves 1`] = `
+Result {
+  "value": 1234,
+}
+`;
