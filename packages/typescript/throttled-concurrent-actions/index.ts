@@ -25,7 +25,7 @@ export function throttledConcurrentActions<X> (
     )
 
     return next.length
-      ? main(next, nextPast)
+      ? nextPast.concat(main(next, nextPast))
       : nextPast
   }
 }
