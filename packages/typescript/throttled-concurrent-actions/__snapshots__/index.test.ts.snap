@@ -3,131 +3,131 @@
 exports[`matches snapshot 1`] = `
 Array [
   Object {
-    "prev": undefined,
+    "past": undefined,
     "value": 0,
   },
   Object {
-    "prev": undefined,
+    "past": undefined,
     "value": 1,
   },
   Object {
-    "prev": undefined,
+    "past": undefined,
     "value": 2,
   },
   Object {
-    "prev": undefined,
+    "past": undefined,
     "value": 3,
   },
   Object {
-    "prev": undefined,
+    "past": undefined,
     "value": 4,
   },
   Object {
-    "prev": 0,
+    "past": 0,
     "value": 5,
   },
   Object {
-    "prev": 1,
+    "past": 1,
     "value": 6,
   },
   Object {
-    "prev": 2,
+    "past": 2,
     "value": 7,
   },
   Object {
-    "prev": 3,
+    "past": 3,
     "value": 8,
   },
   Object {
-    "prev": 4,
+    "past": 4,
     "value": 9,
   },
   Object {
-    "prev": 5,
+    "past": 5,
     "value": 10,
   },
   Object {
-    "prev": 6,
+    "past": 6,
     "value": 11,
   },
   Object {
-    "prev": 7,
+    "past": 7,
     "value": 12,
   },
   Object {
-    "prev": 8,
+    "past": 8,
     "value": 13,
   },
   Object {
-    "prev": 9,
+    "past": 9,
     "value": 14,
   },
   Object {
-    "prev": 10,
+    "past": 10,
     "value": 15,
   },
   Object {
-    "prev": 11,
+    "past": 11,
     "value": 16,
   },
   Object {
-    "prev": 12,
+    "past": 12,
     "value": 17,
   },
   Object {
-    "prev": 13,
+    "past": 13,
     "value": 18,
   },
   Object {
-    "prev": 14,
+    "past": 14,
     "value": 19,
   },
   Object {
-    "prev": 15,
+    "past": 15,
     "value": 20,
   },
   Object {
-    "prev": 16,
+    "past": 16,
     "value": 21,
   },
   Object {
-    "prev": 17,
+    "past": 17,
     "value": 22,
   },
   Object {
-    "prev": 18,
+    "past": 18,
     "value": 23,
   },
   Object {
-    "prev": 19,
+    "past": 19,
     "value": 24,
   },
   Object {
-    "prev": 20,
+    "past": 20,
     "value": 25,
   },
   Object {
-    "prev": 21,
+    "past": 21,
     "value": 26,
   },
   Object {
-    "prev": 22,
+    "past": 22,
     "value": 27,
   },
   Object {
-    "prev": 23,
+    "past": 23,
     "value": 28,
   },
   Object {
-    "prev": 24,
+    "past": 24,
     "value": 29,
   },
   Object {
-    "prev": 25,
+    "past": 25,
     "value": 30,
   },
   Object {
-    "prev": 26,
+    "past": 26,
     "value": 31,
   },
 ]
