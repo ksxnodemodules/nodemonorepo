@@ -6,10 +6,9 @@ const INITIAL_PROMISE = Promise.resolve()
 
 export function throttledConcurrentActions<X> (
   count: number,
-  list: ReadonlyArray<Action<X>>,
-  past: ReadonlyArray<Promise<X | undefined>> = []
+  list: ReadonlyArray<Action<X>>
 ): Promise<ReadonlyArray<X>> {
-  return Promise.all(main(list, past))
+  return Promise.all(main(list, []))
 
   function main (
     list: ReadonlyArray<Action<X>>,
