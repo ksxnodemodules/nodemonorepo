@@ -7,6 +7,8 @@ it('matches snapshot', async () => {
     .map(value => ({value: past}: {value?: number} = {}) => ({value, past}))
     .map((fn, i) => i & 1 ? fn : async <X>(x: X) => fn(x))
 
-  const promise = subject(5, actions)
-  expect(await promise).toMatchSnapshot()
+  const array = await subject(5, actions)
+  expect(array).toMatchSnapshot()
+  expect(array.map(x => x.value)).toMatchSnapshot()
+  expect(array.length).toBe(32)
 })
