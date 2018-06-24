@@ -130,17 +130,5 @@ Array [
     "prev": 26,
     "value": 31,
   },
-  Object {
-    "prev": 22,
-    "value": 27,
-  },
-  Object {
-    "prev": 23,
-    "value": 28,
-  },
-  Object {
-    "prev": 24,
-    "value": 29,
-  },
 ]
 `;

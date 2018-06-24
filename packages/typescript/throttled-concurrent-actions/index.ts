@@ -9,7 +9,6 @@ export function throttledConcurrentActions<X> (
   list: ReadonlyArray<Action<X>>,
   past: ReadonlyArray<Promise<X | undefined>> = []
 ): Promise<ReadonlyArray<X>> {
-  const indexes = range(0, count)
   return Promise.all(main(list, past))
 
   function main (
@@ -18,13 +17,11 @@ export function throttledConcurrentActions<X> (
   ): ReadonlyArray<Promise<X>> {
     const [current, next] = splitAt(count, list)
 
-    const nextPast = indexes.map(
-      index =>
-        (past[index] || INITIAL_PROMISE)
-          .then(current[index] || (x => x))
+    const nextPast = current.map(
+      (fn, i) => (past[i] || INITIAL_PROMISE).then(fn)
     )
 
-    return next.length
+    return current.length
       ? nextPast.concat(main(next, nextPast))
       : nextPast
   }
