@@ -1,4 +1,4 @@
-import {splitAt, range} from 'ramda'
+import {splitAt} from 'ramda'
 
 export type Action<X> = (x?: X) => X | Promise<X>
 
