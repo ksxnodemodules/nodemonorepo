@@ -315,7 +315,7 @@ files:
 "
 `;
 
-exports[`updateDependencyVersions works when checker is ANY_OR_TILDA_EQUAL 1`] = `
+exports[`updateDependencyVersions works when checker is ANY_OR_TILDE_EQUAL 1`] = `
 "
 all:
   - root/matched
@@ -378,7 +378,7 @@ files:
 "
 `;
 
-exports[`updateDependencyVersions works when checker is ANY_OR_TILDA_MIN 1`] = `
+exports[`updateDependencyVersions works when checker is ANY_OR_TILDE_MIN 1`] = `
 "
 all:
   - root/matched
@@ -945,7 +945,7 @@ files:
 "
 `;
 
-exports[`updateDependencyVersions works when checker is TILDA_EQUAL 1`] = `
+exports[`updateDependencyVersions works when checker is TILDE_EQUAL 1`] = `
 "
 all:
   - root/matched
@@ -1008,7 +1008,7 @@ files:
 "
 `;
 
-exports[`updateDependencyVersions works when checker is TILDA_EQUAL_OR_ANY 1`] = `
+exports[`updateDependencyVersions works when checker is TILDE_EQUAL_OR_ANY 1`] = `
 "
 all:
   - root/matched
@@ -1071,7 +1071,7 @@ files:
 "
 `;
 
-exports[`updateDependencyVersions works when checker is TILDA_MIN 1`] = `
+exports[`updateDependencyVersions works when checker is TILDE_MIN 1`] = `
 "
 all:
   - root/matched
@@ -1134,7 +1134,7 @@ files:
 "
 `;
 
-exports[`updateDependencyVersions works when checker is TILDA_MIN_OR_ANY 1`] = `
+exports[`updateDependencyVersions works when checker is TILDE_MIN_OR_ANY 1`] = `
 "
 all:
   - root/matched

@@ -49,32 +49,32 @@ export namespace listMismatchedDependencies {
 
   export const ANY: Checker = () => '*'
   export const EQUAL: Checker = x => x
-  export const TILDA_EQUAL: Checker = x => '~' + x
+  export const TILDE_EQUAL: Checker = x => '~' + x
   export const CARET_EQUAL: Checker = x => '^' + x
   export const EQUAL_MIN = mkMinChecker('')
-  export const TILDA_MIN = mkMinChecker('~')
+  export const TILDE_MIN = mkMinChecker('~')
   export const CARET_MIN = mkMinChecker('^')
   export const EQUAL_OR_ANY = mkCndChecker(EQUAL, ANY)
-  export const TILDA_EQUAL_OR_ANY = mkCndChecker(TILDA_EQUAL, ANY)
+  export const TILDE_EQUAL_OR_ANY = mkCndChecker(TILDE_EQUAL, ANY)
   export const CARET_EQUAL_OR_ANY = mkCndChecker(CARET_EQUAL, ANY)
   export const EQUAL_MIN_OR_ANY = mkCndChecker(EQUAL_MIN, ANY)
-  export const TILDA_MIN_OR_ANY = mkCndChecker(TILDA_MIN, ANY)
+  export const TILDE_MIN_OR_ANY = mkCndChecker(TILDE_MIN, ANY)
   export const CARET_MIN_OR_ANY = mkCndChecker(CARET_MIN, ANY)
   export const ANY_OR_EQUAL = mkCndChecker(ANY, EQUAL)
-  export const ANY_OR_TILDA_EQUAL = mkCndChecker(ANY, TILDA_EQUAL)
+  export const ANY_OR_TILDE_EQUAL = mkCndChecker(ANY, TILDE_EQUAL)
   export const ANY_OR_CARET_EQUAL = mkCndChecker(ANY, CARET_EQUAL)
   export const ANY_OR_EQUAL_MIN = mkCndChecker(ANY, EQUAL_MIN)
-  export const ANY_OR_TILDA_MIN = mkCndChecker(ANY, TILDA_MIN)
+  export const ANY_OR_TILDE_MIN = mkCndChecker(ANY, TILDE_MIN)
   export const ANY_OR_CARET_MIN = mkCndChecker(ANY, CARET_MIN)
 
   export const prvAllCheckers = {
     ANY,
-    EQUAL, TILDA_EQUAL, CARET_EQUAL,
-    EQUAL_MIN, TILDA_MIN, CARET_MIN,
-    EQUAL_OR_ANY, TILDA_EQUAL_OR_ANY, CARET_EQUAL_OR_ANY,
-    EQUAL_MIN_OR_ANY, TILDA_MIN_OR_ANY, CARET_MIN_OR_ANY,
-    ANY_OR_EQUAL, ANY_OR_TILDA_EQUAL, ANY_OR_CARET_EQUAL,
-    ANY_OR_EQUAL_MIN, ANY_OR_TILDA_MIN, ANY_OR_CARET_MIN
+    EQUAL, TILDE_EQUAL, CARET_EQUAL,
+    EQUAL_MIN, TILDE_MIN, CARET_MIN,
+    EQUAL_OR_ANY, TILDE_EQUAL_OR_ANY, CARET_EQUAL_OR_ANY,
+    EQUAL_MIN_OR_ANY, TILDE_MIN_OR_ANY, CARET_MIN_OR_ANY,
+    ANY_OR_EQUAL, ANY_OR_TILDE_EQUAL, ANY_OR_CARET_EQUAL,
+    ANY_OR_EQUAL_MIN, ANY_OR_TILDE_MIN, ANY_OR_CARET_MIN
   }
 
   export type PrvCheckerCollection = Readonly<typeof prvAllCheckers>

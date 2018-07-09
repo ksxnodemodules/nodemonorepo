@@ -118,11 +118,11 @@ stderr: |+
     --update, -u            Automatically update dependency versions to match
                             their source                [boolean] [default: false]
     --checker, -c           Checker to be used
-     [string] [choices: \\"ANY\\", \\"EQUAL\\", \\"TILDA_EQUAL\\", \\"CARET_EQUAL\\", \\"EQUAL_MIN\\",
-                   \\"TILDA_MIN\\", \\"CARET_MIN\\", \\"EQUAL_OR_ANY\\", \\"TILDA_EQUAL_OR_ANY\\",
-                     \\"CARET_EQUAL_OR_ANY\\", \\"EQUAL_MIN_OR_ANY\\", \\"TILDA_MIN_OR_ANY\\",
-                         \\"CARET_MIN_OR_ANY\\", \\"ANY_OR_EQUAL\\", \\"ANY_OR_TILDA_EQUAL\\",
-                     \\"ANY_OR_CARET_EQUAL\\", \\"ANY_OR_EQUAL_MIN\\", \\"ANY_OR_TILDA_MIN\\",
+     [string] [choices: \\"ANY\\", \\"EQUAL\\", \\"TILDE_EQUAL\\", \\"CARET_EQUAL\\", \\"EQUAL_MIN\\",
+                   \\"TILDE_MIN\\", \\"CARET_MIN\\", \\"EQUAL_OR_ANY\\", \\"TILDE_EQUAL_OR_ANY\\",
+                     \\"CARET_EQUAL_OR_ANY\\", \\"EQUAL_MIN_OR_ANY\\", \\"TILDE_MIN_OR_ANY\\",
+                         \\"CARET_MIN_OR_ANY\\", \\"ANY_OR_EQUAL\\", \\"ANY_OR_TILDE_EQUAL\\",
+                     \\"ANY_OR_CARET_EQUAL\\", \\"ANY_OR_EQUAL_MIN\\", \\"ANY_OR_TILDE_MIN\\",
                                \\"ANY_OR_CARET_MIN\\"] [default: \\"CARET_EQUAL_OR_ANY\\"]
     --jsonOutput, --json    Output json instead of readdable text
                                                         [boolean] [default: false]

@@ -1,5 +1,5 @@
 import {constants} from '../../../../index'
-import { versionRequirement } from '../../../../lib/constants/regexes';
+import {versionRequirement} from '../../../../lib/constants/regexes'
 const {regexes} = constants
 
 const createMatcher = (regex: RegExp) => ({
@@ -59,8 +59,8 @@ describe('versionRequirement.EQUAL', () => {
   })
 })
 
-describe('versionRequirement.TILDA', () => {
-  const {matches, not} = createMatcher(versionRequirement.TILDA)
+describe('versionRequirement.TILDE', () => {
+  const {matches, not} = createMatcher(versionRequirement.TILDE)
 
   describe('matches', () => {
     ; ['~1.2.3', '~1.2.3-beta', '~123.456.789-alpha'].forEach(matches)

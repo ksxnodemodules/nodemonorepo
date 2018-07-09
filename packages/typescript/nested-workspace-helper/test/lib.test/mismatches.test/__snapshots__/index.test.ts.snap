@@ -385,7 +385,7 @@ Object {
 }
 `;
 
-exports[`getMismatchedDependencies when checker is ANY_OR_TILDA_EQUAL matches snapshot 1`] = `
+exports[`getMismatchedDependencies when checker is ANY_OR_TILDE_EQUAL matches snapshot 1`] = `
 Object {
   "root": Object {
     "dependant": Object {
@@ -462,7 +462,7 @@ Object {
 }
 `;
 
-exports[`getMismatchedDependencies when checker is ANY_OR_TILDA_MIN matches snapshot 1`] = `
+exports[`getMismatchedDependencies when checker is ANY_OR_TILDE_MIN matches snapshot 1`] = `
 Object {
   "root": Object {
     "dependant": Object {
@@ -1155,7 +1155,7 @@ Object {
 }
 `;
 
-exports[`getMismatchedDependencies when checker is TILDA_EQUAL matches snapshot 1`] = `
+exports[`getMismatchedDependencies when checker is TILDE_EQUAL matches snapshot 1`] = `
 Object {
   "root": Object {
     "dependant": Object {
@@ -1232,7 +1232,7 @@ Object {
 }
 `;
 
-exports[`getMismatchedDependencies when checker is TILDA_EQUAL_OR_ANY matches snapshot 1`] = `
+exports[`getMismatchedDependencies when checker is TILDE_EQUAL_OR_ANY matches snapshot 1`] = `
 Object {
   "root": Object {
     "dependant": Object {
@@ -1309,7 +1309,7 @@ Object {
 }
 `;
 
-exports[`getMismatchedDependencies when checker is TILDA_MIN matches snapshot 1`] = `
+exports[`getMismatchedDependencies when checker is TILDE_MIN matches snapshot 1`] = `
 Object {
   "root": Object {
     "dependant": Object {
@@ -1386,7 +1386,7 @@ Object {
 }
 `;
 
-exports[`getMismatchedDependencies when checker is TILDA_MIN_OR_ANY matches snapshot 1`] = `
+exports[`getMismatchedDependencies when checker is TILDE_MIN_OR_ANY matches snapshot 1`] = `
 Object {
   "root": Object {
     "dependant": Object {
