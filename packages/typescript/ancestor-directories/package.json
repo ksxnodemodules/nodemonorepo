@@ -23,7 +23,7 @@
   ],
   "dependencies": {
     "tslib": "^1.9.2",
-    "monorepo-shared-assets": "^0.0.13",
+    "monorepo-shared-assets": "^0.0.14",
     "@types/node": "^10.3.0"
   },
   "engines": {
