@@ -3,9 +3,10 @@ dependencies:
   '@types/js-yaml': 3.11.1
   '@types/node': 10.3.0
   fs-extra: 6.0.1
-  fs-tree-utils: 'link:../fs-tree-utils'
   js-yaml: 3.12.0
   tslib: 1.9.2
+devDependencies:
+  fs-tree-utils: 'link:../fs-tree-utils'
 packages:
   /@types/fs-extra/5.0.2:
     dependencies:
@@ -31,6 +32,7 @@ packages:
     dev: false
     engines:
       node: '>=4'
+    hasBin: true
     resolution:
       integrity: sha512-oftTcaMu/EGrEIu904mWteKIv8vMuOgGYo7EhVJJN00R/EED9DCua/xxHRdYnKtcECzVg7xOWhflvJMnqcFZjw==
   /fs-extra/6.0.1:
@@ -52,6 +54,7 @@ packages:
       argparse: 1.0.10
       esprima: 4.0.0
     dev: false
+    hasBin: true
     resolution:
       integrity: sha512-PIt2cnwmPfL4hKNwqeiuz4bKfnzHTBv6HyVgjahA6mPLwPDzjDWrplJBMjHUFxku/N3FlmrbyPclad+I+4mJ3A==
   /jsonfile/4.0.0:
@@ -73,7 +76,7 @@ packages:
     resolution:
       integrity: sha1-+nG63UQ3r0wUiEHjs7Fl+enlkLc=
 registry: 'https://registry.npmjs.org/'
-shrinkwrapMinorVersion: 7
+shrinkwrapMinorVersion: 8
 shrinkwrapVersion: 3
 specifiers:
   '@types/fs-extra': ^5.0.2

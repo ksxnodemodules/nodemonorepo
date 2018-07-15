@@ -1,9 +1,10 @@
 dependencies:
   '@types/node': 10.3.0
-  path-env: 'link:../path-env'
   preloaded-node: 'link:../../javascript/preloaded-node'
-  preloaded-node.private: 'link:../../javascript/preloaded-node.private'
   tslib: 1.9.2
+devDependencies:
+  path-env: 'link:../path-env'
+  preloaded-node.private: 'link:../../javascript/preloaded-node.private'
 packages:
   /@types/node/10.3.0:
     dev: false
@@ -14,7 +15,7 @@ packages:
     resolution:
       integrity: sha512-AVP5Xol3WivEr7hnssHDsaM+lVrVXWUvd1cfXTRkTj80b//6g2wIFEH6hZG0muGZRnHGrfttpdzRk3YlBkWjKw==
 registry: 'https://registry.npmjs.org/'
-shrinkwrapMinorVersion: 7
+shrinkwrapMinorVersion: 8
 shrinkwrapVersion: 3
 specifiers:
   '@types/node': ^10.3.0
