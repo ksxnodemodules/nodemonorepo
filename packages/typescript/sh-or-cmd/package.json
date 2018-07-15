@@ -1,6 +1,6 @@
 {
   "name": "sh-or-cmd",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Returns 'sh' or 'cmd' based on platform",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",

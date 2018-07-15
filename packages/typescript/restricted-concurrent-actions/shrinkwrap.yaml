@@ -16,5 +16,5 @@ shrinkwrapMinorVersion: 8
 shrinkwrapVersion: 3
 specifiers:
   '@types/node': ^10.3.0
-  monorepo-shared-assets: ^0.0.14
+  monorepo-shared-assets: ^0.0.15
   tslib: ^1.9.2

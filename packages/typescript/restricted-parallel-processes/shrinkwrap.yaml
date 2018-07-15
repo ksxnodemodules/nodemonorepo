@@ -16,5 +16,5 @@ shrinkwrapMinorVersion: 8
 shrinkwrapVersion: 3
 specifiers:
   '@types/node': ^10.3.0
-  restricted-concurrent-actions: ^0.0.9
+  restricted-concurrent-actions: ^0.0.10
   tslib: ^1.9.2

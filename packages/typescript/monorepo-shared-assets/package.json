@@ -1,6 +1,6 @@
 {
   "name": "monorepo-shared-assets",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "Shared assets used by various packages from nodemonorepo",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
