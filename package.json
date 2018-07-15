@@ -29,7 +29,7 @@
     "ignore-file.private": "*",
     "nested-workspace-helper.private": "*",
     "clean-typescript-build.private": "*",
-    "@types/jest": "^22.2.3",
+    "@types/jest": "^23.0.0",
     "@types/js-yaml": "^3.11.1",
     "@types/glob": "^5.0.35",
     "@types/node": "^10.3.0"
