@@ -13,7 +13,6 @@ stdout: |+
     --version  Show version number                                       [boolean]
 
 
-
 "
 `;
 
