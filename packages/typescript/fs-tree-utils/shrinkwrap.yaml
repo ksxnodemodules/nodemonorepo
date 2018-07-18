@@ -3,11 +3,11 @@ dependencies:
   '@types/node': 10.5.2
   '@types/ramda': 0.25.35
   fs-extra: 7.0.0
-  monorepo-shared-assets: 0.0.15
+  monorepo-shared-assets: 'link:../monorepo-shared-assets'
   ramda: 0.25.0
   tslib: 1.9.3
 devDependencies:
-  unique-temp-path: 0.1.0
+  unique-temp-path: 'link:../unique-temp-path'
 packages:
   /@types/fs-extra/5.0.4:
     dependencies:
@@ -16,6 +16,7 @@ packages:
     resolution:
       integrity: sha512-DsknoBvD8s+RFfSGjmERJ7ZOP1HI0UZRA3FSI+Zakhrc/Gy26YQsLI+m5V5DHxroHRJqCDLKJp7Hixn8zyaF7g==
   /@types/node/10.5.2:
+    dev: false
     resolution:
       integrity: sha512-m9zXmifkZsMHZBOyxZWilMwmTlpC8x5Ty360JKTiXvlXZfBWYpsg9ZZvP/Ye+iZUh+Q+MxDLjItVTWIsfwz+8Q==
   /@types/ramda/0.25.35:
@@ -38,47 +39,20 @@ packages:
       node: '>=0.4.0'
     resolution:
       integrity: sha1-Dovf5NHduIVNZOBOp8AOKgJuVlg=
-  /immutable/3.8.2:
-    dev: false
-    engines:
-      node: '>=0.10.0'
-    resolution:
-      integrity: sha1-wkOZUUVbs5kT2vKBN28VMOEErfM=
   /jsonfile/4.0.0:
     dev: false
     optionalDependencies:
       graceful-fs: 4.1.11
     resolution:
       integrity: sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss=
-  /monorepo-shared-assets/0.0.15:
-    dependencies:
-      '@types/node': 10.5.2
-      '@types/ramda': 0.25.35
-      immutable: 3.8.2
-      ramda: 0.25.0
-      tslib: 1.9.3
-    dev: false
-    engines:
-      node: '>= 8.9.0'
-    resolution:
-      integrity: sha512-Jw2l9mhhCOkjAvhIAQsFnf0PDQ4NTLsl1spIKLdOLauTqBi2K/gfyg4ir7kdKtkwYpoNjrquOB/5mN2CKkPiWg==
   /ramda/0.25.0:
     dev: false
     resolution:
       integrity: sha512-GXpfrYVPwx3K7RQ6aYT8KPS8XViSXUVJT1ONhoKPE9VAleW42YE+U+8VEyGWt41EnEQW7gwecYJriTI0pKoecQ==
   /tslib/1.9.3:
+    dev: false
     resolution:
       integrity: sha512-4krF8scpejhaOgqzBEcGM7yDIEfi0/8+8zDRZhNZZ2kjmHJ4hv3zCbQWxoJGz1iw5U0Jl0nma13xzHXcncMavQ==
-  /unique-temp-path/0.1.0:
-    dependencies:
-      '@types/node': 10.5.2
-      tslib: 1.9.3
-    dev: true
-    engines:
-      node: '>= 8.9.0'
-    hasBin: true
-    resolution:
-      integrity: sha512-m42rRo9h3Z3bk+wbWRcqi5p3zIn/wzpFa2parogKvlk02ho+J+g6acL6N5qlAZR142GLOXqdwJjUbEcZpOyPBA==
   /universalify/0.1.2:
     dev: false
     engines:
