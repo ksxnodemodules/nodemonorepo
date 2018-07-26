@@ -1,0 +1,26 @@
+{
+  "name": "random-org-http",
+  "version": "0.0.0",
+  "description": "Random.org via HTTP Interface",
+  "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
+  "bugs": {
+    "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
+  },
+  "keywords": [
+    "random",
+    "http",
+    "random.org"
+  ],
+  "dependencies": {
+    "node-fetch": "^2.1.2",
+    "tslib": "^1.9.2",
+    "xor-compose": "^0.0.0",
+    "@types/node-fetch": "^2.1.2",
+    "@types/node": "^10.3.0"
+  },
+  "engines": {
+    "node": ">= 8.9.0"
+  }
+}
