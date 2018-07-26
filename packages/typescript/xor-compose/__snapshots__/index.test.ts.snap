@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+Array [
+  Object {
+    "name": "a",
+    "result": 103,
+  },
+  Object {
+    "name": "b",
+    "result": 64,
+  },
+  Object {
+    "name": "c",
+    "result": 0,
+  },
+  Object {
+    "name": "d",
+    "result": 1002,
+  },
+  Object {
+    "name": "a^b",
+    "result": 39,
+  },
+  Object {
+    "name": "b^c",
+    "result": 64,
+  },
+  Object {
+    "name": "c^d",
+    "result": 1002,
+  },
+  Object {
+    "name": "d^a",
+    "result": 909,
+  },
+  Object {
+    "name": "a^c",
+    "result": 103,
+  },
+  Object {
+    "name": "b^d",
+    "result": 938,
+  },
+  Object {
+    "name": "a^b^c",
+    "result": 39,
+  },
+  Object {
+    "name": "a^b^d",
+    "result": 973,
+  },
+  Object {
+    "name": "a^c^d",
+    "result": 909,
+  },
+  Object {
+    "name": "b^c^d",
+    "result": 938,
+  },
+  Object {
+    "name": "a^b^c^d",
+    "result": 973,
+  },
+]
+`;

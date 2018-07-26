@@ -1,0 +1,23 @@
+{
+  "name": "xor-compose",
+  "version": "0.0.0",
+  "description": "Compose multiple functions by XOR",
+  "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
+  "bugs": {
+    "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
+  },
+  "keywords": [
+    "xor",
+    "compose",
+    "function"
+  ],
+  "dependencies": {
+    "tslib": "^1.9.2",
+    "@types/node": "^10.3.0"
+  },
+  "engines": {
+    "node": ">= 8.9.0"
+  }
+}
