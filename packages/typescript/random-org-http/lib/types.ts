@@ -3,9 +3,9 @@ export interface QueryObject<Value> {
 }
 
 export enum Generator {
-  integer = 'integer',
-  sequence = 'sequence',
-  string = 'string'
+  integer = 'integers',
+  sequence = 'sequences',
+  string = 'strings'
 }
 
 export enum Base {
