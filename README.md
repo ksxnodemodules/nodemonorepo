@@ -106,3 +106,4 @@ pnpm recursive link # or yarn install
 1. CLI subcommand `publish` in package [`nested-workspace-helper`](./packages/typescript/nested-workspace-helper): Cannot mock npm registry in CLI environment.
 2. CLI subcommand `dependency-management outdated` in package [`nested-workspace-helper`](./packages/typescript/nested-workspace-helper): Cannot mock npm registry in CLI environment.
 3. Entire package [`git-ts`](./packages/typescript/git-ts): It's too complicated to create a test friendly git repo.
+4. Most of [`random-org-http`](./packages/typescript/random-org-http): Testing over network is complicated.
