@@ -11,9 +11,9 @@
 ### Random Integers
 
 ```javascript
-import {integer, Base} from 'random-org-http'
+import {integers, Base} from 'random-org-http'
 
-const result = await integer({
+const result = await integers({
   base: Base.decimal,
   col: 3,
   min: 1,
@@ -29,9 +29,9 @@ This will print an array of 9 random integers within range [1, 32].
 ### Random Ordered Sequence
 
 ```javascript
-import {sequence} from 'random-org-http'
+import {sequences} from 'random-org-http'
 
-const result = await sequence({
+const result = await sequences({
   min: 10,
   max: 100
 })
@@ -44,9 +44,9 @@ This will print an array of all integers within range [10, 100] in random order.
 ### Random Strings
 
 ```javascript
-import {string} from 'random-org-http'
+import {strings} from 'random-org-http'
 
-const result = await string({
+const result = await strings({
   num: 7,
   len: 12,
   unique: false,
