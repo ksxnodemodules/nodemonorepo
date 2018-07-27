@@ -76,7 +76,7 @@ it('string', () => {
     },
     {
       num: 7,
-      len: 22,
+      len: 15,
       digits: Activation.on,
       loweralpha: Activation.on,
       upperalpha: Activation.on,
@@ -85,7 +85,7 @@ it('string', () => {
     },
     {
       num: 9,
-      len: 32,
+      len: 19,
       digits: Activation.on,
       loweralpha: Activation.off,
       upperalpha: Activation.off,
