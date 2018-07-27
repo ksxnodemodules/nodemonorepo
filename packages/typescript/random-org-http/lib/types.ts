@@ -91,33 +91,7 @@ export namespace structured {
       readonly max: number
     }
 
-    export type String =
-      String.DigitsRequired |
-      String.UpperAlphaRequired |
-      String.LowerAlphaRequired
-
-    export namespace String {
-      export interface Common {
-        readonly num: number
-        readonly len: number
-        readonly unique?: Activation
-        readonly digits?: Activation
-        readonly upperalpha?: Activation
-        readonly loweralpha?: Activation
-      }
-
-      export interface DigitsRequired extends Common {
-        readonly digits: Activation.on
-      }
-
-      export interface UpperAlphaRequired extends Common {
-        readonly upperalpha: Activation.on
-      }
-
-      export interface LowerAlphaRequired extends Common {
-        readonly loweralpha: Activation.on
-      }
-    }
+    export type String = utils.StringParam<true, false>
   }
 }
 
@@ -139,8 +113,38 @@ export namespace raw {
       readonly format: Format
     }
 
-    export type String = structured.Param.String & {
+    export type String = utils.StringParam<Activation.on, Activation.off> & {
       readonly format: Format
+    }
+  }
+}
+
+export namespace utils {
+  export type StringParam<On, Off> =
+    StringParam.DigitsRequired<On, Off> |
+    StringParam.LowerAlphaRequired<On, Off> |
+    StringParam.UpperAlphaRequired<On, Off>
+
+  export namespace StringParam {
+    export interface Common<Binary> {
+      readonly num: number
+      readonly len: number
+      readonly unique?: Binary
+      readonly digits?: Binary
+      readonly upperalpha?: Binary
+      readonly loweralpha?: Binary
+    }
+
+    export interface DigitsRequired<On, Off> extends Common<On | Off> {
+      digits: On
+    }
+
+    export interface UpperAlphaRequired<On, Off> extends Common<On | Off> {
+      upperalpha: On
+    }
+
+    export interface LowerAlphaRequired<On, Off> extends Common<On | Off> {
+      loweralpha: On
     }
   }
 }

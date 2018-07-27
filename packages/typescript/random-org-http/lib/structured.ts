@@ -2,6 +2,8 @@ import {Response} from 'node-fetch'
 
 import {
   structured as Structured,
+  raw as Raw,
+  Activation,
   Base,
   Format
 } from './types'
@@ -14,6 +16,9 @@ const whitespace = /\s+/
 
 const parseNumbers = (text: string, radix?: Base) =>
   text.split(whitespace).filter(Boolean).map(x => parseInt(x, radix))
+
+const convertActivation =
+  (x = false) => x ? Activation.on : Activation.off
 
 export class FetchError extends Error {
   readonly response: Response
@@ -63,10 +68,24 @@ export async function sequence (query: Structured.Param.Sequence) {
 }
 
 export async function string (query: Structured.Param.String) {
+  const {
+    num,
+    len,
+    digits,
+    loweralpha,
+    upperalpha,
+    unique
+  } = query
+
   const response = await raw.string({
-    ...query,
+    num,
+    len,
+    digits: convertActivation(digits),
+    loweralpha: convertActivation(loweralpha),
+    upperalpha: convertActivation(upperalpha),
+    unique: convertActivation(unique),
     format
-  })
+  } as Raw.Param.String)
 
   await FetchError.check(response)
 
