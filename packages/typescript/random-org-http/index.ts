@@ -3,6 +3,9 @@ import * as url from './lib/url'
 import * as raw from './lib/raw'
 import * as structured from './lib/structured'
 
+import Base = types.Base
+import Format = types.Format
+import Activation = types.Activation
 import Param = types.structured.Param
 
 export const {
@@ -16,5 +19,8 @@ export {
   url,
   raw,
   structured,
+  Base,
+  Format,
+  Activation,
   Param
 }
