@@ -33,4 +33,3 @@ specifiers:
   '@types/node-fetch': ^2.1.2
   node-fetch: ^2.1.2
   tslib: ^1.9.2
-  xor-compose: ^0.0.0
