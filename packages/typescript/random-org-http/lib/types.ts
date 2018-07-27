@@ -45,6 +45,11 @@ enum LenBound {
   max = 20
 }
 
+const __WORKAROUND__ = `
+  Don't mind this string,
+  this is to workaround typescript namespace import bug.
+`
+
 export namespace ranges {
   export namespace integer {
     export const num = NumBound
@@ -53,6 +58,7 @@ export namespace ranges {
     export const col = ColBound
     export const base = Base
     export const format = Format
+    export const __workaround = __WORKAROUND__
   }
 
   export namespace sequence {
@@ -60,6 +66,7 @@ export namespace ranges {
     export const max = EndBound
     export const col = ColBound
     export const format = Format
+    export const __workaround = __WORKAROUND__
   }
 
   export namespace string {
@@ -70,7 +77,10 @@ export namespace ranges {
     export const loweralpha = Activation
     export const unique = Activation
     export const format = Format
+    export const __workaround = __WORKAROUND__
   }
+
+  export const __workaround = __WORKAROUND__
 }
 
 export namespace structured {
@@ -92,7 +102,11 @@ export namespace structured {
     }
 
     export type String = utils.StringParam<true, false>
+
+    export const __workaround = __WORKAROUND__
   }
+
+  export const __workaround = __WORKAROUND__
 }
 
 export namespace raw {
@@ -116,7 +130,11 @@ export namespace raw {
     export type String = utils.StringParam<Activation.on, Activation.off> & {
       readonly format: Format
     }
+
+    export const __workaround = __WORKAROUND__
   }
+
+  export const __workaround = __WORKAROUND__
 }
 
 export namespace utils {
@@ -146,5 +164,9 @@ export namespace utils {
     export interface LowerAlphaRequired<On, Off> extends Common<On | Off> {
       loweralpha: On
     }
+
+    export const __workaround = __WORKAROUND__
   }
+
+  export const __workaround = __WORKAROUND__
 }
