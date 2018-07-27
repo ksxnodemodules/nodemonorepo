@@ -8,6 +8,6 @@ const mkfn =
   <Query>(mkurl: UrlMaker<Query>) =>
     (query: Query) => fetch(mkurl(query))
 
-export const integer = mkfn(create.integer)
-export const sequence = mkfn(create.sequence)
-export const string = mkfn(create.string)
+export const integers = mkfn(create.integers)
+export const sequences = mkfn(create.sequences)
+export const strings = mkfn(create.strings)

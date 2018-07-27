@@ -9,9 +9,9 @@ import Activation = types.Activation
 import Param = types.structured.Param
 
 export const {
-  integer,
-  string,
-  sequence
+  integers,
+  strings,
+  sequences
 } = structured
 
 export {

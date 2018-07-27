@@ -3,9 +3,9 @@ export interface QueryObject<Value> {
 }
 
 export enum Generator {
-  integer = 'integers',
-  sequence = 'sequences',
-  string = 'strings'
+  integers = 'integers',
+  sequences = 'sequences',
+  strings = 'strings'
 }
 
 export enum Base {
@@ -51,7 +51,7 @@ const __WORKAROUND__ = `
 `
 
 export namespace ranges {
-  export namespace integer {
+  export namespace integers {
     export const num = NumBound
     export const min = EndBound
     export const max = EndBound
@@ -61,7 +61,7 @@ export namespace ranges {
     export const __workaround = __WORKAROUND__
   }
 
-  export namespace sequence {
+  export namespace sequences {
     export const min = EndBound
     export const max = EndBound
     export const col = ColBound
@@ -69,7 +69,7 @@ export namespace ranges {
     export const __workaround = __WORKAROUND__
   }
 
-  export namespace string {
+  export namespace strings {
     export const num = NumBound
     export const len = LenBound
     export const digits = Activation

@@ -12,7 +12,7 @@ export namespace create {
     <Param extends raw.Param>(type: Generator) =>
       (query: Param) => base(type, query)
 
-  export const integer = mkfn<raw.Param.Integer>(Generator.integer)
-  export const sequence = mkfn<raw.Param.Sequence>(Generator.sequence)
-  export const string = mkfn<raw.Param.String>(Generator.string)
+  export const integers = mkfn<raw.Param.Integer>(Generator.integers)
+  export const sequences = mkfn<raw.Param.Sequence>(Generator.sequences)
+  export const strings = mkfn<raw.Param.String>(Generator.strings)
 }

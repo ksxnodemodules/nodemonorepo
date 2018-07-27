@@ -40,10 +40,10 @@ export class FetchError extends Error {
   }
 }
 
-export async function integer (query: Structured.Param.Integer) {
+export async function integers (query: Structured.Param.Integer) {
   const base = hexadecimal
 
-  const response = await raw.integer({
+  const response = await raw.integers({
     ...query,
     col: 1,
     base,
@@ -55,8 +55,8 @@ export async function integer (query: Structured.Param.Integer) {
   return parseNumbers(await response.text(), base)
 }
 
-export async function sequence (query: Structured.Param.Sequence) {
-  const response = await raw.sequence({
+export async function sequences (query: Structured.Param.Sequence) {
+  const response = await raw.sequences({
     ...query,
     col: 1,
     format
@@ -67,7 +67,7 @@ export async function sequence (query: Structured.Param.Sequence) {
   return parseNumbers(await response.text())
 }
 
-export async function string (query: Structured.Param.String) {
+export async function strings (query: Structured.Param.String) {
   const {
     num,
     len,
@@ -77,7 +77,7 @@ export async function string (query: Structured.Param.String) {
     unique
   } = query
 
-  const response = await raw.string({
+  const response = await raw.strings({
     num,
     len,
     digits: convertActivation(digits),

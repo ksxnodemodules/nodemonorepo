@@ -4,7 +4,7 @@ import Radix = types.Base
 import Format = types.Format
 import Activation = types.Activation
 
-const {integer, sequence, string} = url.create
+const {integers, sequences, strings} = url.create
 
 const mksmpl =
   <Param, Result>(
@@ -17,7 +17,7 @@ const mksmpl =
     })
   )
 
-it('integer', () => {
+it('integers', () => {
   const params: Param.Integer[] = [
     {
       base: Radix.binary,
@@ -37,12 +37,12 @@ it('integer', () => {
     }
   ]
 
-  const result = mksmpl(integer, params)
+  const result = mksmpl(integers, params)
 
   expect(result).toMatchSnapshot()
 })
 
-it('sequence', () => {
+it('sequences', () => {
   const params: Param.Sequence[] = [
     {
       min: 1,
@@ -58,12 +58,12 @@ it('sequence', () => {
     }
   ]
 
-  const result = mksmpl(sequence, params)
+  const result = mksmpl(sequences, params)
 
   expect(result).toMatchSnapshot()
 })
 
-it('string', () => {
+it('strings', () => {
   const params: Param.String[] = [
     {
       num: 1,
@@ -94,7 +94,7 @@ it('string', () => {
     }
   ]
 
-  const result = mksmpl(string, params)
+  const result = mksmpl(strings, params)
 
   expect(result).toMatchSnapshot()
 })

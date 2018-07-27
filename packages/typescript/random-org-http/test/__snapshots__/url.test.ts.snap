@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`integer 1`] = `
+exports[`integers 1`] = `
 Array [
   Object {
     "input": Object {
@@ -27,7 +27,7 @@ Array [
 ]
 `;
 
-exports[`sequence 1`] = `
+exports[`sequences 1`] = `
 Array [
   Object {
     "input": Object {
@@ -50,7 +50,7 @@ Array [
 ]
 `;
 
-exports[`string 1`] = `
+exports[`strings 1`] = `
 Array [
   Object {
     "input": Object {
