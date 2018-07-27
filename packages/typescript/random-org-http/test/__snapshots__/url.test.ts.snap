@@ -11,7 +11,7 @@ Array [
       "min": 1,
       "num": 8,
     },
-    "output": "https://random.org/integers/?base=2?col=1?min=1?max=10?num=8?format=plain",
+    "output": "https://random.org/integers/?base=2&col=1&min=1&max=10&num=8&format=plain",
   },
   Object {
     "input": Object {
@@ -22,7 +22,7 @@ Array [
       "min": 10,
       "num": 7,
     },
-    "output": "https://random.org/integers/?base=16?col=3?min=10?max=20?num=7?format=html",
+    "output": "https://random.org/integers/?base=16&col=3&min=10&max=20&num=7&format=html",
   },
 ]
 `;
@@ -36,7 +36,7 @@ Array [
       "max": 10,
       "min": 1,
     },
-    "output": "https://random.org/sequences/?min=1?max=10?col=2?format=plain",
+    "output": "https://random.org/sequences/?min=1&max=10&col=2&format=plain",
   },
   Object {
     "input": Object {
@@ -45,7 +45,7 @@ Array [
       "max": 5,
       "min": 2,
     },
-    "output": "https://random.org/sequences/?min=2?max=5?col=3?format=html",
+    "output": "https://random.org/sequences/?min=2&max=5&col=3&format=html",
   },
 ]
 `;
@@ -62,7 +62,7 @@ Array [
       "unique": "off",
       "upperalpha": "on",
     },
-    "output": "https://random.org/strings/?num=1?len=10?digits=on?loweralpha=off?upperalpha=on?unique=off?format=plain",
+    "output": "https://random.org/strings/?num=1&len=10&digits=on&loweralpha=off&upperalpha=on&unique=off&format=plain",
   },
   Object {
     "input": Object {
@@ -74,7 +74,7 @@ Array [
       "unique": "on",
       "upperalpha": "on",
     },
-    "output": "https://random.org/strings/?num=7?len=22?digits=on?loweralpha=on?upperalpha=on?unique=on?format=html",
+    "output": "https://random.org/strings/?num=7&len=22&digits=on&loweralpha=on&upperalpha=on&unique=on&format=html",
   },
   Object {
     "input": Object {
@@ -86,7 +86,7 @@ Array [
       "unique": "off",
       "upperalpha": "off",
     },
-    "output": "https://random.org/strings/?num=9?len=32?digits=on?loweralpha=off?upperalpha=off?unique=off?format=plain",
+    "output": "https://random.org/strings/?num=9&len=32&digits=on&loweralpha=off&upperalpha=off&unique=off&format=plain",
   },
 ]
 `;

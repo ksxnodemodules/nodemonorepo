@@ -6,7 +6,7 @@ export const origin = 'https://random.org'
 export namespace create {
   const base =
     <X>(type: Generator, query: QueryObject<X>) =>
-      `${origin}/${type}/?${qstr.stringify(query, '?', '=')}`
+      `${origin}/${type}/?${qstr.stringify(query, '&', '=')}`
 
   const mkfn =
     <Param extends raw.Param>(type: Generator) =>
