@@ -14,8 +14,8 @@
 import {integers} from 'random-org-http'
 
 const result = await integers({
-  min: 1,
-  max: 32,
+  min: -128,
+  max: 127,
   num: 9
 })
 
@@ -30,7 +30,7 @@ This will print an array of 9 random integers within range [1, 32].
 import {sequences} from 'random-org-http'
 
 const result = await sequences({
-  min: 10,
+  min: -20,
   max: 100
 })
 
