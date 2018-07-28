@@ -1,0 +1,28 @@
+{
+  "name": "endless-sequence",
+  "version": "0.0.0",
+  "description": "Create never-ending iterators from a limited array",
+  "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksxnodemodules/nodemonorepo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
+  },
+  "keywords": [
+    "endless",
+    "iterate",
+    "infinte",
+    "foverer"
+  ],
+  "dependencies": {
+    "tslib": "^1.9.3",
+    "@types/node": "^10.5.4"
+  },
+  "engines": {
+    "node": ">= 8.9.0"
+  }
+}
