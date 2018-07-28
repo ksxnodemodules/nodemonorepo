@@ -18,12 +18,12 @@
     "file"
   ],
   "dependencies": {
-    "js-yaml": "^3.11.0",
+    "js-yaml": "^3.12.0",
     "fs-extra": "^7.0.0",
-    "tslib": "^1.9.2",
-    "@types/js-yaml": "^3.11.1",
-    "@types/fs-extra": "^5.0.2",
-    "@types/node": "^10.3.0"
+    "tslib": "^1.9.3",
+    "@types/js-yaml": "^3.11.2",
+    "@types/fs-extra": "^5.0.4",
+    "@types/node": "^10.5.4"
   },
   "devDependencies": {
     "fs-tree-utils": "*"

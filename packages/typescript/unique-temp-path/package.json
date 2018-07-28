@@ -15,8 +15,8 @@
   "main": "index.js",
   "bin": "bin.inrepo.js",
   "dependencies": {
-    "tslib": "^1.9.2",
-    "@types/node": "^10.3.0"
+    "tslib": "^1.9.3",
+    "@types/node": "^10.5.4"
   },
   "devDependencies": {
     "preloaded-node.private": "*",

@@ -21,9 +21,9 @@
     "restricted"
   ],
   "dependencies": {
-    "tslib": "^1.9.2",
+    "tslib": "^1.9.3",
     "restricted-concurrent-actions": "^0.0.10",
-    "@types/node": "^10.3.0"
+    "@types/node": "^10.5.4"
   },
   "engines": {
     "node": ">= 8.9.0"

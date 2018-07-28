@@ -1,6 +1,6 @@
 dependencies:
   '@types/fs-extra': 5.0.4
-  '@types/node': 10.5.2
+  '@types/node': 10.5.4
   '@types/ramda': 0.25.35
   fs-extra: 7.0.0
   monorepo-shared-assets: 'link:../monorepo-shared-assets'
@@ -11,14 +11,14 @@ devDependencies:
 packages:
   /@types/fs-extra/5.0.4:
     dependencies:
-      '@types/node': 10.5.2
+      '@types/node': 10.5.4
     dev: false
     resolution:
       integrity: sha512-DsknoBvD8s+RFfSGjmERJ7ZOP1HI0UZRA3FSI+Zakhrc/Gy26YQsLI+m5V5DHxroHRJqCDLKJp7Hixn8zyaF7g==
-  /@types/node/10.5.2:
+  /@types/node/10.5.4:
     dev: false
     resolution:
-      integrity: sha512-m9zXmifkZsMHZBOyxZWilMwmTlpC8x5Ty360JKTiXvlXZfBWYpsg9ZZvP/Ye+iZUh+Q+MxDLjItVTWIsfwz+8Q==
+      integrity: sha512-8TqvB0ReZWwtcd3LXq3YSrBoLyXFgBX/sBZfGye9+YS8zH7/g+i6QRIuiDmwBoTzcQ/pk89nZYTYU4c5akKkzw==
   /@types/ramda/0.25.35:
     dev: false
     resolution:
@@ -63,11 +63,11 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 8
 shrinkwrapVersion: 3
 specifiers:
-  '@types/fs-extra': ^5.0.2
-  '@types/node': ^10.3.0
-  '@types/ramda': ^0.25.32
+  '@types/fs-extra': ^5.0.4
+  '@types/node': ^10.5.4
+  '@types/ramda': ^0.25.35
   fs-extra: ^7.0.0
   monorepo-shared-assets: ^0.0.15
   ramda: ^0.25.0
-  tslib: ^1.9.2
+  tslib: ^1.9.3
   unique-temp-path: '*'
