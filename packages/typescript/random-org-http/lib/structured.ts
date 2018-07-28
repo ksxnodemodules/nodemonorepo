@@ -10,7 +10,7 @@ import {
 
 import * as raw from './raw'
 
-const {hexadecimal} = Base
+const {decimal} = Base
 const format = Format.plain
 const whitespace = /\s+/
 
@@ -41,7 +41,7 @@ export class FetchError extends Error {
 }
 
 export async function integers (query: Structured.Param.Integer) {
-  const base = hexadecimal
+  const base = decimal
 
   const response = await raw.integers({
     ...query,
