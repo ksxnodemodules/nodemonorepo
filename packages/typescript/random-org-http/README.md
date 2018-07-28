@@ -11,11 +11,9 @@
 ### Random Integers
 
 ```javascript
-import {integers, Base} from 'random-org-http'
+import {integer} from 'random-org-http'
 
 const result = await integers({
-  base: Base.decimal,
-  col: 3,
   min: 1,
   max: 32,
   num: 9
