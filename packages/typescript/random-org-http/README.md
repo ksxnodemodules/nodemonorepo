@@ -11,7 +11,7 @@
 ### Random Integers
 
 ```javascript
-import {integer} from 'random-org-http'
+import {integers} from 'random-org-http'
 
 const result = await integers({
   min: 1,
