@@ -30,7 +30,7 @@ it('integers', () => {
     {
       base: Radix.hexadecimal,
       col: 3,
-      min: 10,
+      min: -10,
       max: 20,
       num: 7,
       format: Format.html

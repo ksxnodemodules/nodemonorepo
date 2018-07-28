@@ -19,10 +19,10 @@ Array [
       "col": 3,
       "format": "html",
       "max": 20,
-      "min": 10,
+      "min": -10,
       "num": 7,
     },
-    "output": "https://random.org/integers/?base=16&col=3&min=10&max=20&num=7&format=html",
+    "output": "https://random.org/integers/?base=16&col=3&min=-10&max=20&num=7&format=html",
   },
 ]
 `;
