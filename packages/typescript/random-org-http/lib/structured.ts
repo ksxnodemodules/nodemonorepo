@@ -89,5 +89,7 @@ export async function strings (query: Structured.Param.String) {
 
   await FetchError.check(response)
 
-  return (await response.text()).split(whitespace)
+  return (await response.text())
+    .split(whitespace)
+    .filter(Boolean)
 }
