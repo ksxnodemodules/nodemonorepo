@@ -1,7 +1,7 @@
 {
   "name": "endless-sequence",
   "version": "0.0.0",
-  "description": "Get elements by index from never-ending iterators",
+  "description": "Create never-ending iterators from a limited array",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
