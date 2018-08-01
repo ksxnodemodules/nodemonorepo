@@ -18,7 +18,7 @@
   "index": "index.js",
   "dependencies": {
     "ts-node": "^7.0.0",
-    "typescript": "^2.9.2",
+    "typescript": "^3.0.0",
     "json5": "^1.0.1",
     "@types/json5": "^0.0.29",
     "@types/node": "^10.5.4"
