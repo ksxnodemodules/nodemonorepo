@@ -13,7 +13,7 @@ devDependencies:
   glob: 7.1.2
   ignore-file.private: 'link:packages/typescript/ignore-file.private'
   jest: 23.4.2
-  jest-extended: 0.7.2
+  jest-extended: 0.8.1
   jest-runner-standard: 0.0.12
   js-yaml: 3.12.0
   nested-workspace-helper.private: 'link:packages/javascript/nested-workspace-helper.private'
@@ -21,15 +21,9 @@ devDependencies:
   standard: 11.0.1
   ts-jest: 23.0.1
   tslib: 1.9.3
-  typescript: 2.9.2
+  typescript: 3.0.1
   yaml-jest: 1.0.5
 packages:
-  /@babel/code-frame/7.0.0-beta.46:
-    dependencies:
-      '@babel/highlight': 7.0.0-beta.46
-    dev: true
-    resolution:
-      integrity: sha512-7BKRkmYaPZm3Yff5HGZJKCz7RqZ5jUjknsXT6Gz5YKG23J3uq9hAj0epncCB0rlqmnZ8Q+UUpQB2tCR5mT37vw==
   /@babel/code-frame/7.0.0-beta.51:
     dependencies:
       '@babel/highlight': 7.0.0-beta.51
@@ -42,14 +36,12 @@ packages:
     dev: true
     resolution:
       integrity: sha1-ACT5b99wKKIdaOJzr9TpUyFKHq0=
-  /@babel/highlight/7.0.0-beta.46:
+  /@babel/code-frame/7.0.0-beta.55:
     dependencies:
-      chalk: 2.4.1
-      esutils: 2.0.2
-      js-tokens: 3.0.2
+      '@babel/highlight': 7.0.0-beta.55
     dev: true
     resolution:
-      integrity: sha512-r4snW6Q8ICL3Y8hGzYJRvyG/+sc+kvkewXNedG9tQjoHmUFMwMSv/o45GWQUQswevGnWghiGkpRPivFfOuMsOA==
+      integrity: sha1-cfUw57AQr163p993UveJId1X6e4=
   /@babel/highlight/7.0.0-beta.51:
     dependencies:
       chalk: 2.4.1
@@ -66,6 +58,14 @@ packages:
     dev: true
     resolution:
       integrity: sha1-FV1Qc1gym45waJcAF8P9dKmwhYQ=
+  /@babel/highlight/7.0.0-beta.55:
+    dependencies:
+      chalk: 2.4.1
+      esutils: 2.0.2
+      js-tokens: 3.0.2
+    dev: true
+    resolution:
+      integrity: sha1-mIZTZH1inCYdrhVudNXwJSulIMA=
   /@types/events/1.2.0:
     dev: true
     resolution:
@@ -2614,14 +2614,14 @@ packages:
     dev: true
     resolution:
       integrity: sha1-V+gO0IQd6jAxZ8zozXlSHeuv3hA=
-  /jest-extended/0.7.2:
+  /jest-extended/0.8.1:
     dependencies:
-      chalk: 2.4.1
       expect: 22.4.3
+      jest-get-type: 22.4.3
       jest-matcher-utils: 22.4.3
     dev: true
     resolution:
-      integrity: sha512-/yBHlS5TBbVjTRN00f/lfTFHRjBMyLrtDtj2+KrlB/CiaXc6i7e1aH6WslUNFGeyHhoLWd3z4+oHOoesFzZyvw==
+      integrity: sha512-WhyYy9bNAxotiAlSQz0cXTnqP6aKPZw8iBzBbaDrsE3Yv+u1N7Uq05n+YszSnQUuLCyuF/hAszY2yzAgKdY8kw==
   /jest-get-type/22.4.3:
     dev: true
     resolution:
@@ -2679,7 +2679,7 @@ packages:
       integrity: sha1-TUmB8jIT6Tnjzt8j3DTHR7WuGRM=
   /jest-message-util/22.4.3:
     dependencies:
-      '@babel/code-frame': 7.0.0-beta.46
+      '@babel/code-frame': 7.0.0-beta.55
       chalk: 2.4.1
       micromatch: 2.3.11
       slash: 1.0.0
@@ -4748,13 +4748,13 @@ packages:
     dev: true
     resolution:
       integrity: sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
-  /typescript/2.9.2:
+  /typescript/3.0.1:
     dev: true
     engines:
       node: '>=4.2.0'
     hasBin: true
     resolution:
-      integrity: sha512-Gr4p6nFNaoufRIY4NMdpQRNmgxVIGMs4Fcu/ujdYk3nAZqk7supzBE9idmvfZIlH/Cuj//dvi+019qEue9lV0w==
+      integrity: sha512-zQIMOmC+372pC/CCVLqnQ0zSBiY7HHodU7mpQdjiZddek4GMj31I3dUJ7gAs9o65X7mnRma6OokOkc6f9jjfBg==
   /ua-parser-js/0.7.18:
     dev: true
     resolution:
@@ -5084,7 +5084,7 @@ specifiers:
   glob: ^7.1.2
   ignore-file.private: '*'
   jest: ^23.4.2
-  jest-extended: ^0.7.2
+  jest-extended: ^0.8.0
   jest-runner-standard: ^0.0.12
   js-yaml: ^3.12.0
   nested-workspace-helper.private: '*'
@@ -5092,5 +5092,5 @@ specifiers:
   standard: ^11.0.1
   ts-jest: ^23.0.1
   tslib: ^1.9.3
-  typescript: ^2.9.2
+  typescript: ^3.0.1
   yaml-jest: ^1.0.5
