@@ -1,6 +1,6 @@
 {
   "name": "fs-tree-utils",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Work with filesystem tree with ease",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",

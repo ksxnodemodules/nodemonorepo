@@ -5,5 +5,5 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 8
 shrinkwrapVersion: 3
 specifiers:
-  nested-workspace-helper: ^0.2.1
+  nested-workspace-helper: ^0.2.2
   preloaded-node.private: ^0.0.0
