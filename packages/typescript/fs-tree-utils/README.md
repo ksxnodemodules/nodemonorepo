@@ -2,6 +2,12 @@
 
 Work with filesystem tree with ease
 
+## Features
+
+* Traverse a folder structure.
+* Read a folder structure into a JSON object.
+* Write a JSON object into a folder structure.
+
 ## Requirements
 
 * Node.js ≥ 8.9.0
