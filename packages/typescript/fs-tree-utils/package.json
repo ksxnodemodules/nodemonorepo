@@ -10,7 +10,13 @@
   },
   "keywords": [
     "filesystem",
-    "tree"
+    "tree",
+    "folder",
+    "structure",
+    "directory",
+    "traverse",
+    "read",
+    "create"
   ],
   "main": "index.js",
   "dependencies": {
