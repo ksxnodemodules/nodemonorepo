@@ -11,7 +11,7 @@ codecov
 
 echo 'Diffing lock file...'
 echo '  → shrinkwrap.yaml ≏ shrinkwrap.yaml.old.tmp'
-diff --color=always shrinkwrap.yaml shrinkwrap.yaml.old.tmp
+diff --color shrinkwrap.yaml shrinkwrap.yaml.old.tmp
 
 echo 'Checking warnings...'
 echo '  → node-warnings.log'
