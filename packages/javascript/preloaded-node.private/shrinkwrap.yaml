@@ -1,18 +1,18 @@
 dependencies:
   '@types/json5': 0.0.29
-  '@types/node': 10.5.5
-  json5: 1.0.1
-  ts-node: 7.0.0
+  '@types/node': 10.7.1
+  json5: 2.0.0
+  ts-node: 7.0.1
   typescript: 3.0.1
 packages:
   /@types/json5/0.0.29:
     dev: false
     resolution:
       integrity: sha1-7ihweulOEdK4J7y+UnC86n8+ce4=
-  /@types/node/10.5.5:
+  /@types/node/10.7.1:
     dev: false
     resolution:
-      integrity: sha512-6Qnb1gXbp3g1JX9QVJj3A6ORzc9XCyhokxUKaoonHgNXcQhmk8adhotxfkeK8El9TnFeUuH72yI6jQ5nDJKS6w==
+      integrity: sha512-EGoI4ylB/lPOaqXqtzAyL8HcgOuCtH2hkEaLmkueOYufsTFWBn4VCvlCDC2HW8Q+9iF+QVC3sxjDKQYjHQeZ9w==
   /arrify/1.0.1:
     dev: false
     engines:
@@ -29,13 +29,15 @@ packages:
       node: '>=0.3.1'
     resolution:
       integrity: sha512-A46qtFgd+g7pDZinpnwiRJtxbC1hpgf0uzP3iG89scHk0AUC7A1TGxf5OiiOUv/JMZR8GOt8hL900hV0bOy5xA==
-  /json5/1.0.1:
+  /json5/2.0.0:
     dependencies:
       minimist: 1.2.0
     dev: false
+    engines:
+      node: '>=6'
     hasBin: true
     resolution:
-      integrity: sha512-aKS4WQjPenRxiQsC93MNfjx+nbF4PAdYzmd/1JIj8HYzqfbu86beTuNgXDzPknWk0n0uARlyewZo4s++ES36Ow==
+      integrity: sha512-0EdQvHuLm7yJ7lyG5dp7Q3X2ku++BG5ZHaJ5FTnaXpKqDrw4pMxel5Bt3oAYMthnrthFBdnZ1FcsXTPyrQlV0w==
   /make-error/1.3.4:
     dev: false
     resolution:
@@ -55,20 +57,20 @@ packages:
     hasBin: true
     resolution:
       integrity: sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=
-  /source-map-support/0.5.6:
+  /source-map-support/0.5.8:
     dependencies:
       buffer-from: 1.1.1
       source-map: 0.6.1
     dev: false
     resolution:
-      integrity: sha512-N4KXEz7jcKqPf2b2vZF11lQIz9W5ZMuUcIOGj243lduidkf2fjkVKJS9vNxVWn3u/uxX38AcE8U9nnH9FPcq+g==
+      integrity: sha512-WqAEWPdb78u25RfKzOF0swBpY0dKrNdjc4GvLwm7ScX/o9bj8Eh/YL8mcMhBHYDGl87UkkSXDOFnW4G7GhWhGg==
   /source-map/0.6.1:
     dev: false
     engines:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
-  /ts-node/7.0.0:
+  /ts-node/7.0.1:
     dependencies:
       arrify: 1.0.1
       buffer-from: 1.1.1
@@ -76,14 +78,14 @@ packages:
       make-error: 1.3.4
       minimist: 1.2.0
       mkdirp: 0.5.1
-      source-map-support: 0.5.6
+      source-map-support: 0.5.8
       yn: 2.0.0
     dev: false
     engines:
       node: '>=4.2.0'
     hasBin: true
     resolution:
-      integrity: sha512-klJsfswHP0FuOLsvBZ/zzCfUvakOSSxds78mVeK7I+qP76YWtxf16hEZsp3U+b0kIo82R5UatGFeblYMqabb2Q==
+      integrity: sha512-BVwVbPJRspzNh2yfslyT1PSbl5uIk03EZlb493RKHN4qej/D06n1cEhjlOJG69oFsE7OT8XjpTUcYf6pKTLMhw==
   /typescript/3.0.1:
     dev: false
     engines:
@@ -98,11 +100,11 @@ packages:
     resolution:
       integrity: sha1-5a2ryKz0CPY4X8dklWhMiOavaJo=
 registry: 'https://registry.npmjs.org/'
-shrinkwrapMinorVersion: 8
+shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   '@types/json5': ^0.0.29
   '@types/node': ^10.5.4
-  json5: ^1.0.1
+  json5: ^2.0.0
   ts-node: ^7.0.0
   typescript: ^3.0.1
