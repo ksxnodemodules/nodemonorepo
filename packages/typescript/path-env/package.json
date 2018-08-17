@@ -16,11 +16,11 @@
   "main": "index.js",
   "dependencies": {
     "tslib": "^1.9.3",
-    "@types/node": "^10.5.4"
+    "@types/node": "^10.7.1"
   },
   "devDependencies": {
     "ramda": "^0.25.0",
-    "@types/ramda": "^0.25.35"
+    "@types/ramda": "^0.25.36"
   },
   "engines": {
     "node": ">= 8.9.0"

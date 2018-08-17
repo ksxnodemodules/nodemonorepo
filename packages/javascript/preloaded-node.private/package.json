@@ -17,11 +17,11 @@
   },
   "index": "index.js",
   "dependencies": {
-    "ts-node": "^7.0.0",
+    "ts-node": "^7.0.1",
     "typescript": "^3.0.1",
     "json5": "^2.0.0",
     "@types/json5": "^0.0.29",
-    "@types/node": "^10.5.4"
+    "@types/node": "^10.7.1"
   },
   "engines": {
     "node": ">= 8.9.0"
