@@ -1791,6 +1791,8 @@ packages:
     engines:
       node: '>=0.8.0'
     optional: true
+    os:
+      - darwin
     requiresBuild: true
     resolution:
       integrity: sha512-z8H8/diyk76B7q5wg+Ud0+CqzcAF3mBBI/bA5ne5zrRUUIvNkJY//D3BqyH571KuAC4Nr7Rw7CjWX4r0y9DvNg==
@@ -5070,7 +5072,7 @@ packages:
     resolution:
       integrity: sha1-9+572FfdfB0tOMDnTvvWgdFDH9E=
 registry: 'https://registry.npmjs.org/'
-shrinkwrapMinorVersion: 8
+shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   '@types/glob': ^5.0.35
