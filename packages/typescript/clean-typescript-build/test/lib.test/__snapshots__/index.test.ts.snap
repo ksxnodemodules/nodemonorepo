@@ -1,23 +1,233 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should list correct target files 1`] = `
-Array [
-  "root/to-be-cleaned/src-and-out/incompleted-out/file.js",
-  "root/to-be-cleaned/src-and-out/ts-ext/file.js",
-  "root/to-be-cleaned/src-and-out/ts-ext/file.js.map",
-  "root/to-be-cleaned/src-and-out/ts-ext/file.jsx",
-  "root/to-be-cleaned/src-and-out/ts-ext/file.jsx.map",
-  "root/to-be-cleaned/src-and-out/ts-ext/file.d.ts",
-  "root/to-be-cleaned/src-and-out/ts-ext/file.d.ts.map",
-  "root/to-be-cleaned/src-and-out/ts-ext/file.d.tsx",
-  "root/to-be-cleaned/src-and-out/ts-ext/file.d.tsx.map",
-  "root/to-be-cleaned/src-and-out/tsx-ext/file.js",
-  "root/to-be-cleaned/src-and-out/tsx-ext/file.js.map",
-  "root/to-be-cleaned/src-and-out/tsx-ext/file.jsx",
-  "root/to-be-cleaned/src-and-out/tsx-ext/file.jsx.map",
-  "root/to-be-cleaned/src-and-out/tsx-ext/file.d.ts",
-  "root/to-be-cleaned/src-and-out/tsx-ext/file.d.ts.map",
-  "root/to-be-cleaned/src-and-out/tsx-ext/file.d.tsx",
-  "root/to-be-cleaned/src-and-out/tsx-ext/file.d.tsx.map",
-]
+Object {
+  "deletedFileContents": Array [
+    Object {
+      "content": "Should be deleted",
+      "filename": "root/to-be-cleaned/src-and-out/incompleted-out/file.js",
+    },
+    Object {
+      "content": "Should be deleted",
+      "filename": "root/to-be-cleaned/src-and-out/ts-ext/file.js",
+    },
+    Object {
+      "content": "Should be deleted",
+      "filename": "root/to-be-cleaned/src-and-out/ts-ext/file.js.map",
+    },
+    Object {
+      "content": "Should be deleted",
+      "filename": "root/to-be-cleaned/src-and-out/ts-ext/file.jsx",
+    },
+    Object {
+      "content": "Should be deleted",
+      "filename": "root/to-be-cleaned/src-and-out/ts-ext/file.jsx.map",
+    },
+    Object {
+      "content": "Should be deleted",
+      "filename": "root/to-be-cleaned/src-and-out/ts-ext/file.d.ts",
+    },
+    Object {
+      "content": "Should be deleted",
+      "filename": "root/to-be-cleaned/src-and-out/ts-ext/file.d.ts.map",
+    },
+    Object {
+      "content": "Should be deleted",
+      "filename": "root/to-be-cleaned/src-and-out/ts-ext/file.d.tsx",
+    },
+    Object {
+      "content": "Should be deleted",
+      "filename": "root/to-be-cleaned/src-and-out/ts-ext/file.d.tsx.map",
+    },
+    Object {
+      "content": "Should be deleted",
+      "filename": "root/to-be-cleaned/src-and-out/tsx-ext/file.js",
+    },
+    Object {
+      "content": "Should be deleted",
+      "filename": "root/to-be-cleaned/src-and-out/tsx-ext/file.js.map",
+    },
+    Object {
+      "content": "Should be deleted",
+      "filename": "root/to-be-cleaned/src-and-out/tsx-ext/file.jsx",
+    },
+    Object {
+      "content": "Should be deleted",
+      "filename": "root/to-be-cleaned/src-and-out/tsx-ext/file.jsx.map",
+    },
+    Object {
+      "content": "Should be deleted",
+      "filename": "root/to-be-cleaned/src-and-out/tsx-ext/file.d.ts",
+    },
+    Object {
+      "content": "Should be deleted",
+      "filename": "root/to-be-cleaned/src-and-out/tsx-ext/file.d.ts.map",
+    },
+    Object {
+      "content": "Should be deleted",
+      "filename": "root/to-be-cleaned/src-and-out/tsx-ext/file.d.tsx",
+    },
+    Object {
+      "content": "Should be deleted",
+      "filename": "root/to-be-cleaned/src-and-out/tsx-ext/file.d.tsx.map",
+    },
+  ],
+  "remainingFileContents": Array [
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-cleaned/src-and-out/incompleted-out/file.ts",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-cleaned/src-and-out/ts-ext/file.ts",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-cleaned/src-and-out/tsx-ext/file.tsx",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/folders/file.ts",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/ignored/direct-node-modules-descendants/node_modules/file.d.ts",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/ignored/direct-node-modules-descendants/node_modules/file.d.ts.map",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/ignored/direct-node-modules-descendants/node_modules/file.d.tsx",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/ignored/direct-node-modules-descendants/node_modules/file.d.tsx.map",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/ignored/direct-node-modules-descendants/node_modules/file.js",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/ignored/direct-node-modules-descendants/node_modules/file.js.map",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/ignored/direct-node-modules-descendants/node_modules/file.jsx",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/ignored/direct-node-modules-descendants/node_modules/file.jsx.map",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/ignored/direct-node-modules-descendants/node_modules/file.ts",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/ignored/direct-node-modules-descendants/node_modules/file.tsx",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/ignored/indirect-node-modules-descendants/node_modules/a-dummy-package/file.d.ts",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/ignored/indirect-node-modules-descendants/node_modules/a-dummy-package/file.d.ts.map",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/ignored/indirect-node-modules-descendants/node_modules/a-dummy-package/file.d.tsx",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/ignored/indirect-node-modules-descendants/node_modules/a-dummy-package/file.d.tsx.map",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/ignored/indirect-node-modules-descendants/node_modules/a-dummy-package/file.js",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/ignored/indirect-node-modules-descendants/node_modules/a-dummy-package/file.js.map",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/ignored/indirect-node-modules-descendants/node_modules/a-dummy-package/file.jsx",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/ignored/indirect-node-modules-descendants/node_modules/a-dummy-package/file.jsx.map",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/ignored/indirect-node-modules-descendants/node_modules/a-dummy-package/file.ts",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/ignored/indirect-node-modules-descendants/node_modules/a-dummy-package/file.tsx",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/out-only/file.d.ts",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/out-only/file.d.ts.map",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/out-only/file.d.tsx",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/out-only/file.d.tsx.map",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/out-only/file.js",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/out-only/file.js.map",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/out-only/file.jsx",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/out-only/file.jsx.map",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/src-only/file.ts",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/src-only/file.tsx",
+    },
+  ],
+  "targets": Array [
+    "root/to-be-cleaned/src-and-out/incompleted-out/file.js",
+    "root/to-be-cleaned/src-and-out/ts-ext/file.js",
+    "root/to-be-cleaned/src-and-out/ts-ext/file.js.map",
+    "root/to-be-cleaned/src-and-out/ts-ext/file.jsx",
+    "root/to-be-cleaned/src-and-out/ts-ext/file.jsx.map",
+    "root/to-be-cleaned/src-and-out/ts-ext/file.d.ts",
+    "root/to-be-cleaned/src-and-out/ts-ext/file.d.ts.map",
+    "root/to-be-cleaned/src-and-out/ts-ext/file.d.tsx",
+    "root/to-be-cleaned/src-and-out/ts-ext/file.d.tsx.map",
+    "root/to-be-cleaned/src-and-out/tsx-ext/file.js",
+    "root/to-be-cleaned/src-and-out/tsx-ext/file.js.map",
+    "root/to-be-cleaned/src-and-out/tsx-ext/file.jsx",
+    "root/to-be-cleaned/src-and-out/tsx-ext/file.jsx.map",
+    "root/to-be-cleaned/src-and-out/tsx-ext/file.d.ts",
+    "root/to-be-cleaned/src-and-out/tsx-ext/file.d.ts.map",
+    "root/to-be-cleaned/src-and-out/tsx-ext/file.d.tsx",
+    "root/to-be-cleaned/src-and-out/tsx-ext/file.d.tsx.map",
+  ],
+}
 `;
