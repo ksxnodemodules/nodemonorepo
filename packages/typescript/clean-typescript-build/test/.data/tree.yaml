@@ -1,1 +1,44 @@
-root: {}
+root:
+  to-be-kept:
+    src-only:
+      __describe: 'Outputs that do not exist should be ignored'
+      ts-ext:
+        file.ts: 'Should be kept'
+      tsx-ext:
+        file.tsx: 'Should be kept'
+    out-only:
+      __describe: 'Outputs that exist without corresponding inputs should be ignore'
+      ts-ext:
+        file.d.ts: 'Should be kept'
+        file.d.ts.map: 'Should be kept'
+        file.js: 'Should be kept'
+        file.js.map: 'Should be kept'
+      tsx-ext:
+        file.d.tsx: 'Should be kept'
+        file.d.tsx.map: 'Should be kept'
+        file.jsx: 'Should be kept'
+        file.jsx.map: 'Should be kept'
+  to-be-cleaned:
+    src-and-out:
+      __describe: 'Complete set of outputs for each input'
+      ts-ext:
+        file.ts: 'Should be kept'
+        file.d.ts: 'Should be deleted'
+        file.d.ts.map: 'Should be deleted'
+        file.js: 'Should be deleted'
+        file.js.map: 'Should be deleted'
+      tsx-ext:
+        file.tsx: 'Should be kept'
+        file.d.tsx: 'Should be deleted'
+        file.d.tsx.map: 'Should be deleted'
+        file.jsx: 'Should be deleted'
+        file.jsx.map: 'Should be deleted'
+      incompleted-out:
+        __describe: 'Missing source map and definition'
+        file.ts: 'Should be kept'
+        file.js: 'Should be deleted'
+      mismatched-out:
+        __describe: 'Presence of TSX should not delete output of TS'
+        file.tsx: 'Should be kept'
+        file.js: 'Should be kept'
+        file.js.map: 'Should be kept'
