@@ -1,4 +1,5 @@
 import path from 'path'
+import {partition} from 'ramda'
 import {unlink, lstat, existsSync} from 'fs-extra'
 import {traverse, Traverse} from 'fs-tree-utils'
 
@@ -22,12 +23,56 @@ export const DEFAULT_SOURCE_DETECTOR: SourceDetector =
 
 export const DEFAULT_TARGET_SPECIFIER: TargetSpecifier = specifyTarget
 
-export async function clean (root: string, options?: Options) {
+/**
+ * Delete all compiled products corresponding to source files inside `root`
+ * @param root Directory that contains all source files
+ * @param options Options
+ * @param options.deep A function that tells when to go deeper
+ * @param options.isSource A function that tells which file is a source file
+ * @param options.listTargets A function that lists compiled products corresponding to a source file
+ * @returns An object
+ *   * Property `targets`: An aggregation of `options.listTargets`'s return values
+ *   * Property `reports`: An array of reports which tell whether or not deletion succeed
+ *   * Property `success`: An array of paths to files which are successfully deleted
+ *   * Property `failure`: An array of paths to files which are failed to be deleted
+ */
+export async function clean (root: string, options?: Options): Promise<clean.Result> {
+  const del = (file: string) => unlink(file).then(() => true, () => false)
+  const r2f = (reports: clean.Result.ReportList) => reports.map(x => x.file)
   const targets = await listAllTargets(root, options)
-  await Promise.all(targets.map(x => unlink(x)))
-  return targets
+  const reports = await Promise.all(targets.map(async file => ({file, deletion: await del(file)})))
+  const [success, failure] = partition(x => x.deletion, reports)
+  return {targets, reports, success: r2f(success), failure: r2f(failure)}
 }
 
+export namespace clean {
+  export interface Result {
+    readonly targets: Result.FileList
+    readonly reports: Result.ReportList
+    readonly success: Result.FileList
+    readonly failure: Result.FileList
+  }
+
+  export namespace Result {
+    export type FileList = ReadonlyArray<string>
+    export type ReportList = ReadonlyArray<Report>
+
+    export interface Report {
+      readonly file: string
+      readonly deletion: boolean
+    }
+  }
+}
+
+/**
+ * List compiled products corresponding to source files inside `root`
+ * @param root Directory that contains all source files
+ * @param options Options
+ * @param options.deep A function that tells when to go deeper
+ * @param options.isSource A function that tells which file is a source file
+ * @param options.listTargets A function that lists compiled products corresponding to a source file
+ * @returns A promise that resolves a list of target file paths
+ */
 export async function listAllTargets (
   root: string,
   options: Options = {}
@@ -71,3 +116,5 @@ function specifyTarget ({item, container}: Param) {
   ]
     .map(suffix => path.join(container, name + suffix))
 }
+
+export default clean
