@@ -1,1 +1,1 @@
-import * from './lib'
+export * from './lib'
