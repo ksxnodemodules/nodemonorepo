@@ -15,6 +15,13 @@ root:
       file.d.tsx.map: 'Should be kept'
       file.jsx: 'Should be kept'
       file.jsx.map: 'Should be kept'
+    folders:
+      __describe: 'Folders whose names matches output filename pattern'
+      file.ts: 'Should be kept'
+      file.d.ts:
+        __describe: 'Should be kept'
+      file.js:
+        __describe: 'Should be kept'
   to-be-cleaned:
     __describe: 'The tree should lose its leaves'
     src-and-out:
