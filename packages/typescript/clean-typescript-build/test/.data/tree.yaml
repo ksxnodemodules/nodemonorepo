@@ -1,5 +1,6 @@
 root:
   to-be-kept:
+    __describe: 'The tree should remain unchanged'
     src-only:
       __describe: 'Outputs that do not exist should be ignored'
       ts-ext:
@@ -19,6 +20,7 @@ root:
         file.jsx: 'Should be kept'
         file.jsx.map: 'Should be kept'
   to-be-cleaned:
+    __describe: 'The tree should lose its leaves'
     src-and-out:
       __describe: 'Complete set of outputs for each input'
       ts-ext:
