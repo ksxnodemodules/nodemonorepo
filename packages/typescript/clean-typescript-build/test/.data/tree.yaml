@@ -22,6 +22,33 @@ root:
         __describe: 'Should be kept'
       file.js:
         __describe: 'Should be kept'
+    ignored:
+      __describe: 'Files inside node_modules should be ignored'
+      direct-node-modules-descendants:
+        node_modules:
+          file.ts: 'Should be kept'
+          file.tsx: 'Should be kept'
+          file.d.ts: 'Should be kept'
+          file.d.ts.map: 'Should be kept'
+          file.js: 'Should be kept'
+          file.js.map: 'Should be kept'
+          file.d.tsx: 'Should be kept'
+          file.d.tsx.map: 'Should be kept'
+          file.jsx: 'Should be kept'
+          file.jsx.map: 'Should be kept'
+      indirect-node-modules-descendants:
+        node_modules:
+          a-dummy-package:
+            file.ts: 'Should be kept'
+            file.tsx: 'Should be kept'
+            file.d.ts: 'Should be kept'
+            file.d.ts.map: 'Should be kept'
+            file.js: 'Should be kept'
+            file.js.map: 'Should be kept'
+            file.d.tsx: 'Should be kept'
+            file.d.tsx.map: 'Should be kept'
+            file.jsx: 'Should be kept'
+            file.jsx.map: 'Should be kept'
   to-be-cleaned:
     __describe: 'The tree should lose its leaves'
     src-and-out:
