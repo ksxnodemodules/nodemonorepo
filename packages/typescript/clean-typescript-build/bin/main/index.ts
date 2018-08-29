@@ -51,7 +51,7 @@ main().then(
 )
 
 async function main (): Promise<number> {
-  const {success, failure, targets} = await (dry ? fakeClean : clean)(directory)
+  const {success, failure, targets, reports} = await (dry ? fakeClean : clean)(directory)
 
   if (format === 'text') {
     const list = (filelist: ReadonlyArray<string>) =>
@@ -65,8 +65,24 @@ async function main (): Promise<number> {
 
     console.info(`\nFailed to delete ${failure.length} files`)
     list(failure)
+
+    for (const {file, deletion} of reports) {
+      if (deletion.success) continue
+      console.error(`\nFailed at ${file}`)
+      console.error(deletion.error)
+    }
   } else if (format === 'json') {
-    const text = JSON.stringify({targets, success, failure}, undefined, jsonIndent)
+    const reasons: {
+      [filename: string]: any
+    } = {}
+
+    for (const {file, deletion} of reports) {
+      if (!deletion.success) {
+        reasons[file] = deletion.error
+      }
+    }
+
+    const text = JSON.stringify({targets, success, failure, reasons}, undefined, jsonIndent)
     console.info(text)
   }
 
