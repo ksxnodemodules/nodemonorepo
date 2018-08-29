@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should list correct target files 1`] = `
+Array [
+  "root/to-be-cleaned/src-and-out/incompleted-out/file.js",
+  "root/to-be-cleaned/src-and-out/ts-ext/file.js",
+  "root/to-be-cleaned/src-and-out/ts-ext/file.js.map",
+  "root/to-be-cleaned/src-and-out/ts-ext/file.jsx",
+  "root/to-be-cleaned/src-and-out/ts-ext/file.jsx.map",
+  "root/to-be-cleaned/src-and-out/ts-ext/file.d.ts",
+  "root/to-be-cleaned/src-and-out/ts-ext/file.d.ts.map",
+  "root/to-be-cleaned/src-and-out/ts-ext/file.d.tsx",
+  "root/to-be-cleaned/src-and-out/ts-ext/file.d.tsx.map",
+  "root/to-be-cleaned/src-and-out/tsx-ext/file.js",
+  "root/to-be-cleaned/src-and-out/tsx-ext/file.js.map",
+  "root/to-be-cleaned/src-and-out/tsx-ext/file.jsx",
+  "root/to-be-cleaned/src-and-out/tsx-ext/file.jsx.map",
+  "root/to-be-cleaned/src-and-out/tsx-ext/file.d.ts",
+  "root/to-be-cleaned/src-and-out/tsx-ext/file.d.ts.map",
+  "root/to-be-cleaned/src-and-out/tsx-ext/file.d.tsx",
+  "root/to-be-cleaned/src-and-out/tsx-ext/file.d.tsx.map",
+]
+`;
