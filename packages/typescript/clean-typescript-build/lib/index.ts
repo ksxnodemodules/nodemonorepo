@@ -37,11 +37,13 @@ export const DEFAULT_TARGET_SPECIFIER: TargetSpecifier = specifyTarget
  *   * Property `failure`: An array of paths to files which are failed to be deleted
  */
 export async function clean (root: string, options?: Options): Promise<clean.Result> {
-  const del = (file: string) => unlink(file).then(() => true, () => false)
+  const del = (file: string) => unlink(file).then(onUnlinkSuccess, onUnlinkFailure)
   const r2f = (reports: clean.Result.ReportList) => reports.map(x => x.file)
+  const onUnlinkSuccess = () => ({success: true as true})
+  const onUnlinkFailure = (error: any) => ({success: false as false, error})
   const targets = await listAllTargets(root, options)
   const reports = await Promise.all(targets.map(async file => ({file, deletion: await del(file)})))
-  const [success, failure] = partition(x => x.deletion, reports)
+  const [success, failure] = partition(x => x.deletion.success, reports)
   return {targets, reports, success: r2f(success), failure: r2f(failure)}
 }
 
@@ -59,7 +61,22 @@ export namespace clean {
 
     export interface Report {
       readonly file: string
-      readonly deletion: boolean
+      readonly deletion: Report.Deletion
+    }
+
+    export namespace Report {
+      export type Deletion = Deletion.Success | Deletion.Failure
+
+      export namespace Deletion {
+        export interface Success {
+          readonly success: true
+        }
+
+        export interface Failure {
+          readonly success: false
+          readonly error: any
+        }
+      }
     }
   }
 }

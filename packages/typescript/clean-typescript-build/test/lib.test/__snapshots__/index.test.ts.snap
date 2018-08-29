@@ -238,71 +238,105 @@ Object {
     "failure": Array [],
     "reports": Array [
       Object {
-        "deletion": true,
+        "deletion": Object {
+          "success": true,
+        },
         "file": "root/to-be-cleaned/src-and-out/incompleted-out/file.js",
       },
       Object {
-        "deletion": true,
+        "deletion": Object {
+          "success": true,
+        },
         "file": "root/to-be-cleaned/src-and-out/ts-ext/file.js",
       },
       Object {
-        "deletion": true,
+        "deletion": Object {
+          "success": true,
+        },
         "file": "root/to-be-cleaned/src-and-out/ts-ext/file.js.map",
       },
       Object {
-        "deletion": true,
+        "deletion": Object {
+          "success": true,
+        },
         "file": "root/to-be-cleaned/src-and-out/ts-ext/file.jsx",
       },
       Object {
-        "deletion": true,
+        "deletion": Object {
+          "success": true,
+        },
         "file": "root/to-be-cleaned/src-and-out/ts-ext/file.jsx.map",
       },
       Object {
-        "deletion": true,
+        "deletion": Object {
+          "success": true,
+        },
         "file": "root/to-be-cleaned/src-and-out/ts-ext/file.d.ts",
       },
       Object {
-        "deletion": true,
+        "deletion": Object {
+          "success": true,
+        },
         "file": "root/to-be-cleaned/src-and-out/ts-ext/file.d.ts.map",
       },
       Object {
-        "deletion": true,
+        "deletion": Object {
+          "success": true,
+        },
         "file": "root/to-be-cleaned/src-and-out/ts-ext/file.d.tsx",
       },
       Object {
-        "deletion": true,
+        "deletion": Object {
+          "success": true,
+        },
         "file": "root/to-be-cleaned/src-and-out/ts-ext/file.d.tsx.map",
       },
       Object {
-        "deletion": true,
+        "deletion": Object {
+          "success": true,
+        },
         "file": "root/to-be-cleaned/src-and-out/tsx-ext/file.js",
       },
       Object {
-        "deletion": true,
+        "deletion": Object {
+          "success": true,
+        },
         "file": "root/to-be-cleaned/src-and-out/tsx-ext/file.js.map",
       },
       Object {
-        "deletion": true,
+        "deletion": Object {
+          "success": true,
+        },
         "file": "root/to-be-cleaned/src-and-out/tsx-ext/file.jsx",
       },
       Object {
-        "deletion": true,
+        "deletion": Object {
+          "success": true,
+        },
         "file": "root/to-be-cleaned/src-and-out/tsx-ext/file.jsx.map",
       },
       Object {
-        "deletion": true,
+        "deletion": Object {
+          "success": true,
+        },
         "file": "root/to-be-cleaned/src-and-out/tsx-ext/file.d.ts",
       },
       Object {
-        "deletion": true,
+        "deletion": Object {
+          "success": true,
+        },
         "file": "root/to-be-cleaned/src-and-out/tsx-ext/file.d.ts.map",
       },
       Object {
-        "deletion": true,
+        "deletion": Object {
+          "success": true,
+        },
         "file": "root/to-be-cleaned/src-and-out/tsx-ext/file.d.tsx",
       },
       Object {
-        "deletion": true,
+        "deletion": Object {
+          "success": true,
+        },
         "file": "root/to-be-cleaned/src-and-out/tsx-ext/file.d.tsx.map",
       },
     ],

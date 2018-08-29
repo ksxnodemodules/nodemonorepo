@@ -75,6 +75,6 @@ async function main (): Promise<number> {
 
 async function fakeClean (directory: string, options?: Options): Promise<clean.Result> {
   const targets = await listAllTargets(directory, options)
-  const reports = targets.map(file => ({file, deletion: true}))
+  const reports = targets.map(file => ({file, deletion: {success: true as true}}))
   return {success: targets, failure: [], targets, reports}
 }
