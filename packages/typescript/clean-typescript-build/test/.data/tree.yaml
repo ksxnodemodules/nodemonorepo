@@ -40,6 +40,6 @@ root:
         file.jsx: 'Should be deleted'
         file.jsx.map: 'Should be deleted'
       incompleted-out:
-        __describe: 'Missing source map and definition'
+        __describe: 'Missing source map and type header'
         file.ts: 'Should be kept'
         file.js: 'Should be deleted'
