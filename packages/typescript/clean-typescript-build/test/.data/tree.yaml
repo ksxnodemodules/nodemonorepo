@@ -6,7 +6,7 @@ root:
       file.ts: 'Should be kept'
       file.tsx: 'Should be kept'
     out-only:
-      __describe: 'Outputs that exist without corresponding inputs should be ignore'
+      __describe: 'Outputs that exist without corresponding inputs should be ignored'
       file.d.ts: 'Should be kept'
       file.d.ts.map: 'Should be kept'
       file.js: 'Should be kept'
