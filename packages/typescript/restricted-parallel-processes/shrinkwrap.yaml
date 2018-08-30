@@ -1,12 +1,12 @@
 dependencies:
-  '@types/node': 10.5.4
+  '@types/node': 10.9.3
   restricted-concurrent-actions: 'link:../restricted-concurrent-actions'
   tslib: 1.9.3
 packages:
-  /@types/node/10.5.4:
+  /@types/node/10.9.3:
     dev: false
     resolution:
-      integrity: sha512-8TqvB0ReZWwtcd3LXq3YSrBoLyXFgBX/sBZfGye9+YS8zH7/g+i6QRIuiDmwBoTzcQ/pk89nZYTYU4c5akKkzw==
+      integrity: sha512-DOzWZKUnmFYG0KUOs+9HEBju2QhBU6oM2zeluunQNt0vnJvnkHvtDNlQPZDkTrkC5pZrNx1TPqeL137zciXZMQ==
   /tslib/1.9.3:
     dev: false
     resolution:
@@ -15,6 +15,6 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
-  '@types/node': ^10.5.4
+  '@types/node': ^10.9.3
   restricted-concurrent-actions: ^0.0.10
   tslib: ^1.9.3

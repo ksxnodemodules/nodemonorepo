@@ -23,7 +23,7 @@
     "tslib": "^1.9.3",
     "@types/js-yaml": "^3.11.2",
     "@types/fs-extra": "^5.0.4",
-    "@types/node": "^10.5.4"
+    "@types/node": "^10.9.3"
   },
   "devDependencies": {
     "fs-tree-utils": "*"

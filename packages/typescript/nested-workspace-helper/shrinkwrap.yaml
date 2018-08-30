@@ -1,9 +1,9 @@
 dependencies:
   '@types/fs-extra': 5.0.4
   '@types/js-yaml': 3.11.2
-  '@types/node': 10.5.4
+  '@types/node': 10.9.3
   '@types/node-fetch': 2.1.2
-  '@types/ramda': 0.25.35
+  '@types/ramda': 0.25.36
   '@types/semver': 5.5.0
   '@types/yargs': 11.1.1
   chalk: 2.4.1
@@ -15,7 +15,7 @@ dependencies:
   node-fetch: 2.2.0
   preloaded-node: 'link:../../javascript/preloaded-node'
   ramda: 0.25.0
-  semver: 5.5.0
+  semver: 5.5.1
   tslib: 1.9.3
   unique-temp-path: 'link:../unique-temp-path'
   yargs: 12.0.1
@@ -42,10 +42,14 @@ packages:
     dev: false
     resolution:
       integrity: sha512-8TqvB0ReZWwtcd3LXq3YSrBoLyXFgBX/sBZfGye9+YS8zH7/g+i6QRIuiDmwBoTzcQ/pk89nZYTYU4c5akKkzw==
-  /@types/ramda/0.25.35:
+  /@types/node/10.9.3:
     dev: false
     resolution:
-      integrity: sha512-C7qXWhVEuFlH+X4n1BI1cowAhc1dUoHiRPl+dEUwNAcTwrQDE0N53FIVcnHhNwt7/lZxTHFoHOyLcwjHJuCByg==
+      integrity: sha512-DOzWZKUnmFYG0KUOs+9HEBju2QhBU6oM2zeluunQNt0vnJvnkHvtDNlQPZDkTrkC5pZrNx1TPqeL137zciXZMQ==
+  /@types/ramda/0.25.36:
+    dev: false
+    resolution:
+      integrity: sha512-LAeBECPU9IG+K0pRdGl2L9lxanb0CKgue0IGpdn9nmpmKefDrCglrYwkxFYoQxCtY0w/mTxpJaQ4VAChcSIN+A==
   /@types/semver/5.5.0:
     dev: false
     resolution:
@@ -373,11 +377,11 @@ packages:
     dev: false
     resolution:
       integrity: sha1-l/cXtp1IeE9fUmpsWqj/3aBVpNE=
-  /semver/5.5.0:
+  /semver/5.5.1:
     dev: false
     hasBin: true
     resolution:
-      integrity: sha512-4SJ3dm0WAwWy/NVeioZh5AntkdJoWKxHxcmyP622fOkgHa4z3R0TdBJICINyaSDE6uNwVc8gZr+ZinwZAH4xIA==
+      integrity: sha512-PqpAxfrEhlSUWge8dwIp4tZnQ25DIOthpiaHNIthsjEFQD6EvqUKUDM7L8O2rShkFccYo1VjJR0coWfNkCubRw==
   /set-blocking/2.0.0:
     dev: false
     resolution:
@@ -524,9 +528,9 @@ shrinkwrapVersion: 3
 specifiers:
   '@types/fs-extra': ^5.0.4
   '@types/js-yaml': ^3.11.2
-  '@types/node': ^10.5.4
+  '@types/node': ^10.9.3
   '@types/node-fetch': ^2.1.2
-  '@types/ramda': ^0.25.35
+  '@types/ramda': ^0.25.36
   '@types/semver': ^5.5.0
   '@types/yargs': ^11.1.1
   chalk: ^2.4.1
@@ -537,6 +541,6 @@ specifiers:
   node-fetch: ^2.2.0
   preloaded-node.private: '*'
   ramda: ^0.25.0
-  semver: ^5.5.0
+  semver: ^5.5.1
   tslib: ^1.9.3
   yargs: ^12.0.1

@@ -1,18 +1,18 @@
 dependencies:
   '@types/json5': 0.0.30
-  '@types/node': 10.7.1
+  '@types/node': 10.9.3
   json5: 2.0.1
   ts-node: 7.0.1
-  typescript: 3.0.1
+  typescript: 3.0.3
 packages:
   /@types/json5/0.0.30:
     dev: false
     resolution:
       integrity: sha512-sqm9g7mHlPY/43fcSNrCYfOeX9zkTTK+euO5E6+CVijSMm5tTjkVdwdqRkY3ljjIAf8679vps5jKUoJBCLsMDA==
-  /@types/node/10.7.1:
+  /@types/node/10.9.3:
     dev: false
     resolution:
-      integrity: sha512-EGoI4ylB/lPOaqXqtzAyL8HcgOuCtH2hkEaLmkueOYufsTFWBn4VCvlCDC2HW8Q+9iF+QVC3sxjDKQYjHQeZ9w==
+      integrity: sha512-DOzWZKUnmFYG0KUOs+9HEBju2QhBU6oM2zeluunQNt0vnJvnkHvtDNlQPZDkTrkC5pZrNx1TPqeL137zciXZMQ==
   /arrify/1.0.1:
     dev: false
     engines:
@@ -57,6 +57,7 @@ packages:
     hasBin: true
     resolution:
       integrity: sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=
+      tarball: 'http://registry.npmjs.org/mkdirp/-/mkdirp-0.5.1.tgz'
   /source-map-support/0.5.9:
     dependencies:
       buffer-from: 1.1.1
@@ -86,13 +87,13 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-BVwVbPJRspzNh2yfslyT1PSbl5uIk03EZlb493RKHN4qej/D06n1cEhjlOJG69oFsE7OT8XjpTUcYf6pKTLMhw==
-  /typescript/3.0.1:
+  /typescript/3.0.3:
     dev: false
     engines:
       node: '>=4.2.0'
     hasBin: true
     resolution:
-      integrity: sha512-zQIMOmC+372pC/CCVLqnQ0zSBiY7HHodU7mpQdjiZddek4GMj31I3dUJ7gAs9o65X7mnRma6OokOkc6f9jjfBg==
+      integrity: sha512-kk80vLW9iGtjMnIv11qyxLqZm20UklzuR2tL0QAnDIygIUIemcZMxlMWudl9OOt76H3ntVzcTiddQ1/pAAJMYg==
   /yn/2.0.0:
     dev: false
     engines:
@@ -104,7 +105,7 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   '@types/json5': ^0.0.30
-  '@types/node': ^10.5.4
-  json5: ^2.0.0
-  ts-node: ^7.0.0
-  typescript: ^3.0.1
+  '@types/node': ^10.9.3
+  json5: ^2.0.1
+  ts-node: ^7.0.1
+  typescript: ^3.0.3
