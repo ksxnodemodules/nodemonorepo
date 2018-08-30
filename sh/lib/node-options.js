@@ -1,7 +1,7 @@
 'use strict'
 const path = require('path')
 const fs = require('fs')
-const {env} = require('process')
+const { env } = require('process')
 const warningFile = path.resolve(__dirname, '../../node-warnings.log')
 const redirectWarnings = `--redirect-warnings=${warningFile}`
 

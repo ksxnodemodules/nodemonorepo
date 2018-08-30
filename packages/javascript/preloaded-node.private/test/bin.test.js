@@ -1,8 +1,8 @@
 'use strict'
 const path = require('path')
-const {spawnSync} = require('child_process')
+const { spawnSync } = require('child_process')
 const xjest = require('extra-jest')
-const {bin} = require('../index')
+const { bin } = require('../index')
 const script = path.resolve(__dirname, 'data/main.js')
 
 const {

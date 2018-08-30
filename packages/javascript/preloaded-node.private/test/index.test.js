@@ -1,7 +1,7 @@
 'use strict'
 const path = require('path')
 const xjest = require('extra-jest')
-const {spawn, spawnSync} = require('../index')
+const { spawn, spawnSync } = require('../index')
 const script = path.resolve(__dirname, 'data/main.js')
 
 beforeEach(() => {
@@ -15,7 +15,7 @@ afterEach(() => {
 it('spawn function works', () => {
   let stdout = ''
   let stderr = ''
-  const child = spawn([script], {encoding: 'utf8'})
+  const child = spawn([script], { encoding: 'utf8' })
 
   child.stdout.on('data', chunk => { stdout += chunk })
   child.stderr.on('data', chunk => { stderr += chunk })
@@ -24,11 +24,11 @@ it('spawn function works', () => {
     child.on('exit', status => resolve(status))
     child.on('error', error => reject(error))
   }).then(
-    status => xjest.snap.unsafe({stdout, stderr, status})()
+    status => xjest.snap.unsafe({ stdout, stderr, status })()
   )
 })
 
 it('spawnSync function works', () => {
-  const {status, error, signal, stdout, stderr} = spawnSync([script], {encoding: 'utf8'})
-  xjest.snap.unsafe({status, error, signal, stdout, stderr})()
+  const { status, error, signal, stdout, stderr } = spawnSync([script], { encoding: 'utf8' })
+  xjest.snap.unsafe({ status, error, signal, stdout, stderr })()
 })
