@@ -1,6 +1,6 @@
 {
   "name": "path-env",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Manipulate $PATH environment variable",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",

@@ -1,6 +1,6 @@
 {
   "name": "restricted-parallel-processes",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "Spawn all processes, but limit number of parallel processes",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
@@ -22,7 +22,7 @@
   ],
   "dependencies": {
     "tslib": "^1.9.3",
-    "restricted-concurrent-actions": "^0.0.10",
+    "restricted-concurrent-actions": "^0.0.11",
     "@types/node": "^10.9.3"
   },
   "engines": {

@@ -1,6 +1,6 @@
 {
   "name": "random-org-http",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Random.org via HTTP Interface",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",

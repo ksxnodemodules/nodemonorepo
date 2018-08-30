@@ -1,6 +1,6 @@
 {
   "name": "restricted-concurrent-actions",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Like Promise.all, but limit number of concurrent promises",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
@@ -18,7 +18,7 @@
   ],
   "dependencies": {
     "tslib": "^1.9.3",
-    "monorepo-shared-assets": "^0.0.15",
+    "monorepo-shared-assets": "^0.0.16",
     "@types/node": "^10.9.3"
   },
   "engines": {
