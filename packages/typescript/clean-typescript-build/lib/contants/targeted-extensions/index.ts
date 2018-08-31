@@ -1,4 +1,4 @@
-export = [
+export = Object.freeze([
   '.js',
   '.js.map',
   '.jsx',
@@ -7,4 +7,4 @@ export = [
   '.d.ts.map',
   '.d.tsx',
   '.d.tsx.map'
-]
+])
