@@ -20,7 +20,7 @@ declare function clean (root: string, options?: Options): Promise<clean.Result>
 
 **Parameters:**
   * `root`: Path to the directory that contains source files.
-  * `options.deep` (optional): Decides whether or not to dive deeper, default ignores `node_modules`.
+  * `options.deep` (optional): Decides whether or not to dive deeper, default ignores `node_modules` and `.git`.
   * `options.isSource` (optional): Decides whether or not a file is a source, default chooses files with extensions of `.ts` or `.tsx`.
   * `options.listTargets` (optional): List corresponding build products of given source file.
 
