@@ -15,7 +15,9 @@ Simple TypeScript build cleaning tool
 ### `clean`
 
 ```typescript
-declare function clean (root: string, options?: Options): Promise<clean.Result>
+declare function clean (root: string, options?: Options): Promise<Clean.Result>
+
+// See https://git.io/fACtE for definition of Clean.Result
 ```
 
 **Parameters:**
