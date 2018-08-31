@@ -1,27 +1,21 @@
-import path from 'path'
 import {partition} from 'ramda'
 import {unlink, lstat, existsSync} from 'fs-extra'
-import {traverse, Traverse} from 'fs-tree-utils'
+import {traverse} from 'fs-tree-utils'
 
-export type TargetList = ReadonlyArray<string>
-export type DeepFunc = Traverse.Options.DeepFunc
-export type Param = Traverse.Options.DeepFunc.Param
-export type SourceDetector = (x: Param) => boolean
-export type TargetSpecifier = (x: Param) => TargetList
+import {
+  Options,
+  TargetList,
+  Clean
+} from './types'
 
-export interface Options {
-  readonly deep?: DeepFunc
-  readonly isSource?: SourceDetector
-  readonly listTargets?: TargetSpecifier
-}
+import {
+  DEFAULT_DEEP_FUNC,
+  DEFAULT_SOURCE_DETECTOR,
+  DEFAULT_TARGET_SPECIFIER
+} from './contants'
 
-export const DEFAULT_DEEP_FUNC: DeepFunc =
-  x => x.item !== 'node_modules'
-
-export const DEFAULT_SOURCE_DETECTOR: SourceDetector =
-  ({item}) => /\.tsx?/.test(item) && !/\.d.tsx?/.test(item)
-
-export const DEFAULT_TARGET_SPECIFIER: TargetSpecifier = specifyTarget
+export * from './types'
+export * from './contants'
 
 /**
  * Delete all compiled products corresponding to source files inside `root`
@@ -36,49 +30,15 @@ export const DEFAULT_TARGET_SPECIFIER: TargetSpecifier = specifyTarget
  *   * Property `success`: An array of paths to files which are successfully deleted
  *   * Property `failure`: An array of paths to files which are failed to be deleted
  */
-export async function clean (root: string, options?: Options): Promise<clean.Result> {
+export async function clean (root: string, options?: Options): Promise<Clean.Result> {
   const del = (file: string) => unlink(file).then(onUnlinkSuccess, onUnlinkFailure)
-  const r2f = (reports: clean.Result.ReportList) => reports.map(x => x.file)
+  const r2f = (reports: Clean.Result.ReportList) => reports.map(x => x.file)
   const onUnlinkSuccess = () => ({success: true as true})
   const onUnlinkFailure = (error: any) => ({success: false as false, error})
   const targets = await listAllTargets(root, options)
   const reports = await Promise.all(targets.map(async file => ({file, deletion: await del(file)})))
   const [success, failure] = partition(x => x.deletion.success, reports)
   return {targets, reports, success: r2f(success), failure: r2f(failure)}
-}
-
-export namespace clean {
-  export interface Result {
-    readonly targets: Result.FileList
-    readonly reports: Result.ReportList
-    readonly success: Result.FileList
-    readonly failure: Result.FileList
-  }
-
-  export namespace Result {
-    export type FileList = ReadonlyArray<string>
-    export type ReportList = ReadonlyArray<Report>
-
-    export interface Report {
-      readonly file: string
-      readonly deletion: Report.Deletion
-    }
-
-    export namespace Report {
-      export type Deletion = Deletion.Success | Deletion.Failure
-
-      export namespace Deletion {
-        export interface Success {
-          readonly success: true
-        }
-
-        export interface Failure {
-          readonly success: false
-          readonly error: any
-        }
-      }
-    }
-  }
 }
 
 /**
@@ -117,21 +77,3 @@ export async function listAllTargets (
 
   return files
 }
-
-function specifyTarget ({item, container}: Param) {
-  const {name} = path.parse(item)
-
-  return [
-    '.js',
-    '.js.map',
-    '.jsx',
-    '.jsx.map',
-    '.d.ts',
-    '.d.ts.map',
-    '.d.tsx',
-    '.d.tsx.map'
-  ]
-    .map(suffix => path.join(container, name + suffix))
-}
-
-export default clean

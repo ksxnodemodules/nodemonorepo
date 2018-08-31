@@ -1,6 +1,6 @@
 import process from 'process'
 import yargs from 'yargs'
-import {clean, listAllTargets, Options} from '../../index'
+import {clean, listAllTargets, Options, Clean} from '../../index'
 
 interface CLIArguments extends yargs.Arguments {
   readonly directory: string
@@ -89,7 +89,7 @@ async function main (): Promise<number> {
   return 0
 }
 
-async function fakeClean (directory: string, options?: Options): Promise<clean.Result> {
+async function fakeClean (directory: string, options?: Options): Promise<Clean.Result> {
   const targets = await listAllTargets(directory, options)
   const reports = targets.map(file => ({file, deletion: {success: true as true}}))
   return {success: targets, failure: [], targets, reports}
