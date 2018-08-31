@@ -5,6 +5,7 @@ export type SourceDetector = (x: Param) => boolean
 export type TargetSpecifier = (x: Param) => TargetList
 export type Param = Traverse.Options.DeepFunc.Param
 export type TargetList = ReadonlyArray<string>
+export type RequiredOptions = Readonly<Required<Options>>
 
 export interface Options {
   readonly deep?: DeepFunc
