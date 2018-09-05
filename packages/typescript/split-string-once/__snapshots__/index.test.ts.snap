@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+Array [
+  Array [
+    Object {
+      "input": Object {
+        "separator": ",",
+        "text": "abc,def,ghi,jkl",
+      },
+      "output": Array [
+        "abc",
+        "def,ghi,jkl",
+      ],
+    },
+    Object {
+      "input": Object {
+        "separator": ",",
+        "text": "a,bc,def,ghij",
+      },
+      "output": Array [
+        "a",
+        "bc,def,ghij",
+      ],
+    },
+    Object {
+      "input": Object {
+        "separator": ",",
+        "text": ",abc,def,ghi,jkl",
+      },
+      "output": Array [
+        "",
+        "abc,def,ghi,jkl",
+      ],
+    },
+    Object {
+      "input": Object {
+        "separator": ",",
+        "text": "abc,def,ghi,jkl,",
+      },
+      "output": Array [
+        "abc",
+        "def,ghi,jkl,",
+      ],
+    },
+    Object {
+      "input": Object {
+        "separator": ",",
+        "text": "abcdefghijkl",
+      },
+      "output": Array [
+        "abcdefghijkl",
+      ],
+    },
+  ],
+  Array [
+    Object {
+      "input": Object {
+        "separator": "//",
+        "text": "abc//def/ghi//jkl///mno",
+      },
+      "output": Array [
+        "abc",
+        "def/ghi//jkl///mno",
+      ],
+    },
+    Object {
+      "input": Object {
+        "separator": "//",
+        "text": "abc//def//ghi//jkl",
+      },
+      "output": Array [
+        "abc",
+        "def//ghi//jkl",
+      ],
+    },
+  ],
+]
+`;
