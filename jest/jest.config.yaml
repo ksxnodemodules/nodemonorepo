@@ -24,4 +24,7 @@ projects:
       - \/check\/
       - \/test\/
       - \/.polyfill\/
+      - .*.json$
+      - .*.yaml$
+      - .*.yml$
     testEnvironment: node
