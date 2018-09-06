@@ -1,10 +1,6 @@
+import {object} from 'convenient-typescript-utilities'
 import * as types from '../../../types'
-
-const values = <
-  Object extends {[key: string]: any},
-  Key extends keyof Object
->(object: Object): ReadonlyArray<Object[Key]> =>
-  Object.freeze(Object.values(object))
+const {values} = object
 
 export const TYPE = values(types.Type)
 

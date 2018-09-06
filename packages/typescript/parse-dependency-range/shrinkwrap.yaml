@@ -1,6 +1,7 @@
 dependencies:
   '@types/node': 10.9.4
   '@types/semver': 5.5.0
+  convenient-typescript-utilities: 'link:../convenient-typescript-utilities'
   semver: 5.5.1
   split-string-once: 'link:../split-string-once'
   tslib: 1.9.3
@@ -28,5 +29,6 @@ shrinkwrapVersion: 3
 specifiers:
   '@types/node': ^10.9.3
   '@types/semver': ^5.5.0
+  convenient-typescript-utilities: ^0.0.0
   semver: ^5.5.1
   tslib: ^1.9.3

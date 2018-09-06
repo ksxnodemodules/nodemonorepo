@@ -1,8 +1,9 @@
 import url from 'url'
 import semver from 'semver'
+import {array} from 'convenient-typescript-utilities'
 import {Struct, Type, GitUrl, LocalUrl, TarballUrl} from '../../types'
 import {GITHUB_SHORTHAND, GIT_URL, LOCAL_URL, TARBALL_URL} from '../../constants'
-import includes from '../includes'
+const {includes} = array
 
 function parse (value: string): Struct {
   if (value === 'latest') {
