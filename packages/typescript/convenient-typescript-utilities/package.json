@@ -1,0 +1,18 @@
+{
+  "name": "convenient-typescript-utilities",
+  "version": "0.0.0",
+  "description": "Convenient types and functions for TypeScript",
+  "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
+  "bugs": {
+    "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
+  },
+  "dependencies": {
+    "tslib": "^1.9.3",
+    "@types/node": "^10.9.3"
+  },
+  "engines": {
+    "node": ">= 8.9.0"
+  }
+}
