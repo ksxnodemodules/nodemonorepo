@@ -23,3 +23,29 @@ export namespace ObjectUtils {
     [key: string]: any
   }
 }
+
+export namespace FunctionUtils {
+  export type RecursiveReturn<Return, Args extends any[]> =
+    Return |
+    ((...args: Args) => RecursiveReturn<Return, Args>)
+}
+
+export namespace TupleUtils {
+  export type SplitFirstOne<Tuple> =
+    Tuple extends [infer First, ...(infer Rest)[]] ? [First, Rest[]] : never
+
+  export type FirstElement<Tuple extends utils.Least[1]> =
+    SplitFirstOne<Tuple>[0]
+
+  export type ExcludeFirstElement<Tuple extends utils.Least[1]> =
+    SplitFirstOne<Tuple>[1]
+
+  export namespace utils {
+    export type Least<X = any> = [
+      X[],
+      [X, ...X[]],
+      [X, X, ...X[]],
+      [X, X, X, ...X[]]
+    ]
+  }
+}
