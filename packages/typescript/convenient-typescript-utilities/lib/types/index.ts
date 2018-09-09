@@ -1,5 +1,5 @@
 export namespace SetUtils {
-  export type  ElementPresenceChecker = <
+  export type ElementPresenceChecker = <
     Element extends Value,
     Value
   >(
