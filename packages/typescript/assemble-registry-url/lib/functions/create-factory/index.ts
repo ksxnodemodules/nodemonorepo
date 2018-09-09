@@ -103,7 +103,7 @@ function createRegistryPackageVersionFactory (
 }
 
 const createFactory: FactoryCreator = (param?: FactoryParam): any => {
-  if (!param || !param.registry) return createRegistryFactory()
+  if (!param) return createRegistryFactory()
 
   if ('package' in param) {
     return 'version' in param

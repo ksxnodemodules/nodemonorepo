@@ -9,10 +9,12 @@ Object {
 
 exports[`createFactory when param is invalid because of param.package 1`] = `
 Object {
+  "package": "!@#$%^",
   "registry": "https://registry.npmjs.org",
   "registryURL": "https://registry.npmjs.org",
   "setPackage": [Function],
   "setRegistry": [Function],
+  "validPackageName": false,
   "validRegistry": true,
 }
 `;
@@ -27,11 +29,19 @@ Object {
 
 exports[`createFactory when param is invalid because of param.version 1`] = `
 Object {
+  "allVersionsURL": "https://registry.npmjs.org/package/versions",
+  "latestVersionURL": "https://registry.npmjs.org/package/latest",
+  "package": "package",
+  "packageURL": "https://registry.npmjs.org/package",
   "registry": "https://registry.npmjs.org",
   "registryURL": "https://registry.npmjs.org",
   "setPackage": [Function],
   "setRegistry": [Function],
+  "setVersion": [Function],
+  "validPackageName": true,
   "validRegistry": true,
+  "validVersion": false,
+  "version": "Invalid Version Syntax!",
 }
 `;
 
@@ -56,20 +66,35 @@ Object {
 
 exports[`createFactory when param is valid when param.package and param.version is specified without param.registry 1`] = `
 Object {
+  "allVersionsURL": "https://registry.npmjs.org/package/versions",
+  "latestVersionURL": "https://registry.npmjs.org/package/latest",
+  "package": "package",
+  "packageURL": "https://registry.npmjs.org/package",
   "registry": "https://registry.npmjs.org",
   "registryURL": "https://registry.npmjs.org",
   "setPackage": [Function],
   "setRegistry": [Function],
+  "setVersion": [Function],
+  "validPackageName": true,
   "validRegistry": true,
+  "validVersion": true,
+  "version": "1.2.3",
+  "versionURL": "https://registry.npmjs.org/package/1.2.3",
 }
 `;
 
 exports[`createFactory when param is valid when param.package is specified scoped 1`] = `
 Object {
+  "allVersionsURL": "https://registry.npmjs.org/@scope%2Fpackage/versions",
+  "latestVersionURL": "https://registry.npmjs.org/@scope%2Fpackage/latest",
+  "package": "@scope/package",
+  "packageURL": "https://registry.npmjs.org/@scope%2Fpackage",
   "registry": "https://registry.npmjs.org",
   "registryURL": "https://registry.npmjs.org",
   "setPackage": [Function],
   "setRegistry": [Function],
+  "setVersion": [Function],
+  "validPackageName": true,
   "validRegistry": true,
 }
 `;
@@ -92,10 +117,16 @@ Object {
 
 exports[`createFactory when param is valid when param.package is specified without param.registry 1`] = `
 Object {
+  "allVersionsURL": "https://registry.npmjs.org/package/versions",
+  "latestVersionURL": "https://registry.npmjs.org/package/latest",
+  "package": "package",
+  "packageURL": "https://registry.npmjs.org/package",
   "registry": "https://registry.npmjs.org",
   "registryURL": "https://registry.npmjs.org",
   "setPackage": [Function],
   "setRegistry": [Function],
+  "setVersion": [Function],
+  "validPackageName": true,
   "validRegistry": true,
 }
 `;
