@@ -1,0 +1,42 @@
+{
+  "name": "available-npm-name",
+  "version": "0.0.0",
+  "description": "Check if any package name is taken",
+  "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksxnodemodules/nodemonorepo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
+  },
+  "keywords": [
+    "name",
+    "npm",
+    "package",
+    "test",
+    "available"
+  ],
+  "main": "index.js",
+  "bin": {
+    "available-npm-name": "bin/available-npm-name",
+    "find-npm-name": "bin/available-npm-name",
+    "npm-name": "bin/available-npm-name"
+  },
+  "dependencies": {
+    "ramda": "^0.25.0",
+    "node-fetch": "^2.2.0",
+    "yargs": "^12.0.1",
+    "tslib": "^1.9.3",
+    "assemble-registry-url": "^0.0.0",
+    "@types/ramda": "^0.25.36",
+    "@types/node-fetch": "^2.1.2",
+    "@types/yargs": "^11.1.1",
+    "@types/node": "^10.9.3"
+  },
+  "engines": {
+    "node": ">= 8.9.0"
+  }
+}
