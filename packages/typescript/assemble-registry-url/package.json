@@ -1,0 +1,31 @@
+{
+  "name": "assemble-registry-url",
+  "version": "0.0.0",
+  "description": "Assemble registry URLs from given package name",
+  "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksxnodemodules/nodemonorepo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
+  },
+  "keywords": [
+    "registry",
+    "url",
+    "assemble",
+    "create",
+    "npm"
+  ],
+  "dependencies": {
+    "semver": "^5.5.1",
+    "tslib": "^1.9.3",
+    "@types/semver": "^5.5.0",
+    "@types/node": "^10.9.3"
+  },
+  "engines": {
+    "node": ">= 8.9.0"
+  }
+}

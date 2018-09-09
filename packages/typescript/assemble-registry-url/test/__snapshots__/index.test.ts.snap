@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Other functions encodePackageName 1`] = `
+Object {
+  "@scope/package": "@scope%2Fpackage",
+  "package": "package",
+}
+`;
+
+exports[`createFactory when param is invalid because of param.package 1`] = `
+Object {
+  "registry": "https://registry.npmjs.org",
+  "registryURL": "https://registry.npmjs.org",
+  "setPackage": [Function],
+  "setRegistry": [Function],
+  "validRegistry": true,
+}
+`;
+
+exports[`createFactory when param is invalid because of param.registry 1`] = `
+Object {
+  "registry": "Invalid Registry!",
+  "setRegistry": [Function],
+  "validRegistry": false,
+}
+`;
+
+exports[`createFactory when param is invalid because of param.version 1`] = `
+Object {
+  "registry": "https://registry.npmjs.org",
+  "registryURL": "https://registry.npmjs.org",
+  "setPackage": [Function],
+  "setRegistry": [Function],
+  "validRegistry": true,
+}
+`;
+
+exports[`createFactory when param is valid when param.package and param.version is specified with param.registry 1`] = `
+Object {
+  "allVersionsURL": "https://registry.npmjs.org/package/versions",
+  "latestVersionURL": "https://registry.npmjs.org/package/latest",
+  "package": "package",
+  "packageURL": "https://registry.npmjs.org/package",
+  "registry": "https://registry.npmjs.org",
+  "registryURL": "https://registry.npmjs.org",
+  "setPackage": [Function],
+  "setRegistry": [Function],
+  "setVersion": [Function],
+  "validPackageName": true,
+  "validRegistry": true,
+  "validVersion": true,
+  "version": "1.2.3",
+  "versionURL": "https://registry.npmjs.org/package/1.2.3",
+}
+`;
+
+exports[`createFactory when param is valid when param.package and param.version is specified without param.registry 1`] = `
+Object {
+  "registry": "https://registry.npmjs.org",
+  "registryURL": "https://registry.npmjs.org",
+  "setPackage": [Function],
+  "setRegistry": [Function],
+  "validRegistry": true,
+}
+`;
+
+exports[`createFactory when param is valid when param.package is specified scoped 1`] = `
+Object {
+  "registry": "https://registry.npmjs.org",
+  "registryURL": "https://registry.npmjs.org",
+  "setPackage": [Function],
+  "setRegistry": [Function],
+  "validRegistry": true,
+}
+`;
+
+exports[`createFactory when param is valid when param.package is specified with param.registry 1`] = `
+Object {
+  "allVersionsURL": "https://registry.npmjs.org/package/versions",
+  "latestVersionURL": "https://registry.npmjs.org/package/latest",
+  "package": "package",
+  "packageURL": "https://registry.npmjs.org/package",
+  "registry": "https://registry.npmjs.org",
+  "registryURL": "https://registry.npmjs.org",
+  "setPackage": [Function],
+  "setRegistry": [Function],
+  "setVersion": [Function],
+  "validPackageName": true,
+  "validRegistry": true,
+}
+`;
+
+exports[`createFactory when param is valid when param.package is specified without param.registry 1`] = `
+Object {
+  "registry": "https://registry.npmjs.org",
+  "registryURL": "https://registry.npmjs.org",
+  "setPackage": [Function],
+  "setRegistry": [Function],
+  "validRegistry": true,
+}
+`;
+
+exports[`createFactory when param is valid when param.registry is specified npm 1`] = `
+Object {
+  "registry": "https://registry.npmjs.org",
+  "registryURL": "https://registry.npmjs.org",
+  "setPackage": [Function],
+  "setRegistry": [Function],
+  "validRegistry": true,
+}
+`;
+
+exports[`createFactory when param is valid when param.registry is specified yarn 1`] = `
+Object {
+  "registry": "https://registry.yarnpkg.com",
+  "registryURL": "https://registry.yarnpkg.com",
+  "setPackage": [Function],
+  "setRegistry": [Function],
+  "validRegistry": true,
+}
+`;
