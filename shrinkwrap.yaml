@@ -13,7 +13,7 @@ devDependencies:
   glob: 7.1.3
   ignore-file.private: 'link:packages/typescript/ignore-file.private'
   jest: 23.5.0
-  jest-extended: 0.8.1
+  jest-extended: 0.9.0
   jest-runner-standard: 0.0.12
   js-yaml: 3.12.0
   nested-workspace-helper.private: 'link:packages/javascript/nested-workspace-helper.private'
@@ -1505,6 +1505,7 @@ packages:
     dev: true
     resolution:
       integrity: sha512-XcNXEPehqn8b/jm8FYotdX0YrXn36qp4HWlrVT4ktwQas1l1LPxiVWncYnnL2eyMtKAmVIaG0XAp0QlrqJaxaA==
+      tarball: 'http://registry.npmjs.org/expect/-/expect-22.4.3.tgz'
   /expect/23.5.0:
     dependencies:
       ansi-styles: 3.2.1
@@ -2525,6 +2526,7 @@ packages:
     dev: true
     resolution:
       integrity: sha512-/QqGvCDP5oZOF6PebDuLwrB2BMD8ffJv6TAGAdEVuDx1+uEgrHpSFrfrOiMRx2eJ1hgNjlQrOQEHetVwij90KA==
+      tarball: 'http://registry.npmjs.org/jest-diff/-/jest-diff-22.4.3.tgz'
   /jest-diff/23.5.0:
     dependencies:
       chalk: 2.4.1
@@ -2562,14 +2564,14 @@ packages:
     dev: true
     resolution:
       integrity: sha1-V+gO0IQd6jAxZ8zozXlSHeuv3hA=
-  /jest-extended/0.8.1:
+  /jest-extended/0.9.0:
     dependencies:
       expect: 22.4.3
       jest-get-type: 22.4.3
       jest-matcher-utils: 22.4.3
     dev: true
     resolution:
-      integrity: sha512-WhyYy9bNAxotiAlSQz0cXTnqP6aKPZw8iBzBbaDrsE3Yv+u1N7Uq05n+YszSnQUuLCyuF/hAszY2yzAgKdY8kw==
+      integrity: sha512-e3FWQZwdQACRdrjbVZpar+LzEFWGtuq3KFO/dXWAwLyQYkEHSm38Y2NJnYCjrHyp3rZO4aPJGezC+WbSsJHpmw==
   /jest-get-type/22.4.3:
     dev: true
     resolution:
@@ -2618,6 +2620,7 @@ packages:
     dev: true
     resolution:
       integrity: sha512-lsEHVaTnKzdAPR5t4B6OcxXo9Vy4K+kRRbG5gtddY8lBEC+Mlpvm1CJcsMESRjzUhzkz568exMV1hTB76nAKbA==
+      tarball: 'http://registry.npmjs.org/jest-matcher-utils/-/jest-matcher-utils-22.4.3.tgz'
   /jest-matcher-utils/23.5.0:
     dependencies:
       chalk: 2.4.1
@@ -3703,6 +3706,7 @@ packages:
     dev: true
     resolution:
       integrity: sha512-S4oT9/sT6MN7/3COoOy+ZJeA92VmOnveLHgrwBE3Z1W5N9S2A1QGNYiE1z75DAENbJrXXUb+OWXhpJcg05QKQQ==
+      tarball: 'http://registry.npmjs.org/pretty-format/-/pretty-format-22.4.3.tgz'
   /pretty-format/23.5.0:
     dependencies:
       ansi-regex: 3.0.0
@@ -4933,7 +4937,7 @@ specifiers:
   glob: ^7.1.3
   ignore-file.private: '*'
   jest: ^23.5.0
-  jest-extended: ^0.8.1
+  jest-extended: ^0.9.0
   jest-runner-standard: ^0.0.12
   js-yaml: ^3.12.0
   nested-workspace-helper.private: '*'

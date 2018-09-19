@@ -2,7 +2,7 @@ dependencies:
   '@types/fs-extra': 5.0.4
   '@types/node': 10.9.3
   '@types/ramda': 0.25.36
-  '@types/yargs': 11.1.1
+  '@types/yargs': 12.0.0
   fs-extra: 7.0.0
   fs-tree-utils: 'link:../fs-tree-utils'
   monorepo-shared-assets: 'link:../monorepo-shared-assets'
@@ -31,10 +31,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-LAeBECPU9IG+K0pRdGl2L9lxanb0CKgue0IGpdn9nmpmKefDrCglrYwkxFYoQxCtY0w/mTxpJaQ4VAChcSIN+A==
-  /@types/yargs/11.1.1:
+  /@types/yargs/12.0.0:
     dev: false
     resolution:
-      integrity: sha512-Awgju4dqD8kHXX3jc/B/LaryJC7MsyNfnbN62lIbFzTi0GewH64zrkh4bxo/YTgVEK6r9V3GNecxMhXTJw0+jA==
+      integrity: sha512-GTSFHeTWamRTKaApG47hgWsZWrjsw6PJSfrgntA9WAXKFUvjHi6Evf2JL0NkZNIKIX1Xi5wtV9sXMNJSC/O3Tw==
   /ansi-regex/2.1.1:
     dev: false
     engines:
@@ -422,7 +422,7 @@ specifiers:
   '@types/fs-extra': ^5.0.4
   '@types/node': ^10.9.3
   '@types/ramda': ^0.25.36
-  '@types/yargs': ^11.1.1
+  '@types/yargs': ^12.0.0
   extra-jest: '*'
   fs-extra: ^7.0.0
   fs-tree-utils: ^0.1.4

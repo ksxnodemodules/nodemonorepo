@@ -5,7 +5,7 @@ dependencies:
   '@types/node-fetch': 2.1.2
   '@types/ramda': 0.25.36
   '@types/semver': 5.5.0
-  '@types/yargs': 11.1.1
+  '@types/yargs': 12.0.0
   chalk: 2.4.1
   extra-jest: 'link:../extra-jest'
   fs-extra: 7.0.0
@@ -54,10 +54,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-41qEJgBH/TWgo5NFSvBCJ1qkoi3Q6ONSF2avrHq1LVEZfYpdHmj0y9SuTK+u9ZhG1sYQKBL1AWXKyLWP4RaUoQ==
-  /@types/yargs/11.1.1:
+  /@types/yargs/12.0.0:
     dev: false
     resolution:
-      integrity: sha512-Awgju4dqD8kHXX3jc/B/LaryJC7MsyNfnbN62lIbFzTi0GewH64zrkh4bxo/YTgVEK6r9V3GNecxMhXTJw0+jA==
+      integrity: sha512-GTSFHeTWamRTKaApG47hgWsZWrjsw6PJSfrgntA9WAXKFUvjHi6Evf2JL0NkZNIKIX1Xi5wtV9sXMNJSC/O3Tw==
   /ansi-regex/2.1.1:
     dev: false
     engines:
@@ -532,7 +532,7 @@ specifiers:
   '@types/node-fetch': ^2.1.2
   '@types/ramda': ^0.25.36
   '@types/semver': ^5.5.0
-  '@types/yargs': ^11.1.1
+  '@types/yargs': ^12.0.0
   chalk: ^2.4.1
   fs-extra: ^7.0.0
   fs-tree-utils: ^0.1.4
