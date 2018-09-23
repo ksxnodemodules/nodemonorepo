@@ -490,7 +490,7 @@ specifiers:
   '@types/yargs': ^12.0.0
   chalk: ^2.4.1
   fs-extra: ^7.0.0
-  fs-tree-utils: ^0.1.4
+  fs-tree-utils: ^0.1.5
   minimatch: ^3.0.4
   preloaded-node.private: ^0.0.0
   tslib: ^1.9.3

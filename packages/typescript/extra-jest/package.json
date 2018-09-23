@@ -16,7 +16,7 @@
     "ramda": "^0.25.0",
     "fs-extra": "^7.0.0",
     "tslib": "^1.9.3",
-    "fs-tree-utils": "^0.1.4",
+    "fs-tree-utils": "^0.1.5",
     "unique-temp-path": "^0.1.1",
     "@types/ramda": "^0.25.36",
     "@types/fs-extra": "^5.0.4",

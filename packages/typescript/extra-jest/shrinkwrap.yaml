@@ -70,7 +70,7 @@ specifiers:
   '@types/node': ^10.9.3
   '@types/ramda': ^0.25.36
   fs-extra: ^7.0.0
-  fs-tree-utils: ^0.1.4
+  fs-tree-utils: ^0.1.5
   ramda: ^0.25.0
   tslib: ^1.9.3
   unique-temp-path: ^0.1.1
