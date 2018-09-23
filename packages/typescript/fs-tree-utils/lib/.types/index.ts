@@ -44,12 +44,14 @@ export namespace CreateSecondParam {
 
 export interface NestedReadOptions<Error, Unknown> {
   readonly stat?: NestedReadOptions.StatFunc
+  readonly filter?: NestedReadOptions.Filter
   readonly onerror?: NestedReadOptions.ErrorHandler<Error>
   readonly onunknown?: NestedReadOptions.Unknown<Unknown>
 }
 
 export namespace NestedReadOptions {
   export type StatFunc = utils.StatFunc
+  export type Filter = (param: Filter.Param) => boolean
   export type ErrorHandler<Y> = (error: Error) => Y
   export type Unknown<Y> = (param: Unknown.Param) => Y
 
@@ -57,6 +59,24 @@ export namespace NestedReadOptions {
     export interface Param {
       readonly name: string
       readonly stats: Stats
+    }
+  }
+
+  export namespace Filter {
+    export interface Param {
+      readonly container: Param.Container
+      readonly item: Param.Item
+    }
+
+    export namespace Param {
+      export interface Container {
+        readonly name: string
+        readonly stats: Stats
+      }
+
+      export interface Item {
+        readonly name: string
+      }
     }
   }
 }

@@ -40,7 +40,8 @@ export async function readNested<Error = never, Unknown = never> (
   const {
     onunknown,
     onerror: transformError,
-    stat = (x: string) => fsx.stat(x)
+    stat = (x: string) => fsx.stat(x),
+    filter = () => true
   } = options
 
   return wrapRejection(main, transformError)(name)
@@ -55,6 +56,13 @@ export async function readNested<Error = never, Unknown = never> (
     if (stats.isDirectory()) {
       let tree: Tree.Read<Error | Unknown> = {}
       for (const item of await fsx.readdir(name)) {
+        const shouldRead = filter({
+          container: {name, stats},
+          item: {name: item}
+        })
+
+        if (!shouldRead) continue
+
         const subtree = await main(path.join(name, item))
         tree[item] = subtree
       }

@@ -602,6 +602,29 @@ exports[`create function throws error when encounter mismatched entities in whic
 
 exports[`create function throws error when encounter mismatched entities in which a folder is requested in place of a file 1`] = `[Error: Entity tmp/create.2.1/mismatched exists but is not directory]`;
 
+exports[`read.nested function works with filter 1`] = `
+Object {
+  "topA": Object {},
+  "topB": Object {
+    "middleA": Object {},
+    "middleC": Object {
+      "bottomA": "B.C.A",
+      "bottomB": "B.C.B",
+    },
+  },
+  "topC": Object {
+    "middleA": Object {
+      "bottomA": "C.A.A",
+      "bottomB": "C.A.B",
+    },
+    "middleC": Object {
+      "bottomA": "C.C.A",
+      "bottomB": "C.C.B",
+    },
+  },
+}
+`;
+
 exports[`traverse function does not dig names end with "B" 1`] = `
 Array [
   Object {

@@ -214,6 +214,21 @@ describe('create function', () => {
   })
 })
 
+describe('read.nested function', () => {
+  it('works with filter', async () => {
+    const container = path.join(tmp, 'read.nested.0')
+    await fsx.remove(container)
+
+    await subject.create(tree, container)
+
+    const result = await subject.read.nested(container, {
+      filter: param => param.container.name !== 'topB' && param.item.name !== 'middleB'
+    })
+
+    expect(result).toMatchSnapshot()
+  })
+})
+
 describe('traverse function', () => {
   const container = path.join(tmp, 'traverse.0')
 
