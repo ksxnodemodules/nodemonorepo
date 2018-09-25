@@ -31,6 +31,14 @@ const sanitizeError = (error: SError) => ({
   info: sanitize(error.info)
 })
 
+beforeEach(() => {
+  jest.setTimeout(131072)
+})
+
+afterEach(() => {
+  jest.setTimeout(5000)
+})
+
 it('export main as default', () => {
   expect(spawn).toBe(main)
 })
