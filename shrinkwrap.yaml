@@ -13,7 +13,7 @@ devDependencies:
   glob: 7.1.3
   ignore-file.private: 'link:packages/typescript/ignore-file.private'
   jest: 23.5.0
-  jest-extended: 0.9.0
+  jest-extended: 0.10.0
   jest-runner-standard: 0.0.12
   js-yaml: 3.12.0
   nested-workspace-helper.private: 'link:packages/javascript/nested-workspace-helper.private'
@@ -1494,18 +1494,6 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-opnv/TNf4nIeuujiV+x5ZE/IUzc=
-  /expect/22.4.3:
-    dependencies:
-      ansi-styles: 3.2.1
-      jest-diff: 22.4.3
-      jest-get-type: 22.4.3
-      jest-matcher-utils: 22.4.3
-      jest-message-util: 22.4.3
-      jest-regex-util: 22.4.3
-    dev: true
-    resolution:
-      integrity: sha512-XcNXEPehqn8b/jm8FYotdX0YrXn36qp4HWlrVT4ktwQas1l1LPxiVWncYnnL2eyMtKAmVIaG0XAp0QlrqJaxaA==
-      tarball: 'http://registry.npmjs.org/expect/-/expect-22.4.3.tgz'
   /expect/23.5.0:
     dependencies:
       ansi-styles: 3.2.1
@@ -1517,6 +1505,17 @@ packages:
     dev: true
     resolution:
       integrity: sha512-aG083W63tBloy8YgafWuC44EakjYe0Q6Mg35aujBPvyNU38DvLat9BVzOihNP2NZDLaCJiFNe0vejbtO6knnlA==
+  /expect/23.6.0:
+    dependencies:
+      ansi-styles: 3.2.1
+      jest-diff: 23.6.0
+      jest-get-type: 22.4.3
+      jest-matcher-utils: 23.6.0
+      jest-message-util: 23.4.0
+      jest-regex-util: 23.3.0
+    dev: true
+    resolution:
+      integrity: sha512-dgSoOHgmtn/aDGRVFWclQyPDKl2CQRq0hmIEoUAuQs/2rn2NcvCWcSCovm6BLeuB/7EZuLGu2QfnR+qRt5OM4w==
   /extend-shallow/2.0.1:
     dependencies:
       is-extendable: 0.1.1
@@ -2517,16 +2516,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-JENhQpLaVwXWPLUkhPYgIfecHKsU8GR1vj79rS4n0LSRsHx/U2wItZKoKAd5vtt2J58JPxRq4XheG79jd4fI7Q==
-  /jest-diff/22.4.3:
-    dependencies:
-      chalk: 2.4.1
-      diff: 3.5.0
-      jest-get-type: 22.4.3
-      pretty-format: 22.4.3
-    dev: true
-    resolution:
-      integrity: sha512-/QqGvCDP5oZOF6PebDuLwrB2BMD8ffJv6TAGAdEVuDx1+uEgrHpSFrfrOiMRx2eJ1hgNjlQrOQEHetVwij90KA==
-      tarball: 'http://registry.npmjs.org/jest-diff/-/jest-diff-22.4.3.tgz'
   /jest-diff/23.5.0:
     dependencies:
       chalk: 2.4.1
@@ -2536,6 +2525,15 @@ packages:
     dev: true
     resolution:
       integrity: sha512-Miz8GakJIz443HkGpVOAyHQgSYqcgs2zQmDJl4oV7DYrFotchdoQvxceF6LhfpRBV1LOUGcFk5Dd/ffSXVwMsA==
+  /jest-diff/23.6.0:
+    dependencies:
+      chalk: 2.4.1
+      diff: 3.5.0
+      jest-get-type: 22.4.3
+      pretty-format: 23.6.0
+    dev: true
+    resolution:
+      integrity: sha512-Gz9l5Ov+X3aL5L37IT+8hoCUsof1CVYBb2QEkOupK64XyRR3h+uRpYIm97K7sY8diFxowR8pIGEdyfMKTixo3g==
   /jest-docblock/23.2.0:
     dependencies:
       detect-newline: 2.1.0
@@ -2564,14 +2562,14 @@ packages:
     dev: true
     resolution:
       integrity: sha1-V+gO0IQd6jAxZ8zozXlSHeuv3hA=
-  /jest-extended/0.9.0:
+  /jest-extended/0.10.0:
     dependencies:
-      expect: 22.4.3
+      expect: 23.6.0
       jest-get-type: 22.4.3
       jest-matcher-utils: 22.4.3
     dev: true
     resolution:
-      integrity: sha512-e3FWQZwdQACRdrjbVZpar+LzEFWGtuq3KFO/dXWAwLyQYkEHSm38Y2NJnYCjrHyp3rZO4aPJGezC+WbSsJHpmw==
+      integrity: sha512-ZxIrakB4HO5y9rL27WaJf3BF0ZAVEkc9prDxsPo4+yn7JYRFz1U34jG4jd9im6qZ3akD2xnuC4XDz4mS6LSs6Q==
   /jest-get-type/22.4.3:
     dev: true
     resolution:
@@ -2629,16 +2627,14 @@ packages:
     dev: true
     resolution:
       integrity: sha512-hmQUKUKYOExp3T8dNYK9A9copCFYKoRLcY4WDJJ0Z2u3oF6rmAhHuZtmpHBuGpASazobBxm3TXAfAXDvz2T7+Q==
-  /jest-message-util/22.4.3:
+  /jest-matcher-utils/23.6.0:
     dependencies:
-      '@babel/code-frame': 7.0.0
       chalk: 2.4.1
-      micromatch: 2.3.11
-      slash: 1.0.0
-      stack-utils: 1.0.1
+      jest-get-type: 22.4.3
+      pretty-format: 23.6.0
     dev: true
     resolution:
-      integrity: sha512-iAMeKxhB3Se5xkSjU0NndLLCHtP4n+GtCqV0bISKA5dmOXQfEbdEmYiu2qpnWBDCQdEafNDDU6Q+l6oBMd/+BA==
+      integrity: sha512-rosyCHQfBcol4NsckTn01cdelzWLU9Cq7aaigDf8VwwpIRvWE/9zLgX2bON+FkEW69/0UuYslUe22SOdEf2nog==
   /jest-message-util/23.4.0:
     dependencies:
       '@babel/code-frame': 7.0.0
@@ -2653,10 +2649,6 @@ packages:
     dev: true
     resolution:
       integrity: sha1-rRxg8p6HGdR8JuETgJi20YsmETQ=
-  /jest-regex-util/22.4.3:
-    dev: true
-    resolution:
-      integrity: sha512-LFg1gWr3QinIjb8j833bq7jtQopiwdAs67OGfkPrvy7uNUbVMfTXXcOKXJaeY5GgjobELkKvKENqq1xrUectWg==
   /jest-regex-util/23.3.0:
     dev: true
     resolution:
@@ -3714,6 +3706,13 @@ packages:
     dev: true
     resolution:
       integrity: sha512-iFLvYTXOn+C/s7eV+pr4E8DD7lYa2/klXMEz+lvH14qSDWAJ7S+kFmMe1SIWesATHQxopHTxRcB2nrpExhzaBA==
+  /pretty-format/23.6.0:
+    dependencies:
+      ansi-regex: 3.0.0
+      ansi-styles: 3.2.1
+    dev: true
+    resolution:
+      integrity: sha512-zf9NV1NSlDLDjycnwm6hpFATCGl/K1lt0R/GdkAK2O5LN/rwJoB+Mh93gGJjut4YbmecbfgLWVGSTCr0Ewvvbw==
   /private/0.1.8:
     dev: true
     engines:
@@ -4937,7 +4936,7 @@ specifiers:
   glob: ^7.1.3
   ignore-file.private: '*'
   jest: ^23.5.0
-  jest-extended: ^0.9.0
+  jest-extended: ^0.10.0
   jest-runner-standard: ^0.0.12
   js-yaml: ^3.12.0
   nested-workspace-helper.private: '*'
