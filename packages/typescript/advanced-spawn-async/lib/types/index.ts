@@ -39,3 +39,11 @@ export namespace SpawnFactory {
     readonly process: Process
   }
 }
+
+export interface InternalErrorInformation<Process extends IsomorphicSpawn.Return, Error> {
+  readonly command: string
+  readonly args: string[]
+  readonly options: SpawnOptions
+  readonly process: Process
+  readonly error: Error
+}

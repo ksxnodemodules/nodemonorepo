@@ -1,2 +1,4 @@
 import SpawnError from './spawn-error'
-export {SpawnError}
+import TerminationError from './termination-error'
+import InternalError from './internal-error'
+export {SpawnError, TerminationError, InternalError}

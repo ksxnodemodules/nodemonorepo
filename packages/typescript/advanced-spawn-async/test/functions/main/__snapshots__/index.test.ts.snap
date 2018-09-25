@@ -1,5 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`when executable does not exist onclose promise 1`] = `
+Object {
+  "info": Object {
+    "args": "[REDACTED]",
+    "command": "SomethingThatDoesNotExist",
+    "error": [Error: spawn SomethingThatDoesNotExist ENOENT],
+    "options": Object {},
+    "process": Object {
+      "constructor": Object {
+        "name": "ChildProcess",
+      },
+    },
+  },
+  "message": "Error: spawn SomethingThatDoesNotExist ENOENT",
+  "name": "InternalError",
+  "stack": "[REDACTED]",
+}
+`;
+
+exports[`when executable does not exist onexit promise 1`] = `
+Object {
+  "info": Object {
+    "args": "[REDACTED]",
+    "command": "SomethingThatDoesNotExist",
+    "error": [Error: spawn SomethingThatDoesNotExist ENOENT],
+    "options": Object {},
+    "process": Object {
+      "constructor": Object {
+        "name": "ChildProcess",
+      },
+    },
+  },
+  "message": "Error: spawn SomethingThatDoesNotExist ENOENT",
+  "name": "InternalError",
+  "stack": "[REDACTED]",
+}
+`;
+
 exports[`when process successfully terminated with full arguments onclose promise 1`] = `
 Object {
   "args": Array [
@@ -103,6 +141,78 @@ Object {
       "name": "ChildProcess",
     },
   },
+}
+`;
+
+exports[`when process successfully terminated with stdout and stderr onclose promise 1`] = `
+Object {
+  "args": "[REDACTED]",
+  "command": "node",
+  "options": Object {
+    "env": Object {
+      "HELLO": "WORLD",
+    },
+  },
+  "output": "stdout[0]
+stderr[0]
+stdout[1]
+stdout[2]
+stderr[1]
+stderr[2]
+{ env: { HELLO: 'WORLD' } }
+",
+  "process": Object {
+    "constructor": Object {
+      "name": "ChildProcess",
+    },
+  },
+  "signal": null,
+  "status": 0,
+  "stderr": "",
+  "stdout": "stdout[0]
+stderr[0]
+stdout[1]
+stdout[2]
+stderr[1]
+stderr[2]
+{ env: { HELLO: 'WORLD' } }
+",
+}
+`;
+
+exports[`when process successfully terminated with stdout and stderr onexit promise 1`] = `
+Object {
+  "args": "[REDACTED]",
+  "command": "node",
+  "options": Object {
+    "env": Object {
+      "HELLO": "WORLD",
+    },
+  },
+  "output": "stdout[0]
+stderr[0]
+stdout[1]
+stdout[2]
+stderr[1]
+stderr[2]
+{ env: { HELLO: 'WORLD' } }
+",
+  "process": Object {
+    "constructor": Object {
+      "name": "ChildProcess",
+    },
+  },
+  "signal": null,
+  "status": 0,
+  "stderr": "",
+  "stdout": "stdout[0]
+stderr[0]
+stdout[1]
+stdout[2]
+stderr[1]
+stderr[2]
+{ env: { HELLO: 'WORLD' } }
+",
 }
 `;
 
