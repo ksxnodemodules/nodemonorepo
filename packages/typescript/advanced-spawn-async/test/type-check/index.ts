@@ -14,11 +14,7 @@ assert<
 
 assert<
   Promise<SpawnFactory.TerminationInformation<ChildProcess>>
->(spawnAsync('echo').onclose())
-
-assert<
-  Promise<SpawnFactory.TerminationInformation<ChildProcess>>
->(spawnAsync('echo').close)
+>(spawnAsync('echo').onclose)
 
 assert<
   SpawnFactory<ChildProcess>
@@ -30,8 +26,4 @@ assert<
 
 assert<
   Promise<SpawnFactory.TerminationInformation<ChildProcess>>
->(core(spawn, 'echo').onclose())
-
-assert<
-  Promise<SpawnFactory.TerminationInformation<ChildProcess>>
->(core(spawn, 'echo').close)
+>(core(spawn, 'echo').onexit)
