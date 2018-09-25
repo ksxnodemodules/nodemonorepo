@@ -1,5 +1,59 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`when process successfully terminated with full arguments onclose promise 1`] = `
+Object {
+  "args": Array [
+    "hello",
+    "world",
+  ],
+  "command": "echo",
+  "options": Object {
+    "env": Object {
+      "HELLO": "WORLD",
+    },
+  },
+  "output": "hello world
+",
+  "process": Object {
+    "constructor": Object {
+      "name": "ChildProcess",
+    },
+  },
+  "signal": null,
+  "status": 0,
+  "stderr": "",
+  "stdout": "hello world
+",
+}
+`;
+
+exports[`when process successfully terminated with full arguments onexit promise 1`] = `
+Object {
+  "args": Array [
+    "hello",
+    "world",
+  ],
+  "command": "echo",
+  "options": Object {
+    "env": Object {
+      "HELLO": "WORLD",
+    },
+  },
+  "output": "hello world
+",
+  "process": Object {
+    "constructor": Object {
+      "name": "ChildProcess",
+    },
+  },
+  "signal": null,
+  "status": 0,
+  "stderr": "",
+  "stdout": "hello world
+",
+}
+`;
+
 exports[`when process successfully terminated with minimal arguments close promise matches snapshot 1`] = `
 Object {
   "args": Array [],
@@ -42,14 +96,94 @@ Object {
 
 exports[`when process successfully terminated with minimal arguments process 1`] = `
 Object {
-  "close": Promise {},
-  "exit": Promise {},
-  "onclose": [Function],
-  "onexit": [Function],
+  "onclose": Promise {},
+  "onexit": Promise {},
   "process": Object {
     "constructor": Object {
       "name": "ChildProcess",
     },
   },
+}
+`;
+
+exports[`when process terminated with non-zero status code onclose promise 1`] = `
+Object {
+  "info": Object {
+    "args": "[REDACTED]",
+    "command": "node",
+    "options": Object {
+      "env": Object {
+        "HELLO": "WORLD",
+      },
+    },
+    "output": "stdout[0]
+stderr[0]
+stdout[1]
+stdout[2]
+stderr[1]
+stderr[2]
+{ env: { HELLO: 'WORLD' } }
+",
+    "process": Object {
+      "constructor": Object {
+        "name": "ChildProcess",
+      },
+    },
+    "signal": null,
+    "status": 123,
+    "stderr": "",
+    "stdout": "stdout[0]
+stderr[0]
+stdout[1]
+stdout[2]
+stderr[1]
+stderr[2]
+{ env: { HELLO: 'WORLD' } }
+",
+  },
+  "message": "[REDACTED]",
+  "name": "SpawnError",
+  "stack": "[REDACTED]",
+}
+`;
+
+exports[`when process terminated with non-zero status code onexit promise 1`] = `
+Object {
+  "info": Object {
+    "args": "[REDACTED]",
+    "command": "node",
+    "options": Object {
+      "env": Object {
+        "HELLO": "WORLD",
+      },
+    },
+    "output": "stdout[0]
+stderr[0]
+stdout[1]
+stdout[2]
+stderr[1]
+stderr[2]
+{ env: { HELLO: 'WORLD' } }
+",
+    "process": Object {
+      "constructor": Object {
+        "name": "ChildProcess",
+      },
+    },
+    "signal": null,
+    "status": 123,
+    "stderr": "",
+    "stdout": "stdout[0]
+stderr[0]
+stdout[1]
+stdout[2]
+stderr[1]
+stderr[2]
+{ env: { HELLO: 'WORLD' } }
+",
+  },
+  "message": "[REDACTED]",
+  "name": "SpawnError",
+  "stack": "[REDACTED]",
 }
 `;

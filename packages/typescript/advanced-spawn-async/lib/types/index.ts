@@ -18,10 +18,8 @@ export namespace IsomorphicSpawn {
 }
 
 export interface SpawnFactory<Process extends IsomorphicSpawn.Return> {
-  readonly onexit: () => SpawnFactory.TerminationPromise<Process>
-  readonly onclose: () => SpawnFactory.TerminationPromise<Process>
-  readonly exit: SpawnFactory.TerminationPromise<Process>
-  readonly close: SpawnFactory.TerminationPromise<Process>
+  readonly onexit: SpawnFactory.TerminationPromise<Process>
+  readonly onclose: SpawnFactory.TerminationPromise<Process>
   readonly process: Process
 }
 

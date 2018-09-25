@@ -1,5 +1,4 @@
 import {SpawnOptions} from 'child_process'
-import once from 'exec-once'
 import {IsomorphicSpawn, SpawnFactory} from '../../types'
 import {SpawnError} from '../../classes'
 
@@ -41,8 +40,8 @@ function callSpawn<
     process
   })
 
-  const createEventMaker = (event: 'close' | 'exit') => once(() => {
-    return new Promise<Info>((resolve, reject) => process.on(event, (status, signal) => {
+  const createPromise = (event: 'close' | 'exit') => new Promise<Info>((resolve, reject) => {
+    process.on(event, (status, signal) => {
       const info = mkinfo(status, signal)
 
       if (status) {
@@ -50,21 +49,15 @@ function callSpawn<
       } else {
         resolve(info)
       }
-    }))
+    })
   })
 
-  const onclose = createEventMaker('close')
-  const onexit = createEventMaker('exit')
+  const onclose = createPromise('close')
+  const onexit = createPromise('exit')
 
   return {
     onclose,
     onexit,
-    get close () {
-      return onclose()
-    },
-    get exit () {
-      return onexit()
-    },
     process
   }
 }

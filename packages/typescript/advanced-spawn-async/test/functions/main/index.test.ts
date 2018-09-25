@@ -31,14 +31,6 @@ const sanitizeError = (error: SError) => ({
   info: sanitize(error.info)
 })
 
-// beforeEach(() => {
-//   jest.setTimeout(131072)
-// })
-
-// afterEach(() => {
-//   jest.setTimeout(5000)
-// })
-
 it('export main as default', () => {
   expect(spawn).toBe(main)
 })
@@ -59,72 +51,64 @@ describe('when process successfully terminated', () => {
     })
 
     describe('close promise', () => {
-      const {close, onclose} = factory
+      const {onclose} = factory
 
-      it('close is onclose()', () => {
-        expect(close).toBe(onclose())
-      })
-
-      it('close->process is factory.process', async () => {
-        expect((await close).process).toBe(factory.process)
+      it('onclose->process is factory.process', async () => {
+        expect((await onclose).process).toBe(factory.process)
       })
 
       it('matches snapshot', async () => {
-        expect(sanitize(await close, {args: true})).toMatchSnapshot()
+        expect(sanitize(await onclose, {args: true})).toMatchSnapshot()
       })
     })
 
     describe('exit promise', () => {
-      const {exit, onexit} = factory
-
-      it('exit is onexit()', () => {
-        expect(exit).toBe(onexit())
-      })
+      const {onexit} = factory
 
       it('exit->process is factory.process', async () => {
-        expect((await exit).process).toBe(factory.process)
+        expect((await onexit).process).toBe(factory.process)
       })
 
       it('matches snapshot', async () => {
-        expect(sanitize(await exit, {args: true})).toMatchSnapshot()
+        expect(sanitize(await onexit, {args: true})).toMatchSnapshot()
       })
     })
   })
 
   describe('with full arguments', () => {
-    const process = spawn('echo', ['hello', 'world'], {env: {HELLO: 'WORLD'}})
+    const factory = spawn('echo', ['hello', 'world'], {env: {HELLO: 'WORLD'}})
 
-    it('close promise', async () => {
-      expect(sanitize(await process.close, {args: true})).toMatchSnapshot()
+    it('onclose promise', async () => {
+      expect(sanitize(await factory.onclose, {args: true})).toMatchSnapshot()
     })
 
-    it('exit promise', async () => {
-      expect(sanitize(await process.exit, {args: true})).toMatchSnapshot()
+    it('onexit promise', async () => {
+      expect(sanitize(await factory.onexit, {args: true})).toMatchSnapshot()
     })
   })
 
   describe('with stdout and stderr', () => {
     const factory = spawn('node', [data.bothStdoutStderr], {env: {HELLO: 'WORLD'}})
 
-    it('close promise', async () => {
-      expect(sanitize(await factory.close)).toMatchSnapshot
+    it('onclose promise', async () => {
+      expect(sanitize(await factory.onclose)).toMatchSnapshot
     })
 
 
-    it('exit promise', async () => {
-      expect(sanitize(await factory.exit)).toMatchSnapshot
+    it('onexit promise', async () => {
+      expect(sanitize(await factory.onexit)).toMatchSnapshot
     })
   })
 
   describe('with specified stdin', () => {
-    const {process, close, exit} = spawn('bash')
+    const {process, onclose, onexit} = spawn('bash')
 
     it('close promise', async () => {
-      expect(sanitize(await close, {args: true})).toMatchSnapshot
+      expect(sanitize(await onclose, {args: true})).toMatchSnapshot
     })
 
     it('exit promise', async () => {
-      expect(sanitize(await exit, {args: true})).toMatchSnapshot
+      expect(sanitize(await onexit, {args: true})).toMatchSnapshot
     })
 
     process.stdin.write('echo stdin foo\n')
@@ -138,19 +122,19 @@ describe('when process successfully terminated', () => {
 describe('when process terminated with non-zero status code', () => {
   const factory = spawn('node', [data.withNonZeroStatus], {env: {HELLO: 'WORLD'}})
 
-  it('close promise', async () => {
-    const result = await factory.close.then(
+  it('onclose promise', async () => {
+    const result = await factory.onclose.then(
       () => Promise.reject(new Error('factory.close should not resolve')),
-      error => Object.assign(error, {args: '[REDACTED]'})
+      error => error
     )
 
     expect(sanitizeError(result)).toMatchSnapshot()
   })
 
-  it('exit promise', async () => {
-    const result = await factory.exit.then(
+  it('onexit promise', async () => {
+    const result = await factory.onexit.then(
       () => Promise.reject(new Error('factory.close should not resolve')),
-      error => Object.assign(error, {args: '[REDACTED]'})
+      error => error
     )
 
     expect(sanitizeError(result)).toMatchSnapshot()
