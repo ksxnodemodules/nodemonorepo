@@ -1,0 +1,30 @@
+#! /usr/bin/env node
+const {env} = require('process')
+
+const count = {
+  stdout: 0,
+  stderr: 0
+}
+
+const print = {
+  stdout () {
+    console.info(`stdout[${count.stdout}]`)
+    ++count.stdout
+  },
+
+  stderr () {
+    console.info(`stderr[${count.stderr}]`)
+    ++count.stderr
+  }
+}
+
+print.stdout()
+print.stderr()
+print.stdout()
+print.stdout()
+print.stderr()
+print.stderr()
+Array(5).forEach(print.stdout)
+Array(5).forEach(print.stderr)
+
+console.info({env})

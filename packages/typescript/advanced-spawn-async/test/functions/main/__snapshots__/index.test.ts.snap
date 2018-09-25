@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`when process successfully terminated with minimal arguments close promise matches snapshot 1`] = `
+Object {
+  "args": Array [],
+  "command": "echo",
+  "options": Object {},
+  "output": "
+",
+  "process": Object {
+    "constructor": Object {
+      "name": "ChildProcess",
+    },
+  },
+  "signal": null,
+  "status": 0,
+  "stderr": "",
+  "stdout": "
+",
+}
+`;
+
+exports[`when process successfully terminated with minimal arguments exit promise matches snapshot 1`] = `
+Object {
+  "args": Array [],
+  "command": "echo",
+  "options": Object {},
+  "output": "
+",
+  "process": Object {
+    "constructor": Object {
+      "name": "ChildProcess",
+    },
+  },
+  "signal": null,
+  "status": 0,
+  "stderr": "",
+  "stdout": "
+",
+}
+`;
+
+exports[`when process successfully terminated with minimal arguments process 1`] = `
+Object {
+  "close": Promise {},
+  "exit": Promise {},
+  "onclose": [Function],
+  "onexit": [Function],
+  "process": Object {
+    "constructor": Object {
+      "name": "ChildProcess",
+    },
+  },
+}
+`;
