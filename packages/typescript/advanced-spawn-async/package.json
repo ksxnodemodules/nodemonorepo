@@ -22,5 +22,8 @@
     "tslib": "^1.9.3",
     "exec-once": "^0.0.1",
     "@types/node": "^10.11.0"
+  },
+  "devDependencies": {
+    "static-type-assert": "^3.0.1"
   }
 }
