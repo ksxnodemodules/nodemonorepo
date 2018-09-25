@@ -1,3 +1,0 @@
-#! /usr/bin/env node
-require('./both-stdout-stderr')
-require('process').exit(123)
