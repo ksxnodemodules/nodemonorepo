@@ -16,9 +16,6 @@ temp.*
 *.temp
 *.tern-project
 *.tern-project.json
-/packages/typescript/**/*.d.ts
-/packages/typescript/**/*.js
-/packages/typescript/**/*.map
 /packages/*/*/.npmignore
 !*.inrepo*
 
