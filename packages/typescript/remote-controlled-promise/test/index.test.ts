@@ -1,4 +1,4 @@
-/* tslint:disable:no-floating-promises */
+// tslint:disable:no-floating-promises
 
 import create, { ControlledPromise, Controller } from '../index'
 

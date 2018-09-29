@@ -1,4 +1,4 @@
-/* tslint:disable:no-floating-promises */
+// tslint:disable:no-floating-promises
 
 import * as fsTreeUtils from 'fs-tree-utils'
 import * as xjest from 'extra-jest'
