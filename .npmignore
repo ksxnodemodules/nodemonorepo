@@ -30,3 +30,4 @@ shrinkwrap*
 renovate*
 TODO.md
 .npmignore.*
+tslint.*
