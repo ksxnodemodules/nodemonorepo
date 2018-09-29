@@ -1,3 +1,5 @@
+/* tslint:disable:no-floating-promises */
+
 import create, { ControlledPromise, Controller } from '../index'
 
 describe('returns correct types', () => {

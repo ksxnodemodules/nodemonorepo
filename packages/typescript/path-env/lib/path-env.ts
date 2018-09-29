@@ -10,11 +10,11 @@ import {
 } from './types'
 
 export const delimiter = (): PathDelimiter => path.delimiter
-export const split = (string: PathString, delim = delimiter()): PathArray => string.split(delim)
+export const split = (str: PathString, delim = delimiter()): PathArray => str.split(delim)
 export const join = (array: PathArray, delim = delimiter()): PathString => array.join(delim)
 
-export function pathString (string: PathString, delim?: PathDelimiter) {
-  return pathArray(split(string, delim), delim)
+export function pathString (str: PathString, delim?: PathDelimiter) {
+  return pathArray(split(str, delim), delim)
 }
 
 export function pathArray (array: PathArray, delim = delimiter()): PathFactory {
@@ -49,8 +49,8 @@ export function pathArray (array: PathArray, delim = delimiter()): PathFactory {
 }
 
 export function pathEnv (env: Env, name = 'PATH', delim = delimiter()): EnvFactory {
-  const { [name]: string = '', ...restEnv } = env
-  const factory = pathString(string, delim)
+  const { [name]: str = '', ...restEnv } = env
+  const factory = pathString(str, delim)
 
   function main (
     factory: PathFactory,

@@ -8,10 +8,7 @@ import {
 } from './types'
 
 import {
-  WritablePackageList
-} from './utils/private-types'
-
-import {
+  WritablePackageList,
   WritablePackageDict
 } from './utils/private-types'
 

@@ -89,7 +89,7 @@ function handler (argv: Arguments & {
     process.exit(2)
   }
 
-   (async function main () {
+  (async function main () {
     let status = 0
     if (!noPrint) status += await read()
     if (update) status += await write()
@@ -131,7 +131,7 @@ function handler (argv: Arguments & {
       let finalExitStatus = 0
 
       const updateExitStatus = noExitStatus || update
-        ? () => {}
+        ? () => undefined
         : () => { finalExitStatus = 1 }
 
       for (const { list, dependant } of Object.values(map)) {
@@ -142,7 +142,7 @@ function handler (argv: Arguments & {
 
           console.info(`* ${
             chalk.bold(pkgUtils.name(dependant))
-          } ` + chalk.dim(`(path: ${dependant.path})`))
+            } ` + chalk.dim(`(path: ${dependant.path})`))
 
           messages.forEach(x => console.info(x))
           console.info()
@@ -150,21 +150,21 @@ function handler (argv: Arguments & {
       }
 
       return finalExitStatus
-
-      function mkmsg ({
-        name,
-        update,
-        type,
-        version,
-        requirement
-      }: MismatchedDependency.ListItem): string {
-        const additionalInfo = `(type: ${type}, upstream: ${version}, outdated: ${requirement})`
-        return `  - ${name} → ${update} ${chalk.dim(additionalInfo)}`
-      }
     }
 
     function filter (list: MismatchedDependency.List): MismatchedDependency.List {
       return list.filter(({ update, requirement }) => update !== requirement)
+    }
+
+    function mkmsg ({
+      name,
+      update,
+      type,
+      version,
+      requirement
+    }: MismatchedDependency.ListItem): string {
+      const additionalInfo = `(type: ${type}, upstream: ${version}, outdated: ${requirement})`
+      return `  - ${name} → ${update} ${chalk.dim(additionalInfo)}`
     }
   }
 

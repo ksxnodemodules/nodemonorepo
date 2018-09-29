@@ -1,3 +1,5 @@
+/* tslint:disable:no-duplicate-imports */
+
 import * as path from 'path'
 import { env } from 'process'
 import ramda from 'ramda'

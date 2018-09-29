@@ -85,7 +85,7 @@ function convertResultItem (item: subject.ResultItem) {
     readonly stderr = getStringFromChunks(item.stderr)
   }
 
-  return new Result
+  return new Result()
 }
 
 function sortSegment (item: subject.asArray.ReturningValue) {

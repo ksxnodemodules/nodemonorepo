@@ -183,7 +183,7 @@ export namespace spawn {
       command,
       argv = [],
       options = {},
-      oncreate = () => {}
+      oncreate = () => undefined
     } = params
 
     return () => new Promise((resolve, reject) => {

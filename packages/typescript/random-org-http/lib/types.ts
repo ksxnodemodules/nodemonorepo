@@ -1,3 +1,5 @@
+/* tslint:disable:variable-name */
+
 export interface QueryObject<Value> {
   readonly [key: string]: Value
 }
