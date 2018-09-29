@@ -1,6 +1,6 @@
-import {SpawnSyncOptions} from 'child_process'
+import { SpawnSyncOptions } from 'child_process'
 import preloadedNode from 'preloaded-node.private'
-import {bin} from './data'
+import { bin } from './data'
 
 export type IOData = Buffer | string
 export type OptionalIOData = IOData | null | undefined
@@ -26,7 +26,7 @@ export default function spawn (
   argv: string[] = [],
   options: SpawnSyncOptions = {}
 ): SpawnReturns {
-  const {status, signal, error, stdout, stderr} = preloadedNode.spawnSync(
+  const { status, signal, error, stdout, stderr } = preloadedNode.spawnSync(
     [bin, ...argv],
     options
   )

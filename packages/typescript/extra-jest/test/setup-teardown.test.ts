@@ -11,7 +11,7 @@ describe('trackedData', () => {
 
   const createHistoryRecorder = (history: any[]) =>
     (step: 'setup' | 'teardown' | 'main') =>
-      history.push({trackedData, step})
+      history.push({ trackedData, step })
 
   it('changes when invoking setup-teardown asynchronously', async () => {
     let history: any[] = []
@@ -31,9 +31,9 @@ describe('trackedData', () => {
       record('main')
     }
 
-    await subject.base.createFactory<void, void>({setup, teardown}).forAsync(main)()
+    await subject.base.createFactory<void, void>({ setup, teardown }).forAsync(main)()
     expect(trackedData).toBe(initialTrackedData)
-    expect({history}).toMatchSnapshot()
+    expect({ history }).toMatchSnapshot()
   })
 
   it('changes when invoking setup-teardown synchronously', async () => {
@@ -54,9 +54,9 @@ describe('trackedData', () => {
       record('main')
     }
 
-    await subject.base.createFactory<void, void>({setup, teardown}).forSync(main)()
+    await subject.base.createFactory<void, void>({ setup, teardown }).forSync(main)()
     expect(trackedData).toBe(initialTrackedData)
-    expect({history}).toMatchSnapshot()
+    expect({ history }).toMatchSnapshot()
   })
 
   it('stays unchanged when not invoking setup-teardown', () => {

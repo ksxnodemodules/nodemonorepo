@@ -2,7 +2,7 @@ import * as process from 'process'
 import * as fsx from 'fs-extra'
 import * as fsTreeUtils from 'fs-tree-utils'
 import tempPath from 'unique-temp-path'
-import {Tree} from 'fs-tree-utils'
+import { Tree } from 'fs-tree-utils'
 
 export type PromiseFunc<X, Y> = (x: X) => Promise<Y>
 export type SyncFunc<X, Y> = (x: X) => Y
@@ -62,7 +62,7 @@ export namespace virtualEnvironment {
 
   export function createFactory (tree: Tree.Write.Node, container = tempPath()) {
     const previousWorkingDirectory = process.cwd()
-    const info: Info = {tree, container, previousWorkingDirectory}
+    const info: Info = { tree, container, previousWorkingDirectory }
 
     async function populate () {
       await depopulate()
@@ -86,9 +86,9 @@ export namespace virtualEnvironment {
       await depopulate()
     }
 
-    const apply = base.createFactory({setup, teardown})
+    const apply = base.createFactory({ setup, teardown })
 
-    return {info, apply}
+    return { info, apply }
   }
 }
 

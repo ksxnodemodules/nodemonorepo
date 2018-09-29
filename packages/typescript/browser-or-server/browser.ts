@@ -1,4 +1,4 @@
-import {Engine} from './types'
+import { Engine } from './types'
 export const engine: Engine = 'browser'
 export const isServer = false
 export const isBrowser = true

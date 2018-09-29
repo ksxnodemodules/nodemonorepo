@@ -3,7 +3,7 @@ import ramda from 'ramda'
 import * as fsx from 'fs-extra'
 import * as assets from 'monorepo-shared-assets'
 import traverse from '../traverse'
-import {Tree, NestedReadOptions, Traverse, FileSystemRepresentation} from '../.types'
+import { Tree, NestedReadOptions, Traverse, FileSystemRepresentation } from '../.types'
 import wrapRejection = assets.wrapException.wrapPromiseRejection
 import Symlink = FileSystemRepresentation.Symlink
 
@@ -50,15 +50,15 @@ export async function readNested<Error = never, Unknown = never> (
     const stats = await Promise.resolve(stat(name))
 
     if (stats.isFile()) {
-      return await fsx.readFile(name, 'utf8')
+      return fsx.readFile(name, 'utf8')
     }
 
     if (stats.isDirectory()) {
       let tree: Tree.Read<Error | Unknown> = {}
       for (const item of await fsx.readdir(name)) {
         const shouldRead = filter({
-          container: {name, stats},
-          item: {name: item}
+          container: { name, stats },
+          item: { name: item }
         })
 
         if (!shouldRead) continue
@@ -74,7 +74,7 @@ export async function readNested<Error = never, Unknown = never> (
     }
 
     if (onunknown) {
-      return onunknown({name, stats})
+      return onunknown({ name, stats })
     }
 
     throw new Error(`Unknown filesystem type of path '${name}'`)
@@ -117,7 +117,7 @@ export async function readFlat (name: string, options?: Traverse.Options): FlatR
 }
 
 function addAsyncProperty<X> (x: X) {
-  return Object.assign(x, {async: x})
+  return Object.assign(x, { async: x })
 }
 
 export default {

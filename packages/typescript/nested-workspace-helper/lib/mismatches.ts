@@ -100,12 +100,12 @@ export namespace listMismatchedDependencies {
     return Object
       .entries(map)
       .map(
-        ([path, {list, dependant}]) =>
-          ({path, dependant, list: fromDependencyList(list, check)})
+        ([path, { list, dependant }]) =>
+          ({ path, dependant, list: fromDependencyList(list, check) })
       )
       .reduce(
-        (obj, {path, list, dependant}) =>
-          Object.assign(obj, {[path]: {list, dependant}}),
+        (obj, { path, list, dependant }) =>
+          Object.assign(obj, { [path]: { list, dependant } }),
         {} as MismatchedDependency.Map
       )
   }

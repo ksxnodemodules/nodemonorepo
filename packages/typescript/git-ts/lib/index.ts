@@ -1,2 +1,2 @@
 import Repository from './repo'
-export {Repository}
+export { Repository }

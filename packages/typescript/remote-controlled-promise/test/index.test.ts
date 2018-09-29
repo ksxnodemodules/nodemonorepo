@@ -1,4 +1,4 @@
-import create, {ControlledPromise, Controller} from '../index'
+import create, { ControlledPromise, Controller } from '../index'
 
 describe('returns correct types', () => {
   const sample = create()

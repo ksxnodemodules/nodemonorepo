@@ -1,9 +1,9 @@
 import url from 'url'
 import semver from 'semver'
-import {array} from 'convenient-typescript-utilities'
-import {Struct, Type, GitUrl, LocalUrl, TarballUrl} from '../../types'
-import {GITHUB_SHORTHAND, GIT_URL, LOCAL_URL, TARBALL_URL} from '../../constants'
-const {includes} = array
+import { array } from 'convenient-typescript-utilities'
+import { Struct, Type, GitUrl, LocalUrl, TarballUrl } from '../../types'
+import { GITHUB_SHORTHAND, GIT_URL, LOCAL_URL, TARBALL_URL } from '../../constants'
+const { includes } = array
 
 function parse (value: string): Struct {
   if (value === 'latest') {
@@ -37,7 +37,7 @@ function parse (value: string): Struct {
   }
 
   const urlObject = url.parse(value)
-  const {protocol} = urlObject
+  const { protocol } = urlObject
 
   if (includes(GIT_URL.PROTOCOL, protocol)) {
     return {

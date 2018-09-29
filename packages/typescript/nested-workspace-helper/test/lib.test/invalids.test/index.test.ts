@@ -1,7 +1,7 @@
 import createSetupTeardown from '../../.lib/setup-teardown'
-import {listAllInvalidPackages, listAllPackages, converters} from '../../../index'
+import { listAllInvalidPackages, listAllPackages, converters } from '../../../index'
 
-const {apply} = createSetupTeardown('invalids.yaml')
+const { apply } = createSetupTeardown('invalids.yaml')
 const getInvalids = () => listAllInvalidPackages('root')
 
 it('matches snapshot', apply(async () => {
@@ -59,7 +59,7 @@ it('no reason object shall have its name different than its class', apply(async 
 }))
 
 it('grouping result default to map', apply(async () => {
-  const {group} = converters.invalids
+  const { group } = converters.invalids
   const invalids = await getInvalids()
   expect(group(invalids)).toEqual(group.asMap(invalids))
 }))
@@ -69,7 +69,7 @@ it('grouping result as map matches snapshot', apply(async () => {
 
   const groups = Array
     .from(converters.invalids.group.asMap(invalids))
-    .map(([{name}, list]) => ({name, list}))
+    .map(([{ name }, list]) => ({ name, list }))
 
   expect(groups).toMatchSnapshot()
 }))

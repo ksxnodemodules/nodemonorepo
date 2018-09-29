@@ -97,8 +97,8 @@ function handler ({
 
     { // Print out-of-date dependencies
       const transformed = outdated.map(
-        ({manifestContent, path, update}) =>
-          ({name: manifestContent.name || null, path, update})
+        ({ manifestContent, path, update }) =>
+          ({ name: manifestContent.name || null, path, update })
       )
 
       switch (outputFormat) {

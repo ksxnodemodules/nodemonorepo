@@ -1,9 +1,9 @@
 import * as fsTreeUtils from 'fs-tree-utils'
-import {clean, listAllTargets} from '../../index'
+import { clean, listAllTargets } from '../../index'
 import createVirtualEnv from '../.lib/virtual-env'
 import testTargetCorrectness from '../.lib/target-correctness'
 
-const {apply} = createVirtualEnv()
+const { apply } = createVirtualEnv()
 
 it('should list correct target files', apply(async () => {
   const [all, targets] = await Promise.all([
@@ -27,8 +27,8 @@ it('should delete correct target files', apply(async () => {
   expect({
     report,
     state: [
-      {before},
-      {after}
+      { before },
+      { after }
     ]
   }).toMatchSnapshot()
 }))

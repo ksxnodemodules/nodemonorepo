@@ -1,5 +1,5 @@
 import fetch from 'node-fetch'
-import createURLs, {validRegistry} from 'assemble-registry-url'
+import createURLs, { validRegistry } from 'assemble-registry-url'
 
 export enum Status {
   Available,
@@ -18,7 +18,7 @@ export async function single (name: string, registry?: string): Promise<Status> 
   if (!urls.validRegistry) return Status.InvalidRegistry
   if (!urls.validPackageName) return Status.InvalidName
 
-  const {ok, status} = await fetch(urls.packageURL)
+  const { ok, status } = await fetch(urls.packageURL)
   if (ok || status === 200) return Status.Occupied
   if (status === 404) return Status.Available
   return Status.NetworkError

@@ -1,5 +1,5 @@
 import fetch from 'node-fetch'
-import {create} from './url'
+import { create } from './url'
 
 type UrlMaker<Query> =
   (query: Query) => string

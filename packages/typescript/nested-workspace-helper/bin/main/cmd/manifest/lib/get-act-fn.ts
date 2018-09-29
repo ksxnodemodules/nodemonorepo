@@ -13,7 +13,7 @@ export function getActionFunction (action: ActionChoice): ActionFunction {
         ramda.dissocPath(path, object)
     case 'assign':
       return (object, path, value) =>
-        ramda.assocPath(path, {...ramda.path(path) || {}, ...value}, object)
+        ramda.assocPath(path, { ...ramda.path(path) || {}, ...value }, object)
   }
 }
 

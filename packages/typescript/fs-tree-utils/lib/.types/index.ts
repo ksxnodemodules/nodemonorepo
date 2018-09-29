@@ -1,5 +1,5 @@
 import * as path from 'path'
-import {Stats} from 'fs'
+import { Stats } from 'fs'
 import * as fsx from 'fs-extra'
 
 export type Tree<Other> = Tree.Read<Other>
@@ -112,7 +112,7 @@ export namespace Traverse {
 
   export namespace Result {
     export type Item = Options.DeepFunc.Param
-    export type Value = ReadonlyArray<Result.Item>
+    export type Value = ReadonlyArray<Item>
   }
 }
 
@@ -170,7 +170,7 @@ export namespace FileSystemRepresentation {
       this.content = content || {}
     }
 
-    async write (dirname: string, {create}: CreateSecondParam) {
+    async write (dirname: string, { create }: CreateSecondParam) {
       if (fsx.existsSync(dirname)) {
         const stats = await fsx.stat(dirname)
         if (!stats.isDirectory()) {

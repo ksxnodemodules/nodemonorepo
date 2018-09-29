@@ -1,5 +1,5 @@
 import qstr from 'querystring'
-import {Generator, QueryObject, raw} from './types'
+import { Generator, QueryObject, raw } from './types'
 
 export const origin = 'https://random.org'
 

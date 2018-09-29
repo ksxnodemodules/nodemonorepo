@@ -1,6 +1,6 @@
 import * as fsx from 'fs-extra'
 import listOutdatedDependencies from './outdated'
-import {deserialize} from './utils/json'
+import { deserialize } from './utils/json'
 
 import {
   Package,
@@ -40,8 +40,8 @@ export namespace updateExternalDependencyVersions {
 
     await Promise.all(
       list.map(async item => {
-        const {manifestContent, update} = item
-        const newManifest = {...manifestContent}
+        const { manifestContent, update } = item
+        const newManifest = { ...manifestContent }
 
         apply('dependencies', 'prod')
         apply('devDependencies', 'dev')

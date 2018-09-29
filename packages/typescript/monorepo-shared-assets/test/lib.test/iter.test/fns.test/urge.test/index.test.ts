@@ -1,4 +1,4 @@
-import {iter} from '../../../../../index'
+import { iter } from '../../../../../index'
 import fns = iter.fns
 import range = fns.range
 import urge = fns.urge

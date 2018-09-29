@@ -1,5 +1,5 @@
 import * as path from 'path'
-import {cwd, chdir} from 'process'
+import { cwd, chdir } from 'process'
 import * as fsx from 'fs-extra'
 import tempPath from 'unique-temp-path'
 import * as subject from '../index'
@@ -8,13 +8,13 @@ const tree = require('./data/tree.yaml')
 const oldCwd = cwd()
 const tmpContainer = tempPath('fs-tree-utils.')
 const tmp = 'tmp'
-const {FileSystemRepresentation} = subject
-const {File, Directory, Symlink, Clone} = FileSystemRepresentation
+const { FileSystemRepresentation } = subject
+const { File, Directory, Symlink, Clone } = FileSystemRepresentation
 
 const createTreeGetter = (container: string) => () => Promise.all([
   subject.read.nested(container),
   subject.read.flat(container)
-]).then(([nested, flat]) => ({nested, flat}))
+]).then(([nested, flat]) => ({ nested, flat }))
 
 beforeEach(async () => {
   await fsx.mkdir(tmpContainer)
@@ -111,7 +111,7 @@ describe('create function', () => {
     }, container)
     const secondBorn = await getTree()
 
-    expect({firstBorn, secondBorn}).toMatchSnapshot()
+    expect({ firstBorn, secondBorn }).toMatchSnapshot()
   })
 
   describe('throws error when encounter mismatched entities', () => {
@@ -157,7 +157,7 @@ describe('create function', () => {
       stat: subject.NestedReadOptions.StatFunc
     ) => async () => {
       const container = await prepare(basename)
-      expect(await subject.read.nested(container, {stat})).toMatchSnapshot()
+      expect(await subject.read.nested(container, { stat })).toMatchSnapshot()
     }
 
     it('with fsx.lstat as options.stat', createTest('create.3.0.0', fsx.lstat))
@@ -208,8 +208,8 @@ describe('create function', () => {
       file: new Clone(path.resolve(container, 'source/directory/file'))
     }
 
-    await subject.create({source}, container)
-    await subject.create({target}, container)
+    await subject.create({ source }, container)
+    await subject.create({ target }, container)
     expect(await getTree()).toMatchSnapshot()
   })
 })
@@ -247,7 +247,7 @@ describe('traverse function', () => {
 
   const createFunc = (options?: TraversalOptions) => async () =>
     (await subject.traverse(container, options))
-      .map(({item, path, container, level}) => ({item, path, container, level}))
+      .map(({ item, path, container, level }) => ({ item, path, container, level }))
 
   const createTester = (options?: TraversalOptions) => async () => {
     const fn = createFunc(options)

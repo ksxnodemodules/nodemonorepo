@@ -1,2 +1,2 @@
-import {parse} from 'url'
+import { parse } from 'url'
 export = (registry: string) => Boolean(parse(registry).protocol)

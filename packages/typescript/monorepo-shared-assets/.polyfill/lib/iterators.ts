@@ -4,7 +4,7 @@ if (!global.Symbol) {
 
     constructor (description?: string) {
       const random = Array(256).map(() => Math.random().toString(36).slice(2)).join('')
-      const string = JSON.stringify({description, random})
+      const string = JSON.stringify({ description, random })
       this.toString = () => string
     }
   }
@@ -16,5 +16,5 @@ if (!global.Symbol) {
 
 for (const name of ['iterator', 'asyncIterator']) {
   if (name in Symbol) continue
-  Object.assign(Symbol, {[name]: Symbol(name)})
+  Object.assign(Symbol, { [name]: Symbol(name) })
 }

@@ -1,4 +1,4 @@
-import {FlatReadResultValue} from 'fs-tree-utils/lib/read'
+import { FlatReadResultValue } from 'fs-tree-utils/lib/read'
 
 export function testTargetCorrectness (all: FlatReadResultValue, targets: ReadonlyArray<string>) {
   const deletedFileContents = targets.map(filename => ({
@@ -8,7 +8,7 @@ export function testTargetCorrectness (all: FlatReadResultValue, targets: Readon
 
   const remainingFileContents = all.files
     .filter(filename => !targets.includes(filename) && !/(^|\/)__[a-zA-Z]+$/.test(filename))
-    .map(filename => ({filename, content: all.fileContents[filename]}))
+    .map(filename => ({ filename, content: all.fileContents[filename] }))
 
   expect({
     targets,

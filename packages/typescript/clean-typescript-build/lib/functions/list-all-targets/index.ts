@@ -1,7 +1,7 @@
-import {existsSync, lstat} from 'fs-extra'
-import {traverse} from 'fs-tree-utils'
-import {Options, TargetList} from '../../types'
-import {DEFAULT_DEEP_FUNC, DEFAULT_SOURCE_DETECTOR, DEFAULT_TARGET_SPECIFIER} from '../../contants'
+import { existsSync, lstat } from 'fs-extra'
+import { traverse } from 'fs-tree-utils'
+import { Options, TargetList } from '../../types'
+import { DEFAULT_DEEP_FUNC, DEFAULT_SOURCE_DETECTOR, DEFAULT_TARGET_SPECIFIER } from '../../contants'
 
 export = listAllTargets
 
@@ -24,7 +24,7 @@ async function listAllTargets (
     listTargets = DEFAULT_TARGET_SPECIFIER
   } = options
 
-  const existed = (await traverse(root, {deep, stat: lstat}))
+  const existed = (await traverse(root, { deep, stat: lstat }))
     .filter(isSource)
     .map(listTargets)
     .reduce((prev, current) => [...prev, ...current], [])

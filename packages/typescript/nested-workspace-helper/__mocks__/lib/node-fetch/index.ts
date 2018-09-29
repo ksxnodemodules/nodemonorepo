@@ -1,7 +1,7 @@
-import {URL} from 'url'
+import { URL } from 'url'
 import * as semver from 'semver'
-import {NPM_REGISTRY, YARN_REGISTRY} from '../../../lib/npm-registry'
-import {packages, PackageVersionRegistry, PackageRegistry} from './lib/data'
+import { NPM_REGISTRY, YARN_REGISTRY } from '../../../lib/npm-registry'
+import { packages, PackageVersionRegistry, PackageRegistry } from './lib/data'
 
 export interface Response {
   readonly ok: boolean

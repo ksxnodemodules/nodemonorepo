@@ -1,7 +1,7 @@
 import * as process from 'process'
 import listAllInvalidPackages from '../../../../lib/invalids'
-import {deserialize} from '../../../../lib/utils/json'
-import {getDict, getString} from '../../lib/ivls-cvts'
+import { deserialize } from '../../../../lib/utils/json'
+import { getDict, getString } from '../../lib/ivls-cvts'
 
 import {
   Argv,

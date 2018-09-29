@@ -1,9 +1,9 @@
 import * as snap from '../lib/snap'
 
 const refA = {}
-const refB = {refA}
+const refB = { refA }
 const refC = [refA, refB]
-const refs = {refA, refB, refC, a: refA, b: refB, c: refC}
+const refs = { refA, refB, refC, a: refA, b: refB, c: refC }
 
 const unsafePattern = {
   primaries: {

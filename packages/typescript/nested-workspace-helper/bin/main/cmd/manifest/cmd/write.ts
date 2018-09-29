@@ -10,7 +10,7 @@ import {
   writePackageManifests
 } from '../../../../../index'
 
-import {serialize} from '../../../../../lib/utils/json'
+import { serialize } from '../../../../../lib/utils/json'
 
 import {
   getActionFunction,
@@ -82,7 +82,7 @@ function handler ({
   )
 
   async function main (): Promise<number> {
-    const {value: actualValue, error} = getActualValue()
+    const { value: actualValue, error } = getActualValue()
 
     if (error) {
       console.error(error)
@@ -118,7 +118,7 @@ function handler ({
             value: null
           }
       case 'delete':
-        return {error: null, value: null}
+        return { error: null, value: null }
     }
   }
 }

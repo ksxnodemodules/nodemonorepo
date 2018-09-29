@@ -7,7 +7,7 @@ it('matches snapshot', async () => {
 
   const actions = ramda
     .range(0, totalLength)
-    .map(value => ({value: past}: {value?: number} = {}) => ({value, past}))
+    .map(value => ({ value: past }: {value?: number} = {}) => ({ value, past }))
     .map((fn, i) => i & 1 ? fn : async <X>(x: X) => fn(x))
 
   const array = await subject(partLength, actions)

@@ -12,7 +12,7 @@ export function create (treefile: string, container?: string) {
   } = xjest.setupTeardown.virtualEnvironment.createFactory(tree, container)
 
   return {
-    info: Object.assign(info, {tree}),
+    info: Object.assign(info, { tree }),
     apply
   }
 }

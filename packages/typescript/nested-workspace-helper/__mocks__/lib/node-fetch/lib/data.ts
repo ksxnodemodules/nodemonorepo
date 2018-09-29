@@ -23,14 +23,14 @@ export const packages = Object
     versions: versions
       .map(
         version =>
-          ({name, version} as PackageVersionRegistry)
+          ({ name, version } as PackageVersionRegistry)
       )
       .reduce(
-        (prev, current) => Object.assign(prev, {[current.version]: current}),
+        (prev, current) => Object.assign(prev, { [current.version]: current }),
         {} as RegistryPackageVersionSet
       )
   } as PackageRegistry))
   .reduce(
-    (prev, current) => Object.assign(prev, {[current.name]: current}),
+    (prev, current) => Object.assign(prev, { [current.name]: current }),
     {} as RegistryPackageSet
   )

@@ -18,14 +18,14 @@ export namespace split {
 
     for (const item of iterable) {
       if (choose(item)) {
-        yield {list, line: item, last: false}
+        yield { list, line: item, last: false }
         list = []
       } else {
         list.push(item)
       }
     }
 
-    yield {list, line: undefined, last: true}
+    yield { list, line: undefined, last: true }
   }
 
   export namespace func {
@@ -55,7 +55,7 @@ export namespace split {
   export function line<X> (
     iterable: Iterable<X>,
     line: X,
-    compare: split.line.Comparator<X> = split.line.DEFAULT_COMPARATOR
+    compare: line.Comparator<X> = line.DEFAULT_COMPARATOR
   ): Iter<ReadonlyArray<X>> {
     return map(
       func(iterable, x => compare(line, x)),

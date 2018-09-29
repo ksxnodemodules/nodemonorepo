@@ -305,7 +305,7 @@ export namespace InvalidPackage {
       }
 
       constructor () {
-        const {description} = this.constructor as typeof Base
+        const { description } = this.constructor as typeof Base
         this.name = description.name
         this.message = description.message
       }

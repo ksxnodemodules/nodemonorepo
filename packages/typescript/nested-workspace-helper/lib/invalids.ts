@@ -37,7 +37,7 @@ export namespace listAllInvalidPackages {
     } = {}
 
     for (const victim of [...prvs, ...dups, ...sfds, ...ivls]) {
-      const {path} = victim
+      const { path } = victim
 
       if (path in db) {
         const temp = db[path]
@@ -52,7 +52,7 @@ export namespace listAllInvalidPackages {
           reason
         }
       } else {
-        db[path] = {...victim}
+        db[path] = { ...victim }
       }
     }
 
@@ -70,7 +70,7 @@ export namespace listAllInvalidPackages {
         newInvalids.push(item)
       }
 
-      for (const {list, dependant} of Object.values(map)) {
+      for (const { list, dependant } of Object.values(map)) {
         const filtered = invalids.filter(
           x => list.some(
             xx =>
@@ -81,7 +81,7 @@ export namespace listAllInvalidPackages {
 
         if (filtered.length) {
           const reason = [new InvalidPackage.Reason.InvalidDependencies(filtered)]
-          newInvalids.push({...dependant, reason})
+          newInvalids.push({ ...dependant, reason })
         }
       }
 
@@ -99,7 +99,7 @@ export namespace listAllInvalidPackages {
     ): ReadonlyArray<getPrivateDependencyVictims.Victim> {
       const result: getPrivateDependencyVictims.Victim[] = []
 
-      for (const {list, dependant} of Object.values(map)) {
+      for (const { list, dependant } of Object.values(map)) {
         if (dependant.manifestContent.private) continue
 
         const filtered = list
@@ -108,7 +108,7 @@ export namespace listAllInvalidPackages {
 
         if (filtered.length) {
           const reason = [new InvalidPackage.Reason.PrivateDependencies(filtered)]
-          result.push({...dependant, reason})
+          result.push({ ...dependant, reason })
         }
       }
 
@@ -132,8 +132,8 @@ export namespace listAllInvalidPackages {
         [name: string]: Package.ListItem[]
       } = {}
 
-      for (const {dependant} of Object.values(map)) {
-        const {name} = dependant.manifestContent
+      for (const { dependant } of Object.values(map)) {
+        const { name } = dependant.manifestContent
         if (!name) continue
 
         if (name in db) {
@@ -149,7 +149,7 @@ export namespace listAllInvalidPackages {
 
         for (const item of list) {
           const reason = [new InvalidPackage.Reason.NameDuplication(list)]
-          result.push({...item, reason})
+          result.push({ ...item, reason })
         }
       }
 
@@ -173,13 +173,13 @@ export namespace listAllInvalidPackages {
         devDependencies = {},
         peerDependencies = {}
       }}: Package.ListItem) =>
-        name && name in {...dependencies, ...devDependencies, ...peerDependencies}
+        name && name in { ...dependencies, ...devDependencies, ...peerDependencies }
 
       return Object
         .values(map)
         .map(x => x.dependant)
         .filter(filter)
-        .map(x => ({...x, reason}))
+        .map(x => ({ ...x, reason }))
     }
 
     export namespace getSelfDependenceVictims {

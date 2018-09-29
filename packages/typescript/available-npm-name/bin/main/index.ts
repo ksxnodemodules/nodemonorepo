@@ -1,9 +1,9 @@
 import process from 'process'
 import ramda from 'ramda'
 import yargs from 'yargs'
-import check, {Status} from '../../index'
+import check, { Status } from '../../index'
 
-const {argv} = yargs
+const { argv } = yargs
   .usage('$0 [names]')
   .options({
     registry: {
@@ -63,8 +63,8 @@ check(names, registry).then(
     const results = ramda.zip(names, statuses)
 
     if (format === 'json') {
-      const content = results.map(([name, status]) => ({name, response: Status[status]}))
-      console.info(JSON.stringify(({ok: true, content}), undefined, jsonIndent))
+      const content = results.map(([name, status]) => ({ name, response: Status[status] }))
+      console.info(JSON.stringify(({ ok: true, content }), undefined, jsonIndent))
       return
     }
 

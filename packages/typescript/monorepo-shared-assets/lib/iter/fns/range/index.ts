@@ -12,7 +12,7 @@ function range (x: number) {
       return range(end).up.from(x)
     }
 
-    return {from, to, [Symbol.iterator]: from}
+    return { from, to, [Symbol.iterator]: from }
   })()
 
   const down = (() => {
@@ -26,10 +26,10 @@ function range (x: number) {
       return range(end).down.from(x)
     }
 
-    return {from, to, [Symbol.iterator]: to}
+    return { from, to, [Symbol.iterator]: to }
   })()
 
-  return {up, down, [Symbol.iterator]: up.from}
+  return { up, down, [Symbol.iterator]: up.from }
 }
 
 export default range

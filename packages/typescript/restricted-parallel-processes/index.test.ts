@@ -65,7 +65,7 @@ it('calls oncreate', async () => {
 
   const objparams = params
     .map(subject.getObjectParam)
-    .map(x => ({...x, oncreate}))
+    .map(x => ({ ...x, oncreate }))
 
   await subject.asArray(objparams, 4)
 

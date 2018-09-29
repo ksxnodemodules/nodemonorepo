@@ -1,8 +1,8 @@
-import {listMismatchedDependencies} from '../../../index'
+import { listMismatchedDependencies } from '../../../index'
 import createSetupTeardown from '../../.lib/setup-teardown'
 import iterate from '../../.lib/all-mismatch-checkers'
 
-const {apply} = createSetupTeardown('mismatched-deps.yaml')
+const { apply } = createSetupTeardown('mismatched-deps.yaml')
 const root = 'root'
 
 describe('getMismatchedDependencies', () => {

@@ -1,4 +1,4 @@
-import {URL} from 'url'
+import { URL } from 'url'
 
 import {
   NPM_REGISTRY
@@ -24,7 +24,7 @@ function createRegistryFactory (
     registry = NPM_REGISTRY
   } = param
 
-  const setRegistry = (registry: string) => createFactory({...param, registry})
+  const setRegistry = (registry: string) => createFactory({ ...param, registry })
 
   if (!validRegistry(registry)) {
     return {
@@ -34,7 +34,7 @@ function createRegistryFactory (
     }
   }
 
-  const setPackage = (name: string) => createFactory({...param, registry, package: name})
+  const setPackage = (name: string) => createFactory({ ...param, registry, package: name })
 
   return {
     validRegistry: true,
@@ -62,7 +62,7 @@ function createRegistryPackageFactory (
   const packageURL = joinURL(base.registry, encodePkgName(pkgName))
   const latestVersionURL = joinURL(packageURL, 'latest')
   const allVersionsURL = joinURL(packageURL, 'versions')
-  const setVersion = (version: string) => createFactory({...param, version})
+  const setVersion = (version: string) => createFactory({ ...param, version })
 
   return {
     ...base,
@@ -82,7 +82,7 @@ function createRegistryPackageVersionFactory (
 
   if (!base.validRegistry || !base.validPackageName) return base
 
-  const {version} = param
+  const { version } = param
 
   if (!validVersion(version)) {
     return {

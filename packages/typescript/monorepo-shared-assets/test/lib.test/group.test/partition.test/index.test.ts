@@ -1,4 +1,4 @@
-import {iter} from '../../../../index'
+import { iter } from '../../../../index'
 import partition from '../../../../lib/group/partition'
 
 it('using list of classifiers', () => {
@@ -6,7 +6,7 @@ it('using list of classifiers', () => {
 
   const list = Array
     .from(iter.fns.range(10))
-    .map(x => [x, String(x), Symbol(x), [x], {x}, Boolean(x & 1)])
+    .map(x => [x, String(x), Symbol(x), [x], { x }, Boolean(x & 1)])
     .reduce((prev, current) => [...prev, ...current])
 
   const classifiers: Classifier[] = [

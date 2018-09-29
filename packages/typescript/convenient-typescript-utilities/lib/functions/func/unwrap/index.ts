@@ -1,4 +1,4 @@
-import {FunctionUtils} from '../../../types'
+import { FunctionUtils } from '../../../types'
 
 const unwrap =
   <
@@ -7,6 +7,6 @@ const unwrap =
   >(fn: FunctionUtils.RecursiveReturn<Return, Args>, ...args: Args): Return =>
     typeof fn === 'function'
       ? unwrap<Return, Args>(fn(...args), ...args)
-      : (fn as Return)
+      : (fn)
 
 export = unwrap

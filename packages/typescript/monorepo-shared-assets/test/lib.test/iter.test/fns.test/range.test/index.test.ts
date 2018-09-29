@@ -1,5 +1,5 @@
-import {iter} from '../../../../../index'
-const {range} = iter.fns
+import { iter } from '../../../../../index'
+const { range } = iter.fns
 
 type Iter = Iterable<number>
 

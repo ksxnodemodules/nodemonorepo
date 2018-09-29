@@ -1,13 +1,13 @@
 import * as process from 'process'
-import {spawnSync} from 'child_process'
+import { spawnSync } from 'child_process'
 import chalk from 'chalk'
 import npmRegistry from '../../../../lib/npm-registry'
 import listAllPackages from '../../../../lib/list-pkgs'
 import getDependencyMap from '../../../../lib/dep-map'
 import checkPublisability from '../../../../lib/publishables'
 import listAllInvalidPackages from '../../../../lib/invalids'
-import {getString as ivls2text} from '../../lib/ivls-cvts'
-import {getString as pkgs2text} from '../../lib/list-cvts'
+import { getString as ivls2text } from '../../lib/ivls-cvts'
+import { getString as pkgs2text } from '../../lib/list-cvts'
 
 import {
   Argv,
@@ -24,7 +24,7 @@ enum ExitStatus {
 
 namespace publisher {
   export function real (cmd: string, cwd: string): Result {
-    const {status, error, signal} = spawnSync(
+    const { status, error, signal } = spawnSync(
       cmd,
       ['publish'],
       {
@@ -34,12 +34,12 @@ namespace publisher {
       }
     )
 
-    return {status, error, signal}
+    return { status, error, signal }
   }
 
   export function fake (cmd: string, cwd: string): Result {
     console.info(`Will execute "${cmd} publish" at directory ${cwd}`)
-    return {status: 0, error: undefined, signal: undefined}
+    return { status: 0, error: undefined, signal: undefined }
   }
 
   export interface Result {
@@ -128,7 +128,7 @@ function handler ({
     }
 
     { // when unpublishables exist but not allowed
-      const {unpublishables} = publishability
+      const { unpublishables } = publishability
 
       if (noUnpublishablePackages && unpublishables.length) {
         console.error('[ERROR] Unpublishable packages: Version already exist in registry')
@@ -138,8 +138,8 @@ function handler ({
     }
 
     { // publishing packages
-      const {publishables} = publishability
-      const {length} = publishables
+      const { publishables } = publishability
+      const { length } = publishables
 
       if (!length) {
         console.info('[INFO] No publishable packages')
@@ -155,10 +155,10 @@ function handler ({
       let finalStatus = 0
 
       for (const item of publishables) {
-        const {name} = item.manifestContent
+        const { name } = item.manifestContent
         console.info(`Publishing ${chalk.bold(name as string)}...`)
-        const {status, error, signal} = publish(executable, item.path)
-        if (status || error || signal) console.info('[FAILED]', {status, error, signal})
+        const { status, error, signal } = publish(executable, item.path)
+        if (status || error || signal) console.info('[FAILED]', { status, error, signal })
         finalStatus |= status
       }
 

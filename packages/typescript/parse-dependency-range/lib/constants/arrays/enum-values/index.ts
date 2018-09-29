@@ -1,6 +1,6 @@
-import {object} from 'convenient-typescript-utilities'
+import { object } from 'convenient-typescript-utilities'
 import * as types from '../../../types'
-const {values} = object
+const { values } = object
 
 export const TYPE = values(types.Type)
 

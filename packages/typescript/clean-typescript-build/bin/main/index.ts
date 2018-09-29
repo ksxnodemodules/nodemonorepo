@@ -1,6 +1,6 @@
 import process from 'process'
 import yargs from 'yargs'
-import {clean, listAllTargets, Options, Clean} from '../../index'
+import { clean, listAllTargets, Options, Clean } from '../../index'
 
 interface CLIArguments extends yargs.Arguments {
   readonly directory: string
@@ -9,7 +9,7 @@ interface CLIArguments extends yargs.Arguments {
   readonly jsonIndent: number
 }
 
-const {argv} = yargs
+const { argv } = yargs
   .usage('$0 <directory> [options]', 'Clean TypeScript compilation products', {
     directory: {
       describe: 'Directory that contains source files',
@@ -51,7 +51,7 @@ main().then(
 )
 
 async function main (): Promise<number> {
-  const {success, failure, targets, reports} = await (dry ? fakeClean : clean)(directory)
+  const { success, failure, targets, reports } = await (dry ? fakeClean : clean)(directory)
 
   if (format === 'text') {
     const list = (filelist: ReadonlyArray<string>) =>
@@ -66,7 +66,7 @@ async function main (): Promise<number> {
     console.info(`\nFailed to delete ${failure.length} files`)
     list(failure)
 
-    for (const {file, deletion} of reports) {
+    for (const { file, deletion } of reports) {
       if (deletion.success) continue
       console.error(`\nFailed at ${file}`)
       console.error(deletion.error)
@@ -76,13 +76,13 @@ async function main (): Promise<number> {
       [filename: string]: any
     } = {}
 
-    for (const {file, deletion} of reports) {
+    for (const { file, deletion } of reports) {
       if (!deletion.success) {
         reasons[file] = deletion.error
       }
     }
 
-    const text = JSON.stringify({targets, success, failure, reasons}, undefined, jsonIndent)
+    const text = JSON.stringify({ targets, success, failure, reasons }, undefined, jsonIndent)
     console.info(text)
   }
 
@@ -91,6 +91,6 @@ async function main (): Promise<number> {
 
 async function fakeClean (directory: string, options?: Options): Promise<Clean.Result> {
   const targets = await listAllTargets(directory, options)
-  const reports = targets.map(file => ({file, deletion: {success: true as true}}))
-  return {success: targets, failure: [], targets, reports}
+  const reports = targets.map(file => ({ file, deletion: { success: true as true } }))
+  return { success: targets, failure: [], targets, reports }
 }

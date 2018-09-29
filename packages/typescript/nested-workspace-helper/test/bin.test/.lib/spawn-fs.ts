@@ -1,4 +1,4 @@
-import {snapSpawn} from './snap-spawn'
+import { snapSpawn } from './snap-spawn'
 
 import {
   snapFileSystem,

@@ -1,4 +1,4 @@
-import {Response} from 'node-fetch'
+import { Response } from 'node-fetch'
 
 import {
   structured as Structured,
@@ -10,7 +10,7 @@ import {
 
 import * as raw from './raw'
 
-const {decimal} = Base
+const { decimal } = Base
 const format = Format.plain
 const whitespace = /\s+/
 

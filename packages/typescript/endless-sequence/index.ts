@@ -33,7 +33,7 @@ export function create<Element> (
   function * iterate () {
     yield * data
 
-    for ( ; ; ) {
+    for (; ;) {
       yield * addNewPart()
     }
   }

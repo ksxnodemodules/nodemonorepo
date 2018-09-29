@@ -1,5 +1,5 @@
 import * as fsx from 'fs-extra'
-import {deserialize} from './utils/json'
+import { deserialize } from './utils/json'
 import listAllPackages from './list-pkgs'
 
 import {

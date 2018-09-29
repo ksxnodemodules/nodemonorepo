@@ -1,6 +1,6 @@
-import {SpawnSyncOptions} from 'child_process'
+import { SpawnSyncOptions } from 'child_process'
 import * as xsnap from '../snap'
-import spawn, {SpawnFunc, Argv, createSpawnFunc} from './lib/spawn'
+import spawn, { SpawnFunc, Argv, createSpawnFunc } from './lib/spawn'
 
 export * from './lib/spawn'
 

@@ -1,2 +1,2 @@
 import getArray from './get-array'
-export {getArray}
+export { getArray }

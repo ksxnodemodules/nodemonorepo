@@ -1,5 +1,5 @@
-import {iter} from '../../../../../index'
-const {repeat} = iter.fns
+import { iter } from '../../../../../index'
+const { repeat } = iter.fns
 
 const assert = <A, B>(a: Iterable<A>, b: Iterable<B>) =>
   expect(Array.from(a)).toEqual(Array.from(b))

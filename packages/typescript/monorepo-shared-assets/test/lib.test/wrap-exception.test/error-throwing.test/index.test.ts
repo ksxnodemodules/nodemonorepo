@@ -1,8 +1,8 @@
-import {wrapException} from '../../../../index'
+import { wrapException } from '../../../../index'
 import wrap = wrapException.wrapErrorThrowing
 
 function withoutError (value: number) {
-  return new Result({value})
+  return new Result({ value })
 }
 
 function withError () {
@@ -10,7 +10,7 @@ function withError () {
 }
 
 function handleError (error: any, param: number) {
-  return new Result({error, param})
+  return new Result({ error, param })
 }
 
 class Result {

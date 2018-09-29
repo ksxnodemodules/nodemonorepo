@@ -1,7 +1,7 @@
 import createSetupTeardown from '../../.lib/setup-teardown'
-import {listOutdatedDependencies} from '../../../index'
+import { listOutdatedDependencies } from '../../../index'
 
-const {apply} = createSetupTeardown('outdated.yaml')
+const { apply } = createSetupTeardown('outdated.yaml')
 
 it('without options', apply(async () => {
   const outdated = await listOutdatedDependencies('root')
@@ -10,7 +10,7 @@ it('without options', apply(async () => {
 
 describe('with options', () => {
   it('with beOnInstalled=true', apply(async () => {
-    const outdated = await listOutdatedDependencies('root', {baseOnInstalled: true})
+    const outdated = await listOutdatedDependencies('root', { baseOnInstalled: true })
     expect(outdated).toMatchSnapshot()
   }))
 

@@ -76,7 +76,7 @@ export namespace listOutdatedDependencies {
       )
         .filter(x => x !== 'NotFound')
         .map(x => x as PackageVersionRegistry)
-        .map(({name, version}) => [name, version] as [typeof name, typeof version])
+        .map(({ name, version }) => [name, version] as [typeof name, typeof version])
     )
 
     const getCurrentVersions = baseOnInstalled
@@ -107,7 +107,7 @@ export namespace listOutdatedDependencies {
             }))
         }
       }
-      : async ({manifestContent}: Package.ListItem) => {
+      : async ({ manifestContent }: Package.ListItem) => {
         const {
           dependencies = {},
           devDependencies = {},
@@ -123,7 +123,7 @@ export namespace listOutdatedDependencies {
         function transform (deps: Package.Dict, type: Dependency.Type) {
           return Object
             .entries(deps)
-            .map(([name, requirement]) => ({name, type, requirement}))
+            .map(([name, requirement]) => ({ name, type, requirement }))
         }
       }
 
@@ -144,15 +144,15 @@ export namespace listOutdatedDependencies {
       getIterable()
     ])
 
-    for (const {item, versions} of iterable) {
+    for (const { item, versions } of iterable) {
       const updatedVersions = versions
-        .map(({requirement, ...rest}) => ({
+        .map(({ requirement, ...rest }) => ({
           ...rest,
           requirement: transformVersionRequirement(requirement),
           latest: dependencyLatestVersions.get(rest.name)
         }))
         .filter(
-          ({latest, requirement}) =>
+          ({ latest, requirement }) =>
             latest && !semver.satisfies(latest, requirement)
         )
         .map(item => ({
@@ -169,13 +169,13 @@ export namespace listOutdatedDependencies {
       const prod: UpdateDictValue = {}
       const dev: UpdateDictValue = {}
       const peer: UpdateDictValue = {}
-      const update = {prod, dev, peer}
+      const update = { prod, dev, peer }
 
       for (const item of updatedVersions) {
         update[item.type][item.name] = item.update
       }
 
-      result.push({...item, update})
+      result.push({ ...item, update })
     }
 
     return result

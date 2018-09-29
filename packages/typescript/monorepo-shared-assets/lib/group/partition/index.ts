@@ -22,8 +22,7 @@ export namespace partition {
       values: Iterable<X>,
       classifiers: Classifier.Iter<X>
     ): Partition<X> {
-      const result = fromClassifierList
-        .array(Array.from(values), Array.from(classifiers))
+      const result = array(Array.from(values), Array.from(classifiers))
 
       const classified = immutable
         .Map(result.classified)
@@ -32,20 +31,20 @@ export namespace partition {
 
       const untouched = new Set(result.untouched)
 
-      return {classified, untouched}
+      return { classified, untouched }
     }
 
     export function array<X> (
       list: ReadonlyArray<X>,
       classifiers: Classifier.List<X>
     ): Partition.Array<X> {
-      if (!classifiers.length) return {classified: {}, untouched: list}
+      if (!classifiers.length) return { classified: {}, untouched: list }
       const [[target, func], ...nextClassifiers] = classifiers
       const [value, nextList] = ramda.partition(func, Array.from(list))
       const nextPartition = array(nextList, nextClassifiers)
-      const classified = {[target]: value, ...nextPartition.classified}
+      const classified = { [target]: value, ...nextPartition.classified }
       const untouched = nextPartition.untouched
-      return {classified, untouched}
+      return { classified, untouched }
     }
   }
 

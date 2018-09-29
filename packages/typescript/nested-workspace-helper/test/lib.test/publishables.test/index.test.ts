@@ -1,7 +1,7 @@
 import createSetupTeardown from '../../.lib/setup-teardown'
-import {classifyPublishability} from '../../../index'
+import { classifyPublishability } from '../../../index'
 
-const {apply} = createSetupTeardown('publishability.yaml')
+const { apply } = createSetupTeardown('publishability.yaml')
 
 describe('matches snapshot', () => {
   it('when there are all 3 types', apply(async () => {

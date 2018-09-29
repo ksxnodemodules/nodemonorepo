@@ -89,7 +89,7 @@ function handler (argv: Arguments & {
     process.exit(2)
   }
 
-  ; (async function main () {
+   (async function main () {
     let status = 0
     if (!noPrint) status += await read()
     if (update) status += await write()
@@ -108,13 +108,13 @@ function handler (argv: Arguments & {
     if (jsonOutput) {
       const output = Object
         .values(map)
-        .map(({list, dependant}) => ({
+        .map(({ list, dependant }) => ({
           dependant: {
             name: dependant.manifestContent.name || null,
             path: dependant.path
           },
           list: filter(list).map(
-            ({name, type, update, requirement, version}) => ({
+            ({ name, type, update, requirement, version }) => ({
               name,
               type,
               update,
@@ -134,7 +134,7 @@ function handler (argv: Arguments & {
         ? () => {}
         : () => { finalExitStatus = 1 }
 
-      for (const {list, dependant} of Object.values(map)) {
+      for (const { list, dependant } of Object.values(map)) {
         const messages = filter(list).map(mkmsg)
 
         if (messages.length) {
@@ -164,7 +164,7 @@ function handler (argv: Arguments & {
     }
 
     function filter (list: MismatchedDependency.List): MismatchedDependency.List {
-      return list.filter(({update, requirement}) => update !== requirement)
+      return list.filter(({ update, requirement }) => update !== requirement)
     }
   }
 

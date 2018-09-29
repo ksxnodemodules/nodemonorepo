@@ -1,6 +1,6 @@
 import * as fsTreeUtils from 'fs-tree-utils'
 import * as xjest from 'extra-jest'
-import {FlatReadResultValue} from '../../../../fs-tree-utils/lib/read'
+import { FlatReadResultValue } from '../../../../fs-tree-utils/lib/read'
 
 export type Act = (prev: FlatReadResultValue) => Promise<void>
 export type Factory = (dirname?: string, act?: Act) => () => Promise<void>
@@ -26,7 +26,7 @@ export function createFactory (
 }
 
 export const snapFileSystem = createFactory(
-  (before, after) => snap({before, after})
+  (before, after) => snap({ before, after })
 )
 
 export const unchangedFileSystem = createFactory(
@@ -36,6 +36,6 @@ export const unchangedFileSystem = createFactory(
 export const snapAndUnchanged = createFactory(
   (before, after) => {
     expect(after).toEqual(before)
-    snap({before, after})
+    snap({ before, after })
   }
 )

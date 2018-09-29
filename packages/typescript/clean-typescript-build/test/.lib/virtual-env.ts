@@ -6,10 +6,10 @@ export function create (container?: string) {
     path.resolve(__dirname, '../.data/tree.yaml')
   )
 
-  const {info, apply} = xjest.setupTeardown.virtualEnvironment.createFactory(tree, container)
+  const { info, apply } = xjest.setupTeardown.virtualEnvironment.createFactory(tree, container)
 
   return {
-    info: Object.assign(info, {tree}),
+    info: Object.assign(info, { tree }),
     apply
   }
 }

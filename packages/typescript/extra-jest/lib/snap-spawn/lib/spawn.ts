@@ -1,4 +1,4 @@
-import {SpawnSyncOptions, SpawnSyncReturns, spawnSync} from 'child_process'
+import { SpawnSyncOptions, SpawnSyncReturns, spawnSync } from 'child_process'
 import ramda from 'ramda'
 
 export type IOData = Buffer | string
@@ -32,7 +32,7 @@ export function spawn (
   argv: Argv = [],
   options: SpawnSyncOptions = {}
 ): SpawnReturns {
-  const {status, signal, error, stdout, stderr} = fn(
+  const { status, signal, error, stdout, stderr } = fn(
     argv,
     options
   )

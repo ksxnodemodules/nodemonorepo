@@ -1,3 +1,3 @@
 import includes from './includes'
 import tuple from './tuple'
-export {includes, tuple}
+export { includes, tuple }

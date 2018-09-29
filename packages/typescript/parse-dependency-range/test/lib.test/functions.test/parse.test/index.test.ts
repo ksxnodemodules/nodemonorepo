@@ -1,4 +1,4 @@
-import parse, {Type} from '../../../../index'
+import parse, { Type } from '../../../../index'
 
 type Sample<X extends Type = Type> = [X, ReadonlyArray<string>]
 
@@ -73,18 +73,18 @@ describe('when using samples', () => {
       output: parse(input)
     }))
 
-    return {type, table}
+    return { type, table }
   })
 
   it('emits correct types', () => {
-    const received = results.map(({table}) => table.map(({input, output}) => ({input, type: output.type})))
-    const expected = results.map(({table, type}) => table.map(({input}) => ({input, type})))
+    const received = results.map(({ table }) => table.map(({ input, output }) => ({ input, type: output.type })))
+    const expected = results.map(({ table, type }) => table.map(({ input }) => ({ input, type })))
     expect(received).toEqual(expected)
   })
 
   it('emits correct values', () => {
-    const received = results.map(x => x.table.map(({input, output}) => ({input, value: output.value})))
-    const expected = results.map(x => x.table.map(({input}) => ({input, value: input})))
+    const received = results.map(x => x.table.map(({ input, output }) => ({ input, value: output.value })))
+    const expected = results.map(x => x.table.map(({ input }) => ({ input, value: input })))
     expect(received).toEqual(expected)
   })
 

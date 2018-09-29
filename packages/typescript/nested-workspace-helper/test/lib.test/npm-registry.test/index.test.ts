@@ -1,5 +1,5 @@
-import {npmRegistry} from '../../../index'
-import {mkhref} from '../../../lib/npm-registry'
+import { npmRegistry } from '../../../index'
+import { mkhref } from '../../../lib/npm-registry'
 
 it('mkhref', () => {
   expect(

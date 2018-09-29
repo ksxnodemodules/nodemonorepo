@@ -1,4 +1,4 @@
-import {asyncIter} from '../../../../../index'
+import { asyncIter } from '../../../../../index'
 import getArray = asyncIter.fns.getArray
 
 it('works', async () => {

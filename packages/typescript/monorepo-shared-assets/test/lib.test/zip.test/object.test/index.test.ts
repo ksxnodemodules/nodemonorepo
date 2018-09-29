@@ -1,5 +1,5 @@
-import {zip} from '../../../../index'
-const {FIRST, INNER_JOIN, OUTER_JOIN} = zip.object
+import { zip } from '../../../../index'
+const { FIRST, INNER_JOIN, OUTER_JOIN } = zip.object
 
 const foo = {
   sharedA: 'fooA',

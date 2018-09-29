@@ -1,7 +1,7 @@
-import getMismatchedDependencies, {Checker} from '../../lib/mismatches'
-const {allCheckers} = getMismatchedDependencies
+import getMismatchedDependencies, { Checker } from '../../lib/mismatches'
+const { allCheckers } = getMismatchedDependencies
 
-export {CheckerCollection} from '../../lib/mismatches'
+export { CheckerCollection } from '../../lib/mismatches'
 export type AllCheckerCollection = getMismatchedDependencies.AllCheckerCollection
 
 export function iterate (fn: (check: Checker, name: string) => void) {

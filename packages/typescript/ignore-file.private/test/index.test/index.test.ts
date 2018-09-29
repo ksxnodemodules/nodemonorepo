@@ -3,7 +3,7 @@ import * as xjest from 'extra-jest'
 import virtualEnvironment from '../.lib/virtual-env'
 import * as subject from '../../index'
 
-const {apply} = virtualEnvironment
+const { apply } = virtualEnvironment
 const snap = (x: any) => xjest.snap.safe(x)()
 
 it('add', () => {
@@ -28,7 +28,7 @@ it('getFilePairs', apply(async () => {
 it('getDeltaPairs', apply(async () => {
   const pairs = await subject.getDeltaPairs('.myignore')
   snap(pairs)
-  snap(pairs.map(({delta, ignore}) => ({
+  snap(pairs.map(({ delta, ignore }) => ({
     ignore,
     delta: delta.filter(x => Object.keys(x.content).length !== 0)
   })))
@@ -46,9 +46,9 @@ it('writeIgnoreFiles', apply(async () => {
   snap(
     Object
       .entries((await fsTreeUtils.read.flat('root')).fileContents)
-      .map(([name, content]) => ({name, content}))
+      .map(([name, content]) => ({ name, content }))
       .filter(x => /\.myignore$/.test(x.name))
-      .map(({name, content}) => [{name}, {content}])
+      .map(({ name, content }) => [{ name }, { content }])
   )
 }))
 
@@ -64,13 +64,13 @@ describe('minor features', () => {
     const choose = subject.createFileChooser.byExt(...ext)
 
     expect(
-      sample.map(base => [{base, ext}, choose(base)])
+      sample.map(base => [{ base, ext }, choose(base)])
     ).toMatchSnapshot()
   })
 
   it('DEFAULT_FILE_CHOOSER', () => {
     expect(
-      sample.map(base => [{base}, subject.DEFAULT_DELTA_FILES_CHOOSER(base)])
+      sample.map(base => [{ base }, subject.DEFAULT_DELTA_FILES_CHOOSER(base)])
     ).toMatchSnapshot()
   })
 })

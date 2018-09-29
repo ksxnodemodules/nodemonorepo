@@ -6,7 +6,7 @@ export type TestFunction<X> = (x: X, o?: DumpOptions) => () => void
 
 export function mkfn<X> (fn: DumpFunction<X>, options: DumpOptions = {}): TestFunction<X> {
   return (x: X, extraOptions: DumpOptions = {}) => () => {
-    expect('\n' + fn(x, {...options, ...extraOptions}) + '\n').toMatchSnapshot()
+    expect('\n' + fn(x, { ...options, ...extraOptions }) + '\n').toMatchSnapshot()
   }
 }
 
@@ -24,6 +24,6 @@ export const unsafe = mkfn(unsafeDump, defaultOptions)
 export const safe = mkfn(safeDump, defaultOptions)
 export const pureUnsafe = mkfn(unsafeDump)
 export const pureSafe = mkfn(safeDump)
-export const noRefs = mkfn(unsafeDump, {noRefs: true})
+export const noRefs = mkfn(unsafeDump, { noRefs: true })
 
 export default unsafe

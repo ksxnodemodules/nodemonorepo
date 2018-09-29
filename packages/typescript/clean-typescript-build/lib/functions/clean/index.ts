@@ -1,6 +1,6 @@
-import {partition} from 'ramda'
-import {unlink} from 'fs-extra'
-import {Options, Clean} from '../../types'
+import { partition } from 'ramda'
+import { unlink } from 'fs-extra'
+import { Options, Clean } from '../../types'
 import listAllTargets from '../list-all-targets'
 
 export = clean
@@ -21,10 +21,10 @@ export = clean
 async function clean (root: string, options?: Options): Promise<Clean.Result> {
   const del = (file: string) => unlink(file).then(onUnlinkSuccess, onUnlinkFailure)
   const r2f = (reports: Clean.Result.ReportList) => reports.map(x => x.file)
-  const onUnlinkSuccess = () => ({success: true as true})
-  const onUnlinkFailure = (error: any) => ({success: false as false, error})
+  const onUnlinkSuccess = () => ({ success: true as true })
+  const onUnlinkFailure = (error: any) => ({ success: false as false, error })
   const targets = await listAllTargets(root, options)
-  const reports = await Promise.all(targets.map(async file => ({file, deletion: await del(file)})))
+  const reports = await Promise.all(targets.map(async file => ({ file, deletion: await del(file) })))
   const [success, failure] = partition(x => x.deletion.success, reports)
-  return {targets, reports, success: r2f(success), failure: r2f(failure)}
+  return { targets, reports, success: r2f(success), failure: r2f(failure) }
 }

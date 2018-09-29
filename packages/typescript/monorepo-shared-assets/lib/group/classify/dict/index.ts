@@ -59,7 +59,7 @@ export namespace classify {
       }
     }
 
-    return {classified, unclassified}
+    return { classified, unclassified }
   }
 
   export namespace multiDistribute {

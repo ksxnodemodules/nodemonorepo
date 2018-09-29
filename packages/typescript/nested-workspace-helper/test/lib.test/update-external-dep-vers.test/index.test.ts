@@ -1,13 +1,13 @@
 import * as path from 'path'
 import * as fsTreeUtils from 'fs-tree-utils'
 import * as assets from 'monorepo-shared-assets'
-import {updateExternalDependencyVersions} from '../../../index'
+import { updateExternalDependencyVersions } from '../../../index'
 import createSetupTeardown from '../../.lib/setup-teardown'
 
-const {apply} = createSetupTeardown('outdated.yaml')
+const { apply } = createSetupTeardown('outdated.yaml')
 
 runTest()
-runTest({baseOnInstalled: true})
+runTest({ baseOnInstalled: true })
 
 function runTest (
   options?: updateExternalDependencyVersions.FullOptions
@@ -23,7 +23,7 @@ function runTest (
   }
 
   async function readFileTree () {
-    const {fileContents} = await fsTreeUtils.read.flat(
+    const { fileContents } = await fsTreeUtils.read.flat(
       'root',
       {
         deep: x => x.item !== 'node_modules'

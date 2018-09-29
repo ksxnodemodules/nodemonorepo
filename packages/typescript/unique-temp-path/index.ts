@@ -1,6 +1,6 @@
-import {join} from 'path'
-import {tmpdir} from 'os'
-import {readdirSync} from 'fs'
+import { join } from 'path'
+import { tmpdir } from 'os'
+import { readdirSync } from 'fs'
 
 const CONTAINER = tmpdir()
 

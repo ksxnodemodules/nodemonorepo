@@ -1,6 +1,6 @@
 import * as fsx from 'fs-extra'
 import * as fsTreeUtils from 'fs-tree-utils'
-import {Package} from './types'
+import { Package } from './types'
 
 export type ListPackageResult = Promise<Package.List>
 
@@ -12,9 +12,9 @@ export async function listAllPackages (dirname: string): ListPackageResult {
   type TraversalResultItem = fsTreeUtils.Traverse.Result.Item
 
   const createItem = async (x: TraversalResultItem): Promise<Package.ListItem> =>
-    ({path: x.container, manifestFile: x.path, manifestContent: await fsx.readJSON(x.path)})
+    ({ path: x.container, manifestFile: x.path, manifestContent: await fsx.readJSON(x.path) })
 
-  return await Promise.all(
+  return Promise.all(
     (
       await fsTreeUtils.traverse(dirname, {
         deep: x => !/node_modules/.test(x.item)

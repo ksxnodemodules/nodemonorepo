@@ -36,7 +36,7 @@ export type EnvFactory = {
   set: {
     factory: (x: PathFactory) => EnvFactory,
     name: (x: string) => EnvFactory,
-    delim: (x: PathDelimiter) =>EnvFactory,
+    delim: (x: PathDelimiter) => EnvFactory
   },
   path: {
     get: {

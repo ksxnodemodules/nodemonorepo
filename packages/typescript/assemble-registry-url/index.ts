@@ -1,3 +1,3 @@
-import {createFactory} from './lib'
+import { createFactory } from './lib'
 export default createFactory
 export * from './lib'

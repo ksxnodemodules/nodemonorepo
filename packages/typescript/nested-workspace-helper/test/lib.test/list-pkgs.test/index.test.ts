@@ -1,8 +1,8 @@
-import {listAllPackages} from '../../../index'
+import { listAllPackages } from '../../../index'
 import * as converters from '../../../lib/converters'
 import createSetupTeardown from '../../.lib/setup-teardown'
 
-const {apply} = createSetupTeardown('valid.yaml')
+const { apply } = createSetupTeardown('valid.yaml')
 const getPromise = () => listAllPackages('root')
 
 describe('listAllPackages function', () => {

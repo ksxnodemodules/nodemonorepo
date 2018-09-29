@@ -1,4 +1,4 @@
-import {iter, group} from '../../../../../index'
+import { iter, group } from '../../../../../index'
 const classify = group.classify.map
 const getList = () => iter.fns.range(16)
 const factors = Array.from(iter.fns.range(2).up.to(16))

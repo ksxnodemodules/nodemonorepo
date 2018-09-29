@@ -1,6 +1,6 @@
 import * as fsx from 'fs-extra'
-import {deserialize} from './utils/json'
-import getMismatchedDependencies, {Checker} from './mismatches'
+import { deserialize } from './utils/json'
+import getMismatchedDependencies, { Checker } from './mismatches'
 
 import {
   Package,
@@ -46,7 +46,7 @@ export namespace updateDependencyVersions {
   export function fromMismatchedDependencyMap (map: MismatchedDependency.Map) {
     const result: WritablePackageList = []
 
-    for (const {dependant, list} of Object.values(map)) {
+    for (const { dependant, list } of Object.values(map)) {
       result.push({
         ...dependant,
         manifestContent: updateDependencies(
@@ -71,17 +71,17 @@ export namespace updateDependencyVersions {
       peer: {}
     }
 
-    for (const {type, name, update} of list) {
+    for (const { type, name, update } of list) {
       refs[type][name] = update
     }
 
-    const result = {...manifest}
+    const result = { ...manifest }
 
     const getDict = (
       prev: Package.Dict | void,
       current: Package.Dict
     ): Package.Dict | void => {
-      if (prev) return {...prev, ...current}
+      if (prev) return { ...prev, ...current }
       if (Object.keys(current).length) return current
       return undefined
     }

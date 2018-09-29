@@ -1,6 +1,6 @@
 import * as path from 'path'
 import * as fsx from 'fs-extra'
-import {Traverse} from '../.types'
+import { Traverse } from '../.types'
 
 /**
  * @param dirname Top directory
@@ -33,11 +33,11 @@ export function traverse (
       dirChildren.map(async item => {
         const itemPath = path.join(dirname, item)
         const stats = await Promise.resolve(stat(itemPath))
-        return {item, itemPath, stats}
+        return { item, itemPath, stats }
       })
     )
 
-    for (const {item, itemPath, stats} of statList) {
+    for (const { item, itemPath, stats } of statList) {
       const itemResult = {
         item,
         stats,

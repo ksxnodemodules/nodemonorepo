@@ -1,4 +1,4 @@
-import {GITHUB_SHORTHAND} from '../../../index'
+import { GITHUB_SHORTHAND } from '../../../index'
 
 namespace samples {
   export const toSatify = [

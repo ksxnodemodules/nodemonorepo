@@ -1,2 +1,2 @@
 import asIs from './as-is'
-export {asIs}
+export { asIs }

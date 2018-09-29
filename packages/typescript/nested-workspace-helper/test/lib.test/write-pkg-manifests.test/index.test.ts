@@ -1,9 +1,9 @@
 import * as xjest from 'extra-jest'
 import * as fsTreeUtils from 'fs-tree-utils'
-import {writePackageManifests} from '../../../index'
+import { writePackageManifests } from '../../../index'
 import createSetupTeardown from '../../.lib/setup-teardown'
 
-const {apply} = createSetupTeardown('valid.yaml')
+const { apply } = createSetupTeardown('valid.yaml')
 const snap = (x: any) => xjest.snap.safe(x)()
 const snapFsTree = async () => snap(await fsTreeUtils.read.nested('root'))
 

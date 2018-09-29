@@ -1,8 +1,8 @@
 import * as path from 'path'
-import {env} from 'process'
+import { env } from 'process'
 import ramda from 'ramda'
 import * as subject from '../lib/index'
-import {PathFactory, PathArray, PathDelimiter, Env, EnvFactory} from '../lib/index'
+import { PathFactory, PathArray, PathDelimiter, Env, EnvFactory } from '../lib/index'
 
 function sharedUnit (factory: PathFactory, array: PathArray, delim: PathDelimiter) {
   expect(factory.get.array()).toEqual(array)
@@ -125,7 +125,7 @@ it('subject.base.delimiter() returns path.delimiter', () => {
 })
 
 describe('subject.pathString being called', () => {
-  const {PATH, ALT_NAMED_PATH} = env
+  const { PATH, ALT_NAMED_PATH } = env
   const newPath = ['hello', 'world', 'foo', 'bar']
   const newAltNamedPath = ['alternate', 'named', 'path']
 
@@ -137,7 +137,7 @@ describe('subject.pathString being called', () => {
   })
 
   afterEach(() => {
-    Object.assign(env, {PATH, ALT_NAMED_PATH})
+    Object.assign(env, { PATH, ALT_NAMED_PATH })
   })
 
   describe('without specifying paramters', () => {
@@ -168,7 +168,7 @@ describe('subject.pathString being called', () => {
 })
 
 describe('subject.pathEnv being called', () => {
-  const oldEnv: Env = {...env}
+  const oldEnv: Env = { ...env }
 
   const newEnv: Env = {
     REST_FOO: 'foo',
@@ -204,8 +204,8 @@ describe('subject.pathEnv being called', () => {
 
   describe('with specified `env`, without specifying `name` and `delim`', () => {
     testEnvFactory(
-      () => subject.pathEnv({...newEnv}),
-      {...newEnv},
+      () => subject.pathEnv({ ...newEnv }),
+      { ...newEnv },
       'PATH',
       path.delimiter
     )
@@ -213,15 +213,15 @@ describe('subject.pathEnv being called', () => {
 
   describe('with specified `env` and `name`, without specifying `delim`', () => {
     testEnvFactory(
-      () => subject.pathEnv({...newEnv}, 'PATH'),
-      {...newEnv},
+      () => subject.pathEnv({ ...newEnv }, 'PATH'),
+      { ...newEnv },
       'PATH',
       path.delimiter
     )
 
     testEnvFactory(
-      () => subject.pathEnv({...newEnv}, 'ALT_NAMED_PATH'),
-      {...newEnv},
+      () => subject.pathEnv({ ...newEnv }, 'ALT_NAMED_PATH'),
+      { ...newEnv },
       'ALT_NAMED_PATH',
       path.delimiter
     )
@@ -242,15 +242,15 @@ describe('subject.pathEnv being called', () => {
     }
 
     testEnvFactory(
-      () => subject.pathEnv({...env.colon}, name, ':'),
-      {...env.colon},
+      () => subject.pathEnv({ ...env.colon }, name, ':'),
+      { ...env.colon },
       name,
       ':'
     )
 
     testEnvFactory(
-      () => subject.pathEnv({...env.semicolon}, name, ';'),
-      {...env.semicolon},
+      () => subject.pathEnv({ ...env.semicolon }, name, ';'),
+      { ...env.semicolon },
       name,
       ';'
     )

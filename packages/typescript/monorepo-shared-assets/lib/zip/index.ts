@@ -1,2 +1,2 @@
 import object from './object'
-export {object}
+export { object }

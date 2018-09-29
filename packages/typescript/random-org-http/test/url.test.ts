@@ -1,10 +1,10 @@
-import {url, types} from '../index'
+import { url, types } from '../index'
 import Param = types.raw.Param
 import Radix = types.Base
 import Format = types.Format
 import Activation = types.Activation
 
-const {integers, sequences, strings} = url.create
+const { integers, sequences, strings } = url.create
 
 const mksmpl =
   <Param, Result>(

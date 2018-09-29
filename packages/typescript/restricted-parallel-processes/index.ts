@@ -142,7 +142,7 @@ export namespace spawn {
     readonly params: ObjectParams
 
     constructor (process: ChildProcess, params: ObjectParams) {
-      const {command, argv = []} = params
+      const { command, argv = [] } = params
       const execstr = [command, ...argv].join(' ')
       super(`Process of command '${execstr}' disconnected.`)
       this.process = process
@@ -169,7 +169,7 @@ export namespace spawn {
 
         if (Array.isArray(item)) {
           const [command, ...argv] = item as ArgvParams
-          return {command, argv}
+          return { command, argv }
         }
 
         return item as ObjectParams
@@ -188,7 +188,7 @@ export namespace spawn {
 
     return () => new Promise((resolve, reject) => {
       const process = childProcess.spawn(command, Array.from(argv), options)
-      oncreate(new ObjectParams.CreationEvent(process, params, {resolve, reject}))
+      oncreate(new ObjectParams.CreationEvent(process, params, { resolve, reject }))
 
       let stdout = Array<ResultItem.DataChunk>()
       let stderr = Array<ResultItem.DataChunk>()

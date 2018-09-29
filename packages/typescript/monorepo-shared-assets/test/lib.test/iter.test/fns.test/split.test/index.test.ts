@@ -1,4 +1,4 @@
-import {iter} from '../../../../../index'
+import { iter } from '../../../../../index'
 import range = iter.fns.range
 import split = iter.fns.split
 

@@ -1,6 +1,6 @@
 import chalk from 'chalk'
 import * as assets from 'monorepo-shared-assets'
-import {InvalidPackage} from '../../types'
+import { InvalidPackage } from '../../types'
 import * as pkgUtils from '../../utils/pkg'
 
 export function group (list: InvalidPackage.List) {
@@ -76,15 +76,14 @@ export namespace group {
   export namespace asString {
     export function fromClassifiedMap (map: ClassifiedMap): string {
       return Array.from(map).map(([cls, pkgs]) => {
-        const {name, message} = cls.description
+        const { name, message } = cls.description
         const heading = indent.lv[0] + message + chalk.bold(` (${name})`)
 
         const content = Array.from(pkgs).map(item => {
           const heading = indent.lv[1] + pkgUtils.name(item) + chalk.dim(` (${item.path})`)
 
           const content = item.reason.map(
-            reason => asString
-              .getReasonCauses(reason)
+            reason => getReasonCauses(reason)
               .filter(x => x.length)
               .map(x => indent.lv[2] + x)
               .join('\n')

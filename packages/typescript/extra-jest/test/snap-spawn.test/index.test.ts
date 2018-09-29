@@ -1,23 +1,23 @@
-import {spawnSync} from 'child_process'
+import { spawnSync } from 'child_process'
 import snapSpawn from '../../lib/snap-spawn'
 
 describe('passing functions', () => {
   it('executes echo', () => snapSpawn(
     (argv, options) => {
       expect({
-        arguments: {argv, options}
+        arguments: { argv, options }
       }).toMatchSnapshot()
 
       return spawnSync('echo', argv, options)
     },
     ['Hello, World!!'],
-    {encoding: 'utf8'}
+    { encoding: 'utf8' }
   )())
 
   it('executes node', () => snapSpawn(
     (argv, options) => {
       expect({
-        arguments: {argv, options}
+        arguments: { argv, options }
       }).toMatchSnapshot()
 
       return spawnSync('node', argv, options)
@@ -37,6 +37,6 @@ describe('passing command', () => {
 
   it(
     'executes node',
-    snapSpawn.withCommand('node', [], {input: 'console.log({abc: 123, def: 456})'})
+    snapSpawn.withCommand('node', [], { input: 'console.log({abc: 123, def: 456})' })
   )
 })

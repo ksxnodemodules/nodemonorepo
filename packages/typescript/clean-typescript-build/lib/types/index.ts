@@ -1,4 +1,4 @@
-import {Traverse} from 'fs-tree-utils'
+import { Traverse } from 'fs-tree-utils'
 
 export type DeepFunc = Traverse.Options.DeepFunc
 export type SourceDetector = (x: Param) => boolean

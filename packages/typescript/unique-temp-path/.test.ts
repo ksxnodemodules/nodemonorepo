@@ -1,6 +1,6 @@
 import * as path from 'path'
 import * as os from 'os'
-import {spawnSync} from 'child_process'
+import { spawnSync } from 'child_process'
 import * as envMod from 'path-env'
 import * as subject from './index'
 
@@ -26,7 +26,7 @@ const spawnTempPath = (argv: string[]) =>
   )
 
 const checkSpawnTempPath = (argv: string[], rgx: RegExp) => {
-  const {status, error, stdout, stderr} = spawnTempPath(argv)
+  const { status, error, stdout, stderr } = spawnTempPath(argv)
   expect(status).toBe(0)
   expect(error).toBeFalsy()
   expect(stderr).toBeFalsy()

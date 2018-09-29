@@ -1,5 +1,5 @@
-import {func} from '../../../../../index'
-const {unwrap} = func
+import { func } from '../../../../../index'
+const { unwrap } = func
 
 describe('without arguments', () => {
   const lv0 = 'Returning Value'

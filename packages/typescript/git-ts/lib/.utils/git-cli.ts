@@ -18,7 +18,7 @@ export function execute (
     }
   )
 
-  const {error, status, signal, stderr, stdout} = res
+  const { error, status, signal, stderr, stdout } = res
 
   if (error) throw error
 

@@ -36,10 +36,10 @@ it('matches snapshot', () => {
   const fifth = getData()
 
   expect([
-    {data: first},
-    {at2, data: second},
-    {at6, data: third},
-    {collection20, data: forth},
-    {collection64, data: fifth}
+    { data: first },
+    { at2, data: second },
+    { at6, data: third },
+    { collection20, data: forth },
+    { collection64, data: fifth }
   ]).toMatchSnapshot()
 })

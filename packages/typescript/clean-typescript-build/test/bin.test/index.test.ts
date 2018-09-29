@@ -1,10 +1,10 @@
 import * as fsTreeUtils from 'fs-tree-utils'
 import * as xjest from 'extra-jest'
-import {FlatReadResultValue} from 'fs-tree-utils/lib/read'
+import { FlatReadResultValue } from 'fs-tree-utils/lib/read'
 import createVirtualEnv from '../.lib/virtual-env'
 import testTargetCorrectness from '../.lib/target-correctness'
 
-const {apply} = createVirtualEnv()
+const { apply } = createVirtualEnv()
 const bin = require.resolve('../../bin/clean-typescript-build')
 
 const snapSpawn = (...argv: string[]) =>
@@ -52,14 +52,14 @@ describe('works when directory exists', () => {
     await fn()
     const after = await fsTreeUtils.read.flat('root')
     const removed = before.files.filter(filename => !after.files.includes(filename))
-    test({before, after, removed})
+    test({ before, after, removed })
   })
 
-  const dryTest: Tester = async ({before, after}) => {
+  const dryTest: Tester = async ({ before, after }) => {
     expect(after).toEqual(before)
   }
 
-  const diffTest: Tester = async ({before, removed}) => {
+  const diffTest: Tester = async ({ before, removed }) => {
     testTargetCorrectness(before, removed)
   }
 

@@ -1,4 +1,4 @@
-import {Url} from 'url'
+import { Url } from 'url'
 
 export type Struct =
   Struct.Semver |

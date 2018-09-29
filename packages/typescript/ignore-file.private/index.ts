@@ -3,7 +3,7 @@ import minimatch from 'minimatch'
 import * as yaml from 'js-yaml'
 import * as fsx from 'fs-extra'
 import * as fsTreeUtils from 'fs-tree-utils'
-import {Traverse} from 'fs-tree-utils'
+import { Traverse } from 'fs-tree-utils'
 import DeepFunc = Traverse.Options.DeepFunc
 
 export type IgnoreArray = ReadonlyArray<string>
@@ -34,7 +34,7 @@ export interface DeltaPair {
 
 export namespace createFileChooser {
   export const byExt = (...extList: string[]): DeltaFileChooser => ignore => {
-    const {base, dir, root} = path.parse(ignore)
+    const { base, dir, root } = path.parse(ignore)
     const segment = dir.split(/[/\\]/)
     const list = segment.map((_, i) => segment.slice(0, i + 1)).map(x => path.join(...x))
 
@@ -66,11 +66,11 @@ export function getString (array: IgnoreArray): string {
 export async function getDeltaContent (filename: string): Promise<LoadedDelta> {
   if (fsx.existsSync(filename)) {
     const text = await fsx.readFile(filename, 'utf8')
-    const content: Delta = {...yaml.safeLoad(text)}
-    return {filename, content}
+    const content: Delta = { ...yaml.safeLoad(text) }
+    return { filename, content }
   }
 
-  return {filename, content: {}}
+  return { filename, content: {} }
 }
 
 export function add (
@@ -110,9 +110,9 @@ export async function getIgnoreFiles (
   deep = DEFAULT_TRAVERSE_DEEP
 ): Promise<IgnoreArray> {
   return (
-    await fsTreeUtils.traverse(dirname, {deep})
+    await fsTreeUtils.traverse(dirname, { deep })
   )
-    .filter(x => x.stats.isDirectory() && minimatch(x.path, containerPattern, {dot: true}))
+    .filter(x => x.stats.isDirectory() && minimatch(x.path, containerPattern, { dot: true }))
     .map(x => path.join(x.path, basename))
 }
 
@@ -148,7 +148,7 @@ export async function getDeltaPairs (
         deep
       )
     ).map(
-      async ({delta, ignore}) => ({
+      async ({ delta, ignore }) => ({
         ignore,
         delta: await Promise.all(
           delta.map(getDeltaContent)
@@ -179,8 +179,8 @@ export async function writeIgnoreFiles (
 
   await Promise.all(
     list.map(
-      async x => x.ignore === basefile || ( // Do not overwrite basefile
-        await fsx.writeFile(
+      async x => x.ignore === basefile || (// Do not overwrite basefile
+        fsx.writeFile(
           x.ignore,
           getString(add.multipleLoadedDeltas(base, x.delta))
         )

@@ -1,13 +1,13 @@
-import {wrapException} from '../../../../index'
+import { wrapException } from '../../../../index'
 import wrap = wrapException.wrapPromiseRejection
 
 namespace resolved {
   export function synchronous (value: number) {
-    return new Result({value})
+    return new Result({ value })
   }
 
   export function asynchronous (value: number) {
-    return Promise.resolve(new Result({value}))
+    return Promise.resolve(new Result({ value }))
   }
 }
 
@@ -23,11 +23,11 @@ namespace rejected {
 
 namespace handleRejection {
   export function synchronous (reason: any, param: number) {
-    return new Result({reason, param})
+    return new Result({ reason, param })
   }
 
   export function asynchronous (reason: any, param: number) {
-    return Promise.resolve(new Result({reason, param}))
+    return Promise.resolve(new Result({ reason, param }))
   }
 }
 

@@ -1,4 +1,4 @@
-import compose, {Fn} from './index'
+import compose, { Fn } from './index'
 
 namespace fn {
   export const charCodeArray = (str: string) =>
@@ -51,7 +51,7 @@ it('single composition should act like its sole provided function', () => {
 
 it('matches snapshot', () => {
   const result = fn.combinations.map(
-    ([name, func]) => ({name, result: func(fn.param)})
+    ([name, func]) => ({ name, result: func(fn.param) })
   )
 
   expect(result).toMatchSnapshot()

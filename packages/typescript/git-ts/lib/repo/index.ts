@@ -40,14 +40,14 @@ export namespace Repository {
     /**
      * Shortcut to execute git subcommand
      */
-    readonly command: Repository.BindedGit
+    readonly command: BindedGit
 
     /**
      * @param location Directory of repository
      */
     constructor (location: string) {
       super(location)
-      const {execute} = this
+      const { execute } = this
       this.command = (args, options) => execute([this.subCmdName, ...args], options)
     }
   }

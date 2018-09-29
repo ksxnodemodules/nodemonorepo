@@ -13,7 +13,7 @@ import {
   writePackageManifests
 } from '../../../../../index'
 
-import {serialize} from '../../../../../lib/utils/json'
+import { serialize } from '../../../../../lib/utils/json'
 
 import {
   getActionFunction,

@@ -5,7 +5,7 @@ const argv2desc = (...argv: string[]): string => `$ ${argv.join(' ')}`
 
 const createTester = (argv: string[], tree = 'invalids.yaml') => () => {
   const finalArgv = ['validate', ...argv]
-  const {apply} = createSetupTeardown(tree)
+  const { apply } = createSetupTeardown(tree)
   const desc = argv2desc(...finalArgv)
   const func = apply(async () => snapSpawn(finalArgv)())
   it(desc, func)

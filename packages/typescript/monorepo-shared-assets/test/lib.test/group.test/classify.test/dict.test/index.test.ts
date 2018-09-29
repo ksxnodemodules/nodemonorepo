@@ -1,4 +1,4 @@
-import {iter, group} from '../../../../../index'
+import { iter, group } from '../../../../../index'
 const classify = group.classify.dict
 const getList = () => iter.fns.range(16)
 const dividers = Array.from(iter.fns.range(2).up.to(16))

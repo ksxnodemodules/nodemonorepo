@@ -1,5 +1,5 @@
-import {iter} from '../../../../../index'
-const {range, map} = iter.fns
+import { iter } from '../../../../../index'
+const { range, map } = iter.fns
 
 it('matches snapshot', () => {
   class ValueCarrier {

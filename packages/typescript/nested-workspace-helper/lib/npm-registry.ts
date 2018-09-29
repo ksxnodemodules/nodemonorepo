@@ -1,4 +1,4 @@
-import {URL} from 'url'
+import { URL } from 'url'
 import semver from 'semver'
 import fetch from 'node-fetch'
 
@@ -51,7 +51,7 @@ export function createFactory (registry: string = NPM_REGISTRY) {
       )
     }
 
-    return {...await response.json()}
+    return { ...await response.json() }
   }
 
   /**
@@ -84,7 +84,7 @@ export function createFactory (registry: string = NPM_REGISTRY) {
     const response = await getRegistry<PackageRegistry>(pkg)
     if (response === 'NotFound') throw new NetworkError(`Cannot find '${pkg}' in registry`)
 
-    const {versions} = response
+    const { versions } = response
 
     const latest = Object
       .keys(versions)

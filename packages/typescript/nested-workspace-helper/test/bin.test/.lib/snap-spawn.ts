@@ -1,9 +1,9 @@
-import {SpawnSyncOptions} from 'child_process'
+import { SpawnSyncOptions } from 'child_process'
 import ramda from 'ramda'
 import * as xjest from 'extra-jest'
 import spawn from './spawn'
 
-export {spawn}
+export { spawn }
 
 export const snap = (x: any) => xjest.snap.unsafe(x)()
 

@@ -38,12 +38,12 @@ export namespace partition {
       skip
     }
 
-    const {getAllVersions} = createRegistryFactory(registry)
+    const { getAllVersions } = createRegistryFactory(registry)
 
     const labeled = await Promise.all(
       list.map(async pkg => {
-        const {private: prv, name = '', version} = pkg.manifestContent
-        const res = (cls: Classification) => ({pkg, cls})
+        const { private: prv, name = '', version } = pkg.manifestContent
+        const res = (cls: Classification) => ({ pkg, cls })
 
         if (prv || !name) return res(Classification.skip)
         if (!version) return res(Classification.unpublishable)

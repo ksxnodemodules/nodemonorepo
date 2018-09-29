@@ -1,9 +1,9 @@
 import createSetupTeardown from '../../.lib/setup-teardown'
-import tracker, {Executor} from '../.lib/spawn-fs'
+import tracker, { Executor } from '../.lib/spawn-fs'
 
 type TestFunction = (...argv: string[]) => void
 
-const {apply} = createSetupTeardown('manifest-sync.yaml')
+const { apply } = createSetupTeardown('manifest-sync.yaml')
 const argv2desc = (...argv: string[]): string => `$ ${argv.join(' ')}`
 
 const createTester = (

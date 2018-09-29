@@ -9,18 +9,18 @@ export async function create (
   tree: types.Tree.Write,
   container: string
 ): Promise<void> {
-  const {FileSystemRepresentation} = types
+  const { FileSystemRepresentation } = types
 
   if (typeof tree === 'string' || tree instanceof Buffer) {
     return create(new FileSystemRepresentation.File(tree), container)
   }
 
   if (typeof tree === 'function') {
-    return tree(container, {create})
+    return tree(container, { create })
   }
 
   if (tree instanceof FileSystemRepresentation) {
-    return create(x => tree.write(x, {create}), container)
+    return create(x => tree.write(x, { create }), container)
   }
 
   return create(new FileSystemRepresentation.Directory(tree), container)

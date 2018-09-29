@@ -34,10 +34,10 @@ export namespace getDependencyMap {
 
       for (const [name, requirement] of Object.entries(dict)) {
         for (const info of pkgs) {
-          const {manifestContent} = info
+          const { manifestContent } = info
           if (manifestContent.name !== name) continue
-          const {version = '0.0.0'} = manifestContent
-          result.push({name, version, type, requirement, info})
+          const { version = '0.0.0' } = manifestContent
+          result.push({ name, version, type, requirement, info })
           break
         }
       }
@@ -58,7 +58,7 @@ export namespace getDependencyMap {
         ...dict2list(peerDependencies, 'peer')
       ]
 
-      result[dependant.path] = {list, dependant}
+      result[dependant.path] = { list, dependant }
     }
 
     return result
