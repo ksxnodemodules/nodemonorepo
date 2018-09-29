@@ -54,11 +54,11 @@ export namespace split {
 
   export function line<X> (
     iterable: Iterable<X>,
-    line: X,
+    separator: X,
     compare: line.Comparator<X> = line.DEFAULT_COMPARATOR
   ): Iter<ReadonlyArray<X>> {
     return map(
-      func(iterable, x => compare(line, x)),
+      func(iterable, x => compare(separator, x)),
       x => x.list
     )
   }
