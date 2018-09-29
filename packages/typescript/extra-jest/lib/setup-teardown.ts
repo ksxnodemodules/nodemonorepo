@@ -2,7 +2,7 @@ import * as process from 'process'
 import * as fsx from 'fs-extra'
 import * as fsTreeUtils from 'fs-tree-utils'
 import tempPath from 'unique-temp-path'
-import { Tree } from 'fs-tree-utils'
+import Tree = fsTreeUtils.Tree
 
 export type PromiseFunc<X, Y> = (x: X) => Promise<Y>
 export type SyncFunc<X, Y> = (x: X) => Y

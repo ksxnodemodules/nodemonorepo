@@ -6,6 +6,7 @@ import cmdDependencyManagement from './cmd/dependency-management'
 import cmdValidate from './cmd/validate'
 import cmdPublish from './cmd/publish'
 
+// tslint:disable-next-line:no-unused-expression
 yargs
   .usage(dataUsage)
   .command(cmdManifest)

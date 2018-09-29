@@ -1,3 +1,5 @@
+/* tslint:disable:no-floating-promises */
+
 import * as fsTreeUtils from 'fs-tree-utils'
 import * as xjest from 'extra-jest'
 import { FlatReadResultValue } from 'fs-tree-utils/lib/read'

@@ -3,7 +3,7 @@ import minimatch from 'minimatch'
 import * as yaml from 'js-yaml'
 import * as fsx from 'fs-extra'
 import * as fsTreeUtils from 'fs-tree-utils'
-import { Traverse } from 'fs-tree-utils'
+import Traverse = fsTreeUtils.Traverse
 import DeepFunc = Traverse.Options.DeepFunc
 
 export type IgnoreArray = ReadonlyArray<string>
@@ -52,8 +52,8 @@ export const DEFAULT_CONTAINER_PATTERN: IgnoreContainerPattern = '**'
 export const DEFAULT_DELTA_FILES_CHOOSER: DeltaFileChooser = createFileChooser.byExt('yaml', 'yml')
 export const DEFAULT_TRAVERSE_DEEP: DeepFunc = x => x.item !== 'node_modules'
 
-export function getArray (string: string): IgnoreArray {
-  return string
+export function getArray (str: string): IgnoreArray {
+  return str
     .split(/\n|\r/)
     .filter(Boolean)
     .filter(x => !/^#/.test(x))

@@ -19,7 +19,8 @@ export function createFactory (
 ): Factory {
   return (dirname = '.', act = defaultAct) => async () => {
     const before = await fsTreeUtils.read.flat(dirname)
-    act(before)
+    // tslint:disable-next-line:no-floating-promises
+    act(before) // TODO: Does this need await?
     const after = await fsTreeUtils.read.flat(dirname)
     callback(before, after, dirname, act)
   }

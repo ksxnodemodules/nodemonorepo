@@ -4,8 +4,8 @@ if (!global.Symbol) {
 
     constructor (description?: string) {
       const random = Array(256).map(() => Math.random().toString(36).slice(2)).join('')
-      const string = JSON.stringify({ description, random })
-      this.toString = () => string
+      const str = JSON.stringify({ description, random })
+      this.toString = () => str
     }
   }
 

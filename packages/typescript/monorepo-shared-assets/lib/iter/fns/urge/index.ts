@@ -8,7 +8,7 @@ export function * urge<X> (
   handleRemain: urge.RemainingHandler<X> = urge.DEFAULT_REMAINING_HANDLER
 ): Iter<ReadonlyArray<X>> {
   assert(partLength > 0, `${partLength} > 0`)
-  assert.equal(partLength % 1, 0, `${partLength} is an integer`)
+  assert.strictEqual(partLength % 1, 0, `${partLength} is an integer`)
   let count = partLength
   let tray = Array<X>()
 

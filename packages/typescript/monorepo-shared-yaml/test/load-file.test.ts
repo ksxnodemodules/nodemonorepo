@@ -8,5 +8,6 @@ it('matches snapshot', apply(async () => {
 }))
 
 it('throws error matching snapshot', apply(async () => {
+  // tslint:disable-next-line:no-floating-promises
   expect(subject.loadFile('root/not-yaml')).rejects.toMatchSnapshot()
 }))

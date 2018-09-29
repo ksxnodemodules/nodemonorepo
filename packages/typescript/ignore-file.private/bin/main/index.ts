@@ -1,12 +1,10 @@
 import * as process from 'process'
 import * as yargs from 'yargs'
 import { writeIgnoreFiles, createFileChooser } from '../../index'
+import Argv = yargs.Argv
+import Arguments = yargs.Arguments
 
-import {
-  Argv,
-  Arguments
-} from 'yargs'
-
+// tslint:disable-next-line:no-unused-expression
 yargs
   .usage('$0 <cmd> [args]')
   .command({
