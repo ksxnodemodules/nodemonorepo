@@ -35,4 +35,4 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   fs-extra: ^7.0.0
-  fs-tree-utils: ^0.1.5
+  fs-tree-utils: ^0.1.6

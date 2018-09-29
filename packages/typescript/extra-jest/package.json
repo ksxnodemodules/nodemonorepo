@@ -1,6 +1,6 @@
 {
   "name": "extra-jest",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "description": "Some extra functions to work with jest testing framework",
   "main": "index.js",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
@@ -17,7 +17,7 @@
     "fs-extra": "^7.0.0",
     "js-yaml": "^3.12.0",
     "tslib": "^1.9.3",
-    "fs-tree-utils": "^0.1.5",
+    "fs-tree-utils": "^0.1.6",
     "unique-temp-path": "^0.1.1",
     "@types/ramda": "^0.25.36",
     "@types/fs-extra": "^5.0.4",

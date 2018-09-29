@@ -7,6 +7,7 @@ dependencies:
   extra-jest: 'link:../extra-jest'
   fs-extra: 7.0.0
   fs-tree-utils: 'link:../fs-tree-utils'
+  js-yaml: 3.12.0
   minimatch: 3.0.4
   preloaded-node: 'link:../../javascript/preloaded-node'
   preloaded-node.private: 'link:../../javascript/preloaded-node.private'
@@ -55,6 +56,12 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-VT0ZI6kZRdTh8YyJw3SMbYm/u+NqfsAxEpWO0Pf9sq8/e94WxxOpPKx9FR1FlyCtOVDNOQ+8ntlqFxiRc+r5qA==
+  /argparse/1.0.10:
+    dependencies:
+      sprintf-js: 1.0.3
+    dev: false
+    resolution:
+      integrity: sha512-o5Roy6tNG4SL/FOkCAN6RzjiakZS25RLYFrcMttJqbdd8BWrnA+fGz57iN5Pb06pvBGvl5gQ0B48dJlslXvoTg==
   /balanced-match/1.0.0:
     dev: false
     resolution:
@@ -132,6 +139,13 @@ packages:
       node: '>=0.8.0'
     resolution:
       integrity: sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
+  /esprima/4.0.1:
+    dev: false
+    engines:
+      node: '>=4'
+    hasBin: true
+    resolution:
+      integrity: sha512-eGuFFw7Upda+g4p+QHvnW0RyTX/SVeJBDM/gCtMARO0cLuT2HcEKnTPvhjV6aGeqrCB/sbNop0Kszm0jsaWU4A==
   /execa/0.7.0:
     dependencies:
       cross-spawn: 5.1.0
@@ -216,6 +230,14 @@ packages:
     dev: false
     resolution:
       integrity: sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=
+  /js-yaml/3.12.0:
+    dependencies:
+      argparse: 1.0.10
+      esprima: 4.0.1
+    dev: false
+    hasBin: true
+    resolution:
+      integrity: sha512-PIt2cnwmPfL4hKNwqeiuz4bKfnzHTBv6HyVgjahA6mPLwPDzjDWrplJBMjHUFxku/N3FlmrbyPclad+I+4mJ3A==
   /jsonfile/4.0.0:
     dev: false
     optionalDependencies:
@@ -366,6 +388,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-tf3AjxKH6hF4Yo5BXiUTK3NkbG0=
+  /sprintf-js/1.0.3:
+    dev: false
+    resolution:
+      integrity: sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=
   /string-width/1.0.2:
     dependencies:
       code-point-at: 1.1.0
@@ -490,7 +516,8 @@ specifiers:
   '@types/yargs': ^12.0.0
   chalk: ^2.4.1
   fs-extra: ^7.0.0
-  fs-tree-utils: ^0.1.5
+  fs-tree-utils: ^0.1.6
+  js-yaml: ^3.12.0
   minimatch: ^3.0.4
   preloaded-node.private: ^0.0.0
   tslib: ^1.9.3

@@ -4,6 +4,7 @@ dependencies:
   '@types/ramda': 0.25.36
   fs-extra: 7.0.0
   fs-tree-utils: 'link:../fs-tree-utils'
+  js-yaml: 3.12.0
   ramda: 0.25.0
   tslib: 1.9.3
   unique-temp-path: 'link:../unique-temp-path'
@@ -26,6 +27,19 @@ packages:
     dev: false
     resolution:
       integrity: sha512-LAeBECPU9IG+K0pRdGl2L9lxanb0CKgue0IGpdn9nmpmKefDrCglrYwkxFYoQxCtY0w/mTxpJaQ4VAChcSIN+A==
+  /argparse/1.0.10:
+    dependencies:
+      sprintf-js: 1.0.3
+    dev: false
+    resolution:
+      integrity: sha512-o5Roy6tNG4SL/FOkCAN6RzjiakZS25RLYFrcMttJqbdd8BWrnA+fGz57iN5Pb06pvBGvl5gQ0B48dJlslXvoTg==
+  /esprima/4.0.1:
+    dev: false
+    engines:
+      node: '>=4'
+    hasBin: true
+    resolution:
+      integrity: sha512-eGuFFw7Upda+g4p+QHvnW0RyTX/SVeJBDM/gCtMARO0cLuT2HcEKnTPvhjV6aGeqrCB/sbNop0Kszm0jsaWU4A==
   /fs-extra/7.0.0:
     dependencies:
       graceful-fs: 4.1.11
@@ -42,6 +56,14 @@ packages:
       node: '>=0.4.0'
     resolution:
       integrity: sha1-Dovf5NHduIVNZOBOp8AOKgJuVlg=
+  /js-yaml/3.12.0:
+    dependencies:
+      argparse: 1.0.10
+      esprima: 4.0.1
+    dev: false
+    hasBin: true
+    resolution:
+      integrity: sha512-PIt2cnwmPfL4hKNwqeiuz4bKfnzHTBv6HyVgjahA6mPLwPDzjDWrplJBMjHUFxku/N3FlmrbyPclad+I+4mJ3A==
   /jsonfile/4.0.0:
     dev: false
     optionalDependencies:
@@ -52,6 +74,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-GXpfrYVPwx3K7RQ6aYT8KPS8XViSXUVJT1ONhoKPE9VAleW42YE+U+8VEyGWt41EnEQW7gwecYJriTI0pKoecQ==
+  /sprintf-js/1.0.3:
+    dev: false
+    resolution:
+      integrity: sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=
   /tslib/1.9.3:
     dev: false
     resolution:
@@ -70,7 +96,8 @@ specifiers:
   '@types/node': ^10.9.3
   '@types/ramda': ^0.25.36
   fs-extra: ^7.0.0
-  fs-tree-utils: ^0.1.5
+  fs-tree-utils: ^0.1.6
+  js-yaml: ^3.12.0
   ramda: ^0.25.0
   tslib: ^1.9.3
   unique-temp-path: ^0.1.1

@@ -425,7 +425,7 @@ specifiers:
   '@types/yargs': ^12.0.0
   extra-jest: '*'
   fs-extra: ^7.0.0
-  fs-tree-utils: ^0.1.5
+  fs-tree-utils: ^0.1.6
   preloaded-node.private: '*'
   ramda: ^0.25.0
   tslib: ^1.9.3
