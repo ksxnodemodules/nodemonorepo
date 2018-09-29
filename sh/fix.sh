@@ -1,1 +1,1 @@
-standard --fix && tslint --fix
+standard --fix && tslint --project . --fix
