@@ -20,6 +20,7 @@ export namespace get {
   export namespace Default {
     export type Win32 = 'cmd'
     export type POSIX = 'sh'
+    // tslint:disable-next-line:no-unnecessary-qualifier
     export type Options = get.Options<Win32, POSIX>
     export type Result = get.Result<Win32, POSIX>
     export const win32: Win32 = 'cmd'
