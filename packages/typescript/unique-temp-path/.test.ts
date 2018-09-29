@@ -1,3 +1,5 @@
+/* tslint:disable:no-implicit-dependencies */
+
 import * as path from 'path'
 import * as os from 'os'
 import { spawnSync } from 'child_process'
