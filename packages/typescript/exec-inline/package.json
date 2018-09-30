@@ -1,0 +1,32 @@
+{
+  "name": "exec-inline",
+  "version": "0.0.0",
+  "description": "Make it more convenient to execute commands with inherited stdio",
+  "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksxnodemodules/nodemonorepo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
+  },
+  "keywords": [
+    "spawn",
+    "inline",
+    "child-process",
+    "inherit",
+    "exec",
+    "stdio",
+    "shell",
+    "script"
+  ],
+  "dependencies": {
+    "tslib": "^1.9.3",
+    "@types/node": "^10.9.3"
+  },
+  "engines": {
+    "node": ">= 8.9.0"
+  }
+}

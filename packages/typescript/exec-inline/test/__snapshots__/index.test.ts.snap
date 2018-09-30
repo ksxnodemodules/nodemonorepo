@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+Object {
+  "processExitArgs": Array [
+    123,
+  ],
+  "representative": SpawnSyncRepresentative {
+    "represented": Object {
+      "status": 123,
+    },
+  },
+  "spawnSyncArgs": Array [
+    "arg0",
+    Array [
+      "arg1",
+      "arg2",
+      "arg3",
+    ],
+    Object {
+      "stdio": "inherit",
+    },
+  ],
+}
+`;
