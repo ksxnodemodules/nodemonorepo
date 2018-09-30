@@ -3,7 +3,7 @@ dependencies:
   preloaded-node: 'link:packages/javascript/preloaded-node'
 devDependencies:
   '@types/glob': 7.1.0
-  '@types/jest': 23.3.1
+  '@types/jest': 23.3.2
   '@types/js-yaml': 3.11.2
   '@types/node': 10.9.3
   babel-jest: 23.4.2
@@ -142,10 +142,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-k1M3Y8Ge0bOkG7U5IZObIhkrzZHMpuFpd5RJK9Gh8ekq0EhiezLLqv2ow14ylTKqXTHSqM6AMySbWEHRo+7qdQ==
-  /@types/jest/23.3.1:
+  /@types/jest/23.3.2:
     dev: true
     resolution:
-      integrity: sha512-/UMY+2GkOZ27Vrc51pqC5J8SPd39FKt7kkoGAtWJ8s4msj0b15KehDWIiJpWY3/7tLxBQLLzJhIBhnEsXdzpgw==
+      integrity: sha512-D1xlXHZpDonVX+VJ28XtcD5xlu8ex6Fc4cQNnrm2wJvlQnbec9RedhCrhQr6kRAE9XWHSec+JPuTmqJ9jC0qsA==
   /@types/js-yaml/3.11.2:
     dev: true
     resolution:
@@ -5054,7 +5054,7 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   '@types/glob': ^7.0.0
-  '@types/jest': ^23.3.1
+  '@types/jest': ^23.3.2
   '@types/js-yaml': ^3.11.2
   '@types/node': ^10.9.3
   babel-jest: ^23.4.2
