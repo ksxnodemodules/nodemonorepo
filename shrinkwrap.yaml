@@ -19,6 +19,7 @@ devDependencies:
   nested-workspace-helper.private: 'link:packages/javascript/nested-workspace-helper.private'
   preloaded-node.private: 'link:packages/javascript/preloaded-node.private'
   standard: 12.0.1
+  toolcheck: 0.0.3
   ts-jest: 23.1.4
   tslib: 1.9.3
   tslint: 5.11.0
@@ -123,6 +124,12 @@ packages:
     dev: true
     resolution:
       integrity: sha1-2AK3tUO1g2x3iqaReXq/APPZfqk=
+  /@types/cosmiconfig/5.0.3:
+    dependencies:
+      '@types/node': 10.11.3
+    dev: true
+    resolution:
+      integrity: sha512-HgTGG7X5y9pLl3pixeo2XtDEFD8rq2EuH+S4mK6teCnAwWMucQl6v1D43hI4Uw1VJh6nu59lxLkqXHRl4uwThA==
   /@types/events/1.2.0:
     dev: true
     resolution:
@@ -151,10 +158,18 @@ packages:
     dev: true
     resolution:
       integrity: sha512-nzsx28VwfaIykfzMAG9TB3jxF5Nn+1/WMKnmVZc8TsB+LMIVvwUscVn7PAq+LFaY5ng5u4jp5mRROSswo76PPA==
+  /@types/node/10.11.3:
+    dev: true
+    resolution:
+      integrity: sha512-3AvcEJAh9EMatxs+OxAlvAEs7OTy6AG94mcH1iqyVDwVVndekLxzwkWQ/Z4SDbY6GO2oyUXyWW8tQ4rENSSQVQ==
   /@types/node/10.9.3:
     dev: true
     resolution:
       integrity: sha512-DOzWZKUnmFYG0KUOs+9HEBju2QhBU6oM2zeluunQNt0vnJvnkHvtDNlQPZDkTrkC5pZrNx1TPqeL137zciXZMQ==
+  /@types/which/1.3.1:
+    dev: true
+    resolution:
+      integrity: sha512-ZrJDWpvg75LTGX4XwuneY9s6bF3OeZcGTpoGh3zDV9ytzcHMFsRrMIaLBRJZQMBoGyKs6unBQfVdrLZiYfb1zQ==
   /abab/2.0.0:
     dev: true
     resolution:
@@ -902,6 +917,16 @@ packages:
     dev: true
     resolution:
       integrity: sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
+  /cosmiconfig/5.0.6:
+    dependencies:
+      is-directory: 0.3.1
+      js-yaml: 3.12.0
+      parse-json: 4.0.0
+    dev: true
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha512-6DWfizHriCrFWURP1/qyhsiFvYdlJzbCzmtFWh744+KyWsJo5+kPzUZZaMRSSItoYc0pxFX7gEO7ZC1/gN/7AQ==
   /create-jest-runner/0.2.0:
     dependencies:
       babel-plugin-istanbul: 4.1.4
@@ -2181,6 +2206,12 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-2eis5WqQGV7peooDyLmNEPUrps9+SXX5c9pL3xEB+4e9HnGuDa7mB7kHxHw4CbqS9k1T2hOH3miL8n8WtiYVtg==
+  /is-directory/0.3.1:
+    dev: true
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-YTObbyR1/Hcv2cnYP1yFddwVSuE=
   /is-dotfile/1.0.3:
     dev: true
     engines:
@@ -4590,6 +4621,17 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-FWtleNAtZ/Ki2qtqej2CXTOayOH9bHDQF+Q48VpWyDXjbYxA4Yz8iDB31zXOBUlOHHKidDbqGVrTUvQMPmBGBw==
+  /toolcheck/0.0.3:
+    dependencies:
+      '@types/cosmiconfig': 5.0.3
+      '@types/node': 10.11.3
+      '@types/which': 1.3.1
+      cosmiconfig: 5.0.6
+      which: 1.3.1
+    dev: true
+    requiresBuild: true
+    resolution:
+      integrity: sha512-ZfSLTTGBcuyicXe/hcq8Bn6VWx1XAU30PaZnldTld+STqg6du5Br+SdvC/s90pHh7ZNWyjbeD7SXBEwoENBNwQ==
   /tough-cookie/2.4.3:
     dependencies:
       psl: 1.1.29
@@ -5028,6 +5070,7 @@ specifiers:
   nested-workspace-helper.private: '*'
   preloaded-node.private: '*'
   standard: ^12.0.1
+  toolcheck: ^0.0.3
   ts-jest: ^23.1.4
   tslib: ^1.9.3
   tslint: ^5.11.0

@@ -1,0 +1,5 @@
+names:
+  - git
+  - node
+  - pnpm # for install npm packages managing monorepo
+  - bash # for running scripts
