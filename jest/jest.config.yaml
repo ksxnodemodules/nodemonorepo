@@ -28,3 +28,4 @@ projects:
       - .*.yaml$
       - .*.yml$
     testEnvironment: node
+    restoreMocks: true
