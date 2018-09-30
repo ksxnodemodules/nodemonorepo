@@ -7,14 +7,14 @@ it('matches snapshot', () => {
 
   const spySpawnSync = jest
     .spyOn(childProcess, 'spawnSync')
-    .mockImplementation((...args): SpawnSyncRepresented => {
+    .mockImplementation((...args: any[]): SpawnSyncRepresented => {
       info.spawnSyncArgs = args
       return { status: 123 }
     })
 
   const spyProcessExit = jest
     .spyOn(process, 'exit')
-    .mockImplementation((...args) => {
+    .mockImplementation((...args: any[]) => {
       info.processExitArgs = args
     })
 
@@ -22,8 +22,13 @@ it('matches snapshot', () => {
   info.representative = representative
   representative.exit()
 
-  spySpawnSync.mockClear()
-  spyProcessExit.mockClear()
+  // tslint:disable-next-line:comment-format
+  //@ts-ignore
+  spySpawnSync.mockRestore()
+
+  // tslint:disable-next-line:comment-format
+  //@ts-ignore
+  spyProcessExit.mockRestore()
 
   expect(info).toMatchSnapshot()
 })
