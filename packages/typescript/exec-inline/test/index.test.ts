@@ -5,14 +5,14 @@ import spawnSync, { SpawnSyncRepresented } from '../index'
 it('matches snapshot', () => {
   const info: { [_: string]: any } = {}
 
-  jest
+  const spySpawnSync = jest
     .spyOn(childProcess, 'spawnSync')
     .mockImplementation((...args): SpawnSyncRepresented => {
       info.spawnSyncArgs = args
       return { status: 123 }
     })
 
-  jest
+  const spyProcessExit = jest
     .spyOn(process, 'exit')
     .mockImplementation((...args) => {
       info.processExitArgs = args
@@ -21,6 +21,9 @@ it('matches snapshot', () => {
   const representative = spawnSync('arg0', 'arg1', 'arg2', 'arg3')
   info.representative = representative
   representative.exit()
+
+  spySpawnSync.mockClear()
+  spyProcessExit.mockClear()
 
   expect(info).toMatchSnapshot()
 })
