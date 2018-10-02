@@ -26,7 +26,7 @@ before_install:
   - bash sh/ci/before-install.sh
 
 install:
-  - pnpm recursive link
+  - pnpm recursive install
   - bash sh/ci/install.sh
 
 script:
