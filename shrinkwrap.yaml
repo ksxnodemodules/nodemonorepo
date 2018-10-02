@@ -19,7 +19,7 @@ devDependencies:
   nested-workspace-helper.private: 'link:packages/javascript/nested-workspace-helper.private'
   preloaded-node.private: 'link:packages/javascript/preloaded-node.private'
   standard: 12.0.1
-  toolcheck: 0.0.3
+  toolcheck: 0.0.5
   ts-jest: 23.1.4
   tslib: 1.9.3
   tslint: 5.11.0
@@ -4621,7 +4621,7 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-FWtleNAtZ/Ki2qtqej2CXTOayOH9bHDQF+Q48VpWyDXjbYxA4Yz8iDB31zXOBUlOHHKidDbqGVrTUvQMPmBGBw==
-  /toolcheck/0.0.3:
+  /toolcheck/0.0.5:
     dependencies:
       '@types/cosmiconfig': 5.0.3
       '@types/node': 10.11.3
@@ -4629,9 +4629,10 @@ packages:
       cosmiconfig: 5.0.6
       which: 1.3.1
     dev: true
+    hasBin: true
     requiresBuild: true
     resolution:
-      integrity: sha512-ZfSLTTGBcuyicXe/hcq8Bn6VWx1XAU30PaZnldTld+STqg6du5Br+SdvC/s90pHh7ZNWyjbeD7SXBEwoENBNwQ==
+      integrity: sha512-1fM5D26PNRLIrrZ1xOTXeNfnoxK8Z+FYxL8Jt//lkInV84HgNdVPr1QjetbsU48QaFKwiQZXiCbatQgF+qeTog==
   /tough-cookie/2.4.3:
     dependencies:
       psl: 1.1.29
@@ -5070,7 +5071,7 @@ specifiers:
   nested-workspace-helper.private: '*'
   preloaded-node.private: '*'
   standard: ^12.0.1
-  toolcheck: ^0.0.3
+  toolcheck: ^0.0.5
   ts-jest: ^23.1.4
   tslib: ^1.9.3
   tslint: ^5.11.0
