@@ -13,7 +13,7 @@ devDependencies:
   glob: 7.1.3
   ignore-file.private: 'link:packages/typescript/ignore-file.private'
   jest: 23.5.0
-  jest-extended: 0.10.0
+  jest-extended: 0.11.0
   jest-runner-standard: 0.0.12
   js-yaml: 3.12.0
   nested-workspace-helper.private: 'link:packages/javascript/nested-workspace-helper.private'
@@ -2618,14 +2618,14 @@ packages:
     dev: true
     resolution:
       integrity: sha1-V+gO0IQd6jAxZ8zozXlSHeuv3hA=
-  /jest-extended/0.10.0:
+  /jest-extended/0.11.0:
     dependencies:
       expect: 23.6.0
       jest-get-type: 22.4.3
       jest-matcher-utils: 22.4.3
     dev: true
     resolution:
-      integrity: sha512-ZxIrakB4HO5y9rL27WaJf3BF0ZAVEkc9prDxsPo4+yn7JYRFz1U34jG4jd9im6qZ3akD2xnuC4XDz4mS6LSs6Q==
+      integrity: sha512-7VJQDyObjKRqaiaRvzSbWchwTvk7mQYPaEzPcK2Nwrna6ZSPe/AB9aPDjgH2oT0QONtF6FvM3GIvDdJhttJeaA==
   /jest-get-type/22.4.3:
     dev: true
     resolution:
@@ -5065,7 +5065,7 @@ specifiers:
   glob: ^7.1.3
   ignore-file.private: '*'
   jest: ^23.5.0
-  jest-extended: ^0.10.0
+  jest-extended: ^0.11.0
   jest-runner-standard: ^0.0.12
   js-yaml: ^3.12.0
   nested-workspace-helper.private: '*'
