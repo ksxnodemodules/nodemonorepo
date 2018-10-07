@@ -15,7 +15,7 @@ class MultiKey<
 > extends AlteredEqual<Key, Value, Data> {
   constructor (
     Map: MapLikeConstructor<Data>,
-    equal: ElementEqualFunc<Key> = Object.is as ElementEqualFunc<Key>
+    equal: ElementEqualFunc<Key> = Object.is
   ) {
     type KeySet = UnboundedArray<Key>
 
