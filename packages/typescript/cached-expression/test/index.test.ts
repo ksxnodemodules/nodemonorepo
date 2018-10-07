@@ -1,3 +1,4 @@
+import { product } from 'iter-tools'
 import Calculator from '../index'
 
 const keys = [0, 1, false, true, {}, { hello: 'world' }, [], ['foo', 'bar']]
@@ -27,6 +28,25 @@ it('caches results', () => {
   expect(first).toEqual(second)
   expect(first).toEqual(third)
   expect(first).toEqual(fourth)
+})
+
+it('produces same references for same inputs', () => {
+  const fn = (x: any) => ({ x })
+  const { calculate } = new Calculator(fn)
+  const input = 'input'
+  const expected = calculate(input)
+  const received = calculate(input)
+  expect(received).toBe(expected)
+})
+
+it('produces different references for different inputs', () => {
+  const fn = (x: any) => ({ x })
+  const { calculate } = new Calculator(fn)
+
+  for (const [left, right] of product(keys, keys)) {
+    if (left === right) continue
+    expect(calculate(left)).not.toBe(calculate(right))
+  }
 })
 
 it('produces correct results', () => {
