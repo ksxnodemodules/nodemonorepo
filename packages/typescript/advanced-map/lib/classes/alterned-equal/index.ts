@@ -6,9 +6,16 @@ import {
   EqualFunc
 } from '../../types'
 
+/**
+ * This class allows one to alter equality comparision
+ */
 class AlteredEqual<Key, Value, Data extends IterableMapLike<Key, Value>> extends Base<Key, Value, Data> {
   private readonly equal: EqualFunc<Key>
 
+  /**
+   * @param Map A constructor (a.k.a class) that creates an iterable Map-like object
+   * @param equal Function that compares keys, default to `Object.is`
+   */
   constructor (
     Map: MapLikeConstructor<Data>,
     equal: EqualFunc<Key> = Object.is

@@ -8,11 +8,18 @@ import {
   UnboundedArray
 } from '../../types'
 
+/**
+ * This class uses multi keys
+ */
 class MultiKey<
   Key extends any[],
   Value,
   Data extends IterableMapLike<Key, Value>
 > extends AlteredEqual<Key, Value, Data> {
+  /**
+   * @param Map A constructor (a.k.a class) that creates an iterable Map-like object
+   * @param equal Function that compare keysets' elements, default to `Object.is`
+   */
   constructor (
     Map: MapLikeConstructor<Data>,
     equal: ElementEqualFunc<Key> = Object.is
