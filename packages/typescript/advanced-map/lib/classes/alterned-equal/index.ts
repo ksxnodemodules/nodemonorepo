@@ -11,7 +11,7 @@ class AlteredEqual<Key, Value, Data extends IterableMapLike<Key, Value>> extends
 
   constructor (
     Map: MapLikeConstructor<Data>,
-    equal: EqualFunc<Key>
+    equal: EqualFunc<Key> = Object.is
   ) {
     super(Map)
     this.equal = equal
