@@ -1,3 +1,5 @@
+import { ElementOf } from 'typescript-miscellaneous'
+
 export interface MapLike<Key, Value> {
   has (key: Key): boolean
   get (key: Key): Value | undefined
@@ -18,3 +20,5 @@ export type MapLikeKeyValue<Instance extends MapLike<any, any>> =
     : never
 
 export type EqualFunc<X> = (a: X, b: X) => boolean
+export type ElementEqualFunc<X extends any[]> = EqualFunc<ElementOf<X>>
+export type UnboundedArray<X extends any[]> = ElementOf<X>[]

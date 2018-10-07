@@ -1,10 +1,10 @@
+import Base from '../base'
+
 import {
   IterableMapLike,
   MapLikeConstructor,
   EqualFunc
 } from '../../types'
-
-import Base from '../base'
 
 class AlteredEqual<Key, Value, Data extends IterableMapLike<Key, Value>> extends Base<Key, Value, Data> {
   private readonly equal: EqualFunc<Key>
