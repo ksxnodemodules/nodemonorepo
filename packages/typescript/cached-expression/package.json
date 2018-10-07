@@ -1,7 +1,7 @@
 {
   "name": "cached-expression",
   "version": "0.0.0",
-  "description": "Expressions that is calculated once for each object",
+  "description": "Expressions that are calculated once for each object",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
