@@ -16,9 +16,9 @@ import {
  * const a2 = calculate('a')
  * const b0 = calculate('b')
  *
- * assert.deepStrictEqual(a0, a1)
- * assert.deepStrictEqual(a0, a2)
- * assert.notDeepStrictEqual(a0, b0)
+ * assert(a0 === a1)
+ * assert(a0 === a2)
+ * assert(a0 !== b0)
  */
 class Calculator<X, Y> {
   public readonly calculate: CalcFunc<X, Y>
