@@ -1,3 +1,4 @@
 import Base from './base'
 import AlteredEqual from './alterned-equal'
-export { Base, AlteredEqual }
+import MultiKey from './multi-key'
+export { Base, AlteredEqual, MultiKey }
