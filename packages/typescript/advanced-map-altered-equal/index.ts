@@ -1,10 +1,10 @@
-import Base from '../base'
+import Base from 'advanced-map-base'
 
 import {
   IterableMapLike,
   MapLikeConstructor,
   EqualFunc
-} from '../../types'
+} from 'advanced-map-types'
 
 /**
  * This class allows one to alter equality comparision

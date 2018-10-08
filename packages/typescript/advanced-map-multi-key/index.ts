@@ -1,12 +1,12 @@
 import { zip } from 'iter-tools'
-import AlteredEqual from '../alterned-equal'
+import AlteredEqual from 'advanced-map-altered-equal'
 
 import {
   IterableMapLike,
   MapLikeConstructor,
   ElementEqualFunc,
   UnboundedArray
-} from '../../types'
+} from 'advanced-map-types'
 
 /**
  * This class uses multi keys

@@ -1,7 +1,7 @@
 {
-  "name": "advanced-map",
+  "name": "advanced-map-altered-equal",
   "version": "0.0.0",
-  "description": "Advanced Map-like classes",
+  "description": "Map-like class with customizable equality operator",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
@@ -14,19 +14,14 @@
   },
   "keywords": [
     "map",
-    "advanced",
-    "meta"
+    "equal",
+    "custom"
   ],
   "dependencies": {
     "tslib": "^1.9.3",
-    "advanced-map-types": "^0.0.0",
     "advanced-map-base": "^0.0.0",
-    "advanced-map-altered-equal": "^0.0.0",
-    "advanced-map-multi-key": "^0.0.0",
+    "advanced-map-types": "^0.0.0",
     "@types/node": "^10.9.3"
-  },
-  "devDependencies": {
-    "iter-tools": "^6.1.4"
   },
   "engines": {
     "node": ">= 8.9.0"

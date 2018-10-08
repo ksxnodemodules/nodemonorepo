@@ -1,7 +1,7 @@
 import {
   MapLikeConstructor,
   MapLike
-} from '../../types'
+} from 'advanced-map-types'
 
 /**
  * Abstract base class for every Map-like class within `advanced-map` package
