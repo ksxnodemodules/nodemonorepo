@@ -9,7 +9,11 @@ import {
 /**
  * This class allows one to alter equality comparision
  */
-class AlteredEqual<Key, Value, Data extends IterableMapLike<Key, Value>> extends Base<Key, Value, Data> {
+class AlteredEqual<
+  Key,
+  Value,
+  Data extends IterableMapLike<Key, Value> = Map<Key, Value>
+> extends Base<Key, Value, Data> {
   private readonly equal: EqualFunc<Key>
 
   /**

@@ -6,7 +6,11 @@ import {
 /**
  * Abstract base class for every Map-like class within `advanced-map` package
  */
-abstract class Base<Key, Value, Data extends MapLike<Key, Value>> implements MapLike<Key, Value> {
+abstract class Base<
+  Key,
+  Value,
+  Data extends MapLike<Key, Value> = Map<Key, Value>
+> implements MapLike<Key, Value> {
   protected readonly data: Data
   public abstract has (key: Key): boolean
   public abstract get (key: Key): Value | undefined

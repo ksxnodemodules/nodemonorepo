@@ -14,7 +14,7 @@ import {
 class MultiKey<
   Key extends any[],
   Value,
-  Data extends IterableMapLike<Key, Value>
+  Data extends IterableMapLike<Key, Value> = Map<Key, Value>
 > extends AlteredEqual<Key, Value, Data> {
   /**
    * @param Map A constructor (a.k.a class) that creates an iterable Map-like object
