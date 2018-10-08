@@ -27,6 +27,27 @@ it('calls injected function', () => {
   expect(track).toMatchSnapshot()
 })
 
+it('set() works as intended', () => {
+  const key = Symbol()
+  const map = new AlteredEqual(Map)
+
+  const before = map.get(key)
+  map.set(key, 0)
+  const setToZero = map.get(key)
+  map.set(key, 1)
+  const setToOne = map.get(key)
+
+  expect({
+    before,
+    setToZero,
+    setToOne
+  }).toEqual({
+    before: undefined,
+    setToZero: 0,
+    setToOne: 1
+  })
+})
+
 it('get() works as intended', () => {
   const map = new AlteredEqual(Map)
   const entries = Array.from(enumerate(['zero', 'one', 'two']))
@@ -40,6 +61,29 @@ it('get() works as intended', () => {
   ).toEqual(
     entries.map(x => x[1])
   )
+})
+
+it('delete() works as intended', () => {
+  const key = Symbol()
+  const map = new AlteredEqual(Map)
+
+  const whenKeyDoesNotExist = map.delete(key)
+  map.set(key, 'exist')
+  const afterSet = map.get(key)
+  const whenKeyExist = map.delete(key)
+  const afterDelete = map.get(key)
+
+  expect({
+    whenKeyDoesNotExist,
+    afterSet,
+    whenKeyExist,
+    afterDelete
+  }).toEqual({
+    whenKeyDoesNotExist: false,
+    afterSet: 'exist',
+    whenKeyExist: true,
+    afterDelete: undefined
+  })
 })
 
 it('has() works as intended', () => {
