@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`calls injected function 1`] = `
+Array [
+  Array [
+    "set",
+    1,
+    0,
+  ],
+  Array [
+    "set",
+    2,
+    0,
+  ],
+  Array [
+    "set",
+    2,
+    1,
+  ],
+  Array [
+    "get",
+    0,
+    0,
+  ],
+  Array [
+    "get",
+    1,
+    0,
+  ],
+  Array [
+    "get",
+    1,
+    1,
+  ],
+  Array [
+    "get",
+    2,
+    0,
+  ],
+  Array [
+    "get",
+    2,
+    1,
+  ],
+  Array [
+    "get",
+    2,
+    2,
+  ],
+  Array [
+    "get",
+    3,
+    0,
+  ],
+  Array [
+    "get",
+    3,
+    1,
+  ],
+  Array [
+    "get",
+    3,
+    2,
+  ],
+  Array [
+    "has",
+    0,
+    0,
+  ],
+  Array [
+    "has",
+    1,
+    0,
+  ],
+  Array [
+    "has",
+    1,
+    1,
+  ],
+  Array [
+    "has",
+    2,
+    0,
+  ],
+  Array [
+    "has",
+    2,
+    1,
+  ],
+  Array [
+    "has",
+    2,
+    2,
+  ],
+  Array [
+    "has",
+    3,
+    0,
+  ],
+  Array [
+    "has",
+    3,
+    1,
+  ],
+  Array [
+    "has",
+    3,
+    2,
+  ],
+]
+`;

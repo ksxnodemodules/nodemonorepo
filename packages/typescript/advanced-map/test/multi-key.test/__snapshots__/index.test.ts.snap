@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`calls injected function on key member 1`] = `
+Array [
+  Array [
+    "set",
+    "number",
+    "number",
+  ],
+  Array [
+    "set",
+    "number",
+    "number",
+  ],
+  Array [
+    "set",
+    "number",
+    "number",
+  ],
+  Array [
+    "set",
+    "number",
+    "number",
+  ],
+  Array [
+    "set",
+    "number",
+    "number",
+  ],
+  Array [
+    "set",
+    "number",
+    "number",
+  ],
+  Array [
+    "set",
+    "number",
+    "number",
+  ],
+  Array [
+    "set",
+    "number",
+    "number",
+  ],
+  Array [
+    "get",
+    "number",
+    "number",
+  ],
+  Array [
+    "get",
+    "number",
+    "number",
+  ],
+  Array [
+    "get",
+    "number",
+    "number",
+  ],
+  Array [
+    "get",
+    "number",
+    "number",
+  ],
+  Array [
+    "get",
+    "number",
+    "number",
+  ],
+  Array [
+    "get",
+    "number",
+    "number",
+  ],
+  Array [
+    "has",
+    "number",
+    "number",
+  ],
+  Array [
+    "has",
+    "number",
+    "number",
+  ],
+  Array [
+    "has",
+    "number",
+    "number",
+  ],
+  Array [
+    "has",
+    "number",
+    "number",
+  ],
+  Array [
+    "has",
+    "number",
+    "number",
+  ],
+  Array [
+    "has",
+    "number",
+    "number",
+  ],
+]
+`;
