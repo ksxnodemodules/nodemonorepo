@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`add results of calling injected function to data 1`] = `
+Map {
+  0 => "0",
+  1 => "1",
+  2 => "2",
+  3 => "3",
+}
+`;
