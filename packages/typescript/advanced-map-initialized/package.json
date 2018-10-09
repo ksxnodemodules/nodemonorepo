@@ -20,7 +20,7 @@
   ],
   "dependencies": {
     "tslib": "^1.9.3",
-    "advanced-map-base": "^0.0.0",
+    "advanced-map-base": "^0.0.1",
     "advanced-map-types": "^0.0.1",
     "@types/node": "^10.9.3"
   },

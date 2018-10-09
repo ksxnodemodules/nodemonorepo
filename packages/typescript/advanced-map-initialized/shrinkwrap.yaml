@@ -1,6 +1,6 @@
 dependencies:
   '@types/node': 10.11.4
-  advanced-map-base: 0.0.0
+  advanced-map-base: 'link:../advanced-map-base'
   advanced-map-types: 'link:../advanced-map-types'
   tslib: 1.9.3
 packages:
@@ -8,46 +8,15 @@ packages:
     dev: false
     resolution:
       integrity: sha512-ojnbBiKkZFYRfQpmtnnWTMw+rzGp/JiystjluW9jgN3VzRwilXddJ6aGQ9V/7iuDG06SBgn7ozW9k3zcAnYjYQ==
-  /advanced-map-base/0.0.0:
-    dependencies:
-      '@types/node': 10.11.4
-      advanced-map-types: 0.0.0
-      tslib: 1.9.3
-      typescript-miscellaneous: 0.1.0
-    dev: false
-    engines:
-      node: '>= 8.9.0'
-    resolution:
-      integrity: sha512-R3/KjbtH7ropX/cPjjnyXfStFawpucMmliAxdAvRW1vuPdpS9mLtZCCOU+JwvIZMuX6U1mXl8ooXLiR75gQuRw==
-  /advanced-map-types/0.0.0:
-    dependencies:
-      '@types/node': 10.11.4
-      tslib: 1.9.3
-      typescript-miscellaneous: 0.1.0
-    dev: false
-    engines:
-      node: '>= 8.9.0'
-    resolution:
-      integrity: sha512-IWfXRpuGxuuxOMZbj0FL8UelrVazM52DDunL8/Amo3MF4BLQ4O1ydpoJwHRllHvIbUuyxUKZbqXwEiurqeA79w==
   /tslib/1.9.3:
     dev: false
     resolution:
       integrity: sha512-4krF8scpejhaOgqzBEcGM7yDIEfi0/8+8zDRZhNZZ2kjmHJ4hv3zCbQWxoJGz1iw5U0Jl0nma13xzHXcncMavQ==
-  /typescript-miscellaneous/0.1.0:
-    dependencies:
-      '@types/node': 10.11.4
-      tslib: 1.9.3
-    dev: false
-    engines:
-      node: '>= 8.9.0'
-      typescript: '>= 3.0.0'
-    resolution:
-      integrity: sha512-JPy2LNt44g/q4nJo4CzzGgfrA5LOHQl7I2XKVfK1gGz9F5WhataKRLrahk7RTMTckq31gkKe5LgiSkjxB2Ubiw==
 registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   '@types/node': ^10.9.3
-  advanced-map-base: ^0.0.0
+  advanced-map-base: ^0.0.1
   advanced-map-types: ^0.0.1
   tslib: ^1.9.3

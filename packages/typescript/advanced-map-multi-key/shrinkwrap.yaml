@@ -83,7 +83,7 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   '@types/node': ^10.9.3
-  advanced-map-altered-equal: ^0.0.0
-  advanced-map-types: ^0.0.0
+  advanced-map-altered-equal: ^0.0.1
+  advanced-map-types: ^0.0.1
   iter-tools: ^6.1.4
   tslib: ^1.9.3

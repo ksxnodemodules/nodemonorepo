@@ -1,6 +1,6 @@
 {
   "name": "advanced-map-multi-key",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Map-like class using multi keys",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
@@ -20,8 +20,8 @@
   "dependencies": {
     "iter-tools": "^6.1.4",
     "tslib": "^1.9.3",
-    "advanced-map-altered-equal": "^0.0.0",
-    "advanced-map-types": "^0.0.0",
+    "advanced-map-altered-equal": "^0.0.1",
+    "advanced-map-types": "^0.0.1",
     "@types/node": "^10.9.3"
   },
   "engines": {

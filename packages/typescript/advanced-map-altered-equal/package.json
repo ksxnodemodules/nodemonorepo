@@ -1,6 +1,6 @@
 {
   "name": "advanced-map-altered-equal",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Map-like class with customizable equality operator",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
@@ -19,8 +19,8 @@
   ],
   "dependencies": {
     "tslib": "^1.9.3",
-    "advanced-map-base": "^0.0.0",
-    "advanced-map-types": "^0.0.0",
+    "advanced-map-base": "^0.0.1",
+    "advanced-map-types": "^0.0.1",
     "@types/node": "^10.9.3"
   },
   "engines": {

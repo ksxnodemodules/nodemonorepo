@@ -2,6 +2,7 @@ dependencies:
   '@types/node': 10.11.3
   advanced-map-altered-equal: 'link:../advanced-map-altered-equal'
   advanced-map-base: 'link:../advanced-map-base'
+  advanced-map-initialized: 'link:../advanced-map-initialized'
   advanced-map-multi-key: 'link:../advanced-map-multi-key'
   advanced-map-types: 'link:../advanced-map-types'
   cached-expression: 'link:../cached-expression'
@@ -86,9 +87,10 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   '@types/node': ^10.9.3
-  advanced-map-altered-equal: ^0.0.0
-  advanced-map-base: ^0.0.0
-  advanced-map-multi-key: ^0.0.0
-  advanced-map-types: ^0.0.0
+  advanced-map-altered-equal: ^0.0.1
+  advanced-map-base: ^0.0.1
+  advanced-map-initialized: ^0.0.0
+  advanced-map-multi-key: ^0.0.1
+  advanced-map-types: ^0.0.1
   iter-tools: ^6.1.4
   tslib: ^1.9.3
