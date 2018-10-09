@@ -1,0 +1,30 @@
+{
+  "name": "advanced-map-initialized",
+  "version": "0.0.0",
+  "description": "Map-like class with default values",
+  "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksxnodemodules/nodemonorepo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
+  },
+  "keywords": [
+    "map",
+    "default",
+    "initialize",
+    "value"
+  ],
+  "dependencies": {
+    "tslib": "^1.9.3",
+    "advanced-map-base": "^0.0.0",
+    "advanced-map-types": "^0.0.1",
+    "@types/node": "^10.9.3"
+  },
+  "engines": {
+    "node": ">= 8.9.0"
+  }
+}
