@@ -1,6 +1,6 @@
 {
   "name": "advanced-map-multi-key",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Map-like class using multi keys",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
