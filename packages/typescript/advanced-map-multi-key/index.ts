@@ -38,6 +38,14 @@ class MultiKey<
 
     super(Map, equalKeySet)
   }
+
+  public set (key: Key, value: Value): void {
+    super.set(this.cloneKey(key), value)
+  }
+
+  protected cloneKey (key: Key): Key {
+    return Array.from(key) as Key
+  }
 }
 
 export = MultiKey

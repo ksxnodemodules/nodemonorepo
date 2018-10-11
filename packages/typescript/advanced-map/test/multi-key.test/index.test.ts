@@ -111,3 +111,21 @@ it('has() works as intended', () => {
     '10': false
   })
 })
+
+it('keys are immutable', () => {
+  const map = new MultiKey<number[], string>(Map)
+
+  const key = [0]
+  map.set(key, 'zero')
+
+  key[0] = 1
+  map.set(key, 'one')
+
+  expect({
+    0: map.get([0]),
+    1: map.get([1])
+  }).toEqual({
+    0: 'zero',
+    1: 'one'
+  })
+})
