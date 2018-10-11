@@ -21,8 +21,10 @@
     "tslib": "^1.9.3",
     "advanced-map-types": "^0.0.1",
     "advanced-map-base": "^0.0.1",
+    "advanced-map-multi-key-base": "^0.0.0",
     "advanced-map-altered-equal": "^0.0.1",
     "advanced-map-multi-key": "^0.0.2",
+    "advanced-map-mutable-multi-key": "^0.0.0",
     "advanced-map-initialized": "^0.0.0",
     "@types/node": "^10.9.3"
   },
