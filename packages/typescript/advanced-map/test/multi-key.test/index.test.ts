@@ -2,7 +2,7 @@ import { MultiKey } from '../../index'
 
 it('calls injected function on key member', () => {
   const types = Array<[typeof act, string, string]>()
-  let act: 'has' | 'get' | 'set'
+  let act: 'has' | 'get' | 'delete' | 'set'
 
   const equal = (a: number, b: number) => {
     types.push([act, typeof a, typeof b])
@@ -24,6 +24,10 @@ it('calls injected function on key member', () => {
   act = 'has'
   map.has([0, 0])
   map.has([2, 3])
+
+  act = 'delete'
+  map.delete([1, 1])
+  map.delete([2, 3])
 
   expect(types).toMatchSnapshot()
 })

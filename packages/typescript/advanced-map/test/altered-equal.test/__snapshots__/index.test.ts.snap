@@ -107,5 +107,20 @@ Array [
     3,
     2,
   ],
+  Array [
+    "delete",
+    0,
+    0,
+  ],
+  Array [
+    "delete",
+    1,
+    1,
+  ],
+  Array [
+    "delete",
+    2,
+    2,
+  ],
 ]
 `;

@@ -3,7 +3,7 @@ import { AlteredEqual } from '../../index'
 
 it('calls injected function', () => {
   const track = Array<[typeof act, number, number]>()
-  let act: 'set' | 'get' | 'has'
+  let act: 'set' | 'delete' | 'get' | 'has'
 
   const equal = (a: number, b: number) => {
     track.push([act, a, b])
@@ -22,6 +22,9 @@ it('calls injected function', () => {
 
   act = 'has'
   ; [0, 1, 2, 3].map(x => map.has(x))
+
+  act = 'delete'
+  ; [0, 1, 2, 3].map(x => map.delete(x))
 
   expect(track).not.toEqual([])
   expect(track).toMatchSnapshot()
