@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`calls injected function on array member 1`] = `
+Array [
+  Array [
+    "add",
+    "number",
+    "number",
+  ],
+  Array [
+    "add",
+    "number",
+    "number",
+  ],
+  Array [
+    "add",
+    "number",
+    "number",
+  ],
+  Array [
+    "add",
+    "number",
+    "number",
+  ],
+  Array [
+    "add",
+    "number",
+    "number",
+  ],
+  Array [
+    "add",
+    "number",
+    "number",
+  ],
+  Array [
+    "add",
+    "number",
+    "number",
+  ],
+  Array [
+    "add",
+    "number",
+    "number",
+  ],
+  Array [
+    "has",
+    "number",
+    "number",
+  ],
+  Array [
+    "has",
+    "number",
+    "number",
+  ],
+  Array [
+    "has",
+    "number",
+    "number",
+  ],
+  Array [
+    "has",
+    "number",
+    "number",
+  ],
+  Array [
+    "has",
+    "number",
+    "number",
+  ],
+  Array [
+    "has",
+    "number",
+    "number",
+  ],
+  Array [
+    "delete",
+    "number",
+    "number",
+  ],
+  Array [
+    "delete",
+    "number",
+    "number",
+  ],
+  Array [
+    "delete",
+    "number",
+    "number",
+  ],
+  Array [
+    "delete",
+    "number",
+    "number",
+  ],
+  Array [
+    "delete",
+    "number",
+    "number",
+  ],
+]
+`;

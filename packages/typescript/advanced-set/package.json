@@ -1,0 +1,33 @@
+{
+  "name": "advanced-set",
+  "version": "0.0.0",
+  "description": "Advanced Set-like classes",
+  "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksxnodemodules/nodemonorepo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
+  },
+  "keywords": [
+    "set",
+    "advanced",
+    "meta"
+  ],
+  "dependencies": {
+    "tslib": "^1.9.3",
+    "advanced-set-types": "^0.0.0",
+    "advanced-set-base": "^0.0.0",
+    "advanced-set-multi-key-base": "^0.0.0",
+    "advanced-set-altered-equal": "^0.0.0",
+    "advanced-set-multi-key": "^0.0.0",
+    "advanced-set-mutable-multi-key": "^0.0.0",
+    "@types/node": "^10.9.3"
+  },
+  "engines": {
+    "node": ">= 8.9.0"
+  }
+}

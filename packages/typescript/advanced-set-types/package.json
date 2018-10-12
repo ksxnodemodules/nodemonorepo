@@ -1,0 +1,27 @@
+{
+  "name": "advanced-set-types",
+  "version": "0.0.0",
+  "description": "TypeScript definitions used by advanced-set packages",
+  "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksxnodemodules/nodemonorepo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
+  },
+  "keywords": [
+    "types",
+    "collection"
+  ],
+  "dependencies": {
+    "tslib": "^1.9.3",
+    "typescript-miscellaneous": "^0.1.0",
+    "@types/node": "^10.9.3"
+  },
+  "engines": {
+    "node": ">= 8.9.0"
+  }
+}

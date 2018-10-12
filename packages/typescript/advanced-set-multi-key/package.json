@@ -1,0 +1,29 @@
+{
+  "name": "advanced-set-multi-key",
+  "version": "0.0.0",
+  "description": "Set-like class using multi keys",
+  "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksxnodemodules/nodemonorepo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
+  },
+  "keywords": [
+    "set",
+    "multiple",
+    "keys"
+  ],
+  "dependencies": {
+    "tslib": "^1.9.3",
+    "advanced-set-multi-key-base": "^0.0.0",
+    "advanced-set-types": "^0.0.0",
+    "@types/node": "^10.9.3"
+  },
+  "engines": {
+    "node": ">= 8.9.0"
+  }
+}
