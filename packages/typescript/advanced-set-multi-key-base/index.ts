@@ -38,8 +38,9 @@ abstract class MultiKeyBase<
     super(Set, equalElementSet)
   }
 
-  public add (x: X): void {
+  public add (x: X): this {
     super.add(this.cloneElement(x))
+    return this
   }
 
   protected abstract cloneElement (x: X): X

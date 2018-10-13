@@ -47,8 +47,9 @@ class AlteredEqual<
     return this.find(x).found
   }
 
-  public add (x: X): void {
+  public add (x: X): this {
     if (!this.has(x)) this.data.add(x)
+    return this
   }
 
   public delete (x: X): boolean {

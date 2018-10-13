@@ -39,8 +39,9 @@ abstract class MultiKeyBase<
     super(Map, equalKeySet)
   }
 
-  public set (key: Key, value: Value): void {
+  public set (key: Key, value: Value): this {
     super.set(this.cloneKey(key), value)
+    return this
   }
 
   /**

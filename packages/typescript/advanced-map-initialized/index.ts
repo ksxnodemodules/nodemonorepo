@@ -57,8 +57,9 @@ class Initialized<
    * @param key Key.
    * @param value Value.
    */
-  public set (key: Key, value: Value): void {
+  public set (key: Key, value: Value): this {
     this.data.set(key, value)
+    return this
   }
 
   /**

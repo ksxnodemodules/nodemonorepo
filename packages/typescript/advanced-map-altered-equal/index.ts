@@ -58,12 +58,13 @@ class AlteredEqual<
     return res.found ? res.value.value : undefined
   }
 
-  public set (key: Key, value: Value) {
+  public set (key: Key, value: Value): this {
     const res = this.find(key)
     this.data.set(res.found ? res.value.key : key, value)
+    return this
   }
 
-  public delete (key: Key) {
+  public delete (key: Key): boolean {
     const res = this.find(key)
 
     if (res.found) {

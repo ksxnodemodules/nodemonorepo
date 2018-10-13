@@ -14,7 +14,7 @@ abstract class Base<
   protected readonly data: Data
   public abstract has (key: Key): boolean
   public abstract get (key: Key): Value | undefined
-  public abstract set (key: Key, value: Value): void
+  public abstract set (key: Key, value: Value): this
   public abstract delete (key: Key): boolean
 
   /**

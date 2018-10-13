@@ -12,7 +12,7 @@ abstract class Base<
 > implements SetLike<X> {
   protected readonly data: Data
   public abstract has (x: X): boolean
-  public abstract add (x: X): void
+  public abstract add (x: X): this
   public abstract delete (x: X): boolean
 
   /**
