@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`calls injected function 1`] = `
+Array [
+  Array [
+    "number",
+    "number",
+    "function",
+  ],
+  Array [
+    "number",
+    "number",
+    "function",
+  ],
+  Array [
+    "number",
+    "number",
+    "function",
+  ],
+  Array [
+    "number",
+    "number",
+    "function",
+  ],
+]
+`;
+
+exports[`uses Object.is as elementEqual by default 1`] = `
+Array [
+  Array [
+    Object {},
+    Object {},
+  ],
+  Array [
+    Symbol(),
+    Symbol(),
+  ],
+  Array [
+    NaN,
+    NaN,
+  ],
+  Array [
+    0,
+    0,
+  ],
+  Array [
+    0,
+    "0",
+  ],
+]
+`;

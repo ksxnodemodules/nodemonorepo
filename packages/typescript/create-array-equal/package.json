@@ -1,0 +1,30 @@
+{
+  "name": "create-array-equal",
+  "version": "0.0.0",
+  "description": "Create equality function for arrays",
+  "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksxnodemodules/nodemonorepo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
+  },
+  "keywords": [
+    "array",
+    "equal",
+    "factory"
+  ],
+  "main": "index.js",
+  "dependencies": {
+    "iter-tools": "^6.1.4",
+    "typescript-miscellaneous": "^0.1.0",
+    "tslib": "^1.9.3",
+    "@types/node": "^10.9.3"
+  },
+  "engines": {
+    "node": ">= 8.9.0"
+  }
+}
