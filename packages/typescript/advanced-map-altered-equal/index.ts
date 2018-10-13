@@ -29,7 +29,7 @@ class AlteredEqual<
     this.equal = equal
   }
 
-  public find (key: Key): FindingResult<Readonly<{ key: Key, value: Value }>> {
+  public find (key: Key): AlteredEqual.Find.Result<Key, Value> {
     const { equal } = this
 
     for (const [k, v] of this.data) {
@@ -72,6 +72,17 @@ class AlteredEqual<
     }
 
     return false
+  }
+}
+
+namespace AlteredEqual {
+  export namespace Find {
+    export type Result<Key, Value> = FindingResult<Entry<Key, Value>>
+  }
+
+  export interface Entry<Key, Value> {
+    readonly key: Key
+    readonly value: Value
   }
 }
 
