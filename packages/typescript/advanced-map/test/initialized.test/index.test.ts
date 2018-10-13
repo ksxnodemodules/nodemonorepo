@@ -49,11 +49,9 @@ it('get() works as intended', () => {
   const getValues = () => keys.map(x => map.get(x))
 
   const empty = getValues()
-  map.set(0, 'zero')
-  map.set(1, 'one')
+  map.set(0, 'zero').set(1, 'one')
   const half = getValues()
-  map.set(2, 'two')
-  map.set(3, 'three')
+  map.set(2, 'two').set(3, 'three')
   const full = getValues()
 
   expect({ empty, half, full }).toEqual({
@@ -88,8 +86,8 @@ it('delete() works as intended', () => {
 
 it('has() works as intended', () => {
   const map = new Inspectable(Map, () => '?')
-  map.set(0, 'zero')
-  map.set(1, 'one')
+    .set(0, 'zero')
+    .set(1, 'one')
 
   expect({
     0: map.has(0),

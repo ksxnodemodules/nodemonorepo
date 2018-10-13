@@ -12,8 +12,7 @@ it('calls injected function', () => {
   const set = new AlteredEqual<number>(Set, equal)
 
   act = 'add'
-  set.add(0)
-  set.add(1)
+  set.add(0).add(1)
 
   act = 'has'
   ; [0, 1, 2, 3].map(x => set.has(x))
@@ -43,9 +42,7 @@ it('add() works as intended', () => {
 })
 
 it('has() works as intended', () => {
-  const set = new AlteredEqual(Set)
-  set.add(0)
-  set.add(1)
+  const set = new AlteredEqual(Set).add(0).add(1)
 
   const expected = [true, true, false, false]
   const received = [0, 1, 2, 3].map(x => set.has(x))
@@ -74,9 +71,7 @@ it('delete() works as intended', () => {
 })
 
 it('find() works as intended', () => {
-  const set = new AlteredEqual<number>(Set)
-  set.add(0)
-  set.add(1)
+  const set = new AlteredEqual<number>(Set).add(0).add(1)
 
   type FindingResult = AlteredEqual.Find.Result<number>
   const FOUND = (value: number): FindingResult => ({ found: true, value })

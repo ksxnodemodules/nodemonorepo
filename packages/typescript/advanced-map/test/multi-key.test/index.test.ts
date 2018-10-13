@@ -55,9 +55,9 @@ it('set() works as intended', () => {
 
 it('get() works as intended', () => {
   const map = new MultiKey<number[], string>(Map)
-  map.set([0, 0], 'a')
-  map.set([1, 1], 'b')
-  map.set([-1], 'c')
+    .set([0, 0], 'a')
+    .set([1, 1], 'b')
+    .set([-1], 'c')
 
   expect({
     '-1': map.get([-1]),
@@ -99,9 +99,9 @@ it('delete() works as intended', () => {
 
 it('has() works as intended', () => {
   const map = new MultiKey<[] | [number, number], string>(Map)
-  map.set([0, 0], 'a')
-  map.set([1, 1], 'b')
-  map.set([], 'c')
+    .set([0, 0], 'a')
+    .set([1, 1], 'b')
+    .set([], 'c')
 
   expect({
     '00': map.has([0, 0]),

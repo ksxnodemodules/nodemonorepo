@@ -13,9 +13,7 @@ it('calls injected function', () => {
   const map = new AlteredEqual<number, string>(Map, equal)
 
   act = 'set'
-  map.set(0, 'zero')
-  map.set(1, 'one')
-  map.set(2, 'two')
+  map.set(0, 'zero').set(1, 'one').set(2, 'two')
 
   act = 'get'
   ; [0, 1, 2, 3].map(x => map.get(x))
@@ -91,8 +89,8 @@ it('delete() works as intended', () => {
 
 it('has() works as intended', () => {
   const map = new AlteredEqual(Map)
-  map.set(0, 'zero')
-  map.set(1, 'one')
+    .set(0, 'zero')
+    .set(1, 'one')
 
   expect({
     0: map.has(0),
@@ -109,8 +107,8 @@ it('has() works as intended', () => {
 
 it('find() works as intended', () => {
   const map = new AlteredEqual<number, string>(Map)
-  map.set(0, 'zero')
-  map.set(1, 'one')
+    .set(0, 'zero')
+    .set(1, 'one')
 
   type FindingResult = AlteredEqual.Find.Result<number, string>
 

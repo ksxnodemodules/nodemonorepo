@@ -47,8 +47,8 @@ it('add() works as intended', () => {
 
 it('has() works as intended', () => {
   const set = new MultiKey<number[]>(Set)
-  set.add([0, 0])
-  set.add([0, 1])
+    .add([0, 0])
+    .add([0, 1])
 
   expect({
     '00': set.has([0, 0]),
