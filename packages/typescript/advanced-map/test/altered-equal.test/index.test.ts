@@ -106,3 +106,28 @@ it('has() works as intended', () => {
     3: false
   })
 })
+
+it('find() works as intended', () => {
+  const map = new AlteredEqual<number, string>(Map)
+  map.set(0, 'zero')
+  map.set(1, 'one')
+
+  type FindingResult = AlteredEqual.Find.Result<number, string>
+
+  const FOUND = (key: number, value: string): FindingResult =>
+    ({ found: true, value: { key, value } })
+
+  const NOT_FOUND: FindingResult = { found: false }
+
+  expect({
+    0: map.find(0),
+    1: map.find(1),
+    2: map.find(2),
+    3: map.find(3)
+  }).toEqual({
+    0: FOUND(0, 'zero'),
+    1: FOUND(1, 'one'),
+    2: NOT_FOUND,
+    3: NOT_FOUND
+  })
+})

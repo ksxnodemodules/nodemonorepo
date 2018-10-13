@@ -72,3 +72,25 @@ it('delete() works as intended', () => {
     after: false
   })
 })
+
+it('find() works as intended', () => {
+  const set = new AlteredEqual<number>(Set)
+  set.add(0)
+  set.add(1)
+
+  type FindingResult = AlteredEqual.Find.Result<number>
+  const FOUND = (value: number): FindingResult => ({ found: true, value })
+  const NOT_FOUND: FindingResult = { found: false }
+
+  expect({
+    0: set.find(0),
+    1: set.find(1),
+    2: set.find(2),
+    3: set.find(3)
+  }).toEqual({
+    0: FOUND(0),
+    1: FOUND(1),
+    2: NOT_FOUND,
+    3: NOT_FOUND
+  })
+})
