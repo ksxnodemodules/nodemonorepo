@@ -13,8 +13,8 @@
     "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
   },
   "dependencies": {
-    "iter-tools": "^6.1.4",
     "tslib": "^1.9.3",
+    "create-array-equal": "^0.0.0",
     "advanced-set-altered-equal": "^0.0.0",
     "advanced-set-types": "^0.0.0",
     "@types/node": "^10.9.3"

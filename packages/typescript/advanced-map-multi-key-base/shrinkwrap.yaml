@@ -2,81 +2,17 @@ dependencies:
   '@types/node': 10.11.6
   advanced-map-altered-equal: 'link:../advanced-map-altered-equal'
   advanced-map-types: 'link:../advanced-map-types'
-  iter-tools: 6.1.4
+  create-array-equal: 'link:../create-array-equal'
   tslib: 1.9.3
 packages:
-  /@babel/runtime/7.1.2:
-    dependencies:
-      regenerator-runtime: 0.12.1
-    dev: false
-    resolution:
-      integrity: sha512-Y3SCjmhSupzFB6wcv1KmmFucH6gDVnI30WjOcicV10ju0cZjak3Jcs67YLIXBrmZYw1xCrVeJPbycFwrqNyxpg==
   /@types/node/10.11.6:
     dev: false
     resolution:
       integrity: sha512-fnA7yvqg3oKQDb3skBif9w5RRKVKAaeKeNuLzZL37XcSiWL4IoSXQnnbchR3UnBu2EMLHBip7ZVEkqoIVBP8QQ==
-  /clone-regexp/2.1.0:
-    dependencies:
-      is-regexp: 2.0.0
-    dev: false
-    engines:
-      node: '>=6'
-    resolution:
-      integrity: sha512-Ujn//SX3jg4duyQGM37swl+Sk95zmQnraZO0fGVZQEq1fJJML8mJaEkbT70ns/kBcdU7HLzpF8VJUmsb1lDD8Q==
-  /dequeue/1.0.5:
-    dev: false
-    resolution:
-      integrity: sha1-EPHO8H4yNLIdyzj0v6LWYDSrZ8c=
-  /is-regexp/2.0.0:
-    dev: false
-    engines:
-      node: '>=6'
-    resolution:
-      integrity: sha512-B5NGyyvXTmppdR/g7ei6cu5DXhvzBLNcajOXJ3OR1tmW39iiF7444beL1lQjL393j8vDOTWGnSV2r/5cKuNqkg==
-  /iter-tools/6.1.4:
-    dependencies:
-      '@babel/runtime': 7.1.2
-      clone-regexp: 2.1.0
-      dequeue: 1.0.5
-      little-ds-toolkit: 1.1.0
-      typescript-tuple: 1.7.3
-      typescript-union: 0.0.0
-    dev: false
-    resolution:
-      integrity: sha512-MpUCYuPa7w8CzoHFWRycVsWBookzztSYjFaeYWHBUmumtuNWKtAbhUnAS+9tEku9GA961a8xa7CeH5Vm0+pQ5g==
-  /little-ds-toolkit/1.1.0:
-    dev: false
-    resolution:
-      integrity: sha512-2ARbmay5TrhFxFqcyFxPigmRToDuo8yxvIMdvwsDYNd/oZKnvsFT5L3I7s8WLXR7/tThYeffN9ouDtFFk4wzsA==
-  /regenerator-runtime/0.12.1:
-    dev: false
-    resolution:
-      integrity: sha512-odxIc1/vDlo4iZcfXqRYFj0vpXFNoGdKMAUieAlFYO6m/nl5e9KR/beGf41z4a1FI+aQgtjhuaSlDxQ0hmkrHg==
   /tslib/1.9.3:
     dev: false
     resolution:
       integrity: sha512-4krF8scpejhaOgqzBEcGM7yDIEfi0/8+8zDRZhNZZ2kjmHJ4hv3zCbQWxoJGz1iw5U0Jl0nma13xzHXcncMavQ==
-  /typescript-tuple/1.7.3:
-    dev: false
-    engines:
-      typescript: ^3.0.0
-    resolution:
-      integrity: sha512-ygCTfD6CX5ul+J0sZhq2MSouMNAeJpRXAFkYPUZomv457KWg15DuS7n+ubv15LtbX27iVo6DkuiX/5yyNdBvVg==
-  /typescript-union/0.0.0:
-    dependencies:
-      typescript-tuple: 1.7.3
-      utility-types: 2.1.0
-    dev: false
-    peerDependencies:
-      typescript: '>= 3.0.0'
-    resolution:
-      integrity: sha512-sWOTNcTOXw27cJhfvjSbxrKggb4XD+fPIFkjIqqnycdVqStj/3IR3QVEMZOheWY5ELGS3PCwuHFDVWAbK9UHvA==
-  /utility-types/2.1.0:
-    dev: false
-    engines:
-      node: '>= 4'
-    resolution:
-      integrity: sha512-/nP2gqavggo6l38rtQI/CdeV+2fmBGXVvHgj9kV2MAnms3TIi77Mz9BtapPFI0+GZQCqqom0vACQ+VlTTaCovw==
 registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
@@ -84,5 +20,5 @@ specifiers:
   '@types/node': ^10.9.3
   advanced-map-altered-equal: ^0.0.1
   advanced-map-types: ^0.0.1
-  iter-tools: ^6.1.4
+  create-array-equal: ^0.0.0
   tslib: ^1.9.3

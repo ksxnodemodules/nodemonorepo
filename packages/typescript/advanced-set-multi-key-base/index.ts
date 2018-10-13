@@ -1,11 +1,10 @@
-import { zip } from 'iter-tools'
+import createArrayEqual from 'create-array-equal'
 import AlteredEqual from 'advanced-set-altered-equal'
 
 import {
   IterableSetLike,
   SetLikeConstructor,
-  ElementEqualFunc,
-  UnboundedArray
+  ElementEqualFunc
 } from 'advanced-set-types'
 
 /**
@@ -23,19 +22,7 @@ abstract class MultiKeyBase<
     Set: SetLikeConstructor<Data>,
     equal: ElementEqualFunc<X> = Object.is
   ) {
-    type ElementSet = UnboundedArray<X>
-
-    const equalElementSet = (left: ElementSet, right: ElementSet): boolean => {
-      if (left.length !== right.length) return false
-
-      for (const [a, b] of zip(left, right)) {
-        if (!equal(a, b)) return false
-      }
-
-      return true
-    }
-
-    super(Set, equalElementSet)
+    super(Set, createArrayEqual(equal))
   }
 
   public add (x: X): this {

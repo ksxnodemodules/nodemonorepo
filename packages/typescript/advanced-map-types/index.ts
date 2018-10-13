@@ -22,4 +22,3 @@ export type MapLikeKeyValue<Instance extends MapLike<any, any>> =
 export type EqualFunc<X> = (a: X, b: X) => boolean
 export type InitFunc<X, Y> = (x: X) => Y
 export type ElementEqualFunc<X extends any[]> = EqualFunc<ElementOf<X>>
-export type UnboundedArray<X extends any[]> = ElementOf<X>[]

@@ -1,11 +1,10 @@
-import { zip } from 'iter-tools'
+import createArrayEqual from 'create-array-equal'
 import AlteredEqual from 'advanced-map-altered-equal'
 
 import {
   IterableMapLike,
   MapLikeConstructor,
-  ElementEqualFunc,
-  UnboundedArray
+  ElementEqualFunc
 } from 'advanced-map-types'
 
 /**
@@ -24,19 +23,7 @@ abstract class MultiKeyBase<
     Map: MapLikeConstructor<Data>,
     equal: ElementEqualFunc<Key> = Object.is
   ) {
-    type KeySet = UnboundedArray<Key>
-
-    const equalKeySet = (left: KeySet, right: KeySet): boolean => {
-      if (left.length !== right.length) return false
-
-      for (const [a, b] of zip(left, right)) {
-        if (!equal(a, b)) return false
-      }
-
-      return true
-    }
-
-    super(Map, equalKeySet)
+    super(Map, createArrayEqual(equal))
   }
 
   public set (key: Key, value: Value): this {

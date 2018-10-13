@@ -17,4 +17,3 @@ export type SetLikeElement<Instance extends SetLike<any>> =
 
 export type EqualFunc<X> = (a: X, b: X) => boolean
 export type ElementEqualFunc<X extends any[]> = EqualFunc<ElementOf<X>>
-export type UnboundedArray<X extends any[]> = ElementOf<X>[]
