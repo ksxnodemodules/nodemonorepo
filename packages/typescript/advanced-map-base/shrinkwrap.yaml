@@ -27,6 +27,6 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   '@types/node': ^10.9.3
-  advanced-map-types: ^0.0.1
+  advanced-map-types: ^0.0.2
   tslib: ^1.9.3
   typescript-miscellaneous: ^0.1.0
