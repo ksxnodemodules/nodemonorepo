@@ -33,7 +33,7 @@ class AlteredEqual<
    * @param x Image of element that need to be found.
    * @returns `{ found: boolean, value?: X }` with `value` being matching element.
    */
-  public find (x: X): FindingResult<X> {
+  public find (x: X): AlteredEqual.Find.Result<X> {
     const { equal } = this
 
     for (const value of this.data) {
@@ -60,6 +60,12 @@ class AlteredEqual<
     }
 
     return false
+  }
+}
+
+namespace AlteredEqual {
+  export namespace Find {
+    export type Result<X> = FindingResult<X>
   }
 }
 
