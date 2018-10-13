@@ -22,10 +22,7 @@ it('matches snapshot', () => {
   info.representative = representative
   representative.exit()
 
-  // @ts-ignore
   spySpawnSync.mockRestore()
-
-  // @ts-ignore
   spyProcessExit.mockRestore()
 
   expect(info).toMatchSnapshot()
