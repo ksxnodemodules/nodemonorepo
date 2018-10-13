@@ -1,4 +1,4 @@
-# advanced-map-altered-equal
+# advanced-map-multi-key
 
 Map-like class using multi keys
 

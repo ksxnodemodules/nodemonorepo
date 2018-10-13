@@ -1,4 +1,4 @@
-# advanced-map-altered-equal
+# advanced-map-mutable-multi-key
 
 Map-like class using mutable arrays as keys
 

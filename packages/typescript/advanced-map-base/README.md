@@ -1,4 +1,4 @@
-# advanced-map-altered-equal
+# advanced-map-base
 
 Abstract base class of advanced-map packages
 

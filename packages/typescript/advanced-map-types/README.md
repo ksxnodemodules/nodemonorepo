@@ -1,4 +1,4 @@
-# advanced-map-altered-equal
+# advanced-map-types
 
 TypeScript definitions used by advanced-map packages
 
