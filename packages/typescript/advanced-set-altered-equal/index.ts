@@ -1,4 +1,5 @@
 import Base from 'advanced-set-base'
+import { FindingResult } from 'convenient-typescript-utilities'
 
 import {
   IterableSetLike,
@@ -32,7 +33,7 @@ class AlteredEqual<
    * @param x Image of element that need to be found.
    * @returns `{ found: boolean, value?: X }` with `value` being matching element.
    */
-  public find (x: X): AlteredEqual.FindingResult<X> {
+  public find (x: X): FindingResult<X> {
     const { equal } = this
 
     for (const value of this.data) {
@@ -59,23 +60,6 @@ class AlteredEqual<
     }
 
     return false
-  }
-}
-
-namespace AlteredEqual {
-  export type FindingResult<Value> =
-    FindingResult.NotFound |
-    FindingResult.Found<Value>
-
-  export namespace FindingResult {
-    export interface NotFound {
-      readonly found: false
-    }
-
-    export interface Found<Value> {
-      readonly found: true
-      readonly value: Value
-    }
   }
 }
 

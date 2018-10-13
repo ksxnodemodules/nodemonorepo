@@ -19,6 +19,7 @@
   ],
   "dependencies": {
     "tslib": "^1.9.3",
+    "convenient-typescript-utilities": "^0.0.2",
     "advanced-set-base": "^0.0.0",
     "advanced-set-types": "^0.0.0",
     "@types/node": "^10.9.3"

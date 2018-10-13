@@ -29,3 +29,18 @@ export namespace FunctionUtils {
     Return |
     ((...args: Args) => RecursiveReturn<Return, Args>)
 }
+
+export type FindingResult<Value> =
+  FindingResult.NotFound |
+  FindingResult.Found<Value>
+
+export namespace FindingResult {
+  export interface NotFound {
+    readonly found: false
+  }
+
+  export interface Found<Value> {
+    readonly found: true
+    readonly value: Value
+  }
+}

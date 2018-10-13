@@ -1,4 +1,5 @@
 import Base from 'advanced-map-base'
+import { FindingResult } from 'convenient-typescript-utilities'
 
 import {
   IterableMapLike,
@@ -73,9 +74,5 @@ class AlteredEqual<
     return false
   }
 }
-
-type FindingResult<Value> =
-  { readonly found: true, readonly value: Value } |
-  { readonly found: false }
 
 export = AlteredEqual

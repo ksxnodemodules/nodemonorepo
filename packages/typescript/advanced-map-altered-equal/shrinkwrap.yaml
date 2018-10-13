@@ -2,6 +2,7 @@ dependencies:
   '@types/node': 10.11.3
   advanced-map-base: 'link:../advanced-map-base'
   advanced-map-types: 'link:../advanced-map-types'
+  convenient-typescript-utilities: 'link:../convenient-typescript-utilities'
   tslib: 1.9.3
 packages:
   /@types/node/10.11.3:
@@ -19,4 +20,5 @@ specifiers:
   '@types/node': ^10.9.3
   advanced-map-base: ^0.0.1
   advanced-map-types: ^0.0.1
+  convenient-typescript-utilities: ^0.0.2
   tslib: ^1.9.3
