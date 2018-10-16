@@ -1,6 +1,6 @@
 {
   "name": "advanced-set-altered-equal",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Set-like class with customizable equality operator",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
@@ -19,7 +19,7 @@
   ],
   "dependencies": {
     "tslib": "^1.9.3",
-    "convenient-typescript-utilities": "^0.0.2",
+    "convenient-typescript-utilities": "^0.0.3",
     "advanced-set-base": "^0.0.0",
     "advanced-set-types": "^0.0.0",
     "@types/node": "^10.9.3"

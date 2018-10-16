@@ -17,6 +17,6 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   '@types/node': ^10.9.3
-  advanced-set-multi-key-base: ^0.0.0
+  advanced-set-multi-key-base: ^0.0.1
   advanced-set-types: ^0.0.0
   tslib: ^1.9.3

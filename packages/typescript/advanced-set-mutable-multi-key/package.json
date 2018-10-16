@@ -1,6 +1,6 @@
 {
   "name": "advanced-set-mutable-multi-key",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Set-like class using mutable arrays as keys",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
@@ -20,7 +20,7 @@
   ],
   "dependencies": {
     "tslib": "^1.9.3",
-    "advanced-set-multi-key-base": "^0.0.0",
+    "advanced-set-multi-key-base": "^0.0.1",
     "advanced-set-types": "^0.0.0",
     "@types/node": "^10.9.3"
   },
