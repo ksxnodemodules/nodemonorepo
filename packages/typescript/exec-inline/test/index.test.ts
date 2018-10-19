@@ -33,7 +33,7 @@ it('matches snapshot', () => {
   const info: { [_: string]: any } = {}
 
   const spyObject = spy({
-    spawnSync: (...args: any[]) => {
+    spawnSync: (...args: any[]): SpawnSyncRepresented => {
       info.spawnSyncArgs = args
       return { status: 123 }
     },
