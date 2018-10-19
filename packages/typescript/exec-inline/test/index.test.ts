@@ -6,7 +6,7 @@ const spy = ({
   spawnSync,
   exit
 }: {
-  spawnSync: (cmd: string, args: string[], options: {}) => any,
+  spawnSync: (cmd: string, args: string[], options: {}) => SpawnSyncRepresented,
   exit: (status: number) => void
 }) => {
   const spySpawnSync = jest
@@ -33,7 +33,7 @@ it('matches snapshot', () => {
   const info: { [_: string]: any } = {}
 
   const spyObject = spy({
-    spawnSync: (...args: any[]): SpawnSyncRepresented => {
+    spawnSync: (...args: any[]) => {
       info.spawnSyncArgs = args
       return { status: 123 }
     },
