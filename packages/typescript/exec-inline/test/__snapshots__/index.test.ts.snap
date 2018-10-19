@@ -6,6 +6,7 @@ Object {
     123,
   ],
   "representative": SpawnSyncRepresentative {
+    "exit": [Function],
     "represented": Object {
       "status": 123,
     },

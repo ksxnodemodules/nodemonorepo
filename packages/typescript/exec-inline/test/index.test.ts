@@ -51,3 +51,88 @@ it('matches snapshot', () => {
 
   expect(info).toMatchSnapshot()
 })
+
+describe('.exit()', () => {
+  enum Status {
+    Called = 123,
+    Uncalled = 'uncalled'
+  }
+
+  const emulate = (condition?: () => boolean) => {
+    let status = Status.Uncalled
+
+    const spyObject = spy({
+      spawnSync: (): SpawnSyncRepresented => ({ status: Status.Called as Status.Called }),
+      exit (x) { status = x }
+    })
+
+    spawnSync('__').exit(condition)
+    spyObject.restore()
+
+    return status
+  }
+
+  it('always call process.exit() when condition is not provided', () => {
+    expect(emulate()).toBe(Status.Called)
+  })
+
+  it('does not call process.exit() when condition is false', () => {
+    expect(emulate(() => false)).toBe(Status.Uncalled)
+  })
+
+  it('calls process.exit() when condition is true', () => {
+    expect(emulate(() => true)).toBe(Status.Called)
+  })
+})
+
+describe('.exit.onerror()', () => {
+  type Result = 'uncalled' | number
+
+  const emulate = (status: number) => {
+    let expectation: Result = 'uncalled'
+
+    const spyObject = spy({
+      spawnSync: (): SpawnSyncRepresented => ({ status }),
+      exit (received) { expectation = received }
+    })
+
+    spawnSync('__').exit.onerror()
+    spyObject.restore()
+
+    return expectation
+  }
+
+  it('calls process.exit() when status is non-zero', () => {
+    expect(emulate(123)).toBe(123)
+  })
+
+  it('does not call process.exit() when status is zero', () => {
+    expect(emulate(0)).toBe('uncalled')
+  })
+})
+
+describe('.exit.success()', () => {
+  type Result = 'uncalled' | number
+
+  const emulate = (status: number) => {
+    let expectation: Result = 'uncalled'
+
+    const spyObject = spy({
+      spawnSync: (): SpawnSyncRepresented => ({ status }),
+      exit (received) { expectation = received }
+    })
+
+    spawnSync('__').exit.onsuccess()
+    spyObject.restore()
+
+    return expectation
+  }
+
+  it('calls process.exit() when status is zero', () => {
+    expect(emulate(0)).toBe(0)
+  })
+
+  it('does not call process.exit() when status is non-zero', () => {
+    expect(emulate(123)).toBe('uncalled')
+  })
+})
