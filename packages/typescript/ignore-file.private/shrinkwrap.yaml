@@ -1,5 +1,6 @@
 dependencies:
   '@types/fs-extra': 5.0.4
+  '@types/js-yaml': 3.11.2
   '@types/minimatch': 3.0.3
   '@types/node': 10.9.3
   '@types/yargs': 12.0.0
@@ -20,6 +21,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-DsknoBvD8s+RFfSGjmERJ7ZOP1HI0UZRA3FSI+Zakhrc/Gy26YQsLI+m5V5DHxroHRJqCDLKJp7Hixn8zyaF7g==
+  /@types/js-yaml/3.11.2:
+    dev: false
+    resolution:
+      integrity: sha512-JRDtMPEqXrzfuYAdqbxLot1GvAr/QvicIZAnOAigZaj8xVMhuSJTg/xsv9E1TvyL+wujYhRLx9ZsQ0oFOSmwyA==
   /@types/minimatch/3.0.3:
     dev: false
     resolution:
@@ -511,6 +516,7 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   '@types/fs-extra': ^5.0.4
+  '@types/js-yaml': ^3.11.2
   '@types/minimatch': ^3.0.3
   '@types/node': ^10.9.3
   '@types/yargs': ^12.0.0
