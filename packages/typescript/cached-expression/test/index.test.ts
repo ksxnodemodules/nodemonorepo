@@ -18,6 +18,47 @@ it('calls every function once', () => {
   expect(count.length).toBe(keys.length)
 })
 
+it('calls functions again after resetting caches', () => {
+  let index = 0
+  let count = 0
+  const record = Array<any>()
+  const fn = (value: any) => {
+    record.push({ index, count, value })
+    const result = { index, count, value }
+    ++count
+    return result
+  }
+  const calculator = new Calculator(fn)
+  const value = 'value'
+  const calc = () => {
+    const result = calculator.calculate(value)
+    ++index
+    return result
+  }
+
+  const x0 = calc()
+  const x1 = calc()
+  calculator.resetCache()
+  const x2 = calc()
+  const x3 = calc()
+
+  expect(record).toEqual([
+    { index: 0, count: 0, value },
+    { index: 2, count: 1, value }
+  ])
+
+  expect({ x0, x1, x2, x3 }).toEqual({
+    x0: { index: 0, count: 0, value },
+    x1: { index: 0, count: 0, value },
+    x2: { index: 2, count: 1, value },
+    x3: { index: 2, count: 1, value }
+  })
+
+  expect(x0).not.toBe(x2)
+  expect(x0).toBe(x1)
+  expect(x2).toBe(x3)
+})
+
 it('caches results', () => {
   const { calculate } = new Calculator(Math.random)
   const getArray = () => keys.map(calculate)

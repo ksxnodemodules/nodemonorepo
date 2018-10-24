@@ -22,7 +22,7 @@ import {
  */
 class Calculator<X, Y> {
   public readonly calculate: CalcFunc<X, Y>
-  private readonly cache: MapLike<X, Y>
+  private cache: MapLike<X, Y>
 
   /**
    * @param calc Function that executes once and return a value corresponding to given input
@@ -33,9 +33,8 @@ class Calculator<X, Y> {
   }
 
   protected createCalcFunc (calc: CalcFunc<X, Y>): CalcFunc<X, Y> {
-    const { cache } = this
-
     return x => {
+      const { cache } = this
       if (cache.has(x)) return cache.get(x) as Y
       const y = calc(x)
       cache.set(x, y)
@@ -48,6 +47,13 @@ class Calculator<X, Y> {
    */
   protected createCache (): MapLike<X, Y> {
     return new Map()
+  }
+
+  /**
+   * Replace current cache with new cache
+   */
+  public resetCache (): void {
+    this.cache = this.createCache()
   }
 }
 
