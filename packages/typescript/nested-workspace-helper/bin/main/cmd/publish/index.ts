@@ -23,10 +23,16 @@ enum ExitStatus {
 }
 
 namespace publisher {
-  export function real (cmd: string, cwd: string): Result {
+  export function real (param: Param): Result {
+    const {
+      cmd,
+      cwd,
+      args
+    } = param
+
     const { status, error, signal } = spawnSync(
       cmd,
-      ['publish'],
+      ['publish', ...args],
       {
         cwd,
         stdio: 'inherit',
@@ -37,9 +43,17 @@ namespace publisher {
     return { status, error, signal }
   }
 
-  export function fake (cmd: string, cwd: string): Result {
-    console.info(`Will execute "${cmd} publish" at directory ${cwd}`)
+  export function fake (param: Param): Result {
+    const { cmd, cwd, args } = param
+    const cmdsffx = args.length ? '' : ` ${args.join(' ')}`
+    console.info(`Will execute "${cmd} publish${cmdsffx}" at directory ${cwd}`)
     return { status: 0, error: undefined, signal: undefined }
+  }
+
+  export interface Param {
+    readonly cmd: string,
+    readonly cwd: string,
+    readonly args: ReadonlyArray<string>
   }
 
   export interface Result {
@@ -87,6 +101,7 @@ function builder (yargs: Argv): Argv {
 }
 
 function handler ({
+  _: args,
   directory,
   dry,
   executable,
@@ -157,7 +172,13 @@ function handler ({
       for (const item of publishables) {
         const { name } = item.manifestContent
         console.info(`Publishing ${chalk.bold(name as string)}...`)
-        const { status, error, signal } = publish(executable, item.path)
+
+        const { status, error, signal } = publish({
+          cmd: executable,
+          cwd: item.path,
+          args: args.slice(1)
+        })
+
         if (status || error || signal) console.info('[FAILED]', { status, error, signal })
         finalStatus |= status
       }
