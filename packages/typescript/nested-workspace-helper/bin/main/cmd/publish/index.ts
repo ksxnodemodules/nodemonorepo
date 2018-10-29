@@ -51,8 +51,8 @@ namespace publisher {
   }
 
   export interface Param {
-    readonly cmd: string,
-    readonly cwd: string,
+    readonly cmd: string
+    readonly cwd: string
     readonly args: ReadonlyArray<string>
   }
 
