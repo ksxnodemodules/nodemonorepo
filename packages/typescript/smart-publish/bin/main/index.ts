@@ -59,8 +59,7 @@ function help () {
 
   title('Exit Status Code')
   for (const [key, value] of Object.entries(ExitStatusCode)) {
-    // tslint:disable-next-line:strict-type-predicates
-    if (typeof key === 'number') continue
+    if (isFinite(key as any)) continue
     line(`${chalk.bold(value)} → ${key}`)
   }
 }
