@@ -1,0 +1,31 @@
+{
+  "name": "smart-publish",
+  "version": "0.0.0",
+  "description": "Like npm publish, but also tag prepreleases",
+  "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
+  "bugs": {
+    "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
+  },
+  "keywords": [
+    "publish",
+    "prerelease",
+    "tag",
+    "npm"
+  ],
+  "bin": {
+    "smart-publish": "./bin/smart-publish"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "semver": "^5.5.1",
+    "tslib": "^1.9.3",
+    "exec-inline": "^0.0.2",
+    "@types/semver": "^5.5.0",
+    "@types/node": "^10.9.3"
+  },
+  "engines": {
+    "node": ">= 8.9.0"
+  }
+}

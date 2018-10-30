@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExitStatusCode matches snapshot 1`] = `
+Object {
+  "0": "Success",
+  "1": "Other",
+  "2": "MissingName",
+  "3": "InvalidVersion",
+  "InvalidVersion": 3,
+  "MissingName": 2,
+  "Other": 1,
+  "Private": 1,
+  "Success": 0,
+}
+`;
+
+exports[`cmds when version has a text suffix 1`] = `
+Array [
+  Array [
+    "publish",
+    "--tag",
+    "rc",
+  ],
+  Array [
+    "dist-tag",
+    "add",
+    "<PackageName>@0.1.2-rc0",
+    "prerelease",
+  ],
+]
+`;
+
+exports[`cmds when version is invalid 1`] = `"Cannot parse \\"<InvalidVersion>\\" in semver format"`;

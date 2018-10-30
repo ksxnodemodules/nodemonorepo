@@ -1,0 +1,48 @@
+import {
+  cmds,
+  tags,
+  ExitStatusCode
+} from '../index'
+
+describe('ExitStatusCode', () => {
+  it('matches snapshot', () => {
+    expect(ExitStatusCode).toMatchSnapshot()
+  })
+})
+
+describe('cmds', () => {
+  const name = '<PackageName>'
+
+  it('when version is invalid', () => {
+    expect(() => cmds(name, '<InvalidVersion>')).toThrowErrorMatchingSnapshot()
+  })
+
+  it('when version has no suffix', () => {
+    const result = cmds(name, '0.1.2')
+    expect(result).toEqual([['publish']])
+  })
+
+  it('when version has a non-text suffix', () => {
+    const result = cmds(name, '0.1.2-3')
+    expect(result).toEqual([['publish', '--tag', 'prerelease']])
+  })
+
+  it('when version has a text suffix', () => {
+    const result = cmds(name, '0.1.2-rc0')
+    expect(result).toMatchSnapshot()
+  })
+})
+
+describe('tags', () => {
+  it('when suffix is not provided', () => {
+    expect(tags()).toEqual(new Set())
+  })
+
+  it('when suffix is non-text', () => {
+    expect(tags('123')).toEqual(new Set(['prerelease']))
+  })
+
+  it('when suffix is text', () => {
+    expect(tags('rc0')).toEqual(new Set(['rc', 'prerelease']))
+  })
+})
