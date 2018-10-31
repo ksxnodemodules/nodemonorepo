@@ -35,6 +35,9 @@ function main () {
   const validVersion = semver.valid(version)
   if (!validVersion) return error(InvalidVersion, `Invalid Syntax: ${JSON.stringify(version)}`)
 
+  // Changing directory, so that npm is called in the right place
+  process.chdir(CWD)
+
   console.info(`Working Directory: ${CWD}\n`)
   for (const command of cmds(name, validVersion)) {
     console.info(`${chalk.dim('$')} ${NPM} ${command.join(' ')}`)
