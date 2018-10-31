@@ -1,8 +1,21 @@
+import path from 'path'
+
 import {
   cmds,
   tags,
+  bin,
   ExitStatusCode
 } from '../index'
+
+describe('bin', () => {
+  it('matches package.json', () => {
+    expect(bin).toBe(path.resolve(
+      __dirname,
+      '..',
+      require('../package.json').bin['smart-publish']
+    ))
+  })
+})
 
 describe('ExitStatusCode', () => {
   it('matches snapshot', () => {
