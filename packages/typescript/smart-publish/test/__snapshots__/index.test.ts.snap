@@ -4,12 +4,13 @@ exports[`ExitStatusCode matches snapshot 1`] = `
 Object {
   "0": "Success",
   "1": "Other",
-  "2": "MissingName",
-  "3": "InvalidVersion",
-  "InvalidVersion": 3,
-  "MissingName": 2,
+  "2": "Private",
+  "3": "MissingName",
+  "4": "InvalidVersion",
+  "InvalidVersion": 4,
+  "MissingName": 3,
   "Other": 1,
-  "Private": 1,
+  "Private": 2,
   "Success": 0,
 }
 `;
