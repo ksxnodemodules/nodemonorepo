@@ -16,6 +16,7 @@ dependencies:
   preloaded-node: 'link:../../javascript/preloaded-node'
   ramda: 0.25.0
   semver: 5.5.1
+  smart-publish: 'link:../smart-publish'
   tslib: 1.9.3
   unique-temp-path: 'link:../unique-temp-path'
   yargs: 12.0.1
@@ -542,5 +543,6 @@ specifiers:
   preloaded-node.private: '*'
   ramda: ^0.25.0
   semver: ^5.5.1
+  smart-publish: ^0.0.2
   tslib: ^1.9.3
   yargs: ^12.0.1

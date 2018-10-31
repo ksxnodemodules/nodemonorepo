@@ -29,6 +29,7 @@
     "tslib": "^1.9.3",
     "monorepo-shared-assets": "^0.0.17",
     "fs-tree-utils": "^0.1.6",
+    "smart-publish": "^0.0.2",
     "@types/ramda": "^0.25.36",
     "@types/semver": "^5.5.0",
     "@types/js-yaml": "^3.11.2",

@@ -1,6 +1,7 @@
 import * as process from 'process'
 import { spawnSync } from 'child_process'
 import chalk from 'chalk'
+import { bin as smartPublishBin } from 'smart-publish'
 import npmRegistry from '../../../../lib/npm-registry'
 import listAllPackages from '../../../../lib/list-pkgs'
 import getDependencyMap from '../../../../lib/dep-map'
@@ -26,15 +27,18 @@ namespace publisher {
   export function real (param: Param): Result {
     const {
       cmd,
-      cwd,
-      args
+      cwd
     } = param
 
     const { status, error, signal } = spawnSync(
-      cmd,
-      ['publish', ...args],
+      'node',
+      [smartPublishBin],
       {
-        cwd,
+        env: {
+          ...process.env,
+          CWD: cwd,
+          NPM: cmd
+        },
         stdio: 'inherit',
         shell: true
       }
@@ -44,16 +48,14 @@ namespace publisher {
   }
 
   export function fake (param: Param): Result {
-    const { cmd, cwd, args } = param
-    const cmdsffx = args.length ? '' : ` ${args.join(' ')}`
-    console.info(`Will execute "${cmd} publish${cmdsffx}" at directory ${cwd}`)
+    const { cmd, cwd } = param
+    console.info(`Will execute "env CWD=${cwd} NPM=${cmd} smart-publish" at directory ${cwd}`)
     return { status: 0, error: undefined, signal: undefined }
   }
 
   export interface Param {
     readonly cmd: string
     readonly cwd: string
-    readonly args: ReadonlyArray<string>
   }
 
   export interface Result {
@@ -101,7 +103,6 @@ function builder (yargs: Argv): Argv {
 }
 
 function handler ({
-  _: args,
   directory,
   dry,
   executable,
@@ -175,8 +176,7 @@ function handler ({
 
         const { status, error, signal } = publish({
           cmd: executable,
-          cwd: item.path,
-          args: args.slice(1)
+          cwd: item.path
         })
 
         if (status || error || signal) console.info('[FAILED]', { status, error, signal })
