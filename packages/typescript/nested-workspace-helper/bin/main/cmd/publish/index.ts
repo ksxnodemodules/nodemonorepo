@@ -172,7 +172,7 @@ function handler ({
 
       for (const item of publishables) {
         const { name } = item.manifestContent
-        console.info(`Publishing ${chalk.bold(name as string)}...`)
+        console.info(`\nPublishing ${chalk.bold(name as string)}...`)
 
         const { status, error, signal } = publish({
           cmd: executable,
