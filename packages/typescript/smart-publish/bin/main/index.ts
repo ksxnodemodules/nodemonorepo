@@ -26,7 +26,7 @@ function main () {
   }
 
   const { Success, Private, MissingName, InvalidVersion } = ExitStatusCode
-  const { private: prv, name, version } = require(path.join(CWD, 'package.json'))
+  const { private: prv, name, version } = require(path.resolve(CWD, 'package.json'))
 
   if (prv) return error(Private, 'Cannot publish a private package')
   if (!name) return error(MissingName, 'Missing "name" field in package.json')
