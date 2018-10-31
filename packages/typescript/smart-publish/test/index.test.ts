@@ -31,6 +31,11 @@ describe('cmds', () => {
     const result = cmds(name, '0.1.2-rc0')
     expect(result).toMatchSnapshot()
   })
+
+  it('when version has a suffix of exactly 0', () => {
+    const result = cmds(name, '0.1.2-0')
+    expect(result).toEqual([['publish', '--tag', 'prerelease']])
+  })
 })
 
 describe('tags', () => {
@@ -45,4 +50,9 @@ describe('tags', () => {
   it('when suffix is text', () => {
     expect(tags('rc0')).toEqual(new Set(['rc', 'prerelease']))
   })
+
+  it('when suffix is exactly 0', () => {
+    expect(tags('0')).toEqual(new Set(['prerelease']))
+  })
+
 })
