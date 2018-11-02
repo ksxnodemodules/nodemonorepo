@@ -1,18 +1,18 @@
 dependencies:
-  '@types/node': 10.9.3
+  '@types/node': 10.12.2
   tslib: 1.9.3
 devDependencies:
-  '@types/ramda': 0.25.36
+  '@types/ramda': 0.26.0
   ramda: 0.25.0
 packages:
-  /@types/node/10.9.3:
+  /@types/node/10.12.2:
     dev: false
     resolution:
-      integrity: sha512-DOzWZKUnmFYG0KUOs+9HEBju2QhBU6oM2zeluunQNt0vnJvnkHvtDNlQPZDkTrkC5pZrNx1TPqeL137zciXZMQ==
-  /@types/ramda/0.25.36:
+      integrity: sha512-53ElVDSnZeFUUFIYzI8WLQ25IhWzb6vbddNp8UHlXQyU0ET2RhV5zg0NfubzU7iNMh5bBXb0htCzfvrSVNgzaQ==
+  /@types/ramda/0.26.0:
     dev: true
     resolution:
-      integrity: sha512-LAeBECPU9IG+K0pRdGl2L9lxanb0CKgue0IGpdn9nmpmKefDrCglrYwkxFYoQxCtY0w/mTxpJaQ4VAChcSIN+A==
+      integrity: sha512-6FCz2E3SrkgbuV3piRNfjThSRyMbcIxHknnGYPfrg4k55PHnNRR80boVdl1AME/KfDW+FBVmKrKPyRbFo8HjaQ==
   /ramda/0.25.0:
     dev: true
     resolution:
@@ -26,6 +26,6 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   '@types/node': ^10.9.3
-  '@types/ramda': ^0.25.36
+  '@types/ramda': ^0.26.0
   ramda: ^0.25.0
   tslib: ^1.9.3

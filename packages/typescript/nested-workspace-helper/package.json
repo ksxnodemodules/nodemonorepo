@@ -30,7 +30,7 @@
     "monorepo-shared-assets": "^0.0.17",
     "fs-tree-utils": "^0.1.6",
     "smart-publish": "^0.0.2",
-    "@types/ramda": "^0.25.36",
+    "@types/ramda": "^0.26.0",
     "@types/semver": "^5.5.0",
     "@types/js-yaml": "^3.11.2",
     "@types/fs-extra": "^5.0.4",
