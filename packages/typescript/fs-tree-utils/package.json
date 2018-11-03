@@ -25,7 +25,7 @@
     "tslib": "^1.9.3",
     "monorepo-shared-assets": "^0.0.17",
     "@types/fs-extra": "^5.0.4",
-    "@types/ramda": "^0.25.36",
+    "@types/ramda": "^0.26.0",
     "@types/node": "^10.9.3"
   },
   "devDependencies": {
