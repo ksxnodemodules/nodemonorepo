@@ -3,7 +3,7 @@ dependencies:
   '@types/js-yaml': 3.11.2
   '@types/node': 10.9.3
   '@types/node-fetch': 2.1.2
-  '@types/ramda': 0.25.36
+  '@types/ramda': 0.26.0
   '@types/semver': 5.5.0
   '@types/yargs': 12.0.0
   chalk: 2.4.1
@@ -47,10 +47,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-DOzWZKUnmFYG0KUOs+9HEBju2QhBU6oM2zeluunQNt0vnJvnkHvtDNlQPZDkTrkC5pZrNx1TPqeL137zciXZMQ==
-  /@types/ramda/0.25.36:
+  /@types/ramda/0.26.0:
     dev: false
     resolution:
-      integrity: sha512-LAeBECPU9IG+K0pRdGl2L9lxanb0CKgue0IGpdn9nmpmKefDrCglrYwkxFYoQxCtY0w/mTxpJaQ4VAChcSIN+A==
+      integrity: sha512-6FCz2E3SrkgbuV3piRNfjThSRyMbcIxHknnGYPfrg4k55PHnNRR80boVdl1AME/KfDW+FBVmKrKPyRbFo8HjaQ==
   /@types/semver/5.5.0:
     dev: false
     resolution:
@@ -531,7 +531,7 @@ specifiers:
   '@types/js-yaml': ^3.11.2
   '@types/node': ^10.9.3
   '@types/node-fetch': ^2.1.2
-  '@types/ramda': ^0.25.36
+  '@types/ramda': ^0.26.0
   '@types/semver': ^5.5.0
   '@types/yargs': ^12.0.0
   chalk: ^2.4.1
