@@ -28,9 +28,12 @@ const a1 = calculate('a')
 const a2 = calculate('a')
 const b0 = calculate('b')
 
-assert.deepEqual(a0, a1)
-assert.deepEqual(a0, a2)
-assert.notDeepEqual(a0, b0)
+// Same input produces same reference
+assert(a0 === a1)
+assert(a0 === a2)
+
+// Different inputs produces different reference
+assert(a0 !== b1)
 ```
 
 ## License
