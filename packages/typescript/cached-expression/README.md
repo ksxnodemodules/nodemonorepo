@@ -18,6 +18,8 @@ export default Calculator
 
 ### Example
 
+#### Unique Object Reference
+
 ```javascript
 import assert from 'assert'
 import { Calculator } from 'cached-expression'
