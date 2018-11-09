@@ -27,7 +27,7 @@ class AdjadentNumberedMap<Value> extends Map<number, Value> implements MapLike<n
 /**
  * This class is useful when `calculate(n)` requires `calculate(n - 1)` (e.g. factorial, fibonacci)
  */
-export class AdjadentNumberedCalculator<Value> extends Calculator<number, Value> {
+export abstract class AdjadentNumberedCalculator<Value> extends Calculator<number, Value> {
   protected createCache (): MapLike<number, Value> {
     return new AdjadentNumberedMap<Value>()
   }
