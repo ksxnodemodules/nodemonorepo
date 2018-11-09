@@ -1,6 +1,6 @@
 {
   "name": "cached-expression",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Expressions that are calculated once for each object",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",

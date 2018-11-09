@@ -1,6 +1,6 @@
 {
   "name": "cached-expression-shared-utils",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Utilities used by cached-factorial",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
@@ -13,7 +13,7 @@
   ],
   "dependencies": {
     "tslib": "^1.9.3",
-    "cached-expression": "^0.0.2",
+    "cached-expression": "^0.0.3",
     "@types/node": "^10.9.3"
   },
   "engines": {
