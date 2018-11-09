@@ -1,0 +1,21 @@
+dependencies:
+  '@types/node': 10.12.1
+  cached-expression: 'link:../cached-expression'
+  cached-expression-shared-utils: 'link:../cached-expression-shared-utils'
+  tslib: 1.9.3
+packages:
+  /@types/node/10.12.1:
+    dev: false
+    resolution:
+      integrity: sha512-i1sl+WCX2OCHeUi9oi7PiCNUtYFrpWhpcx878vpeq/tlZTKzcFdHePlyFHVbWqeuKN0SRPl/9ZFDSTsfv9h7VQ==
+  /tslib/1.9.3:
+    dev: false
+    resolution:
+      integrity: sha512-4krF8scpejhaOgqzBEcGM7yDIEfi0/8+8zDRZhNZZ2kjmHJ4hv3zCbQWxoJGz1iw5U0Jl0nma13xzHXcncMavQ==
+registry: 'https://registry.npmjs.org/'
+shrinkwrapMinorVersion: 9
+shrinkwrapVersion: 3
+specifiers:
+  '@types/node': ^10.9.3
+  cached-expression-shared-utils: ^0.0.0
+  tslib: ^1.9.3

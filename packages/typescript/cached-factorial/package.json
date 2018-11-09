@@ -1,0 +1,27 @@
+{
+  "name": "cached-factorial",
+  "version": "0.0.0",
+  "description": "Utilize cached-expression to calculate multiple factorial numbers",
+  "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksxnodemodules/nodemonorepo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
+  },
+  "keywords": [
+    "cache",
+    "factorial"
+  ],
+  "dependencies": {
+    "tslib": "^1.9.3",
+    "cached-expression-shared-utils": "^0.0.0",
+    "@types/node": "^10.9.3"
+  },
+  "engines": {
+    "node": ">= 8.9.0"
+  }
+}
