@@ -17,5 +17,5 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   '@types/node': ^10.9.3
-  cached-expression-shared-utils: ^0.0.0
+  cached-expression-shared-utils: ^0.0.1
   tslib: ^1.9.3
