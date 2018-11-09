@@ -76,6 +76,10 @@ const fib = new Calculator(
 const result = fib(7)
 ```
 
+## See Also
+
+* [Memoization](https://en.wikipedia.org/wiki/Memoization)
+
 ## License
 
 [MIT](https://git.io/vhaEz) © [Hoàng Văn Khải](https://github.com/KSXGitHub)
