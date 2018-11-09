@@ -1,7 +1,7 @@
 {
   "name": "cached-expression-shared-utils",
   "version": "0.0.0",
-  "description": "Utilities used by cached-factorial and cached-fibonacci",
+  "description": "Utilities used by cached-factorial",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",

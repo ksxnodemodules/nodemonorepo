@@ -1,5 +1,6 @@
 dependencies:
   '@types/node': 10.12.1
+  cached-expression: 'link:../cached-expression'
   cached-expression-shared-utils: 'link:../cached-expression-shared-utils'
   tslib: 1.9.3
 packages:
@@ -16,5 +17,5 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   '@types/node': ^10.9.3
-  cached-expression-shared-utils: ^0.0.0
+  cached-expression: ^0.0.2
   tslib: ^1.9.3

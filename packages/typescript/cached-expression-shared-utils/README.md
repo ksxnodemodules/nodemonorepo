@@ -1,6 +1,6 @@
 # cached-expression-shared-utils
 
-Utilities used by cached-factorial and cached-fibonacci
+Utilities used by cached-factorial
 
 ## License
 

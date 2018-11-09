@@ -7,10 +7,8 @@ import { MapLike, Calculator } from 'cached-expression'
 class AdjadentNumberedMap<Value> extends Map<number, Value> implements MapLike<number, Value> {
   private maxKey = 0
 
-  public get (key: number): Value | undefined {
-    return this.maxKey < key
-      ? undefined
-      : super.get(key)
+  public has (key: number): boolean {
+    return key <= this.maxKey
   }
 
   public set (key: number, value: Value): this {
@@ -25,7 +23,7 @@ class AdjadentNumberedMap<Value> extends Map<number, Value> implements MapLike<n
 }
 
 /**
- * This class is useful when `calculate(n)` requires `calculate(n - 1)` (e.g. factorial, fibonacci)
+ * This class is useful when `calculate(n)` requires `calculate(n - 1)` (e.g. factorial)
  */
 export abstract class AdjadentNumberedCalculator<Value> extends Calculator<number, Value> {
   protected createCache (): MapLike<number, Value> {

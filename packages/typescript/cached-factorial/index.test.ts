@@ -4,12 +4,14 @@ it('returns correct result', () => {
   const { calculate } = new CachedFactorial()
 
   expect(
-    [3, 5, 4, 7].map(x => [x, calculate(x)])
+    [3, 5, 4, 7, 10, 8].map(x => [x, calculate(x)])
   ).toEqual([
     [3, 6],
     [5, 120],
     [4, 24],
-    [7, 5040]
+    [7, 5040],
+    [10, 3628800],
+    [8, 40320]
   ])
 })
 

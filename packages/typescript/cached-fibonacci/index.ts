@@ -1,4 +1,4 @@
-import { AdjadentNumberedCalculator } from 'cached-expression-shared-utils'
+import { Calculator } from 'cached-expression'
 
 /**
  * Utilize [cached-expression](https://www.npmjs.com/package/cached-expression)
@@ -14,7 +14,7 @@ import { AdjadentNumberedCalculator } from 'cached-expression-shared-utils'
  * const { calculate } = new CachedFibonacci()
  * const result = [0, 1, 2, 3, 4, 5].map(calculate) // expect: [0, 1, 1, 2, 3, 5]
  */
-class CachedFibonacci extends AdjadentNumberedCalculator<number> {
+class CachedFibonacci extends Calculator<number, number> {
   constructor () {
     super(x => {
       if (x === 0) return 0
