@@ -16,7 +16,9 @@
     "cache",
     "expression",
     "calculation",
-    "once"
+    "once",
+    "memoize",
+    "memoization"
   ],
   "dependencies": {
     "tslib": "^1.9.3",

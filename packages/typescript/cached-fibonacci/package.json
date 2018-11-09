@@ -14,7 +14,9 @@
   },
   "keywords": [
     "cache",
-    "fibonacci"
+    "fibonacci",
+    "memoize",
+    "memoization"
   ],
   "dependencies": {
     "tslib": "^1.9.3",
