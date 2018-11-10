@@ -11,7 +11,7 @@ projects:
       '\.jsx?$': 'babel-jest'
       '\.tsx?$': 'ts-jest'
       '\.(yaml|yml)$': 'yaml-jest'
-    testRegex: (test|spec|check)\.(jsx?|tsx?)$
+    testRegex: \.(test|spec|check)\.(jsx?|tsx?)$
     moduleFileExtensions:
       - ts
       - tsx
