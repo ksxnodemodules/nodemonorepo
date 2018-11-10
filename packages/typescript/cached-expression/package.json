@@ -25,7 +25,8 @@
     "@types/node": "^10.9.3"
   },
   "devDependencies": {
-    "iter-tools": "^6.1.4"
+    "iter-tools": "^6.1.4",
+    "static-type-assert": "^3.0.1"
   },
   "engines": {
     "node": ">= 8.9.0"
