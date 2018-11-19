@@ -1,28 +1,32 @@
 dependencies:
-  '@types/node': 10.12.2
-  '@types/node-fetch': 2.1.2
+  '@types/node': 10.12.9
+  '@types/node-fetch': 2.1.4
   '@types/ramda': 0.26.0
   '@types/yargs': 12.0.1
-  assemble-registry-url: 'link:../assemble-registry-url'
-  node-fetch: 2.2.0
-  ramda: 0.25.0
+  assemble-registry-url: 0.0.0
+  node-fetch: 2.3.0
+  ramda: 0.26.0
   tslib: 1.9.3
-  yargs: 12.0.2
+  yargs: 12.0.4
 packages:
-  /@types/node-fetch/2.1.2:
+  /@types/node-fetch/2.1.4:
     dependencies:
-      '@types/node': 10.12.2
+      '@types/node': 10.12.9
     dev: false
     resolution:
-      integrity: sha512-XroxUzLpKuL+CVkQqXlffRkEPi4Gh3Oui/mWyS7ztKiyqVxiU+h3imCW5I2NQmde5jK+3q++36/Q96cyRWsweg==
-  /@types/node/10.12.2:
+      integrity: sha512-tR1ekaXUGpmzOcDXWU9BW73YfA2/VW1DF1FH+wlJ82BbCSnWTbdX+JkqWQXWKIGsFPnPsYadbXfNgz28g+ccWg==
+  /@types/node/10.12.9:
     dev: false
     resolution:
-      integrity: sha512-53ElVDSnZeFUUFIYzI8WLQ25IhWzb6vbddNp8UHlXQyU0ET2RhV5zg0NfubzU7iNMh5bBXb0htCzfvrSVNgzaQ==
+      integrity: sha512-eajkMXG812/w3w4a1OcBlaTwsFPO5F7fJ/amy+tieQxEMWBlbV1JGSjkFM+zkHNf81Cad+dfIRA+IBkvmvdAeA==
   /@types/ramda/0.26.0:
     dev: false
     resolution:
       integrity: sha512-6FCz2E3SrkgbuV3piRNfjThSRyMbcIxHknnGYPfrg4k55PHnNRR80boVdl1AME/KfDW+FBVmKrKPyRbFo8HjaQ==
+  /@types/semver/5.5.0:
+    dev: false
+    resolution:
+      integrity: sha512-41qEJgBH/TWgo5NFSvBCJ1qkoi3Q6ONSF2avrHq1LVEZfYpdHmj0y9SuTK+u9ZhG1sYQKBL1AWXKyLWP4RaUoQ==
   /@types/yargs/12.0.1:
     dev: false
     resolution:
@@ -39,12 +43,23 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-7QMXwyIGT3lGbAKWa922Bas32Zg=
-  /camelcase/4.1.0:
+  /assemble-registry-url/0.0.0:
+    dependencies:
+      '@types/node': 10.12.9
+      '@types/semver': 5.5.0
+      semver: 5.6.0
+      tslib: 1.9.3
     dev: false
     engines:
-      node: '>=4'
+      node: '>= 8.9.0'
     resolution:
-      integrity: sha1-1UVjW+HjPFQmScaRc+Xeas+uNN0=
+      integrity: sha512-FFZpPh4AIDzOAKiOXd7/z6urBGS3NR59aHUJf3lSYTLeMTr0m9zACursZcdodhzc2SkP8BMUpIY6br6R27PBFA==
+  /camelcase/5.0.0:
+    dev: false
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-faqwZqnWxbxn+F1d399ygeamQNy3lPp/H9H6rNrqYh4FSVCtcY+3cub1MxA8o9mDd55mM8Aghuu/kuyYA6VTsA==
   /cliui/4.1.0:
     dependencies:
       string-width: 2.1.1
@@ -71,14 +86,12 @@ packages:
       node: '>=4.8'
     resolution:
       integrity: sha512-eTVLrBSt7fjbDygz805pMnstIs2VTBNkRm0qxZd+M7A5XDdxVRWO5MxGBXZhjY4cqLYLdtrGqRf8mBPmzwSpWQ==
-  /decamelize/2.0.0:
-    dependencies:
-      xregexp: 4.0.0
+  /decamelize/1.2.0:
     dev: false
     engines:
-      node: '>=4'
+      node: '>=0.10.0'
     resolution:
-      integrity: sha512-Ikpp5scV3MSYxY39ymh45ZLEecsTdv/Xj2CaQfI8RLMuwi7XvjX9H/fhraiSuU+C5w5NTDu4ZU72xNiZnurBPg==
+      integrity: sha1-9lNNFRSCabIDUue+4m9QH5oZEpA=
   /execa/0.10.0:
     dependencies:
       cross-spawn: 6.0.5
@@ -158,17 +171,17 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-7AO748wWnIhNqAuaty2ZWHkQHRSNfPVIsPIfwEOWO22AmaoVrWavlOcMR5nzTLNYvp36X220/maaRsrec1G65A==
-  /map-age-cleaner/0.1.2:
+  /map-age-cleaner/0.1.3:
     dependencies:
       p-defer: 1.0.0
     dev: false
     engines:
       node: '>=6'
     resolution:
-      integrity: sha512-UN1dNocxQq44IhJyMI4TU8phc2m9BddacHRPRjKGLYaF0jqd3xLz0jS0skpAU9WgYyoR4gHtUpzytNBS385FWQ==
+      integrity: sha512-bJzx6nMoP6PDLPBFmg7+xRKeFZvFboMrGlxmNj9ClvX53KrmvM5bXFXEWjbz4cz1AFn+jWJ9z/DJSz7hrs0w3w==
   /mem/4.0.0:
     dependencies:
-      map-age-cleaner: 0.1.2
+      map-age-cleaner: 0.1.3
       mimic-fn: 1.2.0
       p-is-promise: 1.1.0
     dev: false
@@ -186,12 +199,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==
-  /node-fetch/2.2.0:
+  /node-fetch/2.3.0:
     dev: false
     engines:
       node: 4.x || >=6.0.0
     resolution:
-      integrity: sha512-OayFWziIxiHY8bCUyLX6sTpDH8Jsbp4FfYd1j1f7vZyfgkcOnAyM4oQR16f8a0s7Gl/viMGRey8eScYk4V4EZA==
+      integrity: sha512-MOd8pV3fxENbryESLgVIeaGKrdl+uaYhCSSVkjeOb/31/njTpcis5aWfdqgNlHIrKOLRbMnfPINPOML2CIFeXA==
   /npm-run-path/2.0.2:
     dependencies:
       path-key: 2.0.1
@@ -268,10 +281,10 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-QRyttXTFoUDTpLGRDUDYDMn0C0A=
-  /ramda/0.25.0:
+  /ramda/0.26.0:
     dev: false
     resolution:
-      integrity: sha512-GXpfrYVPwx3K7RQ6aYT8KPS8XViSXUVJT1ONhoKPE9VAleW42YE+U+8VEyGWt41EnEQW7gwecYJriTI0pKoecQ==
+      integrity: sha512-maK1XqpgsOo5DwjhROjqDvpm1vkphLQbpleVv+b3t5Y9uOQ0t8hTHT582+mDs7RLrex1kd4lWYizNXWLVjsq9w==
   /require-directory/2.1.1:
     dev: false
     engines:
@@ -374,24 +387,21 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-2Pw9KE3QV5T+hJc8rs3Rz4JP3YU=
-  /xregexp/4.0.0:
-    dev: false
-    resolution:
-      integrity: sha512-PHyM+sQouu7xspQQwELlGwwd05mXUFqwFYfqPO0cC7x4fxyHnnuetmQr6CjJiafIDoH4MogHb9dOoJzR/Y4rFg==
   /y18n/4.0.0:
     dev: false
     resolution:
       integrity: sha512-r9S/ZyXu/Xu9q1tYlpsLIsa3EeLXXk0VwlxqTcFRfg9EhMW+17kbt9G0NrgCmhGb5vT2hyhJZLfDGx+7+5Uj/w==
-  /yargs-parser/10.1.0:
+  /yargs-parser/11.1.0:
     dependencies:
-      camelcase: 4.1.0
+      camelcase: 5.0.0
+      decamelize: 1.2.0
     dev: false
     resolution:
-      integrity: sha512-VCIyR1wJoEBZUqk5PA+oOBF6ypbwh5aNB3I50guxAL/quggdfs4TtNHQrSazFA3fYZ+tEqfs0zIGlv0c/rgjbQ==
-  /yargs/12.0.2:
+      integrity: sha512-lGA5HsbjkpCfekDBHAhgE5OE8xEoqiUDylowr+BvhRCwG1xVYTsd8hx2CYC0NY4k9RIgJeybFTG2EZW4P2aN1w==
+  /yargs/12.0.4:
     dependencies:
       cliui: 4.1.0
-      decamelize: 2.0.0
+      decamelize: 1.2.0
       find-up: 3.0.0
       get-caller-file: 1.0.3
       os-locale: 3.0.1
@@ -401,10 +411,10 @@ packages:
       string-width: 2.1.1
       which-module: 2.0.0
       y18n: 4.0.0
-      yargs-parser: 10.1.0
+      yargs-parser: 11.1.0
     dev: false
     resolution:
-      integrity: sha512-e7SkEx6N6SIZ5c5H22RTZae61qtn3PYUE8JYbBFlK9sYmh3DMQ6E5ygtaG/2BW0JZi4WGgTR2IV5ChqlqrDGVQ==
+      integrity: sha512-f5esswlPO351AnejaO2A1ZZr0zesz19RehQKwiRDqWtrraWrJy16tsUIKgDXFMVytvNOHPVmTiaTh3wO67I0fQ==
 registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
@@ -415,6 +425,6 @@ specifiers:
   '@types/yargs': ^12.0.0
   assemble-registry-url: ^0.0.0
   node-fetch: ^2.2.0
-  ramda: ^0.25.0
+  ramda: ^0.26.0
   tslib: ^1.9.3
   yargs: ^12.0.1
