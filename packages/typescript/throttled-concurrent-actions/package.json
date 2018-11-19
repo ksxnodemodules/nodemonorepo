@@ -17,7 +17,7 @@
     "throttled"
   ],
   "dependencies": {
-    "ramda": "^0.25.0",
+    "ramda": "^0.26.0",
     "tslib": "^1.9.3",
     "@types/ramda": "^0.26.0",
     "@types/node": "^10.9.3"

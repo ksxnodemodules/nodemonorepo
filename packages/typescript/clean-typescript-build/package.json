@@ -19,7 +19,7 @@
   ],
   "dependencies": {
     "fs-extra": "^7.0.0",
-    "ramda": "^0.25.0",
+    "ramda": "^0.26.0",
     "yargs": "^12.0.1",
     "tslib": "^1.9.3",
     "fs-tree-utils": "^0.1.6",
