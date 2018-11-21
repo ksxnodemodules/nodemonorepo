@@ -3,7 +3,7 @@ dependencies:
   '@types/node-fetch': 2.1.4
   '@types/ramda': 0.26.0
   '@types/yargs': 12.0.1
-  assemble-registry-url: 0.0.0
+  assemble-registry-url: 'link:../assemble-registry-url'
   node-fetch: 2.3.0
   ramda: 0.26.0
   tslib: 1.9.3
@@ -23,10 +23,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-6FCz2E3SrkgbuV3piRNfjThSRyMbcIxHknnGYPfrg4k55PHnNRR80boVdl1AME/KfDW+FBVmKrKPyRbFo8HjaQ==
-  /@types/semver/5.5.0:
-    dev: false
-    resolution:
-      integrity: sha512-41qEJgBH/TWgo5NFSvBCJ1qkoi3Q6ONSF2avrHq1LVEZfYpdHmj0y9SuTK+u9ZhG1sYQKBL1AWXKyLWP4RaUoQ==
   /@types/yargs/12.0.1:
     dev: false
     resolution:
@@ -43,17 +39,6 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-7QMXwyIGT3lGbAKWa922Bas32Zg=
-  /assemble-registry-url/0.0.0:
-    dependencies:
-      '@types/node': 10.12.9
-      '@types/semver': 5.5.0
-      semver: 5.6.0
-      tslib: 1.9.3
-    dev: false
-    engines:
-      node: '>= 8.9.0'
-    resolution:
-      integrity: sha512-FFZpPh4AIDzOAKiOXd7/z6urBGS3NR59aHUJf3lSYTLeMTr0m9zACursZcdodhzc2SkP8BMUpIY6br6R27PBFA==
   /camelcase/5.0.0:
     dev: false
     engines:

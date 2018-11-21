@@ -14,7 +14,7 @@ dependencies:
   monorepo-shared-assets: 'link:../monorepo-shared-assets'
   node-fetch: 2.2.0
   preloaded-node: 'link:../../javascript/preloaded-node'
-  ramda: 0.25.0
+  ramda: 0.26.0
   semver: 5.5.1
   smart-publish: 'link:../smart-publish'
   tslib: 1.9.3
@@ -364,10 +364,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-8FKijacOYYkX7wqKw0wa5aaChrM=
-  /ramda/0.25.0:
+  /ramda/0.26.0:
     dev: false
     resolution:
-      integrity: sha512-GXpfrYVPwx3K7RQ6aYT8KPS8XViSXUVJT1ONhoKPE9VAleW42YE+U+8VEyGWt41EnEQW7gwecYJriTI0pKoecQ==
+      integrity: sha512-maK1XqpgsOo5DwjhROjqDvpm1vkphLQbpleVv+b3t5Y9uOQ0t8hTHT582+mDs7RLrex1kd4lWYizNXWLVjsq9w==
   /require-directory/2.1.1:
     dev: false
     engines:
@@ -541,7 +541,7 @@ specifiers:
   monorepo-shared-assets: ^0.0.17
   node-fetch: ^2.2.0
   preloaded-node.private: '*'
-  ramda: ^0.25.0
+  ramda: ^0.26.0
   semver: ^5.5.1
   smart-publish: ^0.0.2
   tslib: ^1.9.3
