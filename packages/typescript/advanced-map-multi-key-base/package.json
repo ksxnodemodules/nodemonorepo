@@ -1,6 +1,6 @@
 {
   "name": "advanced-map-multi-key-base",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Abstract base class of advanced-map-multi-key and advanced-map-mutable-multi-key",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "tslib": "^1.9.3",
-    "create-array-equal": "^0.0.0",
+    "create-array-equal": "^0.0.1",
     "advanced-map-altered-equal": "^0.0.3",
     "advanced-map-types": "^0.0.2",
     "@types/node": "^10.9.3"

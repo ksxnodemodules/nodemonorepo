@@ -1,6 +1,6 @@
 {
   "name": "create-array-equal",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Create equality function for arrays",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",

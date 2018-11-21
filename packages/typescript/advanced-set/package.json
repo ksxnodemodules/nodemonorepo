@@ -1,6 +1,6 @@
 {
   "name": "advanced-set",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Advanced Set-like classes",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
@@ -21,10 +21,10 @@
     "tslib": "^1.9.3",
     "advanced-set-types": "^0.0.0",
     "advanced-set-base": "^0.0.0",
-    "advanced-set-multi-key-base": "^0.0.1",
+    "advanced-set-multi-key-base": "^0.0.2",
     "advanced-set-altered-equal": "^0.0.1",
-    "advanced-set-multi-key": "^0.0.1",
-    "advanced-set-mutable-multi-key": "^0.0.1",
+    "advanced-set-multi-key": "^0.0.2",
+    "advanced-set-mutable-multi-key": "^0.0.2",
     "@types/node": "^10.9.3"
   },
   "engines": {

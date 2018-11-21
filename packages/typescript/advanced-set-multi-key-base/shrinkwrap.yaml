@@ -20,5 +20,5 @@ specifiers:
   '@types/node': ^10.9.3
   advanced-set-altered-equal: ^0.0.1
   advanced-set-types: ^0.0.0
-  create-array-equal: ^0.0.0
+  create-array-equal: ^0.0.1
   tslib: ^1.9.3

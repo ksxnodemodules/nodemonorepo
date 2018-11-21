@@ -1,6 +1,6 @@
 {
   "name": "advanced-set-multi-key",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Set-like class using multi keys",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
@@ -19,7 +19,7 @@
   ],
   "dependencies": {
     "tslib": "^1.9.3",
-    "advanced-set-multi-key-base": "^0.0.1",
+    "advanced-set-multi-key-base": "^0.0.2",
     "advanced-set-types": "^0.0.0",
     "@types/node": "^10.9.3"
   },
