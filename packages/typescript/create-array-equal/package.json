@@ -24,6 +24,9 @@
     "tslib": "^1.9.3",
     "@types/node": "^10.9.3"
   },
+  "devDependencies": {
+    "static-type-assert": "^3.0.1"
+  },
   "engines": {
     "node": ">= 8.9.0"
   }

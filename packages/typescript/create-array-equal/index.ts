@@ -1,7 +1,15 @@
 import { zip } from 'iter-tools'
 import { ElementOf } from 'typescript-miscellaneous'
 
-function create<Array extends any[]> (
+/**
+ * @private
+ */
+interface ArrayLike<Element = any> extends Iterable<Element> {
+  readonly [index: number]: Element
+  readonly length: number
+}
+
+function create<Array extends ArrayLike> (
   elementEqual: create.ElementEqual<Array> = create.ElementEqual.DEFAULT
 ): create.ArrayEqual<Array> {
   type ArrayEqual = create.ArrayEqual<Array>
@@ -20,11 +28,11 @@ function create<Array extends any[]> (
 }
 
 namespace create {
-  export interface ArrayEqual<Array extends any[]> {
+  export interface ArrayEqual<Array extends ArrayLike> {
     (a: Array, b: Array): boolean
   }
 
-  export interface ElementEqual<Array extends any[]> {
+  export interface ElementEqual<Array extends ArrayLike> {
     (a: ElementOf<Array>, b: ElementOf<Array>, fn: ArrayEqual<Array>): boolean
   }
 
