@@ -1,6 +1,5 @@
 dependencies:
   nested-workspace-helper: 'link:packages/typescript/nested-workspace-helper'
-  preloaded-node: 'link:packages/javascript/preloaded-node'
 devDependencies:
   '@types/glob': 7.1.0
   '@types/jest': 23.3.5

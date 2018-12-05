@@ -1,6 +1,5 @@
 dependencies:
   '@types/node': 10.9.3
-  preloaded-node: 'link:../../javascript/preloaded-node'
   tslib: 1.9.3
 devDependencies:
   path-env: 'link:../path-env'
