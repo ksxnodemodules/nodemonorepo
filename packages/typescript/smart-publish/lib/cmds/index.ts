@@ -32,7 +32,7 @@ namespace createCommands {
   export type NoTags = [['publish', '--access', 'public']]
   export type SingleTag = [SingleTagSole]
   export type SingleTagSole = ['publish', '--tag', string, '--access', 'public']
-  export type MultiTags = [SingleTag[0], ...MultiTagsRest[]]
+  export type MultiTags = [SingleTagSole, ...MultiTagsRest[]]
   export type MultiTagsRest = ['dist-tag', 'add', string, string]
 }
 
