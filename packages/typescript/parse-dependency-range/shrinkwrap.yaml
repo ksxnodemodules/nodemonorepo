@@ -3,7 +3,6 @@ dependencies:
   '@types/semver': 5.5.0
   convenient-typescript-utilities: 'link:../convenient-typescript-utilities'
   semver: 5.5.1
-  split-string-once: 'link:../split-string-once'
   tslib: 1.9.3
 packages:
   /@types/node/10.9.4:

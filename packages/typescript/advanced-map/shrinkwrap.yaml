@@ -7,7 +7,6 @@ dependencies:
   advanced-map-multi-key-base: 'link:../advanced-map-multi-key-base'
   advanced-map-mutable-multi-key: 'link:../advanced-map-mutable-multi-key'
   advanced-map-types: 'link:../advanced-map-types'
-  cached-expression: 'link:../cached-expression'
   tslib: 1.9.3
 devDependencies:
   iter-tools: 6.1.4

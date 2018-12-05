@@ -1,7 +1,5 @@
 dependencies:
   '@types/node': 10.11.3
-  advanced-map-altered-equal: 'link:../advanced-map-altered-equal'
-  advanced-map-multi-key: 'link:'
   advanced-map-multi-key-base: 'link:../advanced-map-multi-key-base'
   advanced-map-types: 'link:../advanced-map-types'
   tslib: 1.9.3

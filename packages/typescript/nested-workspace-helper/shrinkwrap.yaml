@@ -7,7 +7,6 @@ dependencies:
   '@types/semver': 5.5.0
   '@types/yargs': 12.0.0
   chalk: 2.4.1
-  extra-jest: 'link:../extra-jest'
   fs-extra: 7.0.0
   fs-tree-utils: 'link:../fs-tree-utils'
   js-yaml: 3.12.0
@@ -17,7 +16,6 @@ dependencies:
   semver: 5.5.1
   smart-publish: 'link:../smart-publish'
   tslib: 1.9.3
-  unique-temp-path: 'link:../unique-temp-path'
   yargs: 12.0.1
 devDependencies:
   preloaded-node.private: 'link:../../javascript/preloaded-node.private'

@@ -1,7 +1,6 @@
 dependencies:
   '@types/node': 10.12.1
   cached-expression: 'link:../cached-expression'
-  cached-expression-shared-utils: 'link:../cached-expression-shared-utils'
   tslib: 1.9.3
 packages:
   /@types/node/10.12.1:
