@@ -1,6 +1,6 @@
 # smart-publish
 
-Like `npm publish`, but also tag prepreleases
+Like `npm publish`, but also tag prepreleases and knows when it is public
 
 ## Requirements
 

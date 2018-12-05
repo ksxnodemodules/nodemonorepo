@@ -1,7 +1,7 @@
 {
   "name": "smart-publish",
   "version": "0.0.2",
-  "description": "Like npm publish, but also tag prepreleases",
+  "description": "Like npm publish, but also tag prepreleases and knows when it is public",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/ksxnodemodules/nodemonorepo#readme",
