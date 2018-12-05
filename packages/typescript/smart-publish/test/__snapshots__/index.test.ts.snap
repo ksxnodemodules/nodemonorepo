@@ -21,6 +21,8 @@ Array [
     "publish",
     "--tag",
     "rc",
+    "--access",
+    "public",
   ],
   Array [
     "dist-tag",

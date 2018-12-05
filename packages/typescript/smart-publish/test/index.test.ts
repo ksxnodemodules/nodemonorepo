@@ -32,12 +32,12 @@ describe('cmds', () => {
 
   it('when version has no suffix', () => {
     const result = cmds(name, '0.1.2')
-    expect(result).toEqual([['publish']])
+    expect(result).toEqual([['publish', '--access', 'public']])
   })
 
   it('when version has a non-text suffix', () => {
     const result = cmds(name, '0.1.2-3')
-    expect(result).toEqual([['publish', '--tag', 'prerelease']])
+    expect(result).toEqual([['publish', '--tag', 'prerelease', '--access', 'public']])
   })
 
   it('when version has a text suffix', () => {
@@ -47,7 +47,7 @@ describe('cmds', () => {
 
   it('when version has a suffix of exactly 0', () => {
     const result = cmds(name, '0.1.2-0')
-    expect(result).toEqual([['publish', '--tag', 'prerelease']])
+    expect(result).toEqual([['publish', '--tag', 'prerelease', '--access', 'public']])
   })
 })
 

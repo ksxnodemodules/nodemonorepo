@@ -12,7 +12,7 @@ function createCommands (name: string, version: string): createCommands.Result {
   const [first, second, ...tagsRest] = createTags(prerelease[0])
 
   if (second) {
-    const firstCmd: createCommands.SingleTagSole = ['publish', '--tag', first]
+    const firstCmd: createCommands.SingleTagSole = ['publish', '--tag', first, '--access', 'public']
 
     const restCmd = [second, ...tagsRest]
       .map((tag): createCommands.MultiTagsRest => ['dist-tag', 'add', `${name}@${version}`, tag])
@@ -21,17 +21,17 @@ function createCommands (name: string, version: string): createCommands.Result {
   }
 
   if (first) {
-    return [['publish', '--tag', first]]
+    return [['publish', '--tag', first, '--access', 'public']]
   }
 
-  return [['publish']]
+  return [['publish', '--access', 'public']]
 }
 
 namespace createCommands {
   export type Result = NoTags | SingleTag | MultiTags
-  export type NoTags = [['publish']]
+  export type NoTags = [['publish', '--access', 'public']]
   export type SingleTag = [SingleTagSole]
-  export type SingleTagSole = ['publish', '--tag', string]
+  export type SingleTagSole = ['publish', '--tag', string, '--access', 'public']
   export type MultiTags = [SingleTag[0], ...MultiTagsRest[]]
   export type MultiTagsRest = ['dist-tag', 'add', string, string]
 }
