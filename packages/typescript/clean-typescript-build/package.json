@@ -1,6 +1,6 @@
 {
   "name": "clean-typescript-build",
-  "version": "0.0.7",
+  "version": "0.1.0",
   "description": "Some commands in needs for nodemonorepo",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
