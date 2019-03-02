@@ -15,6 +15,8 @@ root:
       file.d.tsx.map: 'Should be kept'
       file.jsx: 'Should be kept'
       file.jsx.map: 'Should be kept'
+      file.mjs: 'Should be kept'
+      file.mjs.map: 'Should be kept'
     folders:
       __describe: 'Folders whose names matches output filename pattern'
       file.ts: 'Should be kept'
@@ -36,6 +38,8 @@ root:
           file.d.tsx.map: 'Should be kept'
           file.jsx: 'Should be kept'
           file.jsx.map: 'Should be kept'
+          file.mjs: 'Should be kept'
+          file.mjs.map: 'Should be kept'
       indirect-node-modules-descendants:
         node_modules:
           a-dummy-package:
@@ -49,6 +53,8 @@ root:
             file.d.tsx.map: 'Should be kept'
             file.jsx: 'Should be kept'
             file.jsx.map: 'Should be kept'
+            file.mjs: 'Should be kept'
+            file.mjs.map: 'Should be kept'
   to-be-cleaned:
     __describe: 'The tree should lose its leaves'
     src-and-out:
@@ -63,6 +69,8 @@ root:
         file.d.tsx.map: 'Should be deleted'
         file.jsx: 'Should be deleted'
         file.jsx.map: 'Should be deleted'
+        file.mjs: 'Should be deleted'
+        file.mjs.map: 'Should be deleted'
       tsx-ext:
         file.tsx: 'Should be kept'
         file.d.ts: 'Should be deleted'
@@ -73,6 +81,8 @@ root:
         file.d.tsx.map: 'Should be deleted'
         file.jsx: 'Should be deleted'
         file.jsx.map: 'Should be deleted'
+        file.mjs: 'Should be deleted'
+        file.mjs.map: 'Should be deleted'
       incompleted-out:
         __describe: 'Missing source map and type header'
         file.ts: 'Should be kept'

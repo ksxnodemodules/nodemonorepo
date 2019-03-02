@@ -62,14 +62,16 @@ stdout: |+
 
   TypeScript Cleaner
 
-  Detected 17 files to delete
+  Detected 21 files to delete
 
-  Deleted 17 files
+  Deleted 21 files
     → root/to-be-cleaned/src-and-out/incompleted-out/file.js
     → root/to-be-cleaned/src-and-out/ts-ext/file.js
     → root/to-be-cleaned/src-and-out/ts-ext/file.js.map
     → root/to-be-cleaned/src-and-out/ts-ext/file.jsx
     → root/to-be-cleaned/src-and-out/ts-ext/file.jsx.map
+    → root/to-be-cleaned/src-and-out/ts-ext/file.mjs
+    → root/to-be-cleaned/src-and-out/ts-ext/file.mjs.map
     → root/to-be-cleaned/src-and-out/ts-ext/file.d.ts
     → root/to-be-cleaned/src-and-out/ts-ext/file.d.ts.map
     → root/to-be-cleaned/src-and-out/ts-ext/file.d.tsx
@@ -78,6 +80,8 @@ stdout: |+
     → root/to-be-cleaned/src-and-out/tsx-ext/file.js.map
     → root/to-be-cleaned/src-and-out/tsx-ext/file.jsx
     → root/to-be-cleaned/src-and-out/tsx-ext/file.jsx.map
+    → root/to-be-cleaned/src-and-out/tsx-ext/file.mjs
+    → root/to-be-cleaned/src-and-out/tsx-ext/file.mjs.map
     → root/to-be-cleaned/src-and-out/tsx-ext/file.d.ts
     → root/to-be-cleaned/src-and-out/tsx-ext/file.d.ts.map
     → root/to-be-cleaned/src-and-out/tsx-ext/file.d.tsx
@@ -104,6 +108,8 @@ stdout: |+
       \\"root/to-be-cleaned/src-and-out/ts-ext/file.js.map\\",
       \\"root/to-be-cleaned/src-and-out/ts-ext/file.jsx\\",
       \\"root/to-be-cleaned/src-and-out/ts-ext/file.jsx.map\\",
+      \\"root/to-be-cleaned/src-and-out/ts-ext/file.mjs\\",
+      \\"root/to-be-cleaned/src-and-out/ts-ext/file.mjs.map\\",
       \\"root/to-be-cleaned/src-and-out/ts-ext/file.d.ts\\",
       \\"root/to-be-cleaned/src-and-out/ts-ext/file.d.ts.map\\",
       \\"root/to-be-cleaned/src-and-out/ts-ext/file.d.tsx\\",
@@ -112,6 +118,8 @@ stdout: |+
       \\"root/to-be-cleaned/src-and-out/tsx-ext/file.js.map\\",
       \\"root/to-be-cleaned/src-and-out/tsx-ext/file.jsx\\",
       \\"root/to-be-cleaned/src-and-out/tsx-ext/file.jsx.map\\",
+      \\"root/to-be-cleaned/src-and-out/tsx-ext/file.mjs\\",
+      \\"root/to-be-cleaned/src-and-out/tsx-ext/file.mjs.map\\",
       \\"root/to-be-cleaned/src-and-out/tsx-ext/file.d.ts\\",
       \\"root/to-be-cleaned/src-and-out/tsx-ext/file.d.ts.map\\",
       \\"root/to-be-cleaned/src-and-out/tsx-ext/file.d.tsx\\",
@@ -123,6 +131,8 @@ stdout: |+
       \\"root/to-be-cleaned/src-and-out/ts-ext/file.js.map\\",
       \\"root/to-be-cleaned/src-and-out/ts-ext/file.jsx\\",
       \\"root/to-be-cleaned/src-and-out/ts-ext/file.jsx.map\\",
+      \\"root/to-be-cleaned/src-and-out/ts-ext/file.mjs\\",
+      \\"root/to-be-cleaned/src-and-out/ts-ext/file.mjs.map\\",
       \\"root/to-be-cleaned/src-and-out/ts-ext/file.d.ts\\",
       \\"root/to-be-cleaned/src-and-out/ts-ext/file.d.ts.map\\",
       \\"root/to-be-cleaned/src-and-out/ts-ext/file.d.tsx\\",
@@ -131,6 +141,8 @@ stdout: |+
       \\"root/to-be-cleaned/src-and-out/tsx-ext/file.js.map\\",
       \\"root/to-be-cleaned/src-and-out/tsx-ext/file.jsx\\",
       \\"root/to-be-cleaned/src-and-out/tsx-ext/file.jsx.map\\",
+      \\"root/to-be-cleaned/src-and-out/tsx-ext/file.mjs\\",
+      \\"root/to-be-cleaned/src-and-out/tsx-ext/file.mjs.map\\",
       \\"root/to-be-cleaned/src-and-out/tsx-ext/file.d.ts\\",
       \\"root/to-be-cleaned/src-and-out/tsx-ext/file.d.ts.map\\",
       \\"root/to-be-cleaned/src-and-out/tsx-ext/file.d.tsx\\",
@@ -185,6 +197,14 @@ Object {
     },
     Object {
       "content": "Should be deleted",
+      "filename": "root/to-be-cleaned/src-and-out/ts-ext/file.mjs",
+    },
+    Object {
+      "content": "Should be deleted",
+      "filename": "root/to-be-cleaned/src-and-out/ts-ext/file.mjs.map",
+    },
+    Object {
+      "content": "Should be deleted",
       "filename": "root/to-be-cleaned/src-and-out/tsx-ext/file.d.ts",
     },
     Object {
@@ -214,6 +234,14 @@ Object {
     Object {
       "content": "Should be deleted",
       "filename": "root/to-be-cleaned/src-and-out/tsx-ext/file.jsx.map",
+    },
+    Object {
+      "content": "Should be deleted",
+      "filename": "root/to-be-cleaned/src-and-out/tsx-ext/file.mjs",
+    },
+    Object {
+      "content": "Should be deleted",
+      "filename": "root/to-be-cleaned/src-and-out/tsx-ext/file.mjs.map",
     },
   ],
   "remainingFileContents": Array [
@@ -267,6 +295,14 @@ Object {
     },
     Object {
       "content": "Should be kept",
+      "filename": "root/to-be-kept/ignored/direct-node-modules-descendants/node_modules/file.mjs",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/ignored/direct-node-modules-descendants/node_modules/file.mjs.map",
+    },
+    Object {
+      "content": "Should be kept",
       "filename": "root/to-be-kept/ignored/direct-node-modules-descendants/node_modules/file.ts",
     },
     Object {
@@ -304,6 +340,14 @@ Object {
     Object {
       "content": "Should be kept",
       "filename": "root/to-be-kept/ignored/indirect-node-modules-descendants/node_modules/a-dummy-package/file.jsx.map",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/ignored/indirect-node-modules-descendants/node_modules/a-dummy-package/file.mjs",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/ignored/indirect-node-modules-descendants/node_modules/a-dummy-package/file.mjs.map",
     },
     Object {
       "content": "Should be kept",
@@ -347,6 +391,14 @@ Object {
     },
     Object {
       "content": "Should be kept",
+      "filename": "root/to-be-kept/out-only/file.mjs",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/out-only/file.mjs.map",
+    },
+    Object {
+      "content": "Should be kept",
       "filename": "root/to-be-kept/src-only/file.ts",
     },
     Object {
@@ -364,6 +416,8 @@ Object {
     "root/to-be-cleaned/src-and-out/ts-ext/file.js.map",
     "root/to-be-cleaned/src-and-out/ts-ext/file.jsx",
     "root/to-be-cleaned/src-and-out/ts-ext/file.jsx.map",
+    "root/to-be-cleaned/src-and-out/ts-ext/file.mjs",
+    "root/to-be-cleaned/src-and-out/ts-ext/file.mjs.map",
     "root/to-be-cleaned/src-and-out/tsx-ext/file.d.ts",
     "root/to-be-cleaned/src-and-out/tsx-ext/file.d.ts.map",
     "root/to-be-cleaned/src-and-out/tsx-ext/file.d.tsx",
@@ -372,6 +426,8 @@ Object {
     "root/to-be-cleaned/src-and-out/tsx-ext/file.js.map",
     "root/to-be-cleaned/src-and-out/tsx-ext/file.jsx",
     "root/to-be-cleaned/src-and-out/tsx-ext/file.jsx.map",
+    "root/to-be-cleaned/src-and-out/tsx-ext/file.mjs",
+    "root/to-be-cleaned/src-and-out/tsx-ext/file.mjs.map",
   ],
 }
 `;
@@ -428,6 +484,14 @@ Object {
     },
     Object {
       "content": "Should be deleted",
+      "filename": "root/to-be-cleaned/src-and-out/ts-ext/file.mjs",
+    },
+    Object {
+      "content": "Should be deleted",
+      "filename": "root/to-be-cleaned/src-and-out/ts-ext/file.mjs.map",
+    },
+    Object {
+      "content": "Should be deleted",
       "filename": "root/to-be-cleaned/src-and-out/tsx-ext/file.d.ts",
     },
     Object {
@@ -457,6 +521,14 @@ Object {
     Object {
       "content": "Should be deleted",
       "filename": "root/to-be-cleaned/src-and-out/tsx-ext/file.jsx.map",
+    },
+    Object {
+      "content": "Should be deleted",
+      "filename": "root/to-be-cleaned/src-and-out/tsx-ext/file.mjs",
+    },
+    Object {
+      "content": "Should be deleted",
+      "filename": "root/to-be-cleaned/src-and-out/tsx-ext/file.mjs.map",
     },
   ],
   "remainingFileContents": Array [
@@ -510,6 +582,14 @@ Object {
     },
     Object {
       "content": "Should be kept",
+      "filename": "root/to-be-kept/ignored/direct-node-modules-descendants/node_modules/file.mjs",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/ignored/direct-node-modules-descendants/node_modules/file.mjs.map",
+    },
+    Object {
+      "content": "Should be kept",
       "filename": "root/to-be-kept/ignored/direct-node-modules-descendants/node_modules/file.ts",
     },
     Object {
@@ -547,6 +627,14 @@ Object {
     Object {
       "content": "Should be kept",
       "filename": "root/to-be-kept/ignored/indirect-node-modules-descendants/node_modules/a-dummy-package/file.jsx.map",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/ignored/indirect-node-modules-descendants/node_modules/a-dummy-package/file.mjs",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/ignored/indirect-node-modules-descendants/node_modules/a-dummy-package/file.mjs.map",
     },
     Object {
       "content": "Should be kept",
@@ -590,6 +678,14 @@ Object {
     },
     Object {
       "content": "Should be kept",
+      "filename": "root/to-be-kept/out-only/file.mjs",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/out-only/file.mjs.map",
+    },
+    Object {
+      "content": "Should be kept",
       "filename": "root/to-be-kept/src-only/file.ts",
     },
     Object {
@@ -607,6 +703,8 @@ Object {
     "root/to-be-cleaned/src-and-out/ts-ext/file.js.map",
     "root/to-be-cleaned/src-and-out/ts-ext/file.jsx",
     "root/to-be-cleaned/src-and-out/ts-ext/file.jsx.map",
+    "root/to-be-cleaned/src-and-out/ts-ext/file.mjs",
+    "root/to-be-cleaned/src-and-out/ts-ext/file.mjs.map",
     "root/to-be-cleaned/src-and-out/tsx-ext/file.d.ts",
     "root/to-be-cleaned/src-and-out/tsx-ext/file.d.ts.map",
     "root/to-be-cleaned/src-and-out/tsx-ext/file.d.tsx",
@@ -615,6 +713,8 @@ Object {
     "root/to-be-cleaned/src-and-out/tsx-ext/file.js.map",
     "root/to-be-cleaned/src-and-out/tsx-ext/file.jsx",
     "root/to-be-cleaned/src-and-out/tsx-ext/file.jsx.map",
+    "root/to-be-cleaned/src-and-out/tsx-ext/file.mjs",
+    "root/to-be-cleaned/src-and-out/tsx-ext/file.mjs.map",
   ],
 }
 `;
@@ -629,14 +729,16 @@ stdout: |+
 
   TypeScript Cleaner
 
-  Detected 17 files to delete
+  Detected 21 files to delete
 
-  Deleted 17 files
+  Deleted 21 files
     → root/to-be-cleaned/src-and-out/incompleted-out/file.js
     → root/to-be-cleaned/src-and-out/ts-ext/file.js
     → root/to-be-cleaned/src-and-out/ts-ext/file.js.map
     → root/to-be-cleaned/src-and-out/ts-ext/file.jsx
     → root/to-be-cleaned/src-and-out/ts-ext/file.jsx.map
+    → root/to-be-cleaned/src-and-out/ts-ext/file.mjs
+    → root/to-be-cleaned/src-and-out/ts-ext/file.mjs.map
     → root/to-be-cleaned/src-and-out/ts-ext/file.d.ts
     → root/to-be-cleaned/src-and-out/ts-ext/file.d.ts.map
     → root/to-be-cleaned/src-and-out/ts-ext/file.d.tsx
@@ -645,6 +747,8 @@ stdout: |+
     → root/to-be-cleaned/src-and-out/tsx-ext/file.js.map
     → root/to-be-cleaned/src-and-out/tsx-ext/file.jsx
     → root/to-be-cleaned/src-and-out/tsx-ext/file.jsx.map
+    → root/to-be-cleaned/src-and-out/tsx-ext/file.mjs
+    → root/to-be-cleaned/src-and-out/tsx-ext/file.mjs.map
     → root/to-be-cleaned/src-and-out/tsx-ext/file.d.ts
     → root/to-be-cleaned/src-and-out/tsx-ext/file.d.ts.map
     → root/to-be-cleaned/src-and-out/tsx-ext/file.d.tsx
@@ -697,6 +801,14 @@ Object {
     },
     Object {
       "content": "Should be deleted",
+      "filename": "root/to-be-cleaned/src-and-out/ts-ext/file.mjs",
+    },
+    Object {
+      "content": "Should be deleted",
+      "filename": "root/to-be-cleaned/src-and-out/ts-ext/file.mjs.map",
+    },
+    Object {
+      "content": "Should be deleted",
       "filename": "root/to-be-cleaned/src-and-out/tsx-ext/file.d.ts",
     },
     Object {
@@ -726,6 +838,14 @@ Object {
     Object {
       "content": "Should be deleted",
       "filename": "root/to-be-cleaned/src-and-out/tsx-ext/file.jsx.map",
+    },
+    Object {
+      "content": "Should be deleted",
+      "filename": "root/to-be-cleaned/src-and-out/tsx-ext/file.mjs",
+    },
+    Object {
+      "content": "Should be deleted",
+      "filename": "root/to-be-cleaned/src-and-out/tsx-ext/file.mjs.map",
     },
   ],
   "remainingFileContents": Array [
@@ -779,6 +899,14 @@ Object {
     },
     Object {
       "content": "Should be kept",
+      "filename": "root/to-be-kept/ignored/direct-node-modules-descendants/node_modules/file.mjs",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/ignored/direct-node-modules-descendants/node_modules/file.mjs.map",
+    },
+    Object {
+      "content": "Should be kept",
       "filename": "root/to-be-kept/ignored/direct-node-modules-descendants/node_modules/file.ts",
     },
     Object {
@@ -816,6 +944,14 @@ Object {
     Object {
       "content": "Should be kept",
       "filename": "root/to-be-kept/ignored/indirect-node-modules-descendants/node_modules/a-dummy-package/file.jsx.map",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/ignored/indirect-node-modules-descendants/node_modules/a-dummy-package/file.mjs",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/ignored/indirect-node-modules-descendants/node_modules/a-dummy-package/file.mjs.map",
     },
     Object {
       "content": "Should be kept",
@@ -859,6 +995,14 @@ Object {
     },
     Object {
       "content": "Should be kept",
+      "filename": "root/to-be-kept/out-only/file.mjs",
+    },
+    Object {
+      "content": "Should be kept",
+      "filename": "root/to-be-kept/out-only/file.mjs.map",
+    },
+    Object {
+      "content": "Should be kept",
       "filename": "root/to-be-kept/src-only/file.ts",
     },
     Object {
@@ -876,6 +1020,8 @@ Object {
     "root/to-be-cleaned/src-and-out/ts-ext/file.js.map",
     "root/to-be-cleaned/src-and-out/ts-ext/file.jsx",
     "root/to-be-cleaned/src-and-out/ts-ext/file.jsx.map",
+    "root/to-be-cleaned/src-and-out/ts-ext/file.mjs",
+    "root/to-be-cleaned/src-and-out/ts-ext/file.mjs.map",
     "root/to-be-cleaned/src-and-out/tsx-ext/file.d.ts",
     "root/to-be-cleaned/src-and-out/tsx-ext/file.d.ts.map",
     "root/to-be-cleaned/src-and-out/tsx-ext/file.d.tsx",
@@ -884,6 +1030,8 @@ Object {
     "root/to-be-cleaned/src-and-out/tsx-ext/file.js.map",
     "root/to-be-cleaned/src-and-out/tsx-ext/file.jsx",
     "root/to-be-cleaned/src-and-out/tsx-ext/file.jsx.map",
+    "root/to-be-cleaned/src-and-out/tsx-ext/file.mjs",
+    "root/to-be-cleaned/src-and-out/tsx-ext/file.mjs.map",
   ],
 }
 `;
