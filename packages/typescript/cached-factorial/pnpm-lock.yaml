@@ -1,0 +1,7 @@
+dependencies:
+  cached-expression-shared-utils: 'link:../cached-expression-shared-utils'
+lockfileVersion: 5
+specifiers:
+  '@types/node': ^10.9.3
+  cached-expression-shared-utils: ^0.0.2
+  tslib: ^1.9.3

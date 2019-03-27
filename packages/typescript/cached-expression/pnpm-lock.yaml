@@ -1,0 +1,5 @@
+lockfileVersion: 5
+specifiers:
+  '@types/node': ^10.9.3
+  iter-tools: ^6.1.4
+  tslib: ^1.9.3

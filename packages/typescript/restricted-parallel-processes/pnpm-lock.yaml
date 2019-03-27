@@ -1,0 +1,7 @@
+dependencies:
+  restricted-concurrent-actions: 'link:../restricted-concurrent-actions'
+lockfileVersion: 5
+specifiers:
+  '@types/node': ^10.9.3
+  restricted-concurrent-actions: ^0.0.12
+  tslib: ^1.9.3

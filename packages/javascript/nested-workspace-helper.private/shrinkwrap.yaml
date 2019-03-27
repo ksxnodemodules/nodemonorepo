@@ -1,9 +1,0 @@
-dependencies:
-  nested-workspace-helper: 'link:../../typescript/nested-workspace-helper'
-  preloaded-node.private: 'link:../preloaded-node.private'
-registry: 'https://registry.npmjs.org/'
-shrinkwrapMinorVersion: 9
-shrinkwrapVersion: 3
-specifiers:
-  nested-workspace-helper: ^0.2.9
-  preloaded-node.private: ^0.0.0

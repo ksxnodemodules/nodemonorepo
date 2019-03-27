@@ -1,0 +1,9 @@
+devDependencies:
+  path-env: 'link:../path-env'
+  preloaded-node.private: 'link:../../javascript/preloaded-node.private'
+lockfileVersion: 5
+specifiers:
+  '@types/node': ^10.9.3
+  path-env: '*'
+  preloaded-node.private: '*'
+  tslib: ^1.9.3

@@ -1,0 +1,7 @@
+dependencies:
+  cached-expression: 'link:../cached-expression'
+lockfileVersion: 5
+specifiers:
+  '@types/node': ^10.9.3
+  cached-expression: ^0.0.3
+  tslib: ^1.9.3

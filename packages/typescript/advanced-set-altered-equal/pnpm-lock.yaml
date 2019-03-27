@@ -1,0 +1,11 @@
+dependencies:
+  advanced-set-base: 'link:../advanced-set-base'
+  advanced-set-types: 'link:../advanced-set-types'
+  convenient-typescript-utilities: 'link:../convenient-typescript-utilities'
+lockfileVersion: 5
+specifiers:
+  '@types/node': ^10.9.3
+  advanced-set-base: ^0.0.0
+  advanced-set-types: ^0.0.0
+  convenient-typescript-utilities: ^0.0.3
+  tslib: ^1.9.3

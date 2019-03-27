@@ -1,0 +1,13 @@
+dependencies:
+  assemble-registry-url: 'link:../assemble-registry-url'
+lockfileVersion: 5
+specifiers:
+  '@types/node': ^10.9.3
+  '@types/node-fetch': ^2.1.2
+  '@types/ramda': ^0.26.0
+  '@types/yargs': ^12.0.0
+  assemble-registry-url: ^0.0.0
+  node-fetch: ^2.2.0
+  ramda: ^0.26.0
+  tslib: ^1.9.3
+  yargs: ^12.0.1

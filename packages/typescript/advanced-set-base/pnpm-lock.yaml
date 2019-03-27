@@ -1,0 +1,8 @@
+dependencies:
+  advanced-set-types: 'link:../advanced-set-types'
+lockfileVersion: 5
+specifiers:
+  '@types/node': ^10.9.3
+  advanced-set-types: ^0.0.0
+  tslib: ^1.9.3
+  typescript-miscellaneous: ^0.1.0

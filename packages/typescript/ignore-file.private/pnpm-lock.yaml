@@ -1,0 +1,18 @@
+dependencies:
+  fs-tree-utils: 'link:../fs-tree-utils'
+  preloaded-node.private: 'link:../../javascript/preloaded-node.private'
+lockfileVersion: 5
+specifiers:
+  '@types/fs-extra': ^5.0.4
+  '@types/js-yaml': ^3.11.2
+  '@types/minimatch': ^3.0.3
+  '@types/node': ^10.9.3
+  '@types/yargs': ^12.0.0
+  chalk: ^2.4.1
+  fs-extra: ^7.0.0
+  fs-tree-utils: ^0.1.6
+  js-yaml: ^3.12.0
+  minimatch: ^3.0.4
+  preloaded-node.private: ^0.0.0
+  tslib: ^1.9.3
+  yargs: ^12.0.1

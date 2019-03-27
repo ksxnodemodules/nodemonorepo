@@ -1,0 +1,11 @@
+dependencies:
+  advanced-map-altered-equal: 'link:../advanced-map-altered-equal'
+  advanced-map-types: 'link:../advanced-map-types'
+  create-array-equal: 'link:../create-array-equal'
+lockfileVersion: 5
+specifiers:
+  '@types/node': ^10.9.3
+  advanced-map-altered-equal: ^0.0.3
+  advanced-map-types: ^0.0.2
+  create-array-equal: ^0.0.1
+  tslib: ^1.9.3

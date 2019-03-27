@@ -1,0 +1,11 @@
+dependencies:
+  advanced-map-base: 'link:../advanced-map-base'
+  advanced-map-types: 'link:../advanced-map-types'
+  convenient-typescript-utilities: 'link:../convenient-typescript-utilities'
+lockfileVersion: 5
+specifiers:
+  '@types/node': ^10.9.3
+  advanced-map-base: ^0.0.2
+  advanced-map-types: ^0.0.2
+  convenient-typescript-utilities: ^0.0.3
+  tslib: ^1.9.3

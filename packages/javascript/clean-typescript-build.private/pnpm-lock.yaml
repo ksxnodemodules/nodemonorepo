@@ -1,0 +1,6 @@
+dependencies:
+  fs-tree-utils: 'link:../../typescript/fs-tree-utils'
+lockfileVersion: 5
+specifiers:
+  fs-extra: ^7.0.0
+  fs-tree-utils: ^0.1.6

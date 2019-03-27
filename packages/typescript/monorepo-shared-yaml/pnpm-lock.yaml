@@ -1,0 +1,11 @@
+devDependencies:
+  fs-tree-utils: 'link:../fs-tree-utils'
+lockfileVersion: 5
+specifiers:
+  '@types/fs-extra': ^5.0.4
+  '@types/js-yaml': ^3.11.2
+  '@types/node': ^10.9.3
+  fs-extra: ^7.0.0
+  fs-tree-utils: '*'
+  js-yaml: ^3.12.0
+  tslib: ^1.9.3

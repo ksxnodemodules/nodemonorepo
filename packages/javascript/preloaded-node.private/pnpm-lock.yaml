@@ -1,0 +1,7 @@
+lockfileVersion: 5
+specifiers:
+  '@types/json5': ^0.0.30
+  '@types/node': ^10.9.3
+  json5: ^2.0.1
+  ts-node: ^8.0.0
+  typescript: ^3.0.3

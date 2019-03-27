@@ -1,0 +1,6 @@
+lockfileVersion: 5
+specifiers:
+  '@types/node': ^10.9.3
+  '@types/semver': ^5.5.0
+  semver: ^5.5.1
+  tslib: ^1.9.3
