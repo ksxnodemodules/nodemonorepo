@@ -1,4 +1,5 @@
 import { SpawnSyncOptions } from 'child_process'
+import stripANSI from 'strip-ansi'
 import preloadedNode from 'preloaded-node.private'
 import { bin } from './data'
 
@@ -10,7 +11,7 @@ const fmtNull = <X>(x: X) =>
 
 const fmtStdIO = (buf: OptionalIOData): string | null => {
   if (buf == null) return null
-  const str = String(buf)
+  const str = stripANSI(String(buf))
   return str.trim() ? `\n${str}\n` : '((EMPTY))'
 }
 
