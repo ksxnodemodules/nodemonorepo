@@ -1,14 +1,69 @@
 dependencies:
+  '@types/fs-extra': 5.0.5
+  '@types/node': 11.12.0
+  '@types/ramda': 0.26.5
+  fs-extra: 7.0.1
   monorepo-shared-assets: 'link:../monorepo-shared-assets'
+  ramda: 0.26.1
+  tslib: 1.9.3
 devDependencies:
   unique-temp-path: 'link:../unique-temp-path'
 lockfileVersion: 5
+packages:
+  /@types/fs-extra/5.0.5:
+    dependencies:
+      '@types/node': 11.12.0
+    dev: false
+    resolution:
+      integrity: sha512-w7iqhDH9mN8eLClQOYTkhdYUOSpp25eXxfc6VbFOGtzxW34JcvctH2bKjj4jD4++z4R5iO5D+pg48W2e03I65A==
+  /@types/node/11.12.0:
+    dev: false
+    resolution:
+      integrity: sha512-Lg00egj78gM+4aE0Erw05cuDbvX9sLJbaaPwwRtdCdAMnIudqrQZ0oZX98Ek0yiSK/A2nubHgJfvII/rTT2Dwg==
+  /@types/ramda/0.26.5:
+    dev: false
+    resolution:
+      integrity: sha512-0W7/G3OfpqoNLp10UA+2a7cKNZeUaqSULdCrHU8Xrum1O+ZZQR9dk3CgNFD2u2+eJ5PfTL3kk/xzrfgjFf6f8w==
+  /fs-extra/7.0.1:
+    dependencies:
+      graceful-fs: 4.1.15
+      jsonfile: 4.0.0
+      universalify: 0.1.2
+    dev: false
+    engines:
+      node: '>=6 <7 || >=8'
+    resolution:
+      integrity: sha512-YJDaCJZEnBmcbw13fvdAM9AwNOJwOzrE4pqMqBq5nFiEqXUqHwlK4B+3pUw6JNvfSPtX05xFHtYy/1ni01eGCw==
+  /graceful-fs/4.1.15:
+    dev: false
+    resolution:
+      integrity: sha512-6uHUhOPEBgQ24HM+r6b/QwWfZq+yiFcipKFrOFiBEnWdy5sdzYoi+pJeQaPI5qOLRFqWmAXUPQNsielzdLoecA==
+  /jsonfile/4.0.0:
+    dev: false
+    optionalDependencies:
+      graceful-fs: 4.1.15
+    resolution:
+      integrity: sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss=
+  /ramda/0.26.1:
+    dev: false
+    resolution:
+      integrity: sha512-hLWjpy7EnsDBb0p+Z3B7rPi3GDeRG5ZtiI33kJhTt+ORCd38AbAIjB/9zRIUoeTbE/AVX5ZkU7m6bznsvrf8eQ==
+  /tslib/1.9.3:
+    dev: false
+    resolution:
+      integrity: sha512-4krF8scpejhaOgqzBEcGM7yDIEfi0/8+8zDRZhNZZ2kjmHJ4hv3zCbQWxoJGz1iw5U0Jl0nma13xzHXcncMavQ==
+  /universalify/0.1.2:
+    dev: false
+    engines:
+      node: '>= 4.0.0'
+    resolution:
+      integrity: sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==
 specifiers:
-  '@types/fs-extra': ^5.0.4
-  '@types/node': ^10.9.3
-  '@types/ramda': ^0.26.0
-  fs-extra: ^7.0.0
+  '@types/fs-extra': ^5.0.5
+  '@types/node': ^11.12.0
+  '@types/ramda': ^0.26.5
+  fs-extra: ^7.0.1
   monorepo-shared-assets: ^0.0.17
-  ramda: ^0.26.0
+  ramda: ^0.26.1
   tslib: ^1.9.3
   unique-temp-path: '*'

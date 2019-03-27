@@ -1,9 +1,31 @@
 dependencies:
+  '@types/node': 11.12.0
+  '@types/semver': 5.5.0
   convenient-typescript-utilities: 'link:../convenient-typescript-utilities'
+  semver: 6.0.0
+  tslib: 1.9.3
 lockfileVersion: 5
+packages:
+  /@types/node/11.12.0:
+    dev: false
+    resolution:
+      integrity: sha512-Lg00egj78gM+4aE0Erw05cuDbvX9sLJbaaPwwRtdCdAMnIudqrQZ0oZX98Ek0yiSK/A2nubHgJfvII/rTT2Dwg==
+  /@types/semver/5.5.0:
+    dev: false
+    resolution:
+      integrity: sha512-41qEJgBH/TWgo5NFSvBCJ1qkoi3Q6ONSF2avrHq1LVEZfYpdHmj0y9SuTK+u9ZhG1sYQKBL1AWXKyLWP4RaUoQ==
+  /semver/6.0.0:
+    dev: false
+    hasBin: true
+    resolution:
+      integrity: sha512-0UewU+9rFapKFnlbirLi3byoOuhrSsli/z/ihNnvM24vgF+8sNBiI1LZPBSH9wJKUwaUbw+s3hToDLCXkrghrQ==
+  /tslib/1.9.3:
+    dev: false
+    resolution:
+      integrity: sha512-4krF8scpejhaOgqzBEcGM7yDIEfi0/8+8zDRZhNZZ2kjmHJ4hv3zCbQWxoJGz1iw5U0Jl0nma13xzHXcncMavQ==
 specifiers:
-  '@types/node': ^10.9.3
+  '@types/node': ^11.12.0
   '@types/semver': ^5.5.0
   convenient-typescript-utilities: ^0.0.3
-  semver: ^5.5.1
+  semver: ^6.0.0
   tslib: ^1.9.3

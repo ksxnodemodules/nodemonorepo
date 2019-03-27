@@ -1,7 +1,34 @@
+dependencies:
+  '@types/node': 11.12.0
+  '@types/ramda': 0.26.5
+  immutable: 4.0.0-rc.12
+  ramda: 0.26.1
+  tslib: 1.9.3
 lockfileVersion: 5
+packages:
+  /@types/node/11.12.0:
+    dev: false
+    resolution:
+      integrity: sha512-Lg00egj78gM+4aE0Erw05cuDbvX9sLJbaaPwwRtdCdAMnIudqrQZ0oZX98Ek0yiSK/A2nubHgJfvII/rTT2Dwg==
+  /@types/ramda/0.26.5:
+    dev: false
+    resolution:
+      integrity: sha512-0W7/G3OfpqoNLp10UA+2a7cKNZeUaqSULdCrHU8Xrum1O+ZZQR9dk3CgNFD2u2+eJ5PfTL3kk/xzrfgjFf6f8w==
+  /immutable/4.0.0-rc.12:
+    dev: false
+    resolution:
+      integrity: sha512-0M2XxkZLx/mi3t8NVwIm1g8nHoEmM9p9UBl/G9k4+hm0kBgOVdMV/B3CY5dQ8qG8qc80NN4gDV4HQv6FTJ5q7A==
+  /ramda/0.26.1:
+    dev: false
+    resolution:
+      integrity: sha512-hLWjpy7EnsDBb0p+Z3B7rPi3GDeRG5ZtiI33kJhTt+ORCd38AbAIjB/9zRIUoeTbE/AVX5ZkU7m6bznsvrf8eQ==
+  /tslib/1.9.3:
+    dev: false
+    resolution:
+      integrity: sha512-4krF8scpejhaOgqzBEcGM7yDIEfi0/8+8zDRZhNZZ2kjmHJ4hv3zCbQWxoJGz1iw5U0Jl0nma13xzHXcncMavQ==
 specifiers:
-  '@types/node': ^10.9.3
-  '@types/ramda': ^0.26.0
-  immutable: ^3.8.2
-  ramda: ^0.26.0
+  '@types/node': ^11.12.0
+  '@types/ramda': ^0.26.5
+  immutable: ^4.0.0-rc.12
+  ramda: ^0.26.1
   tslib: ^1.9.3
