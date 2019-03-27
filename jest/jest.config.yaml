@@ -30,3 +30,11 @@ projects:
     globals:
       ts-jest:
         diagnostics: false
+        tsConfig:
+          target: es2017
+          module: commonjs
+          lib: [es2017, es2018, esnext]
+          esModuleInterop: true
+          experimentalDecorators: true
+          noEmit: true
+          strict: false
