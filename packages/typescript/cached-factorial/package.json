@@ -21,7 +21,7 @@
   "dependencies": {
     "tslib": "^1.9.3",
     "cached-expression-shared-utils": "^0.0.2",
-    "@types/node": "^10.9.3"
+    "@types/node": "^11.12.0"
   },
   "engines": {
     "node": ">= 8.9.0"

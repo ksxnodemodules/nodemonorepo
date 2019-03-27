@@ -17,7 +17,7 @@
     "clean-typescript-build": "bin.js"
   },
   "dependencies": {
-    "fs-extra": "^7.0.0",
+    "fs-extra": "^7.0.1",
     "fs-tree-utils": "^0.1.6"
   }
 }

@@ -22,7 +22,7 @@
     "tslib": "^1.9.3",
     "advanced-map-multi-key-base": "^0.0.3",
     "advanced-map-types": "^0.0.2",
-    "@types/node": "^10.9.3"
+    "@types/node": "^11.12.0"
   },
   "engines": {
     "node": ">= 8.9.0"

@@ -17,7 +17,7 @@
     "create-array-equal": "^0.0.1",
     "advanced-map-altered-equal": "^0.0.3",
     "advanced-map-types": "^0.0.2",
-    "@types/node": "^10.9.3"
+    "@types/node": "^11.12.0"
   },
   "engines": {
     "node": ">= 8.9.0"

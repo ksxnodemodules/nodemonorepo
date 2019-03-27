@@ -26,10 +26,10 @@
     "advanced-map-multi-key": "^0.0.5",
     "advanced-map-mutable-multi-key": "^0.0.3",
     "advanced-map-initialized": "^0.0.2",
-    "@types/node": "^10.9.3"
+    "@types/node": "^11.12.0"
   },
   "devDependencies": {
-    "iter-tools": "^6.1.4"
+    "iter-tools": "^6.2.4"
   },
   "engines": {
     "node": ">= 8.9.0"
