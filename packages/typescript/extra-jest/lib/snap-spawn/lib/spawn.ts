@@ -43,7 +43,7 @@ export function spawn (
     error: fmtNull(error),
     stdout: fmtStdIO(stdout),
     stderr: fmtStdIO(stderr)
-  }
+  } as any
 }
 
 export namespace spawn {

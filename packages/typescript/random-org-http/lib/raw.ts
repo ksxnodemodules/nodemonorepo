@@ -1,4 +1,4 @@
-import fetch from 'node-fetch'
+import fetch, { Response } from 'node-fetch'
 import { create } from './url'
 
 type UrlMaker<Query> =
@@ -6,7 +6,7 @@ type UrlMaker<Query> =
 
 const mkfn =
   <Query>(mkurl: UrlMaker<Query>) =>
-    (query: Query) => fetch(mkurl(query))
+    (query: Query): Promise<Response> => fetch(mkurl(query))
 
 export const integers = mkfn(create.integers)
 export const sequences = mkfn(create.sequences)

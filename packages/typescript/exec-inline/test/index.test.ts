@@ -11,11 +11,11 @@ const spy = ({
 }) => {
   const spySpawnSync = jest
     .spyOn(childProcess, 'spawnSync')
-    .mockImplementation(spawnSync)
+    .mockImplementation(spawnSync as any)
 
   const spyProcessExit = jest
     .spyOn(process, 'exit')
-    .mockImplementation(exit)
+    .mockImplementation(exit as any)
 
   const restore = () => {
     spySpawnSync.mockRestore()

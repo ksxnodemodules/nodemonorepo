@@ -127,4 +127,4 @@ export default {
   command: 'write <directory> <action> <propertyPath> [value]',
   builder,
   handler
-} as CommandModule
+} as any as CommandModule

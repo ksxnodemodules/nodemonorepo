@@ -192,7 +192,9 @@ export namespace spawn {
 
       let stdout = Array<ResultItem.DataChunk>()
       let stderr = Array<ResultItem.DataChunk>()
+      // @ts-ignore
       process.stdout.on('data', chunk => stdout.push(chunk))
+      // @ts-ignore
       process.stderr.on('data', chunk => stderr.push(chunk))
 
       process

@@ -49,6 +49,7 @@ it('calls oncreate', async () => {
 
     let stdout = ''
 
+    // @ts-ignore
     event.process.stdout.on('data', chunk => {
       stdout += chunk
     })
