@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`when matched function does not throw an error matches returning value against snapshot 1`] = `"value"`;
+
+exports[`when matched function does not throw an error throws an error for trying to get an error 1`] = `[Error: Expecting the matched function to throw an error, but it returns a value: value]`;
+
+exports[`when matched function throws an error matches thrown error against snapshot 1`] = `"error"`;
+
+exports[`when matched function throws an error throws an error for trying to get a return value 1`] = `[Error: Expecting the matched function to return a value, but it throws an error: error]`;
