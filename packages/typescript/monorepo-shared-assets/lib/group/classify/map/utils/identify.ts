@@ -7,7 +7,7 @@ export function identify<X, ID> (
 ): ID | void {
   return immutable
     .List(map.keys())
-    .find(idx => identifier(id, idx as ID))
+    .find(idx => identifier(id, idx))
 }
 
 export namespace identify {
