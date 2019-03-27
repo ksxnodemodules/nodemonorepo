@@ -19,6 +19,7 @@ dependencies:
   yargs: 13.2.2
 devDependencies:
   preloaded-node.private: 'link:../../javascript/preloaded-node.private'
+  strip-ansi: 5.2.0
 lockfileVersion: 5
 packages:
   /@types/fs-extra/5.0.5:
@@ -66,7 +67,6 @@ packages:
     resolution:
       integrity: sha1-7QMXwyIGT3lGbAKWa922Bas32Zg=
   /ansi-regex/4.1.0:
-    dev: false
     engines:
       node: '>=6'
     resolution:
@@ -509,6 +509,14 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-TjxrkPONqO2Z8QDCpeE2j6n0M6EwxzyDgzEeGp+FbdvaJAt//ClYi6W5my+3ROlC/hZX2KACUwDfK49Ka5eDvg==
+  /strip-ansi/5.2.0:
+    dependencies:
+      ansi-regex: 4.1.0
+    dev: true
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-DuRs1gKbBqsMKIZlrffwlug8MHkcnpjs5VPmL1PAh+mA30U0DTotfDZ0d2UUsXpPmPmMMJ6W773MaA3J+lbiWA==
   /strip-eof/1.0.0:
     dev: false
     engines:
@@ -602,5 +610,6 @@ specifiers:
   ramda: ^0.26.1
   semver: ^6.0.0
   smart-publish: ^0.0.3
+  strip-ansi: ^5.2.0
   tslib: ^1.9.3
   yargs: ^13.2.2
