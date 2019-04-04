@@ -1,1 +1,1 @@
-cp shrinkwrap.yaml shrinkwrap.yaml.old.tmp
+cp pnpm-lock.yaml pnpm-lock.yaml.old.tmp
