@@ -1,28 +1,28 @@
 dependencies:
-  '@types/fs-extra': 5.0.5
-  '@types/js-yaml': 3.12.0
-  '@types/node': 11.12.0
+  '@types/fs-extra': 7.0.0
+  '@types/js-yaml': 3.12.1
+  '@types/node': 11.13.10
   fs-extra: 7.0.1
-  js-yaml: 3.13.0
+  js-yaml: 3.13.1
   tslib: 1.9.3
 devDependencies:
   fs-tree-utils: 'link:../fs-tree-utils'
 lockfileVersion: 5
 packages:
-  /@types/fs-extra/5.0.5:
+  /@types/fs-extra/7.0.0:
     dependencies:
-      '@types/node': 11.12.0
+      '@types/node': 11.13.10
     dev: false
     resolution:
-      integrity: sha512-w7iqhDH9mN8eLClQOYTkhdYUOSpp25eXxfc6VbFOGtzxW34JcvctH2bKjj4jD4++z4R5iO5D+pg48W2e03I65A==
-  /@types/js-yaml/3.12.0:
+      integrity: sha512-ndoMMbGyuToTy4qB6Lex/inR98nPiNHacsgMPvy+zqMLgSxbt8VtWpDArpGp69h1fEDQHn1KB+9DWD++wgbwYA==
+  /@types/js-yaml/3.12.1:
     dev: false
     resolution:
-      integrity: sha512-UGEe/6RsNAxgWdknhzFZbCxuYc5I7b/YEKlfKbo+76SM8CJzGs7XKCj7zyugXViRbKYpXhSXhCYVQZL5tmDbpQ==
-  /@types/node/11.12.0:
+      integrity: sha512-SGGAhXLHDx+PK4YLNcNGa6goPf9XRWQNAUUbffkwVGGXIxmDKWyGGL4inzq2sPmExu431Ekb9aEMn9BkPqEYFA==
+  /@types/node/11.13.10:
     dev: false
     resolution:
-      integrity: sha512-Lg00egj78gM+4aE0Erw05cuDbvX9sLJbaaPwwRtdCdAMnIudqrQZ0oZX98Ek0yiSK/A2nubHgJfvII/rTT2Dwg==
+      integrity: sha512-leUNzbFTMX94TWaIKz8N15Chu55F9QSH+INKayQr5xpkasBQBRF3qQXfo3/dOnMU/dEIit+Y/SU8HyOjq++GwA==
   /argparse/1.0.10:
     dependencies:
       sprintf-js: 1.0.3
@@ -50,14 +50,14 @@ packages:
     dev: false
     resolution:
       integrity: sha512-6uHUhOPEBgQ24HM+r6b/QwWfZq+yiFcipKFrOFiBEnWdy5sdzYoi+pJeQaPI5qOLRFqWmAXUPQNsielzdLoecA==
-  /js-yaml/3.13.0:
+  /js-yaml/3.13.1:
     dependencies:
       argparse: 1.0.10
       esprima: 4.0.1
     dev: false
     hasBin: true
     resolution:
-      integrity: sha512-pZZoSxcCYco+DIKBTimr67J6Hy+EYGZDY/HCWC+iAEA9h1ByhMXAIVUXMcMFpOCxQ/xjXmPI2MkDL5HRm5eFrQ==
+      integrity: sha512-YfbcO7jXDdyj0DGxYVSlSeQNHbD7XPWvrVWeVUujrQEoZzWJIRrCPoyk6kL6IAjAG2IolMK4T0hNUe0HOUs5Jw==
   /jsonfile/4.0.0:
     dev: false
     optionalDependencies:
@@ -79,7 +79,7 @@ packages:
     resolution:
       integrity: sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==
 specifiers:
-  '@types/fs-extra': ^5.0.5
+  '@types/fs-extra': ^7.0.0
   '@types/js-yaml': ^3.12.0
   '@types/node': ^11.12.0
   fs-extra: ^7.0.1

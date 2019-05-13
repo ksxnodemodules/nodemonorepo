@@ -25,7 +25,7 @@
     "fs-tree-utils": "^0.1.6",
     "preloaded-node.private": "^0.0.0",
     "@types/minimatch": "^3.0.3",
-    "@types/fs-extra": "^5.0.5",
+    "@types/fs-extra": "^7.0.0",
     "@types/js-yaml": "^3.12.0",
     "@types/yargs": "^12.0.10",
     "@types/node": "^11.12.0"

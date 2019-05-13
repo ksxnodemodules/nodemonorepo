@@ -1,7 +1,7 @@
 dependencies:
-  '@types/fs-extra': 5.0.5
-  '@types/node': 11.12.0
-  '@types/ramda': 0.26.5
+  '@types/fs-extra': 7.0.0
+  '@types/node': 11.13.10
+  '@types/ramda': 0.26.8
   fs-extra: 7.0.1
   monorepo-shared-assets: 'link:../monorepo-shared-assets'
   ramda: 0.26.1
@@ -10,20 +10,20 @@ devDependencies:
   unique-temp-path: 'link:../unique-temp-path'
 lockfileVersion: 5
 packages:
-  /@types/fs-extra/5.0.5:
+  /@types/fs-extra/7.0.0:
     dependencies:
-      '@types/node': 11.12.0
+      '@types/node': 11.13.10
     dev: false
     resolution:
-      integrity: sha512-w7iqhDH9mN8eLClQOYTkhdYUOSpp25eXxfc6VbFOGtzxW34JcvctH2bKjj4jD4++z4R5iO5D+pg48W2e03I65A==
-  /@types/node/11.12.0:
+      integrity: sha512-ndoMMbGyuToTy4qB6Lex/inR98nPiNHacsgMPvy+zqMLgSxbt8VtWpDArpGp69h1fEDQHn1KB+9DWD++wgbwYA==
+  /@types/node/11.13.10:
     dev: false
     resolution:
-      integrity: sha512-Lg00egj78gM+4aE0Erw05cuDbvX9sLJbaaPwwRtdCdAMnIudqrQZ0oZX98Ek0yiSK/A2nubHgJfvII/rTT2Dwg==
-  /@types/ramda/0.26.5:
+      integrity: sha512-leUNzbFTMX94TWaIKz8N15Chu55F9QSH+INKayQr5xpkasBQBRF3qQXfo3/dOnMU/dEIit+Y/SU8HyOjq++GwA==
+  /@types/ramda/0.26.8:
     dev: false
     resolution:
-      integrity: sha512-0W7/G3OfpqoNLp10UA+2a7cKNZeUaqSULdCrHU8Xrum1O+ZZQR9dk3CgNFD2u2+eJ5PfTL3kk/xzrfgjFf6f8w==
+      integrity: sha512-PSMkNNhB900U2xcyndlkVjJeCXpVtf1yod0Kdq/ArsLDIE0tW8pLBChmQeJs4o4dfp3AEP+AGm6zIseZPU4ndA==
   /fs-extra/7.0.1:
     dependencies:
       graceful-fs: 4.1.15
@@ -59,7 +59,7 @@ packages:
     resolution:
       integrity: sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==
 specifiers:
-  '@types/fs-extra': ^5.0.5
+  '@types/fs-extra': ^7.0.0
   '@types/node': ^11.12.0
   '@types/ramda': ^0.26.5
   fs-extra: ^7.0.1
