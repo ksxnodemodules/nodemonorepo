@@ -20,11 +20,11 @@
   ],
   "main": "index.js",
   "dependencies": {
-    "fs-extra": "^7.0.1",
+    "fs-extra": "^8.0.0",
     "ramda": "^0.26.1",
     "tslib": "^1.9.3",
     "monorepo-shared-assets": "^0.0.17",
-    "@types/fs-extra": "^5.0.5",
+    "@types/fs-extra": "^8.0.0",
     "@types/ramda": "^0.26.5",
     "@types/node": "^11.12.0"
   },
