@@ -1,29 +1,37 @@
 dependencies:
-  '@types/node': 11.12.0
-  tslib: 1.9.3
+  '@types/node': 12.7.1
+  tslib: 1.10.0
 devDependencies:
-  '@types/ramda': 0.26.5
+  '@types/ramda': 0.26.19
   ramda: 0.26.1
-lockfileVersion: 5
+lockfileVersion: 5.1
 packages:
-  /@types/node/11.12.0:
+  /@types/node/12.7.1:
     dev: false
     resolution:
-      integrity: sha512-Lg00egj78gM+4aE0Erw05cuDbvX9sLJbaaPwwRtdCdAMnIudqrQZ0oZX98Ek0yiSK/A2nubHgJfvII/rTT2Dwg==
-  /@types/ramda/0.26.5:
+      integrity: sha512-aK9jxMypeSrhiYofWWBf/T7O+KwaiAHzM4sveCdWPn71lzUSMimRnKzhXDKfKwV1kWoBo2P1aGgaIYGLf9/ljw==
+  /@types/ramda/0.26.19:
+    dependencies:
+      ts-toolbelt: 3.6.1
     dev: true
     resolution:
-      integrity: sha512-0W7/G3OfpqoNLp10UA+2a7cKNZeUaqSULdCrHU8Xrum1O+ZZQR9dk3CgNFD2u2+eJ5PfTL3kk/xzrfgjFf6f8w==
+      integrity: sha512-lJuMZDXqZ8W2hl0Gz+wEPUhXcf/tZRuaO5vrxFD3Dv2XMqgTZVw+bvfS6iQAsio9XQV+uhkggtT4eLhDmUpI5g==
   /ramda/0.26.1:
     dev: true
     resolution:
       integrity: sha512-hLWjpy7EnsDBb0p+Z3B7rPi3GDeRG5ZtiI33kJhTt+ORCd38AbAIjB/9zRIUoeTbE/AVX5ZkU7m6bznsvrf8eQ==
-  /tslib/1.9.3:
+  /ts-toolbelt/3.6.1:
+    dev: true
+    peerDependencies:
+      typescript: ^3.5.0
+    resolution:
+      integrity: sha512-W6L8ppD33zVGUYVQEC8Z812ZKoxXckeiQWc0/d2ofKrmTRueTAOjpVl7KIpo0LjiCPiMHPYJPS8mR3o6X0oVKg==
+  /tslib/1.10.0:
     dev: false
     resolution:
-      integrity: sha512-4krF8scpejhaOgqzBEcGM7yDIEfi0/8+8zDRZhNZZ2kjmHJ4hv3zCbQWxoJGz1iw5U0Jl0nma13xzHXcncMavQ==
+      integrity: sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
 specifiers:
-  '@types/node': ^11.12.0
-  '@types/ramda': ^0.26.5
+  '@types/node': ^12.7.1
+  '@types/ramda': ^0.26.19
   ramda: ^0.26.1
-  tslib: ^1.9.3
+  tslib: ^1.10.0

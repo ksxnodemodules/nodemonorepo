@@ -14,10 +14,10 @@
     "random.org"
   ],
   "dependencies": {
-    "node-fetch": "^2.3.0",
-    "tslib": "^1.9.3",
-    "@types/node-fetch": "^2.1.7",
-    "@types/node": "^11.12.0"
+    "node-fetch": "^2.6.0",
+    "tslib": "^1.10.0",
+    "@types/node-fetch": "^2.5.0",
+    "@types/node": "^12.7.1"
   },
   "engines": {
     "node": ">= 8.9.0"

@@ -1,32 +1,32 @@
 dependencies:
-  '@types/node': 11.12.0
-  '@types/node-fetch': 2.1.7
-  node-fetch: 2.3.0
-  tslib: 1.9.3
-lockfileVersion: 5
+  '@types/node': 12.7.1
+  '@types/node-fetch': 2.5.0
+  node-fetch: 2.6.0
+  tslib: 1.10.0
+lockfileVersion: 5.1
 packages:
-  /@types/node-fetch/2.1.7:
+  /@types/node-fetch/2.5.0:
     dependencies:
-      '@types/node': 11.12.0
+      '@types/node': 12.7.1
     dev: false
     resolution:
-      integrity: sha512-TZozHCDVrs0Aj1B9ZR5F4Q9MknDNcVd+hO5lxXOCzz07ELBey6s1gMUSZHUYHlPfRFKJFXiTnNuD7ePiI6S4/g==
-  /@types/node/11.12.0:
+      integrity: sha512-TLFRywthBgL68auWj+ziWu+vnmmcHCDFC/sqCOQf1xTz4hRq8cu79z8CtHU9lncExGBsB8fXA4TiLDLt6xvMzw==
+  /@types/node/12.7.1:
     dev: false
     resolution:
-      integrity: sha512-Lg00egj78gM+4aE0Erw05cuDbvX9sLJbaaPwwRtdCdAMnIudqrQZ0oZX98Ek0yiSK/A2nubHgJfvII/rTT2Dwg==
-  /node-fetch/2.3.0:
+      integrity: sha512-aK9jxMypeSrhiYofWWBf/T7O+KwaiAHzM4sveCdWPn71lzUSMimRnKzhXDKfKwV1kWoBo2P1aGgaIYGLf9/ljw==
+  /node-fetch/2.6.0:
     dev: false
     engines:
       node: 4.x || >=6.0.0
     resolution:
-      integrity: sha512-MOd8pV3fxENbryESLgVIeaGKrdl+uaYhCSSVkjeOb/31/njTpcis5aWfdqgNlHIrKOLRbMnfPINPOML2CIFeXA==
-  /tslib/1.9.3:
+      integrity: sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==
+  /tslib/1.10.0:
     dev: false
     resolution:
-      integrity: sha512-4krF8scpejhaOgqzBEcGM7yDIEfi0/8+8zDRZhNZZ2kjmHJ4hv3zCbQWxoJGz1iw5U0Jl0nma13xzHXcncMavQ==
+      integrity: sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
 specifiers:
-  '@types/node': ^11.12.0
-  '@types/node-fetch': ^2.1.7
-  node-fetch: ^2.3.0
-  tslib: ^1.9.3
+  '@types/node': ^12.7.1
+  '@types/node-fetch': ^2.5.0
+  node-fetch: ^2.6.0
+  tslib: ^1.10.0

@@ -19,10 +19,10 @@
     "class"
   ],
   "dependencies": {
-    "tslib": "^1.9.3",
+    "tslib": "^1.10.0",
     "typescript-miscellaneous": "^0.1.1",
     "advanced-set-types": "^0.0.0",
-    "@types/node": "^11.12.0"
+    "@types/node": "^12.7.1"
   },
   "engines": {
     "node": ">= 8.9.0"

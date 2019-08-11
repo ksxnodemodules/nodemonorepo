@@ -19,10 +19,10 @@
   ],
   "main": "index.js",
   "dependencies": {
-    "iter-tools": "^6.2.4",
+    "iter-tools": "^6.2.5",
     "typescript-miscellaneous": "^0.1.1",
-    "tslib": "^1.9.3",
-    "@types/node": "^11.12.0"
+    "tslib": "^1.10.0",
+    "@types/node": "^12.7.1"
   },
   "devDependencies": {
     "static-type-assert": "^3.0.1"

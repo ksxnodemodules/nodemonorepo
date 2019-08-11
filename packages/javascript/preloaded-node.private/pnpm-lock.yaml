@@ -1,19 +1,19 @@
 dependencies:
   '@types/json5': 0.0.30
-  '@types/node': 11.12.0
+  '@types/node': 12.7.1
   json5: 2.1.0
-  ts-node: 8.0.3
-  typescript: 3.3.4000
-lockfileVersion: 5
+  ts-node: 8.3.0_typescript@3.5.3
+  typescript: 3.5.3
+lockfileVersion: 5.1
 packages:
   /@types/json5/0.0.30:
     dev: false
     resolution:
       integrity: sha512-sqm9g7mHlPY/43fcSNrCYfOeX9zkTTK+euO5E6+CVijSMm5tTjkVdwdqRkY3ljjIAf8679vps5jKUoJBCLsMDA==
-  /@types/node/11.12.0:
+  /@types/node/12.7.1:
     dev: false
     resolution:
-      integrity: sha512-Lg00egj78gM+4aE0Erw05cuDbvX9sLJbaaPwwRtdCdAMnIudqrQZ0oZX98Ek0yiSK/A2nubHgJfvII/rTT2Dwg==
+      integrity: sha512-aK9jxMypeSrhiYofWWBf/T7O+KwaiAHzM4sveCdWPn71lzUSMimRnKzhXDKfKwV1kWoBo2P1aGgaIYGLf9/ljw==
   /arg/4.1.0:
     dev: false
     resolution:
@@ -22,12 +22,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-MQcXEUbCKtEo7bhqEs6560Hyd4XaovZlO/k9V3hjVUF/zwW7KBVdSK4gIt/bzwS9MbR5qob+F5jusZsb0YQK2A==
-  /diff/3.5.0:
+  /diff/4.0.1:
     dev: false
     engines:
       node: '>=0.3.1'
     resolution:
-      integrity: sha512-A46qtFgd+g7pDZinpnwiRJtxbC1hpgf0uzP3iG89scHk0AUC7A1TGxf5OiiOUv/JMZR8GOt8hL900hV0bOy5xA==
+      integrity: sha512-s2+XdvhPCOF01LRQBC8hf4vhbVmI2CGS5aZnxLJlT5FtdhPCDFq80q++zK2KlrVorVDdL5BOGZ/VfLrVtYNF+Q==
   /json5/2.1.0:
     dependencies:
       minimist: 1.2.0
@@ -58,12 +58,13 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
-  /ts-node/8.0.3:
+  /ts-node/8.3.0_typescript@3.5.3:
     dependencies:
       arg: 4.1.0
-      diff: 3.5.0
+      diff: 4.0.1
       make-error: 1.3.5
       source-map-support: 0.5.11
+      typescript: 3.5.3
       yn: 3.0.0
     dev: false
     engines:
@@ -72,14 +73,14 @@ packages:
     peerDependencies:
       typescript: '>=2.0'
     resolution:
-      integrity: sha512-2qayBA4vdtVRuDo11DEFSsD/SFsBXQBRZZhbRGSIkmYmVkWjULn/GGMdG10KVqkaGndljfaTD8dKjWgcejO8YA==
-  /typescript/3.3.4000:
+      integrity: sha512-dyNS/RqyVTDcmNM4NIBAeDMpsAdaQ+ojdf0GOLqE6nwJOgzEkdRNzJywhDfwnuvB10oa6NLVG1rUJQCpRN7qoQ==
+  /typescript/3.5.3:
     dev: false
     engines:
       node: '>=4.2.0'
     hasBin: true
     resolution:
-      integrity: sha512-jjOcCZvpkl2+z7JFn0yBOoLQyLoIkNZAs/fYJkUG6VKy6zLPHJGfQJYFHzibB6GJaF/8QrcECtlQ5cpvRHSMEA==
+      integrity: sha512-ACzBtm/PhXBDId6a6sDJfroT2pOWt/oOnk4/dElG5G33ZL776N3Y6/6bKZJBFpd+b05F3Ct9qDjMeJmRWtE2/g==
   /yn/3.0.0:
     dev: false
     engines:
@@ -88,7 +89,7 @@ packages:
       integrity: sha512-+Wo/p5VRfxUgBUGy2j/6KX2mj9AYJWOHuhMjMcbBFc3y54o9/4buK1ksBvuiK01C3kby8DH9lSmJdSxw+4G/2Q==
 specifiers:
   '@types/json5': ^0.0.30
-  '@types/node': ^11.12.0
+  '@types/node': ^12.7.1
   json5: ^2.1.0
-  ts-node: ^8.0.3
-  typescript: ^3.3.4000
+  ts-node: ^8.3.0
+  typescript: ^3.5.3

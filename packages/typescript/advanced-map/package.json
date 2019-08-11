@@ -18,7 +18,7 @@
     "meta"
   ],
   "dependencies": {
-    "tslib": "^1.9.3",
+    "tslib": "^1.10.0",
     "advanced-map-types": "^0.0.2",
     "advanced-map-base": "^0.0.2",
     "advanced-map-multi-key-base": "^0.0.3",
@@ -26,10 +26,10 @@
     "advanced-map-multi-key": "^0.0.5",
     "advanced-map-mutable-multi-key": "^0.0.3",
     "advanced-map-initialized": "^0.0.2",
-    "@types/node": "^11.12.0"
+    "@types/node": "^12.7.1"
   },
   "devDependencies": {
-    "iter-tools": "^6.2.4"
+    "iter-tools": "^6.2.5"
   },
   "engines": {
     "node": ">= 8.9.0"
