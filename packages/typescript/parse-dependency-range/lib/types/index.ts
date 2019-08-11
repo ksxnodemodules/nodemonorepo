@@ -55,7 +55,7 @@ export namespace Struct {
   }
 }
 
-export const enum Type {
+export enum Type {
   Semver = 'semver',
   Tarball = 'tarball',
   Git = 'git',
@@ -71,14 +71,14 @@ export interface TarballUrl extends Url {
 }
 
 export namespace TarballUrl {
-  export const enum Protocol {
+  export enum Protocol {
     FTP = 'ftp:',
     FTPS = 'ftps:',
     HTTP = 'http:',
     HTTPS = 'https:'
   }
 
-  export const enum Extension {
+  export enum Extension {
     Tgz = '.tgz',
     TarGz = '.tar.gz',
     TarGzip = '.tar.gzip'
@@ -90,7 +90,7 @@ export interface GitUrl extends Url {
 }
 
 export namespace GitUrl {
-  export const enum Protocol {
+  export enum Protocol {
     Git = 'git:',
     SSH = 'git+ssh:',
     HTTP = 'git+http:',
@@ -100,7 +100,7 @@ export namespace GitUrl {
 }
 
 export namespace LocalUrl {
-  export const enum Protocol {
+  export enum Protocol {
     File = 'file:',
     Link = 'link:'
   }
