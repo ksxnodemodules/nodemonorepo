@@ -23,7 +23,7 @@ export function execute (
   if (error) throw error
 
   if (status) {
-    throw new execute.ExecutionError(status, signal, stderr)
+    throw new execute.ExecutionError(status, signal as any, stderr)
   }
 
   return stdout

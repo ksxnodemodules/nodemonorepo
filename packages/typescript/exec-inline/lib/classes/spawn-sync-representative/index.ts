@@ -10,7 +10,7 @@ class SpawnSyncRepresentative<X extends SpawnSyncRepresented> extends Representa
 
     const exit = Object.assign(
       (condition: SpawnSyncRepresentative.Exit.Condition<X> = () => true) => {
-        if (condition(represented)) process.exit(this.represented.status)
+        if (condition(represented)) process.exit(this.represented.status || 0)
       },
       {
         onerror: () => exit(() => Boolean(represented.status)),

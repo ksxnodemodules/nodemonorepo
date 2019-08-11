@@ -44,7 +44,7 @@ namespace publisher {
       }
     )
 
-    return { status, error, signal }
+    return { status, error, signal } as any
   }
 
   export function fake (param: Param): Result {

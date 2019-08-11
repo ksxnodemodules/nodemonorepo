@@ -1,3 +1,3 @@
 export interface SpawnSyncRepresented {
-  readonly status: number
+  readonly status?: number | null
 }
