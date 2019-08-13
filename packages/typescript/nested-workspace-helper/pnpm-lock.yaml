@@ -360,7 +360,7 @@ specifiers:
   preloaded-node.private: '*'
   ramda: ^0.26.1
   semver: ^6.3.0
-  smart-publish: ^0.0.3
+  smart-publish: ^0.0.4
   strip-ansi: ^5.2.0
   tslib: ^1.10.0
   yargs: ^13.3.0
