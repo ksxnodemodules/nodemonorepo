@@ -265,4 +265,4 @@ specifiers:
   preloaded-node.private: '*'
   ramda: ^0.26.1
   tslib: ^1.10.0
-  yargs: ~13.3.0
+  yargs: ^13.3.0

@@ -338,4 +338,4 @@ specifiers:
   minimatch: ^3.0.4
   preloaded-node.private: ^0.0.0
   tslib: ^1.10.0
-  yargs: ~13.3.0
+  yargs: ^13.3.0

@@ -361,4 +361,4 @@ specifiers:
   smart-publish: ^0.0.5
   strip-ansi: ^5.2.0
   tslib: ^1.10.0
-  yargs: ~13.3.0
+  yargs: ^13.3.0
