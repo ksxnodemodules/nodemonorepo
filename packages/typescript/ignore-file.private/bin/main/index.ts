@@ -1,5 +1,5 @@
 import * as process from 'process'
-import * as yargs from 'yargs'
+import yargs from 'yargs'
 import { writeIgnoreFiles, createFileChooser } from '../../index'
 import Argv = yargs.Argv
 import Arguments = yargs.Arguments
