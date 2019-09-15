@@ -1,20 +1,29 @@
 dependencies:
-  '@types/node': 12.7.1
-  '@types/semver': 6.0.1
+  '@types/node': 12.7.5
+  '@types/semver': 6.0.2
   chalk: 2.4.2
   exec-inline: 'link:../exec-inline'
+  pretty-exec: 0.3.1
   semver: 6.3.0
   tslib: 1.10.0
 lockfileVersion: 5.1
 packages:
-  /@types/node/12.7.1:
+  /@types/node/10.14.18:
     dev: false
     resolution:
-      integrity: sha512-aK9jxMypeSrhiYofWWBf/T7O+KwaiAHzM4sveCdWPn71lzUSMimRnKzhXDKfKwV1kWoBo2P1aGgaIYGLf9/ljw==
-  /@types/semver/6.0.1:
+      integrity: sha512-ryO3Q3++yZC/+b8j8BdKd/dn9JlzlHBPdm80656xwYUdmPkpTGTjkAdt6BByiNupGPE8w0FhBgvYy/fX9hRNGQ==
+  /@types/node/12.7.5:
     dev: false
     resolution:
-      integrity: sha512-ffCdcrEE5h8DqVxinQjo+2d1q+FV5z7iNtPofw3JsrltSoSVlOGaW0rY8XxtO9XukdTn8TaCGWmk2VFGhI70mg==
+      integrity: sha512-9fq4jZVhPNW8r+UYKnxF1e2HkDWOWKM5bC2/7c9wPV835I0aOrVbS/Hw/pWPk2uKrNXQqg9Z959Kz+IYDd5p3w==
+  /@types/semver/6.0.2:
+    dev: false
+    resolution:
+      integrity: sha512-G1Ggy7/9Nsa1Jt2yiBR2riEuyK2DFNnqow6R7cromXPMNynackRY1vqFTLz/gwnef1LHokbXThcPhqMRjUbkpQ==
+  /@types/shell-escape/0.2.0:
+    dev: false
+    resolution:
+      integrity: sha512-7kUdtJtUylvyISJbe9FMcvMTjRdP0EvNDO1WbT0lT22k/IPBiPRTpmWaKu5HTWLCGLQRWVHrzVHZktTDvvR23g==
   /ansi-styles/3.2.1:
     dependencies:
       color-convert: 1.9.3
@@ -55,11 +64,36 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-tdRU3CGZriJWmfNGfloH87lVuv0=
+  /pretty-exec/0.3.1:
+    dependencies:
+      '@types/node': 12.7.5
+      '@types/shell-escape': 0.2.0
+      chalk: 2.4.2
+      shell-escape: 0.2.0
+      split-string-once: 0.0.0
+      tslib: 1.10.0
+    dev: false
+    hasBin: true
+    resolution:
+      integrity: sha512-eC6Yuf1pe52xJ1gQdukuzMmxip/mfuAW8/HG9o3OhDwPMkgUrmrGjma2D3SGHLyruSkLe4qpZtxTvyQtZ8OSxg==
   /semver/6.3.0:
     dev: false
     hasBin: true
     resolution:
       integrity: sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==
+  /shell-escape/0.2.0:
+    dev: false
+    resolution:
+      integrity: sha1-aP0CXrBJC09WegJ/C/IkgLX4QTM=
+  /split-string-once/0.0.0:
+    dependencies:
+      '@types/node': 10.14.18
+      tslib: 1.10.0
+    dev: false
+    engines:
+      node: '>= 8.9.0'
+    resolution:
+      integrity: sha512-FrmRtP56cdaHEPAGGjV6eebDJ7QUZ+sobv2SV69Fec5G6cJ2Jwm1d8o+IE1HyweCPYz6Mf7WVl/dpSkuN6tUbQ==
   /supports-color/5.5.0:
     dependencies:
       has-flag: 3.0.0
@@ -77,5 +111,6 @@ specifiers:
   '@types/semver': ^6.0.1
   chalk: ^2.4.2
   exec-inline: ^0.0.3
+  pretty-exec: ^0.3.1
   semver: ^6.3.0
   tslib: ^1.10.0

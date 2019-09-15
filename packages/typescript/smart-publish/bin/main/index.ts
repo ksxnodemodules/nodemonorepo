@@ -2,6 +2,7 @@ import process from 'process'
 import path from 'path'
 import semver from 'semver'
 import chalk from 'chalk'
+import createPrettyExec from 'pretty-exec'
 import exec from 'exec-inline'
 import { cmds, ExitStatusCode } from '../../index'
 
@@ -38,10 +39,15 @@ function main () {
   // Changing directory, so that npm is called in the right place
   process.chdir(CWD)
 
+  const prettyExec = createPrettyExec({
+    spawn: (cmd, args) => exec(cmd, ...args),
+    print: console.info
+  })
+
   console.info(`Working Directory: ${CWD}\n`)
   for (const command of cmds(name, validVersion)) {
     console.info(`${chalk.dim('$')} ${NPM} ${command.join(' ')}`)
-    exec(NPM, ...command).exit.onerror()
+    prettyExec(NPM, command).exit.onerror()
   }
 
   console.info('\ndone.')
@@ -63,6 +69,6 @@ function help () {
   title('Exit Status Code')
   for (const [key, value] of Object.entries(ExitStatusCode)) {
     if (isFinite(key as any)) continue
-    line(`${chalk.bold(value)} → ${key}`)
+    line(`${chalk.bold(String(value))} → ${key}`)
   }
 }
