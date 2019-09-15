@@ -1,20 +1,20 @@
 dependencies:
-  '@types/node': 12.7.1
+  '@types/node': 12.7.5
   advanced-set-multi-key-base: 'link:../advanced-set-multi-key-base'
   advanced-set-types: 'link:../advanced-set-types'
   tslib: 1.10.0
 lockfileVersion: 5.1
 packages:
-  /@types/node/12.7.1:
+  /@types/node/12.7.5:
     dev: false
     resolution:
-      integrity: sha512-aK9jxMypeSrhiYofWWBf/T7O+KwaiAHzM4sveCdWPn71lzUSMimRnKzhXDKfKwV1kWoBo2P1aGgaIYGLf9/ljw==
+      integrity: sha512-9fq4jZVhPNW8r+UYKnxF1e2HkDWOWKM5bC2/7c9wPV835I0aOrVbS/Hw/pWPk2uKrNXQqg9Z959Kz+IYDd5p3w==
   /tslib/1.10.0:
     dev: false
     resolution:
       integrity: sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
 specifiers:
-  '@types/node': ^12.7.1
+  '@types/node': ^12.7.5
   advanced-set-multi-key-base: ^0.0.2
   advanced-set-types: ^0.0.0
   tslib: ^1.10.0

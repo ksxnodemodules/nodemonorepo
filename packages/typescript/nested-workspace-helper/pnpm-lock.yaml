@@ -344,10 +344,10 @@ packages:
 specifiers:
   '@types/fs-extra': ^8.0.0
   '@types/js-yaml': ^3.12.1
-  '@types/node': ^12.7.1
+  '@types/node': ^12.7.5
   '@types/node-fetch': ^2.5.0
-  '@types/ramda': ^0.26.19
-  '@types/semver': ^6.0.1
+  '@types/ramda': ^0.26.21
+  '@types/semver': ^6.0.2
   '@types/yargs': ^13.0.2
   chalk: ^2.4.2
   fs-extra: ^8.1.0
@@ -361,4 +361,4 @@ specifiers:
   smart-publish: ^0.0.5
   strip-ansi: ^5.2.0
   tslib: ^1.10.0
-  yargs: ^13.3.0
+  yargs: ~13.3.0

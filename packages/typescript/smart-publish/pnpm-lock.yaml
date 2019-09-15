@@ -107,8 +107,8 @@ packages:
     resolution:
       integrity: sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
 specifiers:
-  '@types/node': ^12.7.1
-  '@types/semver': ^6.0.1
+  '@types/node': ^12.7.5
+  '@types/semver': ^6.0.2
   chalk: ^2.4.2
   exec-inline: ^0.0.3
   pretty-exec: ^0.3.1

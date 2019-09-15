@@ -25,8 +25,8 @@
     "tslib": "^1.10.0",
     "monorepo-shared-assets": "^0.0.17",
     "@types/fs-extra": "^8.0.0",
-    "@types/ramda": "^0.26.19",
-    "@types/node": "^12.7.1"
+    "@types/ramda": "^0.26.21",
+    "@types/node": "^12.7.5"
   },
   "devDependencies": {
     "unique-temp-path": "*"
