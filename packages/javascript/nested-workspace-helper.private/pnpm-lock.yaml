@@ -3,5 +3,5 @@ dependencies:
   preloaded-node.private: 'link:../preloaded-node.private'
 lockfileVersion: 5.1
 specifiers:
-  nested-workspace-helper: ^0.2.10
+  nested-workspace-helper: ^0.2.11
   preloaded-node.private: ^0.0.0
