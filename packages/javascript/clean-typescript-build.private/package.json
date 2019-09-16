@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "fs-extra": "^8.1.0",
-    "fs-tree-utils": "^0.1.6"
+    "preloaded-node.private": "^0.0.0",
+    "clean-typescript-build": "0.1.1"
   }
 }
