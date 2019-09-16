@@ -44,7 +44,7 @@ packages:
       integrity: sha512-9fq4jZVhPNW8r+UYKnxF1e2HkDWOWKM5bC2/7c9wPV835I0aOrVbS/Hw/pWPk2uKrNXQqg9Z959Kz+IYDd5p3w==
   /@types/ramda/0.26.21:
     dependencies:
-      ts-toolbelt: 3.8.92
+      ts-toolbelt: 3.10.0
     dev: false
     resolution:
       integrity: sha512-zMYtIZMceA6BvH+or6LmewLBgojbXg5+FGCwjO8K+Z+d/ZWxILmhhASXkehW0PqJL+V0QbyDeeAHix0dvEKXfQ==
@@ -287,10 +287,10 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow==
-  /ts-toolbelt/3.8.92:
+  /ts-toolbelt/3.10.0:
     dev: false
     resolution:
-      integrity: sha512-8weyhjSrpxBdkcSZF4qV6aq/q7S795dKS3SWxGhAs7msilb3eVN8ozuXBlDR5ivQVFvp9cfgwXb+Nb4aKEg0tg==
+      integrity: sha512-bBuhxvS1ZUww3EwBooemUTargLP1EBgIcO221iTI0EjukHyHurnZckEHrpWA+P80JPp/2lvl4lv5bZN9P6AWUg==
   /tslib/1.10.0:
     dev: false
     resolution:
@@ -358,7 +358,7 @@ specifiers:
   preloaded-node.private: '*'
   ramda: ^0.26.1
   semver: ^6.3.0
-  smart-publish: ^0.0.5
+  smart-publish: ^0.0.6
   strip-ansi: ^5.2.0
   tslib: ^1.10.0
   yargs: ^13.3.0

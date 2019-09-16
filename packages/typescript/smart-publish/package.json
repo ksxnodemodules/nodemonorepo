@@ -1,6 +1,6 @@
 {
   "name": "smart-publish",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Like npm publish, but also tag prepreleases and knows when it is public",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
