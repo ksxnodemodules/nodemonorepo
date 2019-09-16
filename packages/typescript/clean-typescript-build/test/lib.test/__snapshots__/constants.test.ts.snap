@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TARGETED_EXTENSIONS matches snapshot 1`] = `
+Set {
+  ".js",
+  ".js.map",
+  ".jsx",
+  ".jsx.map",
+  ".mjs",
+  ".mjs.map",
+  ".d.ts",
+  ".d.ts.map",
+  ".d.tsx",
+  ".d.tsx.map",
+  ".js.d.ts",
+  ".js.d.ts.map",
+  ".jsx.d.ts",
+  ".jsx.d.ts.map",
+  ".mjs.d.ts",
+  ".mjs.d.ts.map",
+}
+`;

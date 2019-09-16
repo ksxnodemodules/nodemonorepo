@@ -8,5 +8,11 @@ export = Object.freeze([
   '.d.ts',
   '.d.ts.map',
   '.d.tsx',
-  '.d.tsx.map'
+  '.d.tsx.map',
+  '.js.d.ts',
+  '.js.d.ts.map',
+  '.jsx.d.ts',
+  '.jsx.d.ts.map',
+  '.mjs.d.ts',
+  '.mjs.d.ts.map'
 ])
