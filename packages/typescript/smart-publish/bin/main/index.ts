@@ -46,7 +46,6 @@ function main () {
 
   console.info(`Working Directory: ${CWD}\n`)
   for (const command of cmds(name, validVersion)) {
-    console.info(`${chalk.dim('$')} ${NPM} ${command.join(' ')}`)
     prettyExec(NPM, command).exit.onerror()
   }
 
