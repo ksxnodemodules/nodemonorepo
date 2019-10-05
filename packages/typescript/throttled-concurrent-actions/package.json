@@ -19,7 +19,7 @@
   "dependencies": {
     "ramda": "^0.26.1",
     "tslib": "^1.10.0",
-    "@types/ramda": "^0.26.21",
+    "@types/ramda": "0.26.26",
     "@types/node": "^12.7.5"
   },
   "engines": {

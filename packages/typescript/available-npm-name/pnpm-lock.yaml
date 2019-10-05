@@ -234,7 +234,7 @@ packages:
 specifiers:
   '@types/node': ^12.7.5
   '@types/node-fetch': ^2.5.0
-  '@types/ramda': ^0.26.21
+  '@types/ramda': 0.26.26
   '@types/yargs': ^13.0.2
   assemble-registry-url: ^0.0.1
   node-fetch: ^2.6.0

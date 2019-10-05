@@ -67,7 +67,7 @@ packages:
 specifiers:
   '@types/fs-extra': ^8.0.0
   '@types/node': ^12.7.5
-  '@types/ramda': ^0.26.21
+  '@types/ramda': 0.26.26
   fs-extra: ^8.1.0
   monorepo-shared-assets: ^0.0.18
   ramda: ^0.26.1
