@@ -1,6 +1,6 @@
 {
   "name": "nested-workspace-helper",
-  "version": "0.2.13",
+  "version": "0.2.14",
   "description": "Some commands in needs for nodemonorepo",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
