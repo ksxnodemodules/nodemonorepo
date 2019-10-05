@@ -69,7 +69,7 @@
     "build": "bash 'sh/build.sh'",
     "project-build": "bash sh/build.sh",
     "project-publish": "bash sh/publish.sh",
-    "project-perpublish": "bash sh/prepublish.sh",
+    "project-prepublish": "bash sh/prepublish.sh",
     "project-postpublish": "bash sh/postpublish.sh",
     "publish-tag-push": "npm run project-publish && npm run git-tag-versions && git push -u origin --tags master",
     "wrkspc": "nested-wrkspc.prv"
