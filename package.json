@@ -24,7 +24,7 @@
     "typescript": "^3.6.3",
     "tslib": "^1.10.0",
     "glob": "^7.1.4",
-    "toolcheck": "^0.0.5",
+    "toolcheck": "^0.1.0",
     "extra-jest": "*",
     "git-ts": "*",
     "preloaded-node.private": "*",
