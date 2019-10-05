@@ -33,6 +33,6 @@
     "preloaded-node.private": "*"
   },
   "engines": {
-    "node": "^8.9.0"
+    "node": ">= 8.9.0"
   }
 }
