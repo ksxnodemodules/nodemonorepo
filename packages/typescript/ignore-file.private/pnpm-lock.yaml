@@ -2,8 +2,8 @@ dependencies:
   '@types/fs-extra': 8.0.0
   '@types/js-yaml': 3.12.1
   '@types/minimatch': 3.0.3
-  '@types/node': 12.7.5
-  '@types/yargs': 13.0.2
+  '@types/node': 12.7.11
+  '@types/yargs': 13.0.3
   chalk: 2.4.2
   fs-extra: 8.1.0
   fs-tree-utils: 'link:../fs-tree-utils'
@@ -16,7 +16,7 @@ lockfileVersion: 5.1
 packages:
   /@types/fs-extra/8.0.0:
     dependencies:
-      '@types/node': 12.7.5
+      '@types/node': 12.7.11
     dev: false
     resolution:
       integrity: sha512-bCtL5v9zdbQW86yexOlXWTEGvLNqWxMFyi7gQA7Gcthbezr2cPSOb8SkESVKA937QD5cIwOFLDFt0MQoXOEr9Q==
@@ -28,20 +28,20 @@ packages:
     dev: false
     resolution:
       integrity: sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
-  /@types/node/12.7.5:
+  /@types/node/12.7.11:
     dev: false
     resolution:
-      integrity: sha512-9fq4jZVhPNW8r+UYKnxF1e2HkDWOWKM5bC2/7c9wPV835I0aOrVbS/Hw/pWPk2uKrNXQqg9Z959Kz+IYDd5p3w==
+      integrity: sha512-Otxmr2rrZLKRYIybtdG/sgeO+tHY20GxeDjcGmUnmmlCWyEnv2a2x1ZXBo3BTec4OiTXMQCiazB8NMBf0iRlFw==
   /@types/yargs-parser/13.1.0:
     dev: false
     resolution:
       integrity: sha512-gCubfBUZ6KxzoibJ+SCUc/57Ms1jz5NjHe4+dI2krNmU5zCPAphyLJYyTOg06ueIyfj+SaCUqmzun7ImlxDcKg==
-  /@types/yargs/13.0.2:
+  /@types/yargs/13.0.3:
     dependencies:
       '@types/yargs-parser': 13.1.0
     dev: false
     resolution:
-      integrity: sha512-lwwgizwk/bIIU+3ELORkyuOgDjCh7zuWDFqRtPPhhVgq9N1F7CvLNKg1TX4f2duwtKQ0p044Au9r1PLIXHrIzQ==
+      integrity: sha512-K8/LfZq2duW33XW/tFwEAfnZlqIfVsoyRB3kfXdPXYhl0nfM8mmh7GS0jg7WrX2Dgq/0Ha/pR1PaR+BvmWwjiQ==
   /ansi-regex/4.1.0:
     dev: false
     engines:
@@ -333,7 +333,7 @@ specifiers:
   '@types/yargs': ^13.0.2
   chalk: ^2.4.2
   fs-extra: ^8.1.0
-  fs-tree-utils: ^0.1.6
+  fs-tree-utils: ^0.1.7
   js-yaml: ^3.13.1
   minimatch: ^3.0.4
   preloaded-node.private: ^0.0.0

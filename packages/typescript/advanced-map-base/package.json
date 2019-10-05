@@ -1,6 +1,6 @@
 {
   "name": "advanced-map-base",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Abstract base class of advanced-map packages",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
@@ -21,7 +21,7 @@
   "dependencies": {
     "tslib": "^1.10.0",
     "typescript-miscellaneous": "^0.1.1",
-    "advanced-map-types": "^0.0.2",
+    "advanced-map-types": "^0.0.3",
     "@types/node": "^12.7.5"
   },
   "engines": {

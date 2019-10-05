@@ -1,6 +1,6 @@
 {
   "name": "exec-inline",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Make it more convenient to execute commands with inherited stdio",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",

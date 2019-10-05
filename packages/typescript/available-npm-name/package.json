@@ -1,6 +1,6 @@
 {
   "name": "available-npm-name",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Check if any package name is taken",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
@@ -30,7 +30,7 @@
     "node-fetch": "^2.6.0",
     "yargs": "^13.3.0",
     "tslib": "^1.10.0",
-    "assemble-registry-url": "^0.0.0",
+    "assemble-registry-url": "^0.0.1",
     "@types/ramda": "^0.26.21",
     "@types/node-fetch": "^2.5.0",
     "@types/yargs": "^13.0.2",

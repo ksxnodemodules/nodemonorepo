@@ -1,6 +1,6 @@
 {
   "name": "xor-compose",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Compose multiple functions by XOR",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",

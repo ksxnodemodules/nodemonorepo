@@ -1,6 +1,6 @@
 {
   "name": "advanced-set-base",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Abstract base class of advanced-set packages",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
@@ -21,7 +21,7 @@
   "dependencies": {
     "tslib": "^1.10.0",
     "typescript-miscellaneous": "^0.1.1",
-    "advanced-set-types": "^0.0.0",
+    "advanced-set-types": "^0.0.1",
     "@types/node": "^12.7.5"
   },
   "engines": {

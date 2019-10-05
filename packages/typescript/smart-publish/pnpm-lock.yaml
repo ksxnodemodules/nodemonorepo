@@ -1,21 +1,21 @@
 dependencies:
-  '@types/node': 12.7.5
+  '@types/node': 12.7.11
   '@types/semver': 6.0.2
   chalk: 2.4.2
   exec-inline: 'link:../exec-inline'
-  pretty-exec: 0.3.1
+  pretty-exec: 0.3.3
   semver: 6.3.0
   tslib: 1.10.0
 lockfileVersion: 5.1
 packages:
-  /@types/node/10.14.18:
+  /@types/node/10.14.20:
     dev: false
     resolution:
-      integrity: sha512-ryO3Q3++yZC/+b8j8BdKd/dn9JlzlHBPdm80656xwYUdmPkpTGTjkAdt6BByiNupGPE8w0FhBgvYy/fX9hRNGQ==
-  /@types/node/12.7.5:
+      integrity: sha512-An+MXSV8CGXz/BO9C1KKsoJ/8WDrvlNUaRMsm2h+IHZuSyQkM8U5bJJkb8ItLKA73VePG/nUK+t+EuW2IWuhsQ==
+  /@types/node/12.7.11:
     dev: false
     resolution:
-      integrity: sha512-9fq4jZVhPNW8r+UYKnxF1e2HkDWOWKM5bC2/7c9wPV835I0aOrVbS/Hw/pWPk2uKrNXQqg9Z959Kz+IYDd5p3w==
+      integrity: sha512-Otxmr2rrZLKRYIybtdG/sgeO+tHY20GxeDjcGmUnmmlCWyEnv2a2x1ZXBo3BTec4OiTXMQCiazB8NMBf0iRlFw==
   /@types/semver/6.0.2:
     dev: false
     resolution:
@@ -64,9 +64,9 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-tdRU3CGZriJWmfNGfloH87lVuv0=
-  /pretty-exec/0.3.1:
+  /pretty-exec/0.3.3:
     dependencies:
-      '@types/node': 12.7.5
+      '@types/node': 12.7.11
       '@types/shell-escape': 0.2.0
       chalk: 2.4.2
       shell-escape: 0.2.0
@@ -75,7 +75,7 @@ packages:
     dev: false
     hasBin: true
     resolution:
-      integrity: sha512-eC6Yuf1pe52xJ1gQdukuzMmxip/mfuAW8/HG9o3OhDwPMkgUrmrGjma2D3SGHLyruSkLe4qpZtxTvyQtZ8OSxg==
+      integrity: sha512-L0gFsRd7vOIw1pphWnXLByTijy8Dp7lZ9++F0hnbyWB8V5fZ837SivxqW/0pihAbTTRvSNuYgyx2yv7q/ai/ZQ==
   /semver/6.3.0:
     dev: false
     hasBin: true
@@ -87,7 +87,7 @@ packages:
       integrity: sha1-aP0CXrBJC09WegJ/C/IkgLX4QTM=
   /split-string-once/0.0.0:
     dependencies:
-      '@types/node': 10.14.18
+      '@types/node': 10.14.20
       tslib: 1.10.0
     dev: false
     engines:
@@ -110,7 +110,7 @@ specifiers:
   '@types/node': ^12.7.5
   '@types/semver': ^6.0.2
   chalk: ^2.4.2
-  exec-inline: ^0.0.3
+  exec-inline: ^0.0.4
   pretty-exec: ^0.3.1
   semver: ^6.3.0
   tslib: ^1.10.0

@@ -1,5 +1,5 @@
 dependencies:
-  '@types/node': 12.7.5
+  '@types/node': 12.7.11
   advanced-map-altered-equal: 'link:../advanced-map-altered-equal'
   advanced-map-base: 'link:../advanced-map-base'
   advanced-map-initialized: 'link:../advanced-map-initialized'
@@ -12,23 +12,23 @@ devDependencies:
   iter-tools: 6.2.6
 lockfileVersion: 5.1
 packages:
-  /@babel/runtime-corejs2/7.6.0:
+  /@babel/runtime-corejs2/7.6.2:
     dependencies:
       core-js: 2.6.9
       regenerator-runtime: 0.13.3
     dev: true
     resolution:
-      integrity: sha512-zbPQzlbyJab2xCYb6VaESn8Tk/XiVpQJU7WvIKiQCwlFyc2NSCzKjqtBXCvpZBbiTOHCx10s2656REVnySwb+A==
-  /@babel/runtime/7.6.0:
+      integrity: sha512-wdyVKnTv9Be4YlwF/7pByYNfcl23qC21aAQ0aIaZOo2ZOvhFEyJdBLJClYZ9i+Pmrz7sUQgg/MwbJa2RZTkygg==
+  /@babel/runtime/7.6.2:
     dependencies:
       regenerator-runtime: 0.13.3
     dev: true
     resolution:
-      integrity: sha512-89eSBLJsxNxOERC0Op4vd+0Bqm6wRMqMbFtV3i0/fbaWw/mJ8Q3eBvgX0G4SyrOOLCtbu98HspF8o09MRT+KzQ==
-  /@types/node/12.7.5:
+      integrity: sha512-EXxN64agfUqqIGeEjI5dL5z0Sw0ZwWo1mLTi4mQowCZ42O59b7DRpZAnTC6OqdF28wMBMFKNb/4uFGrVaigSpg==
+  /@types/node/12.7.11:
     dev: false
     resolution:
-      integrity: sha512-9fq4jZVhPNW8r+UYKnxF1e2HkDWOWKM5bC2/7c9wPV835I0aOrVbS/Hw/pWPk2uKrNXQqg9Z959Kz+IYDd5p3w==
+      integrity: sha512-Otxmr2rrZLKRYIybtdG/sgeO+tHY20GxeDjcGmUnmmlCWyEnv2a2x1ZXBo3BTec4OiTXMQCiazB8NMBf0iRlFw==
   /core-js/2.6.9:
     dev: true
     requiresBuild: true
@@ -40,13 +40,13 @@ packages:
       integrity: sha1-EPHO8H4yNLIdyzj0v6LWYDSrZ8c=
   /iter-tools/6.2.6:
     dependencies:
-      '@babel/runtime': 7.6.0
-      '@babel/runtime-corejs2': 7.6.0
+      '@babel/runtime': 7.6.2
+      '@babel/runtime-corejs2': 7.6.2
       dequeue: 1.0.5
       little-ds-toolkit: 1.1.1
       typescript-tuple: 2.2.1
       typescript-union: 0.1.2
-      utility-types: 3.7.0
+      utility-types: 3.8.0
     dev: true
     resolution:
       integrity: sha512-DlBSv7cIrM214wYFxyz4vg98BmEpxFTGx37ei/ktYT05shJHoDwz7wuaPx3XhaJi1uGEc5bM+vUBWhm3z6yNIg==
@@ -81,24 +81,24 @@ packages:
   /typescript-union/0.1.2:
     dependencies:
       typescript-tuple: 2.2.1
-      utility-types: 3.7.0
+      utility-types: 3.8.0
     dev: true
     resolution:
       integrity: sha512-pzfdtUZ8teglF69/dllzgd6yV7ikoszPHVyOkl4WGICRhTJgCTwL3+ZnnF/hvII536VbsNMQfd9GmLBNhtsmgg==
-  /utility-types/3.7.0:
+  /utility-types/3.8.0:
     dev: true
     engines:
       node: '>= 4'
     resolution:
-      integrity: sha512-mqRJXN7dEArK/NZNJUubjr9kbFFVZcmF/JHDc9jt5O/aYXUVmopHYujDMhLmLil1Bxo2+khe6KAIVvDH9Yc4VA==
+      integrity: sha512-UoKivAmVw5TL6AHuILieOJjIK9ajS0l5gyN5LbJglPuVwzfYBniDhe+3A5+ZBtS0TAHQs5qUxTwj9jXurINrcw==
 specifiers:
   '@types/node': ^12.7.5
-  advanced-map-altered-equal: ^0.0.3
-  advanced-map-base: ^0.0.2
-  advanced-map-initialized: ^0.0.2
-  advanced-map-multi-key: ^0.0.5
-  advanced-map-multi-key-base: ^0.0.3
-  advanced-map-mutable-multi-key: ^0.0.3
-  advanced-map-types: ^0.0.2
+  advanced-map-altered-equal: ^0.0.4
+  advanced-map-base: ^0.0.3
+  advanced-map-initialized: ^0.0.3
+  advanced-map-multi-key: ^0.0.6
+  advanced-map-multi-key-base: ^0.0.4
+  advanced-map-mutable-multi-key: ^0.0.4
+  advanced-map-types: ^0.0.3
   iter-tools: ^6.2.6
   tslib: ^1.10.0

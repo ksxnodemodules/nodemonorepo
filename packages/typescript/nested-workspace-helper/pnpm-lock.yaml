@@ -1,11 +1,11 @@
 dependencies:
   '@types/fs-extra': 8.0.0
   '@types/js-yaml': 3.12.1
-  '@types/node': 12.7.5
-  '@types/node-fetch': 2.5.0
-  '@types/ramda': 0.26.21
+  '@types/node': 12.7.11
+  '@types/node-fetch': 2.5.2
+  '@types/ramda': 0.26.26
   '@types/semver': 6.0.2
-  '@types/yargs': 13.0.2
+  '@types/yargs': 13.0.3
   chalk: 2.4.2
   fs-extra: 8.1.0
   fs-tree-utils: 'link:../fs-tree-utils'
@@ -24,7 +24,7 @@ lockfileVersion: 5.1
 packages:
   /@types/fs-extra/8.0.0:
     dependencies:
-      '@types/node': 12.7.5
+      '@types/node': 12.7.11
     dev: false
     resolution:
       integrity: sha512-bCtL5v9zdbQW86yexOlXWTEGvLNqWxMFyi7gQA7Gcthbezr2cPSOb8SkESVKA937QD5cIwOFLDFt0MQoXOEr9Q==
@@ -32,22 +32,22 @@ packages:
     dev: false
     resolution:
       integrity: sha512-SGGAhXLHDx+PK4YLNcNGa6goPf9XRWQNAUUbffkwVGGXIxmDKWyGGL4inzq2sPmExu431Ekb9aEMn9BkPqEYFA==
-  /@types/node-fetch/2.5.0:
+  /@types/node-fetch/2.5.2:
     dependencies:
-      '@types/node': 12.7.5
+      '@types/node': 12.7.11
     dev: false
     resolution:
-      integrity: sha512-TLFRywthBgL68auWj+ziWu+vnmmcHCDFC/sqCOQf1xTz4hRq8cu79z8CtHU9lncExGBsB8fXA4TiLDLt6xvMzw==
-  /@types/node/12.7.5:
+      integrity: sha512-djYYKmdNRSBtL1x4CiE9UJb9yZhwtI1VC+UxZD0psNznrUj80ywsxKlEGAE+QL1qvLjPbfb24VosjkYM6W4RSQ==
+  /@types/node/12.7.11:
     dev: false
     resolution:
-      integrity: sha512-9fq4jZVhPNW8r+UYKnxF1e2HkDWOWKM5bC2/7c9wPV835I0aOrVbS/Hw/pWPk2uKrNXQqg9Z959Kz+IYDd5p3w==
-  /@types/ramda/0.26.21:
+      integrity: sha512-Otxmr2rrZLKRYIybtdG/sgeO+tHY20GxeDjcGmUnmmlCWyEnv2a2x1ZXBo3BTec4OiTXMQCiazB8NMBf0iRlFw==
+  /@types/ramda/0.26.26:
     dependencies:
-      ts-toolbelt: 3.10.0
+      ts-toolbelt: 4.7.24
     dev: false
     resolution:
-      integrity: sha512-zMYtIZMceA6BvH+or6LmewLBgojbXg5+FGCwjO8K+Z+d/ZWxILmhhASXkehW0PqJL+V0QbyDeeAHix0dvEKXfQ==
+      integrity: sha512-jDx2Lp2WvziMTcDxOU21yzRr6jP/VTWvpg6SQxeM63VldSjugUY1N9p1Q8YY/wpGvqzpkstUFmg2oGJdBSp5gg==
   /@types/semver/6.0.2:
     dev: false
     resolution:
@@ -56,12 +56,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-gCubfBUZ6KxzoibJ+SCUc/57Ms1jz5NjHe4+dI2krNmU5zCPAphyLJYyTOg06ueIyfj+SaCUqmzun7ImlxDcKg==
-  /@types/yargs/13.0.2:
+  /@types/yargs/13.0.3:
     dependencies:
       '@types/yargs-parser': 13.1.0
     dev: false
     resolution:
-      integrity: sha512-lwwgizwk/bIIU+3ELORkyuOgDjCh7zuWDFqRtPPhhVgq9N1F7CvLNKg1TX4f2duwtKQ0p044Au9r1PLIXHrIzQ==
+      integrity: sha512-K8/LfZq2duW33XW/tFwEAfnZlqIfVsoyRB3kfXdPXYhl0nfM8mmh7GS0jg7WrX2Dgq/0Ha/pR1PaR+BvmWwjiQ==
   /ansi-regex/4.1.0:
     engines:
       node: '>=6'
@@ -287,10 +287,10 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow==
-  /ts-toolbelt/3.10.0:
+  /ts-toolbelt/4.7.24:
     dev: false
     resolution:
-      integrity: sha512-bBuhxvS1ZUww3EwBooemUTargLP1EBgIcO221iTI0EjukHyHurnZckEHrpWA+P80JPp/2lvl4lv5bZN9P6AWUg==
+      integrity: sha512-jOnCkp4Yqa53CNonegmTCu7bhi9ame5iZNOZaby2wIvtgCGRKSxlr4j/7Qyabz02qY7ex4tviwj/t2irr305XQ==
   /tslib/1.10.0:
     dev: false
     resolution:
@@ -351,14 +351,14 @@ specifiers:
   '@types/yargs': ^13.0.2
   chalk: ^2.4.2
   fs-extra: ^8.1.0
-  fs-tree-utils: ^0.1.6
+  fs-tree-utils: ^0.1.7
   js-yaml: ^3.13.1
-  monorepo-shared-assets: ^0.0.17
+  monorepo-shared-assets: ^0.0.18
   node-fetch: ^2.6.0
   preloaded-node.private: '*'
   ramda: ^0.26.1
   semver: ^6.3.0
-  smart-publish: ^0.0.6
+  smart-publish: ^0.0.7
   strip-ansi: ^5.2.0
   tslib: ^1.10.0
   yargs: ^13.3.0

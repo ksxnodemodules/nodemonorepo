@@ -1,8 +1,8 @@
 dependencies:
-  '@types/node': 12.7.5
-  '@types/node-fetch': 2.5.0
-  '@types/ramda': 0.26.21
-  '@types/yargs': 13.0.2
+  '@types/node': 12.7.11
+  '@types/node-fetch': 2.5.2
+  '@types/ramda': 0.26.26
+  '@types/yargs': 13.0.3
   assemble-registry-url: 'link:../assemble-registry-url'
   node-fetch: 2.6.0
   ramda: 0.26.1
@@ -10,32 +10,32 @@ dependencies:
   yargs: 13.3.0
 lockfileVersion: 5.1
 packages:
-  /@types/node-fetch/2.5.0:
+  /@types/node-fetch/2.5.2:
     dependencies:
-      '@types/node': 12.7.5
+      '@types/node': 12.7.11
     dev: false
     resolution:
-      integrity: sha512-TLFRywthBgL68auWj+ziWu+vnmmcHCDFC/sqCOQf1xTz4hRq8cu79z8CtHU9lncExGBsB8fXA4TiLDLt6xvMzw==
-  /@types/node/12.7.5:
+      integrity: sha512-djYYKmdNRSBtL1x4CiE9UJb9yZhwtI1VC+UxZD0psNznrUj80ywsxKlEGAE+QL1qvLjPbfb24VosjkYM6W4RSQ==
+  /@types/node/12.7.11:
     dev: false
     resolution:
-      integrity: sha512-9fq4jZVhPNW8r+UYKnxF1e2HkDWOWKM5bC2/7c9wPV835I0aOrVbS/Hw/pWPk2uKrNXQqg9Z959Kz+IYDd5p3w==
-  /@types/ramda/0.26.21:
+      integrity: sha512-Otxmr2rrZLKRYIybtdG/sgeO+tHY20GxeDjcGmUnmmlCWyEnv2a2x1ZXBo3BTec4OiTXMQCiazB8NMBf0iRlFw==
+  /@types/ramda/0.26.26:
     dependencies:
-      ts-toolbelt: 3.8.92
+      ts-toolbelt: 4.7.24
     dev: false
     resolution:
-      integrity: sha512-zMYtIZMceA6BvH+or6LmewLBgojbXg5+FGCwjO8K+Z+d/ZWxILmhhASXkehW0PqJL+V0QbyDeeAHix0dvEKXfQ==
+      integrity: sha512-jDx2Lp2WvziMTcDxOU21yzRr6jP/VTWvpg6SQxeM63VldSjugUY1N9p1Q8YY/wpGvqzpkstUFmg2oGJdBSp5gg==
   /@types/yargs-parser/13.1.0:
     dev: false
     resolution:
       integrity: sha512-gCubfBUZ6KxzoibJ+SCUc/57Ms1jz5NjHe4+dI2krNmU5zCPAphyLJYyTOg06ueIyfj+SaCUqmzun7ImlxDcKg==
-  /@types/yargs/13.0.2:
+  /@types/yargs/13.0.3:
     dependencies:
       '@types/yargs-parser': 13.1.0
     dev: false
     resolution:
-      integrity: sha512-lwwgizwk/bIIU+3ELORkyuOgDjCh7zuWDFqRtPPhhVgq9N1F7CvLNKg1TX4f2duwtKQ0p044Au9r1PLIXHrIzQ==
+      integrity: sha512-K8/LfZq2duW33XW/tFwEAfnZlqIfVsoyRB3kfXdPXYhl0nfM8mmh7GS0jg7WrX2Dgq/0Ha/pR1PaR+BvmWwjiQ==
   /ansi-regex/4.1.0:
     dev: false
     engines:
@@ -183,10 +183,10 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-DuRs1gKbBqsMKIZlrffwlug8MHkcnpjs5VPmL1PAh+mA30U0DTotfDZ0d2UUsXpPmPmMMJ6W773MaA3J+lbiWA==
-  /ts-toolbelt/3.8.92:
+  /ts-toolbelt/4.7.24:
     dev: false
     resolution:
-      integrity: sha512-8weyhjSrpxBdkcSZF4qV6aq/q7S795dKS3SWxGhAs7msilb3eVN8ozuXBlDR5ivQVFvp9cfgwXb+Nb4aKEg0tg==
+      integrity: sha512-jOnCkp4Yqa53CNonegmTCu7bhi9ame5iZNOZaby2wIvtgCGRKSxlr4j/7Qyabz02qY7ex4tviwj/t2irr305XQ==
   /tslib/1.10.0:
     dev: false
     resolution:
@@ -236,7 +236,7 @@ specifiers:
   '@types/node-fetch': ^2.5.0
   '@types/ramda': ^0.26.21
   '@types/yargs': ^13.0.2
-  assemble-registry-url: ^0.0.0
+  assemble-registry-url: ^0.0.1
   node-fetch: ^2.6.0
   ramda: ^0.26.1
   tslib: ^1.10.0

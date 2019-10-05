@@ -1,7 +1,7 @@
 dependencies:
   '@types/fs-extra': 8.0.0
-  '@types/node': 12.7.5
-  '@types/ramda': 0.26.21
+  '@types/node': 12.7.11
+  '@types/ramda': 0.26.26
   fs-extra: 8.1.0
   monorepo-shared-assets: 'link:../monorepo-shared-assets'
   ramda: 0.26.1
@@ -12,20 +12,20 @@ lockfileVersion: 5.1
 packages:
   /@types/fs-extra/8.0.0:
     dependencies:
-      '@types/node': 12.7.5
+      '@types/node': 12.7.11
     dev: false
     resolution:
       integrity: sha512-bCtL5v9zdbQW86yexOlXWTEGvLNqWxMFyi7gQA7Gcthbezr2cPSOb8SkESVKA937QD5cIwOFLDFt0MQoXOEr9Q==
-  /@types/node/12.7.5:
+  /@types/node/12.7.11:
     dev: false
     resolution:
-      integrity: sha512-9fq4jZVhPNW8r+UYKnxF1e2HkDWOWKM5bC2/7c9wPV835I0aOrVbS/Hw/pWPk2uKrNXQqg9Z959Kz+IYDd5p3w==
-  /@types/ramda/0.26.21:
+      integrity: sha512-Otxmr2rrZLKRYIybtdG/sgeO+tHY20GxeDjcGmUnmmlCWyEnv2a2x1ZXBo3BTec4OiTXMQCiazB8NMBf0iRlFw==
+  /@types/ramda/0.26.26:
     dependencies:
-      ts-toolbelt: 3.8.92
+      ts-toolbelt: 4.7.24
     dev: false
     resolution:
-      integrity: sha512-zMYtIZMceA6BvH+or6LmewLBgojbXg5+FGCwjO8K+Z+d/ZWxILmhhASXkehW0PqJL+V0QbyDeeAHix0dvEKXfQ==
+      integrity: sha512-jDx2Lp2WvziMTcDxOU21yzRr6jP/VTWvpg6SQxeM63VldSjugUY1N9p1Q8YY/wpGvqzpkstUFmg2oGJdBSp5gg==
   /fs-extra/8.1.0:
     dependencies:
       graceful-fs: 4.2.2
@@ -50,10 +50,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-hLWjpy7EnsDBb0p+Z3B7rPi3GDeRG5ZtiI33kJhTt+ORCd38AbAIjB/9zRIUoeTbE/AVX5ZkU7m6bznsvrf8eQ==
-  /ts-toolbelt/3.8.92:
+  /ts-toolbelt/4.7.24:
     dev: false
     resolution:
-      integrity: sha512-8weyhjSrpxBdkcSZF4qV6aq/q7S795dKS3SWxGhAs7msilb3eVN8ozuXBlDR5ivQVFvp9cfgwXb+Nb4aKEg0tg==
+      integrity: sha512-jOnCkp4Yqa53CNonegmTCu7bhi9ame5iZNOZaby2wIvtgCGRKSxlr4j/7Qyabz02qY7ex4tviwj/t2irr305XQ==
   /tslib/1.10.0:
     dev: false
     resolution:
@@ -69,7 +69,7 @@ specifiers:
   '@types/node': ^12.7.5
   '@types/ramda': ^0.26.21
   fs-extra: ^8.1.0
-  monorepo-shared-assets: ^0.0.17
+  monorepo-shared-assets: ^0.0.18
   ramda: ^0.26.1
   tslib: ^1.10.0
   unique-temp-path: '*'

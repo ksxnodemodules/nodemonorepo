@@ -1,6 +1,6 @@
 {
   "name": "endless-sequence",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Create never-ending iterators from a limited array",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",

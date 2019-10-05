@@ -1,6 +1,6 @@
 {
   "name": "cached-fibonacci",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Utilize cached-expression to calculate fibonacci numbers",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
@@ -20,7 +20,7 @@
   ],
   "dependencies": {
     "tslib": "^1.10.0",
-    "cached-expression": "^0.0.3",
+    "cached-expression": "^0.0.4",
     "@types/node": "^12.7.5"
   },
   "engines": {

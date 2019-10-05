@@ -1,6 +1,6 @@
 {
   "name": "advanced-map-initialized",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Map-like class with default values",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
@@ -20,8 +20,8 @@
   ],
   "dependencies": {
     "tslib": "^1.10.0",
-    "advanced-map-base": "^0.0.2",
-    "advanced-map-types": "^0.0.2",
+    "advanced-map-base": "^0.0.3",
+    "advanced-map-types": "^0.0.3",
     "@types/node": "^12.7.5"
   },
   "engines": {

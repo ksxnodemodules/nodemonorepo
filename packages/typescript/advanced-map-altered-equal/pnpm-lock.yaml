@@ -1,22 +1,22 @@
 dependencies:
-  '@types/node': 12.7.5
+  '@types/node': 12.7.11
   advanced-map-base: 'link:../advanced-map-base'
   advanced-map-types: 'link:../advanced-map-types'
   convenient-typescript-utilities: 'link:../convenient-typescript-utilities'
   tslib: 1.10.0
 lockfileVersion: 5.1
 packages:
-  /@types/node/12.7.5:
+  /@types/node/12.7.11:
     dev: false
     resolution:
-      integrity: sha512-9fq4jZVhPNW8r+UYKnxF1e2HkDWOWKM5bC2/7c9wPV835I0aOrVbS/Hw/pWPk2uKrNXQqg9Z959Kz+IYDd5p3w==
+      integrity: sha512-Otxmr2rrZLKRYIybtdG/sgeO+tHY20GxeDjcGmUnmmlCWyEnv2a2x1ZXBo3BTec4OiTXMQCiazB8NMBf0iRlFw==
   /tslib/1.10.0:
     dev: false
     resolution:
       integrity: sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
 specifiers:
   '@types/node': ^12.7.5
-  advanced-map-base: ^0.0.2
-  advanced-map-types: ^0.0.2
-  convenient-typescript-utilities: ^0.0.3
+  advanced-map-base: ^0.0.3
+  advanced-map-types: ^0.0.3
+  convenient-typescript-utilities: ^0.0.4
   tslib: ^1.10.0
