@@ -39,7 +39,7 @@
     "@types/node": "^12.7.5"
   },
   "devDependencies": {
-    "strip-ansi": "^5.2.0",
+    "strip-ansi": "^6.0.0",
     "preloaded-node.private": "*"
   },
   "engines": {
