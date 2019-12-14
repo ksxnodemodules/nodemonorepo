@@ -20,7 +20,7 @@
     "npm"
   ],
   "dependencies": {
-    "semver": "^6.3.0",
+    "semver": "^7.0.0",
     "tslib": "^1.10.0",
     "@types/semver": "^6.0.2",
     "@types/node": "^12.7.5"

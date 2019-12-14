@@ -15,7 +15,7 @@
     "url"
   ],
   "dependencies": {
-    "semver": "^6.3.0",
+    "semver": "^7.0.0",
     "tslib": "^1.10.0",
     "convenient-typescript-utilities": "^0.0.4",
     "@types/semver": "^6.0.2",
