@@ -28,12 +28,12 @@
   "dependencies": {
     "ramda": "^0.26.1",
     "node-fetch": "^2.6.0",
-    "yargs": "^14.0.0",
+    "yargs": "^15.0.0",
     "tslib": "^1.10.0",
     "assemble-registry-url": "^0.0.1",
     "@types/ramda": "0.26.26",
     "@types/node-fetch": "^2.5.0",
-    "@types/yargs": "^13.0.2",
+    "@types/yargs": "^15.0.0",
     "@types/node": "^12.7.5"
   },
   "engines": {
