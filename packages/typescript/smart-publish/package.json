@@ -18,13 +18,13 @@
     "smart-publish": "./bin/smart-publish"
   },
   "dependencies": {
-    "chalk": "^2.4.2",
-    "semver": "^6.3.0",
-    "pretty-exec": "^0.3.1",
+    "chalk": "^3.0.0",
+    "semver": "^7.1.1",
+    "pretty-exec": "^0.3.4",
     "tslib": "^1.10.0",
     "exec-inline": "^0.0.4",
-    "@types/semver": "^6.0.2",
-    "@types/node": "^12.7.5"
+    "@types/semver": "^6.2.0",
+    "@types/node": "^13.1.6"
   },
   "engines": {
     "node": ">= 8.9.0"

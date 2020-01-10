@@ -15,11 +15,11 @@
     "url"
   ],
   "dependencies": {
-    "semver": "^6.3.0",
+    "semver": "^7.1.1",
     "tslib": "^1.10.0",
     "convenient-typescript-utilities": "^0.0.4",
-    "@types/semver": "^6.0.2",
-    "@types/node": "^12.7.5"
+    "@types/semver": "^6.2.0",
+    "@types/node": "^13.1.6"
   },
   "engines": {
     "node": ">= 8.9.0"

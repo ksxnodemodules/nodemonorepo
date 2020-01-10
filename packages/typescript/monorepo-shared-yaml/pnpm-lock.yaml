@@ -1,7 +1,7 @@
 dependencies:
-  '@types/fs-extra': 8.0.0
+  '@types/fs-extra': 8.0.1
   '@types/js-yaml': 3.12.1
-  '@types/node': 12.7.5
+  '@types/node': 13.1.6
   fs-extra: 8.1.0
   js-yaml: 3.13.1
   tslib: 1.10.0
@@ -9,20 +9,20 @@ devDependencies:
   fs-tree-utils: 'link:../fs-tree-utils'
 lockfileVersion: 5.1
 packages:
-  /@types/fs-extra/8.0.0:
+  /@types/fs-extra/8.0.1:
     dependencies:
-      '@types/node': 12.7.5
+      '@types/node': 13.1.6
     dev: false
     resolution:
-      integrity: sha512-bCtL5v9zdbQW86yexOlXWTEGvLNqWxMFyi7gQA7Gcthbezr2cPSOb8SkESVKA937QD5cIwOFLDFt0MQoXOEr9Q==
+      integrity: sha512-J00cVDALmi/hJOYsunyT52Hva5TnJeKP5yd1r+mH/ZU0mbYZflR0Z5kw5kITtKTRYMhm1JMClOFYdHnQszEvqw==
   /@types/js-yaml/3.12.1:
     dev: false
     resolution:
       integrity: sha512-SGGAhXLHDx+PK4YLNcNGa6goPf9XRWQNAUUbffkwVGGXIxmDKWyGGL4inzq2sPmExu431Ekb9aEMn9BkPqEYFA==
-  /@types/node/12.7.5:
+  /@types/node/13.1.6:
     dev: false
     resolution:
-      integrity: sha512-9fq4jZVhPNW8r+UYKnxF1e2HkDWOWKM5bC2/7c9wPV835I0aOrVbS/Hw/pWPk2uKrNXQqg9Z959Kz+IYDd5p3w==
+      integrity: sha512-Jg1F+bmxcpENHP23sVKkNuU3uaxPnsBMW0cLjleiikFKomJQbsn0Cqk2yDvQArqzZN6ABfBkZ0To7pQ8sLdWDg==
   /argparse/1.0.10:
     dependencies:
       sprintf-js: 1.0.3
@@ -79,9 +79,9 @@ packages:
     resolution:
       integrity: sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==
 specifiers:
-  '@types/fs-extra': ^8.0.0
+  '@types/fs-extra': ^8.0.1
   '@types/js-yaml': ^3.12.1
-  '@types/node': ^12.7.5
+  '@types/node': ^13.1.6
   fs-extra: ^8.1.0
   fs-tree-utils: '*'
   js-yaml: ^3.13.1

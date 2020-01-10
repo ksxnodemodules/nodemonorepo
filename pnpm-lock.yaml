@@ -1,13 +1,13 @@
 devDependencies:
   '@types/glob': 7.1.1
-  '@types/jest': 24.0.18
+  '@types/jest': 24.0.25
   '@types/js-yaml': 3.12.1
-  '@types/node': 12.7.11
+  '@types/node': 13.1.6
   babel-jest: 24.9.0
   clean-typescript-build.private: 'link:packages/javascript/clean-typescript-build.private'
   extra-jest: 'link:packages/typescript/extra-jest'
   git-ts: 'link:packages/typescript/git-ts'
-  glob: 7.1.4
+  glob: 7.1.6
   ignore-file.private: 'link:packages/typescript/ignore-file.private'
   jest: 24.9.0
   jest-runner-standard: 0.0.13
@@ -15,12 +15,12 @@ devDependencies:
   nested-workspace-helper.private: 'link:packages/javascript/nested-workspace-helper.private'
   preloaded-node.private: 'link:packages/javascript/preloaded-node.private'
   standard: 14.3.1
-  toolcheck: 0.1.1
-  ts-jest: 24.1.0_jest@24.9.0
+  toolcheck: 0.1.3
+  ts-jest: 24.3.0_jest@24.9.0
   tslib: 1.10.0
-  tslint: 5.20.0_typescript@3.6.3
-  tslint-config-standard: 8.0.1_tslint@5.20.0+typescript@3.6.3
-  typescript: 3.6.3
+  tslint: 5.20.1_typescript@3.7.4
+  tslint-config-standard: 9.0.0_tslint@5.20.1+typescript@3.7.4
+  typescript: 3.7.4
   yaml-jest: 1.0.5
 lockfileVersion: 5.1
 packages:
@@ -124,6 +124,12 @@ packages:
       '@babel/core': ^7.0.0-0
     resolution:
       integrity: sha512-t0JKGgqk2We+9may3t0xDdmneaXmyxq0xieYcKHxIsrJO64n1OiMWNUtc5gQK1PA0NpdCRrtZp4z+IUaKugrSA==
+  /@babel/runtime/7.7.7:
+    dependencies:
+      regenerator-runtime: 0.13.3
+    dev: true
+    resolution:
+      integrity: sha512-uCnC2JEVAu8AKB5do1WRIsvrdJ0flYx/A/9f/6chdacnEZ7LmavjdsDXr5ksYBegxtuTPR5Va9/+13QF/kFkCA==
   /@babel/template/7.6.0:
     dependencies:
       '@babel/code-frame': 7.5.5
@@ -386,16 +392,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-UpYjBi8xefVChsCoBpKShdxTllC9pwISirfoZsUa2AAdQg/Jd2KQGtSbw+ya7GPo7x/wAPlH6JBhKhAsXUEZNA==
-  /@types/jest-diff/20.0.1:
-    dev: true
-    resolution:
-      integrity: sha512-yALhelO3i0hqZwhjtcr6dYyaLoCHbAMshwtj6cGxTvHZAKXHsYGdff6E8EPw3xLKY0ELUTQ69Q1rQiJENnccMA==
-  /@types/jest/24.0.18:
+  /@types/jest/24.0.25:
     dependencies:
-      '@types/jest-diff': 20.0.1
+      jest-diff: 24.9.0
     dev: true
     resolution:
-      integrity: sha512-jcDDXdjTcrQzdN06+TSVsPPqxvsZA/5QkYfIZlq1JMw7FdP5AZylbOc+6B/cuDurctRe+MziUMtQ3xQdrbjqyQ==
+      integrity: sha512-hnP1WpjN4KbGEK4dLayul6lgtys6FPz0UfxMeMQCv0M+sTnzN3ConfiO72jHgLxl119guHgI8gLqDOrRLsyp2g==
   /@types/js-yaml/3.12.1:
     dev: true
     resolution:
@@ -408,6 +410,14 @@ packages:
     dev: true
     resolution:
       integrity: sha512-Otxmr2rrZLKRYIybtdG/sgeO+tHY20GxeDjcGmUnmmlCWyEnv2a2x1ZXBo3BTec4OiTXMQCiazB8NMBf0iRlFw==
+  /@types/node/13.1.6:
+    dev: true
+    resolution:
+      integrity: sha512-Jg1F+bmxcpENHP23sVKkNuU3uaxPnsBMW0cLjleiikFKomJQbsn0Cqk2yDvQArqzZN6ABfBkZ0To7pQ8sLdWDg==
+  /@types/parse-json/4.0.0:
+    dev: true
+    resolution:
+      integrity: sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==
   /@types/stack-utils/1.0.1:
     dev: true
     resolution:
@@ -777,28 +787,6 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-AKcdTnFSWATd5/GCPRxr2ChwIJ85CeyrEyjRHlKxQ56d4XJMGym0uAiKn0xbLOGOl3+yRpOTi484dVCEc5AUzQ==
-  /caller-callsite/2.0.0:
-    dependencies:
-      callsites: 2.0.0
-    dev: true
-    engines:
-      node: '>=4'
-    resolution:
-      integrity: sha1-hH4PzgoiN1CpoCfFSzNzGtMVQTQ=
-  /caller-path/2.0.0:
-    dependencies:
-      caller-callsite: 2.0.0
-    dev: true
-    engines:
-      node: '>=4'
-    resolution:
-      integrity: sha1-Ro+DBE42mrIBD6xfBs7uFbsssfQ=
-  /callsites/2.0.0:
-    dev: true
-    engines:
-      node: '>=4'
-    resolution:
-      integrity: sha1-BuuE8A7qQT2oav/vrL/7Ngk7PFA=
   /callsites/3.1.0:
     dev: true
     engines:
@@ -946,17 +934,18 @@ packages:
     dev: true
     resolution:
       integrity: sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
-  /cosmiconfig/5.2.1:
+  /cosmiconfig/6.0.0:
     dependencies:
-      import-fresh: 2.0.0
-      is-directory: 0.3.1
-      js-yaml: 3.13.1
-      parse-json: 4.0.0
+      '@types/parse-json': 4.0.0
+      import-fresh: 3.1.0
+      parse-json: 5.0.0
+      path-type: 4.0.0
+      yaml: 1.7.2
     dev: true
     engines:
-      node: '>=4'
+      node: '>=8'
     resolution:
-      integrity: sha512-H65gsXo1SKjf8zmrJ67eJk8aIRKV5ff2D4uKZIBZShbhGSpEmsQOPW/SKMKYhSTrqR7ufy6RP69rPogdaPh/kA==
+      integrity: sha512-xb3ZL6+L8b9JLLCx3ZdoZy4+2ECphCMo2PwqgP1tlfVq6M6YReyzBJtvWWtbDSpNr9hn96pkCiZqUcFEc+54Qg==
   /create-jest-runner/0.5.3:
     dependencies:
       chalk: 2.4.2
@@ -1757,6 +1746,17 @@ packages:
     dev: true
     resolution:
       integrity: sha512-hkLPepehmnKk41pUGm3sYxoFs/umurYfYJCerbXEyFIWcAzvpipAgVkBqqT9RBKMGjnq6kMuyYwha6csxbiM1A==
+  /glob/7.1.6:
+    dependencies:
+      fs.realpath: 1.0.0
+      inflight: 1.0.6
+      inherits: 2.0.4
+      minimatch: 3.0.4
+      once: 1.4.0
+      path-is-absolute: 1.0.1
+    dev: true
+    resolution:
+      integrity: sha512-LwaxwyZ72Lk7vZINtNNrywX0ZuLyStrdDtabefZKAY5ZGJhVtgdznluResxNmPitE0SAO+O26sWTHeKSI2wMBA==
   /globals/11.12.0:
     dev: true
     engines:
@@ -1895,15 +1895,6 @@ packages:
       node: '>= 4'
     resolution:
       integrity: sha512-MzbUSahkTW1u7JpKKjY7LCARd1fU5W2rLdxlM4kdkayuCwZImjkpluF9CM1aLewYJguPDqewLam18Y6AU69A8A==
-  /import-fresh/2.0.0:
-    dependencies:
-      caller-path: 2.0.0
-      resolve-from: 3.0.0
-    dev: true
-    engines:
-      node: '>=4'
-    resolution:
-      integrity: sha1-2BNVwVYS04bGH53dOSLUMEgipUY=
   /import-fresh/3.1.0:
     dependencies:
       parent-module: 1.0.1
@@ -2049,12 +2040,6 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-2eis5WqQGV7peooDyLmNEPUrps9+SXX5c9pL3xEB+4e9HnGuDa7mB7kHxHw4CbqS9k1T2hOH3miL8n8WtiYVtg==
-  /is-directory/0.3.1:
-    dev: true
-    engines:
-      node: '>=0.10.0'
-    resolution:
-      integrity: sha1-YTObbyR1/Hcv2cnYP1yFddwVSuE=
   /is-extendable/0.1.1:
     dev: true
     engines:
@@ -2444,6 +2429,9 @@ packages:
       node: '>=6'
     peerDependencies:
       jest-resolve: '*'
+    peerDependenciesMeta:
+      jest-resolve:
+        optional: true
     resolution:
       integrity: sha512-pgFw2tm54fzgYvc/OHrnysABEObZCUNFnhjoRjaVOCN8NYc032/gVjPaHD4Aq6ApkSieWtfKAFQtmDKAmhupnQ==
   /jest-regex-util/24.9.0:
@@ -2790,6 +2778,10 @@ packages:
       node: '>= 0.8.0'
     resolution:
       integrity: sha1-OwmSTt+fCDwEkP3UwLxEIeBHZO4=
+  /lines-and-columns/1.1.6:
+    dev: true
+    resolution:
+      integrity: sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=
   /load-json-file/2.0.0:
     dependencies:
       graceful-fs: 4.2.2
@@ -3296,6 +3288,17 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-vjX1Qlvh9/bHRxhPmKeIy5lHfuA=
+  /parse-json/5.0.0:
+    dependencies:
+      '@babel/code-frame': 7.5.5
+      error-ex: 1.3.2
+      json-parse-better-errors: 1.0.2
+      lines-and-columns: 1.1.6
+    dev: true
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-OOY5b7PAEFV0E2Fir1KOkxchnZNCdowAJgQ5NuxjpBKTRP3pQhwkrkxqQjeoKJ+fO7bCpmIZaogI4eZGDMEGOw==
   /parse5/4.0.0:
     dev: true
     resolution:
@@ -3344,6 +3347,12 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-T2ZUsdZFHgA3u4e5PfPbjd7HDDpxPnQb5jN0SrDsjNSuVXHJqtwTnWqG0B1jZrgmJ/7lj1EmVIByWt1gxGkWvg==
+  /path-type/4.0.0:
+    dev: true
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==
   /path/0.12.7:
     dependencies:
       process: 0.11.10
@@ -3549,6 +3558,10 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-wlgPA6cCIIg9gKz0fgAPjnzh4yR/LnXovwuo9hvyGvx3h8nX4+/iLZplfUWasXpqD8BdnGnP5njOFjkUwPzvjA==
+  /regenerator-runtime/0.13.3:
+    dev: true
+    resolution:
+      integrity: sha512-naKIZz2GQ8JWh///G7L3X6LaQUAMp2lvb1rvwwsURe/VXwD6VMfr+/1NuNw3ag8v2kY1aQ/go5SNn79O9JU7yw==
   /regex-not/1.0.2:
     dependencies:
       extend-shallow: 3.0.2
@@ -4186,18 +4199,18 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-FWtleNAtZ/Ki2qtqej2CXTOayOH9bHDQF+Q48VpWyDXjbYxA4Yz8iDB31zXOBUlOHHKidDbqGVrTUvQMPmBGBw==
-  /toolcheck/0.1.1:
+  /toolcheck/0.1.3:
     dependencies:
       '@types/cosmiconfig': 5.0.3
       '@types/node': 12.7.11
       '@types/which': 1.3.1
-      cosmiconfig: 5.2.1
+      cosmiconfig: 6.0.0
       which: 2.0.1
     dev: true
     hasBin: true
     requiresBuild: true
     resolution:
-      integrity: sha512-m66oiCmlWdhI3oTgtofYswXdDuQMyBL04PW411Zkt/QgkJ/bjamxoJBpUEwhs/Zo6bDYB7fkD4gVpPJz3lF/RA==
+      integrity: sha512-Q6CUojNjqOuXTG+ZGAh2YL2/ThMCbG6UmY/NmSVAVSMDCRdSqG/yhgLRGhUWNHiMPbJhDecu3/QjUKGyHhYNYA==
   /tough-cookie/2.4.3:
     dependencies:
       psl: 1.4.0
@@ -4222,7 +4235,7 @@ packages:
     dev: true
     resolution:
       integrity: sha1-qLE/1r/SSJUZZ0zN5VujaTtwbQk=
-  /ts-jest/24.1.0_jest@24.9.0:
+  /ts-jest/24.3.0_jest@24.9.0:
     dependencies:
       bs-logger: 0.2.6
       buffer-from: 1.1.1
@@ -4242,7 +4255,7 @@ packages:
     peerDependencies:
       jest: '>=24 <25'
     resolution:
-      integrity: sha512-HEGfrIEAZKfu1pkaxB9au17b1d9b56YZSqz5eCVE8mX68+5reOvlM93xGOzzCREIov9mdH7JBG+s0UyNAqr0tQ==
+      integrity: sha512-Hb94C/+QRIgjVZlJyiWwouYUF+siNJHJHknyspaOcZ+OQAIdFG/UrdQVXw/0B8Z3No34xkUXZJpOTy9alOWdVQ==
   /tslib/1.10.0:
     dev: true
     resolution:
@@ -4251,44 +4264,44 @@ packages:
     dev: true
     resolution:
       integrity: sha512-f/qGG2tUkrISBlQZEjEqoZ3B2+npJjIf04H1wuAv9iA8i04Icp+61KRXxFdha22670NJopsZCIjhC3SnjPRKrQ==
-  /tslint-config-standard/8.0.1_tslint@5.20.0+typescript@3.6.3:
+  /tslint-config-standard/9.0.0_tslint@5.20.1+typescript@3.7.4:
     dependencies:
-      tslint-eslint-rules: 5.4.0_tslint@5.20.0+typescript@3.6.3
+      tslint-eslint-rules: 5.4.0_tslint@5.20.1+typescript@3.7.4
     dev: true
     peerDependencies:
       tslint: '*'
       typescript: '*'
     resolution:
-      integrity: sha512-OWG+NblgjQlVuUS/Dmq3ax2v5QDZwRx4L0kEuDi7qFY9UI6RJhhNfoCV1qI4el8Fw1c5a5BTrjQJP0/jhGXY/Q==
-  /tslint-eslint-rules/5.4.0_tslint@5.20.0+typescript@3.6.3:
+      integrity: sha512-CAw9J743RnPMemQV/XQ4YyNreC+A1NItACfkm+cBedrOkz6CQfwlnbKn8anUXBfoa4Zo4tjAhblRbsMNcSLfSw==
+  /tslint-eslint-rules/5.4.0_tslint@5.20.1+typescript@3.7.4:
     dependencies:
       doctrine: 0.7.2
       tslib: 1.9.0
-      tslint: 5.20.0_typescript@3.6.3
-      tsutils: 3.17.1_typescript@3.6.3
-      typescript: 3.6.3
+      tslint: 5.20.1_typescript@3.7.4
+      tsutils: 3.17.1_typescript@3.7.4
+      typescript: 3.7.4
     dev: true
     peerDependencies:
       tslint: ^5.0.0
       typescript: ^2.2.0 || ^3.0.0
     resolution:
       integrity: sha512-WlSXE+J2vY/VPgIcqQuijMQiel+UtmXS+4nvK4ZzlDiqBfXse8FAvkNnTcYhnQyOTW5KFM+uRRGXxYhFpuBc6w==
-  /tslint/5.20.0_typescript@3.6.3:
+  /tslint/5.20.1_typescript@3.7.4:
     dependencies:
       '@babel/code-frame': 7.5.5
       builtin-modules: 1.1.1
       chalk: 2.4.2
       commander: 2.20.1
       diff: 4.0.1
-      glob: 7.1.4
+      glob: 7.1.6
       js-yaml: 3.13.1
       minimatch: 3.0.4
       mkdirp: 0.5.1
       resolve: 1.12.0
       semver: 5.7.1
       tslib: 1.10.0
-      tsutils: 2.29.0_typescript@3.6.3
-      typescript: 3.6.3
+      tsutils: 2.29.0_typescript@3.7.4
+      typescript: 3.7.4
     dev: true
     engines:
       node: '>=4.8.0'
@@ -4296,20 +4309,20 @@ packages:
     peerDependencies:
       typescript: '>=2.3.0-dev || >=2.4.0-dev || >=2.5.0-dev || >=2.6.0-dev || >=2.7.0-dev || >=2.8.0-dev || >=2.9.0-dev || >=3.0.0-dev || >= 3.1.0-dev || >= 3.2.0-dev'
     resolution:
-      integrity: sha512-2vqIvkMHbnx8acMogAERQ/IuINOq6DFqgF8/VDvhEkBqQh/x6SP0Y+OHnKth9/ZcHQSroOZwUQSN18v8KKF0/g==
-  /tsutils/2.29.0_typescript@3.6.3:
+      integrity: sha512-EcMxhzCFt8k+/UP5r8waCf/lzmeSyVlqxqMEDQE7rWYiQky8KpIBz1JAoYXfROHrPZ1XXd43q8yQnULOLiBRQg==
+  /tsutils/2.29.0_typescript@3.7.4:
     dependencies:
       tslib: 1.10.0
-      typescript: 3.6.3
+      typescript: 3.7.4
     dev: true
     peerDependencies:
       typescript: '>=2.1.0 || >=2.1.0-dev || >=2.2.0-dev || >=2.3.0-dev || >=2.4.0-dev || >=2.5.0-dev || >=2.6.0-dev || >=2.7.0-dev || >=2.8.0-dev || >=2.9.0-dev || >= 3.0.0-dev || >= 3.1.0-dev'
     resolution:
       integrity: sha512-g5JVHCIJwzfISaXpXE1qvNalca5Jwob6FjI4AoPlqMusJ6ftFE7IkkFoMhVLRgK+4Kx3gkzb8UZK5t5yTTvEmA==
-  /tsutils/3.17.1_typescript@3.6.3:
+  /tsutils/3.17.1_typescript@3.7.4:
     dependencies:
       tslib: 1.10.0
-      typescript: 3.6.3
+      typescript: 3.7.4
     dev: true
     engines:
       node: '>= 6'
@@ -4341,13 +4354,13 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-cUGJnCdr4STbePCgqNFbpVNCepa+kAVohJs1sLhxzdH+gnEoOd8VhbYa7pD3zZYGiURWM2xzEII3fQcRizDkYQ==
-  /typescript/3.6.3:
+  /typescript/3.7.4:
     dev: true
     engines:
       node: '>=4.2.0'
     hasBin: true
     resolution:
-      integrity: sha512-N7bceJL1CtRQ2RiG0AQME13ksR7DiuQh/QehubYcghzv20tnh+MQnQIuJddTmsbqYj+dztchykemz0zFzlvdQw==
+      integrity: sha512-A25xv5XCtarLwXpcDNZzCGvW2D1S3/bACratYBx2sax8PefsFhlYmkQicKHvpYflFS8if4zne5zT5kpJ7pzuvw==
   /uglify-js/3.6.0:
     dependencies:
       commander: 2.20.1
@@ -4566,6 +4579,14 @@ packages:
     dev: true
     resolution:
       integrity: sha1-KI5UG64bVR0RPUhk1suPMW4b0zE=
+  /yaml/1.7.2:
+    dependencies:
+      '@babel/runtime': 7.7.7
+    dev: true
+    engines:
+      node: '>= 6'
+    resolution:
+      integrity: sha512-qXROVp90sb83XtAoqE8bP9RwAkTTZbugRUTm5YeFCBfNRPEp2YzTeqWiz7m5OORHzEvrA/qcGS8hp/E+MMROYw==
   /yargs-parser/10.1.0:
     dependencies:
       camelcase: 4.1.0
@@ -4596,25 +4617,25 @@ packages:
       integrity: sha512-2eehun/8ALW8TLoIl7MVaRUrg+yCnenu8B4kBlRxj3GJGDKU1Og7sMXPNm1BYyM1DOJmTZ4YeN/Nwxv+8XJsUA==
 specifiers:
   '@types/glob': ^7.1.1
-  '@types/jest': ^24.0.18
+  '@types/jest': ^24.0.25
   '@types/js-yaml': ^3.12.1
-  '@types/node': ^12.7.5
+  '@types/node': ^13.1.6
   babel-jest: ^24.9.0
   clean-typescript-build.private: '*'
   extra-jest: '*'
   git-ts: '*'
-  glob: ^7.1.4
+  glob: ^7.1.6
   ignore-file.private: '*'
   jest: ^24.9.0
   jest-runner-standard: ^0.0.13
   js-yaml: ^3.13.1
   nested-workspace-helper.private: '*'
   preloaded-node.private: '*'
-  standard: ^14.3.0
-  toolcheck: ^0.1.1
-  ts-jest: ^24.1.0
+  standard: ^14.3.1
+  toolcheck: ^0.1.3
+  ts-jest: ^24.3.0
   tslib: ^1.10.0
-  tslint: ^5.20.0
-  tslint-config-standard: ^8.0.1
-  typescript: ^3.6.3
+  tslint: ^5.20.1
+  tslint-config-standard: ^9.0.0
+  typescript: ^3.7.4
   yaml-jest: ^1.0.5

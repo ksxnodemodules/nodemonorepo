@@ -1,20 +1,20 @@
 dependencies:
-  '@types/node': 12.7.5
-  '@types/node-fetch': 2.5.0
+  '@types/node': 13.1.6
+  '@types/node-fetch': 2.5.4
   node-fetch: 2.6.0
   tslib: 1.10.0
 lockfileVersion: 5.1
 packages:
-  /@types/node-fetch/2.5.0:
+  /@types/node-fetch/2.5.4:
     dependencies:
-      '@types/node': 12.7.5
+      '@types/node': 13.1.6
     dev: false
     resolution:
-      integrity: sha512-TLFRywthBgL68auWj+ziWu+vnmmcHCDFC/sqCOQf1xTz4hRq8cu79z8CtHU9lncExGBsB8fXA4TiLDLt6xvMzw==
-  /@types/node/12.7.5:
+      integrity: sha512-Oz6id++2qAOFuOlE1j0ouk1dzl3mmI1+qINPNBhi9nt/gVOz0G+13Ao6qjhdF0Ys+eOkhu6JnFmt38bR3H0POQ==
+  /@types/node/13.1.6:
     dev: false
     resolution:
-      integrity: sha512-9fq4jZVhPNW8r+UYKnxF1e2HkDWOWKM5bC2/7c9wPV835I0aOrVbS/Hw/pWPk2uKrNXQqg9Z959Kz+IYDd5p3w==
+      integrity: sha512-Jg1F+bmxcpENHP23sVKkNuU3uaxPnsBMW0cLjleiikFKomJQbsn0Cqk2yDvQArqzZN6ABfBkZ0To7pQ8sLdWDg==
   /node-fetch/2.6.0:
     dev: false
     engines:
@@ -26,7 +26,7 @@ packages:
     resolution:
       integrity: sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
 specifiers:
-  '@types/node': ^12.7.5
-  '@types/node-fetch': ^2.5.0
+  '@types/node': ^13.1.6
+  '@types/node-fetch': ^2.5.4
   node-fetch: ^2.6.0
   tslib: ^1.10.0
