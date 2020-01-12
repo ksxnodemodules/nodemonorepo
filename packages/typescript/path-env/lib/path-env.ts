@@ -9,7 +9,7 @@ import {
   EnvFactory
 } from './types'
 
-export const delimiter = (): PathDelimiter => path.delimiter
+export const delimiter = () => path.delimiter as PathDelimiter
 export const split = (str: PathString, delim = delimiter()): PathArray => str.split(delim)
 export const join = (array: PathArray, delim = delimiter()): PathString => array.join(delim)
 
