@@ -1,4 +1,3 @@
-import ramda from 'ramda'
 import * as assets from 'monorepo-shared-assets'
 import createRegistryFactory from './npm-registry'
 import listAllPackages from './list-pkgs'
@@ -76,12 +75,11 @@ export namespace partition {
    * @returns A collection of functions
    */
   export function createFactory (registry?: string) {
-    const param: [typeof registry] = [registry]
 
     return Object.assign(
-      ramda.partialRight(partition, param),
+      (dirname: string) => partition(dirname, registry),
       {
-        fromPackageList: ramda.partialRight(fromPackageList, param)
+        fromPackageList: (list: Package.List) => fromPackageList(list, registry)
       }
     )
   }

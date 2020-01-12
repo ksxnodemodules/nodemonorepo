@@ -9,10 +9,9 @@
     "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
   },
   "dependencies": {
-    "ramda": "^0.26.1",
     "immutable": "^4.0.0-rc.12",
+    "@tsfun/array": "^0.0.0",
     "tslib": "^1.10.0",
-    "@types/ramda": "^0.26.39",
     "@types/node": "^13.1.6"
   },
   "engines": {

@@ -1,6 +1,6 @@
 import * as path from 'path'
-import ramda from 'ramda'
 import * as fsx from 'fs-extra'
+import { partition } from '@tsfun/array'
 import * as assets from 'monorepo-shared-assets'
 import traverse from '../traverse'
 import { Tree, NestedReadOptions, Traverse, FileSystemRepresentation } from '../.types'
@@ -88,7 +88,7 @@ export async function readNested<Error = never, Unknown = never> (
  */
 export async function readFlat (name: string, options?: Traverse.Options): FlatReadResult {
   const array = await traverse(name, options)
-  const [fileList, dirList] = ramda.partition(x => x.stats.isFile(), array)
+  const [fileList, dirList] = partition(array, x => x.stats.isFile())
 
   const map = await Promise.all(
     fileList.map(

@@ -1,12 +1,11 @@
-import ramda from 'ramda'
+import { range } from '@tsfun/array'
 import subject from './index'
 
 it('matches snapshot', async () => {
   const totalLength = 32
   const partLength = 5
 
-  const actions = ramda
-    .range(0, totalLength)
+  const actions = range(totalLength)
     .map(value => ({ value: past }: {value?: number} = {}) => ({ value, past }))
     .map((fn, i) => i & 1 ? fn : async <X>(x: X) => fn(x))
 

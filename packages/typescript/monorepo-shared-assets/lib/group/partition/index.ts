@@ -1,5 +1,5 @@
-import ramda from 'ramda'
 import immutable from 'immutable'
+import { partition as arrayPartition } from '@tsfun/array'
 import * as types from '../../.types'
 
 export function partition<X> (
@@ -40,7 +40,7 @@ export namespace partition {
     ): Partition.Array<X> {
       if (!classifiers.length) return { classified: {}, untouched: list }
       const [[target, func], ...nextClassifiers] = classifiers
-      const [value, nextList] = ramda.partition(func, Array.from(list))
+      const [value, nextList] = arrayPartition(Array.from(list), func)
       const nextPartition = array(nextList, nextClassifiers)
       const classified = { [target]: value, ...nextPartition.classified }
       const untouched = nextPartition.untouched

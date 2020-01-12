@@ -18,10 +18,6 @@
     "tslib": "^1.10.0",
     "@types/node": "^13.1.6"
   },
-  "devDependencies": {
-    "ramda": "^0.26.1",
-    "@types/ramda": "^0.26.39"
-  },
   "engines": {
     "node": ">= 8.9.0"
   }

@@ -1,7 +1,7 @@
 import * as path from 'path'
 import * as process from 'process'
 import * as fsx from 'fs-extra'
-import ramda from 'ramda'
+import { getPropertyPath } from '@tsfun/object'
 
 import {
   CommandModule,
@@ -109,7 +109,7 @@ function handler ({
         const filename = await getSourceFile()
         const filetext = await fsx.readFile(filename, 'utf8')
         const object = serialize(filetext)
-        return ramda.path(propertyPath, object)
+        return getPropertyPath(object, propertyPath)
       case 'delete':
         return undefined
     }

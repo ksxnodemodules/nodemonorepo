@@ -1,5 +1,4 @@
 import { SpawnSyncOptions, SpawnSyncReturns, spawnSync } from 'child_process'
-import ramda from 'ramda'
 
 export type IOData = Buffer | string
 export type OptionalIOData = IOData | null | undefined
@@ -25,7 +24,7 @@ export interface SpawnReturns {
 
 export type SpawnFunc = (argv: Argv, options: SpawnSyncOptions) => SpawnSyncReturns<IOData>
 
-export const createSpawnFunc = (command: string): SpawnFunc => ramda.partial(spawnSync, [command])
+export const createSpawnFunc = (command: string): SpawnFunc => (...args) => spawnSync(command, ...args)
 
 export function spawn (
   fn: SpawnFunc,

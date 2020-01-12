@@ -1,4 +1,4 @@
-import { splitAt } from 'ramda'
+import { splitAt } from '@tsfun/array'
 
 export type Action<X> = (x?: X) => X | Promise<X>
 
@@ -14,7 +14,7 @@ export function throttledConcurrentActions<X> (
     list: ReadonlyArray<Action<X>>,
     past: ReadonlyArray<Promise<X | undefined>>
   ): ReadonlyArray<Promise<X>> {
-    const [current, next] = splitAt(count, list)
+    const [current, next] = splitAt(list, count)
 
     const nextPast = current.map(
       (fn, i) => (past[i] || INITIAL_PROMISE).then(fn)

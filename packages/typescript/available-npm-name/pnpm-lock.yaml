@@ -1,15 +1,21 @@
 dependencies:
+  '@tsfun/array': 0.0.0
   '@types/node': 13.1.6
   '@types/node-fetch': 2.5.4
-  '@types/ramda': 0.26.39
   '@types/yargs': 15.0.0
   assemble-registry-url: 'link:../assemble-registry-url'
   node-fetch: 2.6.0
-  ramda: 0.26.1
   tslib: 1.10.0
   yargs: 15.1.0
 lockfileVersion: 5.1
 packages:
+  /@tsfun/array/0.0.0:
+    dependencies:
+      '@types/node': 13.1.6
+      tslib: 1.10.0
+    dev: false
+    resolution:
+      integrity: sha512-y18KD65Ba1a7jXJ8PBIGjfkCtR32wd0XOPaV5D8z9uBiNE+pIF0PCnHKVHZ4+GcaRa/Y7HkTWJxmcjs283ggmw==
   /@types/color-name/1.1.1:
     dev: false
     resolution:
@@ -24,12 +30,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-Jg1F+bmxcpENHP23sVKkNuU3uaxPnsBMW0cLjleiikFKomJQbsn0Cqk2yDvQArqzZN6ABfBkZ0To7pQ8sLdWDg==
-  /@types/ramda/0.26.39:
-    dependencies:
-      ts-toolbelt: 4.14.6
-    dev: false
-    resolution:
-      integrity: sha512-3bu32X02VpjJhsYPUWkdOQGoBXjb/UveZgGg4IYMm+SPAXio96BOYrRhVELfM4AoP00sxoi/f2tqrXdwtR4jjg==
   /@types/yargs-parser/13.1.0:
     dev: false
     resolution:
@@ -154,10 +154,6 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-ak9Qy5Q7jYb2Wwcey5Fpvg2KoAc/ZIhLSLOSBmRmygPsGwkVVt0fZa0qrtMz+m6tJTAHfZQ8FnmB4MG4LWy7/w==
-  /ramda/0.26.1:
-    dev: false
-    resolution:
-      integrity: sha512-hLWjpy7EnsDBb0p+Z3B7rPi3GDeRG5ZtiI33kJhTt+ORCd38AbAIjB/9zRIUoeTbE/AVX5ZkU7m6bznsvrf8eQ==
   /require-directory/2.1.1:
     dev: false
     engines:
@@ -190,10 +186,6 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-AuvKTrTfQNYNIctbR1K/YGTR1756GycPsg7b9bdV9Duqur4gv6aKqHXah67Z8ImS7WEz5QVcOtlfW2rZEugt6w==
-  /ts-toolbelt/4.14.6:
-    dev: false
-    resolution:
-      integrity: sha512-SONcnRd93+LuYGfn/CZg5A5qhCODohZslAVZKHHu5bnwUxoXLqd2k2VIdwRUXYfKnY+UCeNbI2pTPz+Dno6Mpg==
   /tslib/1.10.0:
     dev: false
     resolution:
@@ -242,12 +234,11 @@ packages:
     resolution:
       integrity: sha512-T39FNN1b6hCW4SOIk1XyTOWxtXdcen0t+XYrysQmChzSipvhBO8Bj0nK1ozAasdk24dNWuMZvr4k24nz+8HHLg==
 specifiers:
+  '@tsfun/array': ^0.0.0
   '@types/node': ^13.1.6
   '@types/node-fetch': ^2.5.4
-  '@types/ramda': ^0.26.39
   '@types/yargs': ^15.0.0
   assemble-registry-url: ^0.0.1
   node-fetch: ^2.6.0
-  ramda: ^0.26.1
   tslib: ^1.10.0
   yargs: ^15.1.0

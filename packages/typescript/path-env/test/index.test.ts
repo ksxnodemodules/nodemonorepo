@@ -2,7 +2,6 @@
 
 import * as path from 'path'
 import { env } from 'process'
-import ramda from 'ramda'
 import * as subject from '../lib/index'
 import { PathFactory, PathArray, PathDelimiter, Env, EnvFactory } from '../lib/index'
 
@@ -13,7 +12,7 @@ function sharedUnit (factory: PathFactory, array: PathArray, delim: PathDelimite
 }
 
 function testPathFactory (getFactory: () => PathFactory, array: PathArray, delim: PathDelimiter) {
-  const unit = ramda.partialRight(sharedUnit, [delim])
+  const unit = (factory: PathFactory, array: PathArray) => sharedUnit(factory, array, delim)
 
   describe('returns a factory', () => {
     it('that has correct data', () => unit(getFactory(), array))
@@ -142,15 +141,15 @@ describe('subject.pathString being called', () => {
     Object.assign(env, { PATH, ALT_NAMED_PATH })
   })
 
-  describe('without specifying paramters', () => {
-    testPathFactory(subject.pathString, newPath, path.delimiter)
+  describe('without specifying parameters', () => {
+    testPathFactory(subject.pathString, newPath, path.delimiter as PathDelimiter)
   })
 
   describe('with specified `string`, without specifying `delim`', () => {
     testPathFactory(
       () => subject.pathString('specified:string:param'),
       ['specified', 'string', 'param'],
-      path.delimiter
+      path.delimiter as PathDelimiter
     )
   })
 
@@ -200,7 +199,7 @@ describe('subject.pathEnv being called', () => {
       () => subject.pathEnv(),
       newEnv,
       'PATH',
-      path.delimiter
+      path.delimiter as PathDelimiter
     )
   })
 
@@ -209,7 +208,7 @@ describe('subject.pathEnv being called', () => {
       () => subject.pathEnv({ ...newEnv }),
       { ...newEnv },
       'PATH',
-      path.delimiter
+      path.delimiter as PathDelimiter
     )
   })
 
@@ -218,14 +217,14 @@ describe('subject.pathEnv being called', () => {
       () => subject.pathEnv({ ...newEnv }, 'PATH'),
       { ...newEnv },
       'PATH',
-      path.delimiter
+      path.delimiter as PathDelimiter
     )
 
     testEnvFactory(
       () => subject.pathEnv({ ...newEnv }, 'ALT_NAMED_PATH'),
       { ...newEnv },
       'ALT_NAMED_PATH',
-      path.delimiter
+      path.delimiter as PathDelimiter
     )
   })
 

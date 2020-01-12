@@ -1,6 +1,6 @@
 import process from 'process'
-import ramda from 'ramda'
 import yargs from 'yargs'
+import { zip } from '@tsfun/array'
 import check, { Status } from '../../index'
 
 const { argv } = yargs
@@ -60,7 +60,7 @@ check(names, registry).then(
       return
     }
 
-    const results = ramda.zip(names, statuses)
+    const results = zip(names, statuses)
 
     if (format === 'json') {
       const content = results.map(([name, status]) => ({ name, response: Status[status] }))
