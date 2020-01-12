@@ -238,7 +238,7 @@ specifiers:
   '@types/node': ^13.1.6
   '@types/node-fetch': ^2.5.4
   '@types/yargs': ^15.0.0
-  assemble-registry-url: ^0.0.1
+  assemble-registry-url: ^0.0.2
   node-fetch: ^2.6.0
   tslib: ^1.10.0
   yargs: ^15.1.0

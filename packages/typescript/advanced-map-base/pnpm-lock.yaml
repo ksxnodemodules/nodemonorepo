@@ -29,6 +29,6 @@ packages:
       integrity: sha512-dyGMilZPOL/qQMlJSWK+SbQyJpf6YZZPmPrbbdHGkAvGUvlhv4kGKTgddXWLxFWHTirR2I0VfD8mSwia3WLGtA==
 specifiers:
   '@types/node': ^13.1.6
-  advanced-map-types: ^0.0.3
+  advanced-map-types: ^0.0.4
   tslib: ^1.10.0
   typescript-miscellaneous: ^0.1.1

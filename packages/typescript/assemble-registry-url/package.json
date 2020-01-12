@@ -1,6 +1,6 @@
 {
   "name": "assemble-registry-url",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Assemble registry URLs from given package name",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",

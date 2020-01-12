@@ -15,6 +15,6 @@ packages:
       integrity: sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
 specifiers:
   '@types/node': ^13.1.6
-  advanced-set-multi-key-base: ^0.0.3
-  advanced-set-types: ^0.0.1
+  advanced-set-multi-key-base: ^0.0.4
+  advanced-set-types: ^0.0.2
   tslib: ^1.10.0

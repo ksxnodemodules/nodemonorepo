@@ -1,6 +1,6 @@
 {
   "name": "throttled-concurrent-actions",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Like Promise.all, but throttled",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",

@@ -1,6 +1,6 @@
 {
   "name": "cached-factorial",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Utilize cached-expression to calculate multiple factorial numbers",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
@@ -20,7 +20,7 @@
   ],
   "dependencies": {
     "tslib": "^1.10.0",
-    "cached-expression-shared-utils": "^0.0.3",
+    "cached-expression-shared-utils": "^0.0.4",
     "@types/node": "^13.1.6"
   },
   "engines": {

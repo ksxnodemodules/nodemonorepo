@@ -1,6 +1,6 @@
 {
   "name": "unique-temp-path",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Create temporary directory/file names that are unique",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",

@@ -1,6 +1,6 @@
 {
   "name": "smart-publish",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Like npm publish, but also tag prepreleases and knows when it is public",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
@@ -22,7 +22,7 @@
     "semver": "^7.1.1",
     "pretty-exec": "^0.3.4",
     "tslib": "^1.10.0",
-    "exec-inline": "^0.0.4",
+    "exec-inline": "^0.0.5",
     "@types/semver": "^6.2.0",
     "@types/node": "^13.1.6"
   },

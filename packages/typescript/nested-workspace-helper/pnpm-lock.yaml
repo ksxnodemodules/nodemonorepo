@@ -376,13 +376,13 @@ specifiers:
   '@types/yargs': ^15.0.0
   chalk: ^3.0.0
   fs-extra: ^8.1.0
-  fs-tree-utils: ^0.1.7
+  fs-tree-utils: ^0.1.8
   js-yaml: ^3.13.1
-  monorepo-shared-assets: ^0.0.18
+  monorepo-shared-assets: ^0.0.19
   node-fetch: ^2.6.0
   preloaded-node.private: '*'
   semver: ^7.1.1
-  smart-publish: ^0.0.7
+  smart-publish: ^0.0.8
   strip-ansi: ^6.0.0
   tslib: ^1.10.0
   yargs: ^15.1.0

@@ -22,7 +22,7 @@
     "chalk": "^3.0.0",
     "js-yaml": "^3.13.1",
     "tslib": "^1.10.0",
-    "fs-tree-utils": "^0.1.7",
+    "fs-tree-utils": "^0.1.8",
     "preloaded-node.private": "^0.0.0",
     "@types/minimatch": "^3.0.3",
     "@types/fs-extra": "^8.0.1",

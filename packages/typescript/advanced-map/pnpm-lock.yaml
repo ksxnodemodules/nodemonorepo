@@ -93,12 +93,12 @@ packages:
       integrity: sha512-UoKivAmVw5TL6AHuILieOJjIK9ajS0l5gyN5LbJglPuVwzfYBniDhe+3A5+ZBtS0TAHQs5qUxTwj9jXurINrcw==
 specifiers:
   '@types/node': ^13.1.6
-  advanced-map-altered-equal: ^0.0.4
-  advanced-map-base: ^0.0.3
-  advanced-map-initialized: ^0.0.3
-  advanced-map-multi-key: ^0.0.6
-  advanced-map-multi-key-base: ^0.0.4
-  advanced-map-mutable-multi-key: ^0.0.4
-  advanced-map-types: ^0.0.3
+  advanced-map-altered-equal: ^0.0.5
+  advanced-map-base: ^0.0.4
+  advanced-map-initialized: ^0.0.4
+  advanced-map-multi-key: ^0.0.7
+  advanced-map-multi-key-base: ^0.0.5
+  advanced-map-mutable-multi-key: ^0.0.5
+  advanced-map-types: ^0.0.4
   iter-tools: ^6.2.6
   tslib: ^1.10.0
