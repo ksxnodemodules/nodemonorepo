@@ -18,7 +18,7 @@
     "smart-publish": "./bin/smart-publish"
   },
   "dependencies": {
-    "chalk": "^3.0.0",
+    "chalk": "^4.0.0",
     "semver": "^7.1.1",
     "pretty-exec": "^0.3.4",
     "tslib": "^1.10.0",

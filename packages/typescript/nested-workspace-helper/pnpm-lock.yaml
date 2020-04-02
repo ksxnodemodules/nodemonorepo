@@ -6,7 +6,7 @@ dependencies:
   '@types/node-fetch': 2.5.4
   '@types/semver': 6.2.0
   '@types/yargs': 15.0.0
-  chalk: 3.0.0
+  chalk: 4.0.0
   fs-extra: 8.1.0
   fs-tree-utils: 'link:../fs-tree-utils'
   js-yaml: 3.13.1
@@ -105,15 +105,15 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==
-  /chalk/3.0.0:
+  /chalk/4.0.0:
     dependencies:
       ansi-styles: 4.2.1
       supports-color: 7.1.0
     dev: false
     engines:
-      node: '>=8'
+      node: '>=10'
     resolution:
-      integrity: sha512-4D3B6Wf41KOYRFdszmDqMCGq5VV/uMAB273JILmO+3jAlh8X4qDtdtgCR3fxtbLEMzSx22QdhnDcJvu2u1fVwg==
+      integrity: sha512-N9oWFcegS0sFr9oh1oz2d7Npos6vNoWW9HvtCg5N1KRFpUhaAhvTv5Y58g880fZaEYSNm3qDz8SU1UrGvp+n7A==
   /cliui/6.0.0:
     dependencies:
       string-width: 4.2.0
@@ -374,7 +374,7 @@ specifiers:
   '@types/node-fetch': ^2.5.4
   '@types/semver': ^6.2.0
   '@types/yargs': ^15.0.0
-  chalk: ^3.0.0
+  chalk: ^4.0.0
   fs-extra: ^8.1.0
   fs-tree-utils: ^0.1.8
   js-yaml: ^3.13.1
