@@ -1,7 +1,7 @@
 dependencies:
   '@types/node': 13.1.6
   advanced-map-types: 'link:../advanced-map-types'
-  tslib: 1.10.0
+  tslib: 2.0.0
   typescript-miscellaneous: 0.1.1
 lockfileVersion: 5.1
 packages:
@@ -17,6 +17,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
+  /tslib/2.0.0:
+    dev: false
+    resolution:
+      integrity: sha512-lTqkx847PI7xEDYJntxZH89L2/aXInsyF2luSafe/+0fHOMjlBNXdH6th7f70qxLDhul7KZK0zC8V5ZIyHl0/g==
   /typescript-miscellaneous/0.1.1:
     dependencies:
       '@types/node': 10.14.20
@@ -30,5 +34,5 @@ packages:
 specifiers:
   '@types/node': ^13.1.6
   advanced-map-types: ^0.0.4
-  tslib: ^1.10.0
+  tslib: ^2.0.0
   typescript-miscellaneous: ^0.1.1

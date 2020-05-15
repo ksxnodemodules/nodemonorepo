@@ -18,7 +18,7 @@
     "meta"
   ],
   "dependencies": {
-    "tslib": "^1.10.0",
+    "tslib": "^2.0.0",
     "advanced-set-types": "^0.0.2",
     "advanced-set-base": "^0.0.2",
     "advanced-set-multi-key-base": "^0.0.4",

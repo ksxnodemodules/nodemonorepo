@@ -19,7 +19,7 @@
     "class"
   ],
   "dependencies": {
-    "tslib": "^1.10.0",
+    "tslib": "^2.0.0",
     "typescript-miscellaneous": "^0.1.1",
     "advanced-set-types": "^0.0.2",
     "@types/node": "^13.1.6"

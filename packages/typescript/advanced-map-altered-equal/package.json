@@ -18,7 +18,7 @@
     "custom"
   ],
   "dependencies": {
-    "tslib": "^1.10.0",
+    "tslib": "^2.0.0",
     "convenient-typescript-utilities": "^0.0.5",
     "advanced-map-base": "^0.0.4",
     "advanced-map-types": "^0.0.4",

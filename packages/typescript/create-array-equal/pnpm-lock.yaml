@@ -1,7 +1,7 @@
 dependencies:
   '@types/node': 13.1.6
   iter-tools: 6.2.6
-  tslib: 1.10.0
+  tslib: 2.0.0
   typescript-miscellaneous: 0.1.1
 devDependencies:
   static-type-assert: 3.0.1
@@ -69,6 +69,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
+  /tslib/2.0.0:
+    dev: false
+    resolution:
+      integrity: sha512-lTqkx847PI7xEDYJntxZH89L2/aXInsyF2luSafe/+0fHOMjlBNXdH6th7f70qxLDhul7KZK0zC8V5ZIyHl0/g==
   /typescript-compare/0.0.2:
     dependencies:
       typescript-logic: 0.0.0
@@ -110,5 +114,5 @@ specifiers:
   '@types/node': ^13.1.6
   iter-tools: ^6.2.6
   static-type-assert: ^3.0.1
-  tslib: ^1.10.0
+  tslib: ^2.0.0
   typescript-miscellaneous: ^0.1.1

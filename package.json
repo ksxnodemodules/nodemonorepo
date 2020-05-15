@@ -22,7 +22,7 @@
     "tslint": "^5.20.1",
     "tslint-config-standard": "^9.0.0",
     "typescript": "^3.7.4",
-    "tslib": "^1.10.0",
+    "tslib": "^2.0.0",
     "glob": "^7.1.6",
     "toolcheck": "^0.1.3",
     "extra-jest": "*",

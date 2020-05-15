@@ -13,7 +13,7 @@
     "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
   },
   "dependencies": {
-    "tslib": "^1.10.0",
+    "tslib": "^2.0.0",
     "create-array-equal": "^0.0.3",
     "advanced-map-altered-equal": "^0.0.5",
     "advanced-map-types": "^0.0.4",
