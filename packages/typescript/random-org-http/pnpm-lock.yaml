@@ -2,7 +2,7 @@ dependencies:
   '@types/node': 13.1.6
   '@types/node-fetch': 2.5.4
   node-fetch: 2.6.0
-  tslib: 1.10.0
+  tslib: 2.0.0
 lockfileVersion: 5.1
 packages:
   /@types/node-fetch/2.5.4:
@@ -21,12 +21,12 @@ packages:
       node: 4.x || >=6.0.0
     resolution:
       integrity: sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==
-  /tslib/1.10.0:
+  /tslib/2.0.0:
     dev: false
     resolution:
-      integrity: sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
+      integrity: sha512-lTqkx847PI7xEDYJntxZH89L2/aXInsyF2luSafe/+0fHOMjlBNXdH6th7f70qxLDhul7KZK0zC8V5ZIyHl0/g==
 specifiers:
   '@types/node': ^13.1.6
   '@types/node-fetch': ^2.5.4
   node-fetch: ^2.6.0
-  tslib: ^1.10.0
+  tslib: ^2.0.0
