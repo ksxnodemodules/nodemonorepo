@@ -1,5 +1,5 @@
 dependencies:
-  '@tsfun/object': 0.0.9
+  '@tsfun/object': 0.0.21
   '@types/fs-extra': 8.0.1
   '@types/js-yaml': 3.12.1
   '@types/node': 13.1.6
@@ -20,7 +20,7 @@ devDependencies:
   '@tsfun/function': 0.0.4
   preloaded-node.private: 'link:../../javascript/preloaded-node.private'
   strip-ansi: 6.0.0
-lockfileVersion: 5.1
+lockfileVersion: 5.2
 packages:
   /@tsfun/function/0.0.4:
     dependencies:
@@ -30,14 +30,14 @@ packages:
     dev: true
     resolution:
       integrity: sha512-MiMTplZdtzQcjN6/gr5btKvWPsf/UJ9B1Etggqd9YXzTN8fq+uVt/eXdZOyfnipFWNA0NKaF5+p5l2CpuZVPWg==
-  /@tsfun/object/0.0.9:
+  /@tsfun/object/0.0.21:
     dependencies:
-      '@types/node': 13.1.6
-      tslib: 1.10.0
+      '@types/node': 14.14.6
+      tslib: 2.0.3
       utility-types: 3.10.0
     dev: false
     resolution:
-      integrity: sha512-s6mMlqhHcZ3nkHHmQoCSFbyywEuKPqmGWV2/smaaaTYKiEW1YYrH7NNdGVp9/BQM90p8oXsbPcOrLiNp609Vlg==
+      integrity: sha512-bq4HlP+5JFNGcKysmgPI1nR8vqPLlMRhWdZ/rph8sI8jHghQGSXV8BaqzTQ8krUgM/xkUfDK0x+fXMkw0020pQ==
   /@types/color-name/1.1.1:
     dev: false
     resolution:
@@ -65,6 +65,10 @@ packages:
   /@types/node/13.1.6:
     resolution:
       integrity: sha512-Jg1F+bmxcpENHP23sVKkNuU3uaxPnsBMW0cLjleiikFKomJQbsn0Cqk2yDvQArqzZN6ABfBkZ0To7pQ8sLdWDg==
+  /@types/node/14.14.6:
+    dev: false
+    resolution:
+      integrity: sha512-6QlRuqsQ/Ox/aJEQWBEJG7A9+u7oSYl3mem/K8IzxXG/kAGbV1YPD9Bg9Zw3vyxC/YP+zONKwy8hGkSt1jxFMw==
   /@types/semver/6.2.0:
     dev: false
     resolution:
@@ -310,6 +314,10 @@ packages:
   /tslib/1.10.0:
     resolution:
       integrity: sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
+  /tslib/2.0.3:
+    dev: false
+    resolution:
+      integrity: sha512-uZtkfKblCEQtZKBF6EBXVZeQNl82yqtDQdv+eck8u7tdPxjLu2/lp5/uPW+um2tpuxINHWy3GhiccY7QgEaVHQ==
   /universalify/0.1.2:
     dev: false
     engines:
@@ -367,7 +375,7 @@ packages:
       integrity: sha512-T39FNN1b6hCW4SOIk1XyTOWxtXdcen0t+XYrysQmChzSipvhBO8Bj0nK1ozAasdk24dNWuMZvr4k24nz+8HHLg==
 specifiers:
   '@tsfun/function': ^0.0.4
-  '@tsfun/object': ^0.0.9
+  '@tsfun/object': ^0.0.21
   '@types/fs-extra': ^8.0.1
   '@types/js-yaml': ^3.12.1
   '@types/node': ^13.1.6
