@@ -1,21 +1,25 @@
 dependencies:
-  '@tsfun/array': 0.0.0
+  '@tsfun/array': 0.0.8
   '@types/node': 13.1.6
   immutable: 4.0.0-rc.12
   tslib: 1.10.0
-lockfileVersion: 5.1
+lockfileVersion: 5.2
 packages:
-  /@tsfun/array/0.0.0:
+  /@tsfun/array/0.0.8:
     dependencies:
-      '@types/node': 13.1.6
-      tslib: 1.10.0
+      '@types/node': 14.14.6
+      tslib: 2.0.3
     dev: false
     resolution:
-      integrity: sha512-y18KD65Ba1a7jXJ8PBIGjfkCtR32wd0XOPaV5D8z9uBiNE+pIF0PCnHKVHZ4+GcaRa/Y7HkTWJxmcjs283ggmw==
+      integrity: sha512-7G8HXcIl5wPTuEdPG2Nz+jrIbtL1rvN6f1zgheG+FLJhWvaxJOgAX5oAC+e1nSK29yXIpW8WuMJDSpyUp2W3ag==
   /@types/node/13.1.6:
     dev: false
     resolution:
       integrity: sha512-Jg1F+bmxcpENHP23sVKkNuU3uaxPnsBMW0cLjleiikFKomJQbsn0Cqk2yDvQArqzZN6ABfBkZ0To7pQ8sLdWDg==
+  /@types/node/14.14.6:
+    dev: false
+    resolution:
+      integrity: sha512-6QlRuqsQ/Ox/aJEQWBEJG7A9+u7oSYl3mem/K8IzxXG/kAGbV1YPD9Bg9Zw3vyxC/YP+zONKwy8hGkSt1jxFMw==
   /immutable/4.0.0-rc.12:
     dev: false
     resolution:
@@ -24,8 +28,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
+  /tslib/2.0.3:
+    dev: false
+    resolution:
+      integrity: sha512-uZtkfKblCEQtZKBF6EBXVZeQNl82yqtDQdv+eck8u7tdPxjLu2/lp5/uPW+um2tpuxINHWy3GhiccY7QgEaVHQ==
 specifiers:
-  '@tsfun/array': ^0.0.0
+  '@tsfun/array': ^0.0.8
   '@types/node': ^13.1.6
   immutable: ^4.0.0-rc.12
   tslib: ^1.10.0
