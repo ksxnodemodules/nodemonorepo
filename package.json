@@ -18,7 +18,7 @@
     "yaml-jest": "^1.0.5",
     "jest-runner-standard": "^0.0.13",
     "js-yaml": "^3.13.1",
-    "standard": "^14.3.1",
+    "standard": "^16.0.0",
     "tslint": "^5.20.1",
     "tslint-config-standard": "^9.0.0",
     "typescript": "^3.7.4",
