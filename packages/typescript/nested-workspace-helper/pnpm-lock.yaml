@@ -1,7 +1,7 @@
 dependencies:
   '@tsfun/object': 0.0.9
   '@types/fs-extra': 8.0.1
-  '@types/js-yaml': 3.12.1
+  '@types/js-yaml': 4.0.0
   '@types/node': 13.1.6
   '@types/node-fetch': 2.5.4
   '@types/semver': 6.2.0
@@ -9,7 +9,7 @@ dependencies:
   chalk: 3.0.0
   fs-extra: 8.1.0
   fs-tree-utils: 'link:../fs-tree-utils'
-  js-yaml: 3.13.1
+  js-yaml: 4.0.0
   monorepo-shared-assets: 'link:../monorepo-shared-assets'
   node-fetch: 2.6.0
   semver: 7.1.1
@@ -20,7 +20,7 @@ devDependencies:
   '@tsfun/function': 0.0.4
   preloaded-node.private: 'link:../../javascript/preloaded-node.private'
   strip-ansi: 6.0.0
-lockfileVersion: 5.1
+lockfileVersion: 5.2
 packages:
   /@tsfun/function/0.0.4:
     dependencies:
@@ -48,10 +48,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-J00cVDALmi/hJOYsunyT52Hva5TnJeKP5yd1r+mH/ZU0mbYZflR0Z5kw5kITtKTRYMhm1JMClOFYdHnQszEvqw==
-  /@types/js-yaml/3.12.1:
+  /@types/js-yaml/4.0.0:
     dev: false
     resolution:
-      integrity: sha512-SGGAhXLHDx+PK4YLNcNGa6goPf9XRWQNAUUbffkwVGGXIxmDKWyGGL4inzq2sPmExu431Ekb9aEMn9BkPqEYFA==
+      integrity: sha512-4vlpCM5KPCL5CfGmTbpjwVKbISRYhduEJvvUWsH5EB7QInhEj94XPZ3ts/9FPiLZFqYO0xoW4ZL8z2AabTGgJA==
   /@types/node-fetch/2.5.4:
     dependencies:
       '@types/node': 13.1.6
@@ -93,12 +93,10 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-9VGjrMsG1vePxcSweQsN20KY/c4zN0h9fLjqAbwbPfahM3t+NL+M9HC8xeXG2I8pX5NoamTGNuomEUFI7fcUjA==
-  /argparse/1.0.10:
-    dependencies:
-      sprintf-js: 1.0.3
+  /argparse/2.0.1:
     dev: false
     resolution:
-      integrity: sha512-o5Roy6tNG4SL/FOkCAN6RzjiakZS25RLYFrcMttJqbdd8BWrnA+fGz57iN5Pb06pvBGvl5gQ0B48dJlslXvoTg==
+      integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==
   /camelcase/5.3.1:
     dev: false
     engines:
@@ -144,13 +142,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==
-  /esprima/4.0.1:
-    dev: false
-    engines:
-      node: '>=4'
-    hasBin: true
-    resolution:
-      integrity: sha512-eGuFFw7Upda+g4p+QHvnW0RyTX/SVeJBDM/gCtMARO0cLuT2HcEKnTPvhjV6aGeqrCB/sbNop0Kszm0jsaWU4A==
   /find-up/4.1.0:
     dependencies:
       locate-path: 5.0.0
@@ -192,14 +183,13 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-zymm5+u+sCsSWyD9qNaejV3DFvhCKclKdizYaJUuHA83RLjb7nSuGnddCHGv0hk+KY7BMAlsWeK4Ueg6EV6XQg==
-  /js-yaml/3.13.1:
+  /js-yaml/4.0.0:
     dependencies:
-      argparse: 1.0.10
-      esprima: 4.0.1
+      argparse: 2.0.1
     dev: false
     hasBin: true
     resolution:
-      integrity: sha512-YfbcO7jXDdyj0DGxYVSlSeQNHbD7XPWvrVWeVUujrQEoZzWJIRrCPoyk6kL6IAjAG2IolMK4T0hNUe0HOUs5Jw==
+      integrity: sha512-pqon0s+4ScYUvX30wxQi3PogGFAlUyH0awepWvwkj4jD4v+ova3RiYw8bmA6x2rDrEaj8i/oWKoRxpVNW+Re8Q==
   /jsonfile/4.0.0:
     dev: false
     optionalDependencies:
@@ -269,10 +259,6 @@ packages:
     dev: false
     resolution:
       integrity: sha1-BF+XgtARrppoA93TgrJDkrPYkPc=
-  /sprintf-js/1.0.3:
-    dev: false
-    resolution:
-      integrity: sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=
   /string-width/4.2.0:
     dependencies:
       emoji-regex: 8.0.0
@@ -369,7 +355,7 @@ specifiers:
   '@tsfun/function': ^0.0.4
   '@tsfun/object': ^0.0.9
   '@types/fs-extra': ^8.0.1
-  '@types/js-yaml': ^3.12.1
+  '@types/js-yaml': ^4.0.0
   '@types/node': ^13.1.6
   '@types/node-fetch': ^2.5.4
   '@types/semver': ^6.2.0
@@ -377,7 +363,7 @@ specifiers:
   chalk: ^3.0.0
   fs-extra: ^8.1.0
   fs-tree-utils: ^0.1.8
-  js-yaml: ^3.13.1
+  js-yaml: ^4.0.0
   monorepo-shared-assets: ^0.0.19
   node-fetch: ^2.6.0
   preloaded-node.private: '*'
