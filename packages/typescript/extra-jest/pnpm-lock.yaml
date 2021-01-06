@@ -1,13 +1,13 @@
 dependencies:
   '@types/fs-extra': 8.0.1
-  '@types/js-yaml': 3.12.1
+  '@types/js-yaml': 4.0.0
   '@types/node': 13.1.6
   fs-extra: 8.1.0
   fs-tree-utils: 'link:../fs-tree-utils'
-  js-yaml: 3.13.1
+  js-yaml: 4.0.0
   tslib: 1.10.0
   unique-temp-path: 'link:../unique-temp-path'
-lockfileVersion: 5.1
+lockfileVersion: 5.2
 packages:
   /@types/fs-extra/8.0.1:
     dependencies:
@@ -15,27 +15,18 @@ packages:
     dev: false
     resolution:
       integrity: sha512-J00cVDALmi/hJOYsunyT52Hva5TnJeKP5yd1r+mH/ZU0mbYZflR0Z5kw5kITtKTRYMhm1JMClOFYdHnQszEvqw==
-  /@types/js-yaml/3.12.1:
+  /@types/js-yaml/4.0.0:
     dev: false
     resolution:
-      integrity: sha512-SGGAhXLHDx+PK4YLNcNGa6goPf9XRWQNAUUbffkwVGGXIxmDKWyGGL4inzq2sPmExu431Ekb9aEMn9BkPqEYFA==
+      integrity: sha512-4vlpCM5KPCL5CfGmTbpjwVKbISRYhduEJvvUWsH5EB7QInhEj94XPZ3ts/9FPiLZFqYO0xoW4ZL8z2AabTGgJA==
   /@types/node/13.1.6:
     dev: false
     resolution:
       integrity: sha512-Jg1F+bmxcpENHP23sVKkNuU3uaxPnsBMW0cLjleiikFKomJQbsn0Cqk2yDvQArqzZN6ABfBkZ0To7pQ8sLdWDg==
-  /argparse/1.0.10:
-    dependencies:
-      sprintf-js: 1.0.3
+  /argparse/2.0.1:
     dev: false
     resolution:
-      integrity: sha512-o5Roy6tNG4SL/FOkCAN6RzjiakZS25RLYFrcMttJqbdd8BWrnA+fGz57iN5Pb06pvBGvl5gQ0B48dJlslXvoTg==
-  /esprima/4.0.1:
-    dev: false
-    engines:
-      node: '>=4'
-    hasBin: true
-    resolution:
-      integrity: sha512-eGuFFw7Upda+g4p+QHvnW0RyTX/SVeJBDM/gCtMARO0cLuT2HcEKnTPvhjV6aGeqrCB/sbNop0Kszm0jsaWU4A==
+      integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==
   /fs-extra/8.1.0:
     dependencies:
       graceful-fs: 4.2.2
@@ -50,24 +41,19 @@ packages:
     dev: false
     resolution:
       integrity: sha512-IItsdsea19BoLC7ELy13q1iJFNmd7ofZH5+X/pJr90/nRoPEX0DJo1dHDbgtYWOhJhcCgMDTOw84RZ72q6lB+Q==
-  /js-yaml/3.13.1:
+  /js-yaml/4.0.0:
     dependencies:
-      argparse: 1.0.10
-      esprima: 4.0.1
+      argparse: 2.0.1
     dev: false
     hasBin: true
     resolution:
-      integrity: sha512-YfbcO7jXDdyj0DGxYVSlSeQNHbD7XPWvrVWeVUujrQEoZzWJIRrCPoyk6kL6IAjAG2IolMK4T0hNUe0HOUs5Jw==
+      integrity: sha512-pqon0s+4ScYUvX30wxQi3PogGFAlUyH0awepWvwkj4jD4v+ova3RiYw8bmA6x2rDrEaj8i/oWKoRxpVNW+Re8Q==
   /jsonfile/4.0.0:
     dev: false
     optionalDependencies:
       graceful-fs: 4.2.2
     resolution:
       integrity: sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss=
-  /sprintf-js/1.0.3:
-    dev: false
-    resolution:
-      integrity: sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=
   /tslib/1.10.0:
     dev: false
     resolution:
@@ -80,10 +66,10 @@ packages:
       integrity: sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==
 specifiers:
   '@types/fs-extra': ^8.0.1
-  '@types/js-yaml': ^3.12.1
+  '@types/js-yaml': ^4.0.0
   '@types/node': ^13.1.6
   fs-extra: ^8.1.0
   fs-tree-utils: ^0.1.8
-  js-yaml: ^3.13.1
+  js-yaml: ^4.0.0
   tslib: ^1.10.0
   unique-temp-path: ^0.1.3
