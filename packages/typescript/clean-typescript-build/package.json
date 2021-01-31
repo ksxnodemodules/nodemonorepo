@@ -19,12 +19,12 @@
   ],
   "dependencies": {
     "fs-extra": "^8.1.0",
-    "yargs": "^15.1.0",
+    "yargs": "^16.0.0",
     "@tsfun/array": "^0.0.0",
     "tslib": "^1.10.0",
     "fs-tree-utils": "^0.1.8",
     "@types/fs-extra": "^8.0.1",
-    "@types/yargs": "^15.0.0",
+    "@types/yargs": "^16.0.0",
     "@types/node": "^13.1.6"
   },
   "devDependencies": {
