@@ -12,9 +12,9 @@
     "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
   },
   "devDependencies": {
-    "jest": "^24.9.0",
+    "jest": "^27.0.0",
     "ts-jest": "^24.3.0",
-    "babel-jest": "^24.9.0",
+    "babel-jest": "^27.0.0",
     "yaml-jest": "^1.0.5",
     "jest-runner-standard": "^0.0.13",
     "js-yaml": "^3.13.1",
