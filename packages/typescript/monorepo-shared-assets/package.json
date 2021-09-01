@@ -8,6 +8,11 @@
   "bugs": {
     "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ksxnodemodules/nodemonorepo.git",
+    "directory": "packages/typescript/monorepo-shared-assets"
+  },
   "dependencies": {
     "immutable": "^4.0.0-rc.12",
     "@tsfun/array": "^0.0.0",
