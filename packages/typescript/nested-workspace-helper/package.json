@@ -31,7 +31,7 @@
     "yargs": "^15.1.0",
     "chalk": "^3.0.0",
     "@tsfun/object": "^0.0.9",
-    "tslib": "^1.10.0",
+    "tslib": "^2.0.0",
     "monorepo-shared-assets": "^0.0.19",
     "fs-tree-utils": "^0.1.8",
     "smart-publish": "^0.0.8",

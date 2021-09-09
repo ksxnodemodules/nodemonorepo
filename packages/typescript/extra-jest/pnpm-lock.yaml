@@ -5,7 +5,7 @@ dependencies:
   fs-extra: 8.1.0
   fs-tree-utils: 'link:../fs-tree-utils'
   js-yaml: 3.13.1
-  tslib: 1.10.0
+  tslib: 2.0.0
   unique-temp-path: 'link:../unique-temp-path'
 lockfileVersion: 5.1
 packages:
@@ -68,10 +68,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=
-  /tslib/1.10.0:
+  /tslib/2.0.0:
     dev: false
     resolution:
-      integrity: sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
+      integrity: sha512-lTqkx847PI7xEDYJntxZH89L2/aXInsyF2luSafe/+0fHOMjlBNXdH6th7f70qxLDhul7KZK0zC8V5ZIyHl0/g==
   /universalify/0.1.2:
     dev: false
     engines:
@@ -85,5 +85,5 @@ specifiers:
   fs-extra: ^8.1.0
   fs-tree-utils: ^0.1.8
   js-yaml: ^3.13.1
-  tslib: ^1.10.0
+  tslib: ^2.0.0
   unique-temp-path: ^0.1.3

@@ -10,7 +10,7 @@ dependencies:
   js-yaml: 3.13.1
   minimatch: 3.0.4
   preloaded-node.private: 'link:../../javascript/preloaded-node.private'
-  tslib: 1.10.0
+  tslib: 2.0.0
   yargs: 15.1.0
 lockfileVersion: 5.1
 packages:
@@ -275,10 +275,10 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-oRSIpR8pxT1Wr2FquTNnGet79b3BWljqOuoW/h4oBhxJ/HUbX5nX6JSruTkvXDCFMwDPvsaTTbvMLKZWSy0R5g==
-  /tslib/1.10.0:
+  /tslib/2.0.0:
     dev: false
     resolution:
-      integrity: sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
+      integrity: sha512-lTqkx847PI7xEDYJntxZH89L2/aXInsyF2luSafe/+0fHOMjlBNXdH6th7f70qxLDhul7KZK0zC8V5ZIyHl0/g==
   /universalify/0.1.2:
     dev: false
     engines:
@@ -340,5 +340,5 @@ specifiers:
   js-yaml: ^3.13.1
   minimatch: ^3.0.4
   preloaded-node.private: ^0.0.0
-  tslib: ^1.10.0
+  tslib: ^2.0.0
   yargs: ^15.1.0
