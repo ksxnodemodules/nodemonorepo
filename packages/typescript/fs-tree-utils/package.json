@@ -26,7 +26,7 @@
   "main": "index.js",
   "dependencies": {
     "fs-extra": "^8.1.0",
-    "@tsfun/array": "^0.0.0",
+    "@tsfun/array": "^0.0.8",
     "tslib": "^1.10.0",
     "monorepo-shared-assets": "^0.0.19",
     "@types/fs-extra": "^8.0.1",
