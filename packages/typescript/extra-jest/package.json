@@ -9,6 +9,11 @@
   "bugs": {
     "url": "https://github.com/ksxnodemodules/nodemonorepo/issues"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ksxnodemodules/nodemonorepo.git",
+    "directory": "packages/typescript/extra-jest"
+  },
   "keywords": [
     "jest"
   ],
