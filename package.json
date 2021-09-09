@@ -17,7 +17,7 @@
     "babel-jest": "^24.9.0",
     "yaml-jest": "^1.0.5",
     "jest-runner-standard": "^0.0.13",
-    "js-yaml": "^3.13.1",
+    "js-yaml": "^4.0.0",
     "standard": "^14.3.1",
     "tslint": "^5.20.1",
     "tslint-config-standard": "^9.0.0",
@@ -32,7 +32,7 @@
     "nested-workspace-helper.private": "*",
     "clean-typescript-build.private": "*",
     "@types/jest": "^24.0.25",
-    "@types/js-yaml": "^3.12.1",
+    "@types/js-yaml": "^4.0.0",
     "@types/glob": "^7.1.1",
     "@types/node": "^13.1.6"
   },

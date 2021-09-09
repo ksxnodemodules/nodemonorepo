@@ -25,7 +25,7 @@
   ],
   "dependencies": {
     "semver": "^7.1.1",
-    "js-yaml": "^3.13.1",
+    "js-yaml": "^4.0.0",
     "fs-extra": "^8.1.0",
     "node-fetch": "^2.6.0",
     "yargs": "^15.1.0",
@@ -36,7 +36,7 @@
     "fs-tree-utils": "^0.1.8",
     "smart-publish": "^0.0.8",
     "@types/semver": "^6.2.0",
-    "@types/js-yaml": "^3.12.1",
+    "@types/js-yaml": "^4.0.0",
     "@types/fs-extra": "^8.0.1",
     "@types/node-fetch": "^2.5.4",
     "@types/yargs": "^15.0.0",
