@@ -43,7 +43,7 @@
     "@types/node": "^13.1.6"
   },
   "devDependencies": {
-    "strip-ansi": "^6.0.0",
+    "strip-ansi": "^7.0.0",
     "@tsfun/function": "^0.0.4",
     "preloaded-node.private": "*"
   },
