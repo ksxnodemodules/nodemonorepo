@@ -16,7 +16,7 @@
     "ts-jest": "^24.3.0",
     "babel-jest": "^24.9.0",
     "yaml-jest": "^1.0.5",
-    "jest-runner-standard": "^0.0.13",
+    "jest-runner-standard": "^0.1.0",
     "js-yaml": "^3.13.1",
     "standard": "^14.3.1",
     "tslint": "^5.20.1",
