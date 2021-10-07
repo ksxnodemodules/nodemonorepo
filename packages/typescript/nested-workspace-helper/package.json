@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "strip-ansi": "^6.0.0",
-    "@tsfun/function": "^0.0.4",
+    "@tsfun/function": "^0.0.11",
     "preloaded-node.private": "*"
   },
   "engines": {
