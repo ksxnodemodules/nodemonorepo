@@ -30,7 +30,7 @@
     "tslib": "^1.10.0",
     "monorepo-shared-assets": "^0.0.19",
     "@types/fs-extra": "^8.0.1",
-    "@types/node": "^13.1.6"
+    "@types/node": "^14.0.0"
   },
   "devDependencies": {
     "unique-temp-path": "*"

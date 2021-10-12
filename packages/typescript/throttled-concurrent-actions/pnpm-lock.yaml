@@ -1,25 +1,32 @@
+lockfileVersion: 5.3
+
+specifiers:
+  '@tsfun/array': ^0.0.0
+  '@types/node': ^14.0.0
+  tslib: ^1.10.0
+
 dependencies:
   '@tsfun/array': 0.0.0
-  '@types/node': 13.1.6
+  '@types/node': 14.17.21
   tslib: 1.10.0
-lockfileVersion: 5.1
+
 packages:
+
   /@tsfun/array/0.0.0:
+    resolution: {integrity: sha512-y18KD65Ba1a7jXJ8PBIGjfkCtR32wd0XOPaV5D8z9uBiNE+pIF0PCnHKVHZ4+GcaRa/Y7HkTWJxmcjs283ggmw==}
     dependencies:
       '@types/node': 13.1.6
       tslib: 1.10.0
     dev: false
-    resolution:
-      integrity: sha512-y18KD65Ba1a7jXJ8PBIGjfkCtR32wd0XOPaV5D8z9uBiNE+pIF0PCnHKVHZ4+GcaRa/Y7HkTWJxmcjs283ggmw==
+
   /@types/node/13.1.6:
+    resolution: {integrity: sha512-Jg1F+bmxcpENHP23sVKkNuU3uaxPnsBMW0cLjleiikFKomJQbsn0Cqk2yDvQArqzZN6ABfBkZ0To7pQ8sLdWDg==}
     dev: false
-    resolution:
-      integrity: sha512-Jg1F+bmxcpENHP23sVKkNuU3uaxPnsBMW0cLjleiikFKomJQbsn0Cqk2yDvQArqzZN6ABfBkZ0To7pQ8sLdWDg==
+
+  /@types/node/14.17.21:
+    resolution: {integrity: sha512-zv8ukKci1mrILYiQOwGSV4FpkZhyxQtuFWGya2GujWg+zVAeRQ4qbaMmWp9vb9889CFA8JECH7lkwCL6Ygg8kA==}
+    dev: false
+
   /tslib/1.10.0:
+    resolution: {integrity: sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==}
     dev: false
-    resolution:
-      integrity: sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
-specifiers:
-  '@tsfun/array': ^0.0.0
-  '@types/node': ^13.1.6
-  tslib: ^1.10.0

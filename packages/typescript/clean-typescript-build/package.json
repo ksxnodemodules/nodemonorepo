@@ -30,7 +30,7 @@
     "fs-tree-utils": "^0.1.8",
     "@types/fs-extra": "^8.0.1",
     "@types/yargs": "^15.0.0",
-    "@types/node": "^13.1.6"
+    "@types/node": "^14.0.0"
   },
   "devDependencies": {
     "extra-jest": "*",

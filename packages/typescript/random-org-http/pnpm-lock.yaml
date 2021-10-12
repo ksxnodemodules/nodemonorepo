@@ -1,32 +1,38 @@
-dependencies:
-  '@types/node': 13.1.6
-  '@types/node-fetch': 2.5.4
-  node-fetch: 2.6.0
-  tslib: 1.10.0
-lockfileVersion: 5.1
-packages:
-  /@types/node-fetch/2.5.4:
-    dependencies:
-      '@types/node': 13.1.6
-    dev: false
-    resolution:
-      integrity: sha512-Oz6id++2qAOFuOlE1j0ouk1dzl3mmI1+qINPNBhi9nt/gVOz0G+13Ao6qjhdF0Ys+eOkhu6JnFmt38bR3H0POQ==
-  /@types/node/13.1.6:
-    dev: false
-    resolution:
-      integrity: sha512-Jg1F+bmxcpENHP23sVKkNuU3uaxPnsBMW0cLjleiikFKomJQbsn0Cqk2yDvQArqzZN6ABfBkZ0To7pQ8sLdWDg==
-  /node-fetch/2.6.0:
-    dev: false
-    engines:
-      node: 4.x || >=6.0.0
-    resolution:
-      integrity: sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==
-  /tslib/1.10.0:
-    dev: false
-    resolution:
-      integrity: sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
+lockfileVersion: 5.3
+
 specifiers:
-  '@types/node': ^13.1.6
+  '@types/node': ^14.0.0
   '@types/node-fetch': ^2.5.4
   node-fetch: ^2.6.0
   tslib: ^1.10.0
+
+dependencies:
+  '@types/node': 14.17.21
+  '@types/node-fetch': 2.5.4
+  node-fetch: 2.6.0
+  tslib: 1.10.0
+
+packages:
+
+  /@types/node-fetch/2.5.4:
+    resolution: {integrity: sha512-Oz6id++2qAOFuOlE1j0ouk1dzl3mmI1+qINPNBhi9nt/gVOz0G+13Ao6qjhdF0Ys+eOkhu6JnFmt38bR3H0POQ==}
+    dependencies:
+      '@types/node': 13.1.6
+    dev: false
+
+  /@types/node/13.1.6:
+    resolution: {integrity: sha512-Jg1F+bmxcpENHP23sVKkNuU3uaxPnsBMW0cLjleiikFKomJQbsn0Cqk2yDvQArqzZN6ABfBkZ0To7pQ8sLdWDg==}
+    dev: false
+
+  /@types/node/14.17.21:
+    resolution: {integrity: sha512-zv8ukKci1mrILYiQOwGSV4FpkZhyxQtuFWGya2GujWg+zVAeRQ4qbaMmWp9vb9889CFA8JECH7lkwCL6Ygg8kA==}
+    dev: false
+
+  /node-fetch/2.6.0:
+    resolution: {integrity: sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==}
+    engines: {node: 4.x || >=6.0.0}
+    dev: false
+
+  /tslib/1.10.0:
+    resolution: {integrity: sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==}
+    dev: false

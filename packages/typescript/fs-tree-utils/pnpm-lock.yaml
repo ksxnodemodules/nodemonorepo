@@ -1,66 +1,72 @@
+lockfileVersion: 5.3
+
+specifiers:
+  '@tsfun/array': ^0.0.0
+  '@types/fs-extra': ^8.0.1
+  '@types/node': ^14.0.0
+  fs-extra: ^8.1.0
+  monorepo-shared-assets: ^0.0.19
+  tslib: ^1.10.0
+  unique-temp-path: '*'
+
 dependencies:
   '@tsfun/array': 0.0.0
   '@types/fs-extra': 8.0.1
-  '@types/node': 13.1.6
+  '@types/node': 14.17.21
   fs-extra: 8.1.0
-  monorepo-shared-assets: 'link:../monorepo-shared-assets'
+  monorepo-shared-assets: link:../monorepo-shared-assets
   tslib: 1.10.0
+
 devDependencies:
-  unique-temp-path: 'link:../unique-temp-path'
-lockfileVersion: 5.1
+  unique-temp-path: link:../unique-temp-path
+
 packages:
+
   /@tsfun/array/0.0.0:
+    resolution: {integrity: sha512-y18KD65Ba1a7jXJ8PBIGjfkCtR32wd0XOPaV5D8z9uBiNE+pIF0PCnHKVHZ4+GcaRa/Y7HkTWJxmcjs283ggmw==}
     dependencies:
       '@types/node': 13.1.6
       tslib: 1.10.0
     dev: false
-    resolution:
-      integrity: sha512-y18KD65Ba1a7jXJ8PBIGjfkCtR32wd0XOPaV5D8z9uBiNE+pIF0PCnHKVHZ4+GcaRa/Y7HkTWJxmcjs283ggmw==
+
   /@types/fs-extra/8.0.1:
+    resolution: {integrity: sha512-J00cVDALmi/hJOYsunyT52Hva5TnJeKP5yd1r+mH/ZU0mbYZflR0Z5kw5kITtKTRYMhm1JMClOFYdHnQszEvqw==}
     dependencies:
       '@types/node': 13.1.6
     dev: false
-    resolution:
-      integrity: sha512-J00cVDALmi/hJOYsunyT52Hva5TnJeKP5yd1r+mH/ZU0mbYZflR0Z5kw5kITtKTRYMhm1JMClOFYdHnQszEvqw==
+
   /@types/node/13.1.6:
+    resolution: {integrity: sha512-Jg1F+bmxcpENHP23sVKkNuU3uaxPnsBMW0cLjleiikFKomJQbsn0Cqk2yDvQArqzZN6ABfBkZ0To7pQ8sLdWDg==}
     dev: false
-    resolution:
-      integrity: sha512-Jg1F+bmxcpENHP23sVKkNuU3uaxPnsBMW0cLjleiikFKomJQbsn0Cqk2yDvQArqzZN6ABfBkZ0To7pQ8sLdWDg==
+
+  /@types/node/14.17.21:
+    resolution: {integrity: sha512-zv8ukKci1mrILYiQOwGSV4FpkZhyxQtuFWGya2GujWg+zVAeRQ4qbaMmWp9vb9889CFA8JECH7lkwCL6Ygg8kA==}
+    dev: false
+
   /fs-extra/8.1.0:
+    resolution: {integrity: sha512-yhlQgA6mnOJUKOsRUFsgJdQCvkKhcz8tlZG5HBQfReYZy46OwLcY+Zia0mtdHsOo9y/hP+CxMN0TU9QxoOtG4g==}
+    engines: {node: '>=6 <7 || >=8'}
     dependencies:
       graceful-fs: 4.2.2
       jsonfile: 4.0.0
       universalify: 0.1.2
     dev: false
-    engines:
-      node: '>=6 <7 || >=8'
-    resolution:
-      integrity: sha512-yhlQgA6mnOJUKOsRUFsgJdQCvkKhcz8tlZG5HBQfReYZy46OwLcY+Zia0mtdHsOo9y/hP+CxMN0TU9QxoOtG4g==
+
   /graceful-fs/4.2.2:
+    resolution: {integrity: sha512-IItsdsea19BoLC7ELy13q1iJFNmd7ofZH5+X/pJr90/nRoPEX0DJo1dHDbgtYWOhJhcCgMDTOw84RZ72q6lB+Q==}
     dev: false
-    resolution:
-      integrity: sha512-IItsdsea19BoLC7ELy13q1iJFNmd7ofZH5+X/pJr90/nRoPEX0DJo1dHDbgtYWOhJhcCgMDTOw84RZ72q6lB+Q==
+
   /jsonfile/4.0.0:
-    dev: false
+    resolution: {integrity: sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss=}
     optionalDependencies:
       graceful-fs: 4.2.2
-    resolution:
-      integrity: sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss=
+    dev: false
+
   /tslib/1.10.0:
+    resolution: {integrity: sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==}
     dev: false
-    resolution:
-      integrity: sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
+
   /universalify/0.1.2:
+    resolution: {integrity: sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==}
+    engines: {node: '>= 4.0.0'}
     dev: false
-    engines:
-      node: '>= 4.0.0'
-    resolution:
-      integrity: sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==
-specifiers:
-  '@tsfun/array': ^0.0.0
-  '@types/fs-extra': ^8.0.1
-  '@types/node': ^13.1.6
-  fs-extra: ^8.1.0
-  monorepo-shared-assets: ^0.0.19
-  tslib: ^1.10.0
-  unique-temp-path: '*'
