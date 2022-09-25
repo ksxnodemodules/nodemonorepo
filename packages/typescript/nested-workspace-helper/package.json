@@ -35,7 +35,7 @@
     "monorepo-shared-assets": "^0.0.19",
     "fs-tree-utils": "^0.1.8",
     "smart-publish": "^0.0.8",
-    "@types/semver": "^6.2.0",
+    "@types/semver": "^7.0.0",
     "@types/js-yaml": "^3.12.1",
     "@types/fs-extra": "^8.0.1",
     "@types/node-fetch": "^2.5.4",

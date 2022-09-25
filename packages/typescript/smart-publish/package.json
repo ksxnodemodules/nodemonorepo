@@ -28,7 +28,7 @@
     "pretty-exec": "^0.3.4",
     "tslib": "^1.10.0",
     "exec-inline": "^0.0.5",
-    "@types/semver": "^6.2.0",
+    "@types/semver": "^7.0.0",
     "@types/node": "^13.1.6"
   },
   "engines": {
