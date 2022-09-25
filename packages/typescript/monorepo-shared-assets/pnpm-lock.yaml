@@ -1,31 +1,38 @@
+lockfileVersion: 5.3
+
+specifiers:
+  '@tsfun/array': ^0.0.0
+  '@types/node': ^16.0.0
+  immutable: ^4.0.0-rc.12
+  tslib: ^1.10.0
+
 dependencies:
   '@tsfun/array': 0.0.0
-  '@types/node': 13.1.6
+  '@types/node': 16.11.60
   immutable: 4.0.0-rc.12
   tslib: 1.10.0
-lockfileVersion: 5.1
+
 packages:
+
   /@tsfun/array/0.0.0:
+    resolution: {integrity: sha512-y18KD65Ba1a7jXJ8PBIGjfkCtR32wd0XOPaV5D8z9uBiNE+pIF0PCnHKVHZ4+GcaRa/Y7HkTWJxmcjs283ggmw==}
     dependencies:
       '@types/node': 13.1.6
       tslib: 1.10.0
     dev: false
-    resolution:
-      integrity: sha512-y18KD65Ba1a7jXJ8PBIGjfkCtR32wd0XOPaV5D8z9uBiNE+pIF0PCnHKVHZ4+GcaRa/Y7HkTWJxmcjs283ggmw==
+
   /@types/node/13.1.6:
+    resolution: {integrity: sha512-Jg1F+bmxcpENHP23sVKkNuU3uaxPnsBMW0cLjleiikFKomJQbsn0Cqk2yDvQArqzZN6ABfBkZ0To7pQ8sLdWDg==}
     dev: false
-    resolution:
-      integrity: sha512-Jg1F+bmxcpENHP23sVKkNuU3uaxPnsBMW0cLjleiikFKomJQbsn0Cqk2yDvQArqzZN6ABfBkZ0To7pQ8sLdWDg==
+
+  /@types/node/16.11.60:
+    resolution: {integrity: sha512-kYIYa1D1L+HDv5M5RXQeEu1o0FKA6yedZIoyugm/MBPROkLpX4L7HRxMrPVyo8bnvjpW/wDlqFNGzXNMb7AdRw==}
+    dev: false
+
   /immutable/4.0.0-rc.12:
+    resolution: {integrity: sha512-0M2XxkZLx/mi3t8NVwIm1g8nHoEmM9p9UBl/G9k4+hm0kBgOVdMV/B3CY5dQ8qG8qc80NN4gDV4HQv6FTJ5q7A==}
     dev: false
-    resolution:
-      integrity: sha512-0M2XxkZLx/mi3t8NVwIm1g8nHoEmM9p9UBl/G9k4+hm0kBgOVdMV/B3CY5dQ8qG8qc80NN4gDV4HQv6FTJ5q7A==
+
   /tslib/1.10.0:
+    resolution: {integrity: sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==}
     dev: false
-    resolution:
-      integrity: sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
-specifiers:
-  '@tsfun/array': ^0.0.0
-  '@types/node': ^13.1.6
-  immutable: ^4.0.0-rc.12
-  tslib: ^1.10.0

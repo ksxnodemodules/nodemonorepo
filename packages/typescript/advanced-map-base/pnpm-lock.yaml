@@ -1,34 +1,35 @@
+lockfileVersion: 5.3
+
+specifiers:
+  '@types/node': ^16.0.0
+  advanced-map-types: ^0.0.4
+  tslib: ^1.10.0
+  typescript-miscellaneous: ^0.1.1
+
 dependencies:
-  '@types/node': 13.1.6
-  advanced-map-types: 'link:../advanced-map-types'
+  '@types/node': 16.11.60
+  advanced-map-types: link:../advanced-map-types
   tslib: 1.10.0
   typescript-miscellaneous: 0.1.1
-lockfileVersion: 5.1
+
 packages:
+
   /@types/node/10.14.20:
+    resolution: {integrity: sha512-An+MXSV8CGXz/BO9C1KKsoJ/8WDrvlNUaRMsm2h+IHZuSyQkM8U5bJJkb8ItLKA73VePG/nUK+t+EuW2IWuhsQ==}
     dev: false
-    resolution:
-      integrity: sha512-An+MXSV8CGXz/BO9C1KKsoJ/8WDrvlNUaRMsm2h+IHZuSyQkM8U5bJJkb8ItLKA73VePG/nUK+t+EuW2IWuhsQ==
-  /@types/node/13.1.6:
+
+  /@types/node/16.11.60:
+    resolution: {integrity: sha512-kYIYa1D1L+HDv5M5RXQeEu1o0FKA6yedZIoyugm/MBPROkLpX4L7HRxMrPVyo8bnvjpW/wDlqFNGzXNMb7AdRw==}
     dev: false
-    resolution:
-      integrity: sha512-Jg1F+bmxcpENHP23sVKkNuU3uaxPnsBMW0cLjleiikFKomJQbsn0Cqk2yDvQArqzZN6ABfBkZ0To7pQ8sLdWDg==
+
   /tslib/1.10.0:
+    resolution: {integrity: sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==}
     dev: false
-    resolution:
-      integrity: sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
+
   /typescript-miscellaneous/0.1.1:
+    resolution: {integrity: sha512-dyGMilZPOL/qQMlJSWK+SbQyJpf6YZZPmPrbbdHGkAvGUvlhv4kGKTgddXWLxFWHTirR2I0VfD8mSwia3WLGtA==}
+    engines: {node: '>= 8.9.0', typescript: '>= 3.0.0'}
     dependencies:
       '@types/node': 10.14.20
       tslib: 1.10.0
     dev: false
-    engines:
-      node: '>= 8.9.0'
-      typescript: '>= 3.0.0'
-    resolution:
-      integrity: sha512-dyGMilZPOL/qQMlJSWK+SbQyJpf6YZZPmPrbbdHGkAvGUvlhv4kGKTgddXWLxFWHTirR2I0VfD8mSwia3WLGtA==
-specifiers:
-  '@types/node': ^13.1.6
-  advanced-map-types: ^0.0.4
-  tslib: ^1.10.0
-  typescript-miscellaneous: ^0.1.1
