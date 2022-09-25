@@ -17,7 +17,7 @@
     "clean-typescript-build": "bin.js"
   },
   "dependencies": {
-    "fs-extra": "^8.1.0",
+    "fs-extra": "^10.0.0",
     "preloaded-node.private": "^0.0.0",
     "clean-typescript-build": "^0.1.5"
   }

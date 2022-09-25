@@ -18,7 +18,7 @@
     "jest"
   ],
   "dependencies": {
-    "fs-extra": "^8.1.0",
+    "fs-extra": "^10.0.0",
     "js-yaml": "^3.13.1",
     "tslib": "^1.10.0",
     "fs-tree-utils": "^0.1.8",

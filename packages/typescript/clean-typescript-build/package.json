@@ -23,7 +23,7 @@
     "build"
   ],
   "dependencies": {
-    "fs-extra": "^8.1.0",
+    "fs-extra": "^10.0.0",
     "yargs": "^15.1.0",
     "@tsfun/array": "^0.0.0",
     "tslib": "^1.10.0",
