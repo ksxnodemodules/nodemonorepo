@@ -22,7 +22,7 @@
     "fs-extra": "^8.1.0",
     "tslib": "^1.10.0",
     "@types/js-yaml": "^3.12.1",
-    "@types/fs-extra": "^8.0.1",
+    "@types/fs-extra": "^9.0.0",
     "@types/node": "^13.1.6"
   },
   "devDependencies": {
